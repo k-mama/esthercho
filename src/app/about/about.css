@@ -223,3 +223,8 @@
     padding-left: 0.15rem;
   }
 }
+
+/* ESTHER PAGE PAPER BACKGROUND */
+.esther-page {
+  background: var(--paper);
+}
