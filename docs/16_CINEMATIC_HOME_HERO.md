@@ -31,3 +31,7 @@ The supplied video is a cinematic opening asset.
 It must not be described as documentary footage, a childhood photograph, family archive material, or verified footage of the actual childhood house.
 
 Real photographs used elsewhere on the site remain separately identified.
+
+## Deployment Note
+
+A fresh production deployment was triggered after the ESTHER page encoding repair so the cinematic homepage hero can be built and published from the current `main` branch.
