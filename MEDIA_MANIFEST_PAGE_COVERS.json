@@ -1,0 +1,54 @@
+{
+  "covers": {
+    "stories-cover.jpg": {
+      "source": "/mnt/data/esther_media_extract/대학생 때 사진/20260730_163303.jpg",
+      "width": 2400,
+      "height": 1800,
+      "bytes": 423370
+    },
+    "books-cover.jpg": {
+      "source": "/mnt/data/esther_media_extract/동화습작 (2)/20260630_085224.jpg",
+      "width": 1800,
+      "height": 2400,
+      "bytes": 275379
+    },
+    "childhood-cover.jpg": {
+      "source": "/mnt/data/fd4a3a7c-c41d-4d85-b9c0-bb7112c13aa9.png",
+      "width": 1800,
+      "height": 1350,
+      "bytes": 374364
+    },
+    "studio-cover.jpg": {
+      "source": "/mnt/data/esther_media_extract/동화습작 (2)/20260718_141326.jpg",
+      "width": 1800,
+      "height": 2400,
+      "bytes": 589790
+    },
+    "morning-table-cover.jpg": {
+      "source": "/mnt/data/esther_media_extract/내 밥상/내밥상_unzipped/20260716_103859.jpg",
+      "width": 1800,
+      "height": 2400,
+      "bytes": 331702
+    },
+    "esther-cover.jpg": {
+      "source": "/mnt/data/esther_media_extract/대학생 때 사진/20260730_192409.jpg",
+      "width": 2400,
+      "height": 1800,
+      "bytes": 619007
+    }
+  },
+  "routes": {
+    "/stories/": "stories-cover.jpg",
+    "/books/": "books-cover.jpg",
+    "/archive/": "childhood-cover.jpg",
+    "/studio/": "studio-cover.jpg",
+    "/notes/": "morning-table-cover.jpg",
+    "/about/": "esther-cover.jpg"
+  },
+  "processing": [
+    "EXIF orientation correction",
+    "EXIF removal",
+    "proportional resize",
+    "JPEG optimization"
+  ]
+}

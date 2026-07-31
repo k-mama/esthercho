@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { PageCover } from "@/components/page-cover";
 import "./about.css";
 
 export const metadata: Metadata = {
   title: "The House That Became a Story",
   description:
-    "Meet Esther Cho, the international author name of Korean writer and artist \uC870\uC131\uC5F0.",
+    "Meet Esther Cho, the international author name of Korean writer and artist 조성연.",
 };
 
 const education = [
@@ -31,14 +32,27 @@ const education = [
 
 export default function AboutPage() {
   return (
-    <article className="esther-page">
+    <>
+      <PageCover
+        eyebrow="ESTHER"
+        title="The House That Became a Story"
+        description="Writer · Artist · Homemaker"
+        image="/media/covers/esther-cover.jpg"
+        alt="Esther Cho by the water during her university years"
+        objectPosition="center center"
+        mobileObjectPosition="58% center"
+        align="left"
+        shade="medium"
+      />
+
+      <article className="esther-page">
       <header className="container esther-hero">
         <div className="esther-hero-copy">
           <p className="esther-eyebrow">ABOUT THE AUTHOR</p>
-          <h1>The House That Became a Story</h1>
+          <h2>Esther Cho {"\u00B7"} {"\uC870\uC131\uC5F0"}</h2>
           <p className="esther-deck">
             Esther Cho is the international author name of Korean writer and
-            artist <span lang="ko">{"\uC870\uC131\uC5F0"}</span>.
+            artist <span lang="ko">조성연</span>.
           </p>
           <p className="esther-intro">
             Her work grows from Christian faith, memory, childhood, and the
@@ -221,13 +235,13 @@ export default function AboutPage() {
       </section>
 
       <footer className="container esther-closing">
-        <p className="esther-eyebrow">ESTHER CHO {"\u00B7"} {"\uC870\uC131\uC5F0"}</p>
+        <p className="esther-eyebrow">ESTHER CHO · 조성연</p>
         <p>
           A writer and artist gathering faith, memory, home, and lived
           experience into stories.
         </p>
       </footer>
-    </article>
+      </article>
+    </>
   );
 }
-
