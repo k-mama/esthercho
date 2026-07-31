@@ -1,0 +1,9 @@
+- Project root: C:\emmaestro\esthercho
+- Framework: Next.js 16 with App Router and TypeScript
+- Deployment: Cloudflare Pages
+- Deployment mode: Static HTML Export
+- Build command: npx next build
+- Build output directory: out
+- Default locale: English
+- Future locales: Korean and additional languages
+- Current stage: technical baseline only, no visual implementation yet

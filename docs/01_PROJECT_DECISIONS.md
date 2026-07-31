@@ -1,0 +1,8 @@
+- Esther Cho is the primary global author name
+- 조성연 is the disclosed Korean real name
+- English is the default website language
+- A globe selector will later provide Korean and additional languages
+- The website will contain stories, books, childhood archives, original drawings, AI-reimagined artwork, photographs, audio, and films
+- Archival originals must never be misrepresented as AI-created images
+- AI-reimagimagined images must never be presented as original archival evidence
+- Private high-resolution family originals must not be committed to the public repository

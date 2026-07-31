@@ -1,0 +1,10 @@
+- Read AGENTS.md, CLAUDE.md, GEMINI.md, and docs before editing
+- Do not redesign without approval
+- Do not invent biographical facts
+- Do not change approved names or language strategy
+- Keep English as the default locale
+- Maintain Static HTML Export compatibility
+- Never commit private archival originals
+- Do not present AI-generated visuals as historical evidence
+- Work in small verified steps
+- Show changed files and validation evidence before stopping
