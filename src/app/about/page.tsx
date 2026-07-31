@@ -6,7 +6,7 @@ import "./about.css";
 export const metadata: Metadata = {
   title: "The House That Became a Story",
   description:
-    "Meet Esther Cho, the international author name of Korean writer and artist 조성연.",
+    "Meet Esther Cho, the international author name of Korean writer and artist Cho, Seongyun.",
 };
 
 const education = [
@@ -49,10 +49,10 @@ export default function AboutPage() {
       <header className="container esther-hero">
         <div className="esther-hero-copy">
           <p className="esther-eyebrow">ABOUT THE AUTHOR</p>
-          <h2>Esther Cho {"\u00B7"} {"\uC870\uC131\uC5F0"}</h2>
+          <h2>Esther Cho {"\u00B7"} Cho, Seongyun</h2>
           <p className="esther-deck">
             Esther Cho is the international author name of Korean writer and
-            artist <span lang="ko">조성연</span>.
+            artist Cho, Seongyun.
           </p>
           <p className="esther-intro">
             Her work grows from Christian faith, memory, childhood, and the
@@ -235,7 +235,7 @@ export default function AboutPage() {
       </section>
 
       <footer className="container esther-closing">
-        <p className="esther-eyebrow">ESTHER CHO · 조성연</p>
+        <p className="esther-eyebrow">ESTHER CHO · CHO, SEONGYUN</p>
         <p>
           A writer and artist gathering faith, memory, home, and lived
           experience into stories.
