@@ -2,9 +2,9 @@ export const navigationConfig = {
   mainNav: [
     { title: "STORIES", href: "/stories/" },
     { title: "BOOKS", href: "/books/" },
-    { title: "ARCHIVE", href: "/archive/" },
+    { title: "CHILDHOOD", href: "/archive/" },
     { title: "STUDIO", href: "/studio/" },
-    { title: "NOTES", href: "/notes/" },
-    { title: "ABOUT", href: "/about/" },
+    { title: "MORNING TABLE", href: "/notes/" },
+    { title: "ESTHER", href: "/about/" },
   ],
 };

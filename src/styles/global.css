@@ -195,7 +195,7 @@ body {
 }
 
 /* 7. Responsive Layout */
-@media (min-width: 768px) {
+@media (min-width: 960px) {
   .site-header-nav-desktop {
     display: block;
   }

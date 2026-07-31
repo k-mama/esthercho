@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import { SectionPlaceholder } from "@/components/section-placeholder";
 
 export const metadata: Metadata = {
-  title: "Stories",
+  title: "Stories Born from Life",
 };
 
 export default function StoriesPage() {
   return (
-    <SectionPlaceholder title="STORIES">
-      Stories born from memory, faith, and lived experience.
+    <SectionPlaceholder title="Stories Born from Life">
+      Stories shaped by memory, faith, and lived experience.
     </SectionPlaceholder>
   );
 }
