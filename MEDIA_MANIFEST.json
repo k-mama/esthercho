@@ -1,0 +1,52 @@
+{
+  "assets": [
+    {
+      "output": "childhood-garden.jpg",
+      "source": "/mnt/data/esther_media_extract/5살부터 초등학교/20260730_163028.jpg",
+      "dimensions": [
+        1800,
+        1350
+      ]
+    },
+    {
+      "output": "childhood-house.jpg",
+      "source": "/mnt/data/esther_media_extract/5살부터 초등학교/1785397071482.jpg",
+      "dimensions": [
+        1079,
+        635
+      ]
+    },
+    {
+      "output": "young-artist.jpg",
+      "source": "/mnt/data/esther_media_extract/대학생 때 사진/20260730_192409.jpg",
+      "dimensions": [
+        1500,
+        1125
+      ]
+    },
+    {
+      "output": "morning-table.jpg",
+      "source": "/mnt/data/esther_media_extract/내 밥상/내밥상_unzipped/20260716_103859.jpg",
+      "dimensions": [
+        1200,
+        1600
+      ]
+    },
+    {
+      "output": "hand-drawn-story.jpg",
+      "source": "/mnt/data/esther_media_extract/동화습작 (2)/20260718_141326.jpg",
+      "dimensions": [
+        1200,
+        1600
+      ]
+    },
+    {
+      "output": "bangladesh-service.jpg",
+      "source": "/mnt/data/esther_media_extract/방글라데시의 미얀마 난민촌 봉사/Screenshot_20260730_201930_Instagram.jpg",
+      "dimensions": [
+        625,
+        769
+      ]
+    }
+  ]
+}

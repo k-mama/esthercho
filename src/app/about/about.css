@@ -1,0 +1,225 @@
+.esther-page {
+  --esther-navy: hsl(215, 62%, 20%);
+  --esther-gold: hsl(38, 42%, 48%);
+  --esther-paper-deep: hsl(39, 34%, 95%);
+  --esther-caption: hsl(31, 9%, 42%);
+  color: var(--ink);
+}
+
+.esther-page h1,
+.esther-page h2 {
+  color: var(--ink);
+  text-wrap: balance;
+}
+
+.esther-page h1 {
+  max-width: 11ch;
+  font-size: clamp(2.7rem, 6.8vw, 6.4rem);
+  line-height: 0.98;
+  letter-spacing: -0.035em;
+}
+
+.esther-page h2 {
+  margin-top: calc(var(--spacing-unit) * 0.75);
+  font-size: clamp(2rem, 4vw, 4.1rem);
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+}
+
+.esther-page p {
+  max-width: 66ch;
+}
+
+.esther-eyebrow {
+  color: var(--esther-gold);
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+}
+
+.esther-hero {
+  display: grid;
+  gap: calc(var(--spacing-unit) * 2.25);
+  align-items: end;
+  padding-top: clamp(3.5rem, 8vw, 8rem);
+  padding-bottom: clamp(4rem, 9vw, 8rem);
+}
+
+.esther-hero-copy {
+  display: grid;
+  gap: calc(var(--spacing-unit) * 1.35);
+}
+
+.esther-deck {
+  color: var(--esther-navy);
+  font-family: var(--font-editorial);
+  font-size: clamp(1.35rem, 2.4vw, 2.05rem);
+  line-height: 1.35;
+}
+
+.esther-intro,
+.esther-copy {
+  color: var(--ink-soft);
+  font-size: clamp(1rem, 1.45vw, 1.16rem);
+}
+
+.esther-copy {
+  display: grid;
+  align-content: center;
+  gap: calc(var(--spacing-unit) * 1.2);
+}
+
+.esther-figure {
+  margin: 0;
+}
+
+.esther-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: var(--paper-light);
+  border: 1px solid var(--line);
+}
+
+.esther-figure figcaption {
+  margin-top: calc(var(--spacing-unit) * 0.6);
+  color: var(--esther-caption);
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+
+.esther-hero-figure img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center 48%;
+}
+
+.esther-section {
+  padding-top: clamp(4rem, 9vw, 9rem);
+  padding-bottom: clamp(4rem, 9vw, 9rem);
+}
+
+.esther-house-section,
+.esther-home-section,
+.esther-making-section {
+  background: var(--esther-paper-deep);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.esther-split,
+.esther-home-grid,
+.esther-service-grid,
+.esther-making-grid {
+  display: grid;
+  gap: clamp(2rem, 6vw, 6rem);
+  align-items: center;
+}
+
+.esther-house-figure img {
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.esther-portrait-figure img {
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center 30%;
+}
+
+.esther-table-figure img,
+.esther-sketch-figure img {
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.esther-service-figure img {
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.esther-timeline {
+  display: grid;
+  gap: calc(var(--spacing-unit) * 1.1);
+  margin-top: calc(var(--spacing-unit) * 1.3);
+  padding: 0;
+  list-style: none;
+}
+
+.esther-timeline li {
+  display: grid;
+  grid-template-columns: 4.4rem 1fr;
+  gap: var(--spacing-unit);
+  padding-top: var(--spacing-unit);
+  border-top: 1px solid var(--line);
+}
+
+.esther-year {
+  color: var(--esther-navy);
+  font-family: var(--font-editorial);
+  font-size: 1.2rem;
+}
+
+.esther-closing {
+  display: grid;
+  justify-items: center;
+  gap: var(--spacing-unit);
+  padding-top: clamp(4rem, 8vw, 7rem);
+  padding-bottom: clamp(4rem, 8vw, 7rem);
+  text-align: center;
+}
+
+.esther-closing > p:last-child {
+  max-width: 32ch;
+  color: var(--esther-navy);
+  font-family: var(--font-editorial);
+  font-size: clamp(1.45rem, 3vw, 2.4rem);
+  line-height: 1.35;
+}
+
+@media (min-width: 900px) {
+  .esther-hero {
+    grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.12fr);
+  }
+
+  .esther-split {
+    grid-template-columns: minmax(0, 1.05fr) minmax(20rem, 0.95fr);
+  }
+
+  .esther-split-reverse {
+    grid-template-columns: minmax(20rem, 0.92fr) minmax(0, 1.08fr);
+  }
+
+  .esther-home-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(20rem, 0.72fr);
+  }
+
+  .esther-service-grid {
+    grid-template-columns: minmax(20rem, 0.76fr) minmax(0, 1fr);
+  }
+
+  .esther-making-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(20rem, 0.72fr);
+  }
+}
+
+@media (max-width: 899px) {
+  .esther-hero,
+  .esther-section {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .esther-hero-copy {
+    order: 1;
+  }
+
+  .esther-hero-figure {
+    order: 2;
+  }
+
+  .esther-figure figcaption {
+    padding-left: 0.15rem;
+  }
+}
