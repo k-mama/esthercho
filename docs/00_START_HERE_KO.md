@@ -7,7 +7,7 @@
 - GitHub 저장소: `k-mama/esthercho`
 - 배포: Cloudflare Pages
 - 운영 주소: `https://esthercho.pages.dev`
-- 프레임워크: Astro
+- 프레임워크: Next.js (App Router, TypeScript, Static HTML Export)
 - 언어: TypeScript
 - 기본 언어: English
 - 보조 언어: 한국어

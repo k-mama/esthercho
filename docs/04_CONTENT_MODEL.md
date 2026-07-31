@@ -114,4 +114,4 @@ type MediaReference = {
 };
 ```
 
-Use Astro Content Collections with Markdown or MDX for long-form content and typed frontmatter. Do not hard-code editorial content directly in page components.
+Use a build-time Markdown or MDX content layer compatible with Next.js static export for long-form content and typed frontmatter. Do not hard-code editorial content directly in page components.
