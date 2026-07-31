@@ -1,4 +1,4 @@
-# Cinematic Homepage Hero
+﻿# Cinematic Homepage Hero
 
 ## Purpose
 
@@ -35,3 +35,4 @@ Real photographs used elsewhere on the site remain separately identified.
 ## Deployment Note
 
 A fresh production deployment was triggered after the ESTHER page encoding repair so the cinematic homepage hero can be built and published from the current `main` branch.
+

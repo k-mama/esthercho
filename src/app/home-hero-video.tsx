@@ -3,8 +3,11 @@
 import { useEffect, useRef, useState } from "react";
 import styles from "./page.module.css";
 
+const MAX_PLAYS = 2;
+
 export function HomeHeroVideo() {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const completedPlaysRef = useRef(0);
   const [isPlaying, setIsPlaying] = useState(false);
 
   useEffect(() => {
@@ -17,6 +20,24 @@ export function HomeHeroVideo() {
     }
   }, []);
 
+  function handleEnded() {
+    const video = videoRef.current;
+
+    if (!video) {
+      return;
+    }
+
+    completedPlaysRef.current += 1;
+
+    if (completedPlaysRef.current < MAX_PLAYS) {
+      video.currentTime = 0;
+      void video.play();
+      return;
+    }
+
+    setIsPlaying(false);
+  }
+
   function togglePlayback() {
     const video = videoRef.current;
 
@@ -25,6 +46,11 @@ export function HomeHeroVideo() {
     }
 
     if (video.paused) {
+      if (video.ended || completedPlaysRef.current >= MAX_PLAYS) {
+        completedPlaysRef.current = 0;
+        video.currentTime = 0;
+      }
+
       void video.play();
       return;
     }
@@ -39,11 +65,11 @@ export function HomeHeroVideo() {
         className={styles.heroVideo}
         autoPlay
         muted
-        loop
         playsInline
         preload="metadata"
         poster="/media/home/esther-house-entry-poster.jpg"
         aria-hidden="true"
+        onEnded={handleEnded}
         onPlay={() => setIsPlaying(true)}
         onPause={() => setIsPlaying(false)}
       >
@@ -57,7 +83,9 @@ export function HomeHeroVideo() {
         type="button"
         className={styles.videoControl}
         onClick={togglePlayback}
-        aria-label={isPlaying ? "Pause background film" : "Play background film"}
+        aria-label={
+          isPlaying ? "Pause background film" : "Play background film"
+        }
       >
         {isPlaying ? "PAUSE" : "PLAY"}
       </button>
