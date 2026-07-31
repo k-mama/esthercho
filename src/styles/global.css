@@ -1,0 +1,207 @@
+/* 1. Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -moz-tab-size: 4;
+  tab-size: 4;
+}
+
+body {
+  background-color: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-interface);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* 2. Main Layout Structure */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+#main-content {
+  flex-grow: 1;
+}
+
+/* 3. Accessibility */
+.skip-link {
+  position: absolute;
+  top: -1000px;
+  left: -1000px;
+  padding: calc(var(--spacing-unit) * 0.75) var(--spacing-unit);
+  background-color: var(--paper-light);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  z-index: 9999;
+}
+
+.skip-link:focus {
+  top: var(--spacing-unit);
+  left: var(--spacing-unit);
+}
+
+/* Focus outline */
+:focus-visible {
+  outline: var(--focus-outline-width) solid var(--focus-outline);
+  outline-offset: 2px;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* 4. Common Container */
+.container {
+  width: 100%;
+  max-width: var(--max-content-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: calc(var(--spacing-unit) * 1.5);
+  padding-right: calc(var(--spacing-unit) * 1.5);
+}
+
+/* 5. Site Header */
+.site-header {
+  padding-top: var(--spacing-unit);
+  padding-bottom: var(--spacing-unit);
+  border-bottom: 1px solid var(--line);
+}
+
+.site-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-unit);
+}
+
+.site-header-wordmark {
+  font-weight: 500;
+  font-size: 1.125rem;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.site-header-nav-desktop {
+  display: none; /* Hidden on mobile */
+}
+
+.site-header-nav-desktop ul {
+  display: flex;
+  list-style: none;
+  gap: calc(var(--spacing-unit) * 2);
+}
+
+.site-header-nav-link {
+  color: var(--ink-soft);
+  text-decoration: none;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+  transition: color 0.2s ease;
+}
+
+.site-header-nav-link:hover {
+  color: var(--ink);
+}
+
+.site-header-lang {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--spacing-unit) * 0.5);
+  color: var(--ink-soft);
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+}
+
+.site-header-lang svg {
+  width: 1rem;
+  height: 1rem;
+  stroke: currentColor;
+}
+
+/* Mobile Menu (<details>) */
+.site-header-nav-mobile {
+  position: relative;
+}
+
+.site-header-nav-mobile summary {
+  list-style: none; /* Hide arrow */
+  cursor: pointer;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+  color: var(--ink-soft);
+}
+.site-header-nav-mobile summary::-webkit-details-marker {
+  display: none; /* Hide arrow on Safari */
+}
+
+.site-header-nav-mobile-menu {
+  position: absolute;
+  top: calc(100% + var(--spacing-unit) * 0.5);
+  right: 0;
+  background-color: var(--paper-light);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: var(--spacing-unit);
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-unit);
+  z-index: 10;
+  min-width: 180px;
+}
+
+/* 6. Site Footer */
+.site-footer {
+  padding: calc(var(--spacing-unit) * 3) 0;
+  margin-top: calc(var(--spacing-unit) * 4);
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--ink-soft);
+  border-top: 1px solid var(--line);
+}
+
+.site-footer p {
+  margin-bottom: 0;
+}
+
+.site-footer-name {
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: var(--ink);
+}
+
+/* 7. Responsive Layout */
+@media (min-width: 768px) {
+  .site-header-nav-desktop {
+    display: block;
+  }
+  .site-header-nav-mobile {
+    display: none;
+  }
+}
+
+/* 8. Reduced specificity for page content */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-editorial);
+  font-weight: 400;
+}

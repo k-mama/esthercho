@@ -1,0 +1,15 @@
+.section-placeholder {
+  padding-top: calc(var(--spacing-unit) * 4);
+  padding-bottom: calc(var(--spacing-unit) * 4);
+  max-width: var(--narrow-reading-width);
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.section-placeholder-title {
+  font-size: 1.25rem;
+  letter-spacing: 0.1em;
+  color: var(--ink-soft);
+  margin-bottom: var(--spacing-unit);
+}
