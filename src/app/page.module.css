@@ -80,6 +80,18 @@
   text-shadow: 0 2px 24px rgba(4, 15, 28, 0.42);
 }
 
+
+.koreanHeroTitle {
+  max-width: none !important;
+  word-break: keep-all;
+  overflow-wrap: normal;
+}
+
+.koreanHeroTitle span {
+  display: block;
+  white-space: nowrap;
+}
+
 .videoHeroLink {
   margin-top: 0.5rem;
   color: var(--paper);

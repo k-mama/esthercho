@@ -66,7 +66,10 @@ export default function KoreanHome() {
           <p className={styles.videoEyebrow}>
             조성연의 집에 오신 것을 환영합니다
           </p>
-          <h1>기억으로 지은 이야기의 집.</h1>
+          <h1 className={styles.koreanHeroTitle}>
+            <span>기억으로 지은</span>
+            <span>이야기의 집.</span>
+          </h1>
           <Link href="/ko/about/" className={styles.videoHeroLink}>
             집 안으로 들어가기
           </Link>
