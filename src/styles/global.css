@@ -14,13 +14,13 @@ html {
 }
 
 body {
-  background-color: var(--paper);
+  background-color: var(--brand-navy);
   color: var(--ink);
   font-family: var(--font-interface);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden; /* Prevent horizontal scroll */
+  overflow-x: hidden;
 }
 
 /* 2. Main Layout Structure */
@@ -32,6 +32,7 @@ body {
 
 #main-content {
   flex-grow: 1;
+  width: 100%;
 }
 
 /* 3. Accessibility */
@@ -51,13 +52,11 @@ body {
   left: var(--spacing-unit);
 }
 
-/* Focus outline */
 :focus-visible {
   outline: var(--focus-outline-width) solid var(--focus-outline);
-  outline-offset: 2px;
+  outline-offset: 3px;
 }
 
-/* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -81,9 +80,12 @@ body {
 
 /* 5. Site Header */
 .site-header {
+  margin: clamp(0.75rem, 2vw, 1.5rem);
   padding-top: var(--spacing-unit);
   padding-bottom: var(--spacing-unit);
-  border-bottom: 1px solid var(--line);
+  background: var(--paper);
+  border: 1px solid var(--paper-room-line);
+  border-radius: var(--paper-room-radius);
 }
 
 .site-header .container {
@@ -95,7 +97,7 @@ body {
 
 .site-header-logo {
   display: block;
-  line-height: 1; /* remove space below image */
+  line-height: 1;
 }
 
 .site-header-wordmark-image {
@@ -106,25 +108,25 @@ body {
 }
 
 .site-header-nav-desktop {
-  display: none; /* Hidden on mobile */
+  display: none;
 }
 
 .site-header-nav-desktop ul {
   display: flex;
   list-style: none;
-  gap: calc(var(--spacing-unit) * 2);
+  gap: calc(var(--spacing-unit) * 1.55);
 }
 
 .site-header-nav-link {
   color: var(--ink-soft);
   text-decoration: none;
-  font-size: 0.875rem;
-  letter-spacing: 0.05em;
+  font-size: 0.82rem;
+  letter-spacing: 0.055em;
   transition: color 0.2s ease;
 }
 
 .site-header-nav-link:hover {
-  color: var(--ink);
+  color: var(--brand-navy);
 }
 
 .site-header-lang {
@@ -132,7 +134,7 @@ body {
   align-items: center;
   gap: calc(var(--spacing-unit) * 0.5);
   color: var(--ink-soft);
-  font-size: 0.875rem;
+  font-size: 0.82rem;
   letter-spacing: 0.05em;
 }
 
@@ -148,40 +150,43 @@ body {
 }
 
 .site-header-nav-mobile summary {
-  list-style: none; /* Hide arrow */
+  list-style: none;
   cursor: pointer;
-  font-size: 0.875rem;
-  letter-spacing: 0.05em;
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
   color: var(--ink-soft);
 }
+
 .site-header-nav-mobile summary::-webkit-details-marker {
-  display: none; /* Hide arrow on Safari */
+  display: none;
 }
 
 .site-header-nav-mobile-menu {
   position: absolute;
-  top: calc(100% + var(--spacing-unit) * 0.5);
+  top: calc(100% + var(--spacing-unit) * 0.7);
   right: 0;
-  background-color: var(--paper-light);
-  border: 1px solid var(--line);
-  border-radius: 4px;
-  padding: var(--spacing-unit);
-  list-style: none;
+  min-width: 210px;
   display: flex;
   flex-direction: column;
   gap: var(--spacing-unit);
+  padding: calc(var(--spacing-unit) * 1.2);
+  list-style: none;
+  background-color: var(--paper-light);
+  border: 1px solid var(--line);
+  border-radius: 12px;
   z-index: 10;
-  min-width: 180px;
 }
 
 /* 6. Site Footer */
 .site-footer {
-  padding: calc(var(--spacing-unit) * 3) 0;
-  margin-top: calc(var(--spacing-unit) * 4);
+  margin: 0 clamp(0.75rem, 2vw, 1.5rem) clamp(0.75rem, 2vw, 1.5rem);
+  padding: calc(var(--spacing-unit) * 2.4) 0;
   text-align: center;
-  font-size: 0.875rem;
+  font-size: 0.82rem;
   color: var(--ink-soft);
-  border-top: 1px solid var(--line);
+  background: var(--paper);
+  border: 1px solid var(--paper-room-line);
+  border-radius: var(--paper-room-radius);
 }
 
 .site-footer p {
@@ -190,8 +195,8 @@ body {
 
 .site-footer-name {
   font-weight: 500;
-  letter-spacing: 0.05em;
-  color: var(--ink);
+  letter-spacing: 0.06em;
+  color: var(--brand-navy);
 }
 
 /* 7. Responsive Layout */
@@ -199,16 +204,23 @@ body {
   .site-header-nav-desktop {
     display: block;
   }
+
   .site-header-nav-mobile {
     display: none;
   }
+
   .site-header-wordmark-image {
     width: 160px;
   }
 }
 
-/* 8. Reduced specificity for page content */
-h1, h2, h3, h4, h5, h6 {
+/* 8. Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-editorial);
   font-weight: 400;
 }
