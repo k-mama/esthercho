@@ -1,0 +1,59 @@
+﻿---
+import { SITE } from '../config/site';
+import '../styles/tokens.css';
+import '../styles/global.css';
+
+export interface Props {
+  title?: string;
+  description?: string;
+  canonicalURL?: URL | string;
+  lang?: string;
+}
+
+const {
+  title = SITE.title,
+  description = SITE.description,
+  canonicalURL,
+  lang = Astro.currentLocale ?? SITE.defaultLocale,
+} = Astro.props;
+
+const openGraphLocale = lang === 'ko' ? 'ko_KR' : 'en_US';
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+
+    {canonicalURL && (
+      <link rel="canonical" href={canonicalURL.toString()} />
+    )}
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={SITE.name} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:locale" content={openGraphLocale} />
+
+    {canonicalURL && (
+      <meta property="og:url" content={canonicalURL.toString()} />
+    )}
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main-content">
+      Skip to content
+    </a>
+
+    <main id="main-content">
+      <slot />
+    </main>
+  </body>
+</html>
