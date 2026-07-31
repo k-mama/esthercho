@@ -98,17 +98,11 @@ body {
   line-height: 1; /* remove space below image */
 }
 
-.site-header-logo-desktop {
-  display: none;
-  height: 2.25rem; /* 36px */
+.site-header-wordmark-image {
+  display: block;
+  width: 128px;
   width: auto;
   vertical-align: middle;
-}
-
-.site-header-logo-mobile {
-  display: block;
-  height: 2.5rem; /* 40px */
-  width: 2.5rem; /* 40px */
 }
 
 .site-header-nav-desktop {
@@ -208,13 +202,8 @@ body {
   .site-header-nav-mobile {
     display: none;
   }
-
-  .site-header-logo-desktop {
-    display: block;
-  }
-
-  .site-header-logo-mobile {
-    display: none;
+  .site-header-wordmark-image {
+    width: 160px;
   }
 }
 

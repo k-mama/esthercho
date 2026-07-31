@@ -29,19 +29,11 @@ export function SiteHeader() {
       <div className="container">
         <Link href="/" className="site-header-logo" aria-label="Esther Cho home">
           <Image
-            src="/brand/esther-cho-wordmark-header.png"
+            src="/brand/esther-cho-wordmark-navy-transparent.png"
             alt=""
-            width={300}
-            height={100}
-            className="site-header-logo-desktop"
-            aria-hidden="true"
-          />
-          <Image
-            src="/brand/esther-cho-monogram.png"
-            alt=""
-            width={40}
-            height={40}
-            className="site-header-logo-mobile"
+            width={1383}
+            height={431}
+            className="site-header-wordmark-image"
             aria-hidden="true"
           />
         </Link>

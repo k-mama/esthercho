@@ -1,17 +1,25 @@
 # Brand Identity and Logo System
 
-This document outlines the usage guidelines for the Esther Cho author brand identity.
+This document outlines the final usage roles for the Esther Cho website brand assets.
 
-## Core Assets
+## A. Primary Website Wordmark
 
-- **Primary Logo (Wordmark):** The horizontal "Esther Cho" wordmark (`esther-cho-wordmark-header.png`) is the primary logo for the brand. It should be used in most desktop contexts where space allows.
+**Asset:** `public/brand/esther-cho-wordmark-navy-transparent.png`
 
-- **Compact Mark (Monogram):** The "EC" monogram (`esther-cho-monogram.png`) is the secondary, compact mark. It is used for favicons, social media profiles, and in UI contexts where the full wordmark is not legible, such as the mobile site header.
+**Role:** The transparent background, navy horizontal wordmark. This is the primary logo for the website and is used as the single top-left home link on both desktop and mobile.
 
-## Usage Principles
+## B. Website Favicon Mark
 
-1.  **Hierarchy:** The two marks should not compete at the same visual level. Use the wordmark as the primary identifier and the monogram as a supporting icon or avatar.
+**Asset:** `public/brand/esther-cho-monogram-navy-transparent.png` (source for metadata icons)
 
-2.  **Context:** These assets represent the current, professional brand identity of the author. They are not historical, family, or archival artifacts.
+**Role:** The transparent background, navy EC monogram. This mark is used for browser tab icons (`favicon.ico`), web shortcut icons (`apple-icon.png`), and other website metadata contexts.
 
-3.  **Distinction from Archival Content:** The brand assets, some of which were created with AI assistance, must remain visually and contextually distinct from real childhood photographs, family records, and other archival materials presented on the site. This separation is crucial for maintaining authenticity and narrative clarity.
+## C. Future Native App Icon
+
+**Asset:** `public/brand/future-app/esther-cho-app-icon-gold-on-navy.png`
+
+**Role:** A navy rounded-square icon with a gold EC mark. This asset is reserved exclusively for a future native mobile app and is not wired into the current website.
+
+## D. Provenance
+
+All three assets are current, professional brand assets. They are not childhood records, family artifacts, or historical archive materials. AI-assisted brand assets must remain visually and contextually distinct from real photographs and archival records presented on the site to maintain authenticity.
