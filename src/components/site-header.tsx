@@ -1,5 +1,8 @@
-import Link from "next/link";
+"use client";
+
 import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { navigationConfig } from "@/config/navigation";
 
 function GlobeIcon() {
@@ -13,6 +16,7 @@ function GlobeIcon() {
       strokeWidth="1.5"
       strokeLinecap="round"
       strokeLinejoin="round"
+      aria-hidden="true"
     >
       <circle cx="12" cy="12" r="10" />
       <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
@@ -22,12 +26,27 @@ function GlobeIcon() {
 }
 
 export function SiteHeader() {
-  const navItems = navigationConfig.mainNav;
+  const pathname = usePathname();
+  const isKorean = pathname === "/ko" || pathname.startsWith("/ko/");
+
+  const navItems = isKorean
+    ? navigationConfig.ko
+    : navigationConfig.en;
+
+  const homeHref = isKorean ? "/ko/" : "/";
+  const languageHref = isKorean ? "/" : "/ko/";
+  const languageLabel = isKorean
+    ? "영문 홈페이지로 이동"
+    : "한글 홈페이지로 이동";
 
   return (
     <header className="site-header">
       <div className="container">
-        <Link href="/" className="site-header-logo" aria-label="Esther Cho home">
+        <Link
+          href={homeHref}
+          className="site-header-logo"
+          aria-label={isKorean ? "조성연 홈페이지" : "Esther Cho home"}
+        >
           <Image
             src="/brand/esther-cho-wordmark-navy-transparent.png"
             alt=""
@@ -38,8 +57,10 @@ export function SiteHeader() {
           />
         </Link>
 
-        {/* Desktop Navigation */}
-        <nav className="site-header-nav-desktop" aria-label="Main">
+        <nav
+          className="site-header-nav-desktop"
+          aria-label={isKorean ? "주요 메뉴" : "Main"}
+        >
           <ul>
             {navItems.map((item) => (
               <li key={item.href}>
@@ -51,10 +72,9 @@ export function SiteHeader() {
           </ul>
         </nav>
 
-        {/* Mobile Navigation */}
         <div className="site-header-nav-mobile">
           <details>
-            <summary>MENU</summary>
+            <summary>{isKorean ? "메뉴" : "MENU"}</summary>
             <ul className="site-header-nav-mobile-menu">
               {navItems.map((item) => (
                 <li key={item.href}>
@@ -67,13 +87,15 @@ export function SiteHeader() {
           </details>
         </div>
 
-        <div
+        <Link
+          href={languageHref}
+          hrefLang={isKorean ? "en" : "ko"}
           className="site-header-lang"
-          aria-label="Language selector. English is currently selected."
+          aria-label={languageLabel}
+          title={languageLabel}
         >
           <GlobeIcon />
-          <span>EN</span>
-        </div>
+        </Link>
       </div>
     </header>
   );

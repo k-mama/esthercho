@@ -5,7 +5,13 @@ import styles from "./page.module.css";
 
 const MAX_PLAYS = 2;
 
-export function HomeHeroVideo() {
+interface HomeHeroVideoProps {
+  locale?: "en" | "ko";
+}
+
+export function HomeHeroVideo({
+  locale = "en",
+}: HomeHeroVideoProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const completedPlaysRef = useRef(0);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -58,6 +64,11 @@ export function HomeHeroVideo() {
     video.pause();
   }
 
+  const pauseLabel =
+    locale === "ko" ? "배경 영상 정지" : "Pause background film";
+  const playLabel =
+    locale === "ko" ? "배경 영상 재생" : "Play background film";
+
   return (
     <>
       <video
@@ -83,11 +94,15 @@ export function HomeHeroVideo() {
         type="button"
         className={styles.videoControl}
         onClick={togglePlayback}
-        aria-label={
-          isPlaying ? "Pause background film" : "Play background film"
-        }
+        aria-label={isPlaying ? pauseLabel : playLabel}
       >
-        {isPlaying ? "PAUSE" : "PLAY"}
+        {locale === "ko"
+          ? isPlaying
+            ? "정지"
+            : "재생"
+          : isPlaying
+            ? "PAUSE"
+            : "PLAY"}
       </button>
     </>
   );
