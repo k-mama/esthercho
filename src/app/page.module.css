@@ -1,10 +1,120 @@
 .home {
   min-height: 100%;
-  padding: clamp(1rem, 2.4vw, 2rem) 0 clamp(3rem, 8vw, 7rem);
+  padding: 0 0 clamp(3rem, 8vw, 7rem);
   color: var(--paper);
 }
 
-.heroRoom,
+.videoHero {
+  position: relative;
+  min-height: 100svh;
+  overflow: hidden;
+  isolation: isolate;
+  background:
+    linear-gradient(180deg, rgba(7, 23, 43, 0.58), rgba(7, 23, 43, 0.2)),
+    url("/media/home/esther-house-entry-poster.jpg") center / cover no-repeat;
+}
+
+.videoHero::before {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  content: "";
+  background:
+    linear-gradient(
+      180deg,
+      rgba(7, 22, 41, 0.62) 0%,
+      rgba(7, 22, 41, 0.12) 36%,
+      rgba(7, 22, 41, 0.08) 56%,
+      rgba(7, 22, 41, 0.68) 100%
+    ),
+    linear-gradient(
+      90deg,
+      rgba(7, 22, 41, 0.2) 0%,
+      transparent 30%,
+      transparent 70%,
+      rgba(7, 22, 41, 0.18) 100%
+    );
+  pointer-events: none;
+}
+
+.heroVideo {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.videoHeroContent {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  min-height: 100svh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.85rem;
+  padding: clamp(9rem, 20vh, 14rem) clamp(1.25rem, 4vw, 4rem)
+    clamp(3.75rem, 8vh, 6rem);
+  color: var(--paper);
+  text-align: center;
+}
+
+.videoEyebrow {
+  font-size: clamp(0.7rem, 1.1vw, 0.82rem);
+  font-weight: 600;
+  letter-spacing: 0.16em;
+}
+
+.videoHeroContent h1 {
+  max-width: 18ch;
+  color: var(--paper);
+  font-family: var(--font-interface);
+  font-size: clamp(2rem, 4.5vw, 4.4rem);
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+  text-shadow: 0 2px 24px rgba(4, 15, 28, 0.42);
+}
+
+.videoHeroLink {
+  margin-top: 0.5rem;
+  color: var(--paper);
+  font-size: 0.84rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+}
+
+.videoHeroLink:hover {
+  color: var(--brand-gold);
+}
+
+.videoControl {
+  position: absolute;
+  right: clamp(1rem, 2.5vw, 2.5rem);
+  bottom: clamp(1rem, 2.5vw, 2.25rem);
+  z-index: 2;
+  padding: 0.45rem 0.1rem;
+  color: rgba(250, 246, 235, 0.88);
+  font: inherit;
+  font-size: 0.64rem;
+  letter-spacing: 0.14em;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid rgba(250, 246, 235, 0.58);
+  cursor: pointer;
+}
+
+.videoControl:hover {
+  color: var(--brand-gold);
+  border-bottom-color: currentColor;
+}
+
 .paperRoom {
   background: var(--paper);
   color: var(--ink);
@@ -12,14 +122,6 @@
   border-radius: var(--paper-room-radius);
 }
 
-.heroRoom {
-  display: grid;
-  gap: clamp(2rem, 5vw, 5rem);
-  align-items: center;
-  padding: clamp(1.4rem, 4vw, 4.4rem);
-}
-
-.heroCopy,
 .roomCopy,
 .compactCopy {
   display: grid;
@@ -34,38 +136,12 @@
   letter-spacing: 0.17em;
 }
 
-.heroRoom h1,
 .paperRoom h2 {
   color: var(--ink);
-  text-wrap: balance;
-}
-
-.heroRoom h1 {
-  max-width: 10ch;
-  font-size: clamp(3rem, 7vw, 6.8rem);
-  line-height: 0.96;
-  letter-spacing: -0.045em;
-}
-
-.paperRoom h2 {
   font-size: clamp(2rem, 4vw, 4.2rem);
   line-height: 1.04;
   letter-spacing: -0.028em;
-}
-
-.heroSentence {
-  max-width: 30ch;
-  color: var(--ink-soft);
-  font-family: var(--font-editorial);
-  font-size: clamp(1.3rem, 2.4vw, 2rem);
-  line-height: 1.42;
-}
-
-.heroLinks {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.9rem 1.5rem;
-  margin-top: calc(var(--spacing-unit) * 0.6);
+  text-wrap: balance;
 }
 
 .textLink {
@@ -83,7 +159,6 @@
   color: var(--brand-gold-deep);
 }
 
-.heroFigure,
 .landscapeFigure,
 .portraitFigure,
 .albumFigure,
@@ -94,11 +169,6 @@
   border: 1px solid var(--line);
 }
 
-.heroFigure {
-  border-radius: 14px;
-}
-
-.heroFigure img,
 .landscapeFigure img,
 .portraitFigure img,
 .albumFigure img,
@@ -107,17 +177,6 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-.heroFigure img {
-  aspect-ratio: 4 / 3;
-  object-position: center 48%;
-}
-
-.heroFigure figcaption {
-  padding: 0.72rem 0.85rem;
-  color: var(--ink-soft);
-  font-size: 0.76rem;
 }
 
 .roomSequence {
@@ -195,10 +254,6 @@
 }
 
 @media (min-width: 900px) {
-  .heroRoom {
-    grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
-  }
-
   .houseRoom {
     grid-template-columns: minmax(20rem, 0.82fr) minmax(0, 1.18fr);
   }
@@ -213,16 +268,21 @@
 }
 
 @media (max-width: 899px) {
-  .heroRoom,
   .paperRoom {
     border-radius: 18px;
   }
 
-  .heroCopy {
-    order: 1;
+  .heroVideo {
+    object-position: 50% center;
   }
 
-  .heroFigure {
-    order: 2;
+  .videoHeroContent h1 {
+    max-width: 13ch;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .heroVideo {
+    display: none;
   }
 }

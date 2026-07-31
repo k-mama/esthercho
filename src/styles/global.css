@@ -224,3 +224,80 @@ h6 {
   font-family: var(--font-editorial);
   font-weight: 400;
 }
+
+/* 9. Homepage cinematic header */
+body:has(.home-video-hero) .site-header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 30;
+  margin: 0;
+  padding: clamp(1.2rem, 2.8vw, 2.2rem) 0;
+  background: linear-gradient(
+    180deg,
+    rgba(7, 22, 41, 0.7) 0%,
+    rgba(7, 22, 41, 0.22) 72%,
+    transparent 100%
+  );
+  border: 0;
+  border-radius: 0;
+}
+
+body:has(.home-video-hero) .site-header .container {
+  max-width: none;
+  padding-right: clamp(1.25rem, 3.5vw, 3.75rem);
+  padding-left: clamp(1.25rem, 3.5vw, 3.75rem);
+}
+
+body:has(.home-video-hero) .site-header-wordmark-image {
+  width: clamp(132px, 12vw, 188px);
+  filter: brightness(0) saturate(100%) invert(78%) sepia(35%)
+    saturate(705%) hue-rotate(355deg) brightness(94%) contrast(86%);
+}
+
+body:has(.home-video-hero) .site-header-nav-link,
+body:has(.home-video-hero) .site-header-lang,
+body:has(.home-video-hero) .site-header-nav-mobile summary {
+  color: rgba(250, 246, 235, 0.96);
+  text-shadow: 0 1px 18px rgba(4, 15, 28, 0.34);
+}
+
+body:has(.home-video-hero) .site-header-nav-link:hover,
+body:has(.home-video-hero) .site-header-nav-mobile summary:hover {
+  color: var(--brand-gold);
+}
+
+body:has(.home-video-hero) .site-header-nav-mobile-menu {
+  background: rgba(8, 27, 50, 0.96);
+  border-color: rgba(206, 174, 102, 0.35);
+  backdrop-filter: blur(16px);
+}
+
+@media (min-width: 960px) {
+  body:has(.home-video-hero) .site-header .container {
+    display: grid;
+    grid-template-columns: minmax(190px, 1fr) auto minmax(90px, 1fr);
+  }
+
+  body:has(.home-video-hero) .site-header-logo {
+    justify-self: start;
+  }
+
+  body:has(.home-video-hero) .site-header-nav-desktop {
+    justify-self: center;
+  }
+
+  body:has(.home-video-hero) .site-header-lang {
+    justify-self: end;
+  }
+
+  body:has(.home-video-hero) .site-header-nav-desktop ul {
+    gap: clamp(1.35rem, 2.2vw, 2.5rem);
+  }
+
+  body:has(.home-video-hero) .site-header-nav-link {
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+  }
+}

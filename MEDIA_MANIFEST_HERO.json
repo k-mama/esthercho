@@ -1,0 +1,13 @@
+{
+  "source_upload": "홈페이지에_처음_방문_한_사람에게_집에_초대되어_입장하(1).mp4",
+  "published_video": "public/media/home/esther-house-entry.mp4",
+  "published_poster": "public/media/home/esther-house-entry-poster.jpg",
+  "video": {
+    "duration_seconds": 10,
+    "width": 1280,
+    "height": 720,
+    "codec": "H.264",
+    "audio": "removed",
+    "purpose": "decorative cinematic homepage opening"
+  }
+}

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { HomeHeroVideo } from "./home-hero-video";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
@@ -51,38 +52,21 @@ const rooms = [
 export default function Home() {
   return (
     <div className={styles.home}>
-      <section className={`container ${styles.heroRoom}`}>
-        <div className={styles.heroCopy}>
-          <p className={styles.eyebrow}>WELCOME TO ESTHER&apos;S HOUSE</p>
-          <h1>A house of stories, built from memory.</h1>
-          <p className={styles.heroSentence}>
-            Faith, childhood, home, hand drawn worlds, and the quiet places
-            that shape a life.
-          </p>
-          <div className={styles.heroLinks}>
-            <Link href="/about/" className={styles.textLink}>
-              Enter the house
-            </Link>
-            <Link href="/stories/" className={styles.textLink}>
-              Read the stories
-            </Link>
-          </div>
-        </div>
+      <section className={`${styles.videoHero} home-video-hero`}>
+        <HomeHeroVideo />
 
-        <figure className={styles.heroFigure}>
-          <Image
-            src="/media/home/childhood-garden.jpg"
-            alt="Esther Cho smiling in a garden as a child"
-            width={1800}
-            height={1350}
-            sizes="(max-width: 899px) 100vw, 50vw"
-            priority
-          />
-          <figcaption>A real childhood photograph of Esther Cho.</figcaption>
-        </figure>
+        <div className={styles.videoHeroContent}>
+          <p className={styles.videoEyebrow}>
+            WELCOME TO ESTHER&apos;S HOUSE
+          </p>
+          <h1>A house of stories, built from memory.</h1>
+          <Link href="/about/" className={styles.videoHeroLink}>
+            Enter the house
+          </Link>
+        </div>
       </section>
 
-      <div className={`container ${styles.roomSequence}`}>
+      <div id="rooms" className={`container ${styles.roomSequence}`}>
         <article className={`${styles.paperRoom} ${styles.houseRoom}`}>
           <div className={styles.roomCopy}>
             <p className={styles.eyebrow}>{rooms[0].eyebrow}</p>
