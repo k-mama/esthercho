@@ -7,6 +7,7 @@ interface PageCoverProps {
   title: string;
   description?: string;
   image: string;
+  mobileImage?: string;
   alt: string;
   objectPosition?: string;
   mobileObjectPosition?: string;
@@ -20,6 +21,7 @@ export function PageCover({
   title,
   description,
   image,
+  mobileImage,
   alt,
   objectPosition = "center center",
   mobileObjectPosition,
@@ -37,14 +39,19 @@ export function PageCover({
       className={`page-cover-shell page-cover--${align} page-cover--${shade}`}
       style={coverStyle}
     >
-      <Image
-        src={image}
-        alt={alt}
-        fill
-        sizes="100vw"
-        priority={priority}
-        className="page-cover-image"
-      />
+      <picture className="page-cover-picture">
+        {mobileImage ? (
+          <source media="(max-width: 899px)" srcSet={mobileImage} />
+        ) : null}
+        <Image
+          src={image}
+          alt={alt}
+          fill
+          sizes="100vw"
+          priority={priority}
+          className="page-cover-image"
+        />
+      </picture>
 
       <div className="page-cover-content container">
         <div className="page-cover-copy">

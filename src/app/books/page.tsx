@@ -13,11 +13,12 @@ export default function BooksPage() {
         title="Beyond the Garden"
         description="Books and published works by Esther Cho."
         image="/media/covers/books-cover.jpg"
-        alt="An open hand-drawn story study by Esther Cho"
-        objectPosition="center 60%"
-        mobileObjectPosition="center 58%"
-        align="left"
-        shade="strong"
+        mobileImage="/media/covers/books-cover-mobile.jpg"
+        alt="A watercolor-style scene of a woman reading at a table with a book, cup, and orchid"
+        objectPosition="center center"
+        mobileObjectPosition="34% center"
+        align="right"
+        shade="soft"
       />
 
       <section className="page-cover-followup">

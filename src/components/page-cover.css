@@ -69,6 +69,13 @@
     );
 }
 
+.page-cover-picture {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  display: block;
+}
+
 .page-cover-image {
   z-index: 0;
   object-fit: cover;

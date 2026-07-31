@@ -6,12 +6,6 @@
                                              "height":  1800,
                                              "bytes":  423370
                                          },
-                   "books-cover.jpg":  {
-                                           "source":  "/mnt/data/esther_media_extract/동화습작 (2)/20260630_085224.jpg",
-                                           "width":  1800,
-                                           "height":  2400,
-                                           "bytes":  275379
-                                       },
                    "childhood-cover.jpg":  {
                                                "source":  "/mnt/data/fd4a3a7c-c41d-4d85-b9c0-bb7112c13aa9.png",
                                                "width":  1800,
@@ -35,7 +29,21 @@
                                             "width":  2400,
                                             "height":  1800,
                                             "bytes":  619007
-                                        }
+                                        },
+                   "books-cover.jpg":  {
+                                           "source":  "48597.png",
+                                           "width":  2400,
+                                           "height":  1350,
+                                           "bytes":  190190,
+                                           "role":  "desktop BOOKS cover"
+                                       },
+                   "books-cover-mobile.jpg":  {
+                                                  "source":  "48597.png",
+                                                  "width":  1214,
+                                                  "height":  1536,
+                                                  "bytes":  235730,
+                                                  "role":  "mobile BOOKS cover"
+                                              }
                },
     "routes":  {
                    "/stories/":  "stories-cover.jpg",
