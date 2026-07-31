@@ -13,9 +13,10 @@ export default function ArchivePage() {
         title="The Childhood Album"
         description="Childhood photographs, family records, drawings, and preserved memories."
         image="/media/covers/childhood-cover.jpg"
-        alt="Esther Cho smiling in the garden as a child"
-        objectPosition="42% center"
-        mobileObjectPosition="38% center"
+        mobileImage="/media/covers/childhood-cover-mobile.jpg"
+        alt="An editorial collage assembled from Esther Cho's childhood family photographs"
+        objectPosition="center center"
+        mobileObjectPosition="center center"
         align="right"
         shade="medium"
       />

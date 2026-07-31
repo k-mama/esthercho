@@ -13,10 +13,18 @@
       "bytes": 275379
     },
     "childhood-cover.jpg": {
-      "source": "/mnt/data/fd4a3a7c-c41d-4d85-b9c0-bb7112c13aa9.png",
-      "width": 1800,
+      "source": "approved editorial collage composed from supplied family photographs",
+      "width": 2400,
       "height": 1350,
-      "bytes": 374364
+      "bytes": 443066,
+      "classification": "AI-assisted editorial collage, not a single archival photograph"
+    },
+    "childhood-cover-mobile.jpg": {
+      "source": "approved editorial collage composed from supplied family photographs",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 346226,
+      "classification": "AI-assisted editorial collage, not a single archival photograph"
     },
     "studio-cover.jpg": {
       "source": "/mnt/data/esther_media_extract/동화습작 (2)/20260718_141326.jpg",
@@ -40,7 +48,10 @@
   "routes": {
     "/stories/": "stories-cover.jpg",
     "/books/": "books-cover.jpg",
-    "/archive/": "childhood-cover.jpg",
+    "/archive/": {
+      "desktop": "childhood-cover.jpg",
+      "mobile": "childhood-cover-mobile.jpg"
+    },
     "/studio/": "studio-cover.jpg",
     "/notes/": "morning-table-cover.jpg",
     "/about/": "esther-cover.jpg"
@@ -48,6 +59,7 @@
   "processing": [
     "EXIF orientation correction",
     "EXIF removal",
+    "responsive art direction",
     "proportional resize",
     "JPEG optimization"
   ]
