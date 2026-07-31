@@ -101,7 +101,7 @@ body {
 .site-header-wordmark-image {
   display: block;
   width: 128px;
-  width: auto;
+  height: auto;
   vertical-align: middle;
 }
 
