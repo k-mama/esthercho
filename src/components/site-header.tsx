@@ -27,7 +27,7 @@ export function SiteHeader() {
   return (
     <header className="site-header">
       <div className="container">
-        <Link href="/" className="site-header-wordmark">
+        <Link href="/" className="site-header-wordmark" aria-label="Esther Cho home">
           {siteConfig.name}
         </Link>
 

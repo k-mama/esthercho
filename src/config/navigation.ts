@@ -1,6 +1,5 @@
 export const navigationConfig = {
   mainNav: [
-    { title: "HOME", href: "/" },
     { title: "STORIES", href: "/stories/" },
     { title: "BOOKS", href: "/books/" },
     { title: "ARCHIVE", href: "/archive/" },
