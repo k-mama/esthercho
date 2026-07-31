@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { siteConfig } from "@/config/site";
+import Image from "next/image";
 import { navigationConfig } from "@/config/navigation";
 
 function GlobeIcon() {
@@ -27,8 +27,23 @@ export function SiteHeader() {
   return (
     <header className="site-header">
       <div className="container">
-        <Link href="/" className="site-header-wordmark" aria-label="Esther Cho home">
-          {siteConfig.name}
+        <Link href="/" className="site-header-logo" aria-label="Esther Cho home">
+          <Image
+            src="/brand/esther-cho-wordmark-header.png"
+            alt=""
+            width={300}
+            height={100}
+            className="site-header-logo-desktop"
+            aria-hidden="true"
+          />
+          <Image
+            src="/brand/esther-cho-monogram.png"
+            alt=""
+            width={40}
+            height={40}
+            className="site-header-logo-mobile"
+            aria-hidden="true"
+          />
         </Link>
 
         {/* Desktop Navigation */}
