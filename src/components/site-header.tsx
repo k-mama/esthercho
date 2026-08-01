@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -27,7 +28,10 @@ function GlobeIcon() {
 
 export function SiteHeader() {
   const pathname = usePathname();
-  const isKorean = pathname === "/ko" || pathname.startsWith("/ko/");
+  const mobileMenuRef = useRef<HTMLDetailsElement>(null);
+
+  const isKorean =
+    pathname === "/ko" || pathname.startsWith("/ko/");
 
   const navItems = isKorean
     ? navigationConfig.ko
@@ -35,9 +39,18 @@ export function SiteHeader() {
 
   const homeHref = isKorean ? "/ko/" : "/";
   const languageHref = isKorean ? "/" : "/ko/";
+
   const languageLabel = isKorean
     ? "영문 홈페이지로 이동"
     : "한글 홈페이지로 이동";
+
+  const closeMobileMenu = () => {
+    mobileMenuRef.current?.removeAttribute("open");
+  };
+
+  useEffect(() => {
+    closeMobileMenu();
+  }, [pathname]);
 
   return (
     <header className="site-header">
@@ -45,7 +58,10 @@ export function SiteHeader() {
         <Link
           href={homeHref}
           className="site-header-logo"
-          aria-label={isKorean ? "조성연 홈페이지" : "Esther Cho home"}
+          aria-label={
+            isKorean ? "조성연 홈페이지" : "Esther Cho home"
+          }
+          onClick={closeMobileMenu}
         >
           <Image
             src="/brand/esther-cho-wordmark-navy-transparent.png"
@@ -64,7 +80,10 @@ export function SiteHeader() {
           <ul>
             {navItems.map((item) => (
               <li key={item.href}>
-                <Link href={item.href} className="site-header-nav-link">
+                <Link
+                  href={item.href}
+                  className="site-header-nav-link"
+                >
                   {item.title}
                 </Link>
               </li>
@@ -73,12 +92,17 @@ export function SiteHeader() {
         </nav>
 
         <div className="site-header-nav-mobile">
-          <details>
+          <details ref={mobileMenuRef}>
             <summary>{isKorean ? "메뉴" : "MENU"}</summary>
+
             <ul className="site-header-nav-mobile-menu">
               {navItems.map((item) => (
                 <li key={item.href}>
-                  <Link href={item.href} className="site-header-nav-link">
+                  <Link
+                    href={item.href}
+                    className="site-header-nav-link"
+                    onClick={closeMobileMenu}
+                  >
                     {item.title}
                   </Link>
                 </li>
@@ -93,6 +117,7 @@ export function SiteHeader() {
           className="site-header-lang"
           aria-label={languageLabel}
           title={languageLabel}
+          onClick={closeMobileMenu}
         >
           <GlobeIcon />
         </Link>
