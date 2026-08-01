@@ -179,24 +179,100 @@ body {
 
 /* 6. Site Footer */
 .site-footer {
-  margin: 0 clamp(0.75rem, 2vw, 1.5rem) clamp(0.75rem, 2vw, 1.5rem);
-  padding: calc(var(--spacing-unit) * 2.4) 0;
-  text-align: center;
-  font-size: 0.82rem;
+  margin: 0 clamp(0.75rem, 2vw, 1.5rem)
+    clamp(0.75rem, 2vw, 1.5rem);
+  padding: clamp(2.5rem, 5vw, 4.5rem) 0;
   color: var(--ink-soft);
   background: var(--paper);
   border: 1px solid var(--paper-room-line);
   border-radius: var(--paper-room-radius);
 }
 
+.site-footer-grid {
+  display: grid;
+  gap: 2rem;
+}
+
 .site-footer p {
-  margin-bottom: 0;
+  margin: 0;
+}
+
+.site-footer-site {
+  display: grid;
+  align-content: start;
+  gap: 0.3rem;
 }
 
 .site-footer-name {
-  font-weight: 500;
-  letter-spacing: 0.06em;
   color: var(--brand-navy);
+  font-weight: 600;
+  letter-spacing: 0.09em;
+}
+
+.site-footer-description,
+.site-footer-copyright {
+  font-size: 0.78rem;
+  line-height: 1.6;
+}
+
+.site-footer-colophon {
+  border-top: 1px solid rgba(168, 136, 79, 0.34);
+  padding-top: 1.65rem;
+}
+
+.site-footer-kicker {
+  color: var(--brand-gold);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.site-footer-credit {
+  max-width: 720px;
+  margin-top: 0.75rem !important;
+  color: var(--brand-navy);
+  font-family: var(--font-editorial);
+  font-size: clamp(1.05rem, 1.7vw, 1.4rem);
+  line-height: 1.45;
+}
+
+.site-footer-roles {
+  max-width: 760px;
+  margin-top: 0.75rem !important;
+  color: #887967;
+  font-size: 0.7rem;
+  line-height: 1.75;
+  letter-spacing: 0.025em;
+}
+
+.site-footer-maker-identity {
+  max-width: 700px;
+  margin-top: 0.7rem !important;
+  color: var(--ink-soft);
+  font-size: 0.76rem;
+  line-height: 1.7;
+}
+
+/* Korean words must never break between syllables. */
+html[lang="ko"] body {
+  word-break: keep-all;
+  overflow-wrap: normal;
+}
+
+@media (min-width: 760px) {
+  .site-footer-grid {
+    grid-template-columns: minmax(210px, 0.7fr)
+      minmax(0, 1.8fr);
+    gap: clamp(2.5rem, 6vw, 6rem);
+  }
+
+  .site-footer-colophon {
+    border-top: 0;
+    border-left: 1px solid rgba(168, 136, 79, 0.34);
+    padding-top: 0;
+    padding-left: clamp(2rem, 4vw, 4rem);
+  }
 }
 
 /* 7. Responsive Layout */
