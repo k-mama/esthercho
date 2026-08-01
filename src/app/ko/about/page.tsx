@@ -14,10 +14,11 @@ export default function KoreanAboutPage() {
         eyebrow={authorProfile.koreanName}
         title="이야기가 된 집"
         description={authorProfile.roles.ko.join(" · ")}
-        image="/media/covers/esther-cover.jpg"
-        alt="대학생 시절 물가에 서 있는 조성연"
+        image="/media/covers/esther-cover.webp"
+        mobileImage="/media/covers/esther-cover-mobile.webp"
+        alt="남색 셔츠를 입고 두 점의 작품 아래 앉아 있는 조성연"
         objectPosition="center center"
-        mobileObjectPosition="58% center"
+        mobileObjectPosition="center center"
         align="left"
         shade="medium"
       />

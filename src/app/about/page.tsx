@@ -18,10 +18,11 @@ export default function AboutPage() {
         eyebrow="ESTHER"
         title="The House That Became a Story"
         description={authorProfile.roles.en.join(" · ")}
-        image="/media/covers/esther-cover.jpg"
-        alt="Esther Cho by the water during her university years"
+        image="/media/covers/esther-cover.webp"
+        mobileImage="/media/covers/esther-cover-mobile.webp"
+        alt="Esther Cho in a navy blouse seated beneath two framed artworks"
         objectPosition="center center"
-        mobileObjectPosition="58% center"
+        mobileObjectPosition="center center"
         align="left"
         shade="medium"
       />

@@ -11,7 +11,7 @@
   isolation: isolate;
   background:
     linear-gradient(180deg, rgba(7, 23, 43, 0.58), rgba(7, 23, 43, 0.2)),
-    url("/media/home/esther-house-entry-poster.jpg") center / cover no-repeat;
+    url("/media/home/home-hero.webp") center / cover no-repeat;
 }
 
 .videoHero::before {
@@ -298,3 +298,22 @@
     display: none;
   }
 }
+/* STATIC HOME HERO START */
+.heroPicture {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  display: block;
+}
+
+.heroImage {
+  object-fit: cover;
+  object-position: center center;
+}
+
+@media (max-width: 899px) {
+  .heroImage {
+    object-position: center center;
+  }
+}
+/* STATIC HOME HERO END */
