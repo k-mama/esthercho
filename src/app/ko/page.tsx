@@ -154,8 +154,8 @@ export default function KoreanHome() {
           </div>
           <figure className={styles.sketchFigure}>
             <Image
-              src="/media/home/hand-drawn-story.jpg"
-              alt="조성연의 원본 손그림 동화 습작"
+              src="/media/home/studio-home-card-collage-2026-08.png"
+              alt="조성연의 손그림 습작과 수채화 스케치를 모은 정사각 콜라주 이미지"
               width={1200}
               height={1600}
               sizes="(max-width: 899px) 100vw, 36vw"

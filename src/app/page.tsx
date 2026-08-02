@@ -144,8 +144,8 @@ export default function Home() {
           </div>
           <figure className={styles.sketchFigure}>
             <Image
-              src="/media/home/hand-drawn-story.jpg"
-              alt="An original hand drawn story study by Esther Cho"
+              src="/media/home/studio-home-card-collage-2026-08.png"
+              alt="A square collage of Esther Cho's hand-drawn story studies and watercolor sketches"
               width={1200}
               height={1600}
               sizes="(max-width: 899px) 100vw, 36vw"
