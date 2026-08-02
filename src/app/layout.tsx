@@ -6,12 +6,37 @@ import { DocumentLanguage } from "@/components/document-language";
 import "@/styles/tokens.css";
 import "@/styles/global.css";
 
+const siteUrl = "https://esthercho.pages.dev";
+const socialPreviewImage = "/media/home/esther-house-entry-poster.jpg";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: {
     default: siteConfig.name,
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
+  openGraph: {
+    type: "website",
+    url: siteUrl,
+    siteName: "Esther Cho",
+    title: "Esther Cho",
+    description:
+      "Enter Esther Cho's house of stories, shaped by faith, memory, childhood, and ordinary life.",
+    images: [
+      {
+        url: socialPreviewImage,
+        alt: "The entrance to Esther Cho's house",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Esther Cho",
+    description:
+      "Enter Esther Cho's house of stories, shaped by faith, memory, childhood, and ordinary life.",
+    images: [socialPreviewImage],
+  },
 };
 
 export default function RootLayout({
