@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-
+import { HomeHeroVideo } from "../home-hero-video";
 import styles from "../page.module.css";
 
 export const metadata: Metadata = {
@@ -60,20 +60,7 @@ export default function KoreanHome() {
   return (
     <div className={styles.home}>
       <section className={`${styles.videoHero} home-video-hero`}>
-        <picture className={styles.heroPicture}>
-          <source
-            media="(max-width: 899px)"
-            srcSet="/media/home/home-hero-mobile.webp"
-          />
-          <Image
-            src="/media/home/home-hero.webp"
-            alt="교회 십자가가 보이는 능소화 길에 선 조성연"
-            fill
-            priority
-            sizes="100vw"
-            className={styles.heroImage}
-          />
-        </picture>
+        <HomeHeroVideo locale="ko" />
 
         <div className={styles.videoHeroContent}>
           <p className={styles.videoEyebrow}>

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-
+import { HomeHeroVideo } from "./home-hero-video";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
@@ -53,20 +53,7 @@ export default function Home() {
   return (
     <div className={styles.home}>
       <section className={`${styles.videoHero} home-video-hero`}>
-        <picture className={styles.heroPicture}>
-          <source
-            media="(max-width: 899px)"
-            srcSet="/media/home/home-hero-mobile.webp"
-          />
-          <Image
-            src="/media/home/home-hero.webp"
-            alt="Esther Cho beside orange trumpet flowers with a church cross in the distance"
-            fill
-            priority
-            sizes="100vw"
-            className={styles.heroImage}
-          />
-        </picture>
+        <HomeHeroVideo />
 
         <div className={styles.videoHeroContent}>
           <p className={styles.videoEyebrow}>
