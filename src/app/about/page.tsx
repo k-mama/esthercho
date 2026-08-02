@@ -208,14 +208,15 @@ export default function AboutPage() {
 
             <figure className="esther-figure esther-sketch-figure">
               <Image
-                src="/media/esther/hand-drawn-story.jpg"
-                alt="An original pencil story study by Esther Cho"
-                width={1200}
-                height={1600}
+                src="/media/esther/still-making-father-child-collage-20260802.png"
+                alt="A paper collage showing young Esther Cho riding on her father's back"
+                width={1536}
+                height={1536}
                 sizes="(max-width: 899px) 100vw, 38vw"
               />
               <figcaption>
-                An original hand drawn story study by Esther Cho.
+                Based on Esther Cho&apos;s original childhood sketch. AI-assisted
+                editorial reinterpretation.
               </figcaption>
             </figure>
           </div>

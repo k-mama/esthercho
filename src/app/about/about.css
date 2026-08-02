@@ -127,10 +127,15 @@
   object-position: center 30%;
 }
 
-.esther-table-figure img,
-.esther-sketch-figure img {
+.esther-table-figure img {
   aspect-ratio: 4 / 5;
   object-fit: cover;
+}
+
+.esther-sketch-figure img {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center center;
 }
 
 .esther-service-figure img {
