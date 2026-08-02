@@ -6,7 +6,8 @@ import "./about.css";
 
 export const metadata: Metadata = {
   title: "The House That Became a Story",
-  description: `Meet ${authorProfile.globalName}, the international author name of Korean writer and artist ${authorProfile.romanizedName}.`,
+  description:
+    "Meet Esther Cho, the international author name of Korean writer and artist Cho Seongyeon, whose work grows from faith, memory, home, and drawing.",
 };
 
 const education = authorProfile.education;
@@ -31,16 +32,20 @@ export default function AboutPage() {
         <header className="container esther-hero">
           <div className="esther-hero-copy">
             <p className="esther-eyebrow">ABOUT THE AUTHOR</p>
+
             <h2>
               {authorProfile.globalName} {"\u00B7"}{" "}
               {authorProfile.romanizedName}
             </h2>
-            <p className="esther-deck">{authorProfile.shortBio.en}</p>
+
+            <p className="esther-deck">
+              {authorProfile.shortBio.en}
+            </p>
+
             <p className="esther-intro">
-              Her work grows from Christian faith, memory, childhood, and the
-              quiet textures of ordinary life. Writing, drawing, family memory,
-              and devotional reflection meet in the stories she is creating
-              now.
+              Her work begins where Christian faith, childhood, family memory,
+              and ordinary domestic life meet. She writes and draws from what
+              has been lived, remembered, and quietly carried.
             </p>
           </div>
 
@@ -53,7 +58,10 @@ export default function AboutPage() {
               sizes="(max-width: 899px) 100vw, 52vw"
               priority
             />
-            <figcaption>Esther Cho as a child.</figcaption>
+
+            <figcaption>
+              Esther Cho in the garden as a child.
+            </figcaption>
           </figure>
         </header>
 
@@ -67,6 +75,7 @@ export default function AboutPage() {
                 height={1059}
                 sizes="(max-width: 899px) 100vw, 48vw"
               />
+
               <figcaption>
                 The house and garden remembered from childhood.
               </figcaption>
@@ -74,15 +83,20 @@ export default function AboutPage() {
 
             <div className="esther-copy">
               <p className="esther-eyebrow">THE BEGINNING</p>
-              <h2>A house, a garden, and a child who kept looking.</h2>
+
+              <h2>
+                A house, a garden, and a child who kept looking.
+              </h2>
+
               <p>
-                The places of childhood remain central to Esther Cho&apos;s
-                creative world. The house, the garden, family photographs, and
-                ordinary rooms return as places where memory becomes story.
+                The house and garden of her childhood continue to return in her
+                work. Not as decorative nostalgia, but as places where memory
+                first learned to become story.
               </p>
+
               <p>
-                These are not decorative vintage motifs. They are records of a
-                life, preserved and presented as real memory.
+                Family photographs, familiar paths, and ordinary rooms remain
+                part of the landscape from which she writes.
               </p>
             </div>
           </div>
@@ -92,7 +106,11 @@ export default function AboutPage() {
           <div className="esther-split esther-split-reverse">
             <div className="esther-copy">
               <p className="esther-eyebrow">ART AND EDUCATION</p>
-              <h2>The child who drew became a student of Eastern painting.</h2>
+
+              <h2>
+                The child who drew kept following the line.
+              </h2>
+
               <p>
                 Her formal art education began at Yewon School and continued at
                 Seoul Arts High School. She later studied Oriental Painting at
@@ -106,7 +124,10 @@ export default function AboutPage() {
               >
                 {education.map((item) => (
                   <li key={item.year}>
-                    <span className="esther-year">{item.year}</span>
+                    <span className="esther-year">
+                      {item.year}
+                    </span>
+
                     <span>{item.detail.en}</span>
                   </li>
                 ))}
@@ -121,7 +142,10 @@ export default function AboutPage() {
                 height={1125}
                 sizes="(max-width: 899px) 100vw, 42vw"
               />
-              <figcaption>Esther Cho during her university years.</figcaption>
+
+              <figcaption>
+                Esther Cho during her university years.
+              </figcaption>
             </figure>
           </div>
         </section>
@@ -129,16 +153,24 @@ export default function AboutPage() {
         <section className="esther-section esther-home-section">
           <div className="container esther-home-grid">
             <div className="esther-copy">
-              <p className="esther-eyebrow">HOME, FAMILY, AND FAITH</p>
-              <h2>The ordinary table became part of the work.</h2>
-              <p>
-                Esther Cho is a writer, artist, and homemaker. Much of her
-                creative life has grown within the everyday rhythms of home,
-                family, Christian faith, and service.
+              <p className="esther-eyebrow">
+                HOME, FAMILY, AND FAITH
               </p>
+
+              <h2>
+                The ordinary table became part of the work.
+              </h2>
+
               <p>
-                The morning table is not a staged symbol. It is one of the real
-                places where prayer, food, reflection, and writing meet.
+                Esther Cho is a writer, artist, and homemaker. Her creative life
+                did not grow apart from the ordinary work of a home. It grew
+                inside it—among meals, family rhythms, prayer, and everyday
+                care.
+              </p>
+
+              <p>
+                At the morning table, food, reflection, memory, and writing
+                often share the same space.
               </p>
             </div>
 
@@ -150,6 +182,7 @@ export default function AboutPage() {
                 height={1600}
                 sizes="(max-width: 899px) 100vw, 38vw"
               />
+
               <figcaption>
                 A meal prepared at home, part of the rhythm behind her work.
               </figcaption>
@@ -167,23 +200,28 @@ export default function AboutPage() {
                 height={769}
                 sizes="(max-width: 899px) 100vw, 36vw"
               />
+
               <figcaption>
                 Esther Cho during volunteer service in Bangladesh.
               </figcaption>
             </figure>
 
             <div className="esther-copy">
-              <p className="esther-eyebrow">FAITH IN PRACTICE</p>
-              <h2>Faith continues beyond the page.</h2>
-              <p>
-                She supports North Korean refugees through mentoring and
-                participates in mission and volunteer work in Bangladesh.
+              <p className="esther-eyebrow">
+                FAITH IN PRACTICE
               </p>
+
+              <h2>The life beyond the page.</h2>
+
               <p>
-                These activities are part of the same life from which her
-                writing grows. They are presented here without inventing an
-                organization name or expanding the scope of work beyond the
-                confirmed record.
+                Her faith has also taken practical form through mentoring North
+                Korean refugees and participating in mission and volunteer
+                service in Bangladesh.
+              </p>
+
+              <p>
+                These experiences belong to the same life from which her
+                writing grows.
               </p>
             </div>
           </div>
@@ -193,16 +231,24 @@ export default function AboutPage() {
           <div className="container esther-making-grid">
             <div className="esther-copy">
               <p className="esther-eyebrow">STILL MAKING</p>
-              <h2>Writing and drawing continue together.</h2>
+
+              <h2>
+                Writing and drawing continue together.
+              </h2>
+
               <p>
-                Her current practice brings together prose, devotional writing,
-                family memory, and original hand drawn story studies.
+                She continues to write prose, devotional reflections, and
+                hand-drawn story studies.
               </p>
+
               <p>
-                When a hand drawn work is later reinterpreted with AI
-                assistance, the original and the reinterpretation remain
-                clearly identified. The archive is never used to disguise a
-                newly created image as a historical record.
+                Sometimes a pencil drawing remains exactly as it was. Sometimes
+                it becomes the starting point for a clearly identified
+                AI-assisted editorial reinterpretation.
+              </p>
+
+              <p>
+                The original stays visible. So does the process.
               </p>
             </div>
 
@@ -214,9 +260,10 @@ export default function AboutPage() {
                 height={1536}
                 sizes="(max-width: 899px) 100vw, 38vw"
               />
+
               <figcaption>
-                Based on Esther Cho&apos;s original childhood sketch. AI-assisted
-                editorial reinterpretation.
+                Based on Esther Cho&apos;s original childhood sketch.
+                AI-assisted editorial reinterpretation.
               </figcaption>
             </figure>
           </div>
@@ -227,9 +274,10 @@ export default function AboutPage() {
             {authorProfile.globalName} {"\u00B7"}{" "}
             {authorProfile.romanizedName}
           </p>
+
           <p>
-            A writer and artist gathering faith, memory, home, and lived
-            experience into stories.
+            She is still gathering faith, memory, and the ordinary rooms of a
+            life into stories.
           </p>
         </footer>
       </article>

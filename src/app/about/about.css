@@ -4,6 +4,12 @@
   --esther-paper-deep: hsl(39, 34%, 95%);
   --esther-caption: hsl(31, 9%, 42%);
   color: var(--ink);
+  background: var(--paper);
+}
+
+.esther-page-ko {
+  word-break: keep-all;
+  overflow-wrap: normal;
 }
 
 .esther-page h1,
@@ -26,8 +32,19 @@
   letter-spacing: -0.025em;
 }
 
+.esther-page-ko h2 {
+  line-height: 1.18;
+  letter-spacing: -0.035em;
+}
+
 .esther-page p {
   max-width: 66ch;
+}
+
+.esther-page-ko p,
+.esther-page-ko li {
+  word-break: keep-all;
+  overflow-wrap: normal;
 }
 
 .esther-eyebrow {
@@ -35,6 +52,10 @@
   font-size: 0.76rem;
   font-weight: 600;
   letter-spacing: 0.16em;
+}
+
+.esther-page-ko .esther-eyebrow {
+  letter-spacing: 0.12em;
 }
 
 .esther-hero {
@@ -57,10 +78,19 @@
   line-height: 1.35;
 }
 
+.esther-page-ko .esther-deck {
+  line-height: 1.65;
+}
+
 .esther-intro,
 .esther-copy {
   color: var(--ink-soft);
   font-size: clamp(1rem, 1.45vw, 1.16rem);
+}
+
+.esther-page-ko .esther-intro,
+.esther-page-ko .esther-copy {
+  line-height: 1.85;
 }
 
 .esther-copy {
@@ -86,6 +116,10 @@
   color: var(--esther-caption);
   font-size: 0.78rem;
   line-height: 1.5;
+}
+
+.esther-page-ko .esther-figure figcaption {
+  line-height: 1.7;
 }
 
 .esther-hero-figure img {
@@ -154,7 +188,7 @@
 
 .esther-timeline li {
   display: grid;
-  grid-template-columns: 4.4rem 1fr;
+  grid-template-columns: 4.4rem minmax(0, 1fr);
   gap: var(--spacing-unit);
   padding-top: var(--spacing-unit);
   border-top: 1px solid var(--line);
@@ -183,29 +217,45 @@
   line-height: 1.35;
 }
 
+.esther-page-ko .esther-closing > p:last-child {
+  line-height: 1.65;
+}
+
 @media (min-width: 900px) {
   .esther-hero {
-    grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.12fr);
+    grid-template-columns:
+      minmax(0, 0.88fr)
+      minmax(0, 1.12fr);
   }
 
   .esther-split {
-    grid-template-columns: minmax(0, 1.05fr) minmax(20rem, 0.95fr);
+    grid-template-columns:
+      minmax(0, 1.05fr)
+      minmax(20rem, 0.95fr);
   }
 
   .esther-split-reverse {
-    grid-template-columns: minmax(20rem, 0.92fr) minmax(0, 1.08fr);
+    grid-template-columns:
+      minmax(20rem, 0.92fr)
+      minmax(0, 1.08fr);
   }
 
   .esther-home-grid {
-    grid-template-columns: minmax(0, 1fr) minmax(20rem, 0.72fr);
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(20rem, 0.72fr);
   }
 
   .esther-service-grid {
-    grid-template-columns: minmax(20rem, 0.76fr) minmax(0, 1fr);
+    grid-template-columns:
+      minmax(20rem, 0.76fr)
+      minmax(0, 1fr);
   }
 
   .esther-making-grid {
-    grid-template-columns: minmax(0, 1fr) minmax(20rem, 0.72fr);
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(20rem, 0.72fr);
   }
 }
 
@@ -227,9 +277,35 @@
   .esther-figure figcaption {
     padding-left: 0.15rem;
   }
+
+  .esther-timeline li {
+    grid-template-columns:
+      3.8rem
+      minmax(0, 1fr);
+  }
 }
 
-/* ESTHER PAGE PAPER BACKGROUND */
-.esther-page {
-  background: var(--paper);
+@media (max-width: 520px) {
+  .esther-page h2 {
+    font-size: clamp(1.85rem, 10vw, 2.65rem);
+  }
+
+  .esther-page-ko h2 {
+    line-height: 1.22;
+  }
+
+  .esther-timeline {
+    gap: calc(var(--spacing-unit) * 0.8);
+  }
+
+  .esther-timeline li {
+    grid-template-columns:
+      3.3rem
+      minmax(0, 1fr);
+    gap: calc(var(--spacing-unit) * 0.75);
+  }
+
+  .esther-year {
+    font-size: 1.05rem;
+  }
 }
