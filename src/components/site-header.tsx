@@ -14,14 +14,16 @@ function GlobeIcon() {
       height="24"
       viewBox="0 0 24 24"
       fill="none"
-      strokeWidth="1.5"
+      stroke="currentColor"
+      strokeWidth="1.7"
       strokeLinecap="round"
       strokeLinejoin="round"
       aria-hidden="true"
+      focusable="false"
     >
-      <circle cx="12" cy="12" r="10" />
-      <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
-      <path d="M2 12h20" />
+      <circle cx="12" cy="12" r="9.25" />
+      <path d="M12 2.75c2.3 2.45 3.5 5.55 3.5 9.25S14.3 18.8 12 21.25C9.7 18.8 8.5 15.7 8.5 12S9.7 5.2 12 2.75Z" />
+      <path d="M3.2 12h17.6" />
     </svg>
   );
 }
