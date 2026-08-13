@@ -1,4 +1,4 @@
-﻿/* 1. Reset */
+/* 1. Reset */
 *,
 *::before,
 *::after {
@@ -429,4 +429,25 @@ body:has(.home-video-hero, .page-cover-shell) .site-header-nav-mobile-menu {
 
 .site-footer-creator-line a:hover {
   color: var(--brand-gold);
+}
+
+/* Language globe: keep it visible and separate from ESTHER */
+@media (min-width: 960px) {
+  body:has(.home-video-hero, .page-cover-shell) .site-header .container {
+    position: relative;
+  }
+
+  body:has(.home-video-hero, .page-cover-shell) .site-header-lang {
+    position: absolute;
+    right: clamp(1.5rem, 3.5vw, 3.75rem);
+    top: 50%;
+    transform: translateY(-50%);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    margin: 0;
+    z-index: 50;
+  }
 }
