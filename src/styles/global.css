@@ -1,4 +1,4 @@
-/* 1. Reset */
+﻿/* 1. Reset */
 *,
 *::before,
 *::after {
@@ -361,8 +361,7 @@ body:has(.home-video-hero, .page-cover-shell) .site-header .container {
 
 body:has(.home-video-hero, .page-cover-shell) .site-header-wordmark-image {
   width: clamp(132px, 12vw, 188px);
-  filter: brightness(0) saturate(100%) invert(78%) sepia(35%)
-    saturate(705%) hue-rotate(355deg) brightness(94%) contrast(86%);
+  filter: drop-shadow(0 2px 10px rgba(3, 15, 30, 0.34));
 }
 
 body:has(.home-video-hero, .page-cover-shell) .site-header-nav-link,
