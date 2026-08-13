@@ -113,6 +113,7 @@ export function SiteHeader() {
         <Link
           href={languageHref}
           hrefLang={isKorean ? "en" : "ko"}
+          className="site-header-lang"
           aria-label={languageLabel}
           title={languageLabel}
           onClick={closeMobileMenu}
