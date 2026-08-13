@@ -8,7 +8,7 @@ import "@/styles/global.css";
 
 const siteUrl = "https://esthercho.pages.dev";
 const socialPreviewImage = "/media/home/esther-house-entry-poster.jpg";
-const faviconUrl = "/favicon-esther-cho.svg?v=20260813-1547";
+const faviconUrl = "/favicon-esther-cho.svg?v=20260813-1743";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
