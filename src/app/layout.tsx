@@ -8,6 +8,7 @@ import "@/styles/global.css";
 
 const siteUrl = "https://esthercho.pages.dev";
 const socialPreviewImage = "/media/home/esther-house-entry-poster.jpg";
+const faviconUrl = "/favicon-esther-cho.svg?v=20260813-1534";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -16,6 +17,10 @@ export const metadata: Metadata = {
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
+  icons: {
+    icon: faviconUrl,
+    shortcut: faviconUrl,
+  },
   openGraph: {
     type: "website",
     url: siteUrl,
