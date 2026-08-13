@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useEffect, useRef } from "react";
 import Image from "next/image";
@@ -41,8 +41,8 @@ export function SiteHeader() {
   const languageHref = isKorean ? "/" : "/ko/";
 
   const languageLabel = isKorean
-    ? "?곷Ц ?덊럹?댁?濡??대룞"
-    : "?쒓? ?덊럹?댁?濡??대룞";
+    ? "영문 홈페이지로 이동"
+    : "한글 홈페이지로 이동";
 
   const closeMobileMenu = () => {
     mobileMenuRef.current?.removeAttribute("open");
@@ -59,7 +59,7 @@ export function SiteHeader() {
           href={homeHref}
           className="site-header-logo"
           aria-label={
-            isKorean ? "議곗꽦???덊럹?댁?" : "Esther Cho home"
+            isKorean ? "조성연 홈페이지" : "Esther Cho home"
           }
           onClick={closeMobileMenu}
         >
@@ -75,7 +75,7 @@ export function SiteHeader() {
 
         <nav
           className="site-header-nav-desktop"
-          aria-label={isKorean ? "二쇱슂 硫붾돱" : "Main"}
+          aria-label={isKorean ? "주요 메뉴" : "Main"}
         >
           <ul>
             {navItems.map((item) => (
@@ -93,7 +93,7 @@ export function SiteHeader() {
 
         <div className="site-header-nav-mobile">
           <details ref={mobileMenuRef}>
-            <summary>{isKorean ? "硫붾돱" : "MENU"}</summary>
+            <summary>{isKorean ? "메뉴" : "MENU"}</summary>
 
             <ul className="site-header-nav-mobile-menu">
               {navItems.map((item) => (
