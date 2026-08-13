@@ -10,16 +10,24 @@ function GlobeIcon() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
+      width="20"
+      height="20"
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      strokeWidth="1.7"
+      strokeWidth="1.85"
       strokeLinecap="round"
       strokeLinejoin="round"
       aria-hidden="true"
       focusable="false"
+      style={{
+        display: "block",
+        flex: "0 0 auto",
+        width: "20px",
+        height: "20px",
+        overflow: "visible",
+        filter: "drop-shadow(0 1px 5px rgba(3, 15, 30, 0.28))",
+      }}
     >
       <circle cx="12" cy="12" r="9.25" />
       <path d="M12 2.75c2.3 2.45 3.5 5.55 3.5 9.25S14.3 18.8 12 21.25C9.7 18.8 8.5 15.7 8.5 12S9.7 5.2 12 2.75Z" />
@@ -120,6 +128,16 @@ export function SiteHeader() {
           aria-label={languageLabel}
           title={languageLabel}
           onClick={closeMobileMenu}
+          style={{
+            display: "inline-flex",
+            alignItems: "center",
+            justifyContent: "center",
+            minWidth: "36px",
+            minHeight: "36px",
+            flex: "0 0 auto",
+            position: "relative",
+            zIndex: 50,
+          }}
         >
           <GlobeIcon />
         </Link>
