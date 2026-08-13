@@ -8,24 +8,20 @@ import { navigationConfig } from "@/config/navigation";
 
 function GlobeIcon() {
   return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="18"
-      height="18"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="#F7F8FA"
-      strokeWidth="1.9"
-      strokeLinecap="round"
-      strokeLinejoin="round"
+    <Image
+      src="/brand/esther-language-globe-silver-transparent.png"
+      alt=""
+      width={1254}
+      height={1254}
       aria-hidden="true"
-      focusable="false"
-      style={{ display: "block", width: 18, height: 18 }}
-    >
-      <circle cx="12" cy="12" r="9" />
-      <path d="M12 3c2.2 2.45 3.35 5.45 3.35 9S14.2 18.55 12 21c-2.2-2.45-3.35-5.45-3.35-9S9.8 5.45 12 3Z" />
-      <path d="M3 12h18" />
-    </svg>
+      style={{
+        display: "block",
+        width: 24,
+        height: 24,
+        objectFit: "contain",
+        filter: "drop-shadow(0 1px 4px rgba(3, 15, 30, 0.3))",
+      }}
+    />
   );
 }
 
@@ -124,14 +120,12 @@ export function SiteHeader() {
             display: "inline-flex",
             alignItems: "center",
             justifyContent: "center",
-            width: 38,
-            height: 38,
-            flex: "0 0 38px",
-            borderRadius: "999px",
-            background: "rgba(7, 27, 50, 0.72)",
-            border: "1px solid rgba(247, 248, 250, 0.42)",
-            boxShadow: "0 2px 14px rgba(3, 15, 30, 0.28)",
-            color: "#F7F8FA",
+            width: 30,
+            height: 30,
+            flex: "0 0 30px",
+            background: "transparent",
+            border: 0,
+            boxShadow: "none",
             textDecoration: "none",
             position: "relative",
             zIndex: 999,
