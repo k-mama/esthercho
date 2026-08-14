@@ -438,7 +438,7 @@ body:has(.home-video-hero, .page-cover-shell) .site-header-nav-mobile-menu {
     align-self: center;
     position: relative !important;
     right: auto !important;
-    top: -2px !important;
+    top: -1px !important;
     transform: none !important;
     margin: 0 !important;
   }
