@@ -16,8 +16,8 @@ function GlobeIcon() {
       aria-hidden="true"
       style={{
         display: "block",
-        width: 24,
-        height: 24,
+        width: 22,
+        height: 22,
         objectFit: "contain",
         filter: "drop-shadow(0 1px 4px rgba(3, 15, 30, 0.3))",
       }}
