@@ -431,49 +431,22 @@ body:has(.home-video-hero, .page-cover-shell) .site-header-nav-mobile-menu {
   color: var(--brand-gold);
 }
 
-/* Language globe: keep it visible and separate from ESTHER */
+/* --- Esther Cho globe final alignment --- */
 @media (min-width: 960px) {
-  body:has(.home-video-hero, .page-cover-shell) .site-header .container {
-    position: relative;
-  }
-
   body:has(.home-video-hero, .page-cover-shell) .site-header-lang {
-    position: absolute;
-    right: clamp(1.5rem, 3.5vw, 3.75rem);
-    top: 50%;
-    transform: translateY(-50%);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 30px;
-    height: 30px;
-    margin: 0;
-    z-index: 50;
+    justify-self: end;
+    align-self: center;
+    position: relative !important;
+    right: auto !important;
+    top: -2px !important;
+    transform: none !important;
+    margin: 0 !important;
+  }
+
+  body:has(.home-video-hero, .page-cover-shell) .site-header-lang img {
+    width: 22px !important;
+    height: 22px !important;
+    transform: none !important;
   }
 }
-
-
-
-
-/* --- language globe fine tuning --- */
-header img[src*="esther-language-globe-silver-transparent.png"],
-.site-header img[src*="esther-language-globe-silver-transparent.png"] {
-  width: 24px !important;
-  height: 24px !important;
-  display: block !important;
-  transform: translateY(-3px) !important;
-}
-
-header a:has(img[src*="esther-language-globe-silver-transparent.png"]),
-header button:has(img[src*="esther-language-globe-silver-transparent.png"]),
-.site-header a:has(img[src*="esther-language-globe-silver-transparent.png"]),
-.site-header button:has(img[src*="esther-language-globe-silver-transparent.png"]) {
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  margin-left: 10px !important;
-  padding-top: 0 !important;
-  position: relative !important;
-  top: -1px !important;
-}
-/* --- end language globe fine tuning --- */
+/* --- end Esther Cho globe final alignment --- */
