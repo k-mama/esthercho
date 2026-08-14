@@ -63,7 +63,7 @@ export function SiteHeader() {
           onClick={closeMobileMenu}
         >
           <Image
-            src="/brand/esther-cho-wordmark-silver-transparent.png"
+            src="/brand/esther-cho-wordmark-silver-refined.png"
             alt=""
             width={2171}
             height={724}
