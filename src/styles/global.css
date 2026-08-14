@@ -451,3 +451,29 @@ body:has(.home-video-hero, .page-cover-shell) .site-header-nav-mobile-menu {
     z-index: 50;
   }
 }
+
+
+
+
+/* --- language globe fine tuning --- */
+header img[src*="esther-language-globe-silver-transparent.png"],
+.site-header img[src*="esther-language-globe-silver-transparent.png"] {
+  width: 24px !important;
+  height: 24px !important;
+  display: block !important;
+  transform: translateY(-3px) !important;
+}
+
+header a:has(img[src*="esther-language-globe-silver-transparent.png"]),
+header button:has(img[src*="esther-language-globe-silver-transparent.png"]),
+.site-header a:has(img[src*="esther-language-globe-silver-transparent.png"]),
+.site-header button:has(img[src*="esther-language-globe-silver-transparent.png"]) {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin-left: 10px !important;
+  padding-top: 0 !important;
+  position: relative !important;
+  top: -1px !important;
+}
+/* --- end language globe fine tuning --- */
