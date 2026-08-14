@@ -15,6 +15,7 @@ const openingCollection = [
     number: "01",
     title: "My Father Dreamed of a Tiger",
     meta: "Father · Beginning",
+    href: "/stories/my-father-dreamed-of-a-tiger/",
   },
   {
     number: "02",
@@ -127,11 +128,16 @@ export default function StoriesPage() {
             a girl. The family joke was that perhaps it had been a cat.
           </p>
           <p>
-            It is a small beginning with a long shadow: expectation, affection,
-            family humor, and the first chapter of a life that would keep
-            turning remembered things into stories.
+            The first story is intentionally small. It enters the archive as the
+            memory has been recorded so far, without filling the quiet spaces
+            with details that have not been told.
           </p>
-          <p className="stories-note">Full story will join the opening collection.</p>
+          <Link
+            href="/stories/my-father-dreamed-of-a-tiger/"
+            className="stories-text-link"
+          >
+            Read the first story
+          </Link>
         </div>
       </section>
 
@@ -152,6 +158,11 @@ export default function StoriesPage() {
                 <p className="stories-opening-number">{story.number}</p>
                 <h3>{story.title}</h3>
                 <p className="stories-opening-meta">{story.meta}</p>
+                {story.href ? (
+                  <Link href={story.href} className="stories-text-link">
+                    Read story
+                  </Link>
+                ) : null}
               </article>
             ))}
           </div>
