@@ -21,6 +21,7 @@ const openingCollection = [
     number: "02",
     title: "The Youngest Daughter in Every House",
     meta: "Family · Childhood",
+    href: "/stories/the-youngest-daughter-in-every-house/",
   },
   {
     number: "03",
