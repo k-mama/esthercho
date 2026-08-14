@@ -86,9 +86,12 @@ export default function TigerDreamStoryPage() {
       <section className="container story-detail-next" aria-labelledby="next-story-title">
         <p className="story-detail-kicker">NEXT IN THE OPENING COLLECTION</p>
         <h2 id="next-story-title">The Youngest Daughter in Every House</h2>
-        <p>Another family memory will open here next.</p>
-        <Link href="/stories/" className="story-detail-link">
-          Return to the collection
+        <p>At home she was the oldest child. In other houses, she kept becoming the youngest daughter.</p>
+        <Link
+          href="/stories/the-youngest-daughter-in-every-house/"
+          className="story-detail-link"
+        >
+          Read the next story
         </Link>
       </section>
     </main>
