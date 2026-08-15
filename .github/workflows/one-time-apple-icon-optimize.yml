@@ -45,9 +45,21 @@ jobs:
           with Image.open(path) as image:
               width, height = image.size
               print(f"Original: {width}x{height}, {before} bytes")
-              if width != height:
-                  raise SystemExit("Apple icon source is not square; refusing automatic crop.")
-              optimized = image.convert("RGBA").resize(
+
+              longest = max(width, height)
+              difference = abs(width - height) / longest
+              if difference > 0.05:
+                  raise SystemExit(
+                      "Apple icon is more than 5% off square; refusing automatic padding."
+                  )
+
+              source = image.convert("RGBA")
+              fill = source.getpixel((0, 0))
+              canvas = Image.new("RGBA", (longest, longest), fill)
+              offset = ((longest - width) // 2, (longest - height) // 2)
+              canvas.paste(source, offset, source)
+
+              optimized = canvas.resize(
                   (180, 180), Image.Resampling.LANCZOS
               )
               optimized.save(path, format="PNG", optimize=True, compress_level=9)
