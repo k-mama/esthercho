@@ -1,0 +1,261 @@
+/* Final interface finish for Esther Cho.
+   UI stays quieter than the photographs: deep-blue exit, restrained underlines,
+   readable captions, generous touch targets, and no decorative card language. */
+
+/* -------------------------------------------------------------------------- */
+/* FOOTER — the last room, not another paper card                             */
+/* -------------------------------------------------------------------------- */
+
+.site-footer {
+  margin: 0 !important;
+  padding: clamp(4.8rem, 8vw, 7.5rem) 0 clamp(3.6rem, 6vw, 5.4rem) !important;
+  color: rgba(239, 244, 247, 0.72) !important;
+  background:
+    radial-gradient(circle at 82% 8%, rgba(91, 135, 168, 0.18), transparent 32%),
+    linear-gradient(145deg, #102c45 0%, #15354f 52%, #0d263d 100%) !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+}
+
+.site-footer-inner {
+  display: grid !important;
+  grid-template-columns: minmax(0, 0.72fr) minmax(280px, 1fr);
+  align-items: end !important;
+  gap: clamp(3rem, 9vw, 9rem) !important;
+}
+
+.site-footer-site {
+  gap: 0.42rem !important;
+}
+
+.site-footer-name {
+  color: #f5f7f8 !important;
+  font-size: 0.78rem !important;
+  font-weight: 650 !important;
+  letter-spacing: 0.16em !important;
+}
+
+.site-footer-description,
+.site-footer-copyright {
+  color: rgba(229, 237, 242, 0.62) !important;
+  font-size: 0.73rem !important;
+  line-height: 1.7 !important;
+}
+
+.site-footer-colophon {
+  justify-self: end;
+  max-width: 38rem;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  color: rgba(224, 233, 239, 0.58) !important;
+  font-family: var(--font-interface) !important;
+  font-size: 0.68rem !important;
+  line-height: 1.75 !important;
+  letter-spacing: 0.035em !important;
+  text-align: right !important;
+}
+
+.site-footer-colophon a {
+  position: relative;
+  color: rgba(241, 245, 247, 0.78) !important;
+  text-decoration: none !important;
+  border: 0 !important;
+  transition: color 180ms ease;
+}
+
+.site-footer-colophon a::after {
+  position: absolute;
+  right: 0;
+  bottom: -0.2rem;
+  left: 0;
+  height: 1px;
+  content: "";
+  background: rgba(196, 216, 229, 0.35);
+  transform: scaleX(0.34);
+  transform-origin: right center;
+  transition: transform 180ms ease, background-color 180ms ease;
+}
+
+.site-footer-colophon a:hover {
+  color: #ffffff !important;
+}
+
+.site-footer-colophon a:hover::after,
+.site-footer-colophon a:focus-visible::after {
+  background: rgba(221, 234, 242, 0.76);
+  transform: scaleX(1);
+}
+
+/* -------------------------------------------------------------------------- */
+/* QUIET TEXT LINKS — one consistent editorial gesture                        */
+/* -------------------------------------------------------------------------- */
+
+.childhood-link,
+.stories-text-link,
+.morning-link,
+main[class*="booksPage"] a[class*="projectLink"] {
+  position: relative;
+  padding-bottom: 0.35rem !important;
+  border-bottom: 0 !important;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 34% 1px;
+  transition:
+    color 180ms ease,
+    background-size 220ms ease;
+}
+
+.childhood-link:hover,
+.childhood-link:focus-visible,
+.stories-text-link:hover,
+.stories-text-link:focus-visible,
+.morning-link:hover,
+.morning-link:focus-visible,
+main[class*="booksPage"] a[class*="projectLink"]:hover,
+main[class*="booksPage"] a[class*="projectLink"]:focus-visible {
+  background-size: 100% 1px;
+}
+
+/* -------------------------------------------------------------------------- */
+/* CAPTIONS — present, never competing                                        */
+/* -------------------------------------------------------------------------- */
+
+.childhood-page figcaption,
+.esther-page figcaption,
+.studio-page figcaption,
+.stories-page figcaption,
+.morning-page figcaption,
+main[class*="booksPage"] figcaption {
+  max-width: 46rem;
+  color: #74818a !important;
+  font-size: 0.66rem !important;
+  line-height: 1.62 !important;
+  letter-spacing: 0.04em !important;
+}
+
+/* -------------------------------------------------------------------------- */
+/* HEADER MICRO-INTERACTIONS                                                  */
+/* -------------------------------------------------------------------------- */
+
+.site-header-nav-link[aria-current="page"] {
+  font-weight: 650 !important;
+}
+
+.site-header-lang {
+  opacity: 0.88;
+  transition: opacity 180ms ease, transform 180ms ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.site-header-lang:hover,
+.site-header-lang:focus-visible {
+  opacity: 1;
+  transform: scale(1.045);
+}
+
+@media (min-width: 960px) {
+  .site-header-nav-desktop .site-header-nav-link {
+    position: relative;
+    padding-block: 0.35rem;
+  }
+
+  .site-header-nav-desktop .site-header-nav-link::after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    content: "";
+    background: currentColor;
+    opacity: 0.46;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 180ms ease;
+  }
+
+  .site-header-nav-desktop .site-header-nav-link:hover::after,
+  .site-header-nav-desktop .site-header-nav-link:focus-visible::after,
+  .site-header-nav-desktop .site-header-nav-link[aria-current="page"]::after {
+    transform: scaleX(1);
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/* MOBILE — touch scale and quieter finish                                    */
+/* -------------------------------------------------------------------------- */
+
+@media (max-width: 959px) {
+  .site-header-nav-mobile-menu .site-header-nav-link {
+    min-height: 4.05rem !important;
+    font-size: clamp(1.24rem, 4.9vw, 1.44rem) !important;
+    font-weight: 620 !important;
+  }
+
+  .site-header-nav-mobile-menu .site-header-nav-room-link {
+    font-size: clamp(1.08rem, 4.2vw, 1.22rem) !important;
+    font-weight: 580 !important;
+  }
+
+  .site-header-nav-mobile-menu .site-header-nav-link[aria-current="page"] {
+    font-weight: 700 !important;
+  }
+
+  .site-footer {
+    padding: 4.4rem 0 3.5rem !important;
+  }
+
+  .site-footer-inner {
+    grid-template-columns: 1fr !important;
+    gap: 2.5rem !important;
+  }
+
+  .site-footer-colophon {
+    justify-self: start;
+    max-width: 27rem;
+    text-align: left !important;
+  }
+
+  .childhood-page figcaption,
+  .esther-page figcaption,
+  .studio-page figcaption,
+  .stories-page figcaption,
+  .morning-page figcaption,
+  main[class*="booksPage"] figcaption {
+    font-size: 0.64rem !important;
+    line-height: 1.6 !important;
+  }
+}
+
+@media (max-width: 520px) {
+  .site-header-nav-mobile-menu .site-header-nav-link {
+    min-height: 3.9rem !important;
+    font-size: clamp(1.22rem, 6vw, 1.38rem) !important;
+  }
+
+  .site-header-nav-mobile-menu .site-header-nav-room-link {
+    font-size: clamp(1.06rem, 5.2vw, 1.18rem) !important;
+  }
+
+  .site-footer-name {
+    font-size: 0.74rem !important;
+  }
+
+  .site-footer-colophon {
+    font-size: 0.66rem !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-footer-colophon a,
+  .site-footer-colophon a::after,
+  .site-header-lang,
+  .site-header-nav-desktop .site-header-nav-link::after,
+  .childhood-link,
+  .stories-text-link,
+  .morning-link,
+  main[class*="booksPage"] a[class*="projectLink"] {
+    transition: none !important;
+  }
+}
