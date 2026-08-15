@@ -1,7 +1,6 @@
 .home {
   --esther-cream: #fbf8f2;
   --esther-ink: #17324b;
-  --esther-gold: #a8844f;
 }
 
 .foyer,
@@ -24,51 +23,17 @@
 
 .roomLinks a {
   position: relative;
-  isolation: isolate;
   transition:
     color 180ms ease,
-    border-color 180ms ease,
-    background-color 180ms ease;
+    border-color 180ms ease;
 }
 
-.roomLinks a::before {
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  content: "";
-  opacity: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.52),
-    rgba(255, 255, 255, 0.12)
-  );
-  transition: opacity 180ms ease;
-}
-
-.roomLinks a:hover::before,
-.roomLinks a:focus-visible::before {
-  opacity: 1;
-}
-
+/* Real photographs stay still. Interaction belongs to links and navigation. */
 .tableMedia,
 .careMedia,
 .memoryPrimary,
 .studioPrimary {
-  transition:
-    transform 420ms cubic-bezier(0.2, 0.7, 0.2, 1),
-    filter 420ms ease;
-}
-
-@media (hover: hover) and (pointer: fine) {
-  .tableMedia:hover,
-  .careMedia:hover {
-    transform: translateY(-4px);
-  }
-
-  .memoryPrimary:hover,
-  .studioPrimary:hover {
-    transform: translateY(-3px) rotate(-0.35deg);
-  }
+  transform: none;
 }
 
 .memoryPrimary,
@@ -76,11 +41,6 @@
 .studioPrimary,
 .studioSecondary {
   overflow: hidden;
-}
-
-.memorySecondary,
-.studioSecondary {
-  backdrop-filter: blur(10px);
 }
 
 .careMedia figcaption {
@@ -105,14 +65,6 @@
       inset 0 34px 56px -58px rgba(255, 255, 255, 0.7),
       inset 0 -34px 56px -58px rgba(38, 53, 67, 0.12);
   }
-
-  .roomLinks a::before {
-    background: linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 0.38),
-      rgba(255, 255, 255, 0.08)
-    );
-  }
 }
 
 @media (max-width: 640px) {
@@ -121,22 +73,17 @@
   }
 
   .tableMedia {
-    filter: drop-shadow(0 22px 36px rgba(71, 56, 50, 0.11));
+    filter: drop-shadow(0 22px 36px rgba(71, 56, 50, 0.08));
   }
 
   .memorySecondary,
   .studioSecondary {
-    box-shadow: 0 18px 34px rgba(33, 47, 61, 0.17);
+    box-shadow: 0 18px 34px rgba(33, 47, 61, 0.12);
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .tableMedia,
-  .careMedia,
-  .memoryPrimary,
-  .studioPrimary,
-  .roomLinks a,
-  .roomLinks a::before {
+  .roomLinks a {
     transition: none;
   }
 }
