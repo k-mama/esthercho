@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <div className={styles.home}>
+    <main className={styles.home}>
       <section className={`${styles.videoHero} home-video-hero`}>
         <HomeHeroVideo />
 
@@ -188,6 +188,6 @@ export default function Home() {
           </figure>
         </div>
       </section>
-    </div>
+    </main>
   );
 }
