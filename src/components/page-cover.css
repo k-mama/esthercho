@@ -175,6 +175,43 @@
   margin-left: auto;
 }
 
+[lang="ko"] .page-cover-copy {
+  max-width: min(820px, 82vw);
+  gap: 1rem;
+}
+
+[lang="ko"] .page-cover-eyebrow,
+[lang="ko"] .page-cover-description {
+  font-family: var(--font-korean);
+}
+
+[lang="ko"] .page-cover-eyebrow {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: none;
+}
+
+[lang="ko"] .page-cover-copy h1 {
+  max-width: 13.5ch;
+  font-family: var(--font-korean);
+  font-size: clamp(2.85rem, 5vw, 5.25rem);
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: -0.052em;
+  text-wrap: pretty;
+  word-break: keep-all;
+  overflow-wrap: normal;
+}
+
+[lang="ko"] .page-cover-description {
+  max-width: 34ch;
+  font-size: clamp(0.98rem, 1.25vw, 1.12rem);
+  line-height: 1.72;
+  letter-spacing: -0.018em;
+  word-break: keep-all;
+}
+
 .page-cover-followup {
   background: var(--paper);
   color: var(--ink);
@@ -271,6 +308,23 @@
     font-size: clamp(0.95rem, 3.4vw, 1.08rem);
     line-height: 1.58;
   }
+
+  [lang="ko"] .page-cover-copy {
+    max-width: min(92vw, 680px);
+  }
+
+  [lang="ko"] .page-cover-copy h1 {
+    max-width: 12.5ch;
+    font-size: clamp(2.35rem, 9.2vw, 4rem);
+    line-height: 1.18;
+    letter-spacing: -0.05em;
+  }
+
+  [lang="ko"] .page-cover-description {
+    max-width: 32ch;
+    font-size: clamp(0.96rem, 3.25vw, 1.05rem);
+    line-height: 1.68;
+  }
 }
 
 @media (max-width: 560px) {
@@ -292,5 +346,17 @@
   .page-cover-copy h1 {
     max-width: 11.5ch;
     font-size: clamp(2.65rem, 12.7vw, 4.4rem);
+  }
+
+  [lang="ko"] .page-cover-eyebrow {
+    font-size: 0.72rem;
+    letter-spacing: 0.02em;
+  }
+
+  [lang="ko"] .page-cover-copy h1 {
+    max-width: none;
+    font-size: clamp(2.15rem, 9.5vw, 3.35rem);
+    line-height: 1.2;
+    letter-spacing: -0.048em;
   }
 }
