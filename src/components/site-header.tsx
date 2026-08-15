@@ -29,12 +29,13 @@ export function SiteHeader() {
   const pathname = usePathname();
   const mobileMenuRef = useRef<HTMLDetailsElement>(null);
 
-  const isKorean =
-    pathname === "/ko" || pathname.startsWith("/ko/");
+  const isKorean = pathname === "/ko" || pathname.startsWith("/ko/");
+  const isHome = pathname === "/" || pathname === "/ko" || pathname === "/ko/";
 
-  const navItems = isKorean
-    ? navigationConfig.ko
-    : navigationConfig.en;
+  const navItems = isKorean ? navigationConfig.ko : navigationConfig.en;
+  const roomItems = isKorean
+    ? navigationConfig.roomsKo
+    : navigationConfig.roomsEn;
 
   const homeHref = isKorean ? "/ko/" : "/";
   const languageHref = isKorean ? "/" : "/ko/";
@@ -57,14 +58,12 @@ export function SiteHeader() {
   }, [pathname]);
 
   return (
-    <header className="site-header">
-      <div className="container">
+    <header className={`site-header${isHome ? "" : " site-header--with-subnav"}`}>
+      <div className="container site-header-main-row">
         <Link
           href={homeHref}
           className="site-header-logo"
-          aria-label={
-            isKorean ? "조성연 홈페이지" : "Esther Cho home"
-          }
+          aria-label={isKorean ? "조성연 홈페이지" : "Esther Cho home"}
           onClick={closeMobileMenu}
         >
           <Image
@@ -119,6 +118,25 @@ export function SiteHeader() {
                   </li>
                 );
               })}
+
+              {roomItems.map((item, index) => {
+                const active = isActive(item.href);
+                return (
+                  <li
+                    key={item.href}
+                    className={index === 0 ? "site-header-nav-mobile-room-start" : undefined}
+                  >
+                    <Link
+                      href={item.href}
+                      className="site-header-nav-link site-header-nav-room-link"
+                      aria-current={active ? "page" : undefined}
+                      onClick={closeMobileMenu}
+                    >
+                      {item.title}
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
           </details>
         </div>
@@ -148,6 +166,31 @@ export function SiteHeader() {
           <GlobeIcon />
         </Link>
       </div>
+
+      {!isHome ? (
+        <nav
+          className="site-header-subnav-desktop"
+          aria-label={isKorean ? "집 안의 다른 방" : "More rooms"}
+        >
+          <div className="container site-header-subnav-inner">
+            <ul>
+              {roomItems.map((item) => {
+                const active = isActive(item.href);
+                return (
+                  <li key={item.href}>
+                    <Link
+                      href={item.href}
+                      aria-current={active ? "page" : undefined}
+                    >
+                      {item.title}
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        </nav>
+      ) : null}
     </header>
   );
 }
