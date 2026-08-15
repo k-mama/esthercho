@@ -173,31 +173,22 @@ export default function KoreanHome() {
               <span>그대로 남는 방.</span>
             </h2>
             <p>
-              원본 손그림과 그 그림에서 출발한 콜라주를 가까이 둡니다. 새 작업은
-              원본을 덮지 않고, 어디에서 시작되었는지 보이게 합니다.
+              원본 손그림과 그 그림에서 출발한 콜라주를 함께 봅니다. 새 작업은
+              원본을 덮지 않고, 어디에서 시작되었는지 숨기지 않습니다.
             </p>
             <Link href="/ko/studio/" className={styles.textLink}>
               작업실 들어가기
             </Link>
           </div>
 
-          <div className={styles.studioCollage} aria-label="조성연의 원본 손그림과 콜라주">
+          <div className={styles.studioCollage} aria-label="조성연의 원본 스케치를 바탕으로 만든 콜라주">
             <figure className={`${styles.studioPrimary} ${polish.studioPrimary}`}>
-              <Image
-                src="/media/esther/hand-drawn-story.jpg"
-                alt="조성연의 원본 손그림 습작"
-                width={1200}
-                height={1600}
-                sizes="(max-width: 899px) 82vw, 34vw"
-              />
-            </figure>
-            <figure className={`${styles.studioSecondary} ${polish.studioSecondary}`}>
               <Image
                 src="/media/esther/still-making-father-child-collage-20260802.png"
                 alt="조성연의 어린 시절 원본 스케치를 바탕으로 만든 콜라주"
                 width={1536}
                 height={1536}
-                sizes="(max-width: 899px) 52vw, 24vw"
+                sizes="(max-width: 899px) 82vw, 34vw"
               />
             </figure>
           </div>
