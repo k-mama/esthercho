@@ -91,7 +91,7 @@ export default function KoreanAboutPage() {
         </section>
 
         <section className="esther-section esther-home-section">
-          <div className="container esther-home-grid">
+          <div className="container esther-home-grid esther-home-copy-only">
             <div className="esther-copy">
               <p className="esther-eyebrow">집과 믿음</p>
 
@@ -104,18 +104,6 @@ export default function KoreanAboutPage() {
 
               <p>아침 식탁에는 밥과 말씀과 메모가 함께 놓일 때가 많다.</p>
             </div>
-
-            <figure className="esther-figure esther-table-figure">
-              <Image
-                src="/media/esther/morning-table.jpg"
-                alt="조성연의 집에서 차린 아침 식사"
-                width={1200}
-                height={1600}
-                sizes="(max-width: 899px) 100vw, 38vw"
-              />
-
-              <figcaption>집에서 차린 아침 식사</figcaption>
-            </figure>
           </div>
         </section>
 
