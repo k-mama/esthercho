@@ -1,125 +1,245 @@
-/* Stronger large-scale geometry for the light HOME rooms.
-   No outlines: these shapes should read as coloured spatial light, not cracks. */
+/* Final HOME interior language.
+   Real-life photography stays dominant; geometry is one large field per room.
+   Palette: ivory, silver grey, sky blue, blue, navy. No pink, violet, mint,
+   botanical ornament, outline circles, or diagonal hairlines. */
 
-body:has(.home-video-hero) #main-content > main > section:nth-child(2)::before {
-  background:
-    radial-gradient(circle at 42% 38%, rgba(247, 229, 255, 0.98) 0%, rgba(214, 204, 244, 0.74) 42%, rgba(186, 219, 244, 0.44) 68%, transparent 82%) !important;
-  opacity: 0.98 !important;
-  filter: saturate(1.12) !important;
+body:has(.home-video-hero) #main-content > main > section:nth-child(n + 2) {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
 }
 
-body:has(.home-video-hero) #main-content > main > section:nth-child(2)::after {
+/* Retire the old diagonal / second-shape layer completely. */
+body:has(.home-video-hero) #main-content > main > section:nth-child(n + 2)::after {
+  display: none !important;
+}
+
+/* One large spatial field per room. */
+body:has(.home-video-hero) #main-content > main > section:nth-child(n + 2)::before {
+  display: block !important;
+  position: absolute !important;
+  z-index: -1 !important;
+  content: "" !important;
+  pointer-events: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  filter: none !important;
+}
+
+/* Foyer — luminous ivory with one sky-blue ellipse. */
+body:has(.home-video-hero) #main-content > main > section:nth-child(2) {
   background:
-    linear-gradient(100deg, rgba(249, 197, 181, 0.74) 0%, rgba(247, 188, 214, 0.58) 48%, rgba(226, 207, 246, 0.24) 78%, transparent 100%) !important;
-  opacity: 0.9 !important;
-  filter: saturate(1.12) !important;
+    linear-gradient(136deg, #fbfaf6 0%, #f5f7f8 48%, #eaf3f9 100%) !important;
+}
+
+body:has(.home-video-hero) #main-content > main > section:nth-child(2)::before {
+  top: -31vw !important;
+  right: -28vw !important;
+  width: 78vw !important;
+  aspect-ratio: 1.25 / 1 !important;
+  border-radius: 50% !important;
+  background:
+    radial-gradient(circle at 42% 46%, rgba(174, 215, 241, 0.76) 0%, rgba(199, 226, 243, 0.5) 42%, rgba(232, 242, 248, 0.2) 68%, transparent 82%) !important;
+  opacity: 0.88 !important;
+  transform: rotate(-8deg) !important;
+}
+
+/* The room directory should feel like quiet architecture, not a card wall. */
+body:has(.home-video-hero) #main-content > main > section:nth-child(2) nav {
+  column-gap: clamp(1rem, 2.2vw, 2rem);
+  border-left: 0 !important;
+  border-top-color: rgba(31, 66, 96, 0.16) !important;
+}
+
+body:has(.home-video-hero) #main-content > main > section:nth-child(2) nav a {
+  padding-inline: 0.2rem !important;
+  background: transparent !important;
+  border-right: 0 !important;
+  border-bottom-color: rgba(31, 66, 96, 0.14) !important;
+}
+
+/* Morning Table — ivory and silver blue; the food supplies the warmth. */
+body:has(.home-video-hero) #main-content > main > section:nth-child(3) {
+  background:
+    linear-gradient(140deg, #faf9f5 0%, #f2f5f7 52%, #e7f0f6 100%) !important;
 }
 
 body:has(.home-video-hero) #main-content > main > section:nth-child(3)::before {
+  left: -28vw !important;
+  bottom: -19vw !important;
+  width: 66vw !important;
+  aspect-ratio: 1.05 / 1 !important;
+  border-radius: 48% !important;
   background:
-    linear-gradient(155deg, rgba(255, 211, 177, 0.9) 0%, rgba(250, 187, 196, 0.64) 54%, rgba(242, 216, 242, 0.18) 82%, transparent 100%) !important;
-  opacity: 0.94 !important;
-  filter: saturate(1.1) !important;
+    radial-gradient(circle at 58% 46%, rgba(185, 209, 224, 0.62) 0%, rgba(210, 225, 235, 0.4) 48%, rgba(241, 246, 249, 0.14) 72%, transparent 84%) !important;
+  opacity: 0.86 !important;
+  transform: rotate(8deg) !important;
 }
 
-body:has(.home-video-hero) #main-content > main > section:nth-child(3)::after {
+/* Memory — the clearest sky-blue room. */
+body:has(.home-video-hero) #main-content > main > section:nth-child(4) {
   background:
-    radial-gradient(circle at 48% 44%, rgba(177, 218, 244, 0.86) 0%, rgba(202, 196, 239, 0.58) 52%, rgba(240, 228, 249, 0.2) 74%, transparent 84%) !important;
-  opacity: 0.94 !important;
-  filter: saturate(1.1) !important;
+    linear-gradient(136deg, #f7f9f9 0%, #edf4f8 46%, #dfeaf2 100%) !important;
 }
 
 body:has(.home-video-hero) #main-content > main > section:nth-child(4)::before {
+  top: -27vw !important;
+  right: -24vw !important;
+  width: 72vw !important;
+  aspect-ratio: 1 / 1 !important;
+  border-radius: 50% !important;
   background:
-    linear-gradient(160deg, rgba(180, 228, 207, 0.9) 0%, rgba(149, 208, 196, 0.58) 58%, rgba(218, 237, 224, 0.18) 82%, transparent 100%) !important;
-  opacity: 0.94 !important;
-  filter: saturate(1.12) !important;
+    radial-gradient(circle at 46% 52%, rgba(137, 193, 228, 0.66) 0%, rgba(174, 210, 233, 0.46) 48%, rgba(218, 233, 243, 0.18) 72%, transparent 84%) !important;
+  opacity: 0.84 !important;
 }
 
-body:has(.home-video-hero) #main-content > main > section:nth-child(4)::after {
+/* Care — pale blue-grey with one broad field behind the lived photograph. */
+body:has(.home-video-hero) #main-content > main > section:nth-child(5) {
   background:
-    radial-gradient(circle at 46% 48%, rgba(220, 202, 248, 0.92) 0%, rgba(187, 192, 239, 0.58) 56%, rgba(238, 226, 247, 0.18) 76%, transparent 84%) !important;
-  opacity: 0.94 !important;
-  filter: saturate(1.12) !important;
+    linear-gradient(138deg, #faf9f5 0%, #f1f5f6 46%, #e5eef4 100%) !important;
 }
 
 body:has(.home-video-hero) #main-content > main > section:nth-child(5)::before {
+  left: -24vw !important;
+  bottom: -20vw !important;
+  width: 76vw !important;
+  aspect-ratio: 1.7 / 1 !important;
+  border-radius: 50% !important;
   background:
-    linear-gradient(100deg, rgba(151, 210, 239, 0.86) 0%, rgba(186, 222, 238, 0.64) 50%, rgba(224, 218, 245, 0.22) 78%, transparent 100%) !important;
-  opacity: 0.94 !important;
-  filter: saturate(1.1) !important;
+    radial-gradient(circle at 58% 42%, rgba(155, 202, 230, 0.58) 0%, rgba(190, 218, 235, 0.38) 50%, rgba(230, 240, 246, 0.14) 74%, transparent 84%) !important;
+  opacity: 0.86 !important;
+  transform: rotate(-7deg) !important;
 }
 
-body:has(.home-video-hero) #main-content > main > section:nth-child(5)::after {
+/* Studio — a real gallery room: deep navy, one cool-blue light field. */
+body:has(.home-video-hero) #main-content > main > section:nth-child(6) {
+  color: #eef4f7 !important;
   background:
-    radial-gradient(circle, rgba(250, 194, 171, 0.88) 0%, rgba(248, 182, 189, 0.54) 56%, rgba(250, 224, 208, 0.18) 76%, transparent 84%) !important;
-  opacity: 0.92 !important;
-  filter: saturate(1.1) !important;
+    linear-gradient(145deg, #0e2741 0%, #15344f 54%, #1d4357 100%) !important;
+}
+
+body:has(.home-video-hero) #main-content > main > section:nth-child(6)::before {
+  top: -24vw !important;
+  right: -27vw !important;
+  width: 74vw !important;
+  aspect-ratio: 1 / 1 !important;
+  border-radius: 50% !important;
+  background:
+    radial-gradient(circle at 42% 52%, rgba(109, 175, 215, 0.36) 0%, rgba(85, 151, 192, 0.2) 50%, rgba(45, 98, 132, 0.08) 72%, transparent 84%) !important;
+  opacity: 0.9 !important;
+}
+
+body:has(.home-video-hero) #main-content > main > section:nth-child(6) h2 {
+  color: #f4f7f9 !important;
+}
+
+body:has(.home-video-hero) #main-content > main > section:nth-child(6) p:not([class*="eyebrow"]) {
+  color: rgba(235, 243, 248, 0.76) !important;
+}
+
+body:has(.home-video-hero) #main-content > main > section:nth-child(6) [class*="eyebrow"] {
+  color: #a9cee5 !important;
+}
+
+body:has(.home-video-hero) #main-content > main > section:nth-child(6) a {
+  color: #e3f0f7 !important;
+  border-color: rgba(227, 240, 247, 0.42) !important;
+}
+
+body:has(.home-video-hero) #main-content > main > section:nth-child(6) figure {
+  padding: clamp(0.45rem, 0.9vw, 0.7rem) !important;
+  background: #f8f7f2 !important;
+  box-shadow: 0 28px 64px rgba(3, 16, 29, 0.28) !important;
+  transform: none !important;
+}
+
+body:has(.home-video-hero) #main-content > main > section:nth-child(6) figure img {
+  object-fit: contain !important;
+  background: #f8f7f2 !important;
+}
+
+/* Closing — bright again, then hand off quietly to the navy footer. */
+body:has(.home-video-hero) #main-content > main > section:nth-child(7) {
+  background:
+    linear-gradient(180deg, #f7f9fa 0%, #edf3f7 48%, #dce8f0 100%) !important;
 }
 
 body:has(.home-video-hero) #main-content > main > section:nth-child(7)::before {
+  top: -30vw !important;
+  right: -24vw !important;
+  width: 76vw !important;
+  aspect-ratio: 1.35 / 1 !important;
+  border-radius: 50% !important;
   background:
-    radial-gradient(circle at 46% 54%, rgba(226, 207, 250, 0.96) 0%, rgba(193, 201, 243, 0.68) 50%, rgba(179, 220, 241, 0.34) 72%, transparent 84%) !important;
-  opacity: 0.96 !important;
-  filter: saturate(1.12) !important;
+    radial-gradient(circle at 44% 54%, rgba(154, 201, 230, 0.62) 0%, rgba(194, 220, 237, 0.4) 48%, rgba(231, 240, 246, 0.14) 72%, transparent 84%) !important;
+  opacity: 0.82 !important;
+  transform: rotate(-8deg) !important;
 }
 
-body:has(.home-video-hero) #main-content > main > section:nth-child(7)::after {
-  background:
-    linear-gradient(100deg, rgba(246, 199, 142, 0.74) 0%, rgba(246, 188, 206, 0.56) 50%, rgba(219, 205, 244, 0.2) 80%, transparent 100%) !important;
-  opacity: 0.9 !important;
-  filter: saturate(1.1) !important;
+/* Gold/brown accents belonged to the previous interior. Keep HOME cool. */
+body:has(.home-video-hero) #main-content > main > section:nth-child(n + 2):not(:nth-child(6)) [class*="eyebrow"] {
+  color: #587691 !important;
+}
+
+body:has(.home-video-hero) #main-content > main > section:nth-child(n + 2):not(:nth-child(6)) a:hover,
+body:has(.home-video-hero) #main-content > main > section:nth-child(n + 2):not(:nth-child(6)) a:focus-visible {
+  color: #1b4c73 !important;
 }
 
 @media (max-width: 959px) {
   body:has(.home-video-hero) #main-content > main > section:nth-child(2)::before {
-    top: -44vw !important;
-    right: -46vw !important;
-    width: 148vw !important;
-    opacity: 0.94 !important;
+    top: -48vw !important;
+    right: -58vw !important;
+    width: 150vw !important;
+    opacity: 0.78 !important;
   }
 
   body:has(.home-video-hero) #main-content > main > section:nth-child(3)::before {
-    left: -62vw !important;
-    width: 142vw !important;
-    opacity: 0.9 !important;
+    left: -72vw !important;
+    bottom: -30vw !important;
+    width: 150vw !important;
+    opacity: 0.72 !important;
   }
 
-  body:has(.home-video-hero) #main-content > main > section:nth-child(4)::after {
-    top: -55vw !important;
-    right: -58vw !important;
-    width: 148vw !important;
-    opacity: 0.9 !important;
+  body:has(.home-video-hero) #main-content > main > section:nth-child(4)::before {
+    top: -58vw !important;
+    right: -66vw !important;
+    width: 154vw !important;
+    opacity: 0.72 !important;
   }
 
   body:has(.home-video-hero) #main-content > main > section:nth-child(5)::before {
-    left: -50vw !important;
-    width: 154vw !important;
-    opacity: 0.88 !important;
+    left: -72vw !important;
+    bottom: -28vw !important;
+    width: 160vw !important;
+    opacity: 0.7 !important;
+  }
+
+  body:has(.home-video-hero) #main-content > main > section:nth-child(6)::before {
+    top: -58vw !important;
+    right: -68vw !important;
+    width: 160vw !important;
+    opacity: 0.76 !important;
   }
 
   body:has(.home-video-hero) #main-content > main > section:nth-child(7)::before {
-    top: -52vw !important;
-    right: -54vw !important;
-    width: 154vw !important;
-    opacity: 0.9 !important;
+    top: -60vw !important;
+    right: -70vw !important;
+    width: 164vw !important;
+    opacity: 0.7 !important;
   }
 }
 
 @media (max-width: 640px) {
-  body:has(.home-video-hero) #main-content > main > section:nth-child(2)::after,
-  body:has(.home-video-hero) #main-content > main > section:nth-child(3)::after,
-  body:has(.home-video-hero) #main-content > main > section:nth-child(4)::before,
-  body:has(.home-video-hero) #main-content > main > section:nth-child(5)::after,
-  body:has(.home-video-hero) #main-content > main > section:nth-child(7)::after {
-    display: none !important;
+  body:has(.home-video-hero) #main-content > main > section:nth-child(n + 2)::before {
+    opacity: 0.62 !important;
   }
 
-  body:has(.home-video-hero) #main-content > main > section:nth-child(2)::before,
-  body:has(.home-video-hero) #main-content > main > section:nth-child(3)::before,
-  body:has(.home-video-hero) #main-content > main > section:nth-child(4)::after,
-  body:has(.home-video-hero) #main-content > main > section:nth-child(5)::before,
-  body:has(.home-video-hero) #main-content > main > section:nth-child(7)::before {
-    opacity: 0.86 !important;
+  body:has(.home-video-hero) #main-content > main > section:nth-child(2) nav {
+    column-gap: 0.9rem;
+  }
+
+  body:has(.home-video-hero) #main-content > main > section:nth-child(6) figure {
+    padding: 0.45rem !important;
   }
 }
