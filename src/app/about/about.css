@@ -175,16 +175,15 @@
   align-items: center;
 }
 
+.esther-making-copy-only {
+  min-height: min(58svh, 680px);
+  align-items: center;
+}
+
 .esther-portrait-figure img {
   aspect-ratio: 4 / 5;
   object-fit: cover;
   object-position: center 30%;
-}
-
-.esther-sketch-figure img {
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  object-position: center center;
 }
 
 .esther-service-figure img {
@@ -236,10 +235,6 @@
   color: #f4f7f9;
 }
 
-.esther-making-section .esther-figure figcaption {
-  color: rgba(225, 237, 245, 0.62);
-}
-
 .esther-closing {
   display: grid;
   justify-items: start;
@@ -276,21 +271,19 @@
     grid-template-columns: minmax(0, 0.92fr) minmax(20rem, 0.72fr);
   }
 
-  .esther-home-copy-only {
+  .esther-home-copy-only,
+  .esther-making-copy-only {
     grid-template-columns: minmax(0, 0.56fr) minmax(0, 1fr);
   }
 
-  .esther-home-copy-only .esther-copy {
+  .esther-home-copy-only .esther-copy,
+  .esther-making-copy-only .esther-copy {
     grid-column: 2;
     max-width: 760px;
   }
 
   .esther-service-grid {
     grid-template-columns: minmax(20rem, 0.72fr) minmax(0, 1fr);
-  }
-
-  .esther-making-grid {
-    grid-template-columns: minmax(0, 0.96fr) minmax(20rem, 0.72fr);
   }
 }
 
@@ -306,20 +299,19 @@
     max-width: 100%;
   }
 
-  .esther-home-copy-only {
+  .esther-home-copy-only,
+  .esther-making-copy-only {
     min-height: auto;
   }
 
   .esther-portrait-figure,
-  .esther-service-figure,
-  .esther-sketch-figure {
+  .esther-service-figure {
     width: calc(100% + 3rem);
     margin-left: -1.5rem;
   }
 
   .esther-portrait-figure figcaption,
-  .esther-service-figure figcaption,
-  .esther-sketch-figure figcaption {
+  .esther-service-figure figcaption {
     padding-inline: 1.5rem;
   }
 
