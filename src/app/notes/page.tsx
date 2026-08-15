@@ -12,19 +12,19 @@ export const metadata: Metadata = {
 const tableThreads = [
   [
     "Morning",
-    "Breakfast, Scripture, prayer, and the few lines that belong to the beginning of the day.",
+    "Breakfast, Scripture, prayer, and the few lines worth keeping before the day gets noisy.",
   ],
   [
     "Family",
-    "Meals prepared for family and the tables that have carried ordinary care over time.",
+    "Meals made for family, and the ordinary care that keeps returning to the table.",
   ],
   [
     "People",
-    "Friends, shared meals, seasonal food, and the everyday stories that arrive with company.",
+    "Friends, shared meals, seasonal food, and whatever arrives with company.",
   ],
   [
     "Kitchen Notes",
-    "Small cooking details, repeated habits, and the things worth remembering before they become recipes.",
+    "Small cooking details, repeated habits, and notes that may one day become recipes.",
   ],
 ] as const;
 
@@ -49,12 +49,11 @@ export default function NotesPage() {
           <p className="morning-kicker">AT THE TABLE</p>
           <div className="morning-foyer-grid">
             <h2 id="morning-foyer-title">
-              A meal, a verse, and the rest of the morning can sit at the same table.
+              Breakfast, Scripture, and whatever else the morning brings.
             </h2>
             <p>
-              Some notes begin with Scripture. Others begin with breakfast, a family meal,
-              or a small detail from the day. They do not need to be separated before they
-              are worth keeping.
+              Some notes begin with a verse. Others begin with breakfast, a family meal,
+              or something small that happened before the dishes were cleared.
             </p>
           </div>
         </div>
@@ -71,15 +70,15 @@ export default function NotesPage() {
               sizes="(max-width: 899px) 88vw, 40vw"
               priority
             />
-            <figcaption>Morning table · A present-day detail</figcaption>
+            <figcaption>Morning table · Today</figcaption>
           </figure>
 
           <div className="morning-present-copy">
             <p className="morning-kicker">AN ORDINARY MORNING</p>
-            <h2 id="morning-present-title">The day has already begun before the writing does.</h2>
+            <h2 id="morning-present-title">The day is already moving by the time the writing catches up.</h2>
             <p>
-              Food is being prepared. Someone may need calling. A verse lingers. A thought
-              is funny enough to keep. The writing stays close to that kind of morning.
+              There is food to make, someone to call, a verse still hanging around,
+              and sometimes a thought funny enough to write down. The notes begin there.
             </p>
           </div>
         </div>
@@ -88,8 +87,8 @@ export default function NotesPage() {
       <section className="morning-threads" aria-labelledby="morning-threads-title">
         <div className="container morning-threads-inner">
           <div className="morning-threads-heading">
-            <p className="morning-kicker">THE ROOM CAN GROW</p>
-            <h2 id="morning-threads-title">Four threads can keep expanding without crowding the table.</h2>
+            <p className="morning-kicker">WHAT GATHERS HERE</p>
+            <h2 id="morning-threads-title">Four kinds of notes keep returning.</h2>
           </div>
 
           <div className="morning-thread-list">
@@ -108,15 +107,15 @@ export default function NotesPage() {
         <div className="container morning-manuscript-grid">
           <div>
             <p className="morning-kicker">FROM TABLE TO MANUSCRIPT</p>
-            <h2 id="morning-manuscript-title">Some of the notes are becoming Manna on the Table.</h2>
+            <h2 id="morning-manuscript-title">Some of these mornings are becoming Manna on the Table.</h2>
           </div>
 
           <div className="morning-manuscript-copy">
             <p>
-              The devotional manuscript is being developed first as an English source text.
-              Future language editions will be prepared from the locked English manuscript.
+              The English manuscript is being completed first. Other language editions
+              will follow from the locked English text.
             </p>
-            <p>Publication details will appear only when they are formally confirmed.</p>
+            <p>Publication details will be added when they are confirmed.</p>
             <Link href="/books/" className="morning-link">
               Visit the book project
             </Link>
@@ -127,7 +126,7 @@ export default function NotesPage() {
       <section className="morning-close" aria-labelledby="morning-close-title">
         <div className="container morning-close-inner">
           <p className="morning-kicker">MORE MORNINGS</p>
-          <h2 id="morning-close-title">The archive will grow one real table at a time.</h2>
+          <h2 id="morning-close-title">There will be another breakfast.</h2>
         </div>
       </section>
     </main>
