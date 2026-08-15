@@ -31,12 +31,11 @@ export default function Home() {
         <div className="container">
           <p className={styles.eyebrow}>INSIDE THE HOUSE</p>
           <div className={styles.homeIntroGrid}>
-            <h2 id="home-intro-title">The rooms belong to one life.</h2>
+            <h2 id="home-intro-title">Stories, photographs, books, and drawings.</h2>
             <div className={styles.homeIntroCopy}>
               <p>
-                Stories, books, childhood photographs, devotional writing, and
-                drawings are kept in separate rooms without pretending they came
-                from separate lives.
+                They are kept in separate rooms here, but they all come from the
+                same life.
               </p>
             </div>
           </div>
