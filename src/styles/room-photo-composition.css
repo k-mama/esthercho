@@ -33,34 +33,7 @@
     padding-bottom: clamp(1rem, 5vw, 5rem);
   }
 
-  /* ESTHER */
-  .esther-hero {
-    grid-template-columns: minmax(310px, 0.62fr) minmax(0, 1.38fr);
-    gap: clamp(4rem, 9vw, 9rem);
-  }
-
-  .esther-hero-figure {
-    width: 108%;
-    justify-self: end;
-  }
-
-  .esther-hero-figure img {
-    border-radius: 18px;
-  }
-
-  .esther-house-section .esther-split {
-    grid-template-columns: minmax(0, 1.32fr) minmax(300px, 0.68fr);
-  }
-
-  .esther-house-figure {
-    width: 108%;
-    margin-left: -8%;
-  }
-
-  .esther-house-figure img {
-    border-radius: 18px;
-  }
-
+  /* ESTHER — only photographs still present on the About page. */
   .esther-education-section .esther-split {
     grid-template-columns: minmax(330px, 0.78fr) minmax(0, 0.88fr);
   }
@@ -72,19 +45,6 @@
 
   .esther-portrait-figure img {
     border-radius: 18px;
-  }
-
-  .esther-home-grid {
-    grid-template-columns: minmax(360px, 0.92fr) minmax(280px, 0.54fr);
-  }
-
-  .esther-table-figure {
-    width: 82%;
-    justify-self: end;
-  }
-
-  .esther-table-figure img {
-    border-radius: 20px;
   }
 
   .esther-service-grid {
@@ -144,10 +104,7 @@
 
 @media (max-width: 899px) {
   .childhood-garden-figure img,
-  .esther-hero-figure img,
-  .esther-house-figure img,
   .esther-portrait-figure img,
-  .esther-table-figure img,
   .esther-service-figure img {
     border-radius: 0;
   }
