@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 
 export default function KoreanHome() {
   return (
-    <div className={styles.home}>
+    <main className={styles.home}>
       <section className={`${styles.videoHero} home-video-hero`}>
         <HomeHeroVideo locale="ko" />
 
@@ -196,6 +196,6 @@ export default function KoreanHome() {
           </figure>
         </div>
       </section>
-    </div>
+    </main>
   );
 }
