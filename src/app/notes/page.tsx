@@ -9,25 +9,6 @@ export const metadata: Metadata = {
   description: "Devotional reflections and notes from Esther Cho's morning table.",
 };
 
-const tableThreads = [
-  [
-    "Morning",
-    "Breakfast, Scripture, prayer, and the few lines worth keeping before the day gets noisy.",
-  ],
-  [
-    "Family",
-    "Meals made for family, and the ordinary care that keeps returning to the table.",
-  ],
-  [
-    "People",
-    "Friends, shared meals, seasonal food, and whatever arrives with company.",
-  ],
-  [
-    "Kitchen Notes",
-    "Small cooking details, repeated habits, and notes that may one day become recipes.",
-  ],
-] as const;
-
 export default function NotesPage() {
   return (
     <main className="morning-page">
@@ -84,25 +65,6 @@ export default function NotesPage() {
         </div>
       </section>
 
-      <section className="morning-threads" aria-labelledby="morning-threads-title">
-        <div className="container morning-threads-inner">
-          <div className="morning-threads-heading">
-            <p className="morning-kicker">WHAT GATHERS HERE</p>
-            <h2 id="morning-threads-title">Four kinds of notes keep returning.</h2>
-          </div>
-
-          <div className="morning-thread-list">
-            {tableThreads.map(([title, description], index) => (
-              <article className="morning-thread" key={title}>
-                <span>{String(index + 1).padStart(2, "0")}</span>
-                <h3>{title}</h3>
-                <p>{description}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section className="morning-manuscript" aria-labelledby="morning-manuscript-title">
         <div className="container morning-manuscript-grid">
           <div>
@@ -112,10 +74,9 @@ export default function NotesPage() {
 
           <div className="morning-manuscript-copy">
             <p>
-              The English manuscript is being completed first. Other language editions
-              will follow from the locked English text.
+              The manuscript is growing from the same mornings, verses, meals,
+              questions, and small observations gathered here.
             </p>
-            <p>Publication details will be added when they are confirmed.</p>
             <Link href="/books/" className="morning-link">
               Visit the book project
             </Link>
