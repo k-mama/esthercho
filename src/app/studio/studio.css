@@ -1,15 +1,14 @@
 .studio-page {
   --studio-ivory: #faf7f0;
-  --studio-paper: #f2ece2;
-  --studio-mist: #e5eaeb;
-  --studio-night: #11273f;
+  --studio-paper: #eef3f6;
+  --studio-mist: #e5edf3;
   background: var(--studio-ivory);
   color: var(--ink);
 }
 
 .studio-kicker {
   margin: 0;
-  color: var(--brand-gold-deep);
+  color: #587691;
   font-family: var(--font-interface);
   font-size: 0.68rem;
   font-weight: 700;
@@ -47,22 +46,14 @@
 
 .studio-intro-copy {
   max-width: 560px;
-  color: #655f58;
+  color: #5f6971;
   font-family: var(--font-editorial);
   font-size: clamp(1.16rem, 1.7vw, 1.46rem);
   line-height: 1.75;
 }
 
-.studio-original,
 .studio-reimagined {
   padding-block: clamp(7rem, 12vw, 12rem);
-}
-
-.studio-original {
-  background: var(--studio-ivory);
-}
-
-.studio-reimagined {
   background: var(--studio-paper);
 }
 
@@ -88,21 +79,17 @@
   object-fit: cover;
 }
 
-.studio-original-figure img {
-  aspect-ratio: 4 / 3;
-}
-
 .studio-reimagined-figure img {
   aspect-ratio: 1 / 1;
 }
 
 .studio-figure figcaption {
   margin-top: 0.8rem;
-  color: #857d73;
+  color: #74818a;
   font-family: var(--font-interface);
-  font-size: 0.67rem;
-  letter-spacing: 0.055em;
-  line-height: 1.5;
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  line-height: 1.55;
 }
 
 .studio-work-copy {
@@ -119,53 +106,10 @@
 
 .studio-work-copy > p:not(.studio-kicker) {
   margin: 1.55rem 0 0;
-  color: #665f58;
+  color: #5f6971;
   font-family: var(--font-editorial);
   font-size: 1.07rem;
   line-height: 1.8;
-}
-
-.studio-principle {
-  padding-block: clamp(8rem, 14vw, 14rem);
-  background: var(--studio-night);
-  color: #f7f3eb;
-}
-
-.studio-principle .studio-kicker {
-  color: #d7c192;
-}
-
-.studio-principle-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(300px, 0.72fr);
-  gap: clamp(3rem, 10vw, 10rem);
-  align-items: start;
-}
-
-.studio-principle h2 {
-  max-width: 10ch;
-  margin-top: 1.7rem;
-  color: inherit;
-  font-family: var(--font-interface);
-  font-size: clamp(2.9rem, 5.5vw, 6rem);
-  font-weight: 300;
-  line-height: 0.97;
-}
-
-.studio-principle-copy {
-  max-width: 560px;
-  color: rgba(247, 243, 235, 0.74);
-  font-family: var(--font-editorial);
-  font-size: 1.1rem;
-  line-height: 1.82;
-}
-
-.studio-principle-copy p {
-  margin: 0;
-}
-
-.studio-principle-copy p + p {
-  margin-top: 1.4rem;
 }
 
 .studio-future {
@@ -188,7 +132,7 @@
 .studio-future p:last-child {
   max-width: 600px;
   margin: 2rem 0 0 auto;
-  color: #635e59;
+  color: #5f6971;
   font-family: var(--font-editorial);
   font-size: 1.08rem;
   line-height: 1.8;
@@ -196,24 +140,20 @@
 
 @media (max-width: 899px) {
   .studio-intro,
-  .studio-original,
   .studio-reimagined,
-  .studio-principle,
   .studio-future {
     padding-block: 5.7rem;
   }
 
   .studio-intro-grid,
   .studio-work-grid,
-  .studio-work-grid-reverse,
-  .studio-principle-grid {
+  .studio-work-grid-reverse {
     grid-template-columns: 1fr;
     gap: 2.8rem;
   }
 
   .studio-intro h2,
   .studio-work-copy h2,
-  .studio-principle h2,
   .studio-future h2 {
     max-width: 12ch;
   }
@@ -245,7 +185,6 @@
     padding-inline: 1.5rem;
   }
 
-  .studio-original-figure img,
   .studio-reimagined-figure img {
     aspect-ratio: 1 / 1;
   }
