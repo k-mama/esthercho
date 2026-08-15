@@ -164,7 +164,7 @@ export default function KoreanStoriesPage() {
       </section>
 
       <section className="stories-newly" aria-labelledby="newly-remembered-title">
-        <div className="container stories-newly-inner">
+        <div className="container stories-newly-inner stories-newly-text-only">
           <div className="stories-newly-copy">
             <p className="stories-kicker">기억이 돌아올 때</p>
             <h2 id="newly-remembered-title">별것 아닌 것이 기억을 데려온다.</h2>
@@ -176,17 +176,6 @@ export default function KoreanStoriesPage() {
               사진을 따라가기
             </Link>
           </div>
-
-          <figure className="stories-newly-figure">
-            <Image
-              src="/media/esther/morning-table.jpg"
-              alt="조성연 작가의 아침 식탁에 놓인 아침 식사"
-              width={1200}
-              height={1600}
-              sizes="(max-width: 899px) 100vw, 38vw"
-            />
-            <figcaption>아침 식탁 · 지금</figcaption>
-          </figure>
         </div>
       </section>
 
