@@ -5,9 +5,9 @@ import { PageCover } from "@/components/page-cover";
 import "../../stories/stories.css";
 
 export const metadata: Metadata = {
-  title: "삶에서 태어난 이야기",
+  title: "이야기",
   description:
-    "어린 시절과 가족, 믿음과 기억, 오래 남은 평범한 것들에서 태어난 조성연 작가의 살아 있는 이야기 아카이브.",
+    "어린 시절과 가족, 믿음과 지금의 생활에서 돌아온 조성연 작가의 이야기.",
 };
 
 const openingCollection = [
@@ -49,8 +49,8 @@ export default function KoreanStoriesPage() {
     <main className="stories-page">
       <PageCover
         eyebrow="이야기"
-        title="삶에서 태어난 이야기"
-        description="기억과 믿음, 살아온 시간에서 길어 올린 이야기."
+        title="살아온 이야기"
+        description="어린 시절과 가족, 믿음과 지금의 생활에서 돌아온 기억들."
         image="/media/covers/stories-cover.webp"
         mobileImage="/media/covers/stories-cover-mobile.webp"
         alt="돌담길에서 책을 들고 서 있는 조성연"
@@ -62,7 +62,7 @@ export default function KoreanStoriesPage() {
 
       <section className="stories-intro" aria-labelledby="stories-intro-title">
         <div className="container stories-intro-inner">
-          <p className="stories-kicker">살아 있는 작가 아카이브</p>
+          <p className="stories-kicker">기억이 돌아오는 방식</p>
           <div className="stories-intro-grid">
             <h2 id="stories-intro-title">기억은 순서대로 오지 않는다.</h2>
             <div className="stories-intro-copy">
@@ -71,9 +71,8 @@ export default function KoreanStoriesPage() {
                 깨끗한 잠옷, 수십 년 전에 들은 한 문장에서 시작한다.
               </p>
               <p>
-                이곳의 이야기는 기억이 돌아오는 만큼 자란다. 완성된 회고록의
-                목차가 아니라 사람과 장소, 물건과 계절, 사진이 또 다른 기억을
-                불러오기도 하는 아카이브다.
+                사람 하나, 사진 한 장, 계절 하나가 오래 잠잠하던 기억을
+                다시 데려오기도 한다. 이야기는 그렇게 하나씩 늘어난다.
               </p>
             </div>
           </div>
@@ -92,7 +91,7 @@ export default function KoreanStoriesPage() {
               sizes="(max-width: 899px) 100vw, 64vw"
               priority
             />
-            <figcaption>아카이브 사진 · 어린 시절의 조성연</figcaption>
+            <figcaption>조성연 · 어린 시절</figcaption>
           </figure>
 
           <div className="stories-feature-copy">
@@ -104,8 +103,7 @@ export default function KoreanStoriesPage() {
               아이는 딸이었다. 가족의 농담은 “고양이였나 보다”였다.
             </p>
             <p>
-              이 기억은 지금까지 기록된 만큼만 싣는다. 비어 있는 부분은
-              채우지 않는다.
+              지금 기억나는 데까지 썼다. 모르는 부분은 채우지 않았다.
             </p>
           </div>
         </div>
@@ -114,9 +112,9 @@ export default function KoreanStoriesPage() {
       <section className="stories-opening" aria-labelledby="opening-collection-title">
         <div className="container">
           <header className="stories-section-heading">
-            <p className="stories-kicker">첫 번째 이야기들</p>
-            <h2 id="opening-collection-title">첫 번째 일곱 이야기.</h2>
-            <p>아카이브에 먼저 기록해 둔 기억들이다.</p>
+            <p className="stories-kicker">먼저 꺼낸 이야기들</p>
+            <h2 id="opening-collection-title">먼저 꺼낸 일곱 이야기.</h2>
+            <p>처음 기록해 두기로 한 기억들이다.</p>
           </header>
 
           <ol className="stories-opening-list">
@@ -127,7 +125,7 @@ export default function KoreanStoriesPage() {
                   <p className="stories-opening-meta">{story.meta}</p>
                   <h3>{story.title}</h3>
                 </div>
-                <span className="stories-opening-state">아카이브에 기록 중</span>
+                <span className="stories-opening-state">기록됨</span>
               </li>
             ))}
           </ol>
@@ -143,16 +141,16 @@ export default function KoreanStoriesPage() {
             height={1059}
             sizes="100vw"
           />
-          <figcaption className="container">아카이브 사진 · 기억 속의 집과 정원</figcaption>
+          <figcaption className="container">어린 시절의 집과 정원</figcaption>
         </figure>
 
         <div className="container stories-house-editorial">
           <div className="stories-house-copy">
-            <p className="stories-kicker">삶의 장들</p>
-            <h2 id="life-chapters-title">아카이브의 시간 순서.</h2>
+            <p className="stories-kicker">시간을 따라</p>
+            <h2 id="life-chapters-title">그래도 삶에는 시간이 있다.</h2>
             <p>
-              아카이브에는 시간 순서도 남겨 둔다. 어떤 기억은 시기별로,
-              어떤 기억은 사람과 장소, 계절이나 큰 변화에 따라 묶인다.
+              어린 시절, 아버지와 함께한 시간, 7월, 학교와 미술, 가족과
+              믿음, 지금의 삶. 기억은 뒤섞여 와도 살아온 시간은 남아 있다.
             </p>
           </div>
 
@@ -173,7 +171,7 @@ export default function KoreanStoriesPage() {
               height={1125}
               sizes="(max-width: 899px) 72vw, 25vw"
             />
-            <figcaption>아카이브 사진 · 대학 시절</figcaption>
+            <figcaption>대학 시절</figcaption>
           </figure>
         </div>
       </section>
@@ -181,11 +179,11 @@ export default function KoreanStoriesPage() {
       <section className="stories-memory" aria-labelledby="memory-collections-title">
         <div className="container stories-memory-inner">
           <div className="stories-memory-heading">
-            <p className="stories-kicker">기억의 갈래</p>
-            <h2 id="memory-collections-title">아카이브에서 되풀이되는 주제.</h2>
+            <p className="stories-kicker">자꾸 돌아오는 것들</p>
+            <h2 id="memory-collections-title">같은 것들이 자꾸 다시 나온다.</h2>
           </div>
 
-          <div className="stories-memory-list" aria-label="기억의 주제">
+          <div className="stories-memory-list" aria-label="되풀이해서 돌아오는 기억">
             {memoryCollections.map((collection) => (
               <span key={collection}>{collection}</span>
             ))}
@@ -196,11 +194,11 @@ export default function KoreanStoriesPage() {
       <section className="stories-newly" aria-labelledby="newly-remembered-title">
         <div className="container stories-newly-inner">
           <div className="stories-newly-copy">
-            <p className="stories-kicker">새로 돌아온 기억</p>
-            <h2 id="newly-remembered-title">새로 돌아온 기억.</h2>
+            <p className="stories-kicker">기억이 돌아올 때</p>
+            <h2 id="newly-remembered-title">별것 아닌 것이 기억을 데려온다.</h2>
             <p>
-              냄새나 식탁, 계절, 평범한 물건 하나가 오랫동안 잊고 있던 장면을
-              떠오르게 하기도 한다. 새 기억은 기록되는 만큼 이곳에 더한다.
+              냄새나 식탁, 계절, 평범한 물건 하나면 충분할 때가 있다. 다시
+              떠오른 장면은 그때 적어 둔다.
             </p>
             <Link href="/ko/archive/" className="stories-text-link">
               사진을 따라가기
@@ -215,7 +213,7 @@ export default function KoreanStoriesPage() {
               height={1600}
               sizes="(max-width: 899px) 100vw, 38vw"
             />
-            <figcaption>아침 식탁 · 지금의 한 장면</figcaption>
+            <figcaption>아침 식탁 · 지금</figcaption>
           </figure>
         </div>
       </section>
@@ -226,8 +224,8 @@ export default function KoreanStoriesPage() {
           <div className="stories-happiness-grid">
             <blockquote id="happiness-title">“나는 어쩌면 행복을 모으는 사람 같다.”</blockquote>
             <p>
-              힘든 일도 있었다. 그런데 돌아보면 웃었던 장면이 먼저 떠오를
-              때가 있다. 아픔과 웃었던 시간 모두 이 기록에 남긴다.
+              힘든 일도 있었다. 그런데 이상하게 웃었던 장면이 먼저 떠오를
+              때가 있다. 둘 다 사실이다.
             </p>
           </div>
         </div>
