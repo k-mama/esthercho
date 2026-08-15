@@ -26,7 +26,7 @@ export default function StudioPage() {
 
       <section className="studio-intro" aria-labelledby="studio-intro-title">
         <div className="container">
-          <p className="studio-kicker">THE WORKING ROOM</p>
+          <p className="studio-kicker">ABOUT THE STUDIO</p>
           <div className="studio-intro-grid">
             <h2 id="studio-intro-title">The original stays visible.</h2>
             <div className="studio-intro-copy">
@@ -56,7 +56,7 @@ export default function StudioPage() {
 
           <div className="studio-work-copy">
             <p className="studio-kicker">ORIGINAL</p>
-            <h2 id="studio-original-title">Paper first.</h2>
+            <h2 id="studio-original-title">The hand-drawn original.</h2>
             <p>
               Pencil marks, uneven lines, and the physical character of the
               original are part of the work. They are not cleaned away simply
@@ -70,7 +70,7 @@ export default function StudioPage() {
         <div className="container studio-work-grid studio-work-grid-reverse">
           <div className="studio-work-copy">
             <p className="studio-kicker">REIMAGINED</p>
-            <h2 id="studio-reimagined-title">A later image can begin with the same memory.</h2>
+            <h2 id="studio-reimagined-title">A later reinterpretation.</h2>
             <p>
               Digital and AI-assisted editorial work can extend an original
               drawing into another visual form. When that happens, the new image
@@ -114,7 +114,7 @@ export default function StudioPage() {
       <section className="studio-future" aria-labelledby="studio-future-title">
         <div className="container studio-future-inner">
           <p className="studio-kicker">STILL MAKING</p>
-          <h2 id="studio-future-title">The Studio can grow as the work does.</h2>
+          <h2 id="studio-future-title">More work will be added when it is ready.</h2>
           <p>
             Audio and moving-image experiments will appear here when there is
             finished work worth showing. The room does not need to be filled in
