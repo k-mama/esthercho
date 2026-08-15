@@ -45,7 +45,7 @@ export default function KoreanArchivePage() {
       <section className="childhood-house" aria-labelledby="childhood-house-title">
         <figure className="childhood-house-figure">
           <Image
-            src="/media/home/childhood-house.jpg"
+            src="/media/esther/childhood-house.jpg"
             alt="조성연 작가의 어린 시절과 연결된 집과 정원"
             width={1800}
             height={1059}
@@ -79,7 +79,7 @@ export default function KoreanArchivePage() {
         <div className="container childhood-garden-inner">
           <figure className="childhood-garden-figure">
             <Image
-              src="/media/home/childhood-garden.jpg"
+              src="/media/esther/childhood-garden.jpg"
               alt="정원에서 웃고 있는 어린 조성연"
               width={1800}
               height={1350}
