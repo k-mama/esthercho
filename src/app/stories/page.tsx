@@ -214,7 +214,7 @@ export default function StoriesPage() {
       </section>
 
       <section className="stories-newly" aria-labelledby="newly-remembered-title">
-        <div className="container stories-newly-inner">
+        <div className="container stories-newly-inner stories-newly-text-only">
           <div className="stories-newly-copy">
             <p className="stories-kicker">WHEN MEMORY RETURNS</p>
             <h2 id="newly-remembered-title">Something small can bring a whole scene back.</h2>
@@ -226,17 +226,6 @@ export default function StoriesPage() {
               Follow the photographs
             </Link>
           </div>
-
-          <figure className="stories-newly-figure">
-            <Image
-              src="/media/esther/morning-table.jpg"
-              alt="A breakfast prepared at Esther Cho's table"
-              width={1200}
-              height={1600}
-              sizes="(max-width: 899px) 100vw, 38vw"
-            />
-            <figcaption>Morning table · Now</figcaption>
-          </figure>
         </div>
       </section>
 
