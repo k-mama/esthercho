@@ -127,7 +127,7 @@ export default function Home() {
           <article className={styles.roomColumn}>
             <figure className={`${styles.roomFigure} ${styles.booksFigure}`}>
               <Image
-                src="/media/covers/books-cover-final-20260802.png"
+                src="/media/covers/books-cover-final-20260802.webp"
                 alt="Esther Cho reading at a softly sunlit table"
                 width={1800}
                 height={1059}
