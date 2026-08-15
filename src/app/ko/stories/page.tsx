@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { PageCover } from "@/components/page-cover";
 import "../../stories/stories.css";
@@ -63,24 +62,11 @@ export default function KoreanStoriesPage() {
               </p>
             </div>
           </div>
-          <div className="stories-intro-line" aria-hidden="true" />
         </div>
       </section>
 
       <section className="stories-feature" aria-labelledby="start-here-title">
-        <div className="container stories-feature-inner">
-          <figure className="stories-feature-figure">
-            <Image
-              src="/media/home/childhood-garden.jpg"
-              alt="정원에서 웃고 있는 어린 조성연"
-              width={1800}
-              height={1350}
-              sizes="(max-width: 899px) 100vw, 64vw"
-              priority
-            />
-            <figcaption>조성연 · 어린 시절</figcaption>
-          </figure>
-
+        <div className="container stories-feature-inner stories-feature-text-only">
           <div className="stories-feature-copy">
             <p className="stories-kicker">첫 기억</p>
             <p className="stories-feature-number">01</p>
@@ -89,9 +75,7 @@ export default function KoreanStoriesPage() {
               조성연이 태어나기 전, 아버지는 꿈에서 호랑이를 보았다. 태어난
               아이는 딸이었다. 가족의 농담은 “고양이였나 보다”였다.
             </p>
-            <p>
-              지금 기억나는 데까지 썼다. 모르는 부분은 채우지 않았다.
-            </p>
+            <p>지금 기억나는 데까지 썼다. 모르는 부분은 채우지 않았다.</p>
           </div>
         </div>
       </section>
@@ -120,18 +104,7 @@ export default function KoreanStoriesPage() {
       </section>
 
       <section className="stories-house" aria-labelledby="life-chapters-title">
-        <figure className="stories-house-figure">
-          <Image
-            src="/media/home/childhood-house.jpg"
-            alt="조성연 작가의 어린 시절과 연결된 집과 정원"
-            width={1800}
-            height={1059}
-            sizes="100vw"
-          />
-          <figcaption className="container">어린 시절의 집과 정원</figcaption>
-        </figure>
-
-        <div className="container stories-house-editorial">
+        <div className="container stories-house-editorial stories-house-editorial-text-only">
           <div className="stories-house-copy">
             <p className="stories-kicker">시간을 따라</p>
             <h2 id="life-chapters-title">그래도 삶에는 시간이 있다.</h2>
@@ -149,17 +122,6 @@ export default function KoreanStoriesPage() {
               </li>
             ))}
           </ol>
-
-          <figure className="stories-young-artist">
-            <Image
-              src="/media/esther/young-artist.jpg"
-              alt="대학 시절의 조성연"
-              width={1500}
-              height={1125}
-              sizes="(max-width: 899px) 72vw, 25vw"
-            />
-            <figcaption>대학 시절</figcaption>
-          </figure>
         </div>
       </section>
 
