@@ -31,13 +31,8 @@ export default function ArchivePage() {
           <div className="childhood-intro-grid">
             <h2 id="childhood-intro-title">Childhood photographs.</h2>
             <div className="childhood-intro-copy">
-              <p>
-                It begins simply: a house, a garden, a child standing outside.
-              </p>
-              <p>
-                The photographs are kept as they are. Time has already done
-                enough to them.
-              </p>
+              <p>It begins simply: a house, a garden, a child standing outside.</p>
+              <p>The photographs are kept as they are. Time has already done enough to them.</p>
             </div>
           </div>
         </div>
@@ -46,7 +41,7 @@ export default function ArchivePage() {
       <section className="childhood-house" aria-labelledby="childhood-house-title">
         <figure className="childhood-house-figure">
           <Image
-            src="/media/home/childhood-house.jpg"
+            src="/media/esther/childhood-house.jpg"
             alt="The house and garden connected to Esther Cho's childhood"
             width={1800}
             height={1059}
@@ -67,8 +62,8 @@ export default function ArchivePage() {
               a place can return before the story around it does.
             </p>
             <p>
-              This was where a child stood and family life happened. Memory
-              still finds its way back there.
+              This was where a child stood and family life happened. Memory still
+              finds its way back there.
             </p>
           </div>
         </div>
@@ -78,7 +73,7 @@ export default function ArchivePage() {
         <div className="container childhood-garden-inner">
           <figure className="childhood-garden-figure">
             <Image
-              src="/media/home/childhood-garden.jpg"
+              src="/media/esther/childhood-garden.jpg"
               alt="Esther Cho smiling in a garden as a child"
               width={1800}
               height={1350}
