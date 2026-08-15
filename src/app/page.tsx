@@ -129,8 +129,8 @@ export default function Home() {
               <Image
                 src="/media/covers/books-cover-final-20260802.webp"
                 alt="Esther Cho reading at a softly sunlit table"
-                width={1800}
-                height={1059}
+                width={1448}
+                height={1086}
                 sizes="(max-width: 899px) 100vw, 58vw"
               />
             </figure>
