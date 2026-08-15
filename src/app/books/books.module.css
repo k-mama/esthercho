@@ -2,7 +2,6 @@
   --books-ivory: #fbf8f1;
   --books-cream: #f4eee3;
   --books-sage: #e2e5db;
-  --books-night: #10263f;
   background: var(--books-ivory);
   color: var(--ink);
 }
@@ -189,9 +188,9 @@
 }
 
 .note {
-  padding-block: clamp(5rem, 9vw, 8rem);
-  background: var(--books-night);
-  color: rgba(248, 244, 236, 0.74);
+  padding-block: clamp(4.5rem, 8vw, 7rem);
+  background: var(--books-cream);
+  color: #6a6259;
 }
 
 .noteInner {
@@ -203,7 +202,7 @@
 
 .noteLabel {
   margin: 0;
-  color: #d7c192;
+  color: var(--brand-gold-deep);
   font-family: var(--font-interface);
   font-size: 0.66rem;
   font-weight: 700;
@@ -215,7 +214,7 @@
   max-width: 680px;
   margin: 0;
   font-family: var(--font-editorial);
-  font-size: clamp(1.05rem, 1.5vw, 1.25rem);
+  font-size: clamp(1.02rem, 1.4vw, 1.18rem);
   line-height: 1.78;
 }
 
