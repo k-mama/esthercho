@@ -1,12 +1,11 @@
 .esther-page {
   --esther-navy: hsl(215, 62%, 20%);
-  --esther-gold: hsl(38, 42%, 48%);
+  --esther-blue: #587691;
   --esther-ivory: #fbf8f1;
-  --esther-cream: #f4eee4;
-  --esther-sage: #e7ebe2;
-  --esther-mist: #e6ecec;
-  --esther-caption: #857d73;
-  --esther-night: #10263f;
+  --esther-cream: #edf2f5;
+  --esther-mist: #e6eef4;
+  --esther-caption: #74818a;
+  --esther-night: #15344f;
   color: var(--ink);
   background: var(--esther-ivory);
 }
@@ -54,7 +53,7 @@
 
 .esther-eyebrow {
   margin: 0;
-  color: var(--esther-gold);
+  color: var(--esther-blue);
   font-family: var(--font-interface);
   font-size: 0.68rem;
   font-weight: 700;
@@ -67,28 +66,27 @@
 }
 
 .esther-hero {
-  display: grid;
-  gap: clamp(3rem, 7vw, 7rem);
-  align-items: end;
-  padding-top: clamp(6.5rem, 11vw, 11rem);
-  padding-bottom: clamp(7rem, 12vw, 12rem);
+  display: block;
+  padding-top: clamp(7.5rem, 13vw, 13rem);
+  padding-bottom: clamp(8rem, 14vw, 14rem);
 }
 
 .esther-hero-copy {
   display: grid;
-  gap: 1.3rem;
-  align-content: end;
-  max-width: 620px;
+  gap: 1.45rem;
+  max-width: min(820px, 78vw);
 }
 
 .esther-hero-copy h2 {
+  max-width: 12ch;
   font-family: var(--font-interface);
-  font-size: clamp(2.7rem, 5.3vw, 5.8rem);
+  font-size: clamp(2.9rem, 5.8vw, 6.2rem);
   font-weight: 300;
   line-height: 0.96;
 }
 
 .esther-deck {
+  max-width: 34ch !important;
   color: var(--esther-navy);
   font-family: var(--font-editorial);
   font-size: clamp(1.3rem, 2.1vw, 1.75rem);
@@ -101,10 +99,14 @@
 
 .esther-intro,
 .esther-copy {
-  color: #68615a;
+  color: #5f6971;
   font-family: var(--font-editorial);
   font-size: clamp(1.03rem, 1.35vw, 1.14rem);
   line-height: 1.8;
+}
+
+.esther-intro {
+  max-width: 47ch !important;
 }
 
 .esther-page-ko .esther-intro,
@@ -137,28 +139,18 @@
   margin-top: 0.75rem;
   color: var(--esther-caption);
   font-family: var(--font-interface);
-  font-size: 0.67rem;
-  letter-spacing: 0.05em;
-  line-height: 1.5;
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  line-height: 1.55;
 }
 
 .esther-page-ko .esther-figure figcaption {
   line-height: 1.7;
 }
 
-.esther-hero-figure img {
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  object-position: center 48%;
-}
-
 .esther-section {
   padding-top: clamp(7rem, 12vw, 12rem);
   padding-bottom: clamp(7rem, 12vw, 12rem);
-}
-
-.esther-house-section {
-  background: var(--esther-sage);
 }
 
 .esther-home-section {
@@ -176,11 +168,6 @@
   display: grid;
   gap: clamp(3rem, 8vw, 8rem);
   align-items: center;
-}
-
-.esther-house-figure img {
-  aspect-ratio: 16 / 10;
-  object-fit: cover;
 }
 
 .esther-portrait-figure img {
@@ -206,10 +193,7 @@
   object-position: center top;
 }
 
-.esther-education-section {
-  background: var(--esther-ivory);
-}
-
+.esther-education-section,
 .esther-service-section {
   background: var(--esther-ivory);
 }
@@ -232,7 +216,7 @@
 }
 
 .esther-year {
-  color: var(--esther-gold);
+  color: var(--esther-blue);
   font-family: var(--font-interface);
   font-size: 0.66rem;
   font-weight: 700;
@@ -240,20 +224,20 @@
 }
 
 .esther-making-section .esther-eyebrow {
-  color: #d7c192;
+  color: #a9cee5;
 }
 
 .esther-making-section .esther-copy,
 .esther-making-section .esther-copy p {
-  color: rgba(247, 243, 235, 0.74);
+  color: rgba(235, 243, 248, 0.76);
 }
 
 .esther-making-section .esther-copy h2 {
-  color: #f7f3eb;
+  color: #f4f7f9;
 }
 
 .esther-making-section .esther-figure figcaption {
-  color: rgba(247, 243, 235, 0.58);
+  color: rgba(225, 237, 245, 0.62);
 }
 
 .esther-closing {
@@ -280,10 +264,6 @@
 }
 
 @media (min-width: 900px) {
-  .esther-hero {
-    grid-template-columns: minmax(0, 0.78fr) minmax(0, 1.22fr);
-  }
-
   .esther-split {
     grid-template-columns: minmax(0, 1.12fr) minmax(20rem, 0.88fr);
   }
@@ -314,20 +294,9 @@
   }
 
   .esther-hero-copy {
-    order: 1;
+    max-width: 100%;
   }
 
-  .esther-hero-figure {
-    order: 2;
-    width: calc(100% + 3rem);
-    margin-left: -1.5rem;
-  }
-
-  .esther-hero-figure figcaption {
-    padding-inline: 1.5rem;
-  }
-
-  .esther-house-figure,
   .esther-portrait-figure,
   .esther-table-figure,
   .esther-service-figure,
@@ -336,7 +305,6 @@
     margin-left: -1.5rem;
   }
 
-  .esther-house-figure figcaption,
   .esther-portrait-figure figcaption,
   .esther-table-figure figcaption,
   .esther-service-figure figcaption,
@@ -355,7 +323,7 @@
   }
 
   .esther-hero-copy h2 {
-    font-size: clamp(2.7rem, 13vw, 4.4rem);
+    font-size: clamp(2.55rem, 12vw, 4.1rem);
   }
 
   .esther-page-ko h2 {
@@ -368,6 +336,6 @@
   }
 
   .esther-year {
-    font-size: 0.62rem;
+    font-size: 0.64rem;
   }
 }
