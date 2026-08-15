@@ -5,9 +5,9 @@ import { authorProfile } from "@/content/author-profile";
 import "./about.css";
 
 export const metadata: Metadata = {
-  title: "The House That Became a Story",
+  title: "Esther Cho · Cho Seongyeon",
   description:
-    "Meet Esther Cho, the international author name of Korean writer and artist Cho Seongyeon, whose work grows from faith, memory, home, and drawing.",
+    "Meet Esther Cho, the international author name of Korean writer and artist Cho Seongyeon (조성연).",
 };
 
 const education = authorProfile.education;
@@ -17,7 +17,7 @@ export default function AboutPage() {
     <main>
       <PageCover
         eyebrow="ESTHER"
-        title="The House That Became a Story"
+        title="Esther Cho"
         description={authorProfile.roles.en.join(" · ")}
         image="/media/covers/esther-cover.webp"
         mobileImage="/media/covers/esther-cover-mobile.webp"
@@ -31,21 +31,21 @@ export default function AboutPage() {
       <article className="esther-page">
         <header className="container esther-hero">
           <div className="esther-hero-copy">
-            <p className="esther-eyebrow">ABOUT THE AUTHOR</p>
+            <p className="esther-eyebrow">ABOUT</p>
 
             <h2>
               {authorProfile.globalName} {"\u00B7"}{" "}
-              {authorProfile.romanizedName}
+              {authorProfile.koreanName}
             </h2>
 
             <p className="esther-deck">
-              {authorProfile.shortBio.en}
+              Esther Cho is the international author name of Korean writer and
+              artist {authorProfile.romanizedName} ({authorProfile.koreanName}).
             </p>
 
             <p className="esther-intro">
-              Her writing and drawings often return to Christian faith,
-              childhood, family memory, and daily life at home. She works from
-              lived and remembered material.
+              She writes and draws from what she has lived and remembered:
+              Christian faith, childhood, family, and life at home.
             </p>
           </div>
 
@@ -59,9 +59,7 @@ export default function AboutPage() {
               priority
             />
 
-            <figcaption>
-              Esther Cho in the garden as a child.
-            </figcaption>
+            <figcaption>Esther Cho · Childhood</figcaption>
           </figure>
         </header>
 
@@ -76,24 +74,20 @@ export default function AboutPage() {
                 sizes="(max-width: 899px) 100vw, 48vw"
               />
 
-              <figcaption>
-                The house and garden remembered from childhood.
-              </figcaption>
+              <figcaption>Her childhood home and garden</figcaption>
             </figure>
 
             <div className="esther-copy">
               <p className="esther-eyebrow">THE BEGINNING</p>
 
-              <h2>The childhood house and garden.</h2>
+              <h2>The house she keeps returning to.</h2>
 
               <p>
-                The house and garden of her childhood recur in her work.
+                The house and garden of her childhood return again and again in
+                her stories and drawings.
               </p>
 
-              <p>
-                Family photographs, familiar paths, and ordinary rooms remain
-                part of the material she returns to.
-              </p>
+              <p>So do family photographs, familiar paths, and ordinary rooms.</p>
             </div>
           </div>
         </section>
@@ -101,15 +95,15 @@ export default function AboutPage() {
         <section className="container esther-section esther-education-section">
           <div className="esther-split esther-split-reverse">
             <div className="esther-copy">
-              <p className="esther-eyebrow">ART AND EDUCATION</p>
+              <p className="esther-eyebrow">ART</p>
 
-              <h2>Years of formal art study.</h2>
+              <h2>Years of art study.</h2>
 
               <p>
-                Her formal art education began at Yewon School and continued at
-                Seoul Arts High School. She later studied Oriental Painting at
-                Seoul National University and completed graduate coursework in
-                Art Education at Ewha Womans University.
+                She studied at Yewon School and Seoul Arts High School, then
+                Oriental Painting at Seoul National University. She later
+                completed graduate coursework in Art Education at Ewha Womans
+                University.
               </p>
 
               <ol
@@ -118,10 +112,7 @@ export default function AboutPage() {
               >
                 {education.map((item) => (
                   <li key={item.year}>
-                    <span className="esther-year">
-                      {item.year}
-                    </span>
-
+                    <span className="esther-year">{item.year}</span>
                     <span>{item.detail.en}</span>
                   </li>
                 ))}
@@ -137,9 +128,7 @@ export default function AboutPage() {
                 sizes="(max-width: 899px) 100vw, 42vw"
               />
 
-              <figcaption>
-                Esther Cho during her university years.
-              </figcaption>
+              <figcaption>University years</figcaption>
             </figure>
           </div>
         </section>
@@ -147,21 +136,18 @@ export default function AboutPage() {
         <section className="esther-section esther-home-section">
           <div className="container esther-home-grid">
             <div className="esther-copy">
-              <p className="esther-eyebrow">
-                HOME, FAMILY, AND FAITH
-              </p>
+              <p className="esther-eyebrow">HOME AND FAITH</p>
 
-              <h2>Home, family, and the morning table.</h2>
+              <h2>Life happens at the table.</h2>
 
               <p>
-                Esther Cho is a writer, artist, and homemaker. Her creative work
-                has developed alongside meals, family routines, prayer, and
-                everyday care.
+                Writing and drawing sit alongside meals, family routines, prayer,
+                and everyday care. They are not separate parts of her life.
               </p>
 
               <p>
-                At the morning table, food, reflection, memory, and writing
-                often share the same space.
+                At the morning table, breakfast and a verse can end up beside the
+                same notebook.
               </p>
             </div>
 
@@ -174,9 +160,7 @@ export default function AboutPage() {
                 sizes="(max-width: 899px) 100vw, 38vw"
               />
 
-              <figcaption>
-                A meal prepared at home, part of the rhythm behind her work.
-              </figcaption>
+              <figcaption>Breakfast at home</figcaption>
             </figure>
           </div>
         </section>
@@ -192,28 +176,21 @@ export default function AboutPage() {
                 sizes="(max-width: 899px) 100vw, 36vw"
               />
 
-              <figcaption>
-                Esther Cho during volunteer service in Bangladesh.
-              </figcaption>
+              <figcaption>Volunteer service in Bangladesh</figcaption>
             </figure>
 
             <div className="esther-copy">
-              <p className="esther-eyebrow">
-                FAITH IN PRACTICE
-              </p>
+              <p className="esther-eyebrow">FAITH IN PRACTICE</p>
 
-              <h2>Mentoring and volunteer service.</h2>
+              <h2>Faith in ordinary practice.</h2>
 
               <p>
                 Her faith has also taken practical form through mentoring North
-                Korean refugees and participating in mission and volunteer
-                service in Bangladesh.
+                Korean refugees and participating in mission and volunteer work
+                in Bangladesh.
               </p>
 
-              <p>
-                These experiences belong to the same life from which her
-                writing grows.
-              </p>
+              <p>These are not separate from the rest of her life.</p>
             </div>
           </div>
         </section>
@@ -223,21 +200,16 @@ export default function AboutPage() {
             <div className="esther-copy">
               <p className="esther-eyebrow">STILL MAKING</p>
 
-              <h2>Writing, drawing, and later reinterpretation.</h2>
+              <h2>She still makes things.</h2>
 
               <p>
-                She continues to write prose, devotional reflections, and
-                hand-drawn story studies.
+                She continues to write prose and devotional reflections and to
+                draw scenes by hand.
               </p>
 
               <p>
-                Sometimes a pencil drawing remains exactly as it was. Sometimes
-                it becomes the starting point for a clearly identified
-                AI-assisted editorial reinterpretation.
-              </p>
-
-              <p>
-                Original work and later reinterpretation are identified
+                Some drawings stay as they are. Some become the starting point
+                for later editorial reinterpretation, which is labeled
                 separately.
               </p>
             </div>
@@ -252,8 +224,8 @@ export default function AboutPage() {
               />
 
               <figcaption>
-                Based on Esther Cho&apos;s original childhood sketch.
-                AI-assisted editorial reinterpretation.
+                Based on an original childhood sketch · AI-assisted editorial
+                reinterpretation
               </figcaption>
             </figure>
           </div>
@@ -262,10 +234,10 @@ export default function AboutPage() {
         <footer className="container esther-closing">
           <p className="esther-eyebrow">
             {authorProfile.globalName} {"\u00B7"}{" "}
-            {authorProfile.romanizedName}
+            {authorProfile.koreanName}
           </p>
 
-          <p>She continues to write and draw.</p>
+          <p>She keeps writing and drawing.</p>
         </footer>
       </article>
     </main>
