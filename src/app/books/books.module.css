@@ -66,32 +66,18 @@
 
 .projectBody {
   display: grid;
-  grid-template-columns: minmax(280px, 0.72fr) minmax(0, 0.9fr);
   gap: clamp(3.5rem, 9vw, 9rem);
   align-items: center;
   margin-top: clamp(6rem, 10vw, 10rem);
 }
 
-.projectFigure {
-  width: min(100%, 520px);
-  margin: 0;
+.projectBodyTextOnly {
+  grid-template-columns: minmax(0, 0.52fr) minmax(0, 1fr);
 }
 
-.projectFigure img {
-  display: block;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 3 / 4;
-  object-fit: cover;
-}
-
-.projectFigure figcaption {
-  margin-top: 0.8rem;
-  color: #74818a;
-  font-family: var(--font-interface);
-  font-size: 0.72rem;
-  letter-spacing: 0.04em;
-  line-height: 1.55;
+.projectBodyTextOnly .projectCopy {
+  grid-column: 2;
+  max-width: 760px;
 }
 
 .projectCopy {
@@ -217,11 +203,12 @@
   }
 
   .projectBody {
-    margin-top: 5rem;
+    margin-top: 4.5rem;
   }
 
-  .projectFigure {
-    width: min(82%, 470px);
+  .projectBodyTextOnly .projectCopy {
+    grid-column: 1;
+    max-width: 36rem;
   }
 
   .detailsInner {
@@ -234,20 +221,6 @@
     font-size: clamp(3rem, 15vw, 5.1rem);
     word-break: keep-all;
     overflow-wrap: normal;
-  }
-
-  .projectFigure {
-    width: calc(100% + 3rem);
-    margin-left: -1.5rem;
-  }
-
-  .projectFigure img {
-    aspect-ratio: 0.94 / 1;
-    object-position: center 44%;
-  }
-
-  .projectFigure figcaption {
-    padding-inline: 1.5rem;
   }
 
   .projectFacts {
