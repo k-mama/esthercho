@@ -1,7 +1,7 @@
 .home {
   min-height: 100%;
-  color: var(--paper);
-  background: var(--brand-navy);
+  color: var(--ink);
+  background: #f8f3ea;
 }
 
 .videoHero {
@@ -82,12 +82,20 @@
 
 .koreanHeroTitle {
   max-width: none !important;
+  font-family: var(--font-korean) !important;
+  font-weight: 500 !important;
+  letter-spacing: -0.045em !important;
+  line-height: 1.12 !important;
   word-break: keep-all;
   overflow-wrap: normal;
 }
 
-.koreanHeroTitle span {
+.koreanHeroTitle span,
+.koDisplay span {
   display: block;
+}
+
+.koreanHeroTitle span {
   white-space: nowrap;
 }
 
@@ -136,12 +144,11 @@
   text-transform: uppercase;
 }
 
-.textLink {
+.textLink,
+.darkLink {
   display: inline-block;
   margin-top: 2rem;
   padding-bottom: 0.2rem;
-  border-bottom: 1px solid rgba(15, 43, 75, 0.48);
-  color: var(--brand-navy);
   font-family: var(--font-interface);
   font-size: 0.72rem;
   font-weight: 700;
@@ -150,232 +157,460 @@
   text-transform: uppercase;
 }
 
+.textLink {
+  color: var(--brand-navy);
+  border-bottom: 1px solid rgba(15, 43, 75, 0.48);
+}
+
 .textLink:hover {
   color: var(--brand-gold-deep);
   border-color: currentColor;
 }
 
-.homeIntro {
-  padding-block: clamp(7rem, 13vw, 13rem);
+.darkLink {
+  color: #f7f3eb;
+  border-bottom: 1px solid rgba(247, 243, 235, 0.48);
+}
+
+.darkLink:hover {
+  color: #d9c49a;
+  border-color: currentColor;
+}
+
+.threshold,
+.tableRoom,
+.carePassage,
+.albumRoom,
+.libraryRoom,
+.sittingRoom {
   color: var(--ink);
+}
+
+.threshold {
+  padding-block: clamp(7rem, 13vw, 13rem);
   background: #f8f3ea;
 }
 
-.homeIntroGrid {
+.thresholdInner {
   display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(300px, 0.65fr);
-  gap: clamp(3rem, 10vw, 10rem);
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.72fr);
+  gap: clamp(4rem, 11vw, 11rem);
   align-items: end;
-  margin-top: clamp(2rem, 5vw, 4.5rem);
 }
 
-.homeIntro h2 {
-  max-width: 10ch;
-  margin: 0;
+.thresholdCopy {
+  max-width: 780px;
+}
+
+.thresholdCopy h2,
+.roomHeading h2,
+.careIntro h2,
+.albumCopy h2,
+.workCopy h2,
+.libraryCopy h2,
+.sittingCopy h2 {
+  margin: 1.45rem 0 0;
   color: var(--brand-navy);
-  font-family: var(--font-interface);
-  font-size: clamp(3rem, 6.2vw, 6.8rem);
-  font-weight: 300;
-  line-height: 0.95;
-  letter-spacing: -0.045em;
+  font-family: var(--font-editorial);
+  font-size: clamp(2.7rem, 5.4vw, 5.6rem);
+  font-weight: 400;
+  line-height: 1.02;
+  letter-spacing: -0.038em;
+  text-wrap: balance;
 }
 
-.homeIntroCopy {
-  max-width: 560px;
+.thresholdCopy > p:last-child,
+.careIntro > p:not(.eyebrow),
+.albumCopy > p:not(.eyebrow),
+.workCopy > p:not(.eyebrow),
+.libraryCopy > p:not(.eyebrow),
+.sittingCopy > p:not(.eyebrow),
+.roomLead {
+  max-width: 620px;
+  margin-top: 2rem;
   color: #665f58;
   font-family: var(--font-editorial);
-  font-size: clamp(1.14rem, 1.7vw, 1.44rem);
-  line-height: 1.76;
+  font-size: clamp(1.02rem, 1.4vw, 1.22rem);
+  line-height: 1.82;
 }
 
-.homeIntroCopy p {
+.houseMap {
+  border-top: 1px solid rgba(42, 56, 72, 0.18);
+}
+
+.houseMap a {
+  display: grid;
+  grid-template-columns: 3.25rem 1fr auto;
+  gap: 1rem;
+  align-items: center;
+  min-height: 4.5rem;
+  color: var(--brand-navy);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(42, 56, 72, 0.18);
+}
+
+.houseMap a > span {
+  color: #9a8971;
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+}
+
+.houseMap strong {
+  font-family: var(--font-interface);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.houseMap i {
+  font-style: normal;
+  color: #9a8971;
+  transition: transform 180ms ease;
+}
+
+.houseMap a:hover i {
+  transform: translate(3px, -3px);
+}
+
+.tableRoom {
+  padding-top: clamp(7rem, 12vw, 12rem);
+  background: #f3ede3;
+}
+
+.roomHeading {
+  padding-bottom: clamp(4rem, 8vw, 7rem);
+}
+
+.roomHeading h2 {
+  max-width: 13ch;
+}
+
+.tableFigure {
   margin: 0;
+  overflow: hidden;
 }
 
-.storyScene {
-  color: var(--ink);
-  background: #faf7f0;
+.tableFigure img {
+  display: block;
+  width: 100%;
+  height: min(76vh, 840px);
+  object-fit: cover;
+  object-position: center 58%;
 }
 
-.storyFigure,
+.tableAfter {
+  padding-block: clamp(5rem, 9vw, 9rem) clamp(7rem, 12vw, 12rem);
+}
+
+.roomLead {
+  max-width: 700px;
+  margin-top: 0;
+  color: #514a43;
+  font-size: clamp(1.15rem, 1.7vw, 1.5rem);
+}
+
+.storageRail {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(2rem, 4vw, 4rem);
+  margin-top: clamp(4rem, 8vw, 7rem);
+  border-top: 1px solid rgba(48, 61, 76, 0.18);
+}
+
+.storageSlot {
+  padding-top: 1.5rem;
+}
+
+.storageSlot > span,
+.careShelf > span,
+.cabinetDrawer > span {
+  display: block;
+  color: #9b8767;
+  font-size: 0.66rem;
+  letter-spacing: 0.14em;
+}
+
+.storageSlot h3,
+.careShelf h3,
+.cabinetDrawer h3 {
+  margin-top: 1.4rem;
+  color: var(--brand-navy);
+  font-family: var(--font-interface);
+  font-size: 1rem;
+  font-weight: 650;
+  letter-spacing: 0.01em;
+}
+
+.storageSlot p,
+.careShelf p,
+.cabinetDrawer p {
+  margin-top: 0.8rem;
+  color: #6f675f;
+  font-family: var(--font-editorial);
+  font-size: 0.98rem;
+  line-height: 1.72;
+}
+
+.carePassage {
+  padding-block: clamp(8rem, 14vw, 14rem);
+  background: #e6ebe3;
+}
+
+.careGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.78fr) minmax(340px, 1fr);
+  gap: clamp(4rem, 10vw, 10rem);
+  align-items: start;
+}
+
+.careIntro h2 {
+  max-width: 10ch;
+}
+
+.careShelves {
+  border-top: 1px solid rgba(33, 56, 72, 0.2);
+}
+
+.careShelf {
+  display: grid;
+  grid-template-columns: 3.5rem 1fr;
+  gap: 1.5rem;
+  padding-block: 2rem;
+  border-bottom: 1px solid rgba(33, 56, 72, 0.2);
+}
+
+.careShelf h3 {
+  margin-top: 0;
+}
+
+.albumRoom {
+  background: #f8f2e8;
+}
+
 .albumFigure {
+  position: relative;
   margin: 0;
+  overflow: hidden;
 }
 
-.storyFigure img,
 .albumFigure img {
   display: block;
   width: 100%;
-  max-height: min(78vh, 900px);
-  aspect-ratio: 16 / 8.6;
+  height: min(78vh, 900px);
   object-fit: cover;
-}
-
-.storyFigure img {
-  object-position: center center;
-}
-
-.albumFigure img {
   object-position: center 52%;
 }
 
-.storyCopy,
+.albumFigure figcaption {
+  position: absolute;
+  right: clamp(1rem, 3vw, 3rem);
+  bottom: clamp(1rem, 3vw, 2rem);
+  max-width: 420px;
+  padding: 0.55rem 0.75rem;
+  color: rgba(255, 252, 245, 0.9);
+  font-size: 0.68rem;
+  line-height: 1.5;
+  background: rgba(10, 28, 46, 0.52);
+}
+
+.albumInterior {
+  padding-block: clamp(6rem, 11vw, 11rem);
+}
+
 .albumCopy {
   display: grid;
-  grid-template-columns: minmax(0, 0.72fr) minmax(300px, 0.9fr);
-  gap: clamp(3rem, 9vw, 9rem);
-  align-items: start;
-  padding-block: clamp(5.5rem, 9vw, 9rem) clamp(7rem, 12vw, 11rem);
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.68fr);
+  gap: clamp(4rem, 10vw, 10rem);
+  align-items: end;
 }
 
-.storyCopy h2,
-.albumCopy h2,
-.estherCopy h2,
-.roomColumn h2,
-.studioCopy h2 {
-  margin: 1.6rem 0 0;
-  color: var(--brand-navy);
-  font-family: var(--font-editorial);
-  font-size: clamp(2.5rem, 4.6vw, 4.9rem);
-  font-weight: 400;
-  line-height: 1;
-  letter-spacing: -0.035em;
+.albumCopy h2 {
+  max-width: 11ch;
 }
 
-.storyText,
-.albumText,
-.estherCopy > p:not(.eyebrow),
-.roomColumn > p:not(.eyebrow),
-.studioCopy > p:not(.eyebrow) {
-  color: #665f58;
-  font-family: var(--font-editorial);
-  font-size: 1.07rem;
-  line-height: 1.8;
-}
-
-.storyText p,
-.albumText p {
-  margin: 0;
-}
-
-.estherScene {
-  padding-block: clamp(7rem, 12vw, 12rem);
-  color: var(--ink);
-  background: #e7ebe2;
-}
-
-.estherGrid {
+.archiveCabinet {
   display: grid;
-  grid-template-columns: minmax(280px, 0.74fr) minmax(0, 0.9fr);
-  gap: clamp(3.5rem, 9vw, 9rem);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(2rem, 4vw, 4rem);
+  margin-top: clamp(5rem, 9vw, 8rem);
+  border-top: 1px solid rgba(48, 61, 76, 0.18);
+}
+
+.cabinetDrawer {
+  padding-top: 1.5rem;
+}
+
+.workRoom {
+  padding-block: clamp(8rem, 14vw, 14rem);
+  color: #f7f3eb;
+  background: #10263f;
+}
+
+.workGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.78fr) minmax(340px, 0.9fr);
+  gap: clamp(4rem, 10vw, 10rem);
   align-items: center;
 }
 
-.estherFigure,
-.roomFigure,
-.studioFigure {
+.workRoom .eyebrow {
+  color: #d4bd8f;
+}
+
+.workCopy h2 {
+  color: #f7f3eb;
+  max-width: 9ch;
+}
+
+.workCopy > p:not(.eyebrow) {
+  color: rgba(247, 243, 235, 0.74);
+}
+
+.workFigure {
   margin: 0;
 }
 
-.estherFigure img,
-.roomFigure img,
-.studioFigure img {
+.workFigure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.processRail {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0;
+  margin-top: 3.5rem;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid rgba(247, 243, 235, 0.24);
+}
+
+.processRail li {
+  padding: 1.25rem 1.25rem 0 0;
+}
+
+.processRail li + li {
+  padding-left: 1.25rem;
+  border-left: 1px solid rgba(247, 243, 235, 0.18);
+}
+
+.processRail span {
+  display: block;
+  color: #cdb889;
+  font-size: 0.64rem;
+  letter-spacing: 0.12em;
+}
+
+.processRail strong {
+  display: block;
+  margin-top: 0.7rem;
+  color: #f7f3eb;
+  font-family: var(--font-interface);
+  font-size: 0.86rem;
+  font-weight: 600;
+}
+
+.libraryRoom {
+  padding-block: clamp(8rem, 14vw, 14rem);
+  background: #eee6dc;
+}
+
+.libraryGrid,
+.sittingGrid {
+  display: grid;
+  grid-template-columns: minmax(360px, 1.04fr) minmax(0, 0.74fr);
+  gap: clamp(4rem, 10vw, 10rem);
+  align-items: center;
+}
+
+.libraryFigure,
+.sittingFigure {
+  margin: 0;
+}
+
+.libraryFigure img,
+.sittingFigure img {
   display: block;
   width: 100%;
   height: auto;
   object-fit: cover;
 }
 
-.estherFigure {
-  width: min(100%, 560px);
-}
-
-.estherFigure img {
+.libraryFigure img {
   aspect-ratio: 4 / 3;
 }
 
-.estherCopy {
-  max-width: 600px;
+.libraryCopy h2 {
+  max-width: 9ch;
 }
 
-.albumScene {
-  color: var(--ink);
-  background: #f4eee4;
-}
-
-.roomsPair {
+.sittingRoom {
   padding-block: clamp(8rem, 14vw, 14rem);
-  color: var(--ink);
-  background: #e6ecec;
+  background: #edf0e8;
 }
 
-.roomsPairGrid {
-  display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(260px, 0.72fr);
-  gap: clamp(4rem, 10vw, 10rem);
-  align-items: start;
+.sittingGrid {
+  grid-template-columns: minmax(0, 0.68fr) minmax(360px, 1fr);
 }
 
-.roomColumn {
-  min-width: 0;
+.sittingCopy h2 {
+  max-width: 8ch;
 }
 
-.roomColumn + .roomColumn {
-  padding-top: clamp(4rem, 9vw, 9rem);
-}
-
-.roomFigure {
-  margin-bottom: clamp(2.5rem, 5vw, 4.5rem);
-}
-
-.booksFigure img {
+.sittingFigure img {
   aspect-ratio: 16 / 10;
 }
 
-.morningFigure {
-  width: min(100%, 430px);
+.koDisplay {
+  font-family: var(--font-korean) !important;
+  font-size: clamp(2.75rem, 4.8vw, 4.9rem) !important;
+  font-weight: 500 !important;
+  line-height: 1.16 !important;
+  letter-spacing: -0.05em !important;
+  text-wrap: initial !important;
+  word-break: keep-all;
+  overflow-wrap: normal;
 }
 
-.morningFigure img {
-  aspect-ratio: 3 / 4;
+:global([lang="ko"]) .eyebrow {
+  font-family: var(--font-korean);
+  font-size: 0.75rem;
+  letter-spacing: 0.035em;
+  text-transform: none;
 }
 
-.roomColumn h2 {
-  max-width: 10ch;
+:global([lang="ko"]) .textLink,
+:global([lang="ko"]) .darkLink,
+:global([lang="ko"]) .houseMap strong,
+:global([lang="ko"]) .storageSlot h3,
+:global([lang="ko"]) .careShelf h3,
+:global([lang="ko"]) .cabinetDrawer h3,
+:global([lang="ko"]) .processRail strong {
+  font-family: var(--font-korean);
 }
 
-.studioScene {
-  padding-block: clamp(8rem, 14vw, 14rem);
-  background: #10263f;
-  color: #f7f3eb;
+:global([lang="ko"]) .textLink,
+:global([lang="ko"]) .darkLink {
+  font-size: 0.78rem;
+  letter-spacing: -0.015em;
+  text-transform: none;
 }
 
-.studioGrid {
-  display: grid;
-  grid-template-columns: minmax(0, 0.88fr) minmax(280px, 0.72fr);
-  gap: clamp(3.5rem, 9vw, 9rem);
-  align-items: center;
-}
-
-.studioScene .eyebrow {
-  color: #d7c192;
-}
-
-.studioCopy h2 {
-  color: inherit;
-}
-
-.studioCopy > p:not(.eyebrow) {
-  color: rgba(247, 243, 235, 0.74);
-}
-
-.studioScene .textLink {
-  color: #f7f3eb;
-  border-bottom-color: rgba(247, 243, 235, 0.48);
-}
-
-.studioFigure img {
-  aspect-ratio: 1 / 1;
+:global([lang="ko"]) .thresholdCopy > p:last-child,
+:global([lang="ko"]) .careIntro > p:not(.eyebrow),
+:global([lang="ko"]) .albumCopy > p:not(.eyebrow),
+:global([lang="ko"]) .workCopy > p:not(.eyebrow),
+:global([lang="ko"]) .libraryCopy > p:not(.eyebrow),
+:global([lang="ko"]) .sittingCopy > p:not(.eyebrow),
+:global([lang="ko"]) .roomLead,
+:global([lang="ko"]) .storageSlot p,
+:global([lang="ko"]) .careShelf p,
+:global([lang="ko"]) .cabinetDrawer p {
+  font-family: var(--font-korean);
+  line-height: 1.78;
 }
 
 @media (min-width: 900px) {
@@ -416,75 +651,170 @@
     max-width: 13ch;
   }
 
-  .homeIntro,
-  .estherScene,
-  .roomsPair,
-  .studioScene {
+  .threshold,
+  .tableRoom,
+  .carePassage,
+  .workRoom,
+  .libraryRoom,
+  .sittingRoom {
     padding-block: 5.8rem;
   }
 
-  .homeIntroGrid,
-  .storyCopy,
+  .tableRoom {
+    padding-bottom: 0;
+  }
+
+  .thresholdInner,
+  .careGrid,
   .albumCopy,
-  .estherGrid,
-  .roomsPairGrid,
-  .studioGrid {
+  .workGrid,
+  .libraryGrid,
+  .sittingGrid {
     grid-template-columns: 1fr;
-    gap: 2.8rem;
+    gap: 3rem;
   }
 
-  .homeIntro h2,
-  .storyCopy h2,
-  .albumCopy h2,
-  .estherCopy h2,
-  .roomColumn h2,
-  .studioCopy h2 {
-    max-width: 12ch;
+  .houseMap {
+    margin-top: 1rem;
   }
 
-  .storyFigure img,
+  .storageRail,
+  .archiveCabinet {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .storageSlot,
+  .cabinetDrawer {
+    padding-block: 1.5rem;
+    border-bottom: 1px solid rgba(48, 61, 76, 0.18);
+  }
+
+  .tableFigure img,
   .albumFigure img {
-    min-height: 58vw;
-    aspect-ratio: 1.25 / 1;
+    height: auto;
+    min-height: 72vw;
+    aspect-ratio: 1.12 / 1;
   }
 
-  .storyCopy,
-  .albumCopy {
-    padding-block: 4.8rem 5.8rem;
+  .tableFigure img {
+    object-position: center 56%;
   }
 
-  .roomColumn + .roomColumn {
-    padding-top: 2rem;
+  .albumFigure img {
+    object-position: center 52%;
   }
 
-  .estherFigure,
-  .roomFigure,
-  .studioFigure {
+  .albumInterior {
+    padding-block: 5.8rem;
+  }
+
+  .workFigure,
+  .libraryFigure,
+  .sittingFigure {
     width: calc(100% + 3rem);
     margin-left: -1.5rem;
   }
 
-  .morningFigure {
-    width: min(calc(100% + 3rem), 520px);
+  .workCopy {
+    order: 2;
+  }
+
+  .workFigure {
+    order: 1;
+  }
+
+  .libraryCopy,
+  .sittingCopy {
+    max-width: 680px;
+  }
+
+  .sittingFigure {
+    grid-row: 1;
+  }
+
+  .sittingCopy {
+    grid-row: 2;
   }
 }
 
 @media (max-width: 640px) {
-  .homeIntro h2 {
-    font-size: clamp(2.9rem, 14vw, 4.9rem);
+  .videoHeroContent {
+    padding-bottom: 3.25rem;
   }
 
-  .storyFigure img,
-  .albumFigure img {
-    min-height: 76vw;
+  .videoEyebrow {
+    font-size: 0.66rem;
+    letter-spacing: 0.11em;
   }
 
-  .booksFigure img {
-    aspect-ratio: 1.05 / 1;
+  .koreanHeroTitle {
+    font-size: clamp(2.25rem, 10.5vw, 3.5rem) !important;
   }
 
-  .morningFigure img {
-    aspect-ratio: 0.94 / 1;
+  .thresholdCopy h2,
+  .roomHeading h2,
+  .careIntro h2,
+  .albumCopy h2,
+  .workCopy h2,
+  .libraryCopy h2,
+  .sittingCopy h2 {
+    font-size: clamp(2.45rem, 11vw, 3.9rem);
+    line-height: 1.05;
+  }
+
+  .koDisplay {
+    font-size: clamp(2.3rem, 9.6vw, 3.35rem) !important;
+    line-height: 1.2 !important;
+    letter-spacing: -0.045em !important;
+  }
+
+  .koDisplay span {
+    white-space: normal;
+  }
+
+  .houseMap a {
+    grid-template-columns: 2.7rem 1fr auto;
+    min-height: 4.2rem;
+  }
+
+  .roomHeading {
+    padding-bottom: 3.6rem;
+  }
+
+  .careShelf {
+    grid-template-columns: 2.6rem 1fr;
+    gap: 1rem;
+  }
+
+  .processRail {
+    grid-template-columns: 1fr;
+  }
+
+  .processRail li {
+    display: grid;
+    grid-template-columns: 2.5rem 1fr;
+    gap: 1rem;
+    align-items: baseline;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(247, 243, 235, 0.18);
+  }
+
+  .processRail li + li {
+    padding-left: 0;
+    border-left: 0;
+  }
+
+  .processRail strong {
+    margin-top: 0;
+  }
+
+  .albumFigure figcaption {
+    position: static;
+    max-width: none;
+    padding: 0.75rem 1.5rem;
+    color: #756b60;
+    background: #f8f2e8;
   }
 }
 
