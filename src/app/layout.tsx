@@ -8,6 +8,7 @@ import "@/styles/global.css";
 import "@/styles/korean.css";
 import "@/styles/shell-redteam.css";
 import "@/styles/home-shell-polish.css";
+import "@/styles/home-geometry-contrast.css";
 
 const siteUrl = "https://esthercho.pages.dev";
 const socialPreviewImage = "/media/home/esther-house-entry-poster.jpg";
