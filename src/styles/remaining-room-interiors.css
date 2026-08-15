@@ -215,11 +215,6 @@ main[class*="booksPage"] section[class*="projectSection"] > div {
   z-index: 1;
 }
 
-main[class*="booksPage"] figure[class*="projectFigure"] img {
-  border-radius: 20px;
-  box-shadow: 0 26px 54px rgba(25, 48, 67, 0.12);
-}
-
 main[class*="booksPage"] p[class*="deck"],
 main[class*="booksPage"] p[class*="description"] {
   color: #5f6971 !important;
@@ -260,11 +255,6 @@ main[class*="booksPage"] section[class*="detailsSection"] {
     right: -60vw !important;
     width: 120vw !important;
     opacity: 0.54;
-  }
-
-  main[class*="booksPage"] figure[class*="projectFigure"] img {
-    border-radius: 0;
-    box-shadow: none;
   }
 }
 
