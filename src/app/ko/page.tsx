@@ -17,45 +17,6 @@ export const metadata: Metadata = {
   },
 };
 
-const rooms = [
-  {
-    title: "이야기가 된 집",
-    eyebrow: "조성연",
-    description:
-      "작가이자 화가인 조성연을 만나고, 그의 글과 그림을 길러 낸 실제 집과 정원, 믿음과 가족의 시간을 따라갑니다.",
-    href: "/ko/about/",
-    linkLabel: "조성연 만나기",
-    image: "/media/covers/esther-cover.webp",
-    alt: "남색 셔츠를 입고 두 점의 작품 아래 앉아 있는 조성연",
-    width: 1800,
-    height: 1059,
-  },
-  {
-    title: "아침 식탁",
-    eyebrow: "아침 식탁",
-    description:
-      "기도와 음식, 가족과 하루의 첫 생각이 만나는 자리에서 태어난 묵상과 기록입니다.",
-    href: "/ko/notes/",
-    linkLabel: "식탁으로 가기",
-    image: "/media/covers/morning-table-cover-mobile.webp",
-    alt: "아보카도 토스트와 달걀, 포도와 아이스커피가 놓인 조성연의 아침 식탁",
-    width: 1200,
-    height: 1600,
-  },
-  {
-    title: "어린 시절 앨범",
-    eyebrow: "어린 시절",
-    description:
-      "실제 사진과 가족의 기록, 그림과 기억의 장소를 꾸미지 않은 모습 그대로 보존합니다.",
-    href: "/ko/archive/",
-    linkLabel: "앨범 열기",
-    image: "/media/home/childhood-garden.jpg",
-    alt: "어린 시절 정원에서 웃고 있는 조성연",
-    width: 1800,
-    height: 1350,
-  },
-];
-
 export default function KoreanHome() {
   return (
     <div className={styles.home}>
@@ -76,99 +37,170 @@ export default function KoreanHome() {
         </div>
       </section>
 
-      <div id="rooms" className={`container ${styles.roomSequence}`}>
-        <article className={`${styles.paperRoom} ${styles.houseRoom}`}>
-          <div className={styles.roomCopy}>
-            <p className={styles.eyebrow}>{rooms[0].eyebrow}</p>
-            <h2>{rooms[0].title}</h2>
-            <p>{rooms[0].description}</p>
-            <Link href={rooms[0].href} className={styles.textLink}>
-              {rooms[0].linkLabel}
+      <section className={styles.homeIntro} aria-labelledby="home-intro-title">
+        <div className="container">
+          <p className={styles.eyebrow}>집 안의 방들</p>
+          <div className={styles.homeIntroGrid}>
+            <h2 id="home-intro-title">서로 다른 방이지만, 한 사람의 삶이다.</h2>
+            <div className={styles.homeIntroCopy}>
+              <p>
+                이야기와 책, 어린 시절 사진, 묵상과 그림을 따로 보관하되
+                서로 다른 삶에서 나온 것처럼 만들지는 않는다.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className={styles.storyScene} aria-labelledby="home-stories-title">
+        <figure className={styles.storyFigure}>
+          <Image
+            src="/media/covers/stories-cover.webp"
+            alt="나무가 늘어선 돌담길에서 책을 들고 있는 조성연"
+            width={1800}
+            height={1059}
+            sizes="100vw"
+            priority
+          />
+        </figure>
+        <div className={`container ${styles.storyCopy}`}>
+          <div>
+            <p className={styles.eyebrow}>이야기</p>
+            <h2 id="home-stories-title">삶에서 태어난 이야기</h2>
+          </div>
+          <div className={styles.storyText}>
+            <p>
+              가족과 믿음, 어린 시절과 기억이 놓치지 않은 작은 것들을 모은
+              살아 있는 이야기 아카이브.
+            </p>
+            <Link href="/ko/stories/" className={styles.textLink}>
+              이야기로 들어가기
             </Link>
           </div>
-          <figure className={styles.landscapeFigure}>
+        </div>
+      </section>
+
+      <section className={styles.estherScene} aria-labelledby="home-esther-title">
+        <div className={`container ${styles.estherGrid}`}>
+          <figure className={styles.estherFigure}>
             <Image
-              src={rooms[0].image}
-              alt={rooms[0].alt}
-              width={rooms[0].width}
-              height={rooms[0].height}
-              sizes="(max-width: 899px) 100vw, 52vw"
+              src="/media/covers/esther-cover.webp"
+              alt="남색 셔츠를 입고 두 점의 작품 아래 앉아 있는 조성연"
+              width={1800}
+              height={1059}
+              sizes="(max-width: 899px) 100vw, 46vw"
             />
           </figure>
-        </article>
+          <div className={styles.estherCopy}>
+            <p className={styles.eyebrow}>조성연</p>
+            <h2 id="home-esther-title">이야기가 된 집</h2>
+            <p>
+              작가이자 화가인 조성연과, 그의 글과 그림을 계속 움직이게 하는
+              집과 가족의 기억, 믿음과 손그림을 만난다.
+            </p>
+            <Link href="/ko/about/" className={styles.textLink}>
+              조성연 만나기
+            </Link>
+          </div>
+        </div>
+      </section>
 
-        <div className={styles.twoRoomGrid}>
-          <article className={`${styles.paperRoom} ${styles.compactRoom}`}>
-            <figure className={styles.portraitFigure}>
+      <section className={styles.albumScene} aria-labelledby="home-album-title">
+        <figure className={styles.albumFigure}>
+          <Image
+            src="/media/home/childhood-house.jpg"
+            alt="조성연 작가의 어린 시절과 연결된 집과 정원"
+            width={1800}
+            height={1059}
+            sizes="100vw"
+          />
+        </figure>
+        <div className={`container ${styles.albumCopy}`}>
+          <div>
+            <p className={styles.eyebrow}>어린 시절</p>
+            <h2 id="home-album-title">어린 시절 앨범</h2>
+          </div>
+          <div className={styles.albumText}>
+            <p>
+              실제 사진과 기억의 장소, 가족의 조각은 이후의 재해석 작업과
+              분명히 다른 기록으로 남긴다.
+            </p>
+            <Link href="/ko/archive/" className={styles.textLink}>
+              앨범 열기
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className={styles.roomsPair} aria-label="책과 아침 식탁">
+        <div className={`container ${styles.roomsPairGrid}`}>
+          <article className={styles.roomColumn}>
+            <figure className={`${styles.roomFigure} ${styles.booksFigure}`}>
               <Image
-                src={rooms[1].image}
-                alt={rooms[1].alt}
-                width={rooms[1].width}
-                height={rooms[1].height}
-                sizes="(max-width: 899px) 100vw, 38vw"
+                src="/media/covers/books-cover-final-20260802.png"
+                alt="은은한 햇살이 드는 식탁에서 책을 읽는 조성연"
+                width={1800}
+                height={1059}
+                sizes="(max-width: 899px) 100vw, 58vw"
               />
             </figure>
-            <div className={styles.compactCopy}>
-              <p className={styles.eyebrow}>{rooms[1].eyebrow}</p>
-              <h2>{rooms[1].title}</h2>
-              <p>{rooms[1].description}</p>
-              <Link href={rooms[1].href} className={styles.textLink}>
-                {rooms[1].linkLabel}
-              </Link>
-            </div>
+            <p className={styles.eyebrow}>책</p>
+            <h2>정원 너머</h2>
+            <p>확정된 기록의 범위 안에서 책과 출간 준비 중인 작업을 보여준다.</p>
+            <Link href="/ko/books/" className={styles.textLink}>
+              책 보러 가기
+            </Link>
           </article>
 
-          <article className={`${styles.paperRoom} ${styles.compactRoom}`}>
-            <figure className={styles.albumFigure}>
+          <article className={styles.roomColumn}>
+            <figure className={`${styles.roomFigure} ${styles.morningFigure}`}>
               <Image
-                src={rooms[2].image}
-                alt={rooms[2].alt}
-                width={rooms[2].width}
-                height={rooms[2].height}
-                sizes="(max-width: 899px) 100vw, 38vw"
+                src="/media/covers/morning-table-cover-mobile.webp"
+                alt="아보카도 토스트와 달걀, 포도와 아이스커피가 놓인 조성연의 아침 식탁"
+                width={1200}
+                height={1600}
+                sizes="(max-width: 899px) 100vw, 34vw"
               />
             </figure>
-            <div className={styles.compactCopy}>
-              <p className={styles.eyebrow}>{rooms[2].eyebrow}</p>
-              <h2>{rooms[2].title}</h2>
-              <p>{rooms[2].description}</p>
-              <Link href={rooms[2].href} className={styles.textLink}>
-                {rooms[2].linkLabel}
-              </Link>
-            </div>
+            <p className={styles.eyebrow}>아침 식탁</p>
+            <h2>아침 식탁</h2>
+            <p>평범한 아침과 말씀, 기도가 만나는 자리에서 태어난 묵상과 기록.</p>
+            <Link href="/ko/notes/" className={styles.textLink}>
+              식탁으로 가기
+            </Link>
           </article>
         </div>
+      </section>
 
-        <article className={`${styles.paperRoom} ${styles.studioRoom}`}>
-          <div className={styles.roomCopy}>
+      <section className={styles.studioScene} aria-labelledby="home-studio-title">
+        <div className={`container ${styles.studioGrid}`}>
+          <div className={styles.studioCopy}>
             <p className={styles.eyebrow}>스튜디오</p>
-            <h2>손으로 그린 이야기, 빛으로 다시 태어나다</h2>
+            <h2 id="home-studio-title">손으로 그린 이야기, 빛으로 다시 태어나다</h2>
             <p>
-              원본 손그림과 새롭게 재해석된 작업을 분명히 구분해 함께
-              보여 줍니다. 원본은 언제나 보이고, 기록은 정직하게
-              남습니다.
+              원본 손그림은 그대로 보이게 두고, 이후의 재해석은 명확히 다른
+              작업으로 밝힌다. 과정은 원본을 대신하지 않는다.
             </p>
             <Link href="/ko/studio/" className={styles.textLink}>
               스튜디오 들어가기
             </Link>
           </div>
-          <figure className={styles.sketchFigure}>
+          <figure className={styles.studioFigure}>
             <Image
-              src="/media/home/studio-home-card-collage-2026-08.png"
-              alt="조성연의 손그림 습작과 수채화 스케치를 모은 정사각 콜라주 이미지"
-              width={1200}
-              height={1600}
-              sizes="(max-width: 899px) 100vw, 36vw"
+              src="/media/esther/still-making-father-child-collage-20260802.png"
+              alt="조성연의 어린 시절 원본 스케치를 바탕으로 만든 종이 콜라주"
+              width={1536}
+              height={1536}
+              sizes="(max-width: 899px) 100vw, 42vw"
             />
           </figure>
-        </article>
-      </div>
+        </div>
+      </section>
 
-      <section className={`container ${styles.navyPause}`}>
-        <p>
-          이곳은 목록을 진열한 곳이 아닙니다. 기억으로 이어진 방을
-          하나씩 천천히 들어가는 집입니다.
-        </p>
+      <section className={styles.homeClosing}>
+        <div className="container">
+          <p>기억으로 이어진 방을 하나씩 천천히 들어가는 집.</p>
+        </div>
       </section>
     </div>
   );
