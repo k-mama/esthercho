@@ -10,6 +10,7 @@ import "@/styles/shell-redteam.css";
 import "@/styles/home-shell-polish.css";
 import "@/styles/home-geometry-contrast.css";
 import "@/styles/home-video-lock.css";
+import "@/styles/home-mobile-studio-fix.css";
 
 const siteUrl = "https://esthercho.pages.dev";
 const socialPreviewImage = "/media/home/esther-house-entry-poster.jpg";
