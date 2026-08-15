@@ -34,11 +34,11 @@ export default function KoreanHome() {
         <div className="container">
           <p className={styles.eyebrow}>집 안의 방들</p>
           <div className={styles.homeIntroGrid}>
-            <h2 id="home-intro-title">서로 다른 방이지만, 한 사람의 삶이다.</h2>
+            <h2 id="home-intro-title">이야기와 사진, 책과 그림.</h2>
             <div className={styles.homeIntroCopy}>
               <p>
-                이야기와 책, 어린 시절 사진, 묵상과 그림을 따로 보관하되
-                서로 다른 삶에서 나온 것처럼 만들지는 않는다.
+                이곳에서는 서로 다른 방에 두지만 모두 같은 삶에서 나온
+                기록이다.
               </p>
             </div>
           </div>
