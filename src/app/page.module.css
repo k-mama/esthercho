@@ -158,9 +158,7 @@
 .homeIntro {
   padding-block: clamp(7rem, 13vw, 13rem);
   color: var(--ink);
-  background:
-    radial-gradient(circle at 82% 20%, rgba(220, 231, 232, 0.72), transparent 33%),
-    linear-gradient(135deg, #fbf8f1 0%, #f7f1e7 58%, #edf1ef 100%);
+  background: #f8f3ea;
 }
 
 .homeIntroGrid {
@@ -380,22 +378,6 @@
   aspect-ratio: 1 / 1;
 }
 
-.homeClosing {
-  padding-block: clamp(7rem, 12vw, 11rem);
-  color: var(--ink);
-  background: #fbf8f1;
-}
-
-.homeClosing p {
-  max-width: 24ch;
-  margin: 0;
-  color: var(--brand-navy);
-  font-family: var(--font-editorial);
-  font-size: clamp(2rem, 4.3vw, 4.5rem);
-  line-height: 1.08;
-  letter-spacing: -0.03em;
-}
-
 @media (min-width: 900px) {
   .videoHero {
     height: 100svh;
@@ -437,8 +419,7 @@
   .homeIntro,
   .estherScene,
   .roomsPair,
-  .studioScene,
-  .homeClosing {
+  .studioScene {
     padding-block: 5.8rem;
   }
 
