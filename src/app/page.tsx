@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { HomeHeroVideo } from "./home-hero-video";
 import styles from "./page.module.css";
+import polish from "./home-polish.module.css";
 
 export const metadata: Metadata = {
   title: "Esther Cho",
@@ -21,7 +22,7 @@ const rooms = [
 
 export default function Home() {
   return (
-    <main className={styles.home}>
+    <main className={`${styles.home} ${polish.home}`}>
       <section className={`${styles.videoHero} home-video-hero`}>
         <HomeHeroVideo />
 
@@ -34,7 +35,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className={styles.threshold} id="inside" aria-labelledby="house-title">
+      <section className={`${styles.threshold} ${polish.foyer}`} id="inside" aria-labelledby="house-title">
         <div className={`container ${styles.thresholdInner}`}>
           <div className={styles.thresholdCopy}>
             <p className={styles.eyebrow}>INSIDE ESTHER&apos;S HOUSE</p>
@@ -45,7 +46,7 @@ export default function Home() {
             </p>
           </div>
 
-          <nav className={styles.roomLinks} aria-label="Rooms in Esther Cho's house">
+          <nav className={`${styles.roomLinks} ${polish.roomLinks}`} aria-label="Rooms in Esther Cho's house">
             {rooms.map(([label, href], index) => (
               <Link href={href} key={href}>
                 <span>{String(index + 1).padStart(2, "0")}</span>
@@ -57,7 +58,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className={`${styles.scene} ${styles.tableScene}`} aria-labelledby="table-title">
+      <section className={`${styles.scene} ${styles.tableScene} ${polish.table}`} aria-labelledby="table-title">
         <div className={`container ${styles.sceneGrid}`}>
           <div className={styles.sceneCopy}>
             <p className={styles.eyebrow}>MORNING TABLE</p>
@@ -71,7 +72,7 @@ export default function Home() {
             </Link>
           </div>
 
-          <figure className={`${styles.sceneMedia} ${styles.tableMedia}`}>
+          <figure className={`${styles.sceneMedia} ${styles.tableMedia} ${polish.tableMedia}`}>
             <Image
               src="/media/esther/morning-table.jpg"
               alt="Breakfast at Esther Cho's morning table"
@@ -84,10 +85,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className={`${styles.scene} ${styles.memoryScene}`} aria-labelledby="memory-title">
+      <section className={`${styles.scene} ${styles.memoryScene} ${polish.memory}`} aria-labelledby="memory-title">
         <div className={`container ${styles.sceneGrid} ${styles.reverseScene}`}>
           <div className={styles.memoryCollage} aria-label="Esther Cho childhood archive photographs">
-            <figure className={styles.memoryPrimary}>
+            <figure className={`${styles.memoryPrimary} ${polish.memoryPrimary}`}>
               <Image
                 src="/media/esther/childhood-garden.jpg"
                 alt="A garden from Esther Cho's childhood archive"
@@ -96,7 +97,7 @@ export default function Home() {
                 sizes="(max-width: 899px) 92vw, 48vw"
               />
             </figure>
-            <figure className={styles.memorySecondary}>
+            <figure className={`${styles.memorySecondary} ${polish.memorySecondary}`}>
               <Image
                 src="/media/esther/childhood-house.jpg"
                 alt="A house from Esther Cho's childhood archive"
@@ -121,7 +122,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className={`${styles.scene} ${styles.careScene}`} aria-labelledby="care-title">
+      <section className={`${styles.scene} ${styles.careScene} ${polish.care}`} aria-labelledby="care-title">
         <div className={`container ${styles.careLayout}`}>
           <div className={styles.sceneCopy}>
             <p className={styles.eyebrow}>STORIES OF CARE</p>
@@ -136,7 +137,7 @@ export default function Home() {
             </Link>
           </div>
 
-          <figure className={`${styles.sceneMedia} ${styles.careMedia}`}>
+          <figure className={`${styles.sceneMedia} ${styles.careMedia} ${polish.careMedia}`}>
             <Image
               src="/media/esther/bangladesh-service.jpg"
               alt="A photograph from Esther Cho's service archive in Bangladesh"
@@ -149,7 +150,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className={`${styles.scene} ${styles.studioScene}`} aria-labelledby="studio-title">
+      <section className={`${styles.scene} ${styles.studioScene} ${polish.studio}`} aria-labelledby="studio-title">
         <div className={`container ${styles.sceneGrid}`}>
           <div className={styles.sceneCopy}>
             <p className={styles.eyebrow}>THE STUDIO</p>
@@ -164,7 +165,7 @@ export default function Home() {
           </div>
 
           <div className={styles.studioCollage} aria-label="Original drawing and collage by Esther Cho">
-            <figure className={styles.studioPrimary}>
+            <figure className={`${styles.studioPrimary} ${polish.studioPrimary}`}>
               <Image
                 src="/media/esther/hand-drawn-story.jpg"
                 alt="An original hand-drawn story study by Esther Cho"
@@ -173,7 +174,7 @@ export default function Home() {
                 sizes="(max-width: 899px) 82vw, 34vw"
               />
             </figure>
-            <figure className={styles.studioSecondary}>
+            <figure className={`${styles.studioSecondary} ${polish.studioSecondary}`}>
               <Image
                 src="/media/esther/still-making-father-child-collage-20260802.png"
                 alt="A collage built from Esther Cho's original childhood sketch"
@@ -186,7 +187,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className={styles.closingRoom} aria-labelledby="closing-title">
+      <section className={`${styles.closingRoom} ${polish.closing}`} aria-labelledby="closing-title">
         <div className={`container ${styles.closingInner}`}>
           <p className={styles.eyebrow}>KEEP WALKING</p>
           <h2 id="closing-title">Some of these stories eventually become books.</h2>
