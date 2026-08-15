@@ -75,8 +75,8 @@ export default function KoreanHome() {
               <span>한 집 안에서 천천히 이어집니다.</span>
             </h2>
             <p>
-              아침밥상 옆에 말씀이 있고, 오래된 사진 한 장이 수십 년 뒤 이야기를
-              열기도 합니다. 서로 다른 기록이 한 사람의 삶 안에서 다시 만납니다.
+              아침밥 옆에 말씀이 있고, 오래된 사진 한 장이 수십 년 뒤 이야기를
+              데려오기도 합니다. 모두 한 사람의 삶 안에 있었습니다.
             </p>
           </div>
 
@@ -101,8 +101,8 @@ export default function KoreanHome() {
               <span>가장 잘 보이는 자리.</span>
             </h2>
             <p>
-              아침밥과 말씀, 가족의 식사와 사랑하는 사람들에게 차려 온 밥상이
-              한 사람의 생활 리듬 안에서 자연스럽게 이어집니다.
+              아침밥과 말씀, 가족에게 차린 식사와 사랑하는 사람에게 내어준 한 끼가
+              같은 식탁 위에 놓입니다.
             </p>
             <Link href="/ko/notes/" className={styles.textLink}>
               아침 식탁으로 가기
@@ -124,7 +124,7 @@ export default function KoreanHome() {
 
       <section className={`${styles.scene} ${styles.memoryScene} ${polish.memory}`} aria-labelledby="memory-title">
         <div className={`container ${styles.sceneGrid} ${styles.reverseScene}`}>
-          <div className={styles.memoryCollage} aria-label="조성연의 어린 시절 아카이브 사진">
+          <div className={styles.memoryCollage} aria-label="조성연의 어린 시절 사진">
             <figure className={`${styles.memoryPrimary} ${polish.memoryPrimary}`}>
               <Image
                 src="/media/esther/childhood-garden.jpg"
@@ -148,15 +148,15 @@ export default function KoreanHome() {
           <div className={styles.sceneCopy}>
             <p className={styles.eyebrow}>기억</p>
             <h2 id="memory-title" className={styles.koDisplay}>
-              <span>말보다 먼저</span>
-              <span>기억나는 사진들이 있습니다.</span>
+              <span>가끔은 사진이</span>
+              <span>먼저 돌아옵니다.</span>
             </h2>
             <p>
-              어린 시절의 집과 정원, 가족사진 속 이름과 장소, 그때는 몰랐던 작은
-              장면들이 천천히 돌아옵니다. 사진은 그대로이고, 그 곁의 이야기는 자라납니다.
+              집 한 채, 정원, 가족사진 속 이름 하나. 가끔은 사진이 먼저 돌아오고
+              이야기는 나중에 따라옵니다.
             </p>
             <Link href="/ko/archive/" className={styles.textLink}>
-              어린 시절 기록 보기
+              어린 시절로 가기
             </Link>
           </div>
         </div>
@@ -167,12 +167,12 @@ export default function KoreanHome() {
           <div className={styles.sceneCopy}>
             <p className={styles.eyebrow}>돌봄의 이야기</p>
             <h2 id="care-title" className={styles.koDisplay}>
-              <span>돌봄은 특별한 행사가 아니라</span>
+              <span>돌봄은 그냥</span>
               <span>한 주의 일부였습니다.</span>
             </h2>
             <p>
-              가족과 교회, 봉사여행과 친구들, 볼일과 웃음까지. 누군가에게 자리를
-              내어준 평범한 날들이 이력서가 아니라 이야기로 남습니다.
+              가족과 교회, 봉사여행과 친구들, 볼일과 웃음. 누군가에게 자리를
+              내어주는 일은 그냥 평범한 생활의 일부가 되었습니다.
             </p>
             <Link href="/ko/stories/" className={styles.textLink}>
               이야기 보러 가기
@@ -182,12 +182,12 @@ export default function KoreanHome() {
           <figure className={`${styles.sceneMedia} ${styles.careMedia} ${polish.careMedia}`}>
             <Image
               src="/media/esther/bangladesh-service.jpg"
-              alt="조성연의 방글라데시 봉사 기록 사진"
+              alt="방글라데시 봉사 활동 중인 조성연"
               width={1200}
               height={800}
               sizes="(max-width: 899px) 100vw, 54vw"
             />
-            <figcaption>봉사 기록 · 방글라데시</figcaption>
+            <figcaption>방글라데시</figcaption>
           </figure>
         </div>
       </section>
@@ -201,8 +201,8 @@ export default function KoreanHome() {
               <span>그대로 남는 방.</span>
             </h2>
             <p>
-              원본 손그림과 그 그림에서 출발한 콜라주를 함께 봅니다. 새 작업은
-              원본을 덮지 않고, 어디에서 시작되었는지 숨기지 않습니다.
+              연필선은 연필선으로 남습니다. 그 그림에서 새로운 작업이 시작되더라도
+              처음의 손길은 숨기지 않습니다.
             </p>
             <Link href="/ko/studio/" className={styles.textLink}>
               작업실 들어가기
@@ -227,8 +227,8 @@ export default function KoreanHome() {
         <div className={`container ${styles.closingInner}`}>
           <p className={styles.eyebrow}>조금 더 안쪽으로</p>
           <h2 id="closing-title" className={styles.koDisplay}>
-            <span>이 집의 이야기들은</span>
-            <span>때로 책이 되어 더 멀리 갑니다.</span>
+            <span>어떤 이야기는 오래 이어지고,</span>
+            <span>몇 편은 책이 됩니다.</span>
           </h2>
           <div className={styles.closingLinks}>
             <Link href="/ko/books/">책 <span aria-hidden="true">→</span></Link>
