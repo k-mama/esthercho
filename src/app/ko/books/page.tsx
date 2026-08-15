@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { PageCover } from "@/components/page-cover";
 import { featuredBook } from "@/content/books";
@@ -44,18 +43,7 @@ export default function KoreanBooksPage() {
           <p className={styles.deck}>{featuredBook.deck.ko}</p>
         </div>
 
-        <div className={`container ${styles.projectBody}`}>
-          <figure className={styles.projectFigure}>
-            <Image
-              src="/media/esther/morning-table.jpg"
-              alt="조성연 작가의 아침 식탁에 놓인 아침 식사"
-              width={1200}
-              height={1600}
-              sizes="(max-width: 899px) 82vw, 38vw"
-            />
-            <figcaption>아침 식탁 · 오늘</figcaption>
-          </figure>
-
+        <div className={`container ${styles.projectBody} ${styles.projectBodyTextOnly}`}>
           <div className={styles.projectCopy}>
             <p className={styles.description}>{featuredBook.description.ko}</p>
             <Link className={styles.projectLink} href="/ko/notes/">
