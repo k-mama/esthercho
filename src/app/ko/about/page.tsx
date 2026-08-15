@@ -14,7 +14,7 @@ const education = authorProfile.education;
 
 export default function KoreanAboutPage() {
   return (
-    <>
+    <main>
       <PageCover
         eyebrow={authorProfile.koreanName}
         title="이야기가 된 집"
@@ -279,6 +279,6 @@ export default function KoreanAboutPage() {
           </p>
         </footer>
       </article>
-    </>
+    </main>
   );
 }
