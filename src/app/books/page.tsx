@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { PageCover } from "@/components/page-cover";
 import { featuredBook } from "@/content/books";
@@ -44,18 +43,7 @@ export default function BooksPage() {
           <p className={styles.deck}>{featuredBook.deck.en}</p>
         </div>
 
-        <div className={`container ${styles.projectBody}`}>
-          <figure className={styles.projectFigure}>
-            <Image
-              src="/media/esther/morning-table.jpg"
-              alt="A breakfast prepared at Esther Cho's morning table"
-              width={1200}
-              height={1600}
-              sizes="(max-width: 899px) 82vw, 38vw"
-            />
-            <figcaption>Morning table · Today</figcaption>
-          </figure>
-
+        <div className={`container ${styles.projectBody} ${styles.projectBodyTextOnly}`}>
           <div className={styles.projectCopy}>
             <p className={styles.description}>{featuredBook.description.en}</p>
             <Link className={styles.projectLink} href="/notes/">
