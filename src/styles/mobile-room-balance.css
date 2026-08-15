@@ -1,0 +1,270 @@
+/* Mobile photographic art direction for Esther Cho's inner rooms.
+   Space photographs may go wide; portraits, tables and artwork keep breathing room.
+   No decorative objects are introduced here. */
+
+@media (max-width: 899px) {
+  /* ------------------------------------------------------------------------ */
+  /* PAGE COVERS — keep the subject readable on narrow screens                */
+  /* ------------------------------------------------------------------------ */
+
+  main.childhood-page > .page-cover-shell .page-cover-image {
+    object-position: 40% center !important;
+  }
+
+  main.studio-page > .page-cover-shell .page-cover-image {
+    object-position: 44% center !important;
+  }
+
+  main.stories-page > .page-cover-shell .page-cover-image,
+  main.morning-page > .page-cover-shell .page-cover-image,
+  main:has(.esther-page) > .page-cover-shell .page-cover-image {
+    object-position: center center !important;
+  }
+
+  main[class*="booksPage"] > .page-cover-shell .page-cover-image {
+    object-position: 52% center !important;
+  }
+
+  /* ------------------------------------------------------------------------ */
+  /* CHILDHOOD — the house stays cinematic, the child gets air               */
+  /* ------------------------------------------------------------------------ */
+
+  .childhood-house-figure {
+    width: 100%;
+  }
+
+  .childhood-house-figure img {
+    object-position: center 54% !important;
+  }
+
+  .childhood-garden-figure {
+    width: min(92vw, 620px) !important;
+    margin-inline: auto !important;
+  }
+
+  .childhood-garden-figure img {
+    aspect-ratio: 4 / 5 !important;
+    object-fit: cover;
+    object-position: 43% center !important;
+    border-radius: 16px !important;
+    box-shadow: 0 20px 38px rgba(25, 48, 67, 0.09) !important;
+  }
+
+  .childhood-garden-figure figcaption {
+    padding-inline: 0 !important;
+  }
+
+  /* ------------------------------------------------------------------------ */
+  /* ESTHER — portraits and lived-life photographs each get their own scale   */
+  /* ------------------------------------------------------------------------ */
+
+  .esther-hero-figure {
+    width: min(92vw, 620px) !important;
+    margin-inline: auto !important;
+  }
+
+  .esther-hero-figure img {
+    aspect-ratio: 4 / 3 !important;
+    object-position: 46% center !important;
+    border-radius: 16px !important;
+  }
+
+  .esther-hero-figure figcaption {
+    padding-inline: 0 !important;
+  }
+
+  .esther-house-figure {
+    width: calc(100% + 3rem) !important;
+    margin-left: -1.5rem !important;
+    margin-right: -1.5rem !important;
+  }
+
+  .esther-house-figure img {
+    border-radius: 0 !important;
+    object-position: center 52% !important;
+    box-shadow: none !important;
+  }
+
+  .esther-portrait-figure {
+    width: min(78vw, 430px) !important;
+    margin-inline: auto !important;
+  }
+
+  .esther-portrait-figure img {
+    aspect-ratio: 4 / 5 !important;
+    object-position: center 28% !important;
+    border-radius: 16px !important;
+  }
+
+  .esther-table-figure {
+    width: min(78vw, 430px) !important;
+    margin-inline: auto !important;
+  }
+
+  .esther-table-figure img {
+    aspect-ratio: 4 / 5 !important;
+    object-position: center 52% !important;
+    border-radius: 16px !important;
+  }
+
+  .esther-service-figure {
+    width: min(76vw, 400px) !important;
+    margin-inline: auto !important;
+  }
+
+  .esther-service-figure img {
+    aspect-ratio: 4 / 5 !important;
+    object-position: center top !important;
+    border-radius: 16px !important;
+  }
+
+  .esther-portrait-figure figcaption,
+  .esther-table-figure figcaption,
+  .esther-service-figure figcaption {
+    padding-inline: 0 !important;
+  }
+
+  .esther-sketch-figure {
+    width: min(88vw, 520px) !important;
+    margin-inline: auto !important;
+    padding: 0.65rem !important;
+    background: rgba(249, 248, 244, 0.96) !important;
+    box-shadow: 0 22px 42px rgba(7, 25, 42, 0.16) !important;
+  }
+
+  .esther-sketch-figure img {
+    width: 100%;
+    aspect-ratio: 1 / 1 !important;
+    object-fit: contain !important;
+    box-shadow: none !important;
+  }
+
+  .esther-sketch-figure figcaption {
+    padding-inline: 0 !important;
+  }
+
+  /* ------------------------------------------------------------------------ */
+  /* STUDIO — artwork reads like an object on a gallery wall                  */
+  /* ------------------------------------------------------------------------ */
+
+  .studio-reimagined-figure {
+    width: min(90vw, 560px) !important;
+    margin-inline: auto !important;
+    padding: 0.7rem !important;
+    background: rgba(249, 248, 244, 0.97) !important;
+    box-shadow: 0 22px 44px rgba(25, 48, 67, 0.13) !important;
+  }
+
+  .studio-reimagined-figure img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1 !important;
+    object-fit: contain !important;
+    box-shadow: none !important;
+  }
+
+  .studio-reimagined-figure figcaption {
+    padding-inline: 0 !important;
+  }
+
+  /* ------------------------------------------------------------------------ */
+  /* STORIES — archive image wide, present-day image quieter                  */
+  /* ------------------------------------------------------------------------ */
+
+  .stories-feature-figure img {
+    object-position: center 50% !important;
+  }
+
+  .stories-young-artist {
+    width: min(72vw, 420px) !important;
+    margin-inline: auto !important;
+  }
+
+  .stories-young-artist img {
+    aspect-ratio: 3 / 4 !important;
+    object-position: center 30% !important;
+    border-radius: 14px;
+  }
+
+  .stories-newly-figure {
+    width: min(78vw, 440px) !important;
+    margin-inline: auto !important;
+    justify-self: center !important;
+  }
+
+  .stories-newly-figure img {
+    aspect-ratio: 3 / 4 !important;
+    object-position: center 54% !important;
+    border-radius: 16px;
+    box-shadow: 0 20px 38px rgba(25, 48, 67, 0.09);
+  }
+
+  /* ------------------------------------------------------------------------ */
+  /* MORNING TABLE — the meal feels intimate, not like a full-screen banner   */
+  /* ------------------------------------------------------------------------ */
+
+  .morning-present-figure {
+    width: min(80vw, 440px) !important;
+    margin-inline: auto !important;
+    filter: none !important;
+  }
+
+  .morning-present-figure img {
+    aspect-ratio: 3 / 4 !important;
+    object-position: center 54% !important;
+    border-radius: 18px !important;
+    box-shadow: 0 22px 42px rgba(25, 48, 67, 0.1);
+  }
+
+  /* ------------------------------------------------------------------------ */
+  /* BOOKS — one restrained object in a quiet library                         */
+  /* ------------------------------------------------------------------------ */
+
+  main[class*="booksPage"] figure[class*="projectFigure"] {
+    width: min(84vw, 450px) !important;
+    margin-inline: auto !important;
+  }
+
+  main[class*="booksPage"] figure[class*="projectFigure"] img {
+    aspect-ratio: 3 / 4 !important;
+    object-fit: cover !important;
+    object-position: center 52% !important;
+    border-radius: 18px !important;
+    box-shadow: 0 22px 42px rgba(25, 48, 67, 0.1) !important;
+  }
+
+  main[class*="booksPage"] figure[class*="projectFigure"] figcaption {
+    padding-inline: 0 !important;
+  }
+}
+
+@media (max-width: 560px) {
+  .childhood-garden-figure,
+  .esther-hero-figure {
+    width: 90vw !important;
+  }
+
+  .esther-portrait-figure,
+  .esther-table-figure {
+    width: 80vw !important;
+  }
+
+  .esther-service-figure {
+    width: 78vw !important;
+  }
+
+  .esther-sketch-figure,
+  .studio-reimagined-figure {
+    width: 92vw !important;
+  }
+
+  .morning-present-figure,
+  main[class*="booksPage"] figure[class*="projectFigure"] {
+    width: 86vw !important;
+  }
+
+  .stories-young-artist,
+  .stories-newly-figure {
+    width: 80vw !important;
+  }
+}
