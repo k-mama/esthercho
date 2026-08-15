@@ -1,15 +1,18 @@
 .stories-page {
   --stories-ivory: #f8f5ee;
-  --stories-cream: #f1f3f4;
-  --stories-mist: #e0ebf3;
-  --stories-night: #14324c;
+  --stories-cool-ivory: #f4f6f5;
+  --stories-silver: #e3e9ed;
+  --stories-sky: #dfeaf2;
+  --stories-blue: #587691;
+  --stories-navy: #15334d;
+  --stories-copy: #5f6971;
   background: var(--stories-ivory);
   color: var(--ink);
 }
 
 .stories-kicker {
   margin: 0;
-  color: #587691;
+  color: var(--stories-blue);
   font-family: var(--font-interface);
   font-size: 0.68rem;
   font-weight: 700;
@@ -20,19 +23,19 @@
 .stories-text-link {
   display: inline-block;
   margin-top: 2rem;
-  padding-bottom: 0.2rem;
-  border-bottom: 1px solid rgba(15, 43, 75, 0.48);
-  color: var(--brand-navy);
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid rgba(21, 51, 77, 0.42);
+  color: var(--stories-navy);
   font-family: var(--font-interface);
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.09em;
   text-decoration: none;
   text-transform: uppercase;
-  transition: color 180ms ease, border-color 180ms ease;
 }
 
-.stories-text-link:hover {
+.stories-text-link:hover,
+.stories-text-link:focus-visible {
   color: #1b4c73;
   border-color: currentColor;
 }
@@ -40,14 +43,15 @@
 .stories-intro {
   position: relative;
   overflow: hidden;
-  padding-block: clamp(6.5rem, 12vw, 12rem) clamp(5rem, 10vw, 9rem);
+  padding-block: clamp(7rem, 12vw, 12rem) clamp(6rem, 10vw, 9rem);
   background:
-    radial-gradient(circle at 86% 18%, rgba(195, 217, 233, 0.74), transparent 36%),
+    radial-gradient(circle at 86% 18%, rgba(195, 217, 233, 0.72), transparent 36%),
     linear-gradient(135deg, #faf7f0 0%, #f3f5f5 56%, #eaf1f5 100%);
 }
 
 .stories-intro-inner {
   position: relative;
+  z-index: 1;
 }
 
 .stories-intro-grid {
@@ -64,12 +68,12 @@
 .stories-house-copy h2,
 .stories-newly h2 {
   margin: 0;
+  color: var(--stories-navy);
   letter-spacing: -0.035em;
 }
 
 .stories-intro h2 {
   max-width: 10ch;
-  color: var(--brand-navy);
   font-family: var(--font-interface);
   font-size: clamp(3rem, 6.3vw, 6.9rem);
   font-weight: 300;
@@ -79,7 +83,7 @@
 .stories-intro-copy {
   max-width: 610px;
   padding-bottom: 0.45rem;
-  color: #5f6971;
+  color: var(--stories-copy);
   font-family: var(--font-editorial);
   font-size: clamp(1.16rem, 1.7vw, 1.48rem);
   line-height: 1.72;
@@ -93,79 +97,45 @@
   margin-top: 1.35rem;
 }
 
-.stories-intro-line {
-  display: none;
-}
-
 .stories-feature {
-  padding-block: clamp(5rem, 9vw, 9rem) clamp(7rem, 12vw, 12rem);
+  padding-block: clamp(8rem, 13vw, 13rem);
   background: #f7f5ef;
 }
 
 .stories-feature-inner {
   display: grid;
-  grid-template-columns: minmax(0, 1.48fr) minmax(290px, 0.52fr);
-  gap: clamp(2.8rem, 6.5vw, 7rem);
   align-items: center;
 }
 
-.stories-feature-figure,
-.stories-newly-figure,
-.stories-young-artist,
-.stories-house-figure {
-  margin: 0;
-}
-
-.stories-feature-figure img,
-.stories-newly-figure img,
-.stories-young-artist img,
-.stories-house-figure img {
-  display: block;
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-
-.stories-feature-figure img {
-  aspect-ratio: 4 / 3;
-}
-
-.stories-feature-figure figcaption,
-.stories-house-figure figcaption,
-.stories-young-artist figcaption,
-.stories-newly-figure figcaption {
-  margin-top: 0.75rem;
-  color: #74818a;
-  font-family: var(--font-interface);
-  font-size: 0.72rem;
-  letter-spacing: 0.04em;
-  line-height: 1.55;
+.stories-feature-text-only {
+  grid-template-columns: minmax(0, 0.46fr) minmax(0, 1fr);
 }
 
 .stories-feature-copy {
-  max-width: 500px;
+  grid-column: 2;
+  max-width: 760px;
 }
 
 .stories-feature-number {
   margin: clamp(2.7rem, 5vw, 4.6rem) 0 0.7rem;
-  color: rgba(15, 43, 75, 0.28);
+  color: rgba(21, 51, 77, 0.24);
   font-family: var(--font-editorial);
   font-size: clamp(3rem, 5vw, 5.2rem);
   line-height: 1;
 }
 
 .stories-feature h2 {
-  max-width: 9ch;
-  color: var(--brand-navy);
+  max-width: 10ch;
   font-family: var(--font-editorial);
-  font-size: clamp(2.7rem, 4.6vw, 4.9rem);
+  font-size: clamp(2.8rem, 4.8vw, 5.2rem);
   font-weight: 400;
   line-height: 0.98;
 }
 
 .stories-feature-copy > p:not(.stories-kicker):not(.stories-feature-number) {
+  max-width: 600px;
   margin: 1.45rem 0 0;
-  color: #5f6971;
+  color: var(--stories-copy);
   font-family: var(--font-editorial);
   font-size: 1.05rem;
   line-height: 1.78;
@@ -201,7 +171,6 @@
 
 .stories-section-heading h2 {
   max-width: 10ch;
-  color: var(--brand-navy);
   font-family: var(--font-interface);
   font-size: clamp(2.8rem, 5.5vw, 5.9rem);
   font-weight: 300;
@@ -211,7 +180,7 @@
 .stories-section-heading > p:last-child {
   max-width: 430px;
   margin: 0 0 0.4rem;
-  color: #5f6971;
+  color: var(--stories-copy);
   font-family: var(--font-editorial);
   font-size: 1.05rem;
   line-height: 1.72;
@@ -221,7 +190,7 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  border-top: 1px solid rgba(15, 43, 75, 0.18);
+  border-top: 1px solid rgba(21, 51, 77, 0.18);
 }
 
 .stories-opening-item {
@@ -230,7 +199,7 @@
   gap: clamp(1.25rem, 4vw, 4rem);
   align-items: center;
   padding-block: clamp(1.65rem, 3.4vw, 3rem);
-  border-bottom: 1px solid rgba(15, 43, 75, 0.14);
+  border-bottom: 1px solid rgba(21, 51, 77, 0.14);
 }
 
 .stories-opening-number,
@@ -242,7 +211,7 @@
 }
 
 .stories-opening-number {
-  color: #587691;
+  color: var(--stories-blue);
   font-size: 0.68rem;
   letter-spacing: 0.14em;
 }
@@ -257,7 +226,7 @@
 .stories-opening-item h3 {
   max-width: 21ch;
   margin: 0;
-  color: var(--brand-navy);
+  color: var(--stories-navy);
   font-family: var(--font-editorial);
   font-size: clamp(1.55rem, 2.6vw, 2.85rem);
   font-weight: 400;
@@ -270,7 +239,8 @@
   text-decoration: none;
 }
 
-.stories-opening-item h3 a:hover {
+.stories-opening-item h3 a:hover,
+.stories-opening-item h3 a:focus-visible {
   color: #1b4c73;
 }
 
@@ -284,7 +254,7 @@
 }
 
 .stories-opening-action {
-  color: var(--brand-navy);
+  color: var(--stories-navy);
 }
 
 .stories-opening-action span {
@@ -293,43 +263,29 @@
   transition: transform 180ms ease;
 }
 
-.stories-opening-action:hover span {
+.stories-opening-action:hover span,
+.stories-opening-action:focus-visible span {
   transform: translateX(4px);
 }
 
 .stories-house {
-  padding-bottom: clamp(7rem, 12vw, 12rem);
-  background: #f4f6f5;
-}
-
-.stories-house-figure {
-  width: 100%;
-}
-
-.stories-house-figure img {
-  width: 100%;
-  max-height: min(76vh, 860px);
-  aspect-ratio: 16 / 8.6;
-  object-fit: cover;
-  object-position: center 53%;
-}
-
-.stories-house-figure figcaption {
-  margin-top: 0.9rem;
+  padding-block: clamp(8rem, 13vw, 13rem);
+  background: var(--stories-cool-ivory);
 }
 
 .stories-house-editorial {
   display: grid;
-  grid-template-columns: minmax(260px, 0.75fr) minmax(320px, 1fr) minmax(180px, 0.46fr);
-  gap: clamp(3rem, 7vw, 7rem);
   align-items: start;
-  padding-top: clamp(5.5rem, 9vw, 9rem);
+  gap: clamp(4rem, 9vw, 9rem);
+}
+
+.stories-house-editorial-text-only {
+  grid-template-columns: minmax(280px, 0.62fr) minmax(0, 1fr);
 }
 
 .stories-house-copy h2 {
   max-width: 10ch;
   margin-top: 1.8rem;
-  color: var(--brand-navy);
   font-family: var(--font-editorial);
   font-size: clamp(2.5rem, 4.2vw, 4.35rem);
   font-weight: 400;
@@ -339,7 +295,7 @@
 .stories-house-copy > p:last-child {
   max-width: 470px;
   margin: 1.6rem 0 0;
-  color: #5f6971;
+  color: var(--stories-copy);
   font-family: var(--font-editorial);
   font-size: 1.03rem;
   line-height: 1.78;
@@ -366,26 +322,16 @@
 
 .stories-chapter-list span {
   padding-top: 0.16rem;
-  color: #587691;
+  color: var(--stories-blue);
   font-family: var(--font-interface);
   font-size: 0.58rem;
   letter-spacing: 0.1em;
 }
 
-.stories-young-artist {
-  width: 100%;
-  margin-top: clamp(5rem, 9vw, 9rem);
-}
-
-.stories-young-artist img {
-  aspect-ratio: 3 / 4;
-  object-position: center;
-}
-
 .stories-newly {
   position: relative;
   overflow: hidden;
-  padding-block: clamp(7rem, 12vw, 12rem);
+  padding-block: clamp(8rem, 13vw, 13rem);
   background:
     radial-gradient(circle at 88% 82%, rgba(200, 221, 235, 0.68), transparent 34%),
     linear-gradient(118deg, #faf9f5 0%, #f2f5f6 52%, #e8f0f5 100%);
@@ -393,19 +339,21 @@
 
 .stories-newly-inner {
   display: grid;
-  grid-template-columns: minmax(0, 0.78fr) minmax(320px, 0.72fr);
-  gap: clamp(4rem, 10vw, 10rem);
   align-items: center;
 }
 
+.stories-newly-text-only {
+  grid-template-columns: minmax(0, 0.48fr) minmax(0, 1fr);
+}
+
 .stories-newly-copy {
-  max-width: 620px;
+  grid-column: 2;
+  max-width: 720px;
 }
 
 .stories-newly h2 {
-  max-width: 10ch;
+  max-width: 11ch;
   margin-top: 1.9rem;
-  color: var(--brand-navy);
   font-family: var(--font-editorial);
   font-size: clamp(2.8rem, 5vw, 5.4rem);
   font-weight: 400;
@@ -415,19 +363,10 @@
 .stories-newly-copy > p:not(.stories-kicker) {
   max-width: 540px;
   margin: 1.6rem 0 0;
-  color: #5f6971;
+  color: var(--stories-copy);
   font-family: var(--font-editorial);
   font-size: 1.08rem;
   line-height: 1.78;
-}
-
-.stories-newly-figure {
-  width: min(92%, 520px);
-  justify-self: end;
-}
-
-.stories-newly-figure img {
-  aspect-ratio: 3 / 4;
 }
 
 .stories-happiness {
@@ -452,7 +391,7 @@
 .stories-happiness blockquote {
   max-width: 15ch;
   margin: 0;
-  color: var(--brand-navy);
+  color: var(--stories-navy);
   font-family: var(--font-interface);
   font-size: clamp(2.7rem, 5vw, 5.5rem);
   font-weight: 300;
@@ -463,30 +402,39 @@
 .stories-happiness-grid > p {
   max-width: 440px;
   margin: 0 0 0.45rem;
-  color: #5f6971;
+  color: var(--stories-copy);
   font-family: var(--font-editorial);
   font-size: 1.06rem;
   line-height: 1.78;
 }
 
 @media (max-width: 899px) {
-  .stories-intro {
-    padding-block: 5.5rem 5rem;
+  .stories-intro,
+  .stories-feature,
+  .stories-opening,
+  .stories-house,
+  .stories-newly,
+  .stories-happiness {
+    padding-top: 5.8rem;
+    padding-bottom: 6.3rem;
   }
 
   .stories-intro-grid,
-  .stories-feature-inner,
+  .stories-feature-text-only,
   .stories-section-heading,
-  .stories-house-editorial,
-  .stories-newly-inner,
+  .stories-house-editorial-text-only,
+  .stories-newly-text-only,
   .stories-happiness-grid {
     grid-template-columns: 1fr;
   }
 
+  .stories-feature-copy,
+  .stories-newly-copy {
+    grid-column: 1;
+  }
+
   .stories-intro-grid,
-  .stories-feature-inner,
   .stories-house-editorial,
-  .stories-newly-inner,
   .stories-happiness-grid {
     gap: 2.7rem;
   }
@@ -504,33 +452,13 @@
     max-width: 34rem;
   }
 
-  .stories-feature {
-    padding-block: 4.8rem 6.5rem;
-  }
-
-  .stories-feature-figure {
-    width: calc(100% + 3rem);
-    margin-left: -1.5rem;
-  }
-
-  .stories-feature-figure figcaption {
-    padding-inline: 1.5rem;
-  }
-
-  .stories-feature-copy {
-    max-width: none;
+  .stories-feature-copy,
+  .stories-newly-copy {
+    max-width: 36rem;
   }
 
   .stories-feature-number {
-    margin-top: 0.5rem;
-  }
-
-  .stories-feature h2 {
-    max-width: 11ch;
-  }
-
-  .stories-opening {
-    padding-block: 6rem;
+    margin-top: 2.2rem;
   }
 
   .stories-section-heading {
@@ -565,46 +493,9 @@
     font-size: clamp(1.55rem, 6.5vw, 2.35rem);
   }
 
-  .stories-house-figure img {
-    min-height: 62vw;
-    aspect-ratio: 5 / 3.7;
-  }
-
-  .stories-house-editorial {
-    padding-top: 4.8rem;
-  }
-
-  .stories-house-copy h2 {
-    max-width: 11ch;
-  }
-
   .stories-chapter-list {
     grid-template-columns: 1fr 1fr;
     gap: 1.35rem 1.3rem;
-  }
-
-  .stories-young-artist {
-    width: min(72%, 420px);
-    margin-top: 1rem;
-    margin-left: auto;
-  }
-
-  .stories-newly {
-    padding-block: 6.5rem;
-  }
-
-  .stories-newly-copy {
-    order: 1;
-  }
-
-  .stories-newly-figure {
-    order: 2;
-    width: min(82%, 470px);
-    justify-self: end;
-  }
-
-  .stories-happiness {
-    padding-block: 7rem;
   }
 
   .stories-happiness-grid {
@@ -623,8 +514,14 @@
     letter-spacing: 0.14em;
   }
 
-  .stories-intro {
+  .stories-intro,
+  .stories-feature,
+  .stories-opening,
+  .stories-house,
+  .stories-newly,
+  .stories-happiness {
     padding-top: 4.8rem;
+    padding-bottom: 5.2rem;
   }
 
   .stories-intro h2 {
@@ -634,11 +531,6 @@
   .stories-intro-copy {
     font-size: 1.08rem;
     line-height: 1.7;
-  }
-
-  .stories-feature-figure img {
-    aspect-ratio: 4 / 4.35;
-    object-position: center;
   }
 
   .stories-feature-number {
@@ -663,36 +555,31 @@
     font-size: 0.59rem;
   }
 
-  .stories-house-figure img {
-    min-height: 74vw;
-    aspect-ratio: 4 / 3.7;
-    object-position: 52% center;
-  }
-
   .stories-chapter-list {
     grid-template-columns: 1fr;
     gap: 1.05rem;
-  }
-
-  .stories-young-artist {
-    width: 78%;
   }
 
   .stories-newly h2 {
     font-size: clamp(2.45rem, 11vw, 3.8rem);
   }
 
-  .stories-newly-figure {
-    width: calc(100% + 3rem);
-    margin-right: -1.5rem;
-  }
-
-  .stories-newly-figure figcaption {
-    padding-right: 1.5rem;
-    text-align: right;
-  }
-
   .stories-happiness blockquote {
     font-size: clamp(2.45rem, 11.5vw, 3.9rem);
   }
+}
+
+html[lang="ko"] .stories-page h2,
+html[lang="ko"] .stories-page h3,
+html[lang="ko"] .stories-page p,
+html[lang="ko"] .stories-page li,
+html[lang="ko"] .stories-page blockquote,
+html[lang="ko"] .stories-page a {
+  word-break: keep-all;
+  overflow-wrap: normal;
+}
+
+html[lang="ko"] .stories-kicker {
+  letter-spacing: 0.025em;
+  text-transform: none;
 }
