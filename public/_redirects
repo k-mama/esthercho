@@ -1,11 +1,11 @@
-# Root route safety for Cloudflare Pages static export.
-/ /index.html 200
-/ko /ko/index.html 200
-/ko/ /ko/index.html 200
+# Stable home entry points for Cloudflare Pages.
+/ /home/ 302
+/index.html /home/ 302
+/ko /ko/home/ 302
+/ko/ /ko/home/ 302
+/ko/index.html /ko/home/ 302
 
 # Legacy Esther Cho routes kept for old bookmarks, browser history, and shared links.
-/home / 301
-/home/ / 301
 /childhood /archive/ 301
 /childhood/ /archive/ 301
 /morning-table /notes/ 301
@@ -13,8 +13,6 @@
 /esther /about/ 301
 /esther/ /about/ 301
 
-/ko/home /ko/ 301
-/ko/home/ /ko/ 301
 /ko/childhood /ko/archive/ 301
 /ko/childhood/ /ko/archive/ 301
 /ko/morning-table /ko/notes/ 301
