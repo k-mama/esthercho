@@ -27,14 +27,14 @@ export default function NotesPage() {
 
       <section className="morning-intro" aria-labelledby="morning-intro-title">
         <div className="container">
-          <p className="morning-kicker">A PLACE TO RETURN TO</p>
+          <p className="morning-kicker">ABOUT THE NOTES</p>
           <div className="morning-intro-grid">
-            <h2 id="morning-intro-title">A table can hold more than breakfast.</h2>
+            <h2 id="morning-intro-title">Notes from the morning table.</h2>
             <div className="morning-intro-copy">
               <p>
                 The Morning Table gathers devotional reflections shaped by
-                Scripture, prayer, ordinary life, and the thoughts that have not
-                become tidy yet.
+                Scripture, prayer, ordinary life, and thoughts that are still
+                unresolved.
               </p>
             </div>
           </div>
@@ -56,12 +56,11 @@ export default function NotesPage() {
           </figure>
 
           <div className="morning-table-copy">
-            <p className="morning-kicker">THE DAILY SCALE</p>
-            <h2 id="morning-table-scene-title">Faith still has to live in an ordinary day.</h2>
+            <p className="morning-kicker">DAILY LIFE</p>
+            <h2 id="morning-table-scene-title">The writing stays close to daily life.</h2>
             <p>
-              The writing stays close to the scale of daily life. It does not
-              need a dramatic setting before a question, a prayer, or a small
-              piece of humor becomes worth keeping.
+              A question, a prayer, or a small piece of humor does not need a
+              dramatic setting before it becomes worth keeping.
             </p>
           </div>
         </div>
@@ -94,10 +93,10 @@ export default function NotesPage() {
         <div className="container">
           <p className="morning-kicker">NOTES IN PROGRESS</p>
           <div className="morning-ending-grid">
-            <h2 id="morning-ending-title">This room is still being written.</h2>
+            <h2 id="morning-ending-title">New notes will be added here.</h2>
             <p>
-              New devotional notes will be added as they are ready, without
-              turning the table into a feed that has to be constantly filled.
+              New devotional notes will be added as they are ready. This page is
+              not meant to be a feed that has to be constantly filled.
             </p>
           </div>
         </div>
