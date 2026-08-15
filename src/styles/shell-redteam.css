@@ -19,8 +19,22 @@
   font-weight: 700;
 }
 
+.site-header-subnav-desktop {
+  display: none;
+}
+
 .site-header-nav-mobile-menu {
   border-radius: 2px;
+}
+
+.site-header-nav-mobile-room-start {
+  margin-top: 0.25rem;
+  padding-top: 0.95rem;
+  border-top: 1px solid rgba(15, 43, 75, 0.16);
+}
+
+.site-header-nav-room-link {
+  opacity: 0.82;
 }
 
 body:has(.home-video-hero, .page-cover-shell) .site-header-nav-mobile-menu {
@@ -33,6 +47,83 @@ body:has(.home-video-hero, .page-cover-shell)
   .site-header-nav-link[aria-current="page"] {
   color: #fffdf8;
   font-weight: 700;
+}
+
+body:has(.home-video-hero, .page-cover-shell)
+  .site-header-nav-mobile-room-start {
+  border-top-color: rgba(250, 246, 235, 0.18);
+}
+
+@media (min-width: 960px) {
+  .site-header-nav-desktop ul {
+    gap: clamp(2rem, 3.3vw, 3.75rem);
+  }
+
+  .site-header-subnav-desktop {
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: -1rem;
+    background: rgba(250, 247, 240, 0.97);
+    border-top: 1px solid rgba(15, 43, 75, 0.08);
+    border-bottom: 1px solid rgba(15, 43, 75, 0.1);
+  }
+
+  .site-header-subnav-inner,
+  body:has(.home-video-hero, .page-cover-shell)
+    .site-header
+    .site-header-subnav-inner {
+    display: block !important;
+    max-width: none;
+    padding-right: clamp(1.25rem, 3.5vw, 3.75rem);
+    padding-left: clamp(1.25rem, 3.5vw, 3.75rem);
+  }
+
+  .site-header-subnav-inner ul {
+    display: flex;
+    justify-content: center;
+    gap: clamp(3rem, 6vw, 6.5rem);
+    margin: 0;
+    padding: 0.82rem 0 0.78rem;
+    list-style: none;
+  }
+
+  .site-header-subnav-inner a {
+    position: relative;
+    display: inline-block;
+    padding: 0.15rem 0;
+    color: rgba(15, 43, 75, 0.68);
+    font-family: var(--font-interface);
+    font-size: 0.69rem;
+    font-weight: 650;
+    letter-spacing: 0.105em;
+    text-decoration: none;
+    transition: color 180ms ease;
+  }
+
+  [lang="ko"] .site-header-subnav-inner a {
+    font-family: var(--font-korean);
+    font-size: 0.76rem;
+    letter-spacing: -0.01em;
+  }
+
+  .site-header-subnav-inner a:hover,
+  .site-header-subnav-inner a[aria-current="page"] {
+    color: var(--brand-navy);
+  }
+
+  .site-header-subnav-inner a[aria-current="page"]::after {
+    position: absolute;
+    right: 0;
+    bottom: -0.76rem;
+    left: 0;
+    height: 1px;
+    content: "";
+    background: rgba(168, 136, 79, 0.72);
+  }
+
+  body:has(.page-cover-shell) .site-header-subnav-desktop {
+    background: rgba(250, 247, 240, 0.95);
+  }
 }
 
 /* The author profile should end as a colophon, not a quote card. */
