@@ -1,6 +1,6 @@
 /* Mobile photographic art direction for Esther Cho's inner rooms.
-   Space photographs may go wide; portraits and artwork keep breathing room.
-   No decorative objects are introduced here. */
+   Each recurring photograph now has a clear owner; this file only styles photographs
+   that still exist in the current page structures. */
 
 @media (max-width: 899px) {
   main.childhood-page > .page-cover-shell .page-cover-image {
@@ -45,7 +45,7 @@
     padding-inline: 0 !important;
   }
 
-  /* Esther opens with text; the first interior photograph is university years. */
+  /* About owns the university and Bangladesh photographs. */
   .esther-portrait-figure {
     width: min(78vw, 430px) !important;
     margin-inline: auto !important;
@@ -71,25 +71,7 @@
     padding-inline: 0 !important;
   }
 
-  .esther-sketch-figure {
-    width: min(88vw, 520px) !important;
-    margin-inline: auto !important;
-    padding: 0.65rem !important;
-    background: rgba(249, 248, 244, 0.96) !important;
-    box-shadow: 0 22px 42px rgba(7, 25, 42, 0.16) !important;
-  }
-
-  .esther-sketch-figure img {
-    width: 100%;
-    aspect-ratio: 1 / 1 !important;
-    object-fit: contain !important;
-    box-shadow: none !important;
-  }
-
-  .esther-sketch-figure figcaption {
-    padding-inline: 0 !important;
-  }
-
+  /* Studio owns the father-child collage. */
   .studio-reimagined-figure {
     width: min(90vw, 560px) !important;
     margin-inline: auto !important;
@@ -108,20 +90,6 @@
 
   .studio-reimagined-figure figcaption {
     padding-inline: 0 !important;
-  }
-
-  .stories-feature-figure img {
-    object-position: center 50% !important;
-  }
-
-  .stories-young-artist {
-    width: min(72vw, 420px) !important;
-    margin-inline: auto !important;
-  }
-
-  .stories-young-artist img {
-    aspect-ratio: 3 / 4 !important;
-    object-position: center 30% !important;
   }
 
   /* Morning Table owns the recurring breakfast photograph. */
@@ -151,16 +119,11 @@
     width: 78vw !important;
   }
 
-  .esther-sketch-figure,
   .studio-reimagined-figure {
     width: 92vw !important;
   }
 
   .morning-present-figure {
     width: 86vw !important;
-  }
-
-  .stories-young-artist {
-    width: 80vw !important;
   }
 }
