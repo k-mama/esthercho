@@ -1,0 +1,269 @@
+.childhood-page {
+  overflow: clip;
+}
+
+.childhood-intro,
+.childhood-garden,
+.childhood-fragments,
+.childhood-archive-principle,
+.childhood-ending {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.childhood-intro::before,
+.childhood-garden::before,
+.childhood-fragments::before,
+.childhood-archive-principle::before,
+.childhood-ending::before {
+  position: absolute;
+  z-index: -1;
+  width: min(56rem, 68vw);
+  aspect-ratio: 1;
+  content: "";
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.childhood-intro::after,
+.childhood-garden::after,
+.childhood-fragments::after,
+.childhood-archive-principle::after,
+.childhood-ending::after {
+  position: absolute;
+  z-index: -1;
+  width: 120%;
+  height: 1px;
+  content: "";
+  background: rgba(255, 255, 255, 0.42);
+  transform-origin: center;
+  pointer-events: none;
+}
+
+.childhood-intro {
+  background:
+    radial-gradient(circle at 9% 14%, rgba(252, 219, 228, 0.46), transparent 34%),
+    radial-gradient(circle at 88% 16%, rgba(203, 228, 240, 0.68), transparent 36%),
+    radial-gradient(circle at 72% 92%, rgba(230, 222, 244, 0.42), transparent 32%),
+    linear-gradient(135deg, #fbf8f1 0%, #f8f2ec 50%, #eef3f3 100%);
+}
+
+.childhood-intro::before {
+  top: -27%;
+  right: -18%;
+}
+
+.childhood-intro::after {
+  top: 61%;
+  left: -12%;
+  transform: rotate(-6deg);
+}
+
+.childhood-house {
+  background: #faf7f0;
+}
+
+.childhood-house-figure img {
+  filter: saturate(0.96) contrast(1.01);
+}
+
+.childhood-house-copy {
+  position: relative;
+}
+
+.childhood-garden {
+  background:
+    radial-gradient(circle at 10% 14%, rgba(204, 230, 222, 0.62), transparent 34%),
+    radial-gradient(circle at 88% 18%, rgba(224, 218, 242, 0.58), transparent 34%),
+    radial-gradient(circle at 68% 92%, rgba(249, 222, 208, 0.4), transparent 31%),
+    linear-gradient(135deg, #f4f7ef 0%, #eef4f3 48%, #f7eef2 100%);
+}
+
+.childhood-garden::before {
+  bottom: -28%;
+  left: -20%;
+}
+
+.childhood-garden::after {
+  top: 24%;
+  right: -12%;
+  transform: rotate(6deg);
+}
+
+.childhood-garden-figure {
+  filter: drop-shadow(0 24px 42px rgba(45, 61, 67, 0.12));
+}
+
+.childhood-garden-figure img {
+  border-radius: 18px;
+}
+
+.childhood-fragments {
+  background:
+    radial-gradient(circle at 12% 16%, rgba(82, 139, 182, 0.28), transparent 32%),
+    radial-gradient(circle at 88% 12%, rgba(157, 125, 179, 0.22), transparent 31%),
+    radial-gradient(circle at 76% 88%, rgba(107, 177, 177, 0.17), transparent 33%),
+    linear-gradient(145deg, #10263f 0%, #17334e 52%, #1b3b48 100%);
+}
+
+.childhood-fragments::before {
+  top: -26%;
+  right: -15%;
+  border-color: rgba(235, 243, 246, 0.18);
+}
+
+.childhood-fragments::after {
+  bottom: 29%;
+  left: -12%;
+  background: rgba(235, 243, 246, 0.16);
+  transform: rotate(-6deg);
+}
+
+.childhood-archive-principle {
+  background:
+    radial-gradient(circle at 12% 18%, rgba(251, 220, 205, 0.48), transparent 34%),
+    radial-gradient(circle at 88% 16%, rgba(207, 229, 240, 0.56), transparent 34%),
+    linear-gradient(135deg, #fbf8f2 0%, #f7f1ea 50%, #edf3f5 100%);
+}
+
+.childhood-archive-principle::before {
+  top: -30%;
+  left: -21%;
+}
+
+.childhood-archive-principle::after {
+  bottom: 21%;
+  right: -12%;
+  transform: rotate(5deg);
+}
+
+.childhood-ending {
+  min-height: min(68svh, 780px);
+  display: grid;
+  align-items: center;
+  background:
+    radial-gradient(circle at 10% 18%, rgba(255, 215, 225, 0.62), transparent 34%),
+    radial-gradient(circle at 88% 16%, rgba(199, 229, 242, 0.72), transparent 36%),
+    radial-gradient(circle at 76% 90%, rgba(229, 218, 247, 0.62), transparent 34%),
+    linear-gradient(135deg, #fbf8f2 0%, #f8eef3 49%, #edf4f7 100%);
+}
+
+.childhood-ending::before {
+  top: -22%;
+  right: -18%;
+}
+
+.childhood-ending::after {
+  bottom: 29%;
+  left: -11%;
+  transform: rotate(5deg);
+}
+
+.childhood-page-ko .childhood-kicker,
+.childhood-page-ko h2,
+.childhood-page-ko .childhood-intro-copy,
+.childhood-page-ko .childhood-house-copy-text,
+.childhood-page-ko .childhood-garden-copy > p:not(.childhood-kicker),
+.childhood-page-ko .childhood-fragments-copy,
+.childhood-page-ko .childhood-principle-copy,
+.childhood-page-ko .childhood-link,
+.childhood-page-ko .childhood-ending p:last-child {
+  font-family: var(--font-korean);
+}
+
+.childhood-page-ko .childhood-kicker {
+  font-size: 0.75rem;
+  letter-spacing: 0.035em;
+  text-transform: none;
+}
+
+.childhood-page-ko h2 {
+  font-weight: 500;
+  line-height: 1.16;
+  letter-spacing: -0.052em;
+  word-break: keep-all;
+  overflow-wrap: normal;
+}
+
+.childhood-page-ko h2 span {
+  display: block;
+}
+
+.childhood-page-ko .childhood-intro h2 {
+  font-size: clamp(2.9rem, 5.3vw, 5.5rem);
+}
+
+.childhood-page-ko .childhood-house-copy h2,
+.childhood-page-ko .childhood-garden-copy h2,
+.childhood-page-ko .childhood-archive-principle h2 {
+  font-size: clamp(2.65rem, 4.45vw, 4.55rem);
+}
+
+.childhood-page-ko .childhood-fragments h2,
+.childhood-page-ko .childhood-ending h2 {
+  font-size: clamp(2.8rem, 4.9vw, 5rem);
+}
+
+.childhood-page-ko .childhood-intro-copy,
+.childhood-page-ko .childhood-house-copy-text,
+.childhood-page-ko .childhood-garden-copy > p:not(.childhood-kicker),
+.childhood-page-ko .childhood-fragments-copy,
+.childhood-page-ko .childhood-principle-copy,
+.childhood-page-ko .childhood-ending p:last-child {
+  line-height: 1.8;
+  word-break: keep-all;
+}
+
+.childhood-page-ko .childhood-link {
+  font-size: 0.78rem;
+  letter-spacing: -0.015em;
+  text-transform: none;
+}
+
+@media (max-width: 899px) {
+  .childhood-intro::before,
+  .childhood-garden::before,
+  .childhood-fragments::before,
+  .childhood-archive-principle::before,
+  .childhood-ending::before {
+    width: 105vw;
+  }
+
+  .childhood-garden-figure {
+    filter: none;
+  }
+
+  .childhood-garden-figure img {
+    border-radius: 0;
+  }
+
+  .childhood-page-ko .childhood-intro h2,
+  .childhood-page-ko .childhood-fragments h2,
+  .childhood-page-ko .childhood-ending h2 {
+    font-size: clamp(2.35rem, 8.7vw, 3.75rem);
+  }
+
+  .childhood-page-ko .childhood-house-copy h2,
+  .childhood-page-ko .childhood-garden-copy h2,
+  .childhood-page-ko .childhood-archive-principle h2 {
+    font-size: clamp(2.25rem, 8.1vw, 3.45rem);
+  }
+}
+
+@media (max-width: 560px) {
+  .childhood-page-ko .childhood-intro h2,
+  .childhood-page-ko .childhood-fragments h2,
+  .childhood-page-ko .childhood-ending h2 {
+    font-size: clamp(2.15rem, 9.1vw, 3.1rem);
+    line-height: 1.19;
+  }
+
+  .childhood-page-ko .childhood-house-copy h2,
+  .childhood-page-ko .childhood-garden-copy h2,
+  .childhood-page-ko .childhood-archive-principle h2 {
+    font-size: clamp(2.05rem, 8.7vw, 2.9rem);
+    line-height: 1.2;
+  }
+}
