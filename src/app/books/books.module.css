@@ -1,7 +1,7 @@
 .booksPage {
-  --books-ivory: #fbf8f1;
-  --books-cream: #f4eee3;
-  --books-sage: #e2e5db;
+  --books-ivory: #f8f5ee;
+  --books-cream: #f1f3f3;
+  --books-mist: #e3edf4;
   background: var(--books-ivory);
   color: var(--ink);
 }
@@ -21,7 +21,7 @@
 .eyebrow {
   grid-column: 1 / -1;
   margin: 0 0 2rem;
-  color: var(--brand-gold-deep);
+  color: #587691;
   font-family: var(--font-interface);
   font-size: 0.68rem;
   font-weight: 700;
@@ -47,7 +47,7 @@
 .status {
   display: block;
   margin-top: 1.75rem;
-  color: #8d7958;
+  color: #587691;
   font-family: var(--font-interface);
   font-size: 0.7rem;
   font-weight: 700;
@@ -58,7 +58,7 @@
 .deck {
   max-width: 560px;
   margin: 0 0 0.6rem;
-  color: #5f5952;
+  color: #5f6971;
   font-family: var(--font-editorial);
   font-size: clamp(1.25rem, 2vw, 1.72rem);
   line-height: 1.62;
@@ -87,11 +87,11 @@
 
 .projectFigure figcaption {
   margin-top: 0.8rem;
-  color: #857d73;
+  color: #74818a;
   font-family: var(--font-interface);
-  font-size: 0.67rem;
-  letter-spacing: 0.055em;
-  line-height: 1.5;
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  line-height: 1.55;
 }
 
 .projectCopy {
@@ -100,7 +100,7 @@
 
 .description {
   margin: 0;
-  color: #655e56;
+  color: #5f6971;
   font-family: var(--font-editorial);
   font-size: clamp(1.12rem, 1.7vw, 1.38rem);
   line-height: 1.8;
@@ -121,7 +121,7 @@
 }
 
 .projectLink:hover {
-  color: var(--brand-gold-deep);
+  color: #1b4c73;
   border-color: currentColor;
 }
 
@@ -132,7 +132,7 @@
 
 .detailsSection {
   padding-block: clamp(6rem, 10vw, 9rem);
-  background: var(--books-sage);
+  background: var(--books-mist);
 }
 
 .detailsInner {
@@ -171,7 +171,7 @@
 }
 
 .fact dt {
-  color: #83745f;
+  color: #587691;
   font-family: var(--font-interface);
   font-size: 0.65rem;
   font-weight: 700;
@@ -187,37 +187,6 @@
   line-height: 1.55;
 }
 
-.note {
-  padding-block: clamp(4.5rem, 8vw, 7rem);
-  background: var(--books-cream);
-  color: #6a6259;
-}
-
-.noteInner {
-  display: grid;
-  grid-template-columns: minmax(180px, 0.38fr) minmax(300px, 0.9fr);
-  gap: clamp(3rem, 9vw, 9rem);
-  align-items: start;
-}
-
-.noteLabel {
-  margin: 0;
-  color: var(--brand-gold-deep);
-  font-family: var(--font-interface);
-  font-size: 0.66rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-}
-
-.note p:last-child {
-  max-width: 680px;
-  margin: 0;
-  font-family: var(--font-editorial);
-  font-size: clamp(1.02rem, 1.4vw, 1.18rem);
-  line-height: 1.78;
-}
-
 @media (max-width: 899px) {
   .projectSection {
     padding-block: 5.8rem 6.8rem;
@@ -225,8 +194,7 @@
 
   .projectHeader,
   .projectBody,
-  .detailsInner,
-  .noteInner {
+  .detailsInner {
     grid-template-columns: 1fr;
   }
 
@@ -256,8 +224,7 @@
     width: min(82%, 470px);
   }
 
-  .detailsInner,
-  .noteInner {
+  .detailsInner {
     gap: 2.5rem;
   }
 }
