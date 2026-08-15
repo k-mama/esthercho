@@ -132,8 +132,8 @@ export default function KoreanHome() {
               <Image
                 src="/media/covers/books-cover-final-20260802.webp"
                 alt="은은한 햇살이 드는 식탁에서 책을 읽는 조성연"
-                width={1800}
-                height={1059}
+                width={1448}
+                height={1086}
                 sizes="(max-width: 899px) 100vw, 58vw"
               />
             </figure>
