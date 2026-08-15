@@ -2,7 +2,7 @@
    Desktop gets editorial asymmetry; mobile returns to calm single-column framing. */
 
 @media (min-width: 900px) {
-  /* CHILDHOOD */
+  /* CHILDHOOD owns the house and garden photographs. */
   .childhood-house-figure img {
     height: min(74vh, 860px);
     aspect-ratio: auto;
@@ -33,7 +33,7 @@
     padding-bottom: clamp(1rem, 5vw, 5rem);
   }
 
-  /* ESTHER — only photographs still present on the About page. */
+  /* ABOUT owns the university and Bangladesh photographs. */
   .esther-education-section .esther-split {
     grid-template-columns: minmax(330px, 0.78fr) minmax(0, 0.88fr);
   }
@@ -60,24 +60,7 @@
     border-radius: 18px;
   }
 
-  .esther-making-grid {
-    grid-template-columns: minmax(0, 0.8fr) minmax(340px, 0.72fr);
-  }
-
-  .esther-sketch-figure {
-    width: 88%;
-    justify-self: end;
-    padding: clamp(0.65rem, 1.2vw, 1rem);
-    background: rgba(247, 244, 237, 0.92);
-    box-shadow: 0 30px 68px rgba(5, 20, 34, 0.28);
-    transform: rotate(0.7deg);
-  }
-
-  .esther-sketch-figure img {
-    box-shadow: none;
-  }
-
-  /* STUDIO */
+  /* STUDIO owns the father-child collage. */
   .studio-reimagined .studio-work-grid-reverse {
     grid-template-columns: minmax(300px, 0.56fr) minmax(0, 1.2fr);
     gap: clamp(4rem, 10vw, 10rem);
@@ -109,7 +92,6 @@
     border-radius: 0;
   }
 
-  .esther-sketch-figure,
   .studio-reimagined-figure {
     padding: 0;
     background: transparent;
@@ -117,7 +99,6 @@
     transform: none;
   }
 
-  .esther-sketch-figure img,
   .studio-reimagined-figure img {
     box-shadow: none !important;
   }
