@@ -5,10 +5,38 @@ import { HomeHeroVideo } from "../home-hero-video";
 import styles from "../page.module.css";
 import polish from "../home-polish.module.css";
 
+const homeUrl = "https://esthercho.pages.dev/ko/home/";
+const socialPreviewImage =
+  "https://esthercho.pages.dev/media/home/esther-house-entry-poster.jpg?v=20260815-2000";
+
 export const metadata: Metadata = {
   title: "조성연",
   description:
     "믿음과 기억, 밥상과 돌봄, 평범한 삶에서 태어난 조성연의 이야기 집.",
+  alternates: {
+    canonical: homeUrl,
+  },
+  openGraph: {
+    type: "website",
+    url: homeUrl,
+    siteName: "Esther Cho / 조성연",
+    title: "조성연 | Esther Cho",
+    description:
+      "조성연 작가가 실제로 살았던 집의 열린 대문에서 시작되는 이야기의 집.",
+    images: [
+      {
+        url: socialPreviewImage,
+        alt: "조성연 작가가 실제로 살았던 집의 열린 대문과 정원 입구",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "조성연 | Esther Cho",
+    description:
+      "조성연 작가가 실제로 살았던 집의 열린 대문에서 시작되는 이야기의 집.",
+    images: [socialPreviewImage],
+  },
 };
 
 const rooms = [
