@@ -1,0 +1,101 @@
+name: One-time Books Image Optimize
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/one-time-books-image-optimize.yml
+
+permissions:
+  contents: write
+
+jobs:
+  optimize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+          cache: npm
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Pillow
+        run: python -m pip install --disable-pip-version-check pillow
+
+      - name: Create high-quality WebP derivative
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from PIL import Image, ImageChops, ImageStat
+          import math
+
+          source_path = Path("public/media/covers/books-cover-final-20260802.png")
+          target_path = Path("public/media/covers/books-cover-final-20260802.webp")
+
+          source_bytes = source_path.stat().st_size
+          with Image.open(source_path) as source_image:
+              source = source_image.convert("RGB")
+              width, height = source.size
+              source.save(
+                  target_path,
+                  format="WEBP",
+                  quality=94,
+                  method=6,
+              )
+
+          target_bytes = target_path.stat().st_size
+          with Image.open(target_path) as webp_image:
+              decoded = webp_image.convert("RGB")
+              if decoded.size != (width, height):
+                  raise SystemExit("WebP dimensions changed; refusing commit.")
+
+          diff = ImageChops.difference(source, decoded)
+          rms = ImageStat.Stat(diff).rms
+          rms_mean = sum(rms) / len(rms)
+          psnr = float("inf") if rms_mean == 0 else 20 * math.log10(255 / rms_mean)
+
+          print(f"Source: {width}x{height}, {source_bytes} bytes")
+          print(f"WebP:   {width}x{height}, {target_bytes} bytes")
+          print(f"Decoded RGB RMS: {rms_mean:.3f}")
+          print(f"Approx. PSNR: {psnr:.2f} dB")
+
+          if target_bytes >= source_bytes:
+              raise SystemExit("WebP is not smaller; refusing commit.")
+          if psnr < 40:
+              raise SystemExit("WebP quality is below the 40 dB threshold; refusing commit.")
+          PY
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Production dependency audit
+        run: npm audit --omit=dev --audit-level=high
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Production build
+        run: npm run build
+
+      - name: Commit verified WebP derivative
+        run: |
+          if [ ! -f public/media/covers/books-cover-final-20260802.webp ]; then
+            echo "WebP derivative missing."
+            exit 1
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/media/covers/books-cover-final-20260802.webp
+          git commit -m "perf: add optimized Books cover derivative"
+          git push origin main
