@@ -14,7 +14,7 @@ const education = authorProfile.education;
 
 export default function AboutPage() {
   return (
-    <>
+    <main>
       <PageCover
         eyebrow="ESTHER"
         title="The House That Became a Story"
@@ -281,6 +281,6 @@ export default function AboutPage() {
           </p>
         </footer>
       </article>
-    </>
+    </main>
   );
 }
