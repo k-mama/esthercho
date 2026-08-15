@@ -141,7 +141,7 @@ export default function AboutPage() {
         </section>
 
         <section className="esther-section esther-making-section">
-          <div className="container esther-making-grid">
+          <div className="container esther-making-grid esther-making-copy-only">
             <div className="esther-copy">
               <p className="esther-eyebrow">STILL MAKING</p>
 
@@ -158,21 +158,6 @@ export default function AboutPage() {
                 separately.
               </p>
             </div>
-
-            <figure className="esther-figure esther-sketch-figure">
-              <Image
-                src="/media/esther/still-making-father-child-collage-20260802.png"
-                alt="A paper collage showing young Esther Cho riding on her father's back"
-                width={1536}
-                height={1536}
-                sizes="(max-width: 899px) 100vw, 38vw"
-              />
-
-              <figcaption>
-                Based on an original childhood sketch · AI-assisted editorial
-                reinterpretation
-              </figcaption>
-            </figure>
           </div>
         </section>
 
