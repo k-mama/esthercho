@@ -1,0 +1,323 @@
+/* Final inner-room palette pass for Stories, Books, and Morning Table.
+   No botanical motifs, no crack-like lines, no pink/lilac atmosphere. */
+
+/* -------------------------------------------------------------------------- */
+/* MORNING TABLE — the brightest lived-in room                                */
+/* -------------------------------------------------------------------------- */
+
+.morning-page {
+  --morning-ivory: #f8f5ee;
+  --morning-cream: #f1f3f3;
+  --morning-mist: #e3edf4;
+  --morning-petal: #edf2f5;
+  --morning-lilac: #e1e9ef;
+  --morning-night: #14334e;
+  background: #f8f5ee !important;
+}
+
+/* Remove the old outlined circles and diagonal lines completely. */
+.morning-foyer::after,
+.morning-present::after,
+.morning-threads::after,
+.morning-manuscript::after,
+.morning-close::after {
+  display: none !important;
+}
+
+.morning-foyer::before,
+.morning-present::before,
+.morning-threads::before,
+.morning-manuscript::before,
+.morning-close::before {
+  border: 0 !important;
+}
+
+.morning-foyer {
+  background:
+    radial-gradient(circle at 86% 18%, rgba(195, 217, 233, 0.76), transparent 38%),
+    linear-gradient(135deg, #faf7f0 0%, #f3f5f5 55%, #eaf1f5 100%) !important;
+}
+
+.morning-foyer::before {
+  top: -36% !important;
+  left: -24% !important;
+  right: auto !important;
+  width: min(68vw, 1040px) !important;
+  background: linear-gradient(145deg, rgba(187, 207, 222, 0.7), rgba(229, 235, 239, 0.16)) !important;
+  border-radius: 50% !important;
+  opacity: 0.82;
+}
+
+.morning-present {
+  background:
+    radial-gradient(circle at 88% 20%, rgba(197, 219, 235, 0.78), transparent 36%),
+    linear-gradient(140deg, #f8f5ee 0%, #eef3f6 60%, #e5edf3 100%) !important;
+}
+
+.morning-present::before {
+  top: 12% !important;
+  right: -30% !important;
+  bottom: auto !important;
+  left: auto !important;
+  width: min(58vw, 880px) !important;
+  height: min(78vw, 1040px) !important;
+  aspect-ratio: auto !important;
+  background: linear-gradient(165deg, rgba(175, 203, 225, 0.42), rgba(231, 236, 239, 0.08)) !important;
+  border-radius: 999px !important;
+  transform: rotate(12deg);
+}
+
+.morning-present-figure {
+  filter: drop-shadow(0 24px 40px rgba(25, 48, 67, 0.12)) !important;
+}
+
+.morning-threads {
+  background:
+    radial-gradient(circle at 10% 88%, rgba(211, 222, 230, 0.56), transparent 31%),
+    linear-gradient(135deg, #f5f6f4 0%, #edf2f5 100%) !important;
+}
+
+.morning-threads::before {
+  display: none !important;
+}
+
+.morning-thread-list {
+  border-top-color: rgba(21, 51, 77, 0.16) !important;
+}
+
+.morning-thread {
+  border-bottom-color: rgba(21, 51, 77, 0.14) !important;
+}
+
+.morning-thread p,
+.morning-foyer-grid > p,
+.morning-present-copy > p:not(.morning-kicker) {
+  color: #5f6971 !important;
+}
+
+.morning-manuscript {
+  background:
+    radial-gradient(circle at 82% 18%, rgba(99, 145, 181, 0.28), transparent 34%),
+    linear-gradient(145deg, #14324c 0%, #1b405e 58%, #2b5069 100%) !important;
+}
+
+.morning-manuscript::before {
+  top: -30% !important;
+  right: -18% !important;
+  width: min(62vw, 940px) !important;
+  background: rgba(132, 168, 195, 0.18) !important;
+  border-radius: 50% !important;
+}
+
+.morning-close {
+  background:
+    radial-gradient(circle at 84% 22%, rgba(187, 213, 232, 0.82), transparent 36%),
+    linear-gradient(138deg, #edf2f5 0%, #f8f5ee 60%, #e4edf3 100%) !important;
+}
+
+.morning-close::before {
+  right: -22% !important;
+  bottom: -46% !important;
+  top: auto !important;
+  width: min(66vw, 980px) !important;
+  background: rgba(169, 199, 220, 0.34) !important;
+  border-radius: 50% !important;
+}
+
+/* -------------------------------------------------------------------------- */
+/* STORIES — cool editorial gallery                                            */
+/* -------------------------------------------------------------------------- */
+
+.stories-page {
+  --stories-ivory: #f8f5ee;
+  --stories-cream: #f1f3f4;
+  --stories-parchment: #e7edf1;
+  --stories-mist: #e0ebf3;
+  --stories-sage: #e6ecef;
+  --stories-rose: #edf1f4;
+  --stories-night: #14324c;
+  --stories-night-soft: #31536b;
+  background: #f8f5ee !important;
+}
+
+.stories-intro {
+  background:
+    radial-gradient(circle at 86% 18%, rgba(195, 217, 233, 0.74), transparent 36%),
+    linear-gradient(135deg, #faf7f0 0%, #f3f5f5 56%, #eaf1f5 100%) !important;
+}
+
+.stories-intro::before {
+  position: absolute;
+  top: -38%;
+  left: -24%;
+  width: min(66vw, 1000px);
+  aspect-ratio: 1;
+  content: "";
+  border-radius: 50%;
+  background: linear-gradient(145deg, rgba(187, 207, 222, 0.62), rgba(232, 237, 240, 0.14));
+}
+
+.stories-intro-line {
+  display: none !important;
+}
+
+.stories-intro-inner,
+.stories-feature-inner,
+.stories-section-heading,
+.stories-opening-list {
+  position: relative;
+  z-index: 1;
+}
+
+.stories-intro-copy,
+.stories-feature-copy > p:not(.stories-kicker):not(.stories-feature-number),
+.stories-section-heading > p:last-child,
+.stories-house-copy > p:last-child {
+  color: #5f6971 !important;
+}
+
+.stories-feature {
+  background: #f7f5ef !important;
+}
+
+.stories-feature-figure img,
+.stories-young-artist img {
+  box-shadow: 0 24px 52px rgba(25, 48, 67, 0.1);
+}
+
+.stories-opening {
+  background:
+    radial-gradient(circle at 8% 86%, rgba(209, 222, 231, 0.54), transparent 31%),
+    linear-gradient(135deg, #eef3f6 0%, #f8f5ee 100%) !important;
+}
+
+.stories-opening::before {
+  position: absolute;
+  top: -26%;
+  right: -22%;
+  width: min(58vw, 880px);
+  aspect-ratio: 1;
+  content: "";
+  border-radius: 50%;
+  background: rgba(185, 208, 226, 0.34);
+}
+
+.stories-house {
+  background: #f4f6f5 !important;
+}
+
+.stories-memory {
+  background:
+    radial-gradient(circle at 80% 18%, rgba(108, 151, 183, 0.3), transparent 34%),
+    linear-gradient(145deg, #14324c 0%, #1a3e5c 52%, #31536b 100%) !important;
+}
+
+/* Replace the old outlined circle with a filled atmospheric field. */
+.stories-memory::after {
+  right: -18vw !important;
+  bottom: -30vw !important;
+  width: min(58vw, 900px) !important;
+  border: 0 !important;
+  background: rgba(139, 174, 199, 0.12) !important;
+}
+
+/* -------------------------------------------------------------------------- */
+/* BOOKS — quiet modern library                                                */
+/* CSS Modules are targeted by stable source-name fragments.                   */
+/* -------------------------------------------------------------------------- */
+
+main[class*="booksPage"] {
+  background: #f8f5ee !important;
+}
+
+main[class*="booksPage"] section[class*="projectSection"] {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 88% 16%, rgba(194, 217, 233, 0.76), transparent 36%),
+    linear-gradient(135deg, #faf7f0 0%, #f2f5f5 58%, #e9f0f5 100%) !important;
+}
+
+main[class*="booksPage"] section[class*="projectSection"]::before {
+  position: absolute;
+  top: -34%;
+  left: -28%;
+  z-index: 0;
+  width: min(64vw, 960px);
+  aspect-ratio: 1;
+  content: "";
+  border-radius: 50%;
+  background: linear-gradient(145deg, rgba(185, 205, 220, 0.62), rgba(231, 236, 239, 0.14));
+}
+
+main[class*="booksPage"] section[class*="projectSection"] > .container,
+main[class*="booksPage"] section[class*="projectSection"] > div {
+  position: relative;
+  z-index: 1;
+}
+
+main[class*="booksPage"] figure[class*="projectFigure"] img {
+  border-radius: 20px;
+  box-shadow: 0 26px 54px rgba(25, 48, 67, 0.12);
+}
+
+main[class*="booksPage"] p[class*="deck"],
+main[class*="booksPage"] p[class*="description"] {
+  color: #5f6971 !important;
+}
+
+main[class*="booksPage"] section[class*="detailsSection"] {
+  background:
+    radial-gradient(circle at 90% 12%, rgba(199, 218, 232, 0.68), transparent 34%),
+    linear-gradient(135deg, #e5edf2 0%, #eff3f4 100%) !important;
+}
+
+main[class*="booksPage"] section[class*="note"] {
+  background: #f4f6f5 !important;
+  color: #5f6971 !important;
+}
+
+@media (max-width: 899px) {
+  .morning-foyer::before,
+  .stories-intro::before,
+  main[class*="booksPage"] section[class*="projectSection"]::before {
+    top: -38vw !important;
+    left: -52vw !important;
+    width: 126vw !important;
+    opacity: 0.68;
+  }
+
+  .morning-present::before {
+    top: 62% !important;
+    right: -82vw !important;
+    width: 132vw !important;
+    height: 132vw !important;
+    opacity: 0.44;
+  }
+
+  .morning-manuscript::before {
+    right: -52vw !important;
+    width: 118vw !important;
+    opacity: 0.58;
+  }
+
+  .morning-close::before,
+  .stories-opening::before {
+    right: -60vw !important;
+    width: 120vw !important;
+    opacity: 0.54;
+  }
+
+  main[class*="booksPage"] figure[class*="projectFigure"] img {
+    border-radius: 0;
+    box-shadow: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .morning-present::before,
+  .stories-opening::before {
+    display: none !important;
+  }
+}
