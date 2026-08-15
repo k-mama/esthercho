@@ -39,19 +39,19 @@
 
 body:has(.home-video-hero, .page-cover-shell) .site-header-nav-mobile-menu {
   background: #0b223c;
-  border-color: rgba(206, 174, 102, 0.28);
+  border-color: rgba(196, 216, 229, 0.36);
   backdrop-filter: none;
 }
 
 body:has(.home-video-hero, .page-cover-shell)
   .site-header-nav-link[aria-current="page"] {
-  color: #fffdf8;
+  color: #f3f7f9;
   font-weight: 700;
 }
 
 body:has(.home-video-hero, .page-cover-shell)
   .site-header-nav-mobile-room-start {
-  border-top-color: rgba(250, 246, 235, 0.18);
+  border-top-color: rgba(235, 243, 248, 0.18);
 }
 
 @media (min-width: 960px) {
@@ -63,7 +63,7 @@ body:has(.home-video-hero, .page-cover-shell)
     display: block;
     margin-top: 1rem;
     margin-bottom: -1rem;
-    background: rgba(250, 247, 240, 0.97);
+    background: rgba(246, 248, 249, 0.97);
     border-top: 1px solid rgba(15, 43, 75, 0.08);
     border-bottom: 1px solid rgba(15, 43, 75, 0.1);
   }
@@ -118,11 +118,11 @@ body:has(.home-video-hero, .page-cover-shell)
     left: 0;
     height: 1px;
     content: "";
-    background: rgba(168, 136, 79, 0.72);
+    background: rgba(88, 118, 145, 0.72);
   }
 
   body:has(.page-cover-shell) .site-header-subnav-desktop {
-    background: rgba(250, 247, 240, 0.95);
+    background: rgba(246, 248, 249, 0.95);
   }
 }
 
@@ -134,7 +134,7 @@ body:has(.home-video-hero, .page-cover-shell)
 .esther-closing > p:last-child,
 .esther-page-ko .esther-closing > p:last-child {
   max-width: 46rem;
-  color: #68615a;
+  color: #5f6971;
   font-family: var(--font-editorial);
   font-size: clamp(1rem, 1.35vw, 1.12rem);
   line-height: 1.8;
@@ -145,7 +145,7 @@ body:has(.home-video-hero, .page-cover-shell)
   margin: 0;
   padding: clamp(3.5rem, 7vw, 6.5rem) 0;
   color: var(--ink-soft);
-  background: #f8f4ec;
+  background: #eef2f5;
   border: 0;
   border-top: 1px solid rgba(15, 43, 75, 0.12);
   border-radius: 0;
@@ -169,7 +169,7 @@ body:has(.home-video-hero, .page-cover-shell)
 
 .site-footer-description,
 .site-footer-copyright {
-  color: #756e67;
+  color: #6c7881;
   font-size: 0.72rem;
 }
 
@@ -177,7 +177,7 @@ body:has(.home-video-hero, .page-cover-shell)
   margin: 0;
   padding: 0;
   border: 0;
-  color: #847c73;
+  color: #74818a;
   font-family: var(--font-interface);
   font-size: 0.66rem;
   line-height: 1.65;
