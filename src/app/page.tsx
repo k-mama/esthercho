@@ -10,45 +10,6 @@ export const metadata: Metadata = {
     "A house of stories shaped by faith, memory, childhood, and ordinary life.",
 };
 
-const rooms = [
-  {
-    title: "The House That Became a Story",
-    eyebrow: "ESTHER",
-    description:
-      "Meet the Korean writer and artist behind the stories, and the real house, garden, faith, and family life that continue to shape her work.",
-    href: "/about/",
-    linkLabel: "Meet Esther",
-    image: "/media/covers/esther-cover.webp",
-    alt: "Esther Cho in a navy blouse seated beneath two framed artworks",
-    width: 1800,
-    height: 1059,
-  },
-  {
-    title: "The Morning Table",
-    eyebrow: "MORNING TABLE",
-    description:
-      "Devotional reflections born where prayer, food, family, and the first quiet thoughts of the day meet.",
-    href: "/notes/",
-    linkLabel: "Come to the table",
-    image: "/media/covers/morning-table-cover-mobile.webp",
-    alt: "Avocado toast, egg, grapes, and iced coffee on Esther Cho's morning table",
-    width: 1200,
-    height: 1600,
-  },
-  {
-    title: "The Childhood Album",
-    eyebrow: "CHILDHOOD",
-    description:
-      "Real photographs, family fragments, drawings, and remembered places preserved without disguising new work as archive.",
-    href: "/archive/",
-    linkLabel: "Open the album",
-    image: "/media/home/childhood-garden.jpg",
-    alt: "Esther Cho smiling in a garden as a child",
-    width: 1800,
-    height: 1350,
-  },
-];
-
 export default function Home() {
   return (
     <div className={styles.home}>
@@ -66,99 +27,172 @@ export default function Home() {
         </div>
       </section>
 
-      <div id="rooms" className={`container ${styles.roomSequence}`}>
-        <article className={`${styles.paperRoom} ${styles.houseRoom}`}>
-          <div className={styles.roomCopy}>
-            <p className={styles.eyebrow}>{rooms[0].eyebrow}</p>
-            <h2>{rooms[0].title}</h2>
-            <p>{rooms[0].description}</p>
-            <Link href={rooms[0].href} className={styles.textLink}>
-              {rooms[0].linkLabel}
+      <section className={styles.homeIntro} aria-labelledby="home-intro-title">
+        <div className="container">
+          <p className={styles.eyebrow}>INSIDE THE HOUSE</p>
+          <div className={styles.homeIntroGrid}>
+            <h2 id="home-intro-title">The rooms belong to one life.</h2>
+            <div className={styles.homeIntroCopy}>
+              <p>
+                Stories, books, childhood photographs, devotional writing, and
+                drawings are kept in separate rooms without pretending they came
+                from separate lives.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className={styles.storyScene} aria-labelledby="home-stories-title">
+        <figure className={styles.storyFigure}>
+          <Image
+            src="/media/covers/stories-cover.webp"
+            alt="Esther Cho holding a book on a tree-lined stone wall path"
+            width={1800}
+            height={1059}
+            sizes="100vw"
+            priority
+          />
+        </figure>
+        <div className={`container ${styles.storyCopy}`}>
+          <div>
+            <p className={styles.eyebrow}>STORIES</p>
+            <h2 id="home-stories-title">Stories Born from Life</h2>
+          </div>
+          <div className={styles.storyText}>
+            <p>
+              A living collection of family, faith, childhood, and the small
+              details that memory refuses to lose.
+            </p>
+            <Link href="/stories/" className={styles.textLink}>
+              Enter the stories
             </Link>
           </div>
-          <figure className={styles.landscapeFigure}>
+        </div>
+      </section>
+
+      <section className={styles.estherScene} aria-labelledby="home-esther-title">
+        <div className={`container ${styles.estherGrid}`}>
+          <figure className={styles.estherFigure}>
             <Image
-              src={rooms[0].image}
-              alt={rooms[0].alt}
-              width={rooms[0].width}
-              height={rooms[0].height}
-              sizes="(max-width: 899px) 100vw, 52vw"
+              src="/media/covers/esther-cover.webp"
+              alt="Esther Cho in a navy blouse seated beneath two framed artworks"
+              width={1800}
+              height={1059}
+              sizes="(max-width: 899px) 100vw, 46vw"
             />
           </figure>
-        </article>
+          <div className={styles.estherCopy}>
+            <p className={styles.eyebrow}>ESTHER</p>
+            <h2 id="home-esther-title">The House That Became a Story</h2>
+            <p>
+              Meet the Korean writer and artist behind the work, and the home,
+              family memory, faith, and drawing that continue to shape it.
+            </p>
+            <Link href="/about/" className={styles.textLink}>
+              Meet Esther
+            </Link>
+          </div>
+        </div>
+      </section>
 
-        <div className={styles.twoRoomGrid}>
-          <article className={`${styles.paperRoom} ${styles.compactRoom}`}>
-            <figure className={styles.portraitFigure}>
+      <section className={styles.albumScene} aria-labelledby="home-album-title">
+        <figure className={styles.albumFigure}>
+          <Image
+            src="/media/home/childhood-house.jpg"
+            alt="The house and garden connected to Esther Cho's childhood"
+            width={1800}
+            height={1059}
+            sizes="100vw"
+          />
+        </figure>
+        <div className={`container ${styles.albumCopy}`}>
+          <div>
+            <p className={styles.eyebrow}>CHILDHOOD</p>
+            <h2 id="home-album-title">The Childhood Album</h2>
+          </div>
+          <div className={styles.albumText}>
+            <p>
+              Real photographs, remembered places, and family fragments remain
+              visibly different from later creative reinterpretations.
+            </p>
+            <Link href="/archive/" className={styles.textLink}>
+              Open the album
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className={styles.roomsPair} aria-label="Books and Morning Table">
+        <div className={`container ${styles.roomsPairGrid}`}>
+          <article className={styles.roomColumn}>
+            <figure className={`${styles.roomFigure} ${styles.booksFigure}`}>
               <Image
-                src={rooms[1].image}
-                alt={rooms[1].alt}
-                width={rooms[1].width}
-                height={rooms[1].height}
-                sizes="(max-width: 899px) 100vw, 38vw"
+                src="/media/covers/books-cover-final-20260802.png"
+                alt="Esther Cho reading at a softly sunlit table"
+                width={1800}
+                height={1059}
+                sizes="(max-width: 899px) 100vw, 58vw"
               />
             </figure>
-            <div className={styles.compactCopy}>
-              <p className={styles.eyebrow}>{rooms[1].eyebrow}</p>
-              <h2>{rooms[1].title}</h2>
-              <p>{rooms[1].description}</p>
-              <Link href={rooms[1].href} className={styles.textLink}>
-                {rooms[1].linkLabel}
-              </Link>
-            </div>
+            <p className={styles.eyebrow}>BOOKS</p>
+            <h2>Beyond the Garden</h2>
+            <p>Books and works in progress, shown only as far as the record is confirmed.</p>
+            <Link href="/books/" className={styles.textLink}>
+              Visit the books
+            </Link>
           </article>
 
-          <article className={`${styles.paperRoom} ${styles.compactRoom}`}>
-            <figure className={styles.albumFigure}>
+          <article className={styles.roomColumn}>
+            <figure className={`${styles.roomFigure} ${styles.morningFigure}`}>
               <Image
-                src={rooms[2].image}
-                alt={rooms[2].alt}
-                width={rooms[2].width}
-                height={rooms[2].height}
-                sizes="(max-width: 899px) 100vw, 38vw"
+                src="/media/covers/morning-table-cover-mobile.webp"
+                alt="Avocado toast, egg, grapes, and iced coffee on Esther Cho's morning table"
+                width={1200}
+                height={1600}
+                sizes="(max-width: 899px) 100vw, 34vw"
               />
             </figure>
-            <div className={styles.compactCopy}>
-              <p className={styles.eyebrow}>{rooms[2].eyebrow}</p>
-              <h2>{rooms[2].title}</h2>
-              <p>{rooms[2].description}</p>
-              <Link href={rooms[2].href} className={styles.textLink}>
-                {rooms[2].linkLabel}
-              </Link>
-            </div>
+            <p className={styles.eyebrow}>MORNING TABLE</p>
+            <h2>The Morning Table</h2>
+            <p>Devotional reflections and notes from the place where ordinary mornings meet Scripture and prayer.</p>
+            <Link href="/notes/" className={styles.textLink}>
+              Come to the table
+            </Link>
           </article>
         </div>
+      </section>
 
-        <article className={`${styles.paperRoom} ${styles.studioRoom}`}>
-          <div className={styles.roomCopy}>
+      <section className={styles.studioScene} aria-labelledby="home-studio-title">
+        <div className={`container ${styles.studioGrid}`}>
+          <div className={styles.studioCopy}>
             <p className={styles.eyebrow}>STUDIO</p>
-            <h2>Drawn by Hand, Reborn in Light</h2>
+            <h2 id="home-studio-title">Drawn by Hand, Reborn in Light</h2>
             <p>
-              Original hand drawn story studies live beside clearly identified
-              reinterpretations. The source remains visible, and the archive
-              remains truthful.
+              Original hand-drawn work stays visible beside clearly identified
+              reinterpretations. The process is part of the work; it does not
+              replace the source.
             </p>
             <Link href="/studio/" className={styles.textLink}>
               Enter the studio
             </Link>
           </div>
-          <figure className={styles.sketchFigure}>
+          <figure className={styles.studioFigure}>
             <Image
-              src="/media/home/studio-home-card-collage-2026-08.png"
-              alt="A square collage of Esther Cho's hand-drawn story studies and watercolor sketches"
-              width={1200}
-              height={1600}
-              sizes="(max-width: 899px) 100vw, 36vw"
+              src="/media/esther/still-making-father-child-collage-20260802.png"
+              alt="A paper collage based on Esther Cho's original childhood sketch"
+              width={1536}
+              height={1536}
+              sizes="(max-width: 899px) 100vw, 42vw"
             />
           </figure>
-        </article>
-      </div>
+        </div>
+      </section>
 
-      <section className={`container ${styles.navyPause}`}>
-        <p>
-          This is not a catalogue. It is a house entered slowly, one remembered
-          room at a time.
-        </p>
+      <section className={styles.homeClosing}>
+        <div className="container">
+          <p>A house entered slowly, one remembered room at a time.</p>
+        </div>
       </section>
     </div>
   );
