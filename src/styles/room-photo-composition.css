@@ -1,0 +1,167 @@
+/* Distinct photographic composition for Esther Cho's inner rooms.
+   Desktop gets editorial asymmetry; mobile returns to calm single-column framing. */
+
+@media (min-width: 900px) {
+  /* CHILDHOOD */
+  .childhood-house-figure img {
+    height: min(74vh, 860px);
+    aspect-ratio: auto;
+    object-fit: cover;
+    object-position: center 52%;
+  }
+
+  .childhood-house-copy {
+    grid-template-columns: minmax(260px, 0.58fr) minmax(420px, 0.96fr);
+  }
+
+  .childhood-garden-inner {
+    grid-template-columns: minmax(0, 1.42fr) minmax(290px, 0.56fr);
+    gap: clamp(4.5rem, 9vw, 9rem);
+  }
+
+  .childhood-garden-figure {
+    width: 106%;
+    margin-left: -6%;
+  }
+
+  .childhood-garden-figure img {
+    border-radius: 18px;
+  }
+
+  .childhood-garden-copy {
+    align-self: end;
+    padding-bottom: clamp(1rem, 5vw, 5rem);
+  }
+
+  /* ESTHER */
+  .esther-hero {
+    grid-template-columns: minmax(310px, 0.62fr) minmax(0, 1.38fr);
+    gap: clamp(4rem, 9vw, 9rem);
+  }
+
+  .esther-hero-figure {
+    width: 108%;
+    justify-self: end;
+  }
+
+  .esther-hero-figure img {
+    border-radius: 18px;
+  }
+
+  .esther-house-section .esther-split {
+    grid-template-columns: minmax(0, 1.32fr) minmax(300px, 0.68fr);
+  }
+
+  .esther-house-figure {
+    width: 108%;
+    margin-left: -8%;
+  }
+
+  .esther-house-figure img {
+    border-radius: 18px;
+  }
+
+  .esther-education-section .esther-split {
+    grid-template-columns: minmax(330px, 0.78fr) minmax(0, 0.88fr);
+  }
+
+  .esther-portrait-figure {
+    width: 86%;
+    justify-self: end;
+  }
+
+  .esther-portrait-figure img {
+    border-radius: 18px;
+  }
+
+  .esther-home-grid {
+    grid-template-columns: minmax(360px, 0.92fr) minmax(280px, 0.54fr);
+  }
+
+  .esther-table-figure {
+    width: 82%;
+    justify-self: end;
+  }
+
+  .esther-table-figure img {
+    border-radius: 20px;
+  }
+
+  .esther-service-grid {
+    grid-template-columns: minmax(260px, 0.48fr) minmax(0, 1fr);
+  }
+
+  .esther-service-figure {
+    width: 78%;
+    justify-self: center;
+  }
+
+  .esther-service-figure img {
+    border-radius: 18px;
+  }
+
+  .esther-making-grid {
+    grid-template-columns: minmax(0, 0.8fr) minmax(340px, 0.72fr);
+  }
+
+  .esther-sketch-figure {
+    width: 88%;
+    justify-self: end;
+    padding: clamp(0.65rem, 1.2vw, 1rem);
+    background: rgba(247, 244, 237, 0.92);
+    box-shadow: 0 30px 68px rgba(5, 20, 34, 0.28);
+    transform: rotate(0.7deg);
+  }
+
+  .esther-sketch-figure img {
+    box-shadow: none;
+  }
+
+  /* STUDIO */
+  .studio-reimagined .studio-work-grid-reverse {
+    grid-template-columns: minmax(300px, 0.56fr) minmax(0, 1.2fr);
+    gap: clamp(4rem, 10vw, 10rem);
+  }
+
+  .studio-reimagined-figure {
+    width: min(86%, 760px);
+    justify-self: end;
+    padding: clamp(0.75rem, 1.3vw, 1rem);
+    background: rgba(250, 247, 240, 0.94);
+    box-shadow: 0 30px 70px rgba(25, 48, 67, 0.14);
+    transform: rotate(-0.65deg);
+  }
+
+  .studio-reimagined-figure img {
+    box-shadow: none !important;
+  }
+
+  .studio-work-copy {
+    align-self: end;
+    padding-bottom: clamp(0.5rem, 4vw, 4rem);
+  }
+}
+
+@media (max-width: 899px) {
+  .childhood-garden-figure img,
+  .esther-hero-figure img,
+  .esther-house-figure img,
+  .esther-portrait-figure img,
+  .esther-table-figure img,
+  .esther-service-figure img {
+    border-radius: 0;
+  }
+
+  .esther-sketch-figure,
+  .studio-reimagined-figure {
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
+    transform: none;
+  }
+
+  .esther-sketch-figure img,
+  .studio-reimagined-figure img {
+    box-shadow: none !important;
+  }
+}
