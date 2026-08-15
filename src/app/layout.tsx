@@ -15,7 +15,7 @@ import "@/styles/mobile-menu-glass.css";
 
 const siteUrl = "https://esthercho.pages.dev";
 const socialPreviewImage = "/media/home/esther-house-entry-poster.jpg";
-const faviconUrl = "/brand/esther-cho-favicon-32.png?v=20260815";
+const faviconUrl = "/favicon-esther-cho.png?v=20260813-1948";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
