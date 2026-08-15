@@ -9,13 +9,6 @@ export const metadata: Metadata = {
   description: "조성연 작가의 아침 식탁에서 태어난 묵상과 기록.",
 };
 
-const tableThreads = [
-  ["아침", "아침밥과 말씀, 기도, 그리고 하루가 소란해지기 전에 붙잡아 둔 몇 줄."],
-  ["가족", "가족에게 차린 밥과 자꾸 식탁으로 돌아오는 평범한 돌봄."],
-  ["사람들", "친구, 함께 먹은 음식, 계절의 맛, 사람이 오면 함께 따라오는 이야기."],
-  ["부엌 메모", "요리할 때 반복하는 작은 습관과 언젠가 레시피가 될지도 모르는 메모."],
-] as const;
-
 export default function KoreanNotesPage() {
   return (
     <main className="morning-page morning-page-ko">
@@ -76,28 +69,6 @@ export default function KoreanNotesPage() {
         </div>
       </section>
 
-      <section className="morning-threads" aria-labelledby="morning-threads-title">
-        <div className="container morning-threads-inner">
-          <div className="morning-threads-heading">
-            <p className="morning-kicker">자꾸 돌아오는 것들</p>
-            <h2 id="morning-threads-title">
-              <span>이 네 가지는</span>
-              <span>자꾸 다시 옵니다.</span>
-            </h2>
-          </div>
-
-          <div className="morning-thread-list">
-            {tableThreads.map(([title, description], index) => (
-              <article className="morning-thread" key={title}>
-                <span>{String(index + 1).padStart(2, "0")}</span>
-                <h3>{title}</h3>
-                <p>{description}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section className="morning-manuscript" aria-labelledby="morning-manuscript-title">
         <div className="container morning-manuscript-grid">
           <div>
@@ -110,10 +81,9 @@ export default function KoreanNotesPage() {
 
           <div className="morning-manuscript-copy">
             <p>
-              영어 원고를 먼저 완성하고 있습니다. 이후 언어판은 잠금된 영문을
-              바탕으로 준비합니다.
+              이곳에 쌓인 아침과 말씀, 식사와 질문, 작은 생각들이 같은 결로
+              원고 안에 이어지고 있습니다.
             </p>
-            <p>출간 정보는 확정된 뒤에 공개합니다.</p>
             <Link href="/ko/books/" className="morning-link">
               책 프로젝트 보기
             </Link>
