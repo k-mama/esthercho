@@ -120,7 +120,7 @@ main[class*="booksPage"] a[class*="projectLink"]:focus-visible {
 }
 
 /* -------------------------------------------------------------------------- */
-/* CAPTIONS — present, never competing                                        */
+/* CAPTIONS — quiet, but comfortably readable                                 */
 /* -------------------------------------------------------------------------- */
 
 .childhood-page figcaption,
@@ -131,9 +131,9 @@ main[class*="booksPage"] a[class*="projectLink"]:focus-visible {
 main[class*="booksPage"] figcaption {
   max-width: 46rem;
   color: #74818a !important;
-  font-size: 0.66rem !important;
-  line-height: 1.62 !important;
-  letter-spacing: 0.04em !important;
+  font-size: 0.72rem !important;
+  line-height: 1.58 !important;
+  letter-spacing: 0.035em !important;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -195,15 +195,12 @@ main[class*="booksPage"] figcaption {
 .esther-eyebrow,
 main[class*="booksPage"] p[class*="eyebrow"],
 main[class*="booksPage"] span[class*="status"],
-main[class*="booksPage"] p[class*="noteLabel"],
 main[class*="booksPage"] dt {
   color: #587691 !important;
 }
 
 .childhood-fragments .childhood-kicker,
-.stories-memory .stories-kicker,
 .morning-manuscript .morning-kicker,
-.studio-principle .studio-kicker,
 .esther-making-section .esther-eyebrow {
   color: #a9cee5 !important;
 }
@@ -318,8 +315,8 @@ body:has(.home-video-hero) [class*="roomLinks"] a::before {
   .stories-page figcaption,
   .morning-page figcaption,
   main[class*="booksPage"] figcaption {
-    font-size: 0.64rem !important;
-    line-height: 1.6 !important;
+    font-size: 0.7rem !important;
+    line-height: 1.58 !important;
   }
 
   .childhood-page figure img,
