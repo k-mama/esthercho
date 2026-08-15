@@ -170,15 +170,15 @@
   align-items: center;
 }
 
+.esther-home-copy-only {
+  min-height: min(52svh, 620px);
+  align-items: center;
+}
+
 .esther-portrait-figure img {
   aspect-ratio: 4 / 5;
   object-fit: cover;
   object-position: center 30%;
-}
-
-.esther-table-figure img {
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
 }
 
 .esther-sketch-figure img {
@@ -276,6 +276,15 @@
     grid-template-columns: minmax(0, 0.92fr) minmax(20rem, 0.72fr);
   }
 
+  .esther-home-copy-only {
+    grid-template-columns: minmax(0, 0.56fr) minmax(0, 1fr);
+  }
+
+  .esther-home-copy-only .esther-copy {
+    grid-column: 2;
+    max-width: 760px;
+  }
+
   .esther-service-grid {
     grid-template-columns: minmax(20rem, 0.72fr) minmax(0, 1fr);
   }
@@ -297,8 +306,11 @@
     max-width: 100%;
   }
 
+  .esther-home-copy-only {
+    min-height: auto;
+  }
+
   .esther-portrait-figure,
-  .esther-table-figure,
   .esther-service-figure,
   .esther-sketch-figure {
     width: calc(100% + 3rem);
@@ -306,7 +318,6 @@
   }
 
   .esther-portrait-figure figcaption,
-  .esther-table-figure figcaption,
   .esther-service-figure figcaption,
   .esther-sketch-figure figcaption {
     padding-inline: 1.5rem;
