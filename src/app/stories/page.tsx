@@ -103,7 +103,7 @@ export default function StoriesPage() {
               <p>
                 These pages grow as Esther remembers. They are not a finished
                 memoir arranged once and for all. A person, place, object, season,
-                or photograph can open another door.
+                or photograph may bring back another memory.
               </p>
             </div>
           </div>
@@ -134,9 +134,8 @@ export default function StoriesPage() {
               a girl. The family joke was that perhaps it had been a cat.
             </p>
             <p>
-              The first story enters the archive exactly as the memory has been
-              recorded so far. The quiet spaces stay quiet until something more
-              returns.
+              The first story is published only to the point the memory has been
+              recorded. Nothing is added to fill what is missing.
             </p>
             <Link
               href="/stories/my-father-dreamed-of-a-tiger/"
@@ -152,11 +151,8 @@ export default function StoriesPage() {
         <div className="container">
           <header className="stories-section-heading">
             <p className="stories-kicker">OPENING COLLECTION</p>
-            <h2 id="opening-collection-title">Seven doors into the story.</h2>
-            <p>
-              Not a table of contents. Just the first memories chosen to open the
-              archive.
-            </p>
+            <h2 id="opening-collection-title">Seven stories in the opening collection.</h2>
+            <p>These are the first memories selected for the archive.</p>
           </header>
 
           <ol className="stories-opening-list">
@@ -203,11 +199,11 @@ export default function StoriesPage() {
         <div className="container stories-house-editorial">
           <div className="stories-house-copy">
             <p className="stories-kicker">LIFE CHAPTERS</p>
-            <h2 id="life-chapters-title">A life can be read by its turning points.</h2>
+            <h2 id="life-chapters-title">Chronology behind the archive.</h2>
             <p>
-              Chronology remains underneath the archive, but memory has its own
-              architecture. Some years are remembered as rooms. Others as a
-              person, a season, or the moment everything changed.
+              The archive also keeps a chronological structure. Some memories
+              are grouped by period; others by a person, place, season, or a
+              major change in the family story.
             </p>
           </div>
 
@@ -237,9 +233,7 @@ export default function StoriesPage() {
         <div className="container stories-memory-inner">
           <div className="stories-memory-heading">
             <p className="stories-kicker">MEMORY COLLECTIONS</p>
-            <h2 id="memory-collections-title">
-              A memory can be found by its color, weather, or room.
-            </h2>
+            <h2 id="memory-collections-title">Themes that recur in the archive.</h2>
           </div>
 
           <div className="stories-memory-list" aria-label="Memory collection themes">
@@ -254,11 +248,11 @@ export default function StoriesPage() {
         <div className="container stories-newly-inner">
           <div className="stories-newly-copy">
             <p className="stories-kicker">NEWLY REMEMBERED</p>
-            <h2 id="newly-remembered-title">Some stories arrive years late.</h2>
+            <h2 id="newly-remembered-title">Newly remembered stories.</h2>
             <p>
               A smell, a table, a season, or an ordinary object can bring back a
-              scene that had been quiet for years. Newly remembered stories will
-              be added here as they return.
+              scene that had been quiet for years. New memories will be added as
+              they are recorded.
             </p>
             <Link href="/archive/" className="stories-text-link">
               Follow the photographs
@@ -286,9 +280,8 @@ export default function StoriesPage() {
               “I think I may be someone who collects happiness.”
             </blockquote>
             <p>
-              Difficult things happened too. What often returns first is the
-              laughter. The archive does not erase pain; it keeps noticing what
-              love left behind.
+              Difficult things happened too. Looking back, the laughter is often
+              what comes to mind first. Both belong in the record.
             </p>
           </div>
         </div>
