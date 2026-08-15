@@ -6,7 +6,7 @@ import "./studio.css";
 export const metadata: Metadata = {
   title: "Drawn by Hand",
   description:
-    "Esther Cho's selected hand-drawn originals, later reworkings, and visual experiments.",
+    "Esther Cho's hand-drawn sources, later reworkings, and visual experiments.",
 };
 
 export default function StudioPage() {
@@ -15,7 +15,7 @@ export default function StudioPage() {
       <PageCover
         eyebrow="STUDIO"
         title="Drawn by Hand"
-        description="Original drawings, later reworkings, and visual experiments."
+        description="Hand-drawn sources, later reworkings, and visual experiments."
         image="/media/covers/studio-cover.jpg"
         alt="An editorial collage created from Esther Cho's original hand-drawn story studies"
         objectPosition="center center"
@@ -26,13 +26,13 @@ export default function StudioPage() {
 
       <section className="studio-intro" aria-labelledby="studio-intro-title">
         <div className="container">
-          <p className="studio-kicker">ORIGINALS</p>
+          <p className="studio-kicker">THE SOURCE</p>
           <div className="studio-intro-grid">
-            <h2 id="studio-intro-title">The original comes first.</h2>
+            <h2 id="studio-intro-title">The hand-drawn source stays named.</h2>
             <div className="studio-intro-copy">
               <p>
-                Only the originals Esther Cho chooses to share appear here. Later versions
-                are shown for what they are: later work.
+                When a sketch becomes something else, the later work is shown as later work.
+                Nothing needs to pretend it came from the same moment.
               </p>
             </div>
           </div>
@@ -46,7 +46,7 @@ export default function StudioPage() {
             <h2 id="studio-reimagined-title">The drawing can move into another form.</h2>
             <p>
               A sketch may become a collage or another digital image. The source stays named,
-              and the new work is not presented as an archival object.
+              and the new work remains clearly later work.
             </p>
           </div>
 
@@ -63,20 +63,6 @@ export default function StudioPage() {
               From Esther Cho&apos;s childhood sketch · AI-assisted editorial reinterpretation
             </figcaption>
           </figure>
-        </div>
-      </section>
-
-      <section className="studio-principle" aria-labelledby="studio-principle-title">
-        <div className="container studio-principle-grid">
-          <div>
-            <p className="studio-kicker">PROCESS</p>
-            <h2 id="studio-principle-title">The source and the new work are not the same thing.</h2>
-          </div>
-          <div className="studio-principle-copy">
-            <p>
-              They can sit beside each other without pretending to belong to the same moment.
-            </p>
-          </div>
         </div>
       </section>
 
