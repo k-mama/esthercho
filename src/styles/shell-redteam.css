@@ -14,6 +14,11 @@
   border-radius: 0;
 }
 
+.site-header-nav-link[aria-current="page"] {
+  color: var(--brand-navy);
+  font-weight: 700;
+}
+
 .site-header-nav-mobile-menu {
   border-radius: 2px;
 }
@@ -22,6 +27,12 @@ body:has(.home-video-hero, .page-cover-shell) .site-header-nav-mobile-menu {
   background: #0b223c;
   border-color: rgba(206, 174, 102, 0.28);
   backdrop-filter: none;
+}
+
+body:has(.home-video-hero, .page-cover-shell)
+  .site-header-nav-link[aria-current="page"] {
+  color: #fffdf8;
+  font-weight: 700;
 }
 
 .site-footer {
