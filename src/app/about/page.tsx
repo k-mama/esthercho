@@ -93,7 +93,7 @@ export default function AboutPage() {
         </section>
 
         <section className="esther-section esther-home-section">
-          <div className="container esther-home-grid">
+          <div className="container esther-home-grid esther-home-copy-only">
             <div className="esther-copy">
               <p className="esther-eyebrow">HOME AND FAITH</p>
 
@@ -109,18 +109,6 @@ export default function AboutPage() {
                 same notebook.
               </p>
             </div>
-
-            <figure className="esther-figure esther-table-figure">
-              <Image
-                src="/media/esther/morning-table.jpg"
-                alt="A breakfast prepared at Esther Cho's table"
-                width={1200}
-                height={1600}
-                sizes="(max-width: 899px) 100vw, 38vw"
-              />
-
-              <figcaption>Breakfast at home</figcaption>
-            </figure>
           </div>
         </section>
 
