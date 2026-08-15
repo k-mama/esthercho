@@ -1,5 +1,10 @@
 /* Final shell restraint layer: keep the interface quieter than the work. */
 
+[lang="ko"] {
+  word-break: keep-all;
+  overflow-wrap: normal;
+}
+
 .site-header {
   margin: 0;
   padding: 1rem 0;
