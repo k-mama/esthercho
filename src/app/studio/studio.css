@@ -26,7 +26,7 @@
 
 .studio-intro {
   padding-block: clamp(7rem, 13vw, 13rem);
-  background: linear-gradient(135deg, #faf7f0 0%, #f3eee5 60%, #e9eeed 100%);
+  background: var(--studio-ivory);
 }
 
 .studio-intro-grid {
