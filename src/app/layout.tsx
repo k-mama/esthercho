@@ -5,6 +5,7 @@ import { SiteFooter } from "@/components/site-footer";
 import { DocumentLanguage } from "@/components/document-language";
 import "@/styles/tokens.css";
 import "@/styles/global.css";
+import "@/styles/shell-redteam.css";
 
 const siteUrl = "https://esthercho.pages.dev";
 const socialPreviewImage = "/media/home/esther-house-entry-poster.jpg";
