@@ -29,11 +29,11 @@ export default function KoreanArchivePage() {
         <div className="container">
           <p className="childhood-kicker">앨범을 열며</p>
           <div className="childhood-intro-grid">
-            <h2 id="childhood-intro-title">한 사람의 삶은 작은 것들을 남긴다.</h2>
+            <h2 id="childhood-intro-title">어린 시절의 사진.</h2>
             <div className="childhood-intro-copy">
               <p>
-                집 하나. 정원 하나. 빛 속에 서 있는 아이. 아카이브의
-                시작은 대개 거창하지 않다.
+                아카이브는 집과 정원, 밖에 서 있는 아이의 사진처럼 평범한
+                것에서 시작한다.
               </p>
               <p>
                 이 사진들은 실제 삶의 조각으로 남긴다. 오래된 흔적과
@@ -94,8 +94,8 @@ export default function KoreanArchivePage() {
             <p className="childhood-kicker">사진 속의 아이</p>
             <h2 id="childhood-garden-title">정원 속의 아이.</h2>
             <p>
-              얼굴 하나, 계절 하나, 장소 하나. 누군가 그 순간을 남겨두고
-              싶었다는 사실만으로도 충분하다.
+              누군가 이 순간을 남겨두고 싶었다. 그 사실만으로도 사진은
+              충분하다.
             </p>
           </div>
         </div>
