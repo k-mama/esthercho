@@ -1,19 +1,15 @@
 .stories-page {
-  --stories-ivory: #fbf8f1;
-  --stories-cream: #f4eee3;
-  --stories-parchment: #ece2d2;
-  --stories-mist: #dce7e9;
-  --stories-sage: #dfe3d8;
-  --stories-rose: #eee1df;
-  --stories-night: #0c223c;
-  --stories-night-soft: #234461;
+  --stories-ivory: #f8f5ee;
+  --stories-cream: #f1f3f4;
+  --stories-mist: #e0ebf3;
+  --stories-night: #14324c;
   background: var(--stories-ivory);
   color: var(--ink);
 }
 
 .stories-kicker {
   margin: 0;
-  color: var(--brand-gold-deep);
+  color: #587691;
   font-family: var(--font-interface);
   font-size: 0.68rem;
   font-weight: 700;
@@ -33,25 +29,21 @@
   letter-spacing: 0.09em;
   text-decoration: none;
   text-transform: uppercase;
-  transition:
-    color 180ms ease,
-    border-color 180ms ease;
+  transition: color 180ms ease, border-color 180ms ease;
 }
 
 .stories-text-link:hover {
-  color: var(--brand-gold-deep);
+  color: #1b4c73;
   border-color: currentColor;
 }
 
-/* Memory enters quietly after the cinematic cover. */
 .stories-intro {
   position: relative;
   overflow: hidden;
   padding-block: clamp(6.5rem, 12vw, 12rem) clamp(5rem, 10vw, 9rem);
   background:
-    radial-gradient(circle at 88% 16%, rgba(220, 231, 233, 0.68), transparent 32%),
-    radial-gradient(circle at 70% 74%, rgba(238, 225, 223, 0.52), transparent 36%),
-    linear-gradient(135deg, #fbf8f1 0%, #f8f3ea 48%, #f1eee9 100%);
+    radial-gradient(circle at 86% 18%, rgba(195, 217, 233, 0.74), transparent 36%),
+    linear-gradient(135deg, #faf7f0 0%, #f3f5f5 56%, #eaf1f5 100%);
 }
 
 .stories-intro-inner {
@@ -70,7 +62,6 @@
 .stories-feature h2,
 .stories-section-heading h2,
 .stories-house-copy h2,
-.stories-memory h2,
 .stories-newly h2 {
   margin: 0;
   letter-spacing: -0.035em;
@@ -88,7 +79,7 @@
 .stories-intro-copy {
   max-width: 610px;
   padding-bottom: 0.45rem;
-  color: #665f58;
+  color: #5f6971;
   font-family: var(--font-editorial);
   font-size: clamp(1.16rem, 1.7vw, 1.48rem);
   line-height: 1.72;
@@ -103,17 +94,12 @@
 }
 
 .stories-intro-line {
-  width: min(72%, 850px);
-  height: 1px;
-  margin-top: clamp(4.5rem, 8vw, 7.5rem);
-  margin-left: auto;
-  background: linear-gradient(90deg, transparent, rgba(15, 43, 75, 0.25), transparent);
+  display: none;
 }
 
-/* One archival photograph carries the first story. */
 .stories-feature {
   padding-block: clamp(5rem, 9vw, 9rem) clamp(7rem, 12vw, 12rem);
-  background: var(--stories-ivory);
+  background: #f7f5ef;
 }
 
 .stories-feature-inner {
@@ -149,11 +135,11 @@
 .stories-young-artist figcaption,
 .stories-newly-figure figcaption {
   margin-top: 0.75rem;
-  color: #857d73;
+  color: #74818a;
   font-family: var(--font-interface);
-  font-size: 0.67rem;
-  letter-spacing: 0.055em;
-  line-height: 1.5;
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  line-height: 1.55;
 }
 
 .stories-feature-copy {
@@ -179,27 +165,25 @@
 
 .stories-feature-copy > p:not(.stories-kicker):not(.stories-feature-number) {
   margin: 1.45rem 0 0;
-  color: #6d655d;
+  color: #5f6971;
   font-family: var(--font-editorial);
   font-size: 1.05rem;
   line-height: 1.78;
 }
 
 .stories-feature-copy .stories-feature-lead {
-  color: #332f2b;
+  color: #2f3a43;
   font-size: clamp(1.2rem, 1.7vw, 1.48rem);
   line-height: 1.58;
 }
 
-/* The collection is an editorial index, never a card grid. */
 .stories-opening {
   position: relative;
   overflow: hidden;
   padding-block: clamp(7rem, 12vw, 12rem);
   background:
-    radial-gradient(circle at 8% 15%, rgba(220, 231, 233, 0.74), transparent 29%),
-    radial-gradient(circle at 91% 68%, rgba(238, 225, 223, 0.78), transparent 32%),
-    linear-gradient(115deg, #f7f3eb 0%, #f5f0e8 54%, #f0e8e5 100%);
+    radial-gradient(circle at 8% 86%, rgba(209, 222, 231, 0.54), transparent 31%),
+    linear-gradient(135deg, #eef3f6 0%, #f8f5ee 100%);
 }
 
 .stories-section-heading {
@@ -227,7 +211,7 @@
 .stories-section-heading > p:last-child {
   max-width: 430px;
   margin: 0 0 0.4rem;
-  color: #706960;
+  color: #5f6971;
   font-family: var(--font-editorial);
   font-size: 1.05rem;
   line-height: 1.72;
@@ -258,14 +242,14 @@
 }
 
 .stories-opening-number {
-  color: var(--brand-gold-deep);
+  color: #587691;
   font-size: 0.68rem;
   letter-spacing: 0.14em;
 }
 
 .stories-opening-meta {
   margin: 0 0 0.55rem;
-  color: #8a8177;
+  color: #74818a;
   font-size: 0.64rem;
   letter-spacing: 0.12em;
 }
@@ -287,12 +271,12 @@
 }
 
 .stories-opening-item h3 a:hover {
-  color: var(--brand-gold-deep);
+  color: #1b4c73;
 }
 
 .stories-opening-state,
 .stories-opening-action {
-  color: #7e766d;
+  color: #74818a;
   font-size: 0.63rem;
   letter-spacing: 0.11em;
   text-decoration: none;
@@ -313,10 +297,9 @@
   transform: translateX(4px);
 }
 
-/* A real house gets cinematic scale. */
 .stories-house {
   padding-bottom: clamp(7rem, 12vw, 12rem);
-  background: #faf7f0;
+  background: #f4f6f5;
 }
 
 .stories-house-figure {
@@ -356,7 +339,7 @@
 .stories-house-copy > p:last-child {
   max-width: 470px;
   margin: 1.6rem 0 0;
-  color: #71695f;
+  color: #5f6971;
   font-family: var(--font-editorial);
   font-size: 1.03rem;
   line-height: 1.78;
@@ -375,7 +358,7 @@
   display: grid;
   grid-template-columns: 2rem 1fr;
   gap: 0.65rem;
-  color: #3d3935;
+  color: #3d4851;
   font-family: var(--font-editorial);
   font-size: clamp(1rem, 1.3vw, 1.18rem);
   line-height: 1.4;
@@ -383,7 +366,7 @@
 
 .stories-chapter-list span {
   padding-top: 0.16rem;
-  color: var(--brand-gold-deep);
+  color: #587691;
   font-family: var(--font-interface);
   font-size: 0.58rem;
   letter-spacing: 0.1em;
@@ -399,88 +382,13 @@
   object-position: center;
 }
 
-/* A dark pause: memory by weather, color and room. */
-.stories-memory {
-  position: relative;
-  overflow: hidden;
-  padding-block: clamp(8rem, 14vw, 14rem);
-  color: #f7f4ed;
-  background:
-    radial-gradient(circle at 80% 18%, rgba(116, 158, 175, 0.36), transparent 34%),
-    linear-gradient(145deg, var(--stories-night) 0%, #112b48 48%, var(--stories-night-soft) 100%);
-}
-
-.stories-memory::after {
-  content: "";
-  position: absolute;
-  right: -16vw;
-  bottom: -28vw;
-  width: 58vw;
-  aspect-ratio: 1;
-  border: 1px solid rgba(247, 244, 237, 0.11);
-  border-radius: 50%;
-  pointer-events: none;
-}
-
-.stories-memory-inner {
-  position: relative;
-  z-index: 1;
-}
-
-.stories-memory-heading {
-  display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
-  gap: clamp(3rem, 9vw, 9rem);
-  align-items: start;
-}
-
-.stories-memory .stories-kicker {
-  color: #d6be8f;
-}
-
-.stories-memory h2 {
-  grid-column: 1 / -1;
-  max-width: 12ch;
-  margin-top: 2rem;
-  color: #faf7f0;
-  font-family: var(--font-interface);
-  font-size: clamp(3rem, 6vw, 6.4rem);
-  font-weight: 300;
-  line-height: 0.96;
-}
-
-.stories-memory-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.9rem clamp(1.6rem, 4vw, 4rem);
-  max-width: 930px;
-  margin-top: clamp(5rem, 9vw, 8rem);
-}
-
-.stories-memory-list span {
-  color: rgba(250, 247, 240, 0.8);
-  font-family: var(--font-editorial);
-  font-size: clamp(1.35rem, 2.3vw, 2.35rem);
-  line-height: 1.2;
-}
-
-.stories-memory-list span:nth-child(3n + 2) {
-  color: rgba(250, 247, 240, 0.57);
-}
-
-.stories-memory-list span:nth-child(4n) {
-  font-style: italic;
-}
-
-/* Present-day details return the page to morning light. */
 .stories-newly {
   position: relative;
   overflow: hidden;
   padding-block: clamp(7rem, 12vw, 12rem);
   background:
-    radial-gradient(circle at 18% 18%, rgba(223, 227, 216, 0.74), transparent 30%),
-    radial-gradient(circle at 88% 82%, rgba(220, 231, 233, 0.68), transparent 34%),
-    linear-gradient(118deg, #faf7ef 0%, #f5f2ea 52%, #eef1ed 100%);
+    radial-gradient(circle at 88% 82%, rgba(200, 221, 235, 0.68), transparent 34%),
+    linear-gradient(118deg, #faf9f5 0%, #f2f5f6 52%, #e8f0f5 100%);
 }
 
 .stories-newly-inner {
@@ -507,7 +415,7 @@
 .stories-newly-copy > p:not(.stories-kicker) {
   max-width: 540px;
   margin: 1.6rem 0 0;
-  color: #6b655d;
+  color: #5f6971;
   font-family: var(--font-editorial);
   font-size: 1.08rem;
   line-height: 1.78;
@@ -522,12 +430,11 @@
   aspect-ratio: 3 / 4;
 }
 
-/* The ending is human, not a quote card. */
 .stories-happiness {
   padding-block: clamp(8rem, 14vw, 14rem);
   background:
-    radial-gradient(circle at 78% 20%, rgba(238, 225, 223, 0.72), transparent 30%),
-    linear-gradient(125deg, #f7f1e5 0%, #f8f5ef 52%, #edf2f2 100%);
+    radial-gradient(circle at 84% 18%, rgba(190, 214, 231, 0.78), transparent 36%),
+    linear-gradient(135deg, #f8f5ee 0%, #f0f4f6 58%, #e5edf3 100%);
 }
 
 .stories-happiness-inner {
@@ -556,7 +463,7 @@
 .stories-happiness-grid > p {
   max-width: 440px;
   margin: 0 0 0.45rem;
-  color: #6a635b;
+  color: #5f6971;
   font-family: var(--font-editorial);
   font-size: 1.06rem;
   line-height: 1.78;
@@ -571,7 +478,6 @@
   .stories-feature-inner,
   .stories-section-heading,
   .stories-house-editorial,
-  .stories-memory-heading,
   .stories-newly-inner,
   .stories-happiness-grid {
     grid-template-columns: 1fr;
@@ -596,11 +502,6 @@
 
   .stories-intro-copy {
     max-width: 34rem;
-  }
-
-  .stories-intro-line {
-    width: 76%;
-    margin-top: 4.25rem;
   }
 
   .stories-feature {
@@ -686,19 +587,6 @@
     width: min(72%, 420px);
     margin-top: 1rem;
     margin-left: auto;
-  }
-
-  .stories-memory {
-    padding-block: 7rem;
-  }
-
-  .stories-memory h2 {
-    max-width: 11ch;
-    font-size: clamp(2.9rem, 11.5vw, 5.2rem);
-  }
-
-  .stories-memory-list {
-    margin-top: 4.5rem;
   }
 
   .stories-newly {
@@ -788,20 +676,6 @@
 
   .stories-young-artist {
     width: 78%;
-  }
-
-  .stories-memory::after {
-    right: -34vw;
-    bottom: -18vw;
-    width: 96vw;
-  }
-
-  .stories-memory-list {
-    gap: 0.9rem 1.6rem;
-  }
-
-  .stories-memory-list span {
-    font-size: clamp(1.25rem, 6vw, 1.7rem);
   }
 
   .stories-newly h2 {
