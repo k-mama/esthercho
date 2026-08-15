@@ -69,8 +69,8 @@ export default function Home() {
             <p className={styles.eyebrow}>INSIDE ESTHER&apos;S HOUSE</p>
             <h2 id="house-title">Meals, photographs, drawings, and stories live here together.</h2>
             <p>
-              A breakfast can sit beside a verse. A childhood photograph can open a story
-              decades later. Different records keep finding one another inside the same life.
+              A breakfast can sit beside a verse. An old photograph can bring back a story
+              decades later. It all belongs to one life.
             </p>
           </div>
 
@@ -92,8 +92,8 @@ export default function Home() {
             <p className={styles.eyebrow}>MORNING TABLE</p>
             <h2 id="table-title">The table is where ordinary care becomes visible.</h2>
             <p>
-              Breakfast, Scripture, family meals, and the dishes prepared for people she
-              loves belong to the same lived rhythm.
+              Breakfast, Scripture, family meals, and food made for people she loves all
+              happen at the same table.
             </p>
             <Link href="/notes/" className={styles.textLink}>
               Go to Morning Table
@@ -115,11 +115,11 @@ export default function Home() {
 
       <section className={`${styles.scene} ${styles.memoryScene} ${polish.memory}`} aria-labelledby="memory-title">
         <div className={`container ${styles.sceneGrid} ${styles.reverseScene}`}>
-          <div className={styles.memoryCollage} aria-label="Esther Cho childhood archive photographs">
+          <div className={styles.memoryCollage} aria-label="Esther Cho childhood photographs">
             <figure className={`${styles.memoryPrimary} ${polish.memoryPrimary}`}>
               <Image
                 src="/media/esther/childhood-garden.jpg"
-                alt="A garden from Esther Cho's childhood archive"
+                alt="A garden from Esther Cho's childhood"
                 width={1800}
                 height={1200}
                 sizes="(max-width: 899px) 92vw, 48vw"
@@ -128,7 +128,7 @@ export default function Home() {
             <figure className={`${styles.memorySecondary} ${polish.memorySecondary}`}>
               <Image
                 src="/media/esther/childhood-house.jpg"
-                alt="A house from Esther Cho's childhood archive"
+                alt="A house from Esther Cho's childhood"
                 width={1200}
                 height={900}
                 sizes="(max-width: 899px) 44vw, 20vw"
@@ -138,13 +138,13 @@ export default function Home() {
 
           <div className={styles.sceneCopy}>
             <p className={styles.eyebrow}>MEMORY</p>
-            <h2 id="memory-title">Some photographs remember before words do.</h2>
+            <h2 id="memory-title">Sometimes the photograph comes back first.</h2>
             <p>
-              Childhood homes, gardens, family photographs, names, places, and small details
-              return slowly. The image stays what it was; the story beside it can keep growing.
+              A house, a garden, a name in a family photograph. Sometimes the picture
+              returns first. The story arrives later.
             </p>
             <Link href="/archive/" className={styles.textLink}>
-              Open the childhood archive
+              See childhood
             </Link>
           </div>
         </div>
@@ -154,11 +154,10 @@ export default function Home() {
         <div className={`container ${styles.careLayout}`}>
           <div className={styles.sceneCopy}>
             <p className={styles.eyebrow}>STORIES OF CARE</p>
-            <h2 id="care-title">Care is not a separate achievement. It is part of the week.</h2>
+            <h2 id="care-title">Care became part of the week.</h2>
             <p>
-              Family, church, service trips, friends, errands, laughter, and the people
-              who needed a little room in her day become stories without being turned into
-              a résumé.
+              Family, church, service trips, friends, errands, laughter. Making room for
+              someone simply became part of ordinary life.
             </p>
             <Link href="/stories/" className={styles.textLink}>
               Read the stories
@@ -168,12 +167,12 @@ export default function Home() {
           <figure className={`${styles.sceneMedia} ${styles.careMedia} ${polish.careMedia}`}>
             <Image
               src="/media/esther/bangladesh-service.jpg"
-              alt="A photograph from Esther Cho's service archive in Bangladesh"
+              alt="Esther Cho during volunteer service in Bangladesh"
               width={1200}
               height={800}
               sizes="(max-width: 899px) 100vw, 54vw"
             />
-            <figcaption>Service archive · Bangladesh</figcaption>
+            <figcaption>Bangladesh</figcaption>
           </figure>
         </div>
       </section>
@@ -184,8 +183,8 @@ export default function Home() {
             <p className={styles.eyebrow}>THE STUDIO</p>
             <h2 id="studio-title">Her hand stays visible.</h2>
             <p>
-              Original drawings and later collages live close together. New work may extend
-              an image, but the source is never disguised.
+              A pencil line stays a pencil line. Later work may grow from it, but the
+              starting point remains visible.
             </p>
             <Link href="/studio/" className={styles.textLink}>
               Enter the studio
@@ -209,7 +208,7 @@ export default function Home() {
       <section className={`${styles.closingRoom} ${polish.closing}`} aria-labelledby="closing-title">
         <div className={`container ${styles.closingInner}`}>
           <p className={styles.eyebrow}>KEEP WALKING</p>
-          <h2 id="closing-title">Some of these stories eventually become books.</h2>
+          <h2 id="closing-title">Some stories keep going. A few become books.</h2>
           <div className={styles.closingLinks}>
             <Link href="/books/">Books <span aria-hidden="true">→</span></Link>
             <Link href="/about/">Meet Esther <span aria-hidden="true">→</span></Link>
