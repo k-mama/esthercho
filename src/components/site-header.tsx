@@ -25,6 +25,36 @@ function GlobeIcon() {
   );
 }
 
+const mirroredRooms = new Set([
+  "/home",
+  "/stories",
+  "/books",
+  "/studio",
+  "/about",
+  "/archive",
+  "/notes",
+]);
+
+function normalizePath(pathname: string) {
+  if (pathname === "/") return "/home";
+  return pathname.length > 1 && pathname.endsWith("/")
+    ? pathname.slice(0, -1)
+    : pathname;
+}
+
+function getLanguageHref(pathname: string, isKorean: boolean) {
+  const normalized = normalizePath(pathname);
+
+  if (isKorean) {
+    const englishRoom = normalized.replace(/^\/ko/, "") || "/home";
+    return mirroredRooms.has(englishRoom) ? `${englishRoom}/` : "/home/";
+  }
+
+  return mirroredRooms.has(normalized)
+    ? `/ko${normalized}/`
+    : "/ko/home/";
+}
+
 export function SiteHeader() {
   const pathname = usePathname();
   const mobileMenuRef = useRef<HTMLDetailsElement>(null);
@@ -45,7 +75,7 @@ export function SiteHeader() {
     : navigationConfig.roomsEn;
 
   const homeHref = isKorean ? "/ko/home/" : "/home/";
-  const languageHref = isKorean ? "/home/" : "/ko/home/";
+  const languageHref = getLanguageHref(pathname, isKorean);
 
   const languageLabel = isKorean
     ? "영문 홈페이지로 이동"
