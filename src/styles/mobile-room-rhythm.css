@@ -1,0 +1,360 @@
+/* Mobile editorial rhythm for Esther Cho's inner rooms.
+   Typography, paragraph measure and vertical pacing are tuned independently
+   from desktop. HOME hero/navigation are intentionally untouched. */
+
+@media (max-width: 899px) {
+  /* ---------------------------------------------------------------------- */
+  /* Shared vertical rhythm                                                  */
+  /* ---------------------------------------------------------------------- */
+
+  .childhood-intro,
+  .childhood-garden,
+  .childhood-fragments,
+  .childhood-archive-principle,
+  .childhood-ending,
+  .esther-hero,
+  .esther-section,
+  .esther-closing,
+  .studio-intro,
+  .studio-original,
+  .studio-reimagined,
+  .studio-principle,
+  .studio-future,
+  .stories-intro,
+  .stories-feature,
+  .stories-opening,
+  .stories-memory,
+  .stories-newly,
+  .stories-happiness,
+  .morning-foyer,
+  .morning-present,
+  .morning-threads,
+  .morning-manuscript,
+  .morning-close,
+  main[class*="booksPage"] section[class*="projectSection"],
+  main[class*="booksPage"] section[class*="detailsSection"],
+  main[class*="booksPage"] section[class*="note"] {
+    padding-top: clamp(4.8rem, 12vw, 6rem) !important;
+    padding-bottom: clamp(5.2rem, 13vw, 6.6rem) !important;
+  }
+
+  /* Dark pause rooms get a little more air. */
+  .childhood-fragments,
+  .studio-principle,
+  .stories-memory,
+  .morning-manuscript {
+    padding-top: clamp(5.6rem, 14vw, 7rem) !important;
+    padding-bottom: clamp(5.8rem, 15vw, 7.4rem) !important;
+  }
+
+  /* Full-width house photographs keep their own cinematic transition. */
+  .childhood-house-copy,
+  .stories-house-editorial {
+    padding-top: clamp(4.4rem, 11vw, 5.8rem) !important;
+    padding-bottom: clamp(5.2rem, 13vw, 6.6rem) !important;
+  }
+
+  /* ---------------------------------------------------------------------- */
+  /* Headline hierarchy                                                       */
+  /* ---------------------------------------------------------------------- */
+
+  .childhood-intro h2,
+  .studio-intro h2,
+  .stories-intro h2,
+  .morning-foyer h2 {
+    max-width: 11ch !important;
+    font-size: clamp(2.7rem, 11.2vw, 4.35rem) !important;
+    line-height: 1.01 !important;
+    letter-spacing: -0.04em !important;
+  }
+
+  .childhood-house-copy h2,
+  .childhood-garden-copy h2,
+  .childhood-fragments h2,
+  .childhood-archive-principle h2,
+  .childhood-ending h2,
+  .studio-work-copy h2,
+  .studio-principle h2,
+  .studio-future h2,
+  .stories-feature h2,
+  .stories-section-heading h2,
+  .stories-house-copy h2,
+  .stories-memory h2,
+  .stories-newly h2,
+  .morning-present-copy h2,
+  .morning-threads-heading h2,
+  .morning-manuscript h2,
+  .morning-close h2,
+  .esther-page h2,
+  main[class*="booksPage"] h2 {
+    max-width: 12ch !important;
+    font-size: clamp(2.25rem, 9.2vw, 3.55rem) !important;
+    line-height: 1.06 !important;
+    letter-spacing: -0.035em !important;
+  }
+
+  .esther-hero-copy h2 {
+    max-width: 11ch !important;
+    font-size: clamp(2.55rem, 10.5vw, 4rem) !important;
+    line-height: 1.02 !important;
+  }
+
+  .stories-happiness blockquote,
+  .esther-closing > p:last-child {
+    max-width: 13ch !important;
+    font-size: clamp(2.35rem, 9.5vw, 3.75rem) !important;
+    line-height: 1.08 !important;
+  }
+
+  main[class*="booksPage"] h2[class*="title"] {
+    max-width: 10ch !important;
+    font-size: clamp(2.9rem, 12vw, 4.7rem) !important;
+    line-height: 0.98 !important;
+  }
+
+  /* ---------------------------------------------------------------------- */
+  /* Text measure                                                             */
+  /* ---------------------------------------------------------------------- */
+
+  .childhood-intro-copy,
+  .childhood-house-copy-text,
+  .childhood-garden-copy > p:not(.childhood-kicker),
+  .childhood-fragments-copy,
+  .childhood-principle-copy,
+  .childhood-ending p:last-child,
+  .studio-intro-copy,
+  .studio-work-copy > p:not(.studio-kicker),
+  .studio-principle-copy,
+  .studio-future p:last-child,
+  .stories-intro-copy,
+  .stories-feature-copy > p:not(.stories-kicker):not(.stories-feature-number),
+  .stories-section-heading > p:last-child,
+  .stories-house-copy > p:last-child,
+  .stories-newly-copy > p:not(.stories-kicker),
+  .stories-happiness-grid > p,
+  .morning-foyer-grid > p,
+  .morning-present-copy > p:not(.morning-kicker),
+  .morning-thread p,
+  .morning-manuscript-copy,
+  .esther-intro,
+  .esther-copy,
+  main[class*="booksPage"] p[class*="deck"],
+  main[class*="booksPage"] p[class*="description"],
+  main[class*="booksPage"] section[class*="note"] p:last-child {
+    max-width: 34rem !important;
+    font-size: clamp(1.02rem, 3.7vw, 1.12rem) !important;
+    line-height: 1.74 !important;
+  }
+
+  .esther-deck {
+    max-width: 31rem !important;
+    font-size: clamp(1.16rem, 4.25vw, 1.38rem) !important;
+    line-height: 1.62 !important;
+  }
+
+  /* Keep short copy from stretching visually across the whole screen. */
+  .childhood-garden-copy,
+  .studio-work-copy,
+  .stories-feature-copy,
+  .stories-newly-copy,
+  .morning-present-copy,
+  .morning-threads-heading,
+  .esther-copy,
+  main[class*="booksPage"] div[class*="projectCopy"] {
+    max-width: 36rem !important;
+  }
+
+  /* ---------------------------------------------------------------------- */
+  /* Kicker / title / paragraph cadence                                      */
+  /* ---------------------------------------------------------------------- */
+
+  .childhood-kicker,
+  .studio-kicker,
+  .stories-kicker,
+  .morning-kicker,
+  .esther-eyebrow,
+  main[class*="booksPage"] p[class*="eyebrow"],
+  main[class*="booksPage"] p[class*="noteLabel"] {
+    font-size: 0.66rem !important;
+    line-height: 1.4 !important;
+    letter-spacing: 0.14em !important;
+  }
+
+  .childhood-kicker + h2,
+  .studio-kicker + h2,
+  .stories-kicker + h2,
+  .morning-kicker + h2,
+  .esther-eyebrow + h2 {
+    margin-top: 1.15rem !important;
+  }
+
+  /* Images should pause before the prose resumes. */
+  .childhood-garden-inner,
+  .studio-work-grid,
+  .studio-work-grid-reverse,
+  .stories-feature-inner,
+  .stories-newly-inner,
+  .morning-present-grid,
+  .esther-split,
+  .esther-home-grid,
+  .esther-service-grid,
+  .esther-making-grid,
+  main[class*="booksPage"] div[class*="projectBody"] {
+    gap: clamp(2.6rem, 8vw, 3.6rem) !important;
+  }
+
+  .childhood-page figcaption,
+  .esther-page figcaption,
+  .studio-page figcaption,
+  .stories-page figcaption,
+  .morning-page figcaption,
+  main[class*="booksPage"] figcaption {
+    margin-top: 0.7rem !important;
+    font-size: 0.64rem !important;
+    line-height: 1.55 !important;
+  }
+
+  /* Editorial links remain quiet but have enough touch area. */
+  .childhood-link,
+  .stories-text-link,
+  .morning-link,
+  main[class*="booksPage"] a[class*="projectLink"] {
+    margin-top: 1.8rem !important;
+    padding-top: 0.55rem;
+    padding-bottom: 0.4rem !important;
+    font-size: 0.7rem !important;
+    line-height: 1.3;
+  }
+
+  /* Compact structured lists without turning them into card stacks. */
+  .morning-thread {
+    grid-template-columns: 2.3rem minmax(92px, 0.42fr) minmax(0, 1fr) !important;
+    gap: 0.95rem !important;
+    padding-block: 1.45rem !important;
+  }
+
+  .stories-opening-item {
+    padding-block: 1.55rem !important;
+  }
+
+  .esther-timeline li {
+    padding-block: 0.95rem !important;
+  }
+}
+
+@media (max-width: 560px) {
+  .childhood-intro,
+  .childhood-garden,
+  .childhood-fragments,
+  .childhood-archive-principle,
+  .childhood-ending,
+  .esther-hero,
+  .esther-section,
+  .esther-closing,
+  .studio-intro,
+  .studio-original,
+  .studio-reimagined,
+  .studio-principle,
+  .studio-future,
+  .stories-intro,
+  .stories-feature,
+  .stories-opening,
+  .stories-memory,
+  .stories-newly,
+  .stories-happiness,
+  .morning-foyer,
+  .morning-present,
+  .morning-threads,
+  .morning-manuscript,
+  .morning-close {
+    padding-top: 4.6rem !important;
+    padding-bottom: 5rem !important;
+  }
+
+  .childhood-intro h2,
+  .studio-intro h2,
+  .stories-intro h2,
+  .morning-foyer h2 {
+    font-size: clamp(2.45rem, 11.5vw, 3.65rem) !important;
+  }
+
+  .childhood-house-copy h2,
+  .childhood-garden-copy h2,
+  .childhood-fragments h2,
+  .childhood-archive-principle h2,
+  .childhood-ending h2,
+  .studio-work-copy h2,
+  .studio-principle h2,
+  .studio-future h2,
+  .stories-feature h2,
+  .stories-section-heading h2,
+  .stories-house-copy h2,
+  .stories-memory h2,
+  .stories-newly h2,
+  .morning-present-copy h2,
+  .morning-threads-heading h2,
+  .morning-manuscript h2,
+  .morning-close h2,
+  .esther-page h2 {
+    font-size: clamp(2.12rem, 9.8vw, 3rem) !important;
+  }
+
+  .morning-thread {
+    grid-template-columns: 2rem minmax(0, 1fr) !important;
+    gap: 0.8rem 0.9rem !important;
+  }
+
+  .morning-thread h3,
+  .morning-thread p {
+    grid-column: 2;
+  }
+
+  .morning-thread p {
+    margin-top: -0.25rem;
+  }
+}
+
+/* Korean typography is art-directed separately from the English rhythm. */
+@media (max-width: 899px) {
+  html[lang="ko"] .childhood-page h2,
+  html[lang="ko"] .studio-page h2,
+  html[lang="ko"] .stories-page h2,
+  html[lang="ko"] .morning-page h2,
+  html[lang="ko"] .esther-page h2,
+  html[lang="ko"] main[class*="booksPage"] h2 {
+    max-width: 15em !important;
+    font-size: clamp(2rem, 8.6vw, 3.15rem) !important;
+    font-weight: 500 !important;
+    line-height: 1.22 !important;
+    letter-spacing: -0.045em !important;
+    word-break: keep-all !important;
+  }
+
+  html[lang="ko"] .childhood-intro h2,
+  html[lang="ko"] .studio-intro h2,
+  html[lang="ko"] .stories-intro h2,
+  html[lang="ko"] .morning-foyer h2,
+  html[lang="ko"] .esther-hero-copy h2 {
+    font-size: clamp(2.2rem, 9.2vw, 3.45rem) !important;
+    line-height: 1.2 !important;
+  }
+
+  html[lang="ko"] .childhood-page p,
+  html[lang="ko"] .studio-page p,
+  html[lang="ko"] .stories-page p,
+  html[lang="ko"] .morning-page p,
+  html[lang="ko"] .esther-page p,
+  html[lang="ko"] main[class*="booksPage"] p {
+    line-height: 1.82 !important;
+    word-break: keep-all !important;
+  }
+
+  html[lang="ko"] .childhood-kicker,
+  html[lang="ko"] .studio-kicker,
+  html[lang="ko"] .stories-kicker,
+  html[lang="ko"] .morning-kicker,
+  html[lang="ko"] .esther-eyebrow {
+    font-size: 0.72rem !important;
+    letter-spacing: 0.025em !important;
+  }
+}
