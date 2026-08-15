@@ -188,12 +188,6 @@ export default function Home() {
           </figure>
         </div>
       </section>
-
-      <section className={styles.homeClosing}>
-        <div className="container">
-          <p>A house entered slowly, one remembered room at a time.</p>
-        </div>
-      </section>
     </div>
   );
 }
