@@ -131,9 +131,7 @@
 
 .childhood-garden {
   padding-block: clamp(7rem, 13vw, 13rem);
-  background:
-    radial-gradient(circle at 76% 22%, rgba(223, 228, 217, 0.92), transparent 34%),
-    linear-gradient(128deg, #f3eee4 0%, #edf0e8 50%, #e4ebe9 100%);
+  background: #edf0e8;
 }
 
 .childhood-garden-inner {
@@ -175,29 +173,12 @@
 }
 
 .childhood-fragments {
-  position: relative;
-  overflow: hidden;
   padding-block: clamp(8rem, 14vw, 14rem);
   color: #f7f3eb;
-  background:
-    radial-gradient(circle at 82% 18%, rgba(119, 157, 173, 0.3), transparent 34%),
-    linear-gradient(145deg, var(--childhood-night) 0%, #16334f 56%, #29465d 100%);
-}
-
-.childhood-fragments::after {
-  content: "";
-  position: absolute;
-  right: -17vw;
-  bottom: -30vw;
-  width: 60vw;
-  aspect-ratio: 1;
-  border: 1px solid rgba(247, 243, 235, 0.1);
-  border-radius: 50%;
+  background: linear-gradient(145deg, var(--childhood-night) 0%, #16334f 58%, #29465d 100%);
 }
 
 .childhood-fragments-inner {
-  position: relative;
-  z-index: 1;
   display: grid;
   grid-template-columns: minmax(0, 0.88fr) minmax(300px, 0.82fr);
   gap: clamp(3rem, 10vw, 10rem);
@@ -292,9 +273,7 @@
 
 .childhood-ending {
   padding-block: clamp(7rem, 13vw, 13rem);
-  background:
-    radial-gradient(circle at 20% 38%, rgba(238, 225, 222, 0.72), transparent 30%),
-    linear-gradient(120deg, #f6efe5 0%, #f5f0e7 56%, #ece8e4 100%);
+  background: #f3ece3;
 }
 
 .childhood-ending-inner {
@@ -384,11 +363,5 @@
   .childhood-garden-figure img {
     aspect-ratio: 0.92 / 1;
     object-position: 45% center;
-  }
-
-  .childhood-fragments::after {
-    right: -32vw;
-    bottom: -15vw;
-    width: 96vw;
   }
 }
