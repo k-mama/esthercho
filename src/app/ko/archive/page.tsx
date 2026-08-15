@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { PageCover } from "@/components/page-cover";
 import "../../archive/archive.css";
+import "../../archive/archive-luminous.css";
 
 export const metadata: Metadata = {
   title: "어린 시절 앨범",
