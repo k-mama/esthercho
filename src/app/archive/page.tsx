@@ -36,8 +36,8 @@ export default function ArchivePage() {
                 of an archive is rarely grand.
               </p>
               <p>
-                These photographs are kept for what they are: pieces of a real
-                life, with their age and imperfections still visible.
+                These photographs are kept as pieces of a real life, with their
+                age and imperfections still visible.
               </p>
             </div>
           </div>
@@ -66,14 +66,12 @@ export default function ArchivePage() {
           </div>
           <div className="childhood-house-copy-text">
             <p>
-              Houses hold more than rooms. Years later, a window, a yard, a
-              staircase, or the shape of a garden can return before the rest of
-              the story does.
+              Years later, a window, a yard, a staircase, or the shape of a
+              garden can return before the rest of the story does.
             </p>
             <p>
-              On this site, places are not used as nostalgic decoration. They
-              are part of the record: where a child stood, where family life
-              unfolded, and where memory still knows how to find its way back.
+              Places are part of the record here: where a child stood, where
+              family life unfolded, and where memory still finds its way back.
             </p>
           </div>
         </div>
@@ -94,11 +92,10 @@ export default function ArchivePage() {
 
           <div className="childhood-garden-copy">
             <p className="childhood-kicker">A CHILD IN THE FRAME</p>
-            <h2 id="childhood-garden-title">Not a symbol. A person.</h2>
+            <h2 id="childhood-garden-title">A child in the garden.</h2>
             <p>
-              The photographs do not need to become illustrations for a lesson.
-              They can remain ordinary and specific: a face, a season, a place,
-              a moment someone once thought worth keeping.
+              A face, a season, a place, a moment someone once thought worth
+              keeping. The photograph does not need to explain more than that.
             </p>
           </div>
         </div>
@@ -117,9 +114,8 @@ export default function ArchivePage() {
               go home.
             </p>
             <p>
-              Those fragments belong in the archive too. When they become
-              stories, the missing parts are not invented simply to make the
-              memory look complete.
+              Those fragments belong in the archive too. Missing parts are not
+              invented simply to make a memory look complete.
             </p>
           </div>
         </div>
@@ -136,14 +132,9 @@ export default function ArchivePage() {
           </div>
           <div className="childhood-principle-copy">
             <p>
-              Original photographs are presented as archival material. When a
-              later image is reconstructed or reimagined from memory, it is
-              identified separately rather than allowed to pass as historical
-              evidence.
-            </p>
-            <p>
-              The aim is not to make the past prettier. It is to let a real life
-              remain recognizable inside the design.
+              Original photographs are presented as archival material. Images
+              reconstructed or reimagined from memory are identified separately,
+              never as historical evidence.
             </p>
             <Link href="/stories/" className="childhood-link">
               Enter the stories
@@ -155,10 +146,9 @@ export default function ArchivePage() {
       <section className="childhood-ending" aria-labelledby="childhood-ending-title">
         <div className="container childhood-ending-inner">
           <p className="childhood-kicker">THE ALBUM STAYS OPEN</p>
-          <h2 id="childhood-ending-title">More can return later.</h2>
+          <h2 id="childhood-ending-title">The album is not finished.</h2>
           <p>
-            The childhood archive is allowed to remain unfinished. A photograph
-            can wait years for the story that belongs beside it.
+            A photograph can wait years for the story that belongs beside it.
           </p>
         </div>
       </section>
