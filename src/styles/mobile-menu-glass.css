@@ -90,12 +90,12 @@
     right: 0 !important;
     width: 100% !important;
     min-width: 0 !important;
-    max-height: min(72svh, 620px);
+    max-height: min(76svh, 680px);
     overflow-y: auto;
     display: grid !important;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 0 !important;
-    padding: 1.05rem 1.2rem 1.2rem !important;
+    padding: 1.25rem 1.3rem 1.4rem !important;
     background:
       linear-gradient(
         145deg,
@@ -119,26 +119,32 @@
   }
 
   .site-header-nav-mobile-menu li:nth-child(odd) {
-    padding-right: 0.8rem;
+    padding-right: 0.9rem;
   }
 
   .site-header-nav-mobile-menu li:nth-child(even) {
-    padding-left: 0.8rem;
+    padding-left: 0.9rem;
   }
 
   .site-header-nav-mobile-menu .site-header-nav-link {
     display: flex;
     align-items: center;
-    min-height: 3.45rem;
+    min-height: 4.55rem;
     width: 100%;
     color: #103354 !important;
-    font-size: 0.78rem !important;
-    font-weight: 650;
-    line-height: 1.28;
-    letter-spacing: 0.045em;
+    font-size: clamp(1.2rem, 4.2vw, 1.42rem) !important;
+    font-weight: 620;
+    line-height: 1.16;
+    letter-spacing: 0.015em;
     text-decoration: none;
     text-shadow: 0 1px 12px rgba(255, 255, 255, 0.48) !important;
     border-bottom: 1px solid rgba(16, 51, 84, 0.13);
+  }
+
+  .site-header-nav-mobile-menu .site-header-nav-room-link {
+    font-size: clamp(1.08rem, 3.8vw, 1.28rem) !important;
+    font-weight: 590;
+    letter-spacing: 0.01em;
   }
 
   .site-header-nav-mobile-menu .site-header-nav-link[aria-current="page"] {
@@ -147,12 +153,12 @@
   }
 
   .site-header-nav-mobile-room-start {
-    margin-top: 0.3rem;
+    margin-top: 0.45rem;
   }
 
   .site-header-nav-mobile-room-start,
   .site-header-nav-mobile-room-start ~ li {
-    opacity: 0.88;
+    opacity: 0.9;
   }
 
   body:has(.home-video-hero, .page-cover-shell) .site-header-nav-mobile-menu {
@@ -194,7 +200,8 @@
 
   .site-header-nav-mobile-menu {
     grid-template-columns: 1fr;
-    padding: 0.85rem 1.05rem 1.05rem !important;
+    padding: 1rem 1.15rem 1.2rem !important;
+    max-height: min(78svh, 700px);
   }
 
   .site-header-nav-mobile-menu li:nth-child(odd),
@@ -203,8 +210,12 @@
   }
 
   .site-header-nav-mobile-menu .site-header-nav-link {
-    min-height: 3.15rem;
-    font-size: 0.77rem !important;
+    min-height: 4.35rem;
+    font-size: clamp(1.28rem, 6vw, 1.48rem) !important;
+  }
+
+  .site-header-nav-mobile-menu .site-header-nav-room-link {
+    font-size: clamp(1.12rem, 5.2vw, 1.3rem) !important;
   }
 }
 
