@@ -130,7 +130,7 @@ export default function KoreanHome() {
           <article className={styles.roomColumn}>
             <figure className={`${styles.roomFigure} ${styles.booksFigure}`}>
               <Image
-                src="/media/covers/books-cover-final-20260802.png"
+                src="/media/covers/books-cover-final-20260802.webp"
                 alt="은은한 햇살이 드는 식탁에서 책을 읽는 조성연"
                 width={1800}
                 height={1059}
