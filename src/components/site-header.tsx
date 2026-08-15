@@ -30,15 +30,22 @@ export function SiteHeader() {
   const mobileMenuRef = useRef<HTMLDetailsElement>(null);
 
   const isKorean = pathname === "/ko" || pathname.startsWith("/ko/");
-  const isHome = pathname === "/" || pathname === "/ko" || pathname === "/ko/";
+  const isHome =
+    pathname === "/" ||
+    pathname === "/home" ||
+    pathname === "/home/" ||
+    pathname === "/ko" ||
+    pathname === "/ko/" ||
+    pathname === "/ko/home" ||
+    pathname === "/ko/home/";
 
   const navItems = isKorean ? navigationConfig.ko : navigationConfig.en;
   const roomItems = isKorean
     ? navigationConfig.roomsKo
     : navigationConfig.roomsEn;
 
-  const homeHref = isKorean ? "/ko/" : "/";
-  const languageHref = isKorean ? "/" : "/ko/";
+  const homeHref = isKorean ? "/ko/home/" : "/home/";
+  const languageHref = isKorean ? "/home/" : "/ko/home/";
 
   const languageLabel = isKorean
     ? "영문 홈페이지로 이동"
