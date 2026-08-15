@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { PageCover } from "@/components/page-cover";
 import { featuredBook } from "@/content/books";
@@ -31,21 +32,44 @@ export default function BooksPage() {
         shade="soft"
       />
 
-      <section className={styles.projectSection}>
-        <div className={`container ${styles.projectGrid}`}>
-          <div className={styles.projectCopy}>
-            <p className={styles.eyebrow}>{featuredBook.eyebrow.en}</p>
-            <h2 className={styles.title}>{featuredBook.title}</h2>
+      <section className={styles.projectSection} aria-labelledby="featured-book-title">
+        <div className={`container ${styles.projectHeader}`}>
+          <p className={styles.eyebrow}>{featuredBook.eyebrow.en}</p>
+          <div className={styles.projectTitleBlock}>
+            <h2 id="featured-book-title" className={styles.title}>
+              {featuredBook.title}
+            </h2>
             <span className={styles.status}>{featuredBook.status.en}</span>
-            <p className={styles.deck}>{featuredBook.deck.en}</p>
-            <p className={styles.description}>
-              {featuredBook.description.en}
-            </p>
+          </div>
+          <p className={styles.deck}>{featuredBook.deck.en}</p>
+        </div>
+
+        <div className={`container ${styles.projectBody}`}>
+          <figure className={styles.projectFigure}>
+            <Image
+              src="/media/esther/morning-table.jpg"
+              alt="A breakfast prepared at Esther Cho's morning table"
+              width={1200}
+              height={1600}
+              sizes="(max-width: 899px) 82vw, 38vw"
+            />
+            <figcaption>Morning table · A present-day detail</figcaption>
+          </figure>
+
+          <div className={styles.projectCopy}>
+            <p className={styles.description}>{featuredBook.description.en}</p>
             <Link className={styles.projectLink} href="/notes/">
               Read from The Morning Table
             </Link>
           </div>
+        </div>
+      </section>
 
+      <section className={styles.detailsSection} aria-labelledby="project-notes-title">
+        <div className={`container ${styles.detailsInner}`}>
+          <h2 id="project-notes-title" className={styles.detailsHeading}>
+            Project notes
+          </h2>
           <dl className={styles.projectFacts}>
             {facts.map((item) => (
               <div className={styles.fact} key={item.label.en}>
@@ -58,7 +82,8 @@ export default function BooksPage() {
       </section>
 
       <section className={styles.note}>
-        <div className="container">
+        <div className={`container ${styles.noteInner}`}>
+          <p className={styles.noteLabel}>PUBLICATION RECORD</p>
           <p>
             Cover, publication date, editions, and rights information will be
             added only after each item is formally confirmed.
