@@ -5,10 +5,38 @@ import { HomeHeroVideo } from "./home-hero-video";
 import styles from "./page.module.css";
 import polish from "./home-polish.module.css";
 
+const homeUrl = "https://esthercho.pages.dev/home/";
+const socialPreviewImage =
+  "https://esthercho.pages.dev/media/home/esther-house-entry-poster.jpg?v=20260815-2000";
+
 export const metadata: Metadata = {
   title: "Esther Cho",
   description:
     "A house of stories shaped by faith, memory, food, care, and ordinary life.",
+  alternates: {
+    canonical: homeUrl,
+  },
+  openGraph: {
+    type: "website",
+    url: homeUrl,
+    siteName: "Esther Cho",
+    title: "Esther Cho",
+    description:
+      "Enter Esther Cho's house of stories, beginning at the open gate of the home where she lived.",
+    images: [
+      {
+        url: socialPreviewImage,
+        alt: "The open gate and garden entrance of Esther Cho's real childhood home",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Esther Cho",
+    description:
+      "Enter Esther Cho's house of stories, beginning at the open gate of the home where she lived.",
+    images: [socialPreviewImage],
+  },
 };
 
 const rooms = [
