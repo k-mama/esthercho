@@ -46,8 +46,8 @@ export default function KoreanHome() {
               <span>한 집 안에서 천천히 이어집니다.</span>
             </h2>
             <p>
-              좋은 사진 한 장이 방의 주인공이 될 수 있도록 공간을 넉넉히 둡니다.
-              화면의 장식보다 조성연이 실제로 살아온 시간이 먼저 보이는 집입니다.
+              아침밥상 옆에 말씀이 있고, 오래된 사진 한 장이 수십 년 뒤 이야기를
+              열기도 합니다. 서로 다른 기록이 한 사람의 삶 안에서 다시 만납니다.
             </p>
           </div>
 
@@ -119,12 +119,12 @@ export default function KoreanHome() {
           <div className={styles.sceneCopy}>
             <p className={styles.eyebrow}>기억</p>
             <h2 id="memory-title" className={styles.koDisplay}>
-              <span>오래된 사진은 그대로.</span>
-              <span>그 주변은 지금의 감각으로.</span>
+              <span>말보다 먼저</span>
+              <span>기억나는 사진들이 있습니다.</span>
             </h2>
             <p>
-              어린 시절의 집과 정원, 가족사진과 기억의 조각을 억지로 빈티지하게
-              꾸미지 않습니다. 사진이 가진 시간은 그대로 두고 공간만 현대적으로 정리합니다.
+              어린 시절의 집과 정원, 가족사진 속 이름과 장소, 그때는 몰랐던 작은
+              장면들이 천천히 돌아옵니다. 사진은 그대로이고, 그 곁의 이야기는 자라납니다.
             </p>
             <Link href="/ko/archive/" className={styles.textLink}>
               어린 시절 기록 보기
@@ -207,8 +207,8 @@ export default function KoreanHome() {
         <div className={`container ${styles.closingInner}`}>
           <p className={styles.eyebrow}>조금 더 안쪽으로</p>
           <h2 id="closing-title" className={styles.koDisplay}>
-            <span>책과 작가 소개는</span>
-            <span>이 삶을 만나는 또 다른 방입니다.</span>
+            <span>이 집의 이야기들은</span>
+            <span>때로 책이 되어 더 멀리 갑니다.</span>
           </h2>
           <div className={styles.closingLinks}>
             <Link href="/ko/books/">책 <span aria-hidden="true">→</span></Link>
