@@ -31,19 +31,6 @@ const lifeChapters = [
   "지금의 삶",
 ];
 
-const memoryCollections = [
-  "집",
-  "연한 파랑",
-  "비",
-  "초여름",
-  "크리스마스",
-  "식탁",
-  "새벽",
-  "노을",
-  "가족",
-  "행복",
-];
-
 export default function KoreanStoriesPage() {
   return (
     <main className="stories-page">
@@ -173,21 +160,6 @@ export default function KoreanStoriesPage() {
             />
             <figcaption>대학 시절</figcaption>
           </figure>
-        </div>
-      </section>
-
-      <section className="stories-memory" aria-labelledby="memory-collections-title">
-        <div className="container stories-memory-inner">
-          <div className="stories-memory-heading">
-            <p className="stories-kicker">자꾸 돌아오는 것들</p>
-            <h2 id="memory-collections-title">같은 것들이 자꾸 다시 나온다.</h2>
-          </div>
-
-          <div className="stories-memory-list" aria-label="되풀이해서 돌아오는 기억">
-            {memoryCollections.map((collection) => (
-              <span key={collection}>{collection}</span>
-            ))}
-          </div>
         </div>
       </section>
 
