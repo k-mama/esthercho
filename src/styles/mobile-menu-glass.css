@@ -1,4 +1,5 @@
-/* Esther Cho mobile navigation — cinematic glass menu over the real-house film. */
+/* Esther Cho mobile navigation — full-screen editorial overlay.
+   No floating panel, no content collision, no decorative object layer. */
 
 @media (max-width: 959px) {
   .site-header-main-row {
@@ -23,13 +24,22 @@
     justify-self: center;
   }
 
+  /* Keep the brand controls above the full-screen menu layer. */
+  .site-header-logo,
+  .site-header-lang,
   .site-header-nav-mobile summary {
     position: relative;
+    z-index: 82;
+  }
+
+  .site-header-nav-mobile summary {
     width: 44px;
     height: 44px;
     display: grid;
     place-items: center;
     overflow: hidden;
+    list-style: none;
+    cursor: pointer;
     font-size: 0 !important;
     line-height: 0;
     color: transparent !important;
@@ -37,6 +47,10 @@
     border: 0;
     background: transparent;
     -webkit-tap-highlight-color: transparent;
+  }
+
+  .site-header-nav-mobile summary::-webkit-details-marker {
+    display: none;
   }
 
   .site-header-nav-mobile summary::before,
@@ -83,109 +97,147 @@
     transform: rotate(-45deg);
   }
 
-  .site-header-nav-mobile-menu {
-    position: absolute !important;
-    top: calc(100% + 0.55rem) !important;
-    left: 0 !important;
-    right: 0 !important;
-    width: 100% !important;
+  /* Explicitly keep the menu absent while <details> is closed. */
+  .site-header-nav-mobile details:not([open]) .site-header-nav-mobile-menu {
+    display: none !important;
+  }
+
+  /* Full viewport navigation. The gradient behaves like light, not a card. */
+  .site-header-nav-mobile details[open] .site-header-nav-mobile-menu {
+    position: fixed !important;
+    inset: 0 !important;
+    width: 100vw !important;
     min-width: 0 !important;
-    max-height: none !important;
-    overflow: visible !important;
-    display: grid !important;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    min-height: 100dvh !important;
+    max-height: 100dvh !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: flex-start;
     gap: 0 !important;
-    padding: 1rem 1.2rem 1.1rem !important;
+    margin: 0 !important;
+    padding:
+      clamp(8.6rem, 19vh, 10.5rem)
+      clamp(1.65rem, 7vw, 3.6rem)
+      max(2.2rem, env(safe-area-inset-bottom)) !important;
+    list-style: none;
     background:
+      radial-gradient(
+        circle at 12% 10%,
+        rgba(158, 205, 218, 0.16) 0%,
+        rgba(158, 205, 218, 0) 34%
+      ),
+      radial-gradient(
+        circle at 91% 78%,
+        rgba(196, 163, 186, 0.12) 0%,
+        rgba(196, 163, 186, 0) 38%
+      ),
       linear-gradient(
-        145deg,
-        rgba(249, 251, 253, 0.36) 0%,
-        rgba(247, 249, 251, 0.2) 48%,
-        rgba(239, 246, 250, 0.14) 100%
+        155deg,
+        rgba(8, 25, 44, 0.985) 0%,
+        rgba(14, 42, 65, 0.978) 52%,
+        rgba(9, 28, 47, 0.992) 100%
       ) !important;
-    border: 1px solid rgba(255, 255, 255, 0.5) !important;
-    border-radius: 18px !important;
-    box-shadow:
-      0 18px 46px rgba(11, 35, 61, 0.08),
-      inset 0 1px rgba(255, 255, 255, 0.38) !important;
-    backdrop-filter: blur(2px) saturate(1.04) !important;
-    -webkit-backdrop-filter: blur(2px) saturate(1.04) !important;
-    z-index: 60 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    z-index: 70 !important;
+    overscroll-behavior: contain;
   }
 
   .site-header-nav-mobile-menu li {
-    list-style: none;
+    width: 100%;
     min-width: 0;
-  }
-
-  .site-header-nav-mobile-menu li:nth-child(odd) {
-    padding-right: 0.85rem;
-  }
-
-  .site-header-nav-mobile-menu li:nth-child(even) {
-    padding-left: 0.85rem;
+    padding: 0 !important;
+    list-style: none;
   }
 
   .site-header-nav-mobile-menu .site-header-nav-link {
+    position: relative;
     display: flex;
     align-items: center;
-    min-height: 3.65rem;
     width: 100%;
-    color: #103354 !important;
-    font-size: clamp(1.05rem, 3.7vw, 1.18rem) !important;
-    font-weight: 640;
-    line-height: 1.16;
-    letter-spacing: 0.012em;
+    min-height: clamp(3.8rem, 9.5vh, 4.8rem) !important;
+    padding: 0.15rem 2.3rem 0.15rem 0 !important;
+    color: rgba(249, 246, 237, 0.94) !important;
+    font-family: var(--font-interface) !important;
+    font-size: clamp(1.36rem, 5.7vw, 1.8rem) !important;
+    font-weight: 560 !important;
+    line-height: 1.08 !important;
+    letter-spacing: 0.02em !important;
     text-decoration: none;
-    text-shadow: 0 1px 12px rgba(255, 255, 255, 0.48) !important;
-    border-bottom: 1px solid rgba(16, 51, 84, 0.13);
+    text-shadow: none !important;
+    border-bottom: 1px solid rgba(233, 239, 242, 0.17);
   }
 
-  .site-header-nav-mobile-menu .site-header-nav-room-link {
-    font-size: clamp(0.96rem, 3.35vw, 1.06rem) !important;
-    font-weight: 600;
-    letter-spacing: 0.008em;
+  .site-header-nav-mobile-menu .site-header-nav-link::after {
+    position: absolute;
+    right: 0.15rem;
+    top: 50%;
+    width: 0.48rem;
+    height: 0.48rem;
+    content: "";
+    border-top: 1px solid rgba(225, 202, 150, 0.72);
+    border-right: 1px solid rgba(225, 202, 150, 0.72);
+    transform: translateY(-50%) rotate(45deg);
+  }
+
+  .site-header-nav-mobile-menu .site-header-nav-link:hover,
+  .site-header-nav-mobile-menu .site-header-nav-link:focus-visible {
+    color: #ffffff !important;
   }
 
   .site-header-nav-mobile-menu .site-header-nav-link[aria-current="page"] {
-    color: #092640 !important;
-    font-weight: 750;
+    color: #ffffff !important;
+    font-weight: 690 !important;
   }
 
+  .site-header-nav-mobile-menu .site-header-nav-link[aria-current="page"]::before {
+    position: absolute;
+    right: 1.2rem;
+    top: 50%;
+    width: 0.34rem;
+    height: 1px;
+    content: "";
+    background: rgba(225, 202, 150, 0.92);
+    transform: translateY(-50%);
+  }
+
+  /* The two room links are part of the same house, separated only by air. */
   .site-header-nav-mobile-room-start {
-    margin-top: 0.2rem;
+    margin-top: clamp(1rem, 3vh, 1.7rem) !important;
   }
 
-  .site-header-nav-mobile-room-start,
-  .site-header-nav-mobile-room-start ~ li {
-    opacity: 0.92;
+  .site-header-nav-mobile-menu .site-header-nav-room-link {
+    min-height: clamp(3.3rem, 8vh, 4rem) !important;
+    color: rgba(226, 234, 239, 0.77) !important;
+    font-size: clamp(1.03rem, 4.5vw, 1.28rem) !important;
+    font-weight: 540 !important;
+    letter-spacing: 0.055em !important;
   }
 
-  body:has(.home-video-hero, .page-cover-shell) .site-header-nav-mobile-menu {
-    background:
-      linear-gradient(
-        145deg,
-        rgba(250, 252, 253, 0.32) 0%,
-        rgba(245, 249, 252, 0.17) 52%,
-        rgba(234, 243, 248, 0.11) 100%
-      ) !important;
-    border-color: rgba(255, 255, 255, 0.46) !important;
+  .site-header-nav-mobile-room-start .site-header-nav-room-link {
+    border-top: 1px solid rgba(225, 202, 150, 0.24);
   }
 
-  /* When the glass menu is open, keep the moving house film visible but let
-     the menu own the typography layer. This prevents hero copy collisions. */
-  body:has(.site-header-nav-mobile details[open]) .home-video-hero > div:last-child {
-    opacity: 0.08;
-    transition: opacity 180ms ease;
+  /* Menu opening becomes a true modal-like state: no page collision or scroll. */
+  body:has(.site-header-nav-mobile details[open]) {
+    overflow: hidden !important;
   }
 
-  body:not(:has(.site-header-nav-mobile details[open])) .home-video-hero > div:last-child {
-    opacity: 1;
-    transition: opacity 180ms ease;
+  body:has(.site-header-nav-mobile details[open]) .site-header {
+    z-index: 1000 !important;
   }
 
   body:not(:has(.home-video-hero, .page-cover-shell)) .site-header-nav-mobile summary {
     --menu-line: #173b5d;
+  }
+
+  body:has(.site-header-nav-mobile details[open]) .site-header-nav-mobile summary {
+    --menu-line: #f7f4ee;
   }
 
   .site-header-lang {
@@ -208,31 +260,26 @@
     height: 42px;
   }
 
-  .site-header-nav-mobile-menu {
-    grid-template-columns: 1fr;
-    padding: 0.85rem 1.15rem 1rem !important;
-  }
-
-  .site-header-nav-mobile-menu li:nth-child(odd),
-  .site-header-nav-mobile-menu li:nth-child(even) {
-    padding-inline: 0;
+  .site-header-nav-mobile details[open] .site-header-nav-mobile-menu {
+    padding-top: clamp(7.9rem, 17vh, 9.1rem) !important;
+    padding-right: clamp(1.45rem, 6vw, 2rem) !important;
+    padding-left: clamp(1.45rem, 6vw, 2rem) !important;
   }
 
   .site-header-nav-mobile-menu .site-header-nav-link {
-    min-height: 3.45rem;
-    font-size: clamp(1.06rem, 5vw, 1.16rem) !important;
+    min-height: clamp(3.65rem, 8.5vh, 4.35rem) !important;
+    font-size: clamp(1.28rem, 6vw, 1.55rem) !important;
   }
 
   .site-header-nav-mobile-menu .site-header-nav-room-link {
-    font-size: clamp(0.98rem, 4.55vw, 1.04rem) !important;
+    min-height: clamp(3.15rem, 7.5vh, 3.7rem) !important;
+    font-size: clamp(1rem, 4.8vw, 1.16rem) !important;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .site-header-nav-mobile summary::before,
-  .site-header-nav-mobile summary::after,
-  body:has(.site-header-nav-mobile details[open]) .home-video-hero > div:last-child,
-  body:not(:has(.site-header-nav-mobile details[open])) .home-video-hero > div:last-child {
+  .site-header-nav-mobile summary::after {
     transition: none;
   }
 }
