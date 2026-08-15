@@ -90,55 +90,61 @@ export default function StoriesPage() {
         shade="medium"
       />
 
-      <section className="container stories-intro" aria-labelledby="stories-intro-title">
-        <p className="stories-kicker">A LIVING AUTHOR ARCHIVE</p>
-        <div className="stories-intro-grid">
-          <h2 id="stories-intro-title">Memory does not arrive in order.</h2>
-          <div className="stories-intro-copy">
-            <p>
-              A story may begin with a house, a July afternoon, a clean pair of
-              pajamas, or a sentence someone said decades ago.
-            </p>
-            <p>
-              These pages grow as Esther remembers. They are not a finished
-              memoir arranged once and for all, but a living collection where a
-              person, place, object, season, or photograph can open another
-              door.
-            </p>
+      <section className="stories-intro" aria-labelledby="stories-intro-title">
+        <div className="container stories-intro-inner">
+          <p className="stories-kicker">A LIVING AUTHOR ARCHIVE</p>
+          <div className="stories-intro-grid">
+            <h2 id="stories-intro-title">Memory does not arrive in order.</h2>
+            <div className="stories-intro-copy">
+              <p>
+                A story may begin with a house, a July afternoon, a clean pair of
+                pajamas, or a sentence someone said decades ago.
+              </p>
+              <p>
+                These pages grow as Esther remembers. They are not a finished
+                memoir arranged once and for all. A person, place, object, season,
+                or photograph can open another door.
+              </p>
+            </div>
           </div>
+          <div className="stories-intro-line" aria-hidden="true" />
         </div>
       </section>
 
-      <section className="container stories-start" aria-labelledby="start-here-title">
-        <figure className="stories-start-figure">
-          <Image
-            src="/media/home/childhood-garden.jpg"
-            alt="Esther Cho smiling in a garden as a child"
-            width={1800}
-            height={1350}
-            sizes="(max-width: 899px) 100vw, 56vw"
-          />
-          <figcaption>Archive photograph · Esther Cho as a child</figcaption>
-        </figure>
+      <section className="stories-feature" aria-labelledby="start-here-title">
+        <div className="container stories-feature-inner">
+          <figure className="stories-feature-figure">
+            <Image
+              src="/media/home/childhood-garden.jpg"
+              alt="Esther Cho smiling in a garden as a child"
+              width={1800}
+              height={1350}
+              sizes="(max-width: 899px) 100vw, 64vw"
+              priority
+            />
+            <figcaption>Archive photograph · Esther Cho as a child</figcaption>
+          </figure>
 
-        <div className="stories-start-copy">
-          <p className="stories-kicker">START HERE</p>
-          <h2 id="start-here-title">My Father Dreamed of a Tiger</h2>
-          <p className="stories-lead">
-            Before Esther was born, her father dreamed of a tiger. The baby was
-            a girl. The family joke was that perhaps it had been a cat.
-          </p>
-          <p>
-            The first story is intentionally small. It enters the archive as the
-            memory has been recorded so far, without filling the quiet spaces
-            with details that have not been told.
-          </p>
-          <Link
-            href="/stories/my-father-dreamed-of-a-tiger/"
-            className="stories-text-link"
-          >
-            Read the first story
-          </Link>
+          <div className="stories-feature-copy">
+            <p className="stories-kicker">START HERE</p>
+            <p className="stories-feature-number">01</p>
+            <h2 id="start-here-title">My Father Dreamed of a Tiger</h2>
+            <p className="stories-feature-lead">
+              Before Esther was born, her father dreamed of a tiger. The baby was
+              a girl. The family joke was that perhaps it had been a cat.
+            </p>
+            <p>
+              The first story enters the archive exactly as the memory has been
+              recorded so far. The quiet spaces stay quiet until something more
+              returns.
+            </p>
+            <Link
+              href="/stories/my-father-dreamed-of-a-tiger/"
+              className="stories-text-link"
+            >
+              Read the first story
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -148,36 +154,62 @@ export default function StoriesPage() {
             <p className="stories-kicker">OPENING COLLECTION</p>
             <h2 id="opening-collection-title">Seven doors into the story.</h2>
             <p>
-              Not a complete table of contents. Just the first memories chosen
-              to open the archive.
+              Not a table of contents. Just the first memories chosen to open the
+              archive.
             </p>
           </header>
 
-          <div className="stories-opening-grid">
+          <ol className="stories-opening-list">
             {openingCollection.map((story) => (
-              <article className="stories-opening-item" key={story.number}>
-                <p className="stories-opening-number">{story.number}</p>
-                <h3>{story.title}</h3>
-                <p className="stories-opening-meta">{story.meta}</p>
+              <li className="stories-opening-item" key={story.number}>
+                <span className="stories-opening-number">{story.number}</span>
+                <div className="stories-opening-title-group">
+                  <p className="stories-opening-meta">{story.meta}</p>
+                  <h3>
+                    {story.href ? (
+                      <Link href={story.href}>{story.title}</Link>
+                    ) : (
+                      story.title
+                    )}
+                  </h3>
+                </div>
                 {story.href ? (
-                  <Link href={story.href} className="stories-text-link">
-                    Read story
+                  <Link href={story.href} className="stories-opening-action">
+                    Read story <span aria-hidden="true">→</span>
                   </Link>
-                ) : null}
-              </article>
+                ) : (
+                  <span className="stories-opening-state">In the archive</span>
+                )}
+              </li>
             ))}
-          </div>
+          </ol>
         </div>
       </section>
 
-      <section className="container stories-archive-rhythm" aria-labelledby="archive-rhythm-title">
-        <div className="stories-archive-copy">
-          <p className="stories-kicker">LIFE CHAPTERS</p>
-          <h2 id="archive-rhythm-title">A life read by turning points, not only dates.</h2>
-          <p>
-            The story keeps its chronology, but the archive is organized around
-            the seasons that changed the shape of a life.
-          </p>
+      <section className="stories-house" aria-labelledby="life-chapters-title">
+        <figure className="stories-house-figure">
+          <Image
+            src="/media/home/childhood-house.jpg"
+            alt="The house and garden connected to Esther Cho's childhood"
+            width={1800}
+            height={1059}
+            sizes="100vw"
+          />
+          <figcaption className="container">
+            Archive photograph · The remembered house and garden
+          </figcaption>
+        </figure>
+
+        <div className="container stories-house-editorial">
+          <div className="stories-house-copy">
+            <p className="stories-kicker">LIFE CHAPTERS</p>
+            <h2 id="life-chapters-title">A life can be read by its turning points.</h2>
+            <p>
+              Chronology remains underneath the archive, but memory has its own
+              architecture. Some years are remembered as rooms. Others as a
+              person, a season, or the moment everything changed.
+            </p>
+          </div>
 
           <ol className="stories-chapter-list">
             {lifeChapters.map((chapter, index) => (
@@ -187,38 +219,27 @@ export default function StoriesPage() {
               </li>
             ))}
           </ol>
-        </div>
 
-        <div className="stories-archive-images" aria-label="Archive photographs across Esther Cho's life">
-          <figure className="stories-archive-image stories-archive-image--house">
-            <Image
-              src="/media/home/childhood-house.jpg"
-              alt="The house and garden connected to Esther Cho's childhood"
-              width={1800}
-              height={1059}
-              sizes="(max-width: 899px) 100vw, 34vw"
-            />
-            <figcaption>The remembered house and garden.</figcaption>
-          </figure>
-
-          <figure className="stories-archive-image stories-archive-image--artist">
+          <figure className="stories-young-artist">
             <Image
               src="/media/esther/young-artist.jpg"
               alt="Esther Cho during her university years"
               width={1500}
               height={1125}
-              sizes="(max-width: 899px) 100vw, 28vw"
+              sizes="(max-width: 899px) 72vw, 25vw"
             />
-            <figcaption>Esther Cho during her university years.</figcaption>
+            <figcaption>Archive photograph · University years</figcaption>
           </figure>
         </div>
       </section>
 
       <section className="stories-memory" aria-labelledby="memory-collections-title">
-        <div className="container stories-memory-grid">
-          <div>
+        <div className="container stories-memory-inner">
+          <div className="stories-memory-heading">
             <p className="stories-kicker">MEMORY COLLECTIONS</p>
-            <h2 id="memory-collections-title">A memory can be found by its color, weather, or room.</h2>
+            <h2 id="memory-collections-title">
+              A memory can be found by its color, weather, or room.
+            </h2>
           </div>
 
           <div className="stories-memory-list" aria-label="Memory collection themes">
@@ -229,42 +250,47 @@ export default function StoriesPage() {
         </div>
       </section>
 
-      <section className="container stories-newly" aria-labelledby="newly-remembered-title">
-        <figure className="stories-newly-figure">
-          <Image
-            src="/media/esther/morning-table.jpg"
-            alt="A breakfast prepared at Esther Cho's table"
-            width={1200}
-            height={1600}
-            sizes="(max-width: 899px) 100vw, 36vw"
-          />
-        </figure>
+      <section className="stories-newly" aria-labelledby="newly-remembered-title">
+        <div className="container stories-newly-inner">
+          <div className="stories-newly-copy">
+            <p className="stories-kicker">NEWLY REMEMBERED</p>
+            <h2 id="newly-remembered-title">Some stories arrive years late.</h2>
+            <p>
+              A smell, a table, a season, or an ordinary object can bring back a
+              scene that had been quiet for years. Newly remembered stories will
+              be added here as they return.
+            </p>
+            <Link href="/archive/" className="stories-text-link">
+              Follow the photographs
+            </Link>
+          </div>
 
-        <div className="stories-newly-copy">
-          <p className="stories-kicker">NEWLY REMEMBERED</p>
-          <h2 id="newly-remembered-title">Some stories arrive years late.</h2>
-          <p>
-            Esther often remembers without warning. A smell, a table, a season,
-            or an ordinary object can bring back a scene that had been quiet for
-            years. Newly remembered stories will be added here as they return.
-          </p>
-          <Link href="/archive/" className="stories-text-link">
-            Follow the photographs
-          </Link>
+          <figure className="stories-newly-figure">
+            <Image
+              src="/media/esther/morning-table.jpg"
+              alt="A breakfast prepared at Esther Cho's table"
+              width={1200}
+              height={1600}
+              sizes="(max-width: 899px) 100vw, 38vw"
+            />
+            <figcaption>Morning table · A present-day detail</figcaption>
+          </figure>
         </div>
       </section>
 
       <section className="stories-happiness" aria-labelledby="happiness-title">
         <div className="container stories-happiness-inner">
           <p className="stories-kicker">THE HAPPINESS COLLECTOR</p>
-          <blockquote id="happiness-title">
-            “I think I may be someone who collects happiness. Difficult things
-            happened too, but what comes back first is the laughter.”
-          </blockquote>
-          <p>
-            That instinct runs through the archive: not pretending that pain
-            was absent, but noticing what love left behind.
-          </p>
+          <div className="stories-happiness-grid">
+            <blockquote id="happiness-title">
+              “I think I may be someone who collects happiness.”
+            </blockquote>
+            <p>
+              Difficult things happened too. What often returns first is the
+              laughter. The archive does not erase pain; it keeps noticing what
+              love left behind.
+            </p>
+          </div>
         </div>
       </section>
     </main>
