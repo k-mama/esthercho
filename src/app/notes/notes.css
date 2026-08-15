@@ -1,10 +1,8 @@
 .morning-page {
-  --morning-ivory: #fbf8f2;
-  --morning-cream: #f6eee3;
-  --morning-mist: #eaf2f3;
-  --morning-petal: #f7e9ef;
-  --morning-lilac: #eee9f6;
-  --morning-night: #102842;
+  --morning-ivory: #f8f5ee;
+  --morning-cream: #f1f3f3;
+  --morning-mist: #e3edf4;
+  --morning-night: #14334e;
   overflow: clip;
   background: var(--morning-ivory);
   color: var(--ink);
@@ -12,7 +10,7 @@
 
 .morning-kicker {
   margin: 0;
-  color: #9c7442;
+  color: #587691;
   font-family: var(--font-interface);
   font-size: 0.68rem;
   font-weight: 700;
@@ -21,7 +19,6 @@
 }
 
 .morning-page h2,
-.morning-page h3,
 .morning-page p {
   margin-top: 0;
 }
@@ -34,7 +31,6 @@
 
 .morning-foyer,
 .morning-present,
-.morning-threads,
 .morning-manuscript,
 .morning-close {
   position: relative;
@@ -44,7 +40,6 @@
 
 .morning-foyer::before,
 .morning-present::before,
-.morning-threads::before,
 .morning-manuscript::before,
 .morning-close::before {
   position: absolute;
@@ -52,48 +47,30 @@
   width: min(58rem, 70vw);
   aspect-ratio: 1;
   content: "";
-  border: 1px solid rgba(255, 255, 255, 0.56);
+  border: 0;
   border-radius: 50%;
   pointer-events: none;
 }
 
 .morning-foyer::after,
 .morning-present::after,
-.morning-threads::after,
 .morning-manuscript::after,
 .morning-close::after {
-  position: absolute;
-  z-index: -1;
-  width: 120%;
-  height: 1px;
-  content: "";
-  background: rgba(255, 255, 255, 0.48);
-  transform-origin: center;
-  pointer-events: none;
+  display: none;
 }
-
-/* -------------------------------------------------------------------------- */
-/* Foyer                                                                       */
-/* -------------------------------------------------------------------------- */
 
 .morning-foyer {
   padding-block: clamp(8rem, 14vw, 14rem);
   background:
-    radial-gradient(circle at 9% 12%, rgba(255, 215, 226, 0.68), transparent 34%),
-    radial-gradient(circle at 88% 16%, rgba(204, 230, 243, 0.78), transparent 36%),
-    radial-gradient(circle at 72% 91%, rgba(232, 221, 247, 0.6), transparent 33%),
-    linear-gradient(135deg, #fbf8f2 0%, #f9eff3 48%, #edf4f6 100%);
+    radial-gradient(circle at 86% 18%, rgba(195, 217, 233, 0.76), transparent 38%),
+    linear-gradient(135deg, #faf7f0 0%, #f3f5f5 55%, #eaf1f5 100%);
 }
 
 .morning-foyer::before {
-  top: -25%;
-  right: -17%;
-}
-
-.morning-foyer::after {
-  top: 62%;
-  left: -10%;
-  transform: rotate(-6deg);
+  top: -36%;
+  left: -24%;
+  width: min(68vw, 1040px);
+  background: linear-gradient(145deg, rgba(187, 207, 222, 0.7), rgba(229, 235, 239, 0.16));
 }
 
 .morning-foyer-grid {
@@ -115,34 +92,28 @@
 .morning-foyer-grid > p {
   max-width: 560px;
   margin-bottom: 0.2rem;
-  color: #625e63;
+  color: #5f6971;
   font-family: var(--font-editorial);
   font-size: clamp(1.12rem, 1.65vw, 1.42rem);
   line-height: 1.78;
 }
 
-/* -------------------------------------------------------------------------- */
-/* Present-day table                                                           */
-/* -------------------------------------------------------------------------- */
-
 .morning-present {
   padding-block: clamp(8rem, 13vw, 13rem);
   background:
-    radial-gradient(circle at 12% 22%, rgba(251, 216, 196, 0.62), transparent 34%),
-    radial-gradient(circle at 86% 14%, rgba(245, 213, 229, 0.56), transparent 32%),
-    radial-gradient(circle at 82% 88%, rgba(211, 230, 241, 0.58), transparent 32%),
-    linear-gradient(140deg, #fbf7ef 0%, #f8eeec 50%, #edf3f5 100%);
+    radial-gradient(circle at 88% 20%, rgba(197, 219, 235, 0.78), transparent 36%),
+    linear-gradient(140deg, #f8f5ee 0%, #eef3f6 60%, #e5edf3 100%);
 }
 
 .morning-present::before {
-  bottom: -27%;
-  left: -20%;
-}
-
-.morning-present::after {
-  top: 24%;
-  right: -14%;
-  transform: rotate(7deg);
+  top: 12%;
+  right: -30%;
+  width: min(58vw, 880px);
+  height: min(78vw, 1040px);
+  aspect-ratio: auto;
+  border-radius: 999px;
+  background: linear-gradient(165deg, rgba(175, 203, 225, 0.42), rgba(231, 236, 239, 0.08));
+  transform: rotate(12deg);
 }
 
 .morning-present-grid {
@@ -155,7 +126,7 @@
 .morning-present-figure {
   width: min(100%, 560px);
   margin: 0;
-  filter: drop-shadow(0 26px 44px rgba(69, 55, 49, 0.13));
+  filter: drop-shadow(0 24px 40px rgba(25, 48, 67, 0.12));
 }
 
 .morning-present-figure img {
@@ -165,16 +136,16 @@
   aspect-ratio: 3 / 4;
   object-fit: cover;
   object-position: center 56%;
-  border-radius: 22px;
+  border-radius: 4px;
 }
 
 .morning-present-figure figcaption {
   margin-top: 0.8rem;
-  color: #81776d;
+  color: #74818a;
   font-family: var(--font-interface);
-  font-size: 0.65rem;
-  letter-spacing: 0.055em;
-  line-height: 1.5;
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  line-height: 1.55;
 }
 
 .morning-present-copy {
@@ -192,119 +163,29 @@
 .morning-present-copy > p:not(.morning-kicker) {
   max-width: 580px;
   margin-top: 1.7rem;
-  color: #625e5a;
+  color: #5f6971;
   font-family: var(--font-editorial);
   font-size: clamp(1.05rem, 1.4vw, 1.2rem);
   line-height: 1.82;
 }
 
-/* -------------------------------------------------------------------------- */
-/* Expandable content threads                                                  */
-/* -------------------------------------------------------------------------- */
-
-.morning-threads {
-  padding-block: clamp(8rem, 14vw, 14rem);
-  background:
-    radial-gradient(circle at 10% 10%, rgba(201, 232, 229, 0.68), transparent 34%),
-    radial-gradient(circle at 88% 20%, rgba(225, 216, 246, 0.72), transparent 34%),
-    radial-gradient(circle at 64% 92%, rgba(251, 222, 210, 0.48), transparent 31%),
-    linear-gradient(135deg, #f5f7ef 0%, #eef4f4 49%, #f8eef3 100%);
-}
-
-.morning-threads::before {
-  top: -23%;
-  right: -17%;
-}
-
-.morning-threads::after {
-  bottom: 24%;
-  left: -12%;
-  transform: rotate(-5deg);
-}
-
-.morning-threads-inner {
-  display: grid;
-  grid-template-columns: minmax(0, 0.72fr) minmax(430px, 1fr);
-  gap: clamp(4rem, 10vw, 10rem);
-  align-items: start;
-}
-
-.morning-threads-heading {
-  max-width: 620px;
-}
-
-.morning-threads-heading h2 {
-  max-width: 10ch;
-  margin-top: 1.7rem;
-  font-family: var(--font-editorial);
-  font-size: clamp(2.8rem, 4.8vw, 5.1rem);
-  line-height: 1;
-}
-
-.morning-thread-list {
-  border-top: 1px solid rgba(35, 54, 73, 0.18);
-}
-
-.morning-thread {
-  display: grid;
-  grid-template-columns: 3.1rem minmax(110px, 0.42fr) minmax(0, 1fr);
-  gap: 1.4rem;
-  align-items: baseline;
-  padding-block: 1.8rem;
-  border-bottom: 1px solid rgba(35, 54, 73, 0.18);
-}
-
-.morning-thread > span {
-  color: #9b8975;
-  font-family: var(--font-interface);
-  font-size: 0.62rem;
-  letter-spacing: 0.12em;
-}
-
-.morning-thread h3 {
-  color: var(--brand-navy);
-  font-family: var(--font-interface);
-  font-size: 0.9rem;
-  font-weight: 650;
-  letter-spacing: 0.015em;
-}
-
-.morning-thread p {
-  color: #66615e;
-  font-family: var(--font-editorial);
-  font-size: 1rem;
-  line-height: 1.7;
-}
-
-/* -------------------------------------------------------------------------- */
-/* Manuscript                                                                  */
-/* -------------------------------------------------------------------------- */
-
 .morning-manuscript {
   padding-block: clamp(8rem, 14vw, 14rem);
-  color: #f7f4ee;
+  color: #eef4f7;
   background:
-    radial-gradient(circle at 12% 18%, rgba(89, 146, 190, 0.32), transparent 33%),
-    radial-gradient(circle at 88% 12%, rgba(160, 126, 185, 0.25), transparent 31%),
-    radial-gradient(circle at 74% 88%, rgba(105, 178, 181, 0.2), transparent 33%),
-    linear-gradient(145deg, #102842 0%, #18344f 48%, #1a3b48 100%);
+    radial-gradient(circle at 82% 18%, rgba(99, 145, 181, 0.28), transparent 34%),
+    linear-gradient(145deg, #14324c 0%, #1b405e 58%, #2b5069 100%);
 }
 
 .morning-manuscript::before {
-  top: -24%;
-  right: -14%;
-  border-color: rgba(235, 243, 246, 0.2);
-}
-
-.morning-manuscript::after {
-  bottom: 28%;
-  left: -11%;
-  background: rgba(235, 243, 246, 0.18);
-  transform: rotate(-6deg);
+  top: -30%;
+  right: -18%;
+  width: min(62vw, 940px);
+  background: rgba(132, 168, 195, 0.18);
 }
 
 .morning-manuscript .morning-kicker {
-  color: #dfc89f;
+  color: #a9cee5;
 }
 
 .morning-manuscript-grid {
@@ -317,7 +198,7 @@
 .morning-manuscript h2 {
   max-width: 10ch;
   margin-top: 1.7rem;
-  color: #f7f4ee;
+  color: #f4f7f9;
   font-family: var(--font-editorial);
   font-size: clamp(2.8rem, 4.9vw, 5.2rem);
   line-height: 1;
@@ -325,7 +206,7 @@
 
 .morning-manuscript-copy {
   max-width: 620px;
-  color: rgba(247, 244, 238, 0.76);
+  color: rgba(235, 243, 248, 0.76);
   font-family: var(--font-editorial);
   font-size: clamp(1.07rem, 1.48vw, 1.24rem);
   line-height: 1.82;
@@ -339,24 +220,20 @@
   display: inline-block;
   margin-top: 2.2rem;
   padding-bottom: 0.2rem;
-  color: #f7f4ee;
+  color: #e3f0f7;
   font-family: var(--font-interface);
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.09em;
   text-decoration: none;
   text-transform: uppercase;
-  border-bottom: 1px solid rgba(247, 244, 238, 0.46);
+  border-bottom: 1px solid rgba(227, 240, 247, 0.42);
 }
 
 .morning-link:hover {
-  color: #dfc89f;
+  color: #ffffff;
   border-color: currentColor;
 }
-
-/* -------------------------------------------------------------------------- */
-/* Closing                                                                     */
-/* -------------------------------------------------------------------------- */
 
 .morning-close {
   display: grid;
@@ -364,22 +241,15 @@
   align-items: center;
   padding-block: clamp(8rem, 14vw, 14rem);
   background:
-    radial-gradient(circle at 12% 18%, rgba(255, 213, 225, 0.68), transparent 34%),
-    radial-gradient(circle at 88% 16%, rgba(199, 229, 242, 0.78), transparent 36%),
-    radial-gradient(circle at 76% 91%, rgba(230, 218, 248, 0.7), transparent 34%),
-    radial-gradient(circle at 18% 92%, rgba(250, 224, 196, 0.5), transparent 32%),
-    linear-gradient(135deg, #fbf8f2 0%, #f8eef3 49%, #edf4f7 100%);
+    radial-gradient(circle at 84% 22%, rgba(187, 213, 232, 0.82), transparent 36%),
+    linear-gradient(138deg, #edf2f5 0%, #f8f5ee 60%, #e4edf3 100%);
 }
 
 .morning-close::before {
-  top: -21%;
-  right: -18%;
-}
-
-.morning-close::after {
-  bottom: 31%;
-  left: -12%;
-  transform: rotate(5deg);
+  right: -22%;
+  bottom: -46%;
+  width: min(66vw, 980px);
+  background: rgba(169, 199, 220, 0.34);
 }
 
 .morning-close-inner {
@@ -395,10 +265,6 @@
   line-height: 0.97;
 }
 
-/* -------------------------------------------------------------------------- */
-/* Korean art direction                                                        */
-/* -------------------------------------------------------------------------- */
-
 .morning-page-ko .morning-kicker {
   font-family: var(--font-korean);
   font-size: 0.75rem;
@@ -407,9 +273,7 @@
 }
 
 .morning-page-ko h2,
-.morning-page-ko h3,
 .morning-page-ko .morning-link,
-.morning-page-ko .morning-thread p,
 .morning-page-ko .morning-foyer-grid > p,
 .morning-page-ko .morning-present-copy > p:not(.morning-kicker),
 .morning-page-ko .morning-manuscript-copy {
@@ -434,22 +298,15 @@
 }
 
 .morning-page-ko .morning-present-copy h2,
-.morning-page-ko .morning-threads-heading h2,
 .morning-page-ko .morning-manuscript h2 {
   font-size: clamp(2.7rem, 4.5vw, 4.65rem);
 }
 
 .morning-page-ko .morning-foyer-grid > p,
 .morning-page-ko .morning-present-copy > p:not(.morning-kicker),
-.morning-page-ko .morning-thread p,
 .morning-page-ko .morning-manuscript-copy {
   line-height: 1.8;
   word-break: keep-all;
-}
-
-.morning-page-ko .morning-thread h3 {
-  font-size: 0.95rem;
-  letter-spacing: -0.02em;
 }
 
 .morning-page-ko .morning-link {
@@ -458,14 +315,9 @@
   text-transform: none;
 }
 
-/* -------------------------------------------------------------------------- */
-/* Responsive art direction                                                    */
-/* -------------------------------------------------------------------------- */
-
 @media (max-width: 899px) {
   .morning-foyer,
   .morning-present,
-  .morning-threads,
   .morning-manuscript,
   .morning-close {
     padding-block: 7rem;
@@ -473,7 +325,6 @@
 
   .morning-foyer::before,
   .morning-present::before,
-  .morning-threads::before,
   .morning-manuscript::before,
   .morning-close::before {
     width: 105vw;
@@ -481,7 +332,6 @@
 
   .morning-foyer-grid,
   .morning-present-grid,
-  .morning-threads-inner,
   .morning-manuscript-grid {
     grid-template-columns: 1fr;
     gap: 3.6rem;
@@ -494,7 +344,6 @@
   }
 
   .morning-present-copy h2,
-  .morning-threads-heading h2,
   .morning-manuscript h2 {
     max-width: 12ch;
     font-size: clamp(2.55rem, 8.8vw, 4rem);
@@ -502,10 +351,6 @@
 
   .morning-present-figure {
     width: min(84vw, 520px);
-  }
-
-  .morning-thread {
-    grid-template-columns: 2.8rem minmax(105px, 0.42fr) minmax(0, 1fr);
   }
 
   .morning-close {
@@ -518,7 +363,6 @@
   }
 
   .morning-page-ko .morning-present-copy h2,
-  .morning-page-ko .morning-threads-heading h2,
   .morning-page-ko .morning-manuscript h2 {
     font-size: clamp(2.25rem, 8.1vw, 3.45rem);
   }
@@ -527,7 +371,6 @@
 @media (max-width: 640px) {
   .morning-foyer,
   .morning-present,
-  .morning-threads,
   .morning-manuscript,
   .morning-close {
     padding-block: 6.3rem;
@@ -535,7 +378,6 @@
 
   .morning-foyer-grid,
   .morning-present-grid,
-  .morning-threads-inner,
   .morning-manuscript-grid {
     gap: 3rem;
   }
@@ -547,7 +389,6 @@
   }
 
   .morning-present-copy h2,
-  .morning-threads-heading h2,
   .morning-manuscript h2 {
     font-size: clamp(2.3rem, 10vw, 3.35rem);
     line-height: 1.04;
@@ -576,21 +417,6 @@
     padding-inline: 1.5rem;
   }
 
-  .morning-thread {
-    grid-template-columns: 2.4rem 1fr;
-    gap: 0.65rem 1rem;
-    padding-block: 1.45rem;
-  }
-
-  .morning-thread h3 {
-    align-self: center;
-  }
-
-  .morning-thread p {
-    grid-column: 2;
-    font-size: 0.96rem;
-  }
-
   .morning-page-ko .morning-foyer h2,
   .morning-page-ko .morning-close h2 {
     font-size: clamp(2.15rem, 9.2vw, 3.1rem);
@@ -598,7 +424,6 @@
   }
 
   .morning-page-ko .morning-present-copy h2,
-  .morning-page-ko .morning-threads-heading h2,
   .morning-page-ko .morning-manuscript h2 {
     font-size: clamp(2.05rem, 8.8vw, 2.95rem);
     line-height: 1.19;
