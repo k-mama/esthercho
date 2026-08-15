@@ -13,6 +13,7 @@ import "@/styles/home-video-lock.css";
 import "@/styles/home-mobile-studio-fix.css";
 import "@/styles/mobile-menu-glass.css";
 import "@/styles/desktop-subnav-hover.css";
+import "@/styles/room-interiors.css";
 
 const siteUrl = "https://esthercho.pages.dev";
 const socialPreviewImage = "/media/home/esther-house-entry-poster.jpg";
