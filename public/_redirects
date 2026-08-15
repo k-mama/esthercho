@@ -1,4 +1,9 @@
-# Legacy Esther Cho routes kept for old mobile bookmarks, browser history, and shared links.
+# Root route safety for Cloudflare Pages static export.
+/ /index.html 200
+/ko /ko/index.html 200
+/ko/ /ko/index.html 200
+
+# Legacy Esther Cho routes kept for old bookmarks, browser history, and shared links.
 /home / 301
 /home/ / 301
 /childhood /archive/ 301
