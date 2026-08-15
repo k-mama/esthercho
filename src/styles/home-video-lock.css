@@ -1,0 +1,17 @@
+/* ESTHER CHO HOME HERO LOCK
+   The real-house entrance film is the protected first-screen experience.
+   It must remain visible on mobile and desktop; the poster is fallback only. */
+
+.home-video-hero video {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-video-hero video {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+}
