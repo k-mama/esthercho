@@ -1,5 +1,7 @@
 import type { MetadataRoute } from "next";
 
+export const dynamic = "force-static";
+
 const siteUrl = "https://esthercho.pages.dev";
 
 const localizedRoutes = [
