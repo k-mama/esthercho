@@ -196,12 +196,6 @@ export default function KoreanHome() {
           </figure>
         </div>
       </section>
-
-      <section className={styles.homeClosing}>
-        <div className="container">
-          <p>기억으로 이어진 방을 하나씩 천천히 들어가는 집.</p>
-        </div>
-      </section>
     </div>
   );
 }
