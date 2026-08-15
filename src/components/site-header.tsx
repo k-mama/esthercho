@@ -47,6 +47,11 @@ export function SiteHeader() {
     mobileMenuRef.current?.removeAttribute("open");
   };
 
+  const isActive = (href: string) => {
+    const route = href.endsWith("/") ? href.slice(0, -1) : href;
+    return pathname === route || pathname.startsWith(`${route}/`);
+  };
+
   useEffect(() => {
     closeMobileMenu();
   }, [pathname]);
@@ -77,16 +82,20 @@ export function SiteHeader() {
           aria-label={isKorean ? "주요 메뉴" : "Main"}
         >
           <ul>
-            {navItems.map((item) => (
-              <li key={item.href}>
-                <Link
-                  href={item.href}
-                  className="site-header-nav-link"
-                >
-                  {item.title}
-                </Link>
-              </li>
-            ))}
+            {navItems.map((item) => {
+              const active = isActive(item.href);
+              return (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    className="site-header-nav-link"
+                    aria-current={active ? "page" : undefined}
+                  >
+                    {item.title}
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
         </nav>
 
@@ -95,17 +104,21 @@ export function SiteHeader() {
             <summary>{isKorean ? "메뉴" : "MENU"}</summary>
 
             <ul className="site-header-nav-mobile-menu">
-              {navItems.map((item) => (
-                <li key={item.href}>
-                  <Link
-                    href={item.href}
-                    className="site-header-nav-link"
-                    onClick={closeMobileMenu}
-                  >
-                    {item.title}
-                  </Link>
-                </li>
-              ))}
+              {navItems.map((item) => {
+                const active = isActive(item.href);
+                return (
+                  <li key={item.href}>
+                    <Link
+                      href={item.href}
+                      className="site-header-nav-link"
+                      aria-current={active ? "page" : undefined}
+                      onClick={closeMobileMenu}
+                    >
+                      {item.title}
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
           </details>
         </div>
