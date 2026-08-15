@@ -68,7 +68,7 @@ export default function BooksPage() {
       <section className={styles.detailsSection} aria-labelledby="project-notes-title">
         <div className={`container ${styles.detailsInner}`}>
           <h2 id="project-notes-title" className={styles.detailsHeading}>
-            Manuscript notes
+            About the manuscript
           </h2>
           <dl className={styles.projectFacts}>
             {facts.map((item) => (
@@ -78,13 +78,6 @@ export default function BooksPage() {
               </div>
             ))}
           </dl>
-        </div>
-      </section>
-
-      <section className={styles.note}>
-        <div className={`container ${styles.noteInner}`}>
-          <p className={styles.noteLabel}>PUBLICATION</p>
-          <p>Cover, date, editions, and rights information will be added when confirmed.</p>
         </div>
       </section>
     </main>
