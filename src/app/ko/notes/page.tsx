@@ -27,13 +27,13 @@ export default function KoreanNotesPage() {
 
       <section className="morning-intro" aria-labelledby="morning-intro-title">
         <div className="container">
-          <p className="morning-kicker">다시 돌아오는 자리</p>
+          <p className="morning-kicker">묵상 기록</p>
           <div className="morning-intro-grid">
-            <h2 id="morning-intro-title">식탁에는 아침보다 많은 것이 놓일 수 있다.</h2>
+            <h2 id="morning-intro-title">아침 식탁에서 쓴 기록.</h2>
             <div className="morning-intro-copy">
               <p>
-                아침 식탁에는 말씀과 기도, 평범한 일상과 아직 깔끔하게
-                정리되지 않은 생각에서 태어난 묵상을 모은다.
+                말씀과 기도, 평범한 일상과 아직 정리되지 않은 생각에서 태어난
+                묵상을 모은다.
               </p>
             </div>
           </div>
@@ -55,11 +55,11 @@ export default function KoreanNotesPage() {
           </figure>
 
           <div className="morning-table-copy">
-            <p className="morning-kicker">평범한 하루의 크기</p>
-            <h2 id="morning-table-scene-title">믿음도 결국 평범한 하루 안에서 살아야 한다.</h2>
+            <p className="morning-kicker">일상</p>
+            <h2 id="morning-table-scene-title">글은 평범한 하루 가까이에 머문다.</h2>
             <p>
-              이 글들은 일상의 크기 가까이에 머문다. 질문과 기도, 작은
-              웃음 하나를 남기기 위해 거창한 장면이 먼저 필요하지는 않다.
+              질문과 기도, 작은 웃음 하나를 남기기 위해 거창한 장면이 먼저
+              필요하지는 않다.
             </p>
           </div>
         </div>
@@ -88,11 +88,8 @@ export default function KoreanNotesPage() {
         <div className="container">
           <p className="morning-kicker">쓰는 중인 기록</p>
           <div className="morning-ending-grid">
-            <h2 id="morning-ending-title">이 방의 글은 아직 계속되고 있다.</h2>
-            <p>
-              새 묵상은 준비되는 대로 더해진다. 식탁을 늘 채워야 하는 피드처럼
-              만들지는 않는다.
-            </p>
+            <h2 id="morning-ending-title">새 묵상은 준비되는 대로 더한다.</h2>
+            <p>이 페이지를 늘 채워야 하는 피드처럼 만들지는 않는다.</p>
           </div>
         </div>
       </section>
