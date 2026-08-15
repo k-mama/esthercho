@@ -53,7 +53,7 @@ export default function KoreanBooksPage() {
               height={1600}
               sizes="(max-width: 899px) 82vw, 38vw"
             />
-            <figcaption>아침 식탁 · 현재의 한 장면</figcaption>
+            <figcaption>아침 식탁 · 오늘</figcaption>
           </figure>
 
           <div className={styles.projectCopy}>
@@ -68,7 +68,7 @@ export default function KoreanBooksPage() {
       <section className={styles.detailsSection} aria-labelledby="project-notes-title">
         <div className={`container ${styles.detailsInner}`}>
           <h2 id="project-notes-title" className={styles.detailsHeading}>
-            프로젝트 기록
+            원고 기록
           </h2>
           <dl className={styles.projectFacts}>
             {facts.map((item) => (
@@ -83,11 +83,8 @@ export default function KoreanBooksPage() {
 
       <section className={styles.note}>
         <div className={`container ${styles.noteInner}`}>
-          <p className={styles.noteLabel}>출간 기록</p>
-          <p>
-            표지, 출간일, 판본, 권리 정보는 실제로 확정된 뒤에만
-            공개합니다.
-          </p>
+          <p className={styles.noteLabel}>출간</p>
+          <p>표지, 출간일, 판본, 권리 정보는 확정된 뒤에 공개합니다.</p>
         </div>
       </section>
     </main>
