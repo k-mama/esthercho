@@ -43,9 +43,9 @@ export default function AboutPage() {
             </p>
 
             <p className="esther-intro">
-              Her work begins where Christian faith, childhood, family memory,
-              and ordinary domestic life meet. She writes and draws from what
-              has been lived, remembered, and quietly carried.
+              Her writing and drawings often return to Christian faith,
+              childhood, family memory, and daily life at home. She works from
+              lived and remembered material.
             </p>
           </div>
 
@@ -84,19 +84,15 @@ export default function AboutPage() {
             <div className="esther-copy">
               <p className="esther-eyebrow">THE BEGINNING</p>
 
-              <h2>
-                A house, a garden, and a child who kept looking.
-              </h2>
+              <h2>The childhood house and garden.</h2>
 
               <p>
-                The house and garden of her childhood continue to return in her
-                work. Not as decorative nostalgia, but as places where memory
-                first learned to become story.
+                The house and garden of her childhood recur in her work.
               </p>
 
               <p>
                 Family photographs, familiar paths, and ordinary rooms remain
-                part of the landscape from which she writes.
+                part of the material she returns to.
               </p>
             </div>
           </div>
@@ -107,9 +103,7 @@ export default function AboutPage() {
             <div className="esther-copy">
               <p className="esther-eyebrow">ART AND EDUCATION</p>
 
-              <h2>
-                The child who drew kept following the line.
-              </h2>
+              <h2>Years of formal art study.</h2>
 
               <p>
                 Her formal art education began at Yewon School and continued at
@@ -157,15 +151,12 @@ export default function AboutPage() {
                 HOME, FAMILY, AND FAITH
               </p>
 
-              <h2>
-                The ordinary table became part of the work.
-              </h2>
+              <h2>Home, family, and the morning table.</h2>
 
               <p>
-                Esther Cho is a writer, artist, and homemaker. Her creative life
-                did not grow apart from the ordinary work of a home. It grew
-                inside it—among meals, family rhythms, prayer, and everyday
-                care.
+                Esther Cho is a writer, artist, and homemaker. Her creative work
+                has developed alongside meals, family routines, prayer, and
+                everyday care.
               </p>
 
               <p>
@@ -211,7 +202,7 @@ export default function AboutPage() {
                 FAITH IN PRACTICE
               </p>
 
-              <h2>The life beyond the page.</h2>
+              <h2>Mentoring and volunteer service.</h2>
 
               <p>
                 Her faith has also taken practical form through mentoring North
@@ -232,9 +223,7 @@ export default function AboutPage() {
             <div className="esther-copy">
               <p className="esther-eyebrow">STILL MAKING</p>
 
-              <h2>
-                Writing and drawing continue together.
-              </h2>
+              <h2>Writing, drawing, and later reinterpretation.</h2>
 
               <p>
                 She continues to write prose, devotional reflections, and
@@ -248,7 +237,8 @@ export default function AboutPage() {
               </p>
 
               <p>
-                The original stays visible. So does the process.
+                Original work and later reinterpretation are identified
+                separately.
               </p>
             </div>
 
@@ -275,10 +265,7 @@ export default function AboutPage() {
             {authorProfile.romanizedName}
           </p>
 
-          <p>
-            She is still gathering faith, memory, and the ordinary rooms of a
-            life into stories.
-          </p>
+          <p>She continues to write and draw.</p>
         </footer>
       </article>
     </main>
