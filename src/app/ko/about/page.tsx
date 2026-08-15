@@ -135,7 +135,7 @@ export default function KoreanAboutPage() {
         </section>
 
         <section className="esther-section esther-making-section">
-          <div className="container esther-making-grid">
+          <div className="container esther-making-grid esther-making-copy-only">
             <div className="esther-copy">
               <p className="esther-eyebrow">지금도 만드는 중</p>
 
@@ -148,20 +148,6 @@ export default function KoreanAboutPage() {
                 재해석으로 이어진다. 둘은 따로 표시한다.
               </p>
             </div>
-
-            <figure className="esther-figure esther-sketch-figure">
-              <Image
-                src="/media/esther/still-making-father-child-collage-20260802.png"
-                alt="아버지 등에 업힌 어린 조성연을 담은 종이 콜라주"
-                width={1536}
-                height={1536}
-                sizes="(max-width: 899px) 100vw, 38vw"
-              />
-
-              <figcaption>
-                어린 시절 원 스케치를 바탕으로 한 AI 보조 에디토리얼 재해석
-              </figcaption>
-            </figure>
           </div>
         </section>
 
