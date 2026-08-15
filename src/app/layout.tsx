@@ -17,6 +17,7 @@ import "@/styles/room-interiors.css";
 import "@/styles/room-photo-composition.css";
 import "@/styles/remaining-room-interiors.css";
 import "@/styles/room-exits.css";
+import "@/styles/mobile-room-balance.css";
 
 const siteUrl = "https://esthercho.pages.dev";
 const socialPreviewImage = "/media/home/esther-house-entry-poster.jpg";
