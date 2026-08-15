@@ -83,6 +83,87 @@ body:has(.home-video-hero) .site-footer-colophon a:hover {
   color: #f6f2ea;
 }
 
+/* -------------------------------------------------------------------------- */
+/* Home visual reset: light, not line.                                        */
+/* -------------------------------------------------------------------------- */
+
+body:has(.home-video-hero) #main-content > main > section:not(.home-video-hero)::before,
+body:has(.home-video-hero) #main-content > main > section:not(.home-video-hero)::after {
+  display: none !important;
+}
+
+/* Foyer — petal pink + mist blue, with no architectural outlines. */
+body:has(.home-video-hero) #main-content > main > section:nth-child(2) {
+  background:
+    radial-gradient(72% 78% at 10% 8%, rgba(255, 214, 229, 0.7) 0%, rgba(255, 214, 229, 0.22) 42%, transparent 72%),
+    radial-gradient(70% 74% at 94% 12%, rgba(196, 227, 246, 0.74) 0%, rgba(196, 227, 246, 0.2) 44%, transparent 74%),
+    radial-gradient(58% 58% at 72% 92%, rgba(229, 219, 248, 0.46) 0%, transparent 72%),
+    linear-gradient(135deg, #fcf8f4 0%, #faf0f5 52%, #eef5f8 100%) !important;
+}
+
+/* Morning table — warm daylight, softened at the edges. */
+body:has(.home-video-hero) #main-content > main > section:nth-child(3) {
+  background:
+    radial-gradient(76% 78% at 8% 18%, rgba(255, 218, 194, 0.72) 0%, rgba(255, 218, 194, 0.18) 44%, transparent 74%),
+    radial-gradient(66% 70% at 92% 8%, rgba(248, 210, 226, 0.58) 0%, rgba(248, 210, 226, 0.14) 46%, transparent 76%),
+    radial-gradient(64% 66% at 94% 94%, rgba(207, 229, 244, 0.52) 0%, transparent 74%),
+    linear-gradient(140deg, #fcf6ed 0%, #faeff1 54%, #eff5f8 100%) !important;
+}
+
+/* Memory — garden air rather than vintage sepia. */
+body:has(.home-video-hero) #main-content > main > section:nth-child(4) {
+  background:
+    radial-gradient(76% 80% at 4% 10%, rgba(199, 229, 219, 0.68) 0%, rgba(199, 229, 219, 0.16) 44%, transparent 74%),
+    radial-gradient(70% 74% at 94% 20%, rgba(221, 216, 246, 0.64) 0%, rgba(221, 216, 246, 0.16) 46%, transparent 76%),
+    radial-gradient(60% 62% at 64% 98%, rgba(252, 224, 207, 0.42) 0%, transparent 74%),
+    linear-gradient(136deg, #f6f8f1 0%, #eef5f5 48%, #f8eef3 100%) !important;
+}
+
+/* Care — open sky + warm human light. */
+body:has(.home-video-hero) #main-content > main > section:nth-child(5) {
+  background:
+    radial-gradient(74% 78% at 92% 12%, rgba(255, 217, 198, 0.58) 0%, rgba(255, 217, 198, 0.12) 46%, transparent 76%),
+    radial-gradient(74% 80% at 5% 90%, rgba(201, 230, 245, 0.68) 0%, rgba(201, 230, 245, 0.14) 46%, transparent 76%),
+    radial-gradient(58% 60% at 82% 92%, rgba(228, 218, 247, 0.4) 0%, transparent 74%),
+    linear-gradient(138deg, #fcf8f1 0%, #f7f3ee 44%, #eef5f8 100%) !important;
+}
+
+/* Studio — rich navy, but smooth and velvety rather than technical. */
+body:has(.home-video-hero) #main-content > main > section:nth-child(6) {
+  background:
+    radial-gradient(78% 82% at 4% 8%, rgba(95, 155, 194, 0.32) 0%, rgba(95, 155, 194, 0.08) 44%, transparent 74%),
+    radial-gradient(72% 76% at 96% 8%, rgba(171, 135, 191, 0.26) 0%, rgba(171, 135, 191, 0.06) 48%, transparent 76%),
+    radial-gradient(64% 68% at 82% 96%, rgba(108, 184, 184, 0.18) 0%, transparent 74%),
+    linear-gradient(145deg, #102943 0%, #17364f 50%, #193e49 100%) !important;
+}
+
+/* Closing room — luminous, calm, and expansive. */
+body:has(.home-video-hero) #main-content > main > section:nth-child(7) {
+  background:
+    radial-gradient(78% 82% at 8% 10%, rgba(255, 211, 226, 0.68) 0%, rgba(255, 211, 226, 0.16) 44%, transparent 74%),
+    radial-gradient(78% 82% at 94% 12%, rgba(198, 229, 244, 0.72) 0%, rgba(198, 229, 244, 0.16) 46%, transparent 76%),
+    radial-gradient(68% 70% at 78% 96%, rgba(228, 217, 249, 0.62) 0%, rgba(228, 217, 249, 0.12) 48%, transparent 76%),
+    radial-gradient(56% 58% at 12% 96%, rgba(250, 222, 193, 0.42) 0%, transparent 74%),
+    linear-gradient(136deg, #fcf8f4 0%, #f9eef5 50%, #edf5f8 100%) !important;
+}
+
+/* The house index should feel like a list in a quiet foyer, not a grid panel. */
+body:has(.home-video-hero) #inside nav {
+  column-gap: clamp(1.2rem, 3vw, 2.4rem);
+  border-top: 0 !important;
+  border-left: 0 !important;
+}
+
+body:has(.home-video-hero) #inside nav a {
+  padding-inline: 0.2rem !important;
+  border-right: 0 !important;
+  border-bottom-color: rgba(40, 57, 78, 0.13) !important;
+}
+
+body:has(.home-video-hero) #inside nav a:hover {
+  background: transparent !important;
+}
+
 @media (max-width: 959px) {
   body:has(.home-video-hero) .site-header {
     padding-block: max(0.9rem, env(safe-area-inset-top)) 0.85rem;
@@ -143,6 +224,15 @@ body:has(.home-video-hero) .site-footer-colophon a:hover {
   body:has(.home-video-hero) .site-header-lang img {
     width: 20px !important;
     height: 20px !important;
+  }
+
+  /* Mobile: even less decoration. Let colour and photographs do the work. */
+  body:has(.home-video-hero) #main-content > main > section:not(.home-video-hero) {
+    background-size: auto !important;
+  }
+
+  body:has(.home-video-hero) #inside nav {
+    column-gap: 0.9rem;
   }
 }
 
