@@ -29,20 +29,27 @@
     object-position: center 54% !important;
   }
 
+  /* Keep the entire childhood garden photograph visible on phones.
+     It is a scene, not a portrait crop: full viewport width, native aspect ratio. */
   .childhood-garden-figure {
-    width: min(92vw, 620px) !important;
-    margin-inline: auto !important;
+    width: 100vw !important;
+    max-width: none !important;
+    margin-left: calc(50% - 50vw) !important;
+    margin-right: calc(50% - 50vw) !important;
   }
 
   .childhood-garden-figure img {
-    aspect-ratio: 4 / 5 !important;
-    object-fit: cover;
-    object-position: 43% center !important;
-    box-shadow: 0 20px 38px rgba(25, 48, 67, 0.09) !important;
+    display: block;
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: auto !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+    box-shadow: none !important;
   }
 
   .childhood-garden-figure figcaption {
-    padding-inline: 0 !important;
+    padding-inline: 1.5rem !important;
   }
 
   /* About owns the university and Bangladesh photographs. */
@@ -107,10 +114,6 @@
 }
 
 @media (max-width: 560px) {
-  .childhood-garden-figure {
-    width: 90vw !important;
-  }
-
   .esther-portrait-figure {
     width: 80vw !important;
   }
