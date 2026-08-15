@@ -140,10 +140,23 @@ export function SiteHeader() {
             <summary>{isKorean ? "메뉴" : "MENU"}</summary>
 
             <ul className="site-header-nav-mobile-menu">
-              {navItems.map((item) => {
+              {navItems.map((item, index) => {
                 const active = isActive(item.href);
+                const isStoriesParent = index === 0;
+                const hasActiveRoom =
+                  isStoriesParent && roomItems.some((room) => isActive(room.href));
+
                 return (
-                  <li key={item.href}>
+                  <li
+                    key={item.href}
+                    className={
+                      isStoriesParent
+                        ? `site-header-nav-mobile-group${
+                            hasActiveRoom ? " site-header-nav-mobile-group--active" : ""
+                          }`
+                        : undefined
+                    }
+                  >
                     <Link
                       href={item.href}
                       className="site-header-nav-link"
@@ -152,25 +165,31 @@ export function SiteHeader() {
                     >
                       {item.title}
                     </Link>
-                  </li>
-                );
-              })}
 
-              {roomItems.map((item, index) => {
-                const active = isActive(item.href);
-                return (
-                  <li
-                    key={item.href}
-                    className={index === 0 ? "site-header-nav-mobile-room-start" : undefined}
-                  >
-                    <Link
-                      href={item.href}
-                      className="site-header-nav-link site-header-nav-room-link"
-                      aria-current={active ? "page" : undefined}
-                      onClick={closeMobileMenu}
-                    >
-                      {item.title}
-                    </Link>
+                    {isStoriesParent ? (
+                      <ul
+                        className="site-header-nav-mobile-submenu"
+                        aria-label={
+                          isKorean ? "이야기의 하위 메뉴" : "Stories sub-navigation"
+                        }
+                      >
+                        {roomItems.map((room) => {
+                          const roomActive = isActive(room.href);
+                          return (
+                            <li key={room.href}>
+                              <Link
+                                href={room.href}
+                                className="site-header-nav-link site-header-nav-room-link"
+                                aria-current={roomActive ? "page" : undefined}
+                                onClick={closeMobileMenu}
+                              >
+                                {room.title}
+                              </Link>
+                            </li>
+                          );
+                        })}
+                      </ul>
+                    ) : null}
                   </li>
                 );
               })}
