@@ -1,4 +1,8 @@
 .childhood-page {
+  --childhood-sky: #dcebf4;
+  --childhood-silver: #dfe5ea;
+  --childhood-blue: #6f9fbe;
+  --childhood-deep: #15324d;
   overflow: clip;
 }
 
@@ -12,6 +16,7 @@
   overflow: hidden;
 }
 
+/* One large spatial color field per room. No decorative outlines or diagonal lines. */
 .childhood-intro::before,
 .childhood-garden::before,
 .childhood-fragments::before,
@@ -19,12 +24,9 @@
 .childhood-ending::before {
   position: absolute;
   z-index: -1;
-  width: min(56rem, 68vw);
-  aspect-ratio: 1;
   content: "";
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 50%;
   pointer-events: none;
+  border: 0;
 }
 
 .childhood-intro::after,
@@ -32,41 +34,30 @@
 .childhood-fragments::after,
 .childhood-archive-principle::after,
 .childhood-ending::after {
-  position: absolute;
-  z-index: -1;
-  width: 120%;
-  height: 1px;
-  content: "";
-  background: rgba(255, 255, 255, 0.42);
-  transform-origin: center;
-  pointer-events: none;
+  content: none !important;
 }
 
 .childhood-intro {
   background:
-    radial-gradient(circle at 9% 14%, rgba(252, 219, 228, 0.46), transparent 34%),
-    radial-gradient(circle at 88% 16%, rgba(203, 228, 240, 0.68), transparent 36%),
-    radial-gradient(circle at 72% 92%, rgba(230, 222, 244, 0.42), transparent 32%),
-    linear-gradient(135deg, #fbf8f1 0%, #f8f2ec 50%, #eef3f3 100%);
+    linear-gradient(128deg, #fbfaf6 0%, #f4f6f7 54%, #e8f2f7 100%);
 }
 
 .childhood-intro::before {
-  top: -27%;
-  right: -18%;
-}
-
-.childhood-intro::after {
-  top: 61%;
-  left: -12%;
-  transform: rotate(-6deg);
+  top: -18%;
+  right: -16%;
+  width: min(54rem, 60vw);
+  height: min(38rem, 45vw);
+  border-radius: 48% 52% 45% 55% / 58% 43% 57% 42%;
+  background: rgba(129, 177, 207, 0.22);
+  transform: rotate(-7deg);
 }
 
 .childhood-house {
-  background: #faf7f0;
+  background: #faf9f5;
 }
 
 .childhood-house-figure img {
-  filter: saturate(0.96) contrast(1.01);
+  filter: saturate(0.95) contrast(1.015);
 }
 
 .childhood-house-copy {
@@ -75,25 +66,21 @@
 
 .childhood-garden {
   background:
-    radial-gradient(circle at 10% 14%, rgba(204, 230, 222, 0.62), transparent 34%),
-    radial-gradient(circle at 88% 18%, rgba(224, 218, 242, 0.58), transparent 34%),
-    radial-gradient(circle at 68% 92%, rgba(249, 222, 208, 0.4), transparent 31%),
-    linear-gradient(135deg, #f4f7ef 0%, #eef4f3 48%, #f7eef2 100%);
+    linear-gradient(132deg, #f8f8f4 0%, #eef4f7 54%, #e4edf3 100%);
 }
 
 .childhood-garden::before {
-  bottom: -28%;
-  left: -20%;
-}
-
-.childhood-garden::after {
-  top: 24%;
-  right: -12%;
-  transform: rotate(6deg);
+  right: -24%;
+  bottom: -20%;
+  width: min(58rem, 66vw);
+  height: min(31rem, 37vw);
+  border-radius: 999px;
+  background: rgba(104, 153, 187, 0.17);
+  transform: rotate(-10deg);
 }
 
 .childhood-garden-figure {
-  filter: drop-shadow(0 24px 42px rgba(45, 61, 67, 0.12));
+  filter: drop-shadow(0 24px 42px rgba(30, 58, 81, 0.1));
 }
 
 .childhood-garden-figure img {
@@ -102,65 +89,53 @@
 
 .childhood-fragments {
   background:
-    radial-gradient(circle at 12% 16%, rgba(82, 139, 182, 0.28), transparent 32%),
-    radial-gradient(circle at 88% 12%, rgba(157, 125, 179, 0.22), transparent 31%),
-    radial-gradient(circle at 76% 88%, rgba(107, 177, 177, 0.17), transparent 33%),
-    linear-gradient(145deg, #10263f 0%, #17334e 52%, #1b3b48 100%);
+    linear-gradient(145deg, #112b45 0%, #173752 55%, #20475d 100%);
 }
 
 .childhood-fragments::before {
-  top: -26%;
-  right: -15%;
-  border-color: rgba(235, 243, 246, 0.18);
-}
-
-.childhood-fragments::after {
-  bottom: 29%;
-  left: -12%;
-  background: rgba(235, 243, 246, 0.16);
-  transform: rotate(-6deg);
+  top: -19%;
+  right: -14%;
+  width: min(50rem, 56vw);
+  height: min(34rem, 40vw);
+  border-radius: 52% 48% 57% 43% / 43% 54% 46% 57%;
+  background: rgba(139, 190, 220, 0.11);
+  transform: rotate(8deg);
 }
 
 .childhood-archive-principle {
   background:
-    radial-gradient(circle at 12% 18%, rgba(251, 220, 205, 0.48), transparent 34%),
-    radial-gradient(circle at 88% 16%, rgba(207, 229, 240, 0.56), transparent 34%),
-    linear-gradient(135deg, #fbf8f2 0%, #f7f1ea 50%, #edf3f5 100%);
+    linear-gradient(128deg, #faf9f5 0%, #f1f5f7 58%, #e7f0f5 100%);
 }
 
 .childhood-archive-principle::before {
-  top: -30%;
-  left: -21%;
-}
-
-.childhood-archive-principle::after {
-  bottom: 21%;
-  right: -12%;
-  transform: rotate(5deg);
+  top: -24%;
+  left: -22%;
+  width: min(54rem, 60vw);
+  height: min(28rem, 34vw);
+  border-radius: 999px;
+  background: rgba(132, 174, 202, 0.14);
+  transform: rotate(11deg);
 }
 
 .childhood-ending {
-  min-height: min(68svh, 780px);
+  min-height: min(66svh, 760px);
   display: grid;
   align-items: center;
   background:
-    radial-gradient(circle at 10% 18%, rgba(255, 215, 225, 0.62), transparent 34%),
-    radial-gradient(circle at 88% 16%, rgba(199, 229, 242, 0.72), transparent 36%),
-    radial-gradient(circle at 76% 90%, rgba(229, 218, 247, 0.62), transparent 34%),
-    linear-gradient(135deg, #fbf8f2 0%, #f8eef3 49%, #edf4f7 100%);
+    linear-gradient(132deg, #faf9f5 0%, #f0f4f6 50%, #dfedf5 100%);
 }
 
 .childhood-ending::before {
-  top: -22%;
-  right: -18%;
+  right: -20%;
+  bottom: -24%;
+  width: min(60rem, 68vw);
+  height: min(34rem, 40vw);
+  border-radius: 52% 48% 43% 57% / 48% 56% 44% 52%;
+  background: rgba(103, 155, 190, 0.18);
+  transform: rotate(-8deg);
 }
 
-.childhood-ending::after {
-  bottom: 29%;
-  left: -11%;
-  transform: rotate(5deg);
-}
-
+/* Korean typography is art-directed separately from the English layout. */
 .childhood-page-ko .childhood-kicker,
 .childhood-page-ko h2,
 .childhood-page-ko .childhood-intro-copy,
@@ -223,12 +198,39 @@
 }
 
 @media (max-width: 899px) {
-  .childhood-intro::before,
-  .childhood-garden::before,
-  .childhood-fragments::before,
-  .childhood-archive-principle::before,
+  .childhood-intro::before {
+    top: -8%;
+    right: -42%;
+    width: 94vw;
+    height: 58vw;
+  }
+
+  .childhood-garden::before {
+    right: -47%;
+    bottom: -8%;
+    width: 110vw;
+    height: 48vw;
+  }
+
+  .childhood-fragments::before {
+    top: -8%;
+    right: -45%;
+    width: 100vw;
+    height: 62vw;
+  }
+
+  .childhood-archive-principle::before {
+    top: -10%;
+    left: -48%;
+    width: 106vw;
+    height: 46vw;
+  }
+
   .childhood-ending::before {
-    width: 105vw;
+    right: -42%;
+    bottom: -7%;
+    width: 110vw;
+    height: 58vw;
   }
 
   .childhood-garden-figure {
@@ -253,6 +255,10 @@
 }
 
 @media (max-width: 560px) {
+  .childhood-ending {
+    min-height: 54svh;
+  }
+
   .childhood-page-ko .childhood-intro h2,
   .childhood-page-ko .childhood-fragments h2,
   .childhood-page-ko .childhood-ending h2 {
