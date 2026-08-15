@@ -3,8 +3,6 @@
 import { useEffect, useRef, useState } from "react";
 import styles from "./page.module.css";
 
-const MAX_PLAYS = 2;
-
 interface HomeHeroVideoProps {
   locale?: "en" | "ko";
 }
@@ -13,36 +11,32 @@ export function HomeHeroVideo({
   locale = "en",
 }: HomeHeroVideoProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
-  const completedPlaysRef = useRef(0);
   const [isPlaying, setIsPlaying] = useState(false);
 
   useEffect(() => {
-    const reducedMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)",
-    );
-
-    if (reducedMotion.matches) {
-      videoRef.current?.pause();
-    }
-  }, []);
-
-  function handleEnded() {
     const video = videoRef.current;
 
     if (!video) {
       return;
     }
 
-    completedPlaysRef.current += 1;
+    video.muted = true;
+    video.defaultMuted = true;
+    video.playsInline = true;
 
-    if (completedPlaysRef.current < MAX_PLAYS) {
-      video.currentTime = 0;
-      void video.play();
-      return;
-    }
+    const startFilm = () => {
+      void video.play().catch(() => {
+        setIsPlaying(false);
+      });
+    };
 
-    setIsPlaying(false);
-  }
+    startFilm();
+    video.addEventListener("canplay", startFilm);
+
+    return () => {
+      video.removeEventListener("canplay", startFilm);
+    };
+  }, []);
 
   function togglePlayback() {
     const video = videoRef.current;
@@ -52,11 +46,6 @@ export function HomeHeroVideo({
     }
 
     if (video.paused) {
-      if (video.ended || completedPlaysRef.current >= MAX_PLAYS) {
-        completedPlaysRef.current = 0;
-        video.currentTime = 0;
-      }
-
       void video.play();
       return;
     }
@@ -77,10 +66,10 @@ export function HomeHeroVideo({
         autoPlay
         muted
         playsInline
-        preload="metadata"
+        loop
+        preload="auto"
         poster="/media/home/esther-house-entry-poster.jpg"
         aria-hidden="true"
-        onEnded={handleEnded}
         onPlay={() => setIsPlaying(true)}
         onPause={() => setIsPlaying(false)}
       >
