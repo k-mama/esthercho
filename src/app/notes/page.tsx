@@ -9,6 +9,25 @@ export const metadata: Metadata = {
   description: "Devotional reflections and notes from Esther Cho's morning table.",
 };
 
+const tableThreads = [
+  [
+    "Morning",
+    "Breakfast, Scripture, prayer, and the few lines that belong to the beginning of the day.",
+  ],
+  [
+    "Family",
+    "Meals prepared for family and the tables that have carried ordinary care over time.",
+  ],
+  [
+    "People",
+    "Friends, shared meals, seasonal food, and the everyday stories that arrive with company.",
+  ],
+  [
+    "Kitchen Notes",
+    "Small cooking details, repeated habits, and the things worth remembering before they become recipes.",
+  ],
+] as const;
+
 export default function NotesPage() {
   return (
     <main className="morning-page">
@@ -25,63 +44,79 @@ export default function NotesPage() {
         shade="strong"
       />
 
-      <section className="morning-intro" aria-labelledby="morning-intro-title">
-        <div className="container">
-          <p className="morning-kicker">ABOUT THE NOTES</p>
-          <div className="morning-intro-grid">
-            <h2 id="morning-intro-title">Notes from the morning table.</h2>
-            <div className="morning-intro-copy">
-              <p>
-                The Morning Table gathers devotional reflections shaped by
-                Scripture, prayer, ordinary life, and thoughts that are still
-                unresolved.
-              </p>
-            </div>
+      <section className="morning-foyer" aria-labelledby="morning-foyer-title">
+        <div className="container morning-foyer-inner">
+          <p className="morning-kicker">AT THE TABLE</p>
+          <div className="morning-foyer-grid">
+            <h2 id="morning-foyer-title">
+              A meal, a verse, and the rest of the morning can sit at the same table.
+            </h2>
+            <p>
+              Some notes begin with Scripture. Others begin with breakfast, a family meal,
+              or a small detail from the day. They do not need to be separated before they
+              are worth keeping.
+            </p>
           </div>
         </div>
       </section>
 
-      <section className="morning-table-scene" aria-labelledby="morning-table-scene-title">
-        <div className="container morning-table-inner">
-          <figure className="morning-table-figure">
+      <section className="morning-present" aria-labelledby="morning-present-title">
+        <div className="container morning-present-grid">
+          <figure className="morning-present-figure">
             <Image
               src="/media/esther/morning-table.jpg"
               alt="A breakfast prepared at Esther Cho's morning table"
               width={1200}
               height={1600}
-              sizes="(max-width: 899px) 82vw, 38vw"
+              sizes="(max-width: 899px) 88vw, 40vw"
               priority
             />
             <figcaption>Morning table · A present-day detail</figcaption>
           </figure>
 
-          <div className="morning-table-copy">
-            <p className="morning-kicker">DAILY LIFE</p>
-            <h2 id="morning-table-scene-title">The writing stays close to daily life.</h2>
+          <div className="morning-present-copy">
+            <p className="morning-kicker">AN ORDINARY MORNING</p>
+            <h2 id="morning-present-title">The day has already begun before the writing does.</h2>
             <p>
-              A question, a prayer, or a small piece of humor does not need a
-              dramatic setting before it becomes worth keeping.
+              Food is being prepared. Someone may need calling. A verse lingers. A thought
+              is funny enough to keep. The writing stays close to that kind of morning.
             </p>
           </div>
         </div>
       </section>
 
-      <section className="morning-writing" aria-labelledby="morning-writing-title">
-        <div className="container morning-writing-inner">
-          <div>
-            <p className="morning-kicker">CURRENT MANUSCRIPT</p>
-            <h2 id="morning-writing-title">Manna on the Table is still in development.</h2>
+      <section className="morning-threads" aria-labelledby="morning-threads-title">
+        <div className="container morning-threads-inner">
+          <div className="morning-threads-heading">
+            <p className="morning-kicker">THE ROOM CAN GROW</p>
+            <h2 id="morning-threads-title">Four threads can keep expanding without crowding the table.</h2>
           </div>
-          <div className="morning-writing-copy">
+
+          <div className="morning-thread-list">
+            {tableThreads.map(([title, description], index) => (
+              <article className="morning-thread" key={title}>
+                <span>{String(index + 1).padStart(2, "0")}</span>
+                <h3>{title}</h3>
+                <p>{description}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="morning-manuscript" aria-labelledby="morning-manuscript-title">
+        <div className="container morning-manuscript-grid">
+          <div>
+            <p className="morning-kicker">FROM TABLE TO MANUSCRIPT</p>
+            <h2 id="morning-manuscript-title">Some of the notes are becoming Manna on the Table.</h2>
+          </div>
+
+          <div className="morning-manuscript-copy">
             <p>
-              The devotional manuscript is being developed first as an English
-              source text. Future language editions will be prepared from the
-              locked English manuscript.
+              The devotional manuscript is being developed first as an English source text.
+              Future language editions will be prepared from the locked English manuscript.
             </p>
-            <p>
-              Publication details will appear only when they are formally
-              confirmed.
-            </p>
+            <p>Publication details will appear only when they are formally confirmed.</p>
             <Link href="/books/" className="morning-link">
               Visit the book project
             </Link>
@@ -89,16 +124,10 @@ export default function NotesPage() {
         </div>
       </section>
 
-      <section className="morning-ending" aria-labelledby="morning-ending-title">
-        <div className="container">
-          <p className="morning-kicker">NOTES IN PROGRESS</p>
-          <div className="morning-ending-grid">
-            <h2 id="morning-ending-title">New notes will be added here.</h2>
-            <p>
-              New devotional notes will be added as they are ready. This page is
-              not meant to be a feed that has to be constantly filled.
-            </p>
-          </div>
+      <section className="morning-close" aria-labelledby="morning-close-title">
+        <div className="container morning-close-inner">
+          <p className="morning-kicker">MORE MORNINGS</p>
+          <h2 id="morning-close-title">The archive will grow one real table at a time.</h2>
         </div>
       </section>
     </main>
