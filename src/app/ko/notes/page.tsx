@@ -10,10 +10,10 @@ export const metadata: Metadata = {
 };
 
 const tableThreads = [
-  ["아침", "아침밥과 말씀, 기도와 하루의 시작에 적어 둔 짧은 문장."],
-  ["가족", "가족에게 차린 밥상과 오래 반복되어 온 평범한 돌봄의 시간."],
-  ["사람들", "친구들과 함께한 식사, 계절 음식, 사람이 오며 생긴 일상의 이야기."],
-  ["부엌 메모", "요리하며 반복해 온 작은 습관과 레시피가 되기 전 기억해 둘 것들."],
+  ["아침", "아침밥과 말씀, 기도, 그리고 하루가 소란해지기 전에 붙잡아 둔 몇 줄."],
+  ["가족", "가족에게 차린 밥과 자꾸 식탁으로 돌아오는 평범한 돌봄."],
+  ["사람들", "친구, 함께 먹은 음식, 계절의 맛, 사람이 오면 함께 따라오는 이야기."],
+  ["부엌 메모", "요리할 때 반복하는 작은 습관과 언젠가 레시피가 될지도 모르는 메모."],
 ] as const;
 
 export default function KoreanNotesPage() {
@@ -37,12 +37,12 @@ export default function KoreanNotesPage() {
           <p className="morning-kicker">식탁에 앉으면</p>
           <div className="morning-foyer-grid">
             <h2 id="morning-foyer-title">
-              <span>밥과 말씀과</span>
-              <span>그날의 생활이 한 상에 놓입니다.</span>
+              <span>아침밥과 말씀,</span>
+              <span>그리고 그날 아침에 생긴 일들.</span>
             </h2>
             <p>
-              어떤 기록은 말씀에서 시작하고, 어떤 날은 아침밥이나 가족의 식사,
-              별것 아닌 일 하나에서 시작합니다. 굳이 따로 떼어놓지 않아도 되는 것들입니다.
+              어떤 기록은 말씀 한 구절에서 시작하고, 어떤 날은 아침밥이나 가족 식사,
+              설거지하기 전에 있었던 작은 일에서 시작합니다.
             </p>
           </div>
         </div>
@@ -59,18 +59,18 @@ export default function KoreanNotesPage() {
               sizes="(max-width: 899px) 88vw, 40vw"
               priority
             />
-            <figcaption>아침 식탁 · 지금의 한 장면</figcaption>
+            <figcaption>아침 식탁 · 오늘</figcaption>
           </figure>
 
           <div className="morning-present-copy">
             <p className="morning-kicker">평범한 아침</p>
             <h2 id="morning-present-title">
-              <span>글을 쓰기 전에도</span>
-              <span>하루는 이미 시작되어 있습니다.</span>
+              <span>글이 따라잡을 즈음엔</span>
+              <span>하루가 이미 움직이고 있습니다.</span>
             </h2>
             <p>
-              밥을 준비하고, 누군가에게 연락할 일이 있고, 한 구절이 마음에 남고,
-              웃겨서 적어 두고 싶은 생각도 생깁니다. 글은 그런 아침 가까이에 머뭅니다.
+              밥을 하고, 전화할 사람이 있고, 한 구절이 자꾸 생각나고,
+              가끔은 웃겨서 적어 두고 싶은 생각도 생깁니다. 기록은 거기서 시작합니다.
             </p>
           </div>
         </div>
@@ -79,10 +79,10 @@ export default function KoreanNotesPage() {
       <section className="morning-threads" aria-labelledby="morning-threads-title">
         <div className="container morning-threads-inner">
           <div className="morning-threads-heading">
-            <p className="morning-kicker">이 방에 쌓일 것들</p>
+            <p className="morning-kicker">자꾸 돌아오는 것들</p>
             <h2 id="morning-threads-title">
-              <span>자료가 많아져도</span>
-              <span>네 갈래로 천천히 이어집니다.</span>
+              <span>이 네 가지는</span>
+              <span>자꾸 다시 옵니다.</span>
             </h2>
           </div>
 
@@ -103,17 +103,17 @@ export default function KoreanNotesPage() {
           <div>
             <p className="morning-kicker">식탁에서 원고로</p>
             <h2 id="morning-manuscript-title">
-              <span>어떤 기록은</span>
+              <span>이 아침들 가운데 일부가</span>
               <span>Manna on the Table이 되어가고 있습니다.</span>
             </h2>
           </div>
 
           <div className="morning-manuscript-copy">
             <p>
-              묵상 원고는 영어 기준 원문을 먼저 완성하고 있습니다. 이후 언어판은
-              잠금된 영문 원고를 바탕으로 준비합니다.
+              영어 원고를 먼저 완성하고 있습니다. 이후 언어판은 잠금된 영문을
+              바탕으로 준비합니다.
             </p>
-            <p>출간 정보는 실제로 확정된 뒤에 공개합니다.</p>
+            <p>출간 정보는 확정된 뒤에 공개합니다.</p>
             <Link href="/ko/books/" className="morning-link">
               책 프로젝트 보기
             </Link>
@@ -125,8 +125,8 @@ export default function KoreanNotesPage() {
         <div className="container morning-close-inner">
           <p className="morning-kicker">다음 아침</p>
           <h2 id="morning-close-title">
-            <span>실제로 차린 밥상 한 장씩,</span>
-            <span>이 방은 조금씩 넓어집니다.</span>
+            <span>내일도</span>
+            <span>아침밥은 차려집니다.</span>
           </h2>
         </div>
       </section>
