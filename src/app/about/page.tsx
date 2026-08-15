@@ -45,52 +45,10 @@ export default function AboutPage() {
 
             <p className="esther-intro">
               She writes and draws from what she has lived and remembered:
-              Christian faith, childhood, family, and life at home.
+              Christian faith, family, art, meals, and life at home.
             </p>
           </div>
-
-          <figure className="esther-figure esther-hero-figure">
-            <Image
-              src="/media/esther/childhood-garden.jpg"
-              alt="Esther Cho smiling in a garden as a child"
-              width={1800}
-              height={1350}
-              sizes="(max-width: 899px) 100vw, 52vw"
-              priority
-            />
-
-            <figcaption>Esther Cho · Childhood</figcaption>
-          </figure>
         </header>
-
-        <section className="esther-section esther-house-section">
-          <div className="container esther-split">
-            <figure className="esther-figure esther-house-figure">
-              <Image
-                src="/media/esther/childhood-house.jpg"
-                alt="The house and garden connected to Esther Cho's childhood"
-                width={1800}
-                height={1059}
-                sizes="(max-width: 899px) 100vw, 48vw"
-              />
-
-              <figcaption>Her childhood home and garden</figcaption>
-            </figure>
-
-            <div className="esther-copy">
-              <p className="esther-eyebrow">THE BEGINNING</p>
-
-              <h2>The house she keeps returning to.</h2>
-
-              <p>
-                The house and garden of her childhood return again and again in
-                her stories and drawings.
-              </p>
-
-              <p>So do family photographs, familiar paths, and ordinary rooms.</p>
-            </div>
-          </div>
-        </section>
 
         <section className="container esther-section esther-education-section">
           <div className="esther-split esther-split-reverse">
@@ -126,6 +84,7 @@ export default function AboutPage() {
                 width={1500}
                 height={1125}
                 sizes="(max-width: 899px) 100vw, 42vw"
+                priority
               />
 
               <figcaption>University years</figcaption>
@@ -189,8 +148,6 @@ export default function AboutPage() {
                 Korean refugees and participating in mission and volunteer work
                 in Bangladesh.
               </p>
-
-              <p>These are not separate from the rest of her life.</p>
             </div>
           </div>
         </section>
