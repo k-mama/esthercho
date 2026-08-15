@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { PageCover } from "@/components/page-cover";
 import "./stories.css";
@@ -93,24 +92,11 @@ export default function StoriesPage() {
               </p>
             </div>
           </div>
-          <div className="stories-intro-line" aria-hidden="true" />
         </div>
       </section>
 
       <section className="stories-feature" aria-labelledby="start-here-title">
-        <div className="container stories-feature-inner">
-          <figure className="stories-feature-figure">
-            <Image
-              src="/media/home/childhood-garden.jpg"
-              alt="Esther Cho smiling in a garden as a child"
-              width={1800}
-              height={1350}
-              sizes="(max-width: 899px) 100vw, 64vw"
-              priority
-            />
-            <figcaption>Esther Cho · Childhood</figcaption>
-          </figure>
-
+        <div className="container stories-feature-inner stories-feature-text-only">
           <div className="stories-feature-copy">
             <p className="stories-kicker">START HERE</p>
             <p className="stories-feature-number">01</p>
@@ -169,18 +155,7 @@ export default function StoriesPage() {
       </section>
 
       <section className="stories-house" aria-labelledby="life-chapters-title">
-        <figure className="stories-house-figure">
-          <Image
-            src="/media/home/childhood-house.jpg"
-            alt="The house and garden connected to Esther Cho's childhood"
-            width={1800}
-            height={1059}
-            sizes="100vw"
-          />
-          <figcaption className="container">Childhood home and garden</figcaption>
-        </figure>
-
-        <div className="container stories-house-editorial">
+        <div className="container stories-house-editorial stories-house-editorial-text-only">
           <div className="stories-house-copy">
             <p className="stories-kicker">THROUGH THE YEARS</p>
             <h2 id="life-chapters-title">A life still has a timeline.</h2>
@@ -199,17 +174,6 @@ export default function StoriesPage() {
               </li>
             ))}
           </ol>
-
-          <figure className="stories-young-artist">
-            <Image
-              src="/media/esther/young-artist.jpg"
-              alt="Esther Cho during her university years"
-              width={1500}
-              height={1125}
-              sizes="(max-width: 899px) 72vw, 25vw"
-            />
-            <figcaption>University years</figcaption>
-          </figure>
         </div>
       </section>
 
