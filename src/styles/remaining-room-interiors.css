@@ -9,16 +9,12 @@
   --morning-ivory: #f8f5ee;
   --morning-cream: #f1f3f3;
   --morning-mist: #e3edf4;
-  --morning-petal: #edf2f5;
-  --morning-lilac: #e1e9ef;
   --morning-night: #14334e;
   background: #f8f5ee !important;
 }
 
-/* Remove the old outlined circles and diagonal lines completely. */
 .morning-foyer::after,
 .morning-present::after,
-.morning-threads::after,
 .morning-manuscript::after,
 .morning-close::after {
   display: none !important;
@@ -26,7 +22,6 @@
 
 .morning-foyer::before,
 .morning-present::before,
-.morning-threads::before,
 .morning-manuscript::before,
 .morning-close::before {
   border: 0 !important;
@@ -71,25 +66,6 @@
   filter: drop-shadow(0 24px 40px rgba(25, 48, 67, 0.12)) !important;
 }
 
-.morning-threads {
-  background:
-    radial-gradient(circle at 10% 88%, rgba(211, 222, 230, 0.56), transparent 31%),
-    linear-gradient(135deg, #f5f6f4 0%, #edf2f5 100%) !important;
-}
-
-.morning-threads::before {
-  display: none !important;
-}
-
-.morning-thread-list {
-  border-top-color: rgba(21, 51, 77, 0.16) !important;
-}
-
-.morning-thread {
-  border-bottom-color: rgba(21, 51, 77, 0.14) !important;
-}
-
-.morning-thread p,
 .morning-foyer-grid > p,
 .morning-present-copy > p:not(.morning-kicker) {
   color: #5f6971 !important;
@@ -133,8 +109,6 @@
   --stories-cream: #f1f3f4;
   --stories-parchment: #e7edf1;
   --stories-mist: #e0ebf3;
-  --stories-sage: #e6ecef;
-  --stories-rose: #edf1f4;
   --stories-night: #14324c;
   --stories-night-soft: #31536b;
   background: #f8f5ee !important;
@@ -206,24 +180,8 @@
   background: #f4f6f5 !important;
 }
 
-.stories-memory {
-  background:
-    radial-gradient(circle at 80% 18%, rgba(108, 151, 183, 0.3), transparent 34%),
-    linear-gradient(145deg, #14324c 0%, #1a3e5c 52%, #31536b 100%) !important;
-}
-
-/* Replace the old outlined circle with a filled atmospheric field. */
-.stories-memory::after {
-  right: -18vw !important;
-  bottom: -30vw !important;
-  width: min(58vw, 900px) !important;
-  border: 0 !important;
-  background: rgba(139, 174, 199, 0.12) !important;
-}
-
 /* -------------------------------------------------------------------------- */
 /* BOOKS — quiet modern library                                                */
-/* CSS Modules are targeted by stable source-name fragments.                   */
 /* -------------------------------------------------------------------------- */
 
 main[class*="booksPage"] {
@@ -271,11 +229,6 @@ main[class*="booksPage"] section[class*="detailsSection"] {
   background:
     radial-gradient(circle at 90% 12%, rgba(199, 218, 232, 0.68), transparent 34%),
     linear-gradient(135deg, #e5edf2 0%, #eff3f4 100%) !important;
-}
-
-main[class*="booksPage"] section[class*="note"] {
-  background: #f4f6f5 !important;
-  color: #5f6971 !important;
 }
 
 @media (max-width: 899px) {
