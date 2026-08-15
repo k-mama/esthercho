@@ -7,7 +7,7 @@ import "./archive.css";
 export const metadata: Metadata = {
   title: "The Childhood Album",
   description:
-    "A quiet archive of Esther Cho's childhood photographs, remembered places, family traces, and the ordinary details that survived time.",
+    "Esther Cho's childhood photographs, remembered places, family traces, and the small things that stayed.",
 };
 
 export default function ArchivePage() {
@@ -16,7 +16,7 @@ export default function ArchivePage() {
       <PageCover
         eyebrow="CHILDHOOD"
         title="The Childhood Album"
-        description="Childhood photographs, family records, drawings, and preserved memories."
+        description="Photographs, family traces, drawings, and things remembered."
         image="/media/covers/childhood-cover.jpg"
         alt="Esther Cho smiling in the garden as a child"
         objectPosition="42% center"
@@ -32,12 +32,11 @@ export default function ArchivePage() {
             <h2 id="childhood-intro-title">Childhood photographs.</h2>
             <div className="childhood-intro-copy">
               <p>
-                The archive begins with ordinary things: the house, the garden,
-                and photographs of a child outside.
+                It begins simply: a house, a garden, a child standing outside.
               </p>
               <p>
-                These photographs are kept as pieces of a real life, with their
-                age and imperfections still visible.
+                The photographs are kept as they are. Time has already done
+                enough to them.
               </p>
             </div>
           </div>
@@ -54,24 +53,22 @@ export default function ArchivePage() {
             sizes="100vw"
             priority
           />
-          <figcaption className="container">
-            Archive photograph · The remembered house and garden
-          </figcaption>
+          <figcaption className="container">The childhood house and garden</figcaption>
         </figure>
 
         <div className="container childhood-house-copy">
           <div>
-            <p className="childhood-kicker">A PLACE REMEMBERED</p>
-            <h2 id="childhood-house-title">The album begins with a house.</h2>
+            <p className="childhood-kicker">THE HOUSE</p>
+            <h2 id="childhood-house-title">Sometimes the house comes back first.</h2>
           </div>
           <div className="childhood-house-copy-text">
             <p>
-              Years later, a window, a yard, a staircase, or the shape of a
-              garden can return before the rest of the story does.
+              A window, a yard, a staircase, the shape of a garden. Years later,
+              a place can return before the story around it does.
             </p>
             <p>
-              Places are part of the record here: where a child stood, where
-              family life unfolded, and where memory still finds its way back.
+              This was where a child stood and family life happened. Memory
+              still finds its way back there.
             </p>
           </div>
         </div>
@@ -87,15 +84,15 @@ export default function ArchivePage() {
               height={1350}
               sizes="(max-width: 899px) 100vw, 64vw"
             />
-            <figcaption>Archive photograph · Esther Cho as a child</figcaption>
+            <figcaption>Esther Cho as a child</figcaption>
           </figure>
 
           <div className="childhood-garden-copy">
-            <p className="childhood-kicker">A CHILD IN THE FRAME</p>
+            <p className="childhood-kicker">THE CHILD</p>
             <h2 id="childhood-garden-title">A child in the garden.</h2>
             <p>
               Someone wanted to keep this moment. The photograph does not need
-              to do more than that.
+              to do anything more.
             </p>
           </div>
         </div>
@@ -104,18 +101,17 @@ export default function ArchivePage() {
       <section className="childhood-fragments" aria-labelledby="childhood-fragments-title">
         <div className="container childhood-fragments-inner">
           <div>
-            <p className="childhood-kicker">BEYOND THE PHOTOGRAPH</p>
-            <h2 id="childhood-fragments-title">Not every memory left a picture.</h2>
+            <p className="childhood-kicker">WITHOUT A PICTURE</p>
+            <h2 id="childhood-fragments-title">Some memories have no photograph.</h2>
           </div>
           <div className="childhood-fragments-copy">
             <p>
-              Some scenes survive only as a sentence, a family joke, the sound
-              of a clock, a table, a summer evening, or the feeling of wanting to
-              go home.
+              A sentence. A family joke. The sound of a clock. A table. A summer
+              evening. The feeling of wanting to go home.
             </p>
             <p>
-              Those fragments belong in the archive too. Missing parts are not
-              invented simply to make a memory look complete.
+              They can stay incomplete. What is not remembered does not need to
+              be filled in.
             </p>
           </div>
         </div>
@@ -127,17 +123,17 @@ export default function ArchivePage() {
       >
         <div className="container childhood-principle-inner">
           <div>
-            <p className="childhood-kicker">ARCHIVE PRINCIPLE</p>
-            <h2 id="childhood-principle-title">The record and the reimagining stay distinct.</h2>
+            <p className="childhood-kicker">WHAT IS ORIGINAL</p>
+            <h2 id="childhood-principle-title">Old photographs stay old photographs.</h2>
           </div>
           <div className="childhood-principle-copy">
             <p>
-              Original photographs are presented as archival material. Images
-              reconstructed or reimagined from memory are identified separately,
-              never as historical evidence.
+              When a later image is reconstructed or reimagined from memory, it
+              is identified as a later work rather than presented as a historical
+              photograph.
             </p>
             <Link href="/stories/" className="childhood-link">
-              Enter the stories
+              Read the stories
             </Link>
           </div>
         </div>
@@ -145,11 +141,8 @@ export default function ArchivePage() {
 
       <section className="childhood-ending" aria-labelledby="childhood-ending-title">
         <div className="container childhood-ending-inner">
-          <p className="childhood-kicker">THE ALBUM STAYS OPEN</p>
-          <h2 id="childhood-ending-title">The album is not finished.</h2>
-          <p>
-            A photograph can wait years for the story that belongs beside it.
-          </p>
+          <p className="childhood-kicker">ONE MORE PAGE</p>
+          <h2 id="childhood-ending-title">Some photographs wait a long time for their story.</h2>
         </div>
       </section>
     </main>
