@@ -29,11 +29,11 @@ export default function ArchivePage() {
         <div className="container">
           <p className="childhood-kicker">THE ALBUM OPENS</p>
           <div className="childhood-intro-grid">
-            <h2 id="childhood-intro-title">A life leaves small things behind.</h2>
+            <h2 id="childhood-intro-title">Childhood photographs.</h2>
             <div className="childhood-intro-copy">
               <p>
-                A house. A garden. A child standing in the light. The beginning
-                of an archive is rarely grand.
+                The archive begins with ordinary things: the house, the garden,
+                and photographs of a child outside.
               </p>
               <p>
                 These photographs are kept as pieces of a real life, with their
@@ -94,8 +94,8 @@ export default function ArchivePage() {
             <p className="childhood-kicker">A CHILD IN THE FRAME</p>
             <h2 id="childhood-garden-title">A child in the garden.</h2>
             <p>
-              A face, a season, a place, a moment someone once thought worth
-              keeping. The photograph does not need to explain more than that.
+              Someone wanted to keep this moment. The photograph does not need
+              to do more than that.
             </p>
           </div>
         </div>
