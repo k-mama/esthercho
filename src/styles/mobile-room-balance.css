@@ -1,5 +1,5 @@
 /* Mobile photographic art direction for Esther Cho's inner rooms.
-   Space photographs may go wide; portraits, tables and artwork keep breathing room.
+   Space photographs may go wide; portraits and artwork keep breathing room.
    No decorative objects are introduced here. */
 
 @media (max-width: 899px) {
@@ -45,7 +45,7 @@
     padding-inline: 0 !important;
   }
 
-  /* Esther now opens with text; the first interior photograph is university years. */
+  /* Esther opens with text; the first interior photograph is university years. */
   .esther-portrait-figure {
     width: min(78vw, 430px) !important;
     margin-inline: auto !important;
@@ -54,16 +54,6 @@
   .esther-portrait-figure img {
     aspect-ratio: 4 / 5 !important;
     object-position: center 28% !important;
-  }
-
-  .esther-table-figure {
-    width: min(78vw, 430px) !important;
-    margin-inline: auto !important;
-  }
-
-  .esther-table-figure img {
-    aspect-ratio: 4 / 5 !important;
-    object-position: center 52% !important;
   }
 
   .esther-service-figure {
@@ -77,7 +67,6 @@
   }
 
   .esther-portrait-figure figcaption,
-  .esther-table-figure figcaption,
   .esther-service-figure figcaption {
     padding-inline: 0 !important;
   }
@@ -135,18 +124,7 @@
     object-position: center 30% !important;
   }
 
-  .stories-newly-figure {
-    width: min(78vw, 440px) !important;
-    margin-inline: auto !important;
-    justify-self: center !important;
-  }
-
-  .stories-newly-figure img {
-    aspect-ratio: 3 / 4 !important;
-    object-position: center 54% !important;
-    box-shadow: 0 20px 38px rgba(25, 48, 67, 0.09);
-  }
-
+  /* Morning Table owns the recurring breakfast photograph. */
   .morning-present-figure {
     width: min(80vw, 440px) !important;
     margin-inline: auto !important;
@@ -158,22 +136,6 @@
     object-position: center 54% !important;
     box-shadow: 0 22px 42px rgba(25, 48, 67, 0.1);
   }
-
-  main[class*="booksPage"] figure[class*="projectFigure"] {
-    width: min(84vw, 450px) !important;
-    margin-inline: auto !important;
-  }
-
-  main[class*="booksPage"] figure[class*="projectFigure"] img {
-    aspect-ratio: 3 / 4 !important;
-    object-fit: cover !important;
-    object-position: center 52% !important;
-    box-shadow: 0 22px 42px rgba(25, 48, 67, 0.1) !important;
-  }
-
-  main[class*="booksPage"] figure[class*="projectFigure"] figcaption {
-    padding-inline: 0 !important;
-  }
 }
 
 @media (max-width: 560px) {
@@ -181,8 +143,7 @@
     width: 90vw !important;
   }
 
-  .esther-portrait-figure,
-  .esther-table-figure {
+  .esther-portrait-figure {
     width: 80vw !important;
   }
 
@@ -195,13 +156,11 @@
     width: 92vw !important;
   }
 
-  .morning-present-figure,
-  main[class*="booksPage"] figure[class*="projectFigure"] {
+  .morning-present-figure {
     width: 86vw !important;
   }
 
-  .stories-young-artist,
-  .stories-newly-figure {
+  .stories-young-artist {
     width: 80vw !important;
   }
 }
