@@ -1,0 +1,61 @@
+/* Desktop sub-navigation: hidden by default, revealed only from the main nav.
+   It floats over the hero/page cover instead of permanently occupying a second row. */
+
+@media (min-width: 960px) {
+  .site-header {
+    position: relative;
+    overflow: visible;
+  }
+
+  .site-header-nav-desktop {
+    position: relative;
+  }
+
+  /* Invisible hover bridge so the submenu does not collapse while the pointer
+     travels from the main nav down into the floating panel. */
+  .site-header-nav-desktop::after {
+    position: absolute;
+    top: 100%;
+    right: -1.75rem;
+    left: -1.75rem;
+    height: 2.2rem;
+    content: "";
+  }
+
+  .site-header-subnav-desktop,
+  body:has(.page-cover-shell) .site-header-subnav-desktop {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    z-index: 45;
+    display: block;
+    margin: 0 !important;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-8px);
+    box-shadow: 0 18px 34px rgba(20, 39, 58, 0.08);
+    transition:
+      opacity 180ms ease,
+      transform 180ms ease,
+      visibility 0s linear 190ms;
+  }
+
+  .site-header:has(.site-header-nav-desktop:hover) .site-header-subnav-desktop,
+  .site-header:has(.site-header-nav-desktop:focus-within) .site-header-subnav-desktop,
+  .site-header:has(.site-header-subnav-desktop:hover) .site-header-subnav-desktop,
+  .site-header:has(.site-header-subnav-desktop:focus-within) .site-header-subnav-desktop {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+    transition-delay: 0s;
+  }
+
+  /* Keep the reveal quiet and refined. */
+  .site-header-subnav-inner ul {
+    padding-top: 0.9rem;
+    padding-bottom: 0.88rem;
+  }
+}
