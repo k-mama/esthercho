@@ -34,6 +34,55 @@ body:has(.home-video-hero) .site-header-nav-link[aria-current="page"] {
   color: #dfc696;
 }
 
+body:has(.home-video-hero) .site-footer {
+  margin: 0;
+  padding: clamp(3.2rem, 6vw, 5.5rem) 0;
+  color: rgba(246, 242, 234, 0.68);
+  background:
+    radial-gradient(circle at 12% 10%, rgba(74, 120, 151, 0.2), transparent 30%),
+    radial-gradient(circle at 90% 90%, rgba(126, 101, 141, 0.14), transparent 32%),
+    linear-gradient(145deg, #0d2239, #102a45 58%, #143644);
+  border: 0;
+  border-radius: 0;
+}
+
+body:has(.home-video-hero) .site-footer-inner {
+  display: grid;
+  grid-template-columns: minmax(190px, 0.72fr) minmax(0, 1.28fr);
+  gap: clamp(2.5rem, 7vw, 7rem);
+  align-items: end;
+}
+
+body:has(.home-video-hero) .site-footer-name {
+  color: #f6f2ea;
+  font-size: 0.76rem;
+  letter-spacing: 0.16em;
+}
+
+body:has(.home-video-hero) .site-footer-description,
+body:has(.home-video-hero) .site-footer-copyright {
+  color: rgba(246, 242, 234, 0.6);
+}
+
+body:has(.home-video-hero) .site-footer-colophon {
+  margin: 0;
+  padding: 0 0 0 clamp(2rem, 5vw, 5rem);
+  color: rgba(246, 242, 234, 0.68);
+  border-top: 0;
+  border-left: 1px solid rgba(218, 193, 146, 0.24);
+  font-size: 0.74rem;
+  line-height: 1.8;
+}
+
+body:has(.home-video-hero) .site-footer-colophon a {
+  color: #dec79b;
+  text-decoration: none;
+}
+
+body:has(.home-video-hero) .site-footer-colophon a:hover {
+  color: #f6f2ea;
+}
+
 @media (max-width: 959px) {
   body:has(.home-video-hero) .site-header {
     padding-block: max(0.9rem, env(safe-area-inset-top)) 0.85rem;
@@ -94,6 +143,19 @@ body:has(.home-video-hero) .site-header-nav-link[aria-current="page"] {
   body:has(.home-video-hero) .site-header-lang img {
     width: 20px !important;
     height: 20px !important;
+  }
+}
+
+@media (max-width: 720px) {
+  body:has(.home-video-hero) .site-footer-inner {
+    grid-template-columns: 1fr;
+    gap: 2.3rem;
+  }
+
+  body:has(.home-video-hero) .site-footer-colophon {
+    padding: 1.4rem 0 0;
+    border-top: 1px solid rgba(218, 193, 146, 0.22);
+    border-left: 0;
   }
 }
 
