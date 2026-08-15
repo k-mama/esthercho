@@ -61,19 +61,6 @@ const lifeChapters = [
   "The Life Now",
 ];
 
-const memoryCollections = [
-  "House",
-  "Pale Blue",
-  "Rain",
-  "Early Summer",
-  "Christmas",
-  "Table",
-  "Dawn",
-  "Sunset",
-  "Family",
-  "Happiness",
-];
-
 export default function StoriesPage() {
   return (
     <main className="stories-page">
@@ -223,21 +210,6 @@ export default function StoriesPage() {
             />
             <figcaption>University years</figcaption>
           </figure>
-        </div>
-      </section>
-
-      <section className="stories-memory" aria-labelledby="memory-collections-title">
-        <div className="container stories-memory-inner">
-          <div className="stories-memory-heading">
-            <p className="stories-kicker">THINGS THAT RETURN</p>
-            <h2 id="memory-collections-title">The same things keep coming back.</h2>
-          </div>
-
-          <div className="stories-memory-list" aria-label="Recurring memories">
-            {memoryCollections.map((collection) => (
-              <span key={collection}>{collection}</span>
-            ))}
-          </div>
         </div>
       </section>
 
