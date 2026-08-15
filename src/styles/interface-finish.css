@@ -115,6 +115,7 @@ main[class*="booksPage"] a[class*="projectLink"] {
 .morning-link:focus-visible,
 main[class*="booksPage"] a[class*="projectLink"]:hover,
 main[class*="booksPage"] a[class*="projectLink"]:focus-visible {
+  color: #1b4c73 !important;
   background-size: 100% 1px;
 }
 
@@ -183,6 +184,100 @@ main[class*="booksPage"] figcaption {
 }
 
 /* -------------------------------------------------------------------------- */
+/* RED TEAM — remove the last old-palette and card cues                       */
+/* -------------------------------------------------------------------------- */
+
+/* No gold/brown micro-accents remain in the current interior language. */
+.childhood-kicker,
+.stories-kicker,
+.morning-kicker,
+.studio-kicker,
+.esther-eyebrow,
+main[class*="booksPage"] p[class*="eyebrow"],
+main[class*="booksPage"] span[class*="status"],
+main[class*="booksPage"] p[class*="noteLabel"],
+main[class*="booksPage"] dt {
+  color: #587691 !important;
+}
+
+.childhood-fragments .childhood-kicker,
+.stories-memory .stories-kicker,
+.morning-manuscript .morning-kicker,
+.studio-principle .studio-kicker,
+.esther-making-section .esther-eyebrow {
+  color: #a9cee5 !important;
+}
+
+/* The selected desktop room is blue, never champagne/gold. */
+.site-header-subnav-inner a[aria-current="page"]::after {
+  background: rgba(88, 118, 145, 0.72) !important;
+}
+
+body:has(.home-video-hero) .site-header-nav-link[aria-current="page"] {
+  color: #eef4f7 !important;
+}
+
+body:has(.home-video-hero, .page-cover-shell) .site-header-nav-mobile-menu {
+  border-color: rgba(214, 230, 240, 0.42) !important;
+}
+
+/* Photography should read as editorial imagery, not floating cards. */
+.childhood-page figure img,
+.esther-page figure img,
+.studio-page figure img,
+.stories-page figure img,
+.morning-page figure img,
+main[class*="booksPage"] figure[class*="projectFigure"] img {
+  border-radius: 4px !important;
+  box-shadow: 0 18px 42px rgba(25, 48, 67, 0.08) !important;
+}
+
+.childhood-house-figure img,
+.stories-house-figure img {
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+/* HOME photographs stay still. The interface reacts; the life photographs do not. */
+body:has(.home-video-hero) [class*="tableMedia"],
+body:has(.home-video-hero) [class*="careMedia"],
+body:has(.home-video-hero) [class*="memoryPrimary"],
+body:has(.home-video-hero) [class*="studioPrimary"] {
+  transition: none !important;
+}
+
+body:has(.home-video-hero) [class*="tableMedia"]:hover,
+body:has(.home-video-hero) [class*="careMedia"]:hover,
+body:has(.home-video-hero) [class*="memoryPrimary"]:hover,
+body:has(.home-video-hero) [class*="studioPrimary"]:hover {
+  transform: none !important;
+}
+
+body:has(.home-video-hero) [class*="tableMedia"] img,
+body:has(.home-video-hero) [class*="careMedia"] img,
+body:has(.home-video-hero) [class*="memoryPrimary"] img {
+  border-radius: 5px !important;
+}
+
+/* Keep the overlap in Memory, retire the scrapbook paper frame and tilt. */
+body:has(.home-video-hero) [class*="memorySecondary"] {
+  padding: 0 !important;
+  background: transparent !important;
+  box-shadow: 0 18px 40px rgba(25, 48, 67, 0.1) !important;
+  transform: none !important;
+  backdrop-filter: none !important;
+}
+
+body:has(.home-video-hero) [class*="memorySecondary"] img {
+  border-radius: 3px !important;
+}
+
+/* Room directory hover is typographic, not a glass-card wash. */
+body:has(.home-video-hero) [class*="roomLinks"] a::before {
+  display: none !important;
+}
+
+/* -------------------------------------------------------------------------- */
 /* MOBILE — touch scale and quieter finish                                    */
 /* -------------------------------------------------------------------------- */
 
@@ -225,6 +320,19 @@ main[class*="booksPage"] figcaption {
   main[class*="booksPage"] figcaption {
     font-size: 0.64rem !important;
     line-height: 1.6 !important;
+  }
+
+  .childhood-page figure img,
+  .esther-page figure img,
+  .studio-page figure img,
+  .stories-page figure img,
+  .morning-page figure img,
+  main[class*="booksPage"] figure[class*="projectFigure"] img,
+  body:has(.home-video-hero) [class*="tableMedia"] img,
+  body:has(.home-video-hero) [class*="careMedia"] img,
+  body:has(.home-video-hero) [class*="memoryPrimary"] img,
+  body:has(.home-video-hero) [class*="memorySecondary"] img {
+    border-radius: 0 !important;
   }
 }
 
