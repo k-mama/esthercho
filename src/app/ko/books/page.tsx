@@ -68,7 +68,7 @@ export default function KoreanBooksPage() {
       <section className={styles.detailsSection} aria-labelledby="project-notes-title">
         <div className={`container ${styles.detailsInner}`}>
           <h2 id="project-notes-title" className={styles.detailsHeading}>
-            원고 기록
+            원고 정보
           </h2>
           <dl className={styles.projectFacts}>
             {facts.map((item) => (
@@ -78,13 +78,6 @@ export default function KoreanBooksPage() {
               </div>
             ))}
           </dl>
-        </div>
-      </section>
-
-      <section className={styles.note}>
-        <div className={`container ${styles.noteInner}`}>
-          <p className={styles.noteLabel}>출간</p>
-          <p>표지, 출간일, 판본, 권리 정보는 확정된 뒤에 공개합니다.</p>
         </div>
       </section>
     </main>
