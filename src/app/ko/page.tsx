@@ -8,13 +8,6 @@ export const metadata: Metadata = {
   title: "조성연",
   description:
     "믿음과 기억, 어린 시절과 평범한 삶에서 태어난 이야기의 집.",
-  alternates: {
-    canonical: "/ko/",
-    languages: {
-      en: "/",
-      ko: "/ko/",
-    },
-  },
 };
 
 export default function KoreanHome() {
