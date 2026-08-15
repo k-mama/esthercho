@@ -7,12 +7,12 @@ import "../../archive/archive.css";
 export const metadata: Metadata = {
   title: "어린 시절 앨범",
   description:
-    "조성연 작가의 어린 시절 사진과 기억의 장소, 가족의 흔적과 시간이 남긴 평범한 것들을 모은 조용한 아카이브.",
+    "조성연 작가의 어린 시절 사진과 기억의 장소, 가족의 흔적과 시간이 남긴 평범한 것들을 모은 아카이브.",
 };
 
 export default function KoreanArchivePage() {
   return (
-    <main className="childhood-page">
+    <main className="childhood-page childhood-page-ko">
       <PageCover
         eyebrow="어린 시절"
         title="어린 시절 앨범"
@@ -29,15 +29,18 @@ export default function KoreanArchivePage() {
         <div className="container">
           <p className="childhood-kicker">앨범을 열며</p>
           <div className="childhood-intro-grid">
-            <h2 id="childhood-intro-title">어린 시절의 사진.</h2>
+            <h2 id="childhood-intro-title">
+              <span>어린 시절의</span>
+              <span>사진들.</span>
+            </h2>
             <div className="childhood-intro-copy">
               <p>
-                아카이브는 집과 정원, 밖에 서 있는 아이의 사진처럼 평범한
-                것에서 시작한다.
+                집과 정원, 밖에 서 있는 아이. 아카이브는 그렇게 평범한 사진에서
+                시작합니다.
               </p>
               <p>
-                이 사진들은 실제 삶의 조각으로 남긴다. 오래된 흔적과
-                작은 결함도 그대로 둔다.
+                오래된 흔적도 작은 결함도 지우지 않습니다. 그때의 사진은 그때의
+                모습 그대로 남겨둡니다.
               </p>
             </div>
           </div>
@@ -62,16 +65,19 @@ export default function KoreanArchivePage() {
         <div className="container childhood-house-copy">
           <div>
             <p className="childhood-kicker">기억 속의 장소</p>
-            <h2 id="childhood-house-title">앨범은 집에서 시작한다.</h2>
+            <h2 id="childhood-house-title">
+              <span>앨범은 집에서</span>
+              <span>시작합니다.</span>
+            </h2>
           </div>
           <div className="childhood-house-copy-text">
             <p>
-              시간이 흐른 뒤에도 창문, 마당, 계단, 정원의 모양이 이야기보다
-              먼저 돌아오기도 한다.
+              시간이 많이 지난 뒤에도 창문이나 마당, 계단, 정원의 모양이
+              이야기보다 먼저 돌아올 때가 있습니다.
             </p>
             <p>
-              이곳에서 장소는 기록의 일부다. 아이가 서 있던 곳, 가족의
-              시간이 흘렀던 곳, 기억이 다시 길을 찾는 곳.
+              아이가 서 있던 곳, 가족의 시간이 흘렀던 곳. 장소도 기억의 일부로
+              함께 남겨둡니다.
             </p>
           </div>
         </div>
@@ -94,8 +100,8 @@ export default function KoreanArchivePage() {
             <p className="childhood-kicker">사진 속의 아이</p>
             <h2 id="childhood-garden-title">정원 속의 아이.</h2>
             <p>
-              누군가 이 순간을 남겨두고 싶었다. 그 사실만으로도 사진은
-              충분하다.
+              누군가 이 순간을 남겨두고 싶었습니다. 사진은 그 사실만으로도
+              충분합니다.
             </p>
           </div>
         </div>
@@ -105,16 +111,19 @@ export default function KoreanArchivePage() {
         <div className="container childhood-fragments-inner">
           <div>
             <p className="childhood-kicker">사진 너머의 기억</p>
-            <h2 id="childhood-fragments-title">모든 기억이 사진을 남긴 것은 아니다.</h2>
+            <h2 id="childhood-fragments-title">
+              <span>사진이 남지 않은</span>
+              <span>기억도 있습니다.</span>
+            </h2>
           </div>
           <div className="childhood-fragments-copy">
             <p>
-              어떤 장면은 한 문장, 가족의 농담, 시계 소리, 식탁, 여름밤,
-              혹은 집에 가고 싶었던 마음으로만 남아 있다.
+              어떤 장면은 한 문장으로, 가족의 농담이나 시계 소리로, 식탁이나
+              여름밤의 감각으로만 남아 있습니다.
             </p>
             <p>
-              그런 조각도 아카이브에 속한다. 비어 있는 부분을 그럴듯하게
-              채워 완전한 기억처럼 만들지 않는다.
+              그런 조각도 이 앨범에 들어옵니다. 모르는 부분을 그럴듯하게 채워서
+              완전한 기억처럼 만들지는 않습니다.
             </p>
           </div>
         </div>
@@ -127,13 +136,15 @@ export default function KoreanArchivePage() {
         <div className="container childhood-principle-inner">
           <div>
             <p className="childhood-kicker">아카이브 원칙</p>
-            <h2 id="childhood-principle-title">기록과 재해석은 서로 다른 자리에 둔다.</h2>
+            <h2 id="childhood-principle-title">
+              <span>기록과 재해석은</span>
+              <span>서로 다른 자리에 둡니다.</span>
+            </h2>
           </div>
           <div className="childhood-principle-copy">
             <p>
-              원본 사진은 아카이브 자료로 보여준다. 기억을 바탕으로 나중에
-              재구성하거나 다시 그린 이미지는 실제 역사 자료처럼 보이지
-              않도록 별도로 밝힌다.
+              원본 사진은 아카이브 자료로 보여줍니다. 기억을 바탕으로 나중에
+              재구성하거나 다시 그린 이미지는 실제 역사 자료와 분명히 구분합니다.
             </p>
             <Link href="/ko/stories/" className="childhood-link">
               이야기로 들어가기
@@ -145,8 +156,11 @@ export default function KoreanArchivePage() {
       <section className="childhood-ending" aria-labelledby="childhood-ending-title">
         <div className="container childhood-ending-inner">
           <p className="childhood-kicker">열린 앨범</p>
-          <h2 id="childhood-ending-title">앨범은 아직 끝나지 않았다.</h2>
-          <p>어떤 사진은 자기 곁에 놓일 이야기를 오래 기다릴 수도 있다.</p>
+          <h2 id="childhood-ending-title">
+            <span>앨범은 아직</span>
+            <span>끝나지 않았습니다.</span>
+          </h2>
+          <p>어떤 사진은 자기 곁에 놓일 이야기를 오래 기다리기도 합니다.</p>
         </div>
       </section>
     </main>
