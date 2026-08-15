@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { PageCover } from "@/components/page-cover";
 import { featuredBook } from "@/content/books";
@@ -31,21 +32,44 @@ export default function KoreanBooksPage() {
         shade="soft"
       />
 
-      <section className={styles.projectSection}>
-        <div className={`container ${styles.projectGrid}`}>
-          <div className={styles.projectCopy}>
-            <p className={styles.eyebrow}>{featuredBook.eyebrow.ko}</p>
-            <h2 className={styles.title}>{featuredBook.title}</h2>
+      <section className={styles.projectSection} aria-labelledby="featured-book-title">
+        <div className={`container ${styles.projectHeader}`}>
+          <p className={styles.eyebrow}>{featuredBook.eyebrow.ko}</p>
+          <div className={styles.projectTitleBlock}>
+            <h2 id="featured-book-title" className={styles.title}>
+              {featuredBook.title}
+            </h2>
             <span className={styles.status}>{featuredBook.status.ko}</span>
-            <p className={styles.deck}>{featuredBook.deck.ko}</p>
-            <p className={styles.description}>
-              {featuredBook.description.ko}
-            </p>
+          </div>
+          <p className={styles.deck}>{featuredBook.deck.ko}</p>
+        </div>
+
+        <div className={`container ${styles.projectBody}`}>
+          <figure className={styles.projectFigure}>
+            <Image
+              src="/media/esther/morning-table.jpg"
+              alt="조성연 작가의 아침 식탁에 놓인 아침 식사"
+              width={1200}
+              height={1600}
+              sizes="(max-width: 899px) 82vw, 38vw"
+            />
+            <figcaption>아침 식탁 · 현재의 한 장면</figcaption>
+          </figure>
+
+          <div className={styles.projectCopy}>
+            <p className={styles.description}>{featuredBook.description.ko}</p>
             <Link className={styles.projectLink} href="/ko/notes/">
-              새벽 식탁의 글 읽기
+              아침 식탁의 글 읽기
             </Link>
           </div>
+        </div>
+      </section>
 
+      <section className={styles.detailsSection} aria-labelledby="project-notes-title">
+        <div className={`container ${styles.detailsInner}`}>
+          <h2 id="project-notes-title" className={styles.detailsHeading}>
+            프로젝트 기록
+          </h2>
           <dl className={styles.projectFacts}>
             {facts.map((item) => (
               <div className={styles.fact} key={item.label.ko}>
@@ -58,7 +82,8 @@ export default function KoreanBooksPage() {
       </section>
 
       <section className={styles.note}>
-        <div className="container">
+        <div className={`container ${styles.noteInner}`}>
+          <p className={styles.noteLabel}>출간 기록</p>
           <p>
             표지, 출간일, 판본, 권리 정보는 실제로 확정된 뒤에만
             공개합니다.
