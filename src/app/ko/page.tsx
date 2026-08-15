@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { HomeHeroVideo } from "../home-hero-video";
 import styles from "../page.module.css";
+import polish from "../home-polish.module.css";
 
 export const metadata: Metadata = {
   title: "조성연",
@@ -21,7 +22,7 @@ const rooms = [
 
 export default function KoreanHome() {
   return (
-    <main className={styles.home}>
+    <main className={`${styles.home} ${polish.home}`}>
       <section className={`${styles.videoHero} home-video-hero`}>
         <HomeHeroVideo locale="ko" />
 
@@ -37,7 +38,7 @@ export default function KoreanHome() {
         </div>
       </section>
 
-      <section className={styles.threshold} id="inside" aria-labelledby="house-title">
+      <section className={`${styles.threshold} ${polish.foyer}`} id="inside" aria-labelledby="house-title">
         <div className={`container ${styles.thresholdInner}`}>
           <div className={styles.thresholdCopy}>
             <p className={styles.eyebrow}>집 안으로</p>
@@ -51,7 +52,7 @@ export default function KoreanHome() {
             </p>
           </div>
 
-          <nav className={styles.roomLinks} aria-label="조성연의 집 안에 있는 방들">
+          <nav className={`${styles.roomLinks} ${polish.roomLinks}`} aria-label="조성연의 집 안에 있는 방들">
             {rooms.map(([label, href], index) => (
               <Link href={href} key={href}>
                 <span>{String(index + 1).padStart(2, "0")}</span>
@@ -63,7 +64,7 @@ export default function KoreanHome() {
         </div>
       </section>
 
-      <section className={`${styles.scene} ${styles.tableScene}`} aria-labelledby="table-title">
+      <section className={`${styles.scene} ${styles.tableScene} ${polish.table}`} aria-labelledby="table-title">
         <div className={`container ${styles.sceneGrid}`}>
           <div className={styles.sceneCopy}>
             <p className={styles.eyebrow}>아침 식탁</p>
@@ -80,7 +81,7 @@ export default function KoreanHome() {
             </Link>
           </div>
 
-          <figure className={`${styles.sceneMedia} ${styles.tableMedia}`}>
+          <figure className={`${styles.sceneMedia} ${styles.tableMedia} ${polish.tableMedia}`}>
             <Image
               src="/media/esther/morning-table.jpg"
               alt="조성연 작가의 아침 식탁"
@@ -93,10 +94,10 @@ export default function KoreanHome() {
         </div>
       </section>
 
-      <section className={`${styles.scene} ${styles.memoryScene}`} aria-labelledby="memory-title">
+      <section className={`${styles.scene} ${styles.memoryScene} ${polish.memory}`} aria-labelledby="memory-title">
         <div className={`container ${styles.sceneGrid} ${styles.reverseScene}`}>
           <div className={styles.memoryCollage} aria-label="조성연의 어린 시절 아카이브 사진">
-            <figure className={styles.memoryPrimary}>
+            <figure className={`${styles.memoryPrimary} ${polish.memoryPrimary}`}>
               <Image
                 src="/media/esther/childhood-garden.jpg"
                 alt="조성연의 어린 시절과 연결된 정원 사진"
@@ -105,7 +106,7 @@ export default function KoreanHome() {
                 sizes="(max-width: 899px) 92vw, 48vw"
               />
             </figure>
-            <figure className={styles.memorySecondary}>
+            <figure className={`${styles.memorySecondary} ${polish.memorySecondary}`}>
               <Image
                 src="/media/esther/childhood-house.jpg"
                 alt="조성연의 어린 시절과 연결된 집 사진"
@@ -133,7 +134,7 @@ export default function KoreanHome() {
         </div>
       </section>
 
-      <section className={`${styles.scene} ${styles.careScene}`} aria-labelledby="care-title">
+      <section className={`${styles.scene} ${styles.careScene} ${polish.care}`} aria-labelledby="care-title">
         <div className={`container ${styles.careLayout}`}>
           <div className={styles.sceneCopy}>
             <p className={styles.eyebrow}>돌봄의 이야기</p>
@@ -150,7 +151,7 @@ export default function KoreanHome() {
             </Link>
           </div>
 
-          <figure className={`${styles.sceneMedia} ${styles.careMedia}`}>
+          <figure className={`${styles.sceneMedia} ${styles.careMedia} ${polish.careMedia}`}>
             <Image
               src="/media/esther/bangladesh-service.jpg"
               alt="조성연의 방글라데시 봉사 기록 사진"
@@ -163,7 +164,7 @@ export default function KoreanHome() {
         </div>
       </section>
 
-      <section className={`${styles.scene} ${styles.studioScene}`} aria-labelledby="studio-title">
+      <section className={`${styles.scene} ${styles.studioScene} ${polish.studio}`} aria-labelledby="studio-title">
         <div className={`container ${styles.sceneGrid}`}>
           <div className={styles.sceneCopy}>
             <p className={styles.eyebrow}>작업실</p>
@@ -181,7 +182,7 @@ export default function KoreanHome() {
           </div>
 
           <div className={styles.studioCollage} aria-label="조성연의 원본 손그림과 콜라주">
-            <figure className={styles.studioPrimary}>
+            <figure className={`${styles.studioPrimary} ${polish.studioPrimary}`}>
               <Image
                 src="/media/esther/hand-drawn-story.jpg"
                 alt="조성연의 원본 손그림 습작"
@@ -190,7 +191,7 @@ export default function KoreanHome() {
                 sizes="(max-width: 899px) 82vw, 34vw"
               />
             </figure>
-            <figure className={styles.studioSecondary}>
+            <figure className={`${styles.studioSecondary} ${polish.studioSecondary}`}>
               <Image
                 src="/media/esther/still-making-father-child-collage-20260802.png"
                 alt="조성연의 어린 시절 원본 스케치를 바탕으로 만든 콜라주"
@@ -203,7 +204,7 @@ export default function KoreanHome() {
         </div>
       </section>
 
-      <section className={styles.closingRoom} aria-labelledby="closing-title">
+      <section className={`${styles.closingRoom} ${polish.closing}`} aria-labelledby="closing-title">
         <div className={`container ${styles.closingInner}`}>
           <p className={styles.eyebrow}>조금 더 안쪽으로</p>
           <h2 id="closing-title" className={styles.koDisplay}>
