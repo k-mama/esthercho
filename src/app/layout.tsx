@@ -14,6 +14,7 @@ import "@/styles/home-mobile-studio-fix.css";
 import "@/styles/mobile-menu-glass.css";
 import "@/styles/desktop-subnav-hover.css";
 import "@/styles/room-interiors.css";
+import "@/styles/room-photo-composition.css";
 
 const siteUrl = "https://esthercho.pages.dev";
 const socialPreviewImage = "/media/home/esther-house-entry-poster.jpg";
