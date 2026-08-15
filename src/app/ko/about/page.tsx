@@ -5,9 +5,9 @@ import { authorProfile } from "@/content/author-profile";
 import "../../about/about.css";
 
 export const metadata: Metadata = {
-  title: "이야기가 된 집",
+  title: "조성연 · Esther Cho",
   description:
-    "한국 작가이자 화가 조성연의 삶과 창작 이야기. 신앙과 기억, 집과 그림이 이야기가 되는 과정을 소개합니다.",
+    "한국 작가이자 화가 조성연, 그리고 국제 작가명 Esther Cho를 소개합니다.",
 };
 
 const education = authorProfile.education;
@@ -16,8 +16,8 @@ export default function KoreanAboutPage() {
   return (
     <main>
       <PageCover
-        eyebrow={authorProfile.koreanName}
-        title="이야기가 된 집"
+        eyebrow="ESTHER"
+        title="조성연"
         description={authorProfile.roles.ko.join(" · ")}
         image="/media/covers/esther-cover.webp"
         mobileImage="/media/covers/esther-cover-mobile.webp"
@@ -39,13 +39,12 @@ export default function KoreanAboutPage() {
             </h2>
 
             <p className="esther-deck">
-              {authorProfile.shortBio.ko}
+              Esther Cho는 한국 작가이자 화가 조성연의 국제 작가명입니다.
             </p>
 
             <p className="esther-intro">
-              조성연의 글과 그림은 기독교 신앙과 어린 시절, 가족의 기억,
-              집에서의 일상을 자주 돌아본다. 살아온 것과 기억한 것을
-              바탕으로 쓴다.
+              조성연은 살아온 것과 기억나는 것을 쓴다. 기독교 신앙과 어린
+              시절, 가족, 집에서의 생활이 자주 글과 그림으로 돌아온다.
             </p>
           </div>
 
@@ -59,9 +58,7 @@ export default function KoreanAboutPage() {
               priority
             />
 
-            <figcaption>
-              어린 시절 정원에서 웃고 있는 조성연.
-            </figcaption>
+            <figcaption>조성연 · 어린 시절</figcaption>
           </figure>
         </header>
 
@@ -76,25 +73,20 @@ export default function KoreanAboutPage() {
                 sizes="(max-width: 899px) 100vw, 48vw"
               />
 
-              <figcaption>
-                어린 시절의 기억과 이어진 집과 정원.
-              </figcaption>
+              <figcaption>어린 시절의 집과 정원</figcaption>
             </figure>
 
             <div className="esther-copy">
               <p className="esther-eyebrow">시작된 곳</p>
 
-              <h2>어린 시절의 집과 정원.</h2>
+              <h2>자꾸 돌아가게 되는 집.</h2>
 
               <p>
-                어린 시절의 집과 정원은 지금도 조성연의 작업에 반복해서
-                등장한다.
+                어린 시절의 집과 정원은 지금도 조성연의 글과 그림에 자주
+                다시 나온다.
               </p>
 
-              <p>
-                가족사진과 익숙한 길, 평범했던 방도 그가 다시 돌아보는
-                자료다.
-              </p>
+              <p>가족사진과 익숙한 길, 평범했던 방도 그렇다.</p>
             </div>
           </div>
         </section>
@@ -102,14 +94,14 @@ export default function KoreanAboutPage() {
         <section className="container esther-section esther-education-section">
           <div className="esther-split esther-split-reverse">
             <div className="esther-copy">
-              <p className="esther-eyebrow">미술과 배움</p>
+              <p className="esther-eyebrow">미술</p>
 
-              <h2>오랫동안 이어진 미술 공부.</h2>
+              <h2>미술을 오래 배웠다.</h2>
 
               <p>
                 예원학교와 서울예술고등학교에서 미술을 공부했고,
-                서울대학교 미술대학 동양화과를 졸업했습니다. 이후
-                이화여자대학교에서 미술교육 석사과정을 수료했습니다.
+                서울대학교 미술대학 동양화과를 졸업했다. 이후
+                이화여자대학교에서 미술교육 석사과정을 수료했다.
               </p>
 
               <ol
@@ -118,10 +110,7 @@ export default function KoreanAboutPage() {
               >
                 {education.map((item) => (
                   <li key={item.year}>
-                    <span className="esther-year">
-                      {item.year}
-                    </span>
-
+                    <span className="esther-year">{item.year}</span>
                     <span>{item.detail.ko}</span>
                   </li>
                 ))}
@@ -137,9 +126,7 @@ export default function KoreanAboutPage() {
                 sizes="(max-width: 899px) 100vw, 42vw"
               />
 
-              <figcaption>
-                대학 시절의 조성연.
-              </figcaption>
+              <figcaption>대학 시절</figcaption>
             </figure>
           </div>
         </section>
@@ -147,21 +134,16 @@ export default function KoreanAboutPage() {
         <section className="esther-section esther-home-section">
           <div className="container esther-home-grid">
             <div className="esther-copy">
-              <p className="esther-eyebrow">
-                집, 가족, 그리고 믿음
-              </p>
+              <p className="esther-eyebrow">집과 믿음</p>
 
-              <h2>집과 가족, 아침 식탁.</h2>
+              <h2>생활은 식탁 위에서 이어진다.</h2>
 
               <p>
-                조성연은 작가이자 화가이며 주부다. 창작은 식사와 가족의
-                일상, 기도와 돌봄이 이어지는 생활과 함께 자라왔다.
+                글을 쓰고 그림을 그리고, 밥을 차리고, 가족의 일상을 살고,
+                기도하고 돌본다. 창작은 그 생활과 따로 떨어져 있지 않다.
               </p>
 
-              <p>
-                아침 식탁에서는 음식과 묵상, 기억과 글쓰기가 자연스럽게
-                한자리에 놓입니다.
-              </p>
+              <p>아침 식탁에는 밥과 말씀과 메모가 함께 놓일 때가 많다.</p>
             </div>
 
             <figure className="esther-figure esther-table-figure">
@@ -173,9 +155,7 @@ export default function KoreanAboutPage() {
                 sizes="(max-width: 899px) 100vw, 38vw"
               />
 
-              <figcaption>
-                집에서 차린 식사. 글이 자라나는 생활의 한 장면.
-              </figcaption>
+              <figcaption>집에서 차린 아침 식사</figcaption>
             </figure>
           </div>
         </section>
@@ -191,25 +171,17 @@ export default function KoreanAboutPage() {
                 sizes="(max-width: 899px) 100vw, 36vw"
               />
 
-              <figcaption>
-                방글라데시 봉사 활동 중인 조성연.
-              </figcaption>
+              <figcaption>방글라데시 봉사 활동 중</figcaption>
             </figure>
 
             <div className="esther-copy">
-              <p className="esther-eyebrow">
-                삶으로 이어지는 믿음
-              </p>
+              <p className="esther-eyebrow">삶으로 이어지는 믿음</p>
 
-              <h2>멘토링과 봉사 활동.</h2>
+              <h2>믿음은 생활 밖에 있지 않다.</h2>
 
               <p>
                 조성연은 북한 이탈 주민을 멘토링으로 돕고, 방글라데시에서
-                선교와 봉사 활동에 참여해 왔습니다.
-              </p>
-
-              <p>
-                이 경험들 역시 글이 자라나는 삶의 한 부분입니다.
+                선교와 봉사 활동에 참여해 왔다.
               </p>
             </div>
           </div>
@@ -218,24 +190,15 @@ export default function KoreanAboutPage() {
         <section className="esther-section esther-making-section">
           <div className="container esther-making-grid">
             <div className="esther-copy">
-              <p className="esther-eyebrow">
-                아직도 만드는 중
-              </p>
+              <p className="esther-eyebrow">지금도 만드는 중</p>
 
-              <h2>글, 손그림, 이후의 재해석.</h2>
+              <h2>지금도 글을 쓰고 그림을 그린다.</h2>
 
-              <p>
-                지금도 산문과 묵상 글을 쓰고, 이야기가 될 장면을 손으로
-                그립니다.
-              </p>
+              <p>산문과 묵상 글을 쓰고, 이야기가 될 장면을 손으로 그린다.</p>
 
               <p>
-                어떤 연필 그림은 원래 모습 그대로 남고, 어떤 그림은 출처가
-                분명히 표시된 AI 보조 에디토리얼 재해석의 출발점이 됩니다.
-              </p>
-
-              <p>
-                원본 작업과 이후의 재해석은 서로 구분해 표시한다.
+                어떤 그림은 그대로 남고, 어떤 그림은 이후의 에디토리얼
+                재해석으로 이어진다. 둘은 따로 표시한다.
               </p>
             </div>
 
@@ -249,8 +212,7 @@ export default function KoreanAboutPage() {
               />
 
               <figcaption>
-                조성연 작가의 어린 시절 원 스케치를 바탕으로 한 AI 보조
-                에디토리얼 재해석 이미지입니다.
+                어린 시절 원 스케치를 바탕으로 한 AI 보조 에디토리얼 재해석
               </figcaption>
             </figure>
           </div>
@@ -262,7 +224,7 @@ export default function KoreanAboutPage() {
             {authorProfile.globalName}
           </p>
 
-          <p>지금도 글을 쓰고 그림을 그린다.</p>
+          <p>계속 쓰고, 계속 그린다.</p>
         </footer>
       </article>
     </main>
