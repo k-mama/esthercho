@@ -1,0 +1,125 @@
+/* Stronger large-scale geometry for the light HOME rooms.
+   No outlines: these shapes should read as coloured spatial light, not cracks. */
+
+body:has(.home-video-hero) #main-content > main > section:nth-child(2)::before {
+  background:
+    radial-gradient(circle at 42% 38%, rgba(247, 229, 255, 0.98) 0%, rgba(214, 204, 244, 0.74) 42%, rgba(186, 219, 244, 0.44) 68%, transparent 82%) !important;
+  opacity: 0.98 !important;
+  filter: saturate(1.12) !important;
+}
+
+body:has(.home-video-hero) #main-content > main > section:nth-child(2)::after {
+  background:
+    linear-gradient(100deg, rgba(249, 197, 181, 0.74) 0%, rgba(247, 188, 214, 0.58) 48%, rgba(226, 207, 246, 0.24) 78%, transparent 100%) !important;
+  opacity: 0.9 !important;
+  filter: saturate(1.12) !important;
+}
+
+body:has(.home-video-hero) #main-content > main > section:nth-child(3)::before {
+  background:
+    linear-gradient(155deg, rgba(255, 211, 177, 0.9) 0%, rgba(250, 187, 196, 0.64) 54%, rgba(242, 216, 242, 0.18) 82%, transparent 100%) !important;
+  opacity: 0.94 !important;
+  filter: saturate(1.1) !important;
+}
+
+body:has(.home-video-hero) #main-content > main > section:nth-child(3)::after {
+  background:
+    radial-gradient(circle at 48% 44%, rgba(177, 218, 244, 0.86) 0%, rgba(202, 196, 239, 0.58) 52%, rgba(240, 228, 249, 0.2) 74%, transparent 84%) !important;
+  opacity: 0.94 !important;
+  filter: saturate(1.1) !important;
+}
+
+body:has(.home-video-hero) #main-content > main > section:nth-child(4)::before {
+  background:
+    linear-gradient(160deg, rgba(180, 228, 207, 0.9) 0%, rgba(149, 208, 196, 0.58) 58%, rgba(218, 237, 224, 0.18) 82%, transparent 100%) !important;
+  opacity: 0.94 !important;
+  filter: saturate(1.12) !important;
+}
+
+body:has(.home-video-hero) #main-content > main > section:nth-child(4)::after {
+  background:
+    radial-gradient(circle at 46% 48%, rgba(220, 202, 248, 0.92) 0%, rgba(187, 192, 239, 0.58) 56%, rgba(238, 226, 247, 0.18) 76%, transparent 84%) !important;
+  opacity: 0.94 !important;
+  filter: saturate(1.12) !important;
+}
+
+body:has(.home-video-hero) #main-content > main > section:nth-child(5)::before {
+  background:
+    linear-gradient(100deg, rgba(151, 210, 239, 0.86) 0%, rgba(186, 222, 238, 0.64) 50%, rgba(224, 218, 245, 0.22) 78%, transparent 100%) !important;
+  opacity: 0.94 !important;
+  filter: saturate(1.1) !important;
+}
+
+body:has(.home-video-hero) #main-content > main > section:nth-child(5)::after {
+  background:
+    radial-gradient(circle, rgba(250, 194, 171, 0.88) 0%, rgba(248, 182, 189, 0.54) 56%, rgba(250, 224, 208, 0.18) 76%, transparent 84%) !important;
+  opacity: 0.92 !important;
+  filter: saturate(1.1) !important;
+}
+
+body:has(.home-video-hero) #main-content > main > section:nth-child(7)::before {
+  background:
+    radial-gradient(circle at 46% 54%, rgba(226, 207, 250, 0.96) 0%, rgba(193, 201, 243, 0.68) 50%, rgba(179, 220, 241, 0.34) 72%, transparent 84%) !important;
+  opacity: 0.96 !important;
+  filter: saturate(1.12) !important;
+}
+
+body:has(.home-video-hero) #main-content > main > section:nth-child(7)::after {
+  background:
+    linear-gradient(100deg, rgba(246, 199, 142, 0.74) 0%, rgba(246, 188, 206, 0.56) 50%, rgba(219, 205, 244, 0.2) 80%, transparent 100%) !important;
+  opacity: 0.9 !important;
+  filter: saturate(1.1) !important;
+}
+
+@media (max-width: 959px) {
+  body:has(.home-video-hero) #main-content > main > section:nth-child(2)::before {
+    top: -44vw !important;
+    right: -46vw !important;
+    width: 148vw !important;
+    opacity: 0.94 !important;
+  }
+
+  body:has(.home-video-hero) #main-content > main > section:nth-child(3)::before {
+    left: -62vw !important;
+    width: 142vw !important;
+    opacity: 0.9 !important;
+  }
+
+  body:has(.home-video-hero) #main-content > main > section:nth-child(4)::after {
+    top: -55vw !important;
+    right: -58vw !important;
+    width: 148vw !important;
+    opacity: 0.9 !important;
+  }
+
+  body:has(.home-video-hero) #main-content > main > section:nth-child(5)::before {
+    left: -50vw !important;
+    width: 154vw !important;
+    opacity: 0.88 !important;
+  }
+
+  body:has(.home-video-hero) #main-content > main > section:nth-child(7)::before {
+    top: -52vw !important;
+    right: -54vw !important;
+    width: 154vw !important;
+    opacity: 0.9 !important;
+  }
+}
+
+@media (max-width: 640px) {
+  body:has(.home-video-hero) #main-content > main > section:nth-child(2)::after,
+  body:has(.home-video-hero) #main-content > main > section:nth-child(3)::after,
+  body:has(.home-video-hero) #main-content > main > section:nth-child(4)::before,
+  body:has(.home-video-hero) #main-content > main > section:nth-child(5)::after,
+  body:has(.home-video-hero) #main-content > main > section:nth-child(7)::after {
+    display: none !important;
+  }
+
+  body:has(.home-video-hero) #main-content > main > section:nth-child(2)::before,
+  body:has(.home-video-hero) #main-content > main > section:nth-child(3)::before,
+  body:has(.home-video-hero) #main-content > main > section:nth-child(4)::after,
+  body:has(.home-video-hero) #main-content > main > section:nth-child(5)::before,
+  body:has(.home-video-hero) #main-content > main > section:nth-child(7)::before {
+    opacity: 0.86 !important;
+  }
+}
