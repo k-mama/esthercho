@@ -6,7 +6,7 @@ import "./studio.css";
 export const metadata: Metadata = {
   title: "Drawn by Hand, Reborn in Light",
   description:
-    "Esther Cho's hand-drawn originals, clearly identified reimagined works, and visual experiments in progress.",
+    "Esther Cho's selected hand-drawn originals, clearly identified reimagined works, and visual experiments in progress.",
 };
 
 export default function StudioPage() {
@@ -31,37 +31,10 @@ export default function StudioPage() {
             <h2 id="studio-intro-title">The original stays visible.</h2>
             <div className="studio-intro-copy">
               <p>
-                The Studio keeps the hand-drawn work, later reinterpretations,
-                and the distance between them visible rather than polishing the
-                process into one seamless image.
+                This room keeps the source and the later interpretation distinct.
+                Only originals Esther Cho wants to show are added to the public archive.
               </p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="studio-original" aria-labelledby="studio-original-title">
-        <div className="container studio-work-grid">
-          <figure className="studio-figure studio-original-figure">
-            <Image
-              src="/media/esther/hand-drawn-story.jpg"
-              alt="An original hand-drawn story study by Esther Cho"
-              width={1800}
-              height={1350}
-              sizes="(max-width: 899px) 100vw, 62vw"
-              priority
-            />
-            <figcaption>Original work · Hand-drawn story study</figcaption>
-          </figure>
-
-          <div className="studio-work-copy">
-            <p className="studio-kicker">ORIGINAL</p>
-            <h2 id="studio-original-title">The hand-drawn original.</h2>
-            <p>
-              Pencil marks, uneven lines, and the physical character of the
-              original are part of the work. They are not cleaned away simply
-              because a later version may be more polished.
-            </p>
           </div>
         </div>
       </section>
@@ -72,9 +45,9 @@ export default function StudioPage() {
             <p className="studio-kicker">REIMAGINED</p>
             <h2 id="studio-reimagined-title">A later reinterpretation.</h2>
             <p>
-              Digital and AI-assisted editorial work can extend an original
-              drawing into another visual form. When that happens, the new image
-              is named for what it is rather than presented as archival evidence.
+              Digital and AI-assisted editorial work can extend an original drawing
+              into another visual form. When that happens, the new image is named for
+              what it is rather than presented as archival evidence.
             </p>
           </div>
 
@@ -85,6 +58,7 @@ export default function StudioPage() {
               width={1536}
               height={1536}
               sizes="(max-width: 899px) 100vw, 58vw"
+              priority
             />
             <figcaption>
               Based on Esther Cho&apos;s original childhood sketch · AI-assisted
@@ -113,12 +87,11 @@ export default function StudioPage() {
 
       <section className="studio-future" aria-labelledby="studio-future-title">
         <div className="container studio-future-inner">
-          <p className="studio-kicker">STILL MAKING</p>
-          <h2 id="studio-future-title">More work will be added when it is ready.</h2>
+          <p className="studio-kicker">SELECTED ORIGINALS</p>
+          <h2 id="studio-future-title">More hand-drawn work will be added after the artist selects it.</h2>
           <p>
-            Audio and moving-image experiments will appear here when there is
-            finished work worth showing. The room does not need to be filled in
-            advance.
+            The room does not need to be filled in advance. The public archive grows
+            only with work Esther Cho wants to keep here.
           </p>
         </div>
       </section>
