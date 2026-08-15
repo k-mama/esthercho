@@ -26,7 +26,7 @@ export default function KoreanStudioPage() {
 
       <section className="studio-intro" aria-labelledby="studio-intro-title">
         <div className="container">
-          <p className="studio-kicker">작업실</p>
+          <p className="studio-kicker">스튜디오 소개</p>
           <div className="studio-intro-grid">
             <h2 id="studio-intro-title">원본은 그대로 보이게 둔다.</h2>
             <div className="studio-intro-copy">
@@ -55,7 +55,7 @@ export default function KoreanStudioPage() {
 
           <div className="studio-work-copy">
             <p className="studio-kicker">원본</p>
-            <h2 id="studio-original-title">먼저 종이에서.</h2>
+            <h2 id="studio-original-title">손으로 그린 원본.</h2>
             <p>
               연필 자국과 고르지 않은 선, 종이 위에 남은 원본의 물성도
               작업의 일부다. 이후 버전이 더 매끈하다는 이유로 지우지 않는다.
@@ -68,7 +68,7 @@ export default function KoreanStudioPage() {
         <div className="container studio-work-grid studio-work-grid-reverse">
           <div className="studio-work-copy">
             <p className="studio-kicker">재해석</p>
-            <h2 id="studio-reimagined-title">같은 기억에서 다른 이미지가 시작될 수 있다.</h2>
+            <h2 id="studio-reimagined-title">이후의 재해석.</h2>
             <p>
               디지털 작업과 AI-assisted editorial work는 원본 그림을 다른
               시각 형식으로 이어갈 수 있다. 그때 새 이미지는 아카이브 자료가
@@ -111,7 +111,7 @@ export default function KoreanStudioPage() {
       <section className="studio-future" aria-labelledby="studio-future-title">
         <div className="container studio-future-inner">
           <p className="studio-kicker">계속 만드는 중</p>
-          <h2 id="studio-future-title">작업이 자라면 스튜디오도 함께 자란다.</h2>
+          <h2 id="studio-future-title">완성된 작업을 준비되는 대로 더한다.</h2>
           <p>
             오디오와 영상 실험도 실제로 보여줄 만한 작업이 완성되었을 때
             이곳에 더한다. 빈 자리를 미리 채우지는 않는다.
