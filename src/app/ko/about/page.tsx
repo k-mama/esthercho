@@ -43,53 +43,11 @@ export default function KoreanAboutPage() {
             </p>
 
             <p className="esther-intro">
-              조성연은 살아온 것과 기억나는 것을 쓴다. 기독교 신앙과 어린
-              시절, 가족, 집에서의 생활이 자주 글과 그림으로 돌아온다.
+              조성연은 살아온 것과 기억나는 것을 쓴다. 기독교 신앙과 가족,
+              미술, 식탁과 집에서의 생활이 자주 글과 그림으로 돌아온다.
             </p>
           </div>
-
-          <figure className="esther-figure esther-hero-figure">
-            <Image
-              src="/media/esther/childhood-garden.jpg"
-              alt="어린 시절 정원에서 웃고 있는 조성연"
-              width={1800}
-              height={1350}
-              sizes="(max-width: 899px) 100vw, 52vw"
-              priority
-            />
-
-            <figcaption>조성연 · 어린 시절</figcaption>
-          </figure>
         </header>
-
-        <section className="esther-section esther-house-section">
-          <div className="container esther-split">
-            <figure className="esther-figure esther-house-figure">
-              <Image
-                src="/media/esther/childhood-house.jpg"
-                alt="조성연의 어린 시절 기억과 이어진 집과 정원"
-                width={1800}
-                height={1059}
-                sizes="(max-width: 899px) 100vw, 48vw"
-              />
-
-              <figcaption>어린 시절의 집과 정원</figcaption>
-            </figure>
-
-            <div className="esther-copy">
-              <p className="esther-eyebrow">시작된 곳</p>
-
-              <h2>자꾸 돌아가게 되는 집.</h2>
-
-              <p>
-                어린 시절의 집과 정원은 지금도 조성연의 글과 그림에 자주
-                다시 나온다.
-              </p>
-
-              <p>가족사진과 익숙한 길, 평범했던 방도 그렇다.</p>
-            </div>
-          </div>
-        </section>
 
         <section className="container esther-section esther-education-section">
           <div className="esther-split esther-split-reverse">
@@ -124,6 +82,7 @@ export default function KoreanAboutPage() {
                 width={1500}
                 height={1125}
                 sizes="(max-width: 899px) 100vw, 42vw"
+                priority
               />
 
               <figcaption>대학 시절</figcaption>
