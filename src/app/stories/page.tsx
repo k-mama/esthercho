@@ -5,9 +5,9 @@ import { PageCover } from "@/components/page-cover";
 import "./stories.css";
 
 export const metadata: Metadata = {
-  title: "Stories Born from Life",
+  title: "Stories",
   description:
-    "A living collection of Esther Cho's stories shaped by childhood, family, faith, memory, and the ordinary details that remain.",
+    "Stories by Esther Cho, drawn from childhood, family, faith, and the details she remembers.",
 };
 
 const openingCollection = [
@@ -79,8 +79,8 @@ export default function StoriesPage() {
     <main className="stories-page">
       <PageCover
         eyebrow="STORIES"
-        title="Stories Born from Life"
-        description="A living collection of family, faith, childhood, and the small details that memory refuses to lose."
+        title="Stories"
+        description="Childhood, family, faith, and the details Esther remembers."
         image="/media/covers/stories-cover.webp"
         mobileImage="/media/covers/stories-cover-mobile.webp"
         alt="Esther Cho holding a book on a tree-lined stone wall path"
@@ -92,7 +92,7 @@ export default function StoriesPage() {
 
       <section className="stories-intro" aria-labelledby="stories-intro-title">
         <div className="container stories-intro-inner">
-          <p className="stories-kicker">A LIVING AUTHOR ARCHIVE</p>
+          <p className="stories-kicker">HOW MEMORY RETURNS</p>
           <div className="stories-intro-grid">
             <h2 id="stories-intro-title">Memory does not arrive in order.</h2>
             <div className="stories-intro-copy">
@@ -101,9 +101,8 @@ export default function StoriesPage() {
                 pajamas, or a sentence someone said decades ago.
               </p>
               <p>
-                These pages grow as Esther remembers. They are not a finished
-                memoir arranged once and for all. A person, place, object, season,
-                or photograph may bring back another memory.
+                That is how these pages grow. A person, photograph, season, or
+                ordinary object can bring back something that had gone quiet.
               </p>
             </div>
           </div>
@@ -122,7 +121,7 @@ export default function StoriesPage() {
               sizes="(max-width: 899px) 100vw, 64vw"
               priority
             />
-            <figcaption>Archive photograph · Esther Cho as a child</figcaption>
+            <figcaption>Esther Cho · Childhood</figcaption>
           </figure>
 
           <div className="stories-feature-copy">
@@ -134,8 +133,8 @@ export default function StoriesPage() {
               a girl. The family joke was that perhaps it had been a cat.
             </p>
             <p>
-              The first story is published only to the point the memory has been
-              recorded. Nothing is added to fill what is missing.
+              This story stops where the memory stops. Nothing has been added to
+              make it complete.
             </p>
             <Link
               href="/stories/my-father-dreamed-of-a-tiger/"
@@ -150,9 +149,9 @@ export default function StoriesPage() {
       <section className="stories-opening" aria-labelledby="opening-collection-title">
         <div className="container">
           <header className="stories-section-heading">
-            <p className="stories-kicker">OPENING COLLECTION</p>
-            <h2 id="opening-collection-title">Seven stories in the opening collection.</h2>
-            <p>These are the first memories selected for the archive.</p>
+            <p className="stories-kicker">FIRST SEVEN</p>
+            <h2 id="opening-collection-title">The first seven stories.</h2>
+            <p>The first memories Esther chose to begin with.</p>
           </header>
 
           <ol className="stories-opening-list">
@@ -174,7 +173,7 @@ export default function StoriesPage() {
                     Read story <span aria-hidden="true">→</span>
                   </Link>
                 ) : (
-                  <span className="stories-opening-state">In the archive</span>
+                  <span className="stories-opening-state">Recorded</span>
                 )}
               </li>
             ))}
@@ -191,19 +190,17 @@ export default function StoriesPage() {
             height={1059}
             sizes="100vw"
           />
-          <figcaption className="container">
-            Archive photograph · The remembered house and garden
-          </figcaption>
+          <figcaption className="container">Childhood home and garden</figcaption>
         </figure>
 
         <div className="container stories-house-editorial">
           <div className="stories-house-copy">
-            <p className="stories-kicker">LIFE CHAPTERS</p>
-            <h2 id="life-chapters-title">Chronology behind the archive.</h2>
+            <p className="stories-kicker">THROUGH THE YEARS</p>
+            <h2 id="life-chapters-title">A life still has a timeline.</h2>
             <p>
-              The archive also keeps a chronological structure. Some memories
-              are grouped by period; others by a person, place, season, or a
-              major change in the family story.
+              Childhood, the years with her father, July, school, art, family,
+              faith, and the present sit in their own order even when memory does
+              not.
             </p>
           </div>
 
@@ -224,7 +221,7 @@ export default function StoriesPage() {
               height={1125}
               sizes="(max-width: 899px) 72vw, 25vw"
             />
-            <figcaption>Archive photograph · University years</figcaption>
+            <figcaption>University years</figcaption>
           </figure>
         </div>
       </section>
@@ -232,11 +229,11 @@ export default function StoriesPage() {
       <section className="stories-memory" aria-labelledby="memory-collections-title">
         <div className="container stories-memory-inner">
           <div className="stories-memory-heading">
-            <p className="stories-kicker">MEMORY COLLECTIONS</p>
-            <h2 id="memory-collections-title">Themes that recur in the archive.</h2>
+            <p className="stories-kicker">THINGS THAT RETURN</p>
+            <h2 id="memory-collections-title">The same things keep coming back.</h2>
           </div>
 
-          <div className="stories-memory-list" aria-label="Memory collection themes">
+          <div className="stories-memory-list" aria-label="Recurring memories">
             {memoryCollections.map((collection) => (
               <span key={collection}>{collection}</span>
             ))}
@@ -247,12 +244,11 @@ export default function StoriesPage() {
       <section className="stories-newly" aria-labelledby="newly-remembered-title">
         <div className="container stories-newly-inner">
           <div className="stories-newly-copy">
-            <p className="stories-kicker">NEWLY REMEMBERED</p>
-            <h2 id="newly-remembered-title">Newly remembered stories.</h2>
+            <p className="stories-kicker">WHEN MEMORY RETURNS</p>
+            <h2 id="newly-remembered-title">Something small can bring a whole scene back.</h2>
             <p>
-              A smell, a table, a season, or an ordinary object can bring back a
-              scene that had been quiet for years. New memories will be added as
-              they are recorded.
+              A smell, a table, a season, an ordinary object. Sometimes that is
+              enough. When another memory returns, it will be written down.
             </p>
             <Link href="/archive/" className="stories-text-link">
               Follow the photographs
@@ -267,7 +263,7 @@ export default function StoriesPage() {
               height={1600}
               sizes="(max-width: 899px) 100vw, 38vw"
             />
-            <figcaption>Morning table · A present-day detail</figcaption>
+            <figcaption>Morning table · Now</figcaption>
           </figure>
         </div>
       </section>
@@ -280,8 +276,8 @@ export default function StoriesPage() {
               “I think I may be someone who collects happiness.”
             </blockquote>
             <p>
-              Difficult things happened too. Looking back, the laughter is often
-              what comes to mind first. Both belong in the record.
+              Hard things happened too. Yet laughter is often what comes back
+              first. Both are true.
             </p>
           </div>
         </div>
