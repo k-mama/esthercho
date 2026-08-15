@@ -6,7 +6,7 @@ import "../../studio/studio.css";
 export const metadata: Metadata = {
   title: "손으로 그린 이야기",
   description:
-    "조성연 작가의 원본 손그림과 명확히 구분된 재해석 작업, 그리고 이어지는 시각 실험.",
+    "조성연 작가가 공개하기로 선택한 원본 손그림과 명확히 구분된 재해석 작업, 그리고 이어지는 시각 실험.",
 };
 
 export default function KoreanStudioPage() {
@@ -31,35 +31,10 @@ export default function KoreanStudioPage() {
             <h2 id="studio-intro-title">원본은 그대로 보이게 둔다.</h2>
             <div className="studio-intro-copy">
               <p>
-                스튜디오는 손으로 그린 원본과 이후의 재해석, 그리고 그 둘
-                사이의 거리를 하나의 매끈한 이미지로 덮지 않고 보여준다.
+                이 방에서는 원본과 이후의 재해석을 서로 다른 작업으로 남긴다.
+                공개 아카이브에는 조성연 작가가 직접 보여주고 싶다고 선택한 원본만 더한다.
               </p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="studio-original" aria-labelledby="studio-original-title">
-        <div className="container studio-work-grid">
-          <figure className="studio-figure studio-original-figure">
-            <Image
-              src="/media/esther/hand-drawn-story.jpg"
-              alt="조성연 작가가 손으로 그린 원본 이야기 스터디"
-              width={1800}
-              height={1350}
-              sizes="(max-width: 899px) 100vw, 62vw"
-              priority
-            />
-            <figcaption>원본 작업 · 손으로 그린 이야기 스터디</figcaption>
-          </figure>
-
-          <div className="studio-work-copy">
-            <p className="studio-kicker">원본</p>
-            <h2 id="studio-original-title">손으로 그린 원본.</h2>
-            <p>
-              연필 자국과 고르지 않은 선, 종이 위에 남은 원본의 물성도
-              작업의 일부다. 이후 버전이 더 매끈하다는 이유로 지우지 않는다.
-            </p>
           </div>
         </div>
       </section>
@@ -83,6 +58,7 @@ export default function KoreanStudioPage() {
               width={1536}
               height={1536}
               sizes="(max-width: 899px) 100vw, 58vw"
+              priority
             />
             <figcaption>
               조성연의 어린 시절 원본 스케치를 바탕으로 한 AI-assisted
@@ -110,11 +86,11 @@ export default function KoreanStudioPage() {
 
       <section className="studio-future" aria-labelledby="studio-future-title">
         <div className="container studio-future-inner">
-          <p className="studio-kicker">계속 만드는 중</p>
-          <h2 id="studio-future-title">완성된 작업을 준비되는 대로 더한다.</h2>
+          <p className="studio-kicker">선택한 원본들</p>
+          <h2 id="studio-future-title">작가가 고른 손그림을 준비되는 대로 더한다.</h2>
           <p>
-            오디오와 영상 실험도 실제로 보여줄 만한 작업이 완성되었을 때
-            이곳에 더한다. 빈 자리를 미리 채우지는 않는다.
+            빈 자리를 미리 채우지 않는다. 조성연 작가가 이곳에 남기고 싶은 작업만
+            골라 공개 아카이브를 천천히 채운다.
           </p>
         </div>
       </section>
