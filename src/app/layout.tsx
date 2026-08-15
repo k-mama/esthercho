@@ -11,6 +11,7 @@ import "@/styles/home-shell-polish.css";
 import "@/styles/home-geometry-contrast.css";
 import "@/styles/home-video-lock.css";
 import "@/styles/home-mobile-studio-fix.css";
+import "@/styles/mobile-menu-glass.css";
 
 const siteUrl = "https://esthercho.pages.dev";
 const socialPreviewImage = "/media/home/esther-house-entry-poster.jpg";
