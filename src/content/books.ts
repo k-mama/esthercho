@@ -2,20 +2,20 @@ export const featuredBook = {
   slug: "manna-on-the-table",
   title: "Manna on the Table",
   status: {
-    en: "In development",
-    ko: "출간 준비 중",
+    en: "In progress",
+    ko: "원고 작업 중",
   },
   eyebrow: {
-    en: "FEATURED PROJECT",
-    ko: "대표 출간 프로젝트",
+    en: "CURRENT MANUSCRIPT",
+    ko: "현재 원고",
   },
   deck: {
-    en: "A literary devotional manuscript shaped by Scripture, prayer, ordinary life, and a quietly human sense of humor.",
-    ko: "말씀과 기도, 평범한 일상과 사람다운 웃음에서 태어난 문학적 묵상 원고입니다.",
+    en: "A devotional manuscript written close to ordinary life, where faith is sincere and the day is not always tidy.",
+    ko: "신앙은 진심이지만 하루는 늘 정돈되어 있지 않은 자리에서 쓴 묵상 원고입니다.",
   },
   description: {
-    en: "The work gathers daily reflections written from the place where faith is real but not always tidy. It is being developed first as an English source manuscript, with future language editions prepared from the locked English text.",
-    ko: "신앙은 분명하지만 마음은 늘 정돈되어 있지 않은 자리에서 써 내려간 매일의 묵상을 모읍니다. 영어 기준 원고를 먼저 완성한 뒤, 잠금된 영문을 바탕으로 여러 언어판을 준비합니다.",
+    en: "The manuscript gathers daily reflections from that place. Some begin in prayer; others in impatience, laughter, worry, or a question that refuses to resolve on schedule. The English text is being completed first. Other language editions will follow from the locked manuscript.",
+    ko: "그 자리에서 써 내려간 매일의 묵상을 모읍니다. 기도에서 시작하는 날도 있고, 조급함이나 웃음, 걱정, 쉽게 끝나지 않는 질문에서 시작하는 날도 있습니다. 영어 원고를 먼저 완성한 뒤, 잠금된 영문을 바탕으로 다른 언어판을 준비합니다.",
   },
   details: {
     language: {
@@ -44,8 +44,8 @@ export const featuredBook = {
         ko: "출간",
       },
       value: {
-        en: "Details to be announced",
-        ko: "추후 공개",
+        en: "To be confirmed",
+        ko: "미정",
       },
     },
   },
