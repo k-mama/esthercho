@@ -40,8 +40,8 @@ export default function Home() {
             <p className={styles.eyebrow}>INSIDE ESTHER&apos;S HOUSE</p>
             <h2 id="house-title">Meals, photographs, drawings, and stories live here together.</h2>
             <p>
-              The rooms are spacious on purpose. A strong photograph can hold the room;
-              the interface does not need to compete with it.
+              A breakfast can sit beside a verse. A childhood photograph can open a story
+              decades later. Different records keep finding one another inside the same life.
             </p>
           </div>
 
@@ -109,10 +109,10 @@ export default function Home() {
 
           <div className={styles.sceneCopy}>
             <p className={styles.eyebrow}>MEMORY</p>
-            <h2 id="memory-title">The old photographs stay old. The room around them stays modern.</h2>
+            <h2 id="memory-title">Some photographs remember before words do.</h2>
             <p>
-              Childhood homes, gardens, family photographs, and remembered details are
-              kept as evidence of a life rather than styled into nostalgia.
+              Childhood homes, gardens, family photographs, names, places, and small details
+              return slowly. The image stays what it was; the story beside it can keep growing.
             </p>
             <Link href="/archive/" className={styles.textLink}>
               Open the childhood archive
@@ -189,7 +189,7 @@ export default function Home() {
       <section className={styles.closingRoom} aria-labelledby="closing-title">
         <div className={`container ${styles.closingInner}`}>
           <p className={styles.eyebrow}>KEEP WALKING</p>
-          <h2 id="closing-title">The books and the biography are only two rooms in a much larger life.</h2>
+          <h2 id="closing-title">Some of these stories eventually become books.</h2>
           <div className={styles.closingLinks}>
             <Link href="/books/">Books <span aria-hidden="true">→</span></Link>
             <Link href="/about/">Meet Esther <span aria-hidden="true">→</span></Link>
