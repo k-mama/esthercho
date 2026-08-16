@@ -52,13 +52,13 @@
 
   /* About owns the university and Bangladesh photographs. */
   .esther-portrait-figure {
-    width: min(82vw, 460px) !important;
+    width: min(88vw, 620px) !important;
     margin-inline: auto !important;
   }
 
   .esther-portrait-figure img {
-    aspect-ratio: 4 / 5 !important;
-    object-position: center 28% !important;
+    aspect-ratio: 4 / 3 !important;
+    object-position: center 30% !important;
   }
 
   .esther-service-figure {
@@ -113,7 +113,7 @@
   }
 
   .esther-portrait-figure {
-    width: 84vw !important;
+    width: 92vw !important;
   }
 
   .esther-service-figure {

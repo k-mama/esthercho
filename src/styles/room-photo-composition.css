@@ -36,8 +36,15 @@
   }
 
   .esther-portrait-figure {
-    width: 86%;
+    width: min(94%, 760px);
     justify-self: end;
+  }
+
+  .esther-portrait-figure img {
+    max-height: min(56svh, 620px);
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    object-position: center 30%;
   }
 
   .esther-service-grid {

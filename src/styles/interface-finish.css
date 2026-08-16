@@ -214,53 +214,84 @@ body:has(.home-video-hero, .page-cover-shell) .site-header-nav-mobile-menu {
   border-color: rgba(214, 230, 240, 0.42) !important;
 }
 
-/* Photography should read as editorial imagery with soft, deliberate framing. */
+/* Photography uses one premium surface language across the house:
+   iOS-soft corners, a hairline glass highlight, ambient depth, and no heavy frame. */
 .childhood-page figure img,
 .esther-page figure img,
 .studio-page figure img,
-.morning-page figure img {
-  border-radius: 20px !important;
-  box-shadow: 0 18px 42px rgba(25, 48, 67, 0.08) !important;
-}
-
-.childhood-page .childhood-house-figure img {
-  border-radius: 0 !important;
-  box-shadow: none !important;
+.morning-page figure img,
+.story-detail-page figure img {
+  border-radius: 30px !important;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.72),
+    inset 0 1px 0 rgba(255, 255, 255, 0.46),
+    0 14px 32px rgba(24, 48, 67, 0.075),
+    0 32px 72px rgba(24, 48, 67, 0.105),
+    0 0 56px rgba(150, 190, 216, 0.09) !important;
 }
 
 /* HOME photographs stay still. The interface reacts; the life photographs do not. */
 body:has(.home-video-hero) [class*="tableMedia"],
 body:has(.home-video-hero) [class*="careMedia"],
+body:has(.home-video-hero) [class*="memoryPrimary"] {
+  filter: none;
+}
+
+body:has(.home-video-hero) [class*="tableMedia"],
+body:has(.home-video-hero) [class*="careMedia"],
 body:has(.home-video-hero) [class*="memoryPrimary"],
-body:has(.home-video-hero) [class*="studioPrimary"] {
+body:has(.home-video-hero) [class*="studioPrimary"],
+body:has(.home-video-hero) [class*="studioSecondary"] {
   transition: none !important;
 }
 
 body:has(.home-video-hero) [class*="tableMedia"]:hover,
 body:has(.home-video-hero) [class*="careMedia"]:hover,
 body:has(.home-video-hero) [class*="memoryPrimary"]:hover,
-body:has(.home-video-hero) [class*="studioPrimary"]:hover {
+body:has(.home-video-hero) [class*="studioPrimary"]:hover,
+body:has(.home-video-hero) [class*="studioSecondary"]:hover {
   transform: none !important;
+}
+
+body:has(.home-video-hero) [class*="studioPrimary"],
+body:has(.home-video-hero) [class*="studioSecondary"] {
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
+  transform: none;
 }
 
 body:has(.home-video-hero) [class*="tableMedia"] img,
 body:has(.home-video-hero) [class*="careMedia"] img,
 body:has(.home-video-hero) [class*="memoryPrimary"] img,
-body:has(.home-video-hero) [class*="studioPrimary"] img {
-  border-radius: 18px !important;
+body:has(.home-video-hero) [class*="studioPrimary"] img,
+body:has(.home-video-hero) [class*="studioSecondary"] img {
+  border-radius: 30px !important;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.72),
+    inset 0 1px 0 rgba(255, 255, 255, 0.46),
+    0 14px 32px rgba(24, 48, 67, 0.075),
+    0 32px 72px rgba(24, 48, 67, 0.105),
+    0 0 56px rgba(150, 190, 216, 0.09) !important;
 }
 
 /* Keep the overlap in Memory, retire the scrapbook paper frame and tilt. */
 body:has(.home-video-hero) [class*="memorySecondary"] {
   padding: 0 !important;
   background: transparent !important;
-  box-shadow: 0 18px 40px rgba(25, 48, 67, 0.1) !important;
+  box-shadow: none !important;
   transform: none !important;
   backdrop-filter: none !important;
 }
 
 body:has(.home-video-hero) [class*="memorySecondary"] img {
-  border-radius: 18px !important;
+  border-radius: 30px !important;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.72),
+    inset 0 1px 0 rgba(255, 255, 255, 0.46),
+    0 14px 32px rgba(24, 48, 67, 0.075),
+    0 32px 72px rgba(24, 48, 67, 0.105),
+    0 0 56px rgba(150, 190, 216, 0.09) !important;
 }
 
 body:has(.home-video-hero) [class*="roomLinks"] a::before {
@@ -314,12 +345,14 @@ body:has(.home-video-hero) [class*="roomLinks"] a::before {
   .esther-page figure img,
   .studio-page figure img,
   .morning-page figure img,
+  .story-detail-page figure img,
   body:has(.home-video-hero) [class*="tableMedia"] img,
   body:has(.home-video-hero) [class*="careMedia"] img,
   body:has(.home-video-hero) [class*="memoryPrimary"] img,
   body:has(.home-video-hero) [class*="memorySecondary"] img,
-  body:has(.home-video-hero) [class*="studioPrimary"] img {
-    border-radius: 16px !important;
+  body:has(.home-video-hero) [class*="studioPrimary"] img,
+  body:has(.home-video-hero) [class*="studioSecondary"] img {
+    border-radius: clamp(20px, 5vw, 24px) !important;
   }
 }
 
