@@ -5,7 +5,7 @@ import { HomeHeroVideo } from "../home-hero-video";
 import styles from "../page.module.css";
 import polish from "../home-polish.module.css";
 
-const homeUrl = "https://esthercho.pages.dev/ko/home/";
+const homeUrl = "https://esthercho.pages.dev/ko/";
 const socialPreviewImage =
   "https://esthercho.pages.dev/media/home/esther-house-entry-poster.jpg?v=20260815-2000";
 
@@ -15,6 +15,10 @@ export const metadata: Metadata = {
     "믿음과 기억, 밥상과 돌봄, 평범한 삶에서 태어난 조성연의 이야기 집.",
   alternates: {
     canonical: homeUrl,
+    languages: {
+      en: "https://esthercho.pages.dev/",
+      ko: "https://esthercho.pages.dev/ko/",
+    },
   },
   openGraph: {
     type: "website",
@@ -23,6 +27,7 @@ export const metadata: Metadata = {
     title: "조성연 | Esther Cho",
     description:
       "조성연 작가가 실제로 살았던 집의 열린 대문에서 시작되는 이야기의 집.",
+    locale: "ko_KR",
     images: [
       {
         url: socialPreviewImage,

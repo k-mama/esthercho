@@ -5,7 +5,7 @@ import { HomeHeroVideo } from "./home-hero-video";
 import styles from "./page.module.css";
 import polish from "./home-polish.module.css";
 
-const homeUrl = "https://esthercho.pages.dev/home/";
+const homeUrl = "https://esthercho.pages.dev/";
 const socialPreviewImage =
   "https://esthercho.pages.dev/media/home/esther-house-entry-poster.jpg?v=20260815-2000";
 
@@ -15,6 +15,10 @@ export const metadata: Metadata = {
     "A house of stories shaped by faith, memory, food, care, and ordinary life.",
   alternates: {
     canonical: homeUrl,
+    languages: {
+      en: "https://esthercho.pages.dev/",
+      ko: "https://esthercho.pages.dev/ko/",
+    },
   },
   openGraph: {
     type: "website",
@@ -23,6 +27,7 @@ export const metadata: Metadata = {
     title: "Esther Cho",
     description:
       "Enter Esther Cho's house of stories, beginning at the open gate of the home where she lived.",
+    locale: "en_US",
     images: [
       {
         url: socialPreviewImage,
