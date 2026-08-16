@@ -67,10 +67,6 @@
   transform: rotate(12deg);
 }
 
-.morning-present-figure {
-  filter: drop-shadow(0 24px 40px rgba(25, 48, 67, 0.12)) !important;
-}
-
 .morning-foyer-grid > p,
 .morning-present-copy > p:not(.morning-kicker) {
   color: #5f6971 !important;

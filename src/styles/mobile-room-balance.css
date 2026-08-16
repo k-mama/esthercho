@@ -76,14 +76,11 @@
     padding-inline: 0 !important;
   }
 
-  /* Studio owns the father-child collage. Keep the image itself as the object;
-     do not add a second paper frame around the rounded, shadowed artwork. */
+  /* Studio owns the father-child collage geometry. Surface treatment belongs to
+     house-curation.module.css and interface-finish.css. */
   .studio-reimagined-figure {
     width: min(88vw, 620px) !important;
     margin-inline: auto !important;
-    padding: 0 !important;
-    background: transparent !important;
-    box-shadow: none !important;
   }
 
   .studio-reimagined-figure img {
