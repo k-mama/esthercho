@@ -8,20 +8,29 @@ import { navigationConfig } from "@/config/navigation";
 
 function GlobeIcon() {
   return (
-    <Image
-      src="/brand/esther-language-globe-silver-transparent.png"
-      alt=""
-      width={1254}
-      height={1254}
+    <svg
+      viewBox="0 0 24 24"
+      width="22"
+      height="22"
+      fill="none"
       aria-hidden="true"
+      focusable="false"
       style={{
         display: "block",
         width: 22,
         height: 22,
-        objectFit: "contain",
         filter: "drop-shadow(0 1px 4px rgba(3, 15, 30, 0.3))",
       }}
-    />
+    >
+      <circle cx="12" cy="12" r="8.6" stroke="currentColor" strokeWidth="1.35" />
+      <path
+        d="M3.8 12h16.4M12 3.4c2.1 2.2 3.2 5.1 3.2 8.6S14.1 18.4 12 20.6M12 3.4C9.9 5.6 8.8 8.5 8.8 12s1.1 6.4 3.2 8.6M5.6 7.2c1.8 1 4 1.5 6.4 1.5s4.6-.5 6.4-1.5M5.6 16.8c1.8-1 4-1.5 6.4-1.5s4.6.5 6.4 1.5"
+        stroke="currentColor"
+        strokeWidth="1.15"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
   );
 }
 
