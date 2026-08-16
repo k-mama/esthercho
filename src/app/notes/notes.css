@@ -237,9 +237,7 @@
 
 .morning-close {
   display: grid;
-  min-height: min(70svh, 800px);
   align-items: center;
-  padding-block: clamp(8rem, 14vw, 14rem);
   background:
     radial-gradient(circle at 84% 22%, rgba(187, 213, 232, 0.82), transparent 36%),
     linear-gradient(138deg, #edf2f5 0%, #f8f5ee 60%, #e4edf3 100%);
@@ -318,15 +316,13 @@
 @media (max-width: 899px) {
   .morning-foyer,
   .morning-present,
-  .morning-manuscript,
-  .morning-close {
+  .morning-manuscript {
     padding-block: 7rem;
   }
 
   .morning-foyer::before,
   .morning-present::before,
-  .morning-manuscript::before,
-  .morning-close::before {
+  .morning-manuscript::before {
     width: 105vw;
   }
 
@@ -349,14 +345,6 @@
     font-size: clamp(2.55rem, 8.8vw, 4rem);
   }
 
-  .morning-present-figure {
-    width: min(84vw, 520px);
-  }
-
-  .morning-close {
-    min-height: 68svh;
-  }
-
   .morning-page-ko .morning-foyer h2,
   .morning-page-ko .morning-close h2 {
     font-size: clamp(2.4rem, 8.7vw, 3.8rem);
@@ -371,8 +359,7 @@
 @media (max-width: 640px) {
   .morning-foyer,
   .morning-present,
-  .morning-manuscript,
-  .morning-close {
+  .morning-manuscript {
     padding-block: 6.3rem;
   }
 
@@ -399,22 +386,6 @@
   .morning-manuscript-copy {
     font-size: 1rem;
     line-height: 1.76;
-  }
-
-  .morning-present-figure {
-    width: calc(100% + 3rem);
-    margin-left: -1.5rem;
-    filter: none;
-  }
-
-  .morning-present-figure img {
-    aspect-ratio: 0.94 / 1;
-    object-position: center 44%;
-    border-radius: 0;
-  }
-
-  .morning-present-figure figcaption {
-    padding-inline: 1.5rem;
   }
 
   .morning-page-ko .morning-foyer h2,
