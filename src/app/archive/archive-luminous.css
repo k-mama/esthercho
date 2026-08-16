@@ -20,8 +20,7 @@
 .childhood-intro::before,
 .childhood-garden::before,
 .childhood-fragments::before,
-.childhood-archive-principle::before,
-.childhood-ending::before {
+.childhood-archive-principle::before {
   position: absolute;
   z-index: -1;
   content: "";
@@ -29,11 +28,11 @@
   border: 0;
 }
 
+/* The final room is owned by room-exits.css so its corridor fade remains visible. */
 .childhood-intro::after,
 .childhood-garden::after,
 .childhood-fragments::after,
-.childhood-archive-principle::after,
-.childhood-ending::after {
+.childhood-archive-principle::after {
   content: none !important;
 }
 
@@ -115,24 +114,6 @@
   border-radius: 999px;
   background: rgba(132, 174, 202, 0.14);
   transform: rotate(11deg);
-}
-
-.childhood-ending {
-  min-height: min(66svh, 760px);
-  display: grid;
-  align-items: center;
-  background:
-    linear-gradient(132deg, #faf9f5 0%, #f0f4f6 50%, #dfedf5 100%);
-}
-
-.childhood-ending::before {
-  right: -20%;
-  bottom: -24%;
-  width: min(60rem, 68vw);
-  height: min(34rem, 40vw);
-  border-radius: 52% 48% 43% 57% / 48% 56% 44% 52%;
-  background: rgba(103, 155, 190, 0.18);
-  transform: rotate(-8deg);
 }
 
 /* Korean typography is art-directed separately from the English layout. */
@@ -226,13 +207,6 @@
     height: 46vw;
   }
 
-  .childhood-ending::before {
-    right: -42%;
-    bottom: -7%;
-    width: 110vw;
-    height: 58vw;
-  }
-
   .childhood-garden-figure {
     filter: none;
   }
@@ -255,10 +229,6 @@
 }
 
 @media (max-width: 560px) {
-  .childhood-ending {
-    min-height: 54svh;
-  }
-
   .childhood-page-ko .childhood-intro h2,
   .childhood-page-ko .childhood-fragments h2,
   .childhood-page-ko .childhood-ending h2 {
