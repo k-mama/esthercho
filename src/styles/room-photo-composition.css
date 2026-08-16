@@ -15,19 +15,36 @@
     grid-template-columns: minmax(260px, 0.58fr) minmax(420px, 0.96fr);
   }
 
+  /* The garden photograph is deliberately shorter than the source image.
+     On desktop it should sit inside one viewport like an editorial spread,
+     keeping Esther prominent while trimming excess lawn/background. */
+  .childhood-garden {
+    padding-block: clamp(4.5rem, 6vw, 6.75rem);
+  }
+
   .childhood-garden-inner {
-    grid-template-columns: minmax(0, 1.42fr) minmax(290px, 0.56fr);
-    gap: clamp(4.5rem, 9vw, 9rem);
+    grid-template-columns: minmax(520px, 0.96fr) minmax(300px, 0.56fr);
+    gap: clamp(3.5rem, 7vw, 7rem);
+    align-items: center;
   }
 
   .childhood-garden-figure {
-    width: 106%;
-    margin-left: -6%;
+    width: min(100%, 760px);
+    margin: 0;
+    justify-self: end;
+  }
+
+  .childhood-garden-figure img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    object-position: center 30%;
   }
 
   .childhood-garden-copy {
-    align-self: end;
-    padding-bottom: clamp(1rem, 5vw, 5rem);
+    align-self: center;
+    padding-bottom: 0;
   }
 
   /* ABOUT owns the university and Bangladesh photograph placement. */
