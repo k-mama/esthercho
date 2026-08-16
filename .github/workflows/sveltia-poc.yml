@@ -1,0 +1,65 @@
+name: Sveltia CMS PoC
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - poc/sveltia/**
+      - scripts/sveltia-poc-smoke.mjs
+      - .github/workflows/sveltia-poc.yml
+
+permissions:
+  contents: read
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version-file: .node-version
+          cache: npm
+
+      - name: Install project dependencies
+        run: npm ci
+
+      - name: Install pinned Playwright runtime
+        run: npm install --no-save --package-lock=false @playwright/test@1.62.1
+
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Start PoC static server
+        run: |
+          python3 -m http.server 4181 --bind 127.0.0.1 --directory poc/sveltia > /tmp/sveltia-poc-server.log 2>&1 &
+          echo $! > /tmp/sveltia-poc-server.pid
+          for i in {1..30}; do
+            if curl --silent --fail http://127.0.0.1:4181/admin/ > /dev/null; then
+              exit 0
+            fi
+            sleep 1
+          done
+          cat /tmp/sveltia-poc-server.log
+          exit 1
+
+      - name: Smoke-test Sveltia bilingual schema UI
+        env:
+          SVELTIA_POC_URL: http://127.0.0.1:4181/admin/
+        run: node scripts/sveltia-poc-smoke.mjs
+
+      - name: Upload PoC evidence
+        if: always()
+        uses: actions/upload-artifact@v5
+        with:
+          name: sveltia-cms-poc-${{ github.sha }}
+          path: .reports/cms-poc/sveltia/
+          retention-days: 30
+          include-hidden-files: true
