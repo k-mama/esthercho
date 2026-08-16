@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { PageCover } from "@/components/page-cover";
 import "./stories.css";
+import "./stories-polish.css";
 
 export const metadata: Metadata = {
   title: "Stories",
