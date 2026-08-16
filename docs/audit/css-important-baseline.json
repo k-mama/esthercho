@@ -1,0 +1,25 @@
+{
+  "capturedAt": "2026-08-16",
+  "referenceRun": 217,
+  "total": 651,
+  "files": {
+    "src/styles/home-shell-polish.css": 137,
+    "src/styles/home-geometry-contrast.css": 107,
+    "src/styles/interface-finish.css": 76,
+    "src/styles/mobile-menu-glass.css": 65,
+    "src/styles/mobile-room-rhythm.css": 59,
+    "src/styles/remaining-room-interiors.css": 57,
+    "src/styles/mobile-room-balance.css": 43,
+    "src/styles/home-mobile-studio-fix.css": 27,
+    "src/styles/room-interiors.css": 20,
+    "src/app/page.module.css": 19,
+    "src/styles/global.css": 17,
+    "src/styles/room-exits.css": 11,
+    "src/styles/home-video-lock.css": 6,
+    "src/app/about/about.css": 2,
+    "src/styles/room-photo-composition.css": 2,
+    "src/app/archive/archive-luminous.css": 1,
+    "src/styles/shell-redteam.css": 1,
+    "src/styles/desktop-subnav-hover.css": 1
+  }
+}
