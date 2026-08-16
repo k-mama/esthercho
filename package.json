@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "eslint",
     "audit:census": "node scripts/sprint0-census.mjs && node scripts/asset-integrity.mjs && node scripts/media-dimensions.mjs",
-    "guard:css-important": "node scripts/css-important-guard.mjs"
+    "guard:css-important": "node scripts/css-important-guard.mjs",
+    "guard:css-files": "node scripts/css-file-guard.mjs"
   },
   "dependencies": {
     "next": "16.3.1",
