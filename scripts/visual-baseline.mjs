@@ -84,8 +84,12 @@ try {
       await page.addStyleTag({ content: deterministicCss });
       await page.evaluate(async () => {
         const makePlaceholder = (width, height) => {
-          const safeWidth = Math.max(1, Math.round(width || 64));
-          const safeHeight = Math.max(1, Math.round(height || 64));
+          const sourceWidth = Math.max(1, Number(width) || 64);
+          const sourceHeight = Math.max(1, Number(height) || 64);
+          const ratio = sourceWidth / sourceHeight;
+          const maxEdge = 256;
+          const safeWidth = ratio >= 1 ? maxEdge : Math.max(1, Math.round(maxEdge * ratio));
+          const safeHeight = ratio >= 1 ? Math.max(1, Math.round(maxEdge / ratio)) : maxEdge;
           const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${safeWidth}" height="${safeHeight}" viewBox="0 0 ${safeWidth} ${safeHeight}"><rect width="100%" height="100%" fill="#d8e0e6"/></svg>`;
           return `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`;
         };
@@ -122,7 +126,6 @@ try {
           video.load();
         }
 
-        await Promise.all(images.map((image) => image.decode().catch(() => undefined)));
         if (document.fonts?.ready) await document.fonts.ready;
         await new Promise((resolve) => requestAnimationFrame(() => requestAnimationFrame(resolve)));
         window.scrollTo(0, 0);
@@ -230,7 +233,7 @@ await writeFile(
 
 await writeFile(
   path.join(OUTPUT, "README.md"),
-  `# Structural visual baseline\n\nGenerated: ${summary.generatedAt}\n\n- Routes: ${summary.routeCount}\n- Viewports: ${summary.viewportCount}\n- Screenshots: ${summary.screenshotCount}\n- Horizontal overflow findings (>1px): ${summary.overflowFindingCount}\n\nImages are replaced after their intrinsic dimensions are known, so the neutral placeholders preserve original aspect ratios. Video payloads are disabled and represented by a neutral poster. These captures preserve layout, typography, spacing, and responsive structure; they are not editorial photo references.\n`,
+  `# Structural visual baseline\n\nGenerated: ${summary.generatedAt}\n\n- Routes: ${summary.routeCount}\n- Viewports: ${summary.viewportCount}\n- Screenshots: ${summary.screenshotCount}\n- Horizontal overflow findings (>1px): ${summary.overflowFindingCount}\n\nImages are replaced after their intrinsic aspect ratios are known, using normalized neutral placeholders with a maximum edge of 256px. Video payloads are disabled and represented by a neutral poster. These captures preserve layout, typography, spacing, and responsive structure; they are not editorial photo references.\n`,
 );
 
 console.log(`VISUAL_SCREENSHOTS=${results.length}`);
