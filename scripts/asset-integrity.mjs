@@ -43,10 +43,18 @@ async function sha256(filePath) {
   return createHash("sha256").update(data).digest("hex");
 }
 
+function canonicalStaticUrl(url) {
+  return url.split(/[?#]/, 1)[0];
+}
+
 function extractStaticUrls(text) {
   const found = new Set();
-  for (const match of text.matchAll(/\/(?:media|brand)\/[A-Za-z0-9_./()%-]+/g)) found.add(match[0]);
-  for (const match of text.matchAll(/\/(?:favicon[^"'`\s)]+|apple-icon[^"'`\s)]+)/g)) found.add(match[0]);
+  for (const match of text.matchAll(/\/(?:media|brand)\/[A-Za-z0-9_./()%-]+/g)) {
+    found.add(canonicalStaticUrl(match[0]));
+  }
+  for (const match of text.matchAll(/\/(?:favicon[^"'`\s)]+|apple-icon[^"'`\s)]+)/g)) {
+    found.add(canonicalStaticUrl(match[0]));
+  }
   return [...found];
 }
 
@@ -149,3 +157,6 @@ for (const item of appStaticReport) {
   console.log(`APP_STATIC\t${item.bytes}\t${item.file}`);
 }
 console.log(`DELIVERY_DUPLICATE_GROUPS=${crossLocationDuplicates.length}`);
+for (const item of crossLocationDuplicates) {
+  console.log(`DUPLICATE\t${item.files.join(" | ")}`);
+}
