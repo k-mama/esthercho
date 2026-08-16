@@ -6,6 +6,15 @@ const ROOT = process.cwd();
 const OUTPUT = path.join(ROOT, ".reports", "cms-poc", "sveltia");
 const BASE_URL = process.env.SVELTIA_POC_URL ?? "http://127.0.0.1:4181/admin/";
 
+async function anyVisibleText(page, pattern) {
+  const locator = page.getByText(pattern, { exact: false });
+  const count = await locator.count();
+  for (let index = 0; index < count; index += 1) {
+    if (await locator.nth(index).isVisible().catch(() => false)) return true;
+  }
+  return false;
+}
+
 await mkdir(OUTPUT, { recursive: true });
 
 const browser = await chromium.launch({ headless: true });
@@ -105,11 +114,7 @@ try {
     };
 
     for (const [name, pattern] of Object.entries(checks)) {
-      result.requiredFieldChecks[name] = await page
-        .getByText(pattern, { exact: false })
-        .first()
-        .isVisible()
-        .catch(() => false);
+      result.requiredFieldChecks[name] = await anyVisibleText(page, pattern);
     }
 
     const allFieldsVisible = Object.values(result.requiredFieldChecks).every(Boolean);
