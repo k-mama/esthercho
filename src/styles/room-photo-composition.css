@@ -1,8 +1,9 @@
 /* Distinct photographic composition for Esther Cho's inner rooms.
-   Desktop gets editorial asymmetry; mobile returns to calm single-column framing. */
+   This layer owns desktop placement and asymmetry only.
+   Framing, radius, halo and shadow belong to the shared finish layers. */
 
 @media (min-width: 900px) {
-  /* CHILDHOOD owns the house and garden photographs. */
+  /* CHILDHOOD owns the house and garden composition. */
   .childhood-house-figure img {
     height: min(74vh, 860px);
     aspect-ratio: auto;
@@ -24,16 +25,12 @@
     margin-left: -6%;
   }
 
-  .childhood-garden-figure img {
-    border-radius: 18px;
-  }
-
   .childhood-garden-copy {
     align-self: end;
     padding-bottom: clamp(1rem, 5vw, 5rem);
   }
 
-  /* ABOUT owns the university and Bangladesh photographs. */
+  /* ABOUT owns the university and Bangladesh photograph placement. */
   .esther-education-section .esther-split {
     grid-template-columns: minmax(330px, 0.78fr) minmax(0, 0.88fr);
   }
@@ -41,10 +38,6 @@
   .esther-portrait-figure {
     width: 86%;
     justify-self: end;
-  }
-
-  .esther-portrait-figure img {
-    border-radius: 18px;
   }
 
   .esther-service-grid {
@@ -56,50 +49,14 @@
     justify-self: center;
   }
 
-  .esther-service-figure img {
-    border-radius: 18px;
-  }
-
-  /* STUDIO owns the father-child collage. */
+  /* STUDIO owns the gallery composition; visual framing is shared elsewhere. */
   .studio-reimagined .studio-work-grid-reverse {
     grid-template-columns: minmax(300px, 0.56fr) minmax(0, 1.2fr);
     gap: clamp(4rem, 10vw, 10rem);
   }
 
-  .studio-reimagined-figure {
-    width: min(86%, 760px);
-    justify-self: end;
-    padding: clamp(0.75rem, 1.3vw, 1rem);
-    background: rgba(250, 247, 240, 0.94);
-    box-shadow: 0 30px 70px rgba(25, 48, 67, 0.14);
-    transform: rotate(-0.65deg);
-  }
-
-  .studio-reimagined-figure img {
-    box-shadow: none !important;
-  }
-
   .studio-work-copy {
     align-self: end;
     padding-bottom: clamp(0.5rem, 4vw, 4rem);
-  }
-}
-
-@media (max-width: 899px) {
-  .childhood-garden-figure img,
-  .esther-portrait-figure img,
-  .esther-service-figure img {
-    border-radius: 0;
-  }
-
-  .studio-reimagined-figure {
-    padding: 0;
-    background: transparent;
-    box-shadow: none;
-    transform: none;
-  }
-
-  .studio-reimagined-figure img {
-    box-shadow: none !important;
   }
 }
