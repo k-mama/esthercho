@@ -62,8 +62,8 @@
 }
 
 /* Accessibility bridge: these two declarations use the file's existing
-   !important baseline slack so older finish layers can be corrected without
-   adding another global stylesheet. */
+   priority-override baseline slack so older finish layers can be corrected
+   without adding another global stylesheet. */
 .childhood-page figure figcaption,
 .esther-page figure figcaption,
 .studio-page figure figcaption,
