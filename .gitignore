@@ -13,6 +13,9 @@
 # testing
 /coverage
 
+# generated audit reports
+/.reports/
+
 # next.js
 /.next/
 /out/
