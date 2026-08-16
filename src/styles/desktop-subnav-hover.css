@@ -9,23 +9,32 @@
 
   .site-header-nav-desktop {
     position: relative;
+    z-index: 47;
   }
 
-  /* A narrow hover bridge lets the pointer travel from the primary navigation
-     into the submenu without a flicker. It does not create a persistent state. */
+  /* The corridor stays inert until the primary nav is actually hovered.
+     Once opened, it spans the viewport so the pointer can travel diagonally
+     toward any submenu item without falling through a narrow hover gap. */
   .site-header-nav-desktop::after {
     position: absolute;
     top: 100%;
-    right: -1.75rem;
-    left: -1.75rem;
-    height: 2.2rem;
+    left: 50%;
+    width: 100vw;
+    height: 3.4rem;
     content: "";
+    pointer-events: none;
+    transform: translateX(-50%);
+  }
+
+  .site-header:has(.site-header-nav-desktop:hover)
+    .site-header-nav-desktop::after {
+    pointer-events: auto;
   }
 
   .site-header-subnav-desktop,
   body:has(.page-cover-shell) .site-header-subnav-desktop {
     position: absolute;
-    top: 100%;
+    top: calc(100% - 1px);
     right: 0;
     left: 0;
     z-index: 45;
@@ -37,19 +46,31 @@
     transform: translateY(-8px);
     box-shadow: 0 18px 34px rgba(20, 39, 58, 0.08);
     transition:
-      opacity 120ms ease,
-      transform 120ms ease,
-      visibility 0s linear 125ms;
+      opacity 140ms ease,
+      transform 140ms ease,
+      visibility 0s linear 220ms;
   }
 
-  /* Pointer behaviour: open only while the pointer is over the primary nav,
-     the hover bridge, or the submenu itself. Leaving those areas closes it. */
+  /* A second bridge belongs to the open submenu itself. It overlaps the
+     header edge so tiny pointer slips do not collapse the menu mid-travel. */
+  .site-header-subnav-desktop::before {
+    position: absolute;
+    right: 0;
+    bottom: 100%;
+    left: 0;
+    height: 1.4rem;
+    content: "";
+  }
+
+  /* Pointer behaviour: open while the pointer is over the primary nav,
+     the full-width corridor, or the submenu itself. */
   .site-header:has(.site-header-nav-desktop:hover) .site-header-subnav-desktop,
   .site-header:has(.site-header-subnav-desktop:hover) .site-header-subnav-desktop,
-  /* Keyboard behaviour: focus-visible keeps the submenu available for Tab
-     navigation without letting a mouse click leave it permanently open. */
-  .site-header:has(.site-header-nav-desktop .site-header-nav-link:focus-visible) .site-header-subnav-desktop,
-  .site-header:has(.site-header-subnav-desktop a:focus-visible) .site-header-subnav-desktop {
+  /* Keyboard behaviour: focus-visible keeps the submenu available for Tab. */
+  .site-header:has(.site-header-nav-desktop .site-header-nav-link:focus-visible)
+    .site-header-subnav-desktop,
+  .site-header:has(.site-header-subnav-desktop a:focus-visible)
+    .site-header-subnav-desktop {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
