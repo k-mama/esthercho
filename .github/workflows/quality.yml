@@ -27,6 +27,16 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Sprint 0 census
+        run: npm run audit:census
+
+      - name: Upload census report
+        uses: actions/upload-artifact@v4
+        with:
+          name: sprint0-census
+          path: .reports/sprint0-census.*
+          retention-days: 14
+
       - name: Production dependency audit
         run: npm audit --omit=dev --audit-level=high
 
