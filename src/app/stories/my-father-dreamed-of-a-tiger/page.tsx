@@ -48,7 +48,7 @@ export default function TigerDreamStoryPage() {
             earlier fragment remains part of the record.
           </p>
 
-          <div className="story-detail-tags" aria-label="Related memory tags">
+          <div className="story-detail-tags" role="group" aria-label="Related memory tags">
             {tags.map((tag) => (
               <span key={tag}>{tag}</span>
             ))}

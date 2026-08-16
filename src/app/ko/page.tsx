@@ -129,7 +129,11 @@ export default function KoreanHome() {
 
       <section className={`${styles.scene} ${styles.memoryScene} ${polish.memory}`} aria-labelledby="memory-title">
         <div className={`container ${styles.sceneGrid} ${styles.reverseScene}`}>
-          <div className={styles.memoryCollage} aria-label="조성연의 어린 시절 사진">
+          <div
+            className={styles.memoryCollage}
+            role="group"
+            aria-label="조성연의 어린 시절 사진"
+          >
             <figure className={`${styles.memoryPrimary} ${polish.memoryPrimary}`}>
               <Image
                 src="/media/esther/childhood-garden.jpg"
@@ -214,7 +218,11 @@ export default function KoreanHome() {
             </Link>
           </div>
 
-          <div className={styles.studioCollage} aria-label="조성연의 원본 스케치를 바탕으로 만든 콜라주">
+          <div
+            className={styles.studioCollage}
+            role="group"
+            aria-label="조성연의 원본 스케치를 바탕으로 만든 콜라주"
+          >
             <figure className={`${styles.studioPrimary} ${polish.studioPrimary}`}>
               <Image
                 src="/media/esther/still-making-father-child-collage-20260802.png"

@@ -120,7 +120,11 @@ export default function Home() {
 
       <section className={`${styles.scene} ${styles.memoryScene} ${polish.memory}`} aria-labelledby="memory-title">
         <div className={`container ${styles.sceneGrid} ${styles.reverseScene}`}>
-          <div className={styles.memoryCollage} aria-label="Esther Cho childhood photographs">
+          <div
+            className={styles.memoryCollage}
+            role="group"
+            aria-label="Esther Cho childhood photographs"
+          >
             <figure className={`${styles.memoryPrimary} ${polish.memoryPrimary}`}>
               <Image
                 src="/media/esther/childhood-garden.jpg"
@@ -196,7 +200,11 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className={styles.studioCollage} aria-label="Collage built from Esther Cho's original sketch">
+          <div
+            className={styles.studioCollage}
+            role="group"
+            aria-label="Collage built from Esther Cho's original sketch"
+          >
             <figure className={`${styles.studioPrimary} ${polish.studioPrimary}`}>
               <Image
                 src="/media/esther/still-making-father-child-collage-20260802.png"
