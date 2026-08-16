@@ -1,6 +1,8 @@
 .home {
   --esther-cream: #fbf8f2;
   --esther-ink: #17324b;
+  --esther-glass: rgba(255, 255, 255, 0.46);
+  --esther-shadow: rgba(31, 43, 58, 0.13);
 }
 
 .foyer,
@@ -10,30 +12,115 @@
 .studio,
 .closing {
   box-shadow:
-    inset 0 1px rgba(255, 255, 255, 0.3),
-    inset 0 42px 70px -72px rgba(255, 255, 255, 0.8),
-    inset 0 -42px 70px -72px rgba(35, 48, 64, 0.14);
+    inset 0 1px rgba(255, 255, 255, 0.34),
+    inset 0 46px 76px -76px rgba(255, 255, 255, 0.9),
+    inset 0 -48px 76px -76px rgba(35, 48, 64, 0.16);
 }
 
 .foyer {
   box-shadow:
-    inset 0 56px 84px -84px rgba(7, 22, 41, 0.5),
-    inset 0 -48px 76px -74px rgba(72, 76, 91, 0.12);
+    inset 0 62px 92px -92px rgba(7, 22, 41, 0.55),
+    inset 0 -54px 82px -80px rgba(72, 76, 91, 0.14);
+}
+
+/* The room directory should feel like a piece of furniture, not a UI table. */
+.roomLinks {
+  gap: 0.72rem;
+  padding: 0.72rem;
+  background: rgba(255, 255, 255, 0.2);
+  border: 0;
+  border-radius: 26px;
+  box-shadow:
+    0 24px 60px rgba(57, 68, 83, 0.08),
+    inset 0 1px rgba(255, 255, 255, 0.56);
+  backdrop-filter: blur(18px) saturate(112%);
 }
 
 .roomLinks a {
   position: relative;
+  overflow: hidden;
+  border: 0;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.42);
+  box-shadow:
+    0 9px 24px rgba(47, 59, 75, 0.05),
+    inset 0 1px rgba(255, 255, 255, 0.7);
   transition:
     color 180ms ease,
-    border-color 180ms ease;
+    background-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
 }
 
-/* Real photographs stay still. Interaction belongs to links and navigation. */
+.roomLinks a:hover {
+  background: rgba(255, 255, 255, 0.66);
+  box-shadow:
+    0 14px 34px rgba(47, 59, 75, 0.08),
+    inset 0 1px rgba(255, 255, 255, 0.82);
+  transform: translateY(-2px);
+}
+
+/* Real photographs stay still. Depth and light live around them, never over them. */
 .tableMedia,
 .careMedia,
 .memoryPrimary,
+.memorySecondary,
 .studioPrimary {
+  position: relative;
+  isolation: isolate;
   transform: none;
+}
+
+.tableMedia::before,
+.careMedia::before,
+.memoryPrimary::before,
+.studioPrimary::before {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  pointer-events: none;
+  filter: blur(34px);
+  opacity: 0.58;
+}
+
+.tableMedia::before {
+  inset: 9% -8% -5% 11%;
+  border-radius: 38% 46% 34% 42%;
+  background: radial-gradient(circle at 50% 50%, rgba(244, 190, 171, 0.4), rgba(205, 224, 241, 0.18) 58%, transparent 74%);
+}
+
+.careMedia::before {
+  inset: 8% -5% -8% 7%;
+  border-radius: 42% 36% 44% 34%;
+  background: radial-gradient(circle at 55% 44%, rgba(205, 228, 241, 0.42), rgba(239, 203, 189, 0.2) 60%, transparent 76%);
+}
+
+.memoryPrimary::before {
+  inset: 6% -7% -8% 9%;
+  border-radius: 40%;
+  background: radial-gradient(circle at 52% 46%, rgba(202, 228, 222, 0.44), rgba(220, 214, 241, 0.18) 62%, transparent 76%);
+}
+
+.studioPrimary::before {
+  inset: 7% -10% -9% 8%;
+  border-radius: 38%;
+  background: radial-gradient(circle at 48% 48%, rgba(126, 177, 204, 0.34), rgba(185, 154, 199, 0.18) 60%, transparent 76%);
+}
+
+.tableMedia img,
+.careMedia img,
+.memoryPrimary img,
+.studioPrimary img {
+  box-shadow:
+    0 30px 70px rgba(34, 44, 57, 0.13),
+    0 7px 18px rgba(34, 44, 57, 0.08),
+    inset 0 1px rgba(255, 255, 255, 0.42);
+}
+
+.tableMedia img,
+.careMedia img,
+.memoryPrimary img {
+  border-radius: 24px;
 }
 
 .memoryPrimary,
@@ -43,14 +130,35 @@
   overflow: hidden;
 }
 
+.memorySecondary {
+  border-radius: 18px;
+  box-shadow:
+    0 24px 54px rgba(33, 47, 61, 0.14),
+    inset 0 1px rgba(255, 255, 255, 0.72);
+}
+
+.memorySecondary img {
+  border-radius: 12px;
+}
+
+.studioPrimary {
+  border-radius: 22px;
+}
+
+.studioPrimary img {
+  border-radius: inherit;
+}
+
 .careMedia figcaption {
+  border-radius: 999px;
   letter-spacing: 0.045em;
+  box-shadow: 0 8px 22px rgba(4, 18, 31, 0.16);
 }
 
 .closing {
   box-shadow:
-    inset 0 64px 90px -90px rgba(27, 57, 74, 0.24),
-    inset 0 -64px 90px -90px rgba(14, 37, 62, 0.14);
+    inset 0 68px 96px -96px rgba(27, 57, 74, 0.26),
+    inset 0 -68px 96px -96px rgba(14, 37, 62, 0.16);
 }
 
 @media (max-width: 899px) {
@@ -61,29 +169,77 @@
   .studio,
   .closing {
     box-shadow:
-      inset 0 1px rgba(255, 255, 255, 0.28),
-      inset 0 34px 56px -58px rgba(255, 255, 255, 0.7),
-      inset 0 -34px 56px -58px rgba(38, 53, 67, 0.12);
+      inset 0 1px rgba(255, 255, 255, 0.3),
+      inset 0 38px 62px -62px rgba(255, 255, 255, 0.76),
+      inset 0 -38px 62px -62px rgba(38, 53, 67, 0.13);
+  }
+
+  .roomLinks {
+    gap: 0.62rem;
+    padding: 0.62rem;
+    border-radius: 22px;
+  }
+
+  .roomLinks a {
+    border-radius: 16px;
+  }
+
+  .careMedia {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .careMedia img {
+    border-radius: 22px;
   }
 }
 
 @media (max-width: 640px) {
+  .roomLinks {
+    padding: 0.55rem;
+    border-radius: 20px;
+  }
+
   .roomLinks a {
     min-height: 4.6rem;
+    padding-inline: 0.85rem;
+    border-radius: 15px;
   }
 
   .tableMedia {
     filter: drop-shadow(0 22px 36px rgba(71, 56, 50, 0.08));
   }
 
+  .tableMedia img,
+  .careMedia img,
+  .memoryPrimary img {
+    border-radius: 18px;
+  }
+
   .memorySecondary,
-  .studioSecondary {
+  .studioPrimary {
+    border-radius: 16px;
+  }
+
+  .memorySecondary {
     box-shadow: 0 18px 34px rgba(33, 47, 61, 0.12);
+  }
+
+  .tableMedia::before,
+  .careMedia::before,
+  .memoryPrimary::before,
+  .studioPrimary::before {
+    filter: blur(24px);
+    opacity: 0.48;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .roomLinks a {
     transition: none;
+  }
+
+  .roomLinks a:hover {
+    transform: none;
   }
 }
