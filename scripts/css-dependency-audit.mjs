@@ -8,24 +8,24 @@ const OUTPUT = path.join(ROOT, ".reports", "css-dependency");
 const BASE_URL = process.env.CSS_AUDIT_BASE_URL ?? "http://127.0.0.1:4173";
 
 const routes = [
-  ["root", "/"],
-  ["home-en", "/home/"],
-  ["about-en", "/about/"],
-  ["archive-en", "/archive/"],
-  ["books-en", "/books/"],
-  ["notes-en", "/notes/"],
-  ["stories-en", "/stories/"],
-  ["story-tiger-en", "/stories/my-father-dreamed-of-a-tiger/"],
-  ["story-youngest-en", "/stories/the-youngest-daughter-in-every-house/"],
-  ["studio-en", "/studio/"],
-  ["ko-root", "/ko/"],
-  ["home-ko", "/ko/home/"],
-  ["about-ko", "/ko/about/"],
-  ["archive-ko", "/ko/archive/"],
-  ["books-ko", "/ko/books/"],
-  ["notes-ko", "/ko/notes/"],
-  ["stories-ko", "/ko/stories/"],
-  ["studio-ko", "/ko/studio/"],
+  ["root", "/", "en"],
+  ["home-en", "/home/", "en"],
+  ["about-en", "/about/", "en"],
+  ["archive-en", "/archive/", "en"],
+  ["books-en", "/books/", "en"],
+  ["notes-en", "/notes/", "en"],
+  ["stories-en", "/stories/", "en"],
+  ["story-tiger-en", "/stories/my-father-dreamed-of-a-tiger/", "en"],
+  ["story-youngest-en", "/stories/the-youngest-daughter-in-every-house/", "en"],
+  ["studio-en", "/studio/", "en"],
+  ["ko-root", "/ko/", "ko"],
+  ["home-ko", "/ko/home/", "ko"],
+  ["about-ko", "/ko/about/", "ko"],
+  ["archive-ko", "/ko/archive/", "ko"],
+  ["books-ko", "/ko/books/", "ko"],
+  ["notes-ko", "/ko/notes/", "ko"],
+  ["stories-ko", "/ko/stories/", "ko"],
+  ["studio-ko", "/ko/studio/", "ko"],
 ];
 
 const DYNAMIC_PATTERN = /:(?:hover|focus|focus-visible|focus-within|active|visited|target)\b|\[(?:open|popover-open)\]/i;
@@ -77,10 +77,12 @@ function normalizeSelector(selector) {
   return value.trim();
 }
 
-const cssFiles = (await walk(SRC)).filter((file) => file.endsWith(".css"));
+const allCssFiles = (await walk(SRC)).filter((file) => file.endsWith(".css"));
+const moduleCssFiles = allCssFiles.filter((file) => file.endsWith(".module.css")).map(rel).sort();
+const cascadeCssFiles = allCssFiles.filter((file) => !file.endsWith(".module.css"));
 const selectorRecords = [];
 
-for (const file of cssFiles) {
+for (const file of cascadeCssFiles) {
   const text = await readFile(file, "utf8");
   for (const selector of extractSelectorRules(text)) {
     selectorRecords.push({
@@ -105,7 +107,7 @@ try {
     locale: "en-US",
   });
 
-  for (const [routeName, routePath] of routes) {
+  for (const [routeName, routePath, expectedLang] of routes) {
     const page = await context.newPage();
     await page.route("**/*", async (route) => {
       if (route.request().resourceType() === "media") {
@@ -123,7 +125,16 @@ try {
       throw new Error(`${routePath} returned ${response?.status() ?? "no response"}`);
     }
 
-    await page.waitForTimeout(30);
+    try {
+      await page.waitForFunction(
+        (language) => document.documentElement.lang === language,
+        expectedLang,
+        { timeout: 2000 },
+      );
+    } catch {
+      // Keep the audit observational. A language-sync issue is already covered by
+      // the dedicated accessibility baseline; selector impact still proceeds.
+    }
 
     const selectors = selectorRecords.map((record) => record.normalizedSelector);
     const results = await page.evaluate((inputSelectors) => {
@@ -209,6 +220,9 @@ const files = [...fileMap.values()]
 const report = {
   generatedAt: new Date().toISOString(),
   routeCount: routes.length,
+  cascadeCssFileCount: cascadeCssFiles.length,
+  moduleCssFileCount: moduleCssFiles.length,
+  moduleCssFiles,
   selectorRuleCount: records.length,
   queryableRuleCount: records.filter((record) => record.queryable).length,
   zeroMatchRuleCount: records.filter((record) => record.queryable && record.matchCount === 0).length,
@@ -237,11 +251,13 @@ const zeroCandidates = files
   })
   .join("\n");
 
-const markdown = `# CSS route dependency audit\n\nGenerated: ${report.generatedAt}\n\nThis is a structural selector-presence audit across ${report.routeCount} current routes. Stateful selectors and pseudo-elements are normalized to their owning structural selectors. A zero match is a deletion *candidate*, not proof of dead CSS; selectors used only in unvisited runtime states, generated content, or future routes require human review.\n\n## Summary\n\n- Selector rules extracted: ${report.selectorRuleCount}\n- Queryable after normalization: ${report.queryableRuleCount}\n- Zero-match candidates: ${report.zeroMatchRuleCount}\n- One-route selectors: ${report.oneRouteRuleCount}\n- Stateful/pseudo-element selectors: ${report.statefulRuleCount}\n- Invalid/unqueryable selectors: ${report.invalidRuleCount}\n\n## File impact matrix\n\n| File | Rules | Routes touched | Zero-match candidates | One-route rules | Stateful rules |\n| --- | ---: | ---: | ---: | ---: | ---: |\n${table}\n\n## Zero-match candidate selectors\n\n${zeroCandidates || "- None detected."}\n`;
+const markdown = `# CSS route dependency audit\n\nGenerated: ${report.generatedAt}\n\nThis is a structural selector-presence audit across ${report.routeCount} current routes for the legacy/non-module cascade. Stateful selectors and pseudo-elements are normalized to their owning structural selectors. CSS Modules are listed separately and deliberately excluded because their source class names are hashed at build time and cannot be meaningfully queried against production DOM by source selector. A zero match is a deletion *candidate*, not proof of dead CSS.\n\n## Summary\n\n- Non-module CSS files scanned: ${report.cascadeCssFileCount}\n- CSS Modules excluded from source-selector matching: ${report.moduleCssFileCount}\n- Selector rules extracted: ${report.selectorRuleCount}\n- Queryable after normalization: ${report.queryableRuleCount}\n- Zero-match candidates: ${report.zeroMatchRuleCount}\n- One-route selectors: ${report.oneRouteRuleCount}\n- Stateful/pseudo-element selectors: ${report.statefulRuleCount}\n- Invalid/unqueryable selectors: ${report.invalidRuleCount}\n\n## CSS Modules (ownership already explicit)\n\n${moduleCssFiles.map((file) => `- \`${file}\``).join("\n") || "- None."}\n\n## Non-module file impact matrix\n\n| File | Rules | Routes touched | Zero-match candidates | One-route rules | Stateful rules |\n| --- | ---: | ---: | ---: | ---: | ---: |\n${table}\n\n## Zero-match candidate selectors\n\n${zeroCandidates || "- None detected."}\n`;
 
 await writeFile(path.join(OUTPUT, "report.md"), markdown);
 
 console.log(`CSS_DEPENDENCY_ROUTES=${report.routeCount}`);
+console.log(`CSS_DEPENDENCY_CASCADE_FILES=${report.cascadeCssFileCount}`);
+console.log(`CSS_DEPENDENCY_MODULE_FILES=${report.moduleCssFileCount}`);
 console.log(`CSS_DEPENDENCY_RULES=${report.selectorRuleCount}`);
 console.log(`CSS_DEPENDENCY_QUERYABLE=${report.queryableRuleCount}`);
 console.log(`CSS_DEPENDENCY_ZERO_MATCH=${report.zeroMatchRuleCount}`);
