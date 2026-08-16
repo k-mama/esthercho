@@ -17,7 +17,7 @@ const englishThresholds: Record<string, ThresholdRoom> = {
   "/archive": { href: "/studio/", eyebrow: "NEXT ROOM", title: "Studio", hint: "See what was made by hand." },
   "/studio": { href: "/books/", eyebrow: "NEXT ROOM", title: "Books", hint: "Continue into the library." },
   "/books": { href: "/about/", eyebrow: "NEXT ROOM", title: "Esther", hint: "Meet the woman behind the work." },
-  "/about": { href: "/home/", eyebrow: "BACK TO THE HALL", title: "Esther's House", hint: "Return to the entrance hall." },
+  "/about": { href: "/", eyebrow: "BACK TO THE HALL", title: "Esther's House", hint: "Return to the entrance hall." },
 };
 
 const koreanThresholds: Record<string, ThresholdRoom> = {
@@ -26,7 +26,7 @@ const koreanThresholds: Record<string, ThresholdRoom> = {
   "/ko/archive": { href: "/ko/studio/", eyebrow: "다음 방", title: "작업실", hint: "손으로 만든 것들을 보러 갑니다." },
   "/ko/studio": { href: "/ko/books/", eyebrow: "다음 방", title: "책", hint: "서재로 이어집니다." },
   "/ko/books": { href: "/ko/about/", eyebrow: "다음 방", title: "조성연", hint: "작품 뒤의 사람을 만납니다." },
-  "/ko/about": { href: "/ko/home/", eyebrow: "다시 현관으로", title: "Esther의 집", hint: "집의 입구로 돌아갑니다." },
+  "/ko/about": { href: "/ko/", eyebrow: "다시 현관으로", title: "Esther의 집", hint: "집의 입구로 돌아갑니다." },
 };
 
 function normalizePath(pathname: string) {

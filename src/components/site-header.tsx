@@ -47,6 +47,14 @@ function getParentRoom(pathname: string) {
   return segments.length > 0 ? `/${segments[0]}` : "/home";
 }
 
+function englishCanonicalPath(path: string) {
+  return path === "/home" ? "/" : `${path}/`;
+}
+
+function koreanCanonicalPath(path: string) {
+  return path === "/home" ? "/ko/" : `/ko${path}/`;
+}
+
 function getLanguageHref(pathname: string, isKorean: boolean) {
   const normalized = normalizePath(pathname);
 
@@ -54,21 +62,23 @@ function getLanguageHref(pathname: string, isKorean: boolean) {
     const englishPath = normalized.replace(/^\/ko/, "") || "/home";
 
     if (mirroredRooms.has(englishPath)) {
-      return `${englishPath}/`;
+      return englishCanonicalPath(englishPath);
     }
 
     const parentRoom = getParentRoom(englishPath);
-    return mirroredRooms.has(parentRoom) ? `${parentRoom}/` : "/home/";
+    return mirroredRooms.has(parentRoom)
+      ? englishCanonicalPath(parentRoom)
+      : "/";
   }
 
   if (mirroredRooms.has(normalized)) {
-    return `/ko${normalized}/`;
+    return koreanCanonicalPath(normalized);
   }
 
   const parentRoom = getParentRoom(normalized);
   return mirroredRooms.has(parentRoom)
-    ? `/ko${parentRoom}/`
-    : "/ko/home/";
+    ? koreanCanonicalPath(parentRoom)
+    : "/ko/";
 }
 
 export function SiteHeader() {
@@ -90,7 +100,7 @@ export function SiteHeader() {
     ? navigationConfig.roomsKo
     : navigationConfig.roomsEn;
 
-  const homeHref = isKorean ? "/ko/home/" : "/home/";
+  const homeHref = isKorean ? "/ko/" : "/";
   const languageHref = getLanguageHref(pathname, isKorean);
 
   const languageLabel = isKorean
