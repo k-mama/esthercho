@@ -63,7 +63,6 @@ function countApproxSelectors(css) {
       .replace(/\{$/, "")
       .trim();
     if (!selectorText || selectorText.includes(":")) {
-      // Colons are valid selectors, so only reject obvious declaration fragments.
       if (/^[\w-]+\s*:\s*[^,]+$/.test(selectorText)) continue;
     }
     if (/^(from|to|\d+%)/.test(selectorText)) continue;
@@ -242,10 +241,7 @@ const report = {
 const duplicateLines = duplicateGroups.length
   ? duplicateGroups
       .slice(0, 20)
-      .map(
-        (group) =>
-          `- ${formatBytes(group.bytesEach)} each — ${group.files.join(" | ")}`,
-      )
+      .map((group) => `- ${formatBytes(group.bytesEach)} each — ${group.files.join(" | ")}`)
       .join("\n")
   : "- None detected by exact SHA-256 match.";
 
@@ -283,3 +279,23 @@ console.log(`GLOBAL_CSS_LAYERS=${globalCssLayers.length}`);
 console.log(`CSS_IMPORTANT=${cssImportantTotal}`);
 console.log(`ASSET_REFERENCE_PATHS=${assetReferenceReport.length}`);
 console.log(`UNREFERENCED_EDITORIAL_MEDIA=${orphanPublicAssets.length}`);
+
+console.log("TOP_IMPORTANT_FILES");
+for (const item of cssAudit.filter((entry) => entry.importantCount > 0).slice(0, 10)) {
+  console.log(`${item.importantCount}\t${item.file}`);
+}
+
+console.log("DUPLICATE_ASSET_GROUPS");
+for (const group of duplicateGroups.slice(0, 10)) {
+  console.log(`${group.bytesEach}\t${group.files.join(" | ")}`);
+}
+
+console.log("LARGEST_PUBLIC_ASSETS");
+for (const asset of publicAssets.slice(0, 10)) {
+  console.log(`${asset.bytes}\t${asset.file}`);
+}
+
+console.log("UNREFERENCED_MEDIA_LEADS");
+for (const asset of orphanPublicAssets.slice(0, 20)) {
+  console.log(`${asset.bytes}\t${asset.file}`);
+}
