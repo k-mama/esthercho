@@ -73,7 +73,7 @@
     linear-gradient(138deg, #f8f3eb 0%, #f5f4f1 55%, #e6eef3 100%) !important;
 }
 
-/* Archive and studio keep their existing large shapes but gain more breathing room. */
+/* Archive, studio and Esther keep their room-specific light while sharing exit spacing. */
 .childhood-ending,
 .studio-future,
 .esther-closing {
@@ -86,8 +86,9 @@
   justify-items: start;
 }
 
+/* Esther closes as a quiet author colophon, not a quote card. */
 .esther-closing > p:last-child {
-  max-width: 18ch;
+  max-width: 46rem;
 }
 
 /* The final few pixels gently move toward the corridor without a visible seam. */
@@ -125,10 +126,6 @@
 
   .stories-happiness blockquote {
     max-width: 13ch;
-  }
-
-  .esther-closing > p:last-child {
-    max-width: 15ch;
   }
 }
 

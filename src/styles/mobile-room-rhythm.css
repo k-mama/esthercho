@@ -75,8 +75,7 @@
     line-height: 1.02 !important;
   }
 
-  .stories-happiness blockquote,
-  .esther-closing > p:last-child {
+  .stories-happiness blockquote {
     max-width: 13ch !important;
     font-size: clamp(2.35rem, 9.5vw, 3.75rem) !important;
     line-height: 1.08 !important;
