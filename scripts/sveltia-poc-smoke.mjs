@@ -15,6 +15,7 @@ let result = {
   success: false,
   httpStatus: null,
   pageTitle: null,
+  onboardingClicked: false,
   visibleStoryLabel: false,
   containsConfigError: false,
   bodyTextSample: "",
@@ -56,9 +57,15 @@ try {
       throw new Error(`Sveltia PoC admin returned ${response?.status() ?? "no response"}`);
     }
 
-    // Give the SPA enough time to fetch config.yml and initialize. Playwright text
-    // locators pierce open shadow roots, unlike document.body.innerText.
-    await page.getByText("Stories", { exact: false }).first().waitFor({
+    const testRepoButton = page.getByRole("button", { name: /Work with Test Repository/i });
+    if (await testRepoButton.isVisible().catch(() => false)) {
+      await testRepoButton.click();
+      result.onboardingClicked = true;
+    }
+
+    // A visible Stories collection proves the CMS bundle initialized, config.yml
+    // parsed, and the bilingual collection schema was accepted by this runtime.
+    await page.getByText("Stories", { exact: true }).first().waitFor({
       state: "visible",
       timeout: 30000,
     });
@@ -104,6 +111,7 @@ await writeFile(path.join(OUTPUT, "smoke.json"), `${JSON.stringify(result, null,
 
 console.log(`SVELTIA_POC_UI_LOADED=${result.success}`);
 console.log(`SVELTIA_POC_HTTP_STATUS=${result.httpStatus ?? "none"}`);
+console.log(`SVELTIA_POC_ONBOARDING_CLICKED=${result.onboardingClicked}`);
 console.log(`SVELTIA_POC_CONFIG_ERROR=${result.containsConfigError}`);
 console.log(`SVELTIA_POC_CONSOLE_ERRORS=${result.consoleErrors.length}`);
 console.log(`SVELTIA_POC_REQUEST_FAILURES=${result.requestFailures.length}`);
