@@ -34,7 +34,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: sprint0-census
-          path: .reports/sprint0-census.*
+          path: .reports/sprint0-*
           retention-days: 14
           include-hidden-files: true
 
