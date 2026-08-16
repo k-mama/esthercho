@@ -33,6 +33,9 @@ jobs:
       - name: CSS important guard
         run: npm run guard:css-important
 
+      - name: CSS file architecture guard
+        run: npm run guard:css-files
+
       - name: Upload census report
         uses: actions/upload-artifact@v5
         with:
