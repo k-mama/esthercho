@@ -5,7 +5,7 @@ import { useEffect } from "react";
 export default function NotFound() {
   useEffect(() => {
     const isKorean = window.location.pathname === "/ko" || window.location.pathname.startsWith("/ko/");
-    const target = isKorean ? "/ko/home/" : "/home/";
+    const target = isKorean ? "/ko/" : "/";
 
     if (window.location.pathname !== target) {
       window.location.replace(target);
