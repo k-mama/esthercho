@@ -29,8 +29,6 @@ jobs:
         uses: actions/setup-node@v6
         with:
           node-version-file: .node-version
-          cache: npm
-          cache-dependency-path: poc/keystatic-app/package.json
 
       - name: Install isolated admin dependencies
         run: npm install --no-package-lock
