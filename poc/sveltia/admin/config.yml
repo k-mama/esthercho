@@ -1,0 +1,162 @@
+# yaml-language-server: $schema=https://unpkg.com/@sveltia/cms/schema/sveltia-cms.json
+
+# Sprint-0 schema/UX proof of concept only.
+# This test backend writes to a browser-local virtual filesystem and cannot publish production content.
+backend:
+  name: test-repo
+
+media_folder: poc/sveltia/media
+public_folder: /poc-media
+
+i18n:
+  structure: multiple_files
+  locales:
+    - ko
+    - en
+  default_locale: ko
+  initial_locales: all
+
+collections:
+  - name: stories
+    label: Stories
+    label_singular: Story
+    folder: poc/sveltia/content/stories
+    create: true
+    format: frontmatter
+    extension: md
+    path: "{{slug}}/index"
+    slug: "{{fields.story_id}}"
+    identifier_field: title
+    i18n: true
+    summary: "{{title}} · {{status}}"
+    fields:
+      - name: story_id
+        label: Story ID
+        widget: uuid
+        i18n: duplicate
+        comment: Automatically generated and read-only. This identity must survive title and URL changes.
+
+      - name: editorial_state
+        label: Editorial state
+        widget: select
+        i18n: duplicate
+        default: recorded
+        options:
+          - { label: Recorded memory, value: recorded }
+          - { label: Developing, value: developing }
+          - { label: Active, value: active }
+          - { label: Retired, value: retired }
+
+      - name: event_year
+        label: Approximate event year
+        widget: number
+        required: false
+        i18n: duplicate
+        value_type: int
+        comment: Year of the remembered event, not publication year. Leave blank rather than guessing.
+
+      - name: date_precision
+        label: Date precision
+        widget: select
+        i18n: duplicate
+        default: unknown
+        options:
+          - { label: Exact day, value: day }
+          - { label: Month known, value: month }
+          - { label: Year known, value: year }
+          - { label: Approximate year, value: approximate-year }
+          - { label: Decade only, value: decade }
+          - { label: Unknown, value: unknown }
+
+      - name: collections
+        label: Collections
+        widget: select
+        multiple: true
+        required: false
+        i18n: duplicate
+        options:
+          - { label: Morning Table, value: morning-table }
+          - { label: Childhood, value: childhood }
+          - { label: Art, value: art }
+          - { label: Family, value: family }
+          - { label: Faith, value: faith }
+          - { label: Service, value: service }
+        comment: PoC options only. Not every option is a ratified production taxonomy.
+
+      - name: status
+        label: Locale publication state
+        widget: select
+        i18n: true
+        default: not-started
+        options:
+          - { label: Not started, value: not-started }
+          - { label: Draft, value: draft }
+          - { label: Published, value: published }
+          - { label: Retired, value: retired }
+
+      - name: title
+        label: Title
+        widget: string
+        required: false
+        i18n: true
+
+      - name: url_slug
+        label: Public URL slug
+        widget: string
+        required: false
+        i18n: true
+        hint: This is a presentation URL field, not the Story ID.
+
+      - name: deck
+        label: Short introduction
+        widget: text
+        required: false
+        i18n: true
+
+      - name: availability_summary
+        label: Companion-language summary
+        widget: text
+        required: false
+        i18n: true
+        comment: Optional editorial summary for a locale whose full original is not yet published. It is not the Story original.
+
+      - name: photos
+        label: Story photos
+        widget: list
+        required: false
+        i18n: duplicate
+        collapsed: true
+        summary: "{{fields.file}}"
+        fields:
+          - name: file
+            label: Photo
+            widget: image
+          - name: approximate_year
+            label: Approximate year
+            widget: number
+            required: false
+            value_type: int
+          - name: people
+            label: Who is in this photo?
+            widget: string
+            required: false
+          - name: permission
+            label: Is publication permission clear?
+            widget: select
+            default: review
+            options:
+              - { label: I'm not sure — review first, value: review }
+              - { label: Cleared for this use, value: cleared }
+              - { label: Do not publish, value: restricted }
+          - name: caption
+            label: Caption
+            widget: string
+            required: false
+            i18n: true
+
+      - name: body
+        label: Story
+        widget: richtext
+        required: false
+        i18n: true
+        comment: Korean and English are independent originals. One may remain not-started or draft while the other is published.
