@@ -1,6 +1,6 @@
 /* Mobile photographic art direction for Esther Cho's inner rooms.
-   Each recurring photograph now has a clear owner; this file only styles photographs
-   that still exist in the current page structures. */
+   Each recurring photograph has a clear owner; mobile framing preserves the same
+   quiet-luxury treatment used on desktop rather than switching back to full bleed. */
 
 @media (max-width: 899px) {
   main.childhood-page > .page-cover-shell .page-cover-image {
@@ -29,13 +29,12 @@
     object-position: center 54% !important;
   }
 
-  /* Keep the entire childhood garden photograph visible on phones.
-     It is a scene, not a portrait crop: full viewport width, native aspect ratio. */
+  /* The childhood garden is still shown generously, but remains a framed photograph
+     rather than reverting to edge-to-edge mobile treatment. */
   .childhood-garden-figure {
-    width: 100vw !important;
-    max-width: none !important;
-    margin-left: calc(50% - 50vw) !important;
-    margin-right: calc(50% - 50vw) !important;
+    width: min(92vw, 760px) !important;
+    max-width: 100% !important;
+    margin-inline: auto !important;
   }
 
   .childhood-garden-figure img {
@@ -45,16 +44,15 @@
     aspect-ratio: auto !important;
     object-fit: contain !important;
     object-position: center center !important;
-    box-shadow: none !important;
   }
 
   .childhood-garden-figure figcaption {
-    padding-inline: 1.5rem !important;
+    padding-inline: 0.15rem !important;
   }
 
   /* About owns the university and Bangladesh photographs. */
   .esther-portrait-figure {
-    width: min(78vw, 430px) !important;
+    width: min(82vw, 460px) !important;
     margin-inline: auto !important;
   }
 
@@ -64,7 +62,7 @@
   }
 
   .esther-service-figure {
-    width: min(76vw, 400px) !important;
+    width: min(80vw, 430px) !important;
     margin-inline: auto !important;
   }
 
@@ -78,13 +76,14 @@
     padding-inline: 0 !important;
   }
 
-  /* Studio owns the father-child collage. */
+  /* Studio owns the father-child collage. Keep the image itself as the object;
+     do not add a second paper frame around the rounded, shadowed artwork. */
   .studio-reimagined-figure {
-    width: min(90vw, 560px) !important;
+    width: min(88vw, 620px) !important;
     margin-inline: auto !important;
-    padding: 0.7rem !important;
-    background: rgba(249, 248, 244, 0.97) !important;
-    box-shadow: 0 22px 44px rgba(25, 48, 67, 0.13) !important;
+    padding: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
   }
 
   .studio-reimagined-figure img {
@@ -92,7 +91,6 @@
     height: auto;
     aspect-ratio: 1 / 1 !important;
     object-fit: contain !important;
-    box-shadow: none !important;
   }
 
   .studio-reimagined-figure figcaption {
@@ -101,7 +99,7 @@
 
   /* Morning Table owns the recurring breakfast photograph. */
   .morning-present-figure {
-    width: min(80vw, 440px) !important;
+    width: min(82vw, 460px) !important;
     margin-inline: auto !important;
     filter: none !important;
   }
@@ -109,17 +107,20 @@
   .morning-present-figure img {
     aspect-ratio: 3 / 4 !important;
     object-position: center 54% !important;
-    box-shadow: 0 22px 42px rgba(25, 48, 67, 0.1);
   }
 }
 
 @media (max-width: 560px) {
+  .childhood-garden-figure {
+    width: 100% !important;
+  }
+
   .esther-portrait-figure {
-    width: 80vw !important;
+    width: 84vw !important;
   }
 
   .esther-service-figure {
-    width: 78vw !important;
+    width: 82vw !important;
   }
 
   .studio-reimagined-figure {
@@ -127,6 +128,6 @@
   }
 
   .morning-present-figure {
-    width: 86vw !important;
+    width: 88vw !important;
   }
 }
