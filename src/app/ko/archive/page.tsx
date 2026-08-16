@@ -4,6 +4,7 @@ import Link from "next/link";
 import { PageCover } from "@/components/page-cover";
 import "../../archive/archive.css";
 import "../../archive/archive-luminous.css";
+import "../../archive/archive-polish.css";
 
 export const metadata: Metadata = {
   title: "어린 시절 앨범",
