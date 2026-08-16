@@ -3,6 +3,7 @@ import Image from "next/image";
 import { PageCover } from "@/components/page-cover";
 import { authorProfile } from "@/content/author-profile";
 import "../../about/about.css";
+import "../../about/about-polish.css";
 
 export const metadata: Metadata = {
   title: "조성연 · Esther Cho",
