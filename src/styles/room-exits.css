@@ -63,7 +63,7 @@
 }
 
 .stories-happiness-grid > p {
-  color: #5f6971 !important;
+  color: #5f6971;
 }
 
 /* Morning Table exits in warm breakfast light fading into cool morning air. */
@@ -85,7 +85,8 @@
   max-width: 46rem;
 }
 
-/* The final few pixels gently move toward the corridor without a visible seam. */
+/* The final few pixels gently move toward the corridor without a visible seam.
+   Explicit display ownership defeats legacy room CSS that used to hide pseudo-elements. */
 .childhood-ending::after,
 .stories-happiness::after,
 .morning-close::after,
@@ -96,6 +97,7 @@
   bottom: 0;
   left: 0;
   z-index: 1;
+  display: block !important;
   height: clamp(5rem, 10vw, 9rem);
   content: "";
   background: linear-gradient(180deg, transparent 0%, rgba(21, 51, 77, 0.055) 100%);
