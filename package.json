@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "audit:census": "node scripts/sprint0-census.mjs"
+    "audit:census": "node scripts/sprint0-census.mjs && node scripts/asset-integrity.mjs"
   },
   "dependencies": {
     "next": "16.3.1",
