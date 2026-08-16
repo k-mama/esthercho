@@ -1,0 +1,67 @@
+name: CSS Dependency Audit
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - scripts/css-dependency-audit.mjs
+      - .github/workflows/css-dependency-audit.yml
+
+permissions:
+  contents: read
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version-file: .node-version
+          cache: npm
+
+      - name: Install project dependencies
+        run: npm ci
+
+      - name: Build static export
+        run: npm run build
+
+      - name: Install pinned Playwright runtime
+        run: npm install --no-save --package-lock=false @playwright/test@1.62.1
+
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Start static server
+        run: |
+          python3 -m http.server 4173 --bind 127.0.0.1 --directory out > /tmp/esther-css-audit-server.log 2>&1 &
+          echo $! > /tmp/esther-css-audit-server.pid
+          for i in {1..30}; do
+            if curl --silent --fail http://127.0.0.1:4173/home/ > /dev/null; then
+              exit 0
+            fi
+            sleep 1
+          done
+          cat /tmp/esther-css-audit-server.log
+          exit 1
+
+      - name: Scan CSS selector route impact
+        env:
+          CSS_AUDIT_BASE_URL: http://127.0.0.1:4173
+        run: node scripts/css-dependency-audit.mjs
+
+      - name: Upload CSS dependency report
+        if: always()
+        uses: actions/upload-artifact@v5
+        with:
+          name: css-dependency-audit-${{ github.sha }}
+          path: .reports/css-dependency/
+          retention-days: 30
+          include-hidden-files: true
