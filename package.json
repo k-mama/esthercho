@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "audit:census": "node scripts/sprint0-census.mjs && node scripts/asset-integrity.mjs",
+    "audit:census": "node scripts/sprint0-census.mjs && node scripts/asset-integrity.mjs && node scripts/media-dimensions.mjs",
     "guard:css-important": "node scripts/css-important-guard.mjs"
   },
   "dependencies": {
