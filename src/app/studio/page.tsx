@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { PageCover } from "@/components/page-cover";
 import "./studio.css";
+import "./studio-polish.css";
 
 export const metadata: Metadata = {
   title: "Drawn by Hand",
