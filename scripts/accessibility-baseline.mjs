@@ -97,10 +97,18 @@ try {
         if (document.fonts?.ready) await document.fonts.ready;
       });
 
-      // Give client-side language synchronization one event loop turn.
-      await page.waitForTimeout(50);
+      let languageSyncTimedOut = false;
+      try {
+        await page.waitForFunction(
+          (language) => document.documentElement.lang === language,
+          expectedLang,
+          { timeout: 2000 },
+        );
+      } catch {
+        languageSyncTimedOut = true;
+      }
 
-      const structural = await page.evaluate(({ expectedLang }) => {
+      const structural = await page.evaluate(({ expectedLang, languageSyncTimedOut }) => {
         const h1Count = document.querySelectorAll("h1").length;
         const mainCount = document.querySelectorAll("main").length;
         const skipLink = document.querySelector('a[href="#main-content"]');
@@ -110,14 +118,17 @@ try {
           expectedLang,
           actualLang: lang,
           langMatches: lang === expectedLang,
+          languageSyncTimedOut,
           h1Count,
           mainCount,
           skipLinkExists: Boolean(skipLink),
+          skipLinkText: skipLink?.textContent?.trim() ?? null,
+          skipLinkLang: skipLink?.getAttribute("lang") ?? null,
           skipTargetExists: Boolean(skipTarget),
           skipTargetProgrammaticallyFocusable:
             skipTarget instanceof HTMLElement ? skipTarget.tabIndex >= -1 : false,
         };
-      }, { expectedLang });
+      }, { expectedLang, languageSyncTimedOut });
 
       const axeResults = await new AxeBuilder({ page })
         .withTags(wcagTags)
@@ -239,10 +250,18 @@ const ruleSummary = [...ruleMap.values()].sort(
 const structuralFindings = scans.flatMap((scan) => {
   const findings = [];
   if (!scan.structural.langMatches) findings.push("html-lang-mismatch");
+  if (scan.structural.languageSyncTimedOut) findings.push("html-lang-sync-timeout");
   if (scan.structural.h1Count !== 1) findings.push(`h1-count-${scan.structural.h1Count}`);
   if (scan.structural.mainCount !== 1) findings.push(`main-count-${scan.structural.mainCount}`);
   if (!scan.structural.skipLinkExists) findings.push("missing-skip-link");
   if (!scan.structural.skipTargetExists) findings.push("missing-skip-target");
+  if (
+    scan.structural.expectedLang === "ko" &&
+    scan.structural.skipLinkText === "Skip to main content" &&
+    !scan.structural.skipLinkLang
+  ) {
+    findings.push("ko-skip-link-language-not-declared");
+  }
   return findings.map((finding) => ({
     routeName: scan.routeName,
     routePath: scan.routePath,
