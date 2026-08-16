@@ -1,0 +1,145 @@
+.morning-page {
+  --morning-warm-light: rgba(255, 224, 201, 0.52);
+  --morning-rose-light: rgba(247, 215, 224, 0.38);
+  --morning-sky-light: rgba(202, 225, 240, 0.46);
+}
+
+/* Keep the page airy, but make each room feel joined by natural light. */
+.morning-foyer,
+.morning-present,
+.morning-manuscript,
+.morning-close {
+  box-shadow:
+    inset 0 1px rgba(255, 255, 255, 0.42),
+    inset 0 52px 82px -82px rgba(255, 255, 255, 0.9),
+    inset 0 -50px 80px -80px rgba(31, 48, 66, 0.14);
+}
+
+.morning-foyer {
+  background:
+    radial-gradient(circle at 10% 14%, var(--morning-warm-light), transparent 34%),
+    radial-gradient(circle at 82% 17%, var(--morning-sky-light), transparent 38%),
+    radial-gradient(circle at 72% 88%, var(--morning-rose-light), transparent 34%),
+    linear-gradient(135deg, #fbf7ef 0%, #f6f5f1 50%, #eaf2f6 100%);
+}
+
+.morning-present {
+  background:
+    radial-gradient(circle at 12% 20%, rgba(255, 221, 196, 0.54), transparent 35%),
+    radial-gradient(circle at 88% 18%, rgba(195, 220, 237, 0.66), transparent 36%),
+    radial-gradient(circle at 83% 86%, rgba(247, 216, 226, 0.34), transparent 32%),
+    linear-gradient(140deg, #faf6ee 0%, #f3f4f3 56%, #e7f0f5 100%);
+}
+
+.morning-present-figure {
+  position: relative;
+  isolation: isolate;
+  filter: none;
+}
+
+.morning-present-figure::before {
+  position: absolute;
+  inset: 8% -10% -7% 10%;
+  z-index: -1;
+  content: "";
+  border-radius: 42%;
+  background:
+    radial-gradient(circle at 48% 46%, rgba(250, 196, 167, 0.4), rgba(201, 225, 240, 0.2) 58%, transparent 76%);
+  filter: blur(34px);
+  opacity: 0.62;
+  pointer-events: none;
+}
+
+.morning-present-figure img {
+  border-radius: 24px;
+  box-shadow:
+    0 34px 76px rgba(35, 48, 61, 0.14),
+    0 8px 20px rgba(35, 48, 61, 0.08),
+    inset 0 1px rgba(255, 255, 255, 0.44);
+}
+
+.morning-present-figure figcaption {
+  margin-top: 1rem;
+  color: #71808b;
+}
+
+.morning-manuscript {
+  background:
+    radial-gradient(circle at 13% 15%, rgba(114, 165, 197, 0.28), transparent 34%),
+    radial-gradient(circle at 87% 20%, rgba(188, 151, 196, 0.18), transparent 32%),
+    radial-gradient(circle at 77% 90%, rgba(110, 181, 185, 0.15), transparent 34%),
+    linear-gradient(145deg, #122e48 0%, #1b405c 57%, #284f67 100%);
+}
+
+.morning-manuscript-grid {
+  position: relative;
+}
+
+.morning-manuscript-copy {
+  padding: clamp(1.65rem, 3vw, 2.5rem);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.045);
+  box-shadow:
+    0 26px 64px rgba(4, 18, 31, 0.12),
+    inset 0 1px rgba(255, 255, 255, 0.09);
+  backdrop-filter: blur(10px);
+}
+
+.morning-close {
+  background:
+    radial-gradient(circle at 12% 18%, rgba(255, 218, 198, 0.5), transparent 34%),
+    radial-gradient(circle at 84% 22%, rgba(188, 216, 234, 0.72), transparent 36%),
+    radial-gradient(circle at 77% 88%, rgba(229, 216, 246, 0.44), transparent 34%),
+    linear-gradient(138deg, #f8f3eb 0%, #f5f4f1 55%, #e6eef3 100%);
+}
+
+@media (max-width: 899px) {
+  .morning-foyer,
+  .morning-present,
+  .morning-manuscript,
+  .morning-close {
+    box-shadow:
+      inset 0 1px rgba(255, 255, 255, 0.34),
+      inset 0 38px 62px -62px rgba(255, 255, 255, 0.78),
+      inset 0 -38px 62px -62px rgba(38, 53, 67, 0.12);
+  }
+
+  .morning-present-figure {
+    width: min(86vw, 520px);
+  }
+
+  .morning-manuscript-copy {
+    max-width: 680px;
+  }
+}
+
+@media (max-width: 640px) {
+  .morning-present-figure {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .morning-present-figure::before {
+    inset: 9% -6% -6% 8%;
+    filter: blur(24px);
+    opacity: 0.48;
+  }
+
+  .morning-present-figure img {
+    aspect-ratio: 0.94 / 1;
+    object-position: center 44%;
+    border-radius: 18px;
+    box-shadow:
+      0 24px 48px rgba(35, 48, 61, 0.12),
+      0 6px 16px rgba(35, 48, 61, 0.07);
+  }
+
+  .morning-present-figure figcaption {
+    padding-inline: 0.15rem;
+  }
+
+  .morning-manuscript-copy {
+    padding: 1.35rem;
+    border-radius: 18px;
+  }
+}
