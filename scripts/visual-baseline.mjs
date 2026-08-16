@@ -88,7 +88,8 @@ try {
         await route.continue();
       });
 
-      const response = await page.goto(`${BASE_URL}${routePath.replace(/^\//, "")}`, {
+      const pageUrl = new URL(routePath, BASE_URL).href;
+      const response = await page.goto(pageUrl, {
         waitUntil: "domcontentloaded",
       });
 
