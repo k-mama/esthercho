@@ -57,7 +57,7 @@ export default function TigerDreamStoryPage() {
 
         <figure className="story-detail-figure">
           <Image
-            src="/media/home/childhood-garden.jpg"
+            src="/media/esther/childhood-garden.jpg"
             alt="Esther Cho smiling in a garden as a child"
             width={1800}
             height={1350}
