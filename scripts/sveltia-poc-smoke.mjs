@@ -17,12 +17,15 @@ let result = {
   pageTitle: null,
   onboardingClicked: false,
   visibleStoryLabel: false,
+  editorOpened: false,
+  requiredFieldChecks: {},
   containsConfigError: false,
   bodyTextSample: "",
   htmlSample: "",
   consoleErrors: [],
   requestFailures: [],
-  screenshot: null,
+  collectionScreenshot: null,
+  editorScreenshot: null,
   failure: null,
 };
 
@@ -63,24 +66,81 @@ try {
       result.onboardingClicked = true;
     }
 
-    // A visible Stories collection proves the CMS bundle initialized, config.yml
-    // parsed, and the bilingual collection schema was accepted by this runtime.
     await page.getByText("Stories", { exact: true }).first().waitFor({
       state: "visible",
       timeout: 30000,
     });
-
     result.visibleStoryLabel = true;
+
+    const collectionScreenshotPath = path.join(OUTPUT, "collection-loaded.jpg");
+    await page.screenshot({
+      path: collectionScreenshotPath,
+      type: "jpeg",
+      quality: 82,
+      fullPage: true,
+    });
+    result.collectionScreenshot = path.relative(ROOT, collectionScreenshotPath).split(path.sep).join("/");
+
+    const createButton = page.getByRole("button", { name: /Create New Entry|New/i }).last();
+    await createButton.click();
+
+    await page.getByText("Story ID", { exact: true }).first().waitFor({
+      state: "visible",
+      timeout: 30000,
+    });
+    result.editorOpened = true;
+
+    const checks = {
+      storyId: /Story ID/i,
+      editorialState: /Editorial state/i,
+      eventYear: /Approximate event year/i,
+      datePrecision: /Date precision/i,
+      collections: /^Collections$/i,
+      publicationState: /Locale publication state/i,
+      title: /^Title$/i,
+      publicUrlSlug: /Public URL slug/i,
+      companionSummary: /Companion-language summary/i,
+      storyPhotos: /Story photos/i,
+      storyBody: /^Story$/i,
+    };
+
+    for (const [name, pattern] of Object.entries(checks)) {
+      result.requiredFieldChecks[name] = await page
+        .getByText(pattern, { exact: false })
+        .first()
+        .isVisible()
+        .catch(() => false);
+    }
+
+    const allFieldsVisible = Object.values(result.requiredFieldChecks).every(Boolean);
+
+    const editorScreenshotPath = path.join(OUTPUT, "story-editor.jpg");
+    await page.screenshot({
+      path: editorScreenshotPath,
+      type: "jpeg",
+      quality: 82,
+      fullPage: true,
+    });
+    result.editorScreenshot = path.relative(ROOT, editorScreenshotPath).split(path.sep).join("/");
+
+    if (!allFieldsVisible) {
+      const missing = Object.entries(result.requiredFieldChecks)
+        .filter(([, visible]) => !visible)
+        .map(([name]) => name)
+        .join(", ");
+      throw new Error(`Sveltia Story editor is missing expected fields: ${missing}`);
+    }
+
     result.success = true;
   } catch (error) {
     result.failure = error instanceof Error ? error.message : String(error);
   }
 
-  await page.waitForTimeout(1000).catch(() => undefined);
+  await page.waitForTimeout(800).catch(() => undefined);
 
   result.pageTitle = await page.title().catch(() => null);
-  result.bodyTextSample = (await page.locator("body").innerText().catch(() => "")).slice(0, 4000);
-  result.htmlSample = (await page.content().catch(() => "")).slice(0, 8000);
+  result.bodyTextSample = (await page.locator("body").innerText().catch(() => "")).slice(0, 6000);
+  result.htmlSample = (await page.content().catch(() => "")).slice(0, 10000);
 
   const configErrorLocator = page.getByText(
     /configuration error|failed to load configuration|config error|invalid configuration/i,
@@ -90,17 +150,18 @@ try {
     .isVisible()
     .catch(() => false);
 
-  const screenshotPath = path.join(OUTPUT, result.success ? "admin-loaded.jpg" : "admin-failure.jpg");
-  await page
-    .screenshot({
-      path: screenshotPath,
-      type: "jpeg",
-      quality: 82,
-      fullPage: true,
-    })
-    .catch(() => undefined);
-
-  result.screenshot = path.relative(ROOT, screenshotPath).split(path.sep).join("/");
+  if (!result.editorScreenshot) {
+    const failureScreenshotPath = path.join(OUTPUT, "admin-failure.jpg");
+    await page
+      .screenshot({
+        path: failureScreenshotPath,
+        type: "jpeg",
+        quality: 82,
+        fullPage: true,
+      })
+      .catch(() => undefined);
+    result.editorScreenshot = path.relative(ROOT, failureScreenshotPath).split(path.sep).join("/");
+  }
 
   await context.close();
 } finally {
@@ -112,10 +173,14 @@ await writeFile(path.join(OUTPUT, "smoke.json"), `${JSON.stringify(result, null,
 console.log(`SVELTIA_POC_UI_LOADED=${result.success}`);
 console.log(`SVELTIA_POC_HTTP_STATUS=${result.httpStatus ?? "none"}`);
 console.log(`SVELTIA_POC_ONBOARDING_CLICKED=${result.onboardingClicked}`);
+console.log(`SVELTIA_POC_COLLECTION_VISIBLE=${result.visibleStoryLabel}`);
+console.log(`SVELTIA_POC_EDITOR_OPENED=${result.editorOpened}`);
 console.log(`SVELTIA_POC_CONFIG_ERROR=${result.containsConfigError}`);
 console.log(`SVELTIA_POC_CONSOLE_ERRORS=${result.consoleErrors.length}`);
 console.log(`SVELTIA_POC_REQUEST_FAILURES=${result.requestFailures.length}`);
-console.log(`SVELTIA_POC_SCREENSHOT=${result.screenshot ?? "none"}`);
+for (const [name, visible] of Object.entries(result.requiredFieldChecks)) {
+  console.log(`SVELTIA_FIELD\t${name}\t${visible}`);
+}
 if (result.failure) console.log(`SVELTIA_POC_FAILURE=${result.failure}`);
 
 if (!result.success || result.containsConfigError) {
