@@ -36,6 +36,7 @@ jobs:
           name: sprint0-census
           path: .reports/sprint0-census.*
           retention-days: 14
+          include-hidden-files: true
 
       - name: Production dependency audit
         run: npm audit --omit=dev --audit-level=high
