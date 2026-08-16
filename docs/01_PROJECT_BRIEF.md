@@ -3,7 +3,7 @@
 ## 1. Project Identity
 
 **Public author brand:** Esther Cho  
-**Korean real name:** 조성연 / Cho Seongyeon  
+**Korean real name:** 조성연 / Cho Sungyeon  
 **Website type:** Global author website, living archive, book showcase, visual storytelling home  
 **Default audience:** North American English readers  
 **Secondary audience:** Korean readers  
@@ -77,13 +77,13 @@ Disclose the Korean real name clearly in:
 
 Recommended English disclosure:
 
-> Esther Cho is the pen name of Korean author Cho Seongyeon.
+> Esther Cho is the pen name of Korean author Cho Sungyeon.
 
 Recommended Korean disclosure:
 
 > 조성연은 Esther Cho라는 필명으로 묵상집과 동화, 삶의 기억을 쓰는 작가입니다.
 
-Do not display `ESTHER CHO / CHO SEONGYEON / 조성연` as three competing logos in the hero.
+Do not display `ESTHER CHO / CHO SUNGYEON / 조성연` as three competing logos in the hero.
 
 ## 6. Editorial Position
 
