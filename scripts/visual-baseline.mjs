@@ -30,11 +30,6 @@ const viewports = [
   { name: "desktop", width: 1440, height: 1000 },
 ];
 
-const placeholderSvg = `
-<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
-  <rect width="64" height="64" fill="#d8e0e6"/>
-</svg>`;
-
 const deterministicCss = `
   *, *::before, *::after {
     animation: none !important;
@@ -48,7 +43,7 @@ const deterministicCss = `
 `;
 
 function screenshotName(routeName, viewportName) {
-  return `${routeName}--${viewportName}.png`;
+  return `${routeName}--${viewportName}.jpg`;
 }
 
 await mkdir(OUTPUT, { recursive: true });
@@ -67,24 +62,13 @@ try {
     for (const [routeName, routePath] of routes) {
       const page = await context.newPage();
 
+      // Video payloads are not needed for structural screenshots. Images are allowed
+      // to resolve first so their true intrinsic aspect ratios can be preserved.
       await page.route("**/*", async (route) => {
-        const request = route.request();
-        const resourceType = request.resourceType();
-
-        if (resourceType === "image") {
-          await route.fulfill({
-            status: 200,
-            contentType: "image/svg+xml",
-            body: placeholderSvg,
-          });
-          return;
-        }
-
-        if (resourceType === "media") {
+        if (route.request().resourceType() === "media") {
           await route.abort();
           return;
         }
-
         await route.continue();
       });
 
@@ -99,11 +83,48 @@ try {
 
       await page.addStyleTag({ content: deterministicCss });
       await page.evaluate(async () => {
+        const makePlaceholder = (width, height) => {
+          const safeWidth = Math.max(1, Math.round(width || 64));
+          const safeHeight = Math.max(1, Math.round(height || 64));
+          const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${safeWidth}" height="${safeHeight}" viewBox="0 0 ${safeWidth} ${safeHeight}"><rect width="100%" height="100%" fill="#d8e0e6"/></svg>`;
+          return `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`;
+        };
+
+        const images = [...document.images];
+        for (const image of images) {
+          const rect = image.getBoundingClientRect();
+          const width =
+            image.naturalWidth ||
+            Number(image.getAttribute("width")) ||
+            Math.round(rect.width) ||
+            64;
+          const height =
+            image.naturalHeight ||
+            Number(image.getAttribute("height")) ||
+            Math.round(rect.height) ||
+            64;
+
+          image.removeAttribute("srcset");
+          image.removeAttribute("sizes");
+          image.src = makePlaceholder(width, height);
+        }
+
         for (const video of document.querySelectorAll("video")) {
+          const rect = video.getBoundingClientRect();
           video.pause();
           video.removeAttribute("autoplay");
+          video.removeAttribute("src");
+          for (const source of video.querySelectorAll("source")) source.removeAttribute("src");
+          video.poster = makePlaceholder(
+            Number(video.getAttribute("width")) || Math.round(rect.width) || 1600,
+            Number(video.getAttribute("height")) || Math.round(rect.height) || 900,
+          );
+          video.load();
         }
+
+        await Promise.all(images.map((image) => image.decode().catch(() => undefined)));
         if (document.fonts?.ready) await document.fonts.ready;
+        await new Promise((resolve) => requestAnimationFrame(() => requestAnimationFrame(resolve)));
         window.scrollTo(0, 0);
       });
 
@@ -158,6 +179,8 @@ try {
       const outputPath = path.join(OUTPUT, screenshotName(routeName, viewport.name));
       await page.screenshot({
         path: outputPath,
+        type: "jpeg",
+        quality: 82,
         fullPage: true,
         animations: "disabled",
       });
@@ -207,7 +230,7 @@ await writeFile(
 
 await writeFile(
   path.join(OUTPUT, "README.md"),
-  `# Structural visual baseline\n\nGenerated: ${summary.generatedAt}\n\n- Routes: ${summary.routeCount}\n- Viewports: ${summary.viewportCount}\n- Screenshots: ${summary.screenshotCount}\n- Horizontal overflow findings (>1px): ${summary.overflowFindingCount}\n\nMedia is intentionally neutralized. These screenshots preserve layout, typography, spacing, and responsive structure; they are not editorial photo references.\n`,
+  `# Structural visual baseline\n\nGenerated: ${summary.generatedAt}\n\n- Routes: ${summary.routeCount}\n- Viewports: ${summary.viewportCount}\n- Screenshots: ${summary.screenshotCount}\n- Horizontal overflow findings (>1px): ${summary.overflowFindingCount}\n\nImages are replaced after their intrinsic dimensions are known, so the neutral placeholders preserve original aspect ratios. Video payloads are disabled and represented by a neutral poster. These captures preserve layout, typography, spacing, and responsive structure; they are not editorial photo references.\n`,
 );
 
 console.log(`VISUAL_SCREENSHOTS=${results.length}`);
