@@ -1,13 +1,13 @@
 export const authorProfile = {
   globalName: "Esther Cho",
   koreanName: "조성연",
-  romanizedName: "Cho Seongyeon",
+  romanizedName: "Cho Sungyeon",
   roles: {
     en: ["Writer", "Artist", "Homemaker"],
     ko: ["작가", "화가", "주부"],
   },
   shortBio: {
-    en: "Esther Cho is the international author name of Korean writer and artist Cho Seongyeon.",
+    en: "Esther Cho is the international author name of Korean writer and artist Cho Sungyeon.",
     ko: "Esther Cho는 한국 작가이자 화가인 조성연의 국제 작가명입니다.",
   },
   education: [
