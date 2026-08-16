@@ -5,9 +5,9 @@ import { authorProfile } from "@/content/author-profile";
 import "./about.css";
 
 export const metadata: Metadata = {
-  title: "Esther Cho · Cho Seongyeon",
+  title: "Esther Cho · Cho Sungyeon",
   description:
-    "Meet Esther Cho, the international author name of Korean writer and artist Cho Seongyeon (조성연).",
+    "Meet Esther Cho, the international author name of Korean writer and artist Cho Sungyeon (조성연).",
 };
 
 const education = authorProfile.education;
