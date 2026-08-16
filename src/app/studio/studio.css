@@ -113,7 +113,6 @@
 }
 
 .studio-future {
-  padding-block: clamp(7rem, 12vw, 11rem);
   background: var(--studio-mist);
 }
 
@@ -140,8 +139,7 @@
 
 @media (max-width: 899px) {
   .studio-intro,
-  .studio-reimagined,
-  .studio-future {
+  .studio-reimagined {
     padding-block: 5.7rem;
   }
 
@@ -174,18 +172,5 @@
 @media (max-width: 640px) {
   .studio-intro h2 {
     font-size: clamp(2.9rem, 14vw, 4.9rem);
-  }
-
-  .studio-figure {
-    width: calc(100% + 3rem);
-    margin-left: -1.5rem;
-  }
-
-  .studio-figure figcaption {
-    padding-inline: 1.5rem;
-  }
-
-  .studio-reimagined-figure img {
-    aspect-ratio: 1 / 1;
   }
 }

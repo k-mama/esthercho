@@ -126,21 +126,6 @@ body:has(.home-video-hero, .page-cover-shell)
   }
 }
 
-/* The author profile should end as a colophon, not a quote card. */
-.esther-closing {
-  gap: 0.8rem;
-}
-
-.esther-closing > p:last-child,
-.esther-page-ko .esther-closing > p:last-child {
-  max-width: 46rem;
-  color: #5f6971;
-  font-family: var(--font-editorial);
-  font-size: clamp(1rem, 1.35vw, 1.12rem);
-  line-height: 1.8;
-  letter-spacing: 0;
-}
-
 .site-footer {
   margin: 0;
   padding: clamp(3.5rem, 7vw, 6.5rem) 0;

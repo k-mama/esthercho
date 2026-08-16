@@ -239,23 +239,22 @@
   display: grid;
   justify-items: start;
   gap: 1.4rem;
-  padding-top: clamp(7rem, 12vw, 11rem);
-  padding-bottom: clamp(7rem, 12vw, 11rem);
   background: var(--esther-mist);
 }
 
+/* A quiet author colophon, not a quote-card ending. */
 .esther-closing > p:last-child {
-  max-width: 23ch;
+  max-width: 46rem;
   margin: 0;
-  color: var(--esther-navy);
+  color: #5f6971;
   font-family: var(--font-editorial);
-  font-size: clamp(2.2rem, 4.6vw, 4.9rem);
-  line-height: 1.05;
-  letter-spacing: -0.03em;
+  font-size: clamp(1rem, 1.35vw, 1.12rem);
+  line-height: 1.8;
+  letter-spacing: 0;
 }
 
 .esther-page-ko .esther-closing > p:last-child {
-  line-height: 1.35;
+  line-height: 1.9;
 }
 
 @media (min-width: 900px) {
@@ -289,8 +288,7 @@
 
 @media (max-width: 899px) {
   .esther-hero,
-  .esther-section,
-  .esther-closing {
+  .esther-section {
     padding-top: 5.8rem;
     padding-bottom: 5.8rem;
   }
@@ -302,17 +300,6 @@
   .esther-home-copy-only,
   .esther-making-copy-only {
     min-height: auto;
-  }
-
-  .esther-portrait-figure,
-  .esther-service-figure {
-    width: calc(100% + 3rem);
-    margin-left: -1.5rem;
-  }
-
-  .esther-portrait-figure figcaption,
-  .esther-service-figure figcaption {
-    padding-inline: 1.5rem;
   }
 
   .esther-timeline li {
