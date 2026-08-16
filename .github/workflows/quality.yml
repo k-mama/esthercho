@@ -36,6 +36,14 @@ jobs:
       - name: CSS file architecture guard
         run: npm run guard:css-files
 
+      - name: Cho Sungyeon romanization guard
+        run: |
+          if grep -Rni --include='*.ts' --include='*.tsx' --include='*.mdx' --include='*.json' 'Seongyeon' src; then
+            echo 'Deprecated author romanization found in website source. Use Cho Sungyeon.'
+            exit 1
+          fi
+          echo 'Cho Sungyeon romanization guard passed'
+
       - name: Upload census report
         uses: actions/upload-artifact@v5
         with:
