@@ -30,6 +30,9 @@ jobs:
       - name: Sprint 0 census
         run: npm run audit:census
 
+      - name: CSS important guard
+        run: npm run guard:css-important
+
       - name: Upload census report
         uses: actions/upload-artifact@v4
         with:
