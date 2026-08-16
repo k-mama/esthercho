@@ -1,0 +1,32 @@
+{
+  "capturedAt": "2026-08-16",
+  "policy": "Existing non-module CSS is grandfathered during migration. New *.module.css files are allowed. New non-module CSS files require an explicit architecture decision and baseline update.",
+  "allowedNonModuleCss": [
+    "src/app/about/about.css",
+    "src/app/archive/archive-luminous.css",
+    "src/app/archive/archive.css",
+    "src/app/notes/notes.css",
+    "src/app/stories/my-father-dreamed-of-a-tiger/story-detail.css",
+    "src/app/stories/stories.css",
+    "src/app/studio/studio.css",
+    "src/components/page-cover.css",
+    "src/components/section-placeholder.css",
+    "src/styles/desktop-subnav-hover.css",
+    "src/styles/global.css",
+    "src/styles/home-geometry-contrast.css",
+    "src/styles/home-mobile-studio-fix.css",
+    "src/styles/home-shell-polish.css",
+    "src/styles/home-video-lock.css",
+    "src/styles/interface-finish.css",
+    "src/styles/korean.css",
+    "src/styles/mobile-menu-glass.css",
+    "src/styles/mobile-room-balance.css",
+    "src/styles/mobile-room-rhythm.css",
+    "src/styles/remaining-room-interiors.css",
+    "src/styles/room-exits.css",
+    "src/styles/room-interiors.css",
+    "src/styles/room-photo-composition.css",
+    "src/styles/shell-redteam.css",
+    "src/styles/tokens.css"
+  ]
+}
