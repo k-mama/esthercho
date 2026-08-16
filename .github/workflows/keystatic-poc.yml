@@ -1,0 +1,69 @@
+name: Keystatic CMS PoC
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - poc/keystatic-app/**
+      - .github/workflows/keystatic-poc.yml
+
+permissions:
+  contents: read
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    defaults:
+      run:
+        working-directory: poc/keystatic-app
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version-file: .node-version
+          cache: npm
+          cache-dependency-path: poc/keystatic-app/package.json
+
+      - name: Install isolated admin dependencies
+        run: npm install --no-package-lock
+
+      - name: Build Keystatic admin app
+        run: npm run build
+
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Start Keystatic admin app
+        run: |
+          npm run start -- -p 4182 > /tmp/keystatic-poc-server.log 2>&1 &
+          echo $! > /tmp/keystatic-poc-server.pid
+          for i in {1..45}; do
+            if curl --silent --fail http://127.0.0.1:4182/keystatic > /dev/null; then
+              exit 0
+            fi
+            sleep 1
+          done
+          cat /tmp/keystatic-poc-server.log
+          exit 1
+
+      - name: Smoke-test Story editor
+        env:
+          KEYSTATIC_POC_URL: http://127.0.0.1:4182/keystatic
+        run: node scripts/smoke.mjs
+
+      - name: Upload PoC evidence
+        if: always()
+        uses: actions/upload-artifact@v5
+        with:
+          name: keystatic-cms-poc-${{ github.sha }}
+          path: poc/keystatic-app/.reports/
+          retention-days: 30
+          include-hidden-files: true
