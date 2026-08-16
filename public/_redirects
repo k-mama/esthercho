@@ -1,9 +1,14 @@
-# Stable home entry points for Cloudflare Pages.
-/ /home/ 302
-/index.html /home/ 302
-/ko /ko/home/ 302
-/ko/ /ko/home/ 302
-/ko/index.html /ko/home/ 302
+# Canonical home entry points for Cloudflare Pages.
+/index.html / 301
+/home / 301
+/home/ / 301
+/home/index.html / 301
+
+/ko /ko/ 301
+/ko/index.html /ko/ 301
+/ko/home /ko/ 301
+/ko/home/ /ko/ 301
+/ko/home/index.html /ko/ 301
 
 # Legacy Esther Cho routes kept for old bookmarks, browser history, and shared links.
 /childhood /archive/ 301
