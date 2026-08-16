@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { PageCover } from "@/components/page-cover";
 import "./notes.css";
+import "./notes-polish.css";
 
 export const metadata: Metadata = {
   title: "The Morning Table",
