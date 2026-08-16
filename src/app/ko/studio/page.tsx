@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { PageCover } from "@/components/page-cover";
 import "../../studio/studio.css";
-import "../../studio/studio-polish.css";
 
 export const metadata: Metadata = {
   title: "손으로 그린 이야기",

@@ -1,0 +1,181 @@
+.root {
+  --curation-glass: rgba(255, 255, 255, 0.32);
+  --curation-line: rgba(34, 60, 79, 0.15);
+}
+
+/* ABOUT — a salon rather than a CV page. */
+.root :global(.esther-hero-copy),
+.root :global(.esther-making-copy-only .esther-copy),
+.root :global(.studio-work-copy),
+.root :global(.stories-feature-copy) {
+  position: relative;
+}
+
+.root :global(.esther-hero-copy)::before,
+.root :global(.esther-making-copy-only .esther-copy)::before,
+.root :global(.studio-work-copy)::before,
+.root :global(.stories-feature-copy)::before {
+  position: absolute;
+  top: -1.8rem;
+  bottom: -1.8rem;
+  left: -2rem;
+  width: 1px;
+  content: "";
+  background: linear-gradient(
+    180deg,
+    transparent,
+    var(--curation-line) 20%,
+    var(--curation-line) 80%,
+    transparent
+  );
+}
+
+/* Light belongs around the photograph; size and crop belong to mobile-room-balance.css. */
+.root :global(.esther-portrait-figure),
+.root :global(.esther-service-figure),
+.root :global(.morning-present-figure),
+.root :global(.studio-reimagined-figure),
+.root :global(.childhood-garden-figure) {
+  position: relative;
+  isolation: isolate;
+  overflow: visible;
+}
+
+.root :global(.esther-portrait-figure)::before,
+.root :global(.esther-service-figure)::before,
+.root :global(.morning-present-figure)::before,
+.root :global(.studio-reimagined-figure)::before {
+  position: absolute;
+  inset: -6% -5%;
+  z-index: -1;
+  content: "";
+  border-radius: 36px;
+  background:
+    radial-gradient(circle at 28% 18%, rgba(255, 236, 214, 0.34), transparent 34%),
+    radial-gradient(circle at 78% 82%, rgba(193, 220, 237, 0.28), transparent 38%);
+  filter: blur(25px);
+  opacity: 0.78;
+  pointer-events: none;
+}
+
+.root :global(.childhood-garden-figure)::before {
+  position: absolute;
+  inset: -8% -7%;
+  z-index: -1;
+  content: "";
+  border-radius: 38px;
+  background:
+    radial-gradient(circle at 30% 22%, rgba(255, 233, 205, 0.34), transparent 38%),
+    radial-gradient(circle at 82% 76%, rgba(204, 220, 199, 0.28), transparent 42%);
+  filter: blur(28px);
+  pointer-events: none;
+}
+
+.root :global(.esther-home-copy-only .esther-copy),
+.root :global(.morning-manuscript-copy) {
+  padding: clamp(1.7rem, 3.5vw, 2.8rem);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 24px;
+  background: var(--curation-glass);
+  box-shadow:
+    0 22px 56px rgba(30, 51, 68, 0.065),
+    inset 0 1px rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(11px);
+}
+
+.root :global(.morning-manuscript-copy) {
+  border-color: rgba(255, 255, 255, 0.09);
+  background: rgba(255, 255, 255, 0.045);
+  box-shadow:
+    0 24px 58px rgba(4, 18, 31, 0.1),
+    inset 0 1px rgba(255, 255, 255, 0.08);
+}
+
+/* ARCHIVE — album depth without a scrapbook frame. */
+.root :global(.childhood-principle-inner) {
+  position: relative;
+}
+
+.root :global(.childhood-principle-inner)::before {
+  position: absolute;
+  top: -1.4rem;
+  bottom: -1.4rem;
+  left: calc(38% + 1rem);
+  width: 1px;
+  content: "";
+  background: linear-gradient(
+    180deg,
+    transparent,
+    rgba(68, 64, 58, 0.13) 22%,
+    rgba(68, 64, 58, 0.13) 78%,
+    transparent
+  );
+}
+
+/* STORIES — let the existing editorial rules do the work. */
+.root :global(.stories-chapter-list li) {
+  padding: 0.9rem 1rem;
+  border-left: 1px solid rgba(21, 51, 77, 0.13);
+  border-radius: 0 18px 18px 0;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.22), transparent 78%);
+}
+
+.root :global(.stories-happiness blockquote) {
+  text-shadow: 0 10px 34px rgba(31, 55, 72, 0.055);
+}
+
+/* STUDIO — the work itself is the object; remove the old paper frame. */
+.root :global(.studio-reimagined-figure) {
+  width: min(100%, 760px);
+  justify-self: end;
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
+  transform: none;
+}
+
+.root :global(.studio-reimagined-figure figcaption) {
+  max-width: 620px;
+  margin-top: 1rem;
+}
+
+@media (max-width: 899px) {
+  .root :global(.esther-hero-copy)::before,
+  .root :global(.esther-making-copy-only .esther-copy)::before,
+  .root :global(.studio-work-copy)::before,
+  .root :global(.stories-feature-copy)::before {
+    left: -1.05rem;
+  }
+
+  .root :global(.studio-reimagined-figure) {
+    justify-self: center;
+  }
+
+  .root :global(.childhood-principle-inner)::before {
+    display: none;
+  }
+
+  .root :global(.stories-chapter-list li) {
+    border-radius: 0 16px 16px 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .root :global(.esther-hero-copy)::before,
+  .root :global(.esther-making-copy-only .esther-copy)::before,
+  .root :global(.studio-work-copy)::before,
+  .root :global(.stories-feature-copy)::before {
+    left: -0.72rem;
+  }
+
+  .root :global(.esther-home-copy-only .esther-copy),
+  .root :global(.morning-manuscript-copy) {
+    padding: 1.5rem 1.35rem;
+    border-radius: 18px;
+  }
+
+  .root :global(.stories-chapter-list li) {
+    padding: 0.82rem 0.88rem;
+    border-radius: 0 14px 14px 0;
+  }
+}

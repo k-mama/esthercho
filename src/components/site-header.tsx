@@ -42,16 +42,32 @@ function normalizePath(pathname: string) {
     : pathname;
 }
 
+function getParentRoom(pathname: string) {
+  const segments = pathname.split("/").filter(Boolean);
+  return segments.length > 0 ? `/${segments[0]}` : "/home";
+}
+
 function getLanguageHref(pathname: string, isKorean: boolean) {
   const normalized = normalizePath(pathname);
 
   if (isKorean) {
-    const englishRoom = normalized.replace(/^\/ko/, "") || "/home";
-    return mirroredRooms.has(englishRoom) ? `${englishRoom}/` : "/home/";
+    const englishPath = normalized.replace(/^\/ko/, "") || "/home";
+
+    if (mirroredRooms.has(englishPath)) {
+      return `${englishPath}/`;
+    }
+
+    const parentRoom = getParentRoom(englishPath);
+    return mirroredRooms.has(parentRoom) ? `${parentRoom}/` : "/home/";
   }
 
-  return mirroredRooms.has(normalized)
-    ? `/ko${normalized}/`
+  if (mirroredRooms.has(normalized)) {
+    return `/ko${normalized}/`;
+  }
+
+  const parentRoom = getParentRoom(normalized);
+  return mirroredRooms.has(parentRoom)
+    ? `/ko${parentRoom}/`
     : "/ko/home/";
 }
 

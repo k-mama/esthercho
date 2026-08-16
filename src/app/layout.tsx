@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import { siteConfig } from "@/config/site";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { RoomThreshold } from "@/components/room-threshold";
 import { DocumentLanguage } from "@/components/document-language";
+import houseStyles from "./house-curation.module.css";
 import "@/styles/tokens.css";
 import "@/styles/global.css";
 import "@/styles/korean.css";
@@ -66,7 +68,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang={siteConfig.language}>
-      <body>
+      <body className={houseStyles.root}>
         <DocumentLanguage />
         <a href="#main-content" className="skip-link">
           Skip to main content
@@ -75,6 +77,7 @@ export default function RootLayout({
         <div id="main-content" tabIndex={-1}>
           {children}
         </div>
+        <RoomThreshold />
         <SiteFooter />
       </body>
     </html>

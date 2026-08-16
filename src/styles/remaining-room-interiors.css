@@ -1,5 +1,6 @@
 /* Final inner-room palette pass for Stories, Books, and Morning Table.
-   No botanical motifs, no crack-like lines, no pink/lilac atmosphere. */
+   The house keeps one cool architectural base, with warmer lived-in light in the
+   morning and memory rooms. Final-room backgrounds belong to room-exits.css. */
 
 /* -------------------------------------------------------------------------- */
 /* MORNING TABLE — the brightest lived-in room                                */
@@ -29,8 +30,10 @@
 
 .morning-foyer {
   background:
-    radial-gradient(circle at 86% 18%, rgba(195, 217, 233, 0.76), transparent 38%),
-    linear-gradient(135deg, #faf7f0 0%, #f3f5f5 55%, #eaf1f5 100%) !important;
+    radial-gradient(circle at 10% 14%, rgba(255, 224, 201, 0.52), transparent 34%),
+    radial-gradient(circle at 82% 17%, rgba(202, 225, 240, 0.48), transparent 38%),
+    radial-gradient(circle at 72% 88%, rgba(247, 215, 224, 0.34), transparent 34%),
+    linear-gradient(135deg, #fbf7ef 0%, #f6f5f1 50%, #eaf2f6 100%) !important;
 }
 
 .morning-foyer::before {
@@ -38,15 +41,17 @@
   left: -24% !important;
   right: auto !important;
   width: min(68vw, 1040px) !important;
-  background: linear-gradient(145deg, rgba(187, 207, 222, 0.7), rgba(229, 235, 239, 0.16)) !important;
+  background: linear-gradient(145deg, rgba(246, 211, 188, 0.48), rgba(196, 220, 236, 0.24)) !important;
   border-radius: 50% !important;
   opacity: 0.82;
 }
 
 .morning-present {
   background:
-    radial-gradient(circle at 88% 20%, rgba(197, 219, 235, 0.78), transparent 36%),
-    linear-gradient(140deg, #f8f5ee 0%, #eef3f6 60%, #e5edf3 100%) !important;
+    radial-gradient(circle at 12% 20%, rgba(255, 221, 196, 0.54), transparent 35%),
+    radial-gradient(circle at 88% 18%, rgba(195, 220, 237, 0.66), transparent 36%),
+    radial-gradient(circle at 83% 86%, rgba(247, 216, 226, 0.32), transparent 32%),
+    linear-gradient(140deg, #faf6ee 0%, #f3f4f3 56%, #e7f0f5 100%) !important;
 }
 
 .morning-present::before {
@@ -57,7 +62,7 @@
   width: min(58vw, 880px) !important;
   height: min(78vw, 1040px) !important;
   aspect-ratio: auto !important;
-  background: linear-gradient(165deg, rgba(175, 203, 225, 0.42), rgba(231, 236, 239, 0.08)) !important;
+  background: linear-gradient(165deg, rgba(244, 203, 177, 0.34), rgba(184, 211, 230, 0.22)) !important;
   border-radius: 999px !important;
   transform: rotate(12deg);
 }
@@ -73,42 +78,39 @@
 
 .morning-manuscript {
   background:
-    radial-gradient(circle at 82% 18%, rgba(99, 145, 181, 0.28), transparent 34%),
-    linear-gradient(145deg, #14324c 0%, #1b405e 58%, #2b5069 100%) !important;
+    radial-gradient(circle at 13% 15%, rgba(114, 165, 197, 0.28), transparent 34%),
+    radial-gradient(circle at 87% 20%, rgba(188, 151, 196, 0.17), transparent 32%),
+    radial-gradient(circle at 77% 90%, rgba(110, 181, 185, 0.14), transparent 34%),
+    linear-gradient(145deg, #122e48 0%, #1b405c 57%, #284f67 100%) !important;
 }
 
 .morning-manuscript::before {
   top: -30% !important;
   right: -18% !important;
   width: min(62vw, 940px) !important;
-  background: rgba(132, 168, 195, 0.18) !important;
+  background: rgba(180, 155, 197, 0.14) !important;
   border-radius: 50% !important;
 }
 
-.morning-close {
-  background:
-    radial-gradient(circle at 84% 22%, rgba(187, 213, 232, 0.82), transparent 36%),
-    linear-gradient(138deg, #edf2f5 0%, #f8f5ee 60%, #e4edf3 100%) !important;
-}
-
+/* room-exits.css owns the Morning Table closing background; this layer only adds its ambient shape. */
 .morning-close::before {
   right: -22% !important;
   bottom: -46% !important;
   top: auto !important;
   width: min(66vw, 980px) !important;
-  background: rgba(169, 199, 220, 0.34) !important;
+  background: rgba(214, 190, 218, 0.24) !important;
   border-radius: 50% !important;
 }
 
 /* -------------------------------------------------------------------------- */
-/* STORIES — cool editorial gallery                                            */
+/* STORIES — a warm memory salon with cool daylight                           */
 /* -------------------------------------------------------------------------- */
 
 .stories-page {
   --stories-ivory: #f8f5ee;
-  --stories-cream: #f1f3f4;
-  --stories-parchment: #e7edf1;
-  --stories-mist: #e0ebf3;
+  --stories-cream: #f3f1ed;
+  --stories-parchment: #eee7e2;
+  --stories-mist: #e3edf3;
   --stories-night: #14324c;
   --stories-night-soft: #31536b;
   background: #f8f5ee !important;
@@ -116,8 +118,10 @@
 
 .stories-intro {
   background:
-    radial-gradient(circle at 86% 18%, rgba(195, 217, 233, 0.74), transparent 36%),
-    linear-gradient(135deg, #faf7f0 0%, #f3f5f5 56%, #eaf1f5 100%) !important;
+    radial-gradient(circle at 10% 18%, rgba(247, 215, 197, 0.38), transparent 31%),
+    radial-gradient(circle at 84% 18%, rgba(195, 217, 233, 0.68), transparent 36%),
+    radial-gradient(circle at 72% 88%, rgba(241, 216, 224, 0.32), transparent 32%),
+    linear-gradient(135deg, #faf7f0 0%, #f5f3f0 54%, #eaf1f5 100%) !important;
 }
 
 .stories-intro::before {
@@ -128,7 +132,7 @@
   aspect-ratio: 1;
   content: "";
   border-radius: 50%;
-  background: linear-gradient(145deg, rgba(187, 207, 222, 0.62), rgba(232, 237, 240, 0.14));
+  background: linear-gradient(145deg, rgba(241, 211, 191, 0.42), rgba(202, 220, 233, 0.18));
 }
 
 .stories-intro-inner,
@@ -147,13 +151,14 @@
 }
 
 .stories-feature {
-  background: #f7f5ef !important;
+  background: #faf5ee !important;
 }
 
 .stories-opening {
   background:
-    radial-gradient(circle at 8% 86%, rgba(209, 222, 231, 0.54), transparent 31%),
-    linear-gradient(135deg, #eef3f6 0%, #f8f5ee 100%) !important;
+    radial-gradient(circle at 10% 84%, rgba(246, 216, 204, 0.4), transparent 32%),
+    radial-gradient(circle at 88% 14%, rgba(199, 221, 235, 0.5), transparent 34%),
+    linear-gradient(135deg, #f3ece8 0%, #f7f4ef 52%, #eaf1f4 100%) !important;
 }
 
 .stories-opening::before {
@@ -164,11 +169,11 @@
   aspect-ratio: 1;
   content: "";
   border-radius: 50%;
-  background: rgba(185, 208, 226, 0.34);
+  background: rgba(230, 201, 211, 0.3);
 }
 
 .stories-house {
-  background: #f4f6f5 !important;
+  background: #eef1e9 !important;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -184,7 +189,8 @@ main[class*="booksPage"] section[class*="projectSection"] {
   isolation: isolate;
   overflow: hidden;
   background:
-    radial-gradient(circle at 88% 16%, rgba(194, 217, 233, 0.76), transparent 36%),
+    radial-gradient(circle at 12% 18%, rgba(237, 215, 190, 0.28), transparent 30%),
+    radial-gradient(circle at 88% 16%, rgba(194, 217, 233, 0.7), transparent 36%),
     linear-gradient(135deg, #faf7f0 0%, #f2f5f5 58%, #e9f0f5 100%) !important;
 }
 
@@ -197,7 +203,7 @@ main[class*="booksPage"] section[class*="projectSection"]::before {
   aspect-ratio: 1;
   content: "";
   border-radius: 50%;
-  background: linear-gradient(145deg, rgba(185, 205, 220, 0.62), rgba(231, 236, 239, 0.14));
+  background: linear-gradient(145deg, rgba(218, 200, 177, 0.34), rgba(202, 220, 232, 0.18));
 }
 
 main[class*="booksPage"] section[class*="projectSection"] > .container,
@@ -214,7 +220,7 @@ main[class*="booksPage"] p[class*="description"] {
 main[class*="booksPage"] section[class*="detailsSection"] {
   background:
     radial-gradient(circle at 90% 12%, rgba(199, 218, 232, 0.68), transparent 34%),
-    linear-gradient(135deg, #e5edf2 0%, #eff3f4 100%) !important;
+    linear-gradient(135deg, #e7edf0 0%, #f2f1ed 100%) !important;
 }
 
 @media (max-width: 899px) {

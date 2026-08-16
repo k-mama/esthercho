@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { PageCover } from "@/components/page-cover";
 import "../../notes/notes.css";
-import "../../notes/notes-polish.css";
 
 export const metadata: Metadata = {
   title: "아침 식탁",
