@@ -4,7 +4,9 @@ import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { RoomThreshold } from "@/components/room-threshold";
 import { DocumentLanguage } from "@/components/document-language";
+import { AccessibilityFinish } from "@/components/accessibility-finish";
 import houseStyles from "./house-curation.module.css";
+import accessibilityStyles from "./accessibility-finish.module.css";
 import "@/styles/tokens.css";
 import "@/styles/global.css";
 import "@/styles/korean.css";
@@ -25,7 +27,7 @@ import "@/styles/interface-finish.css";
 
 const siteUrl = "https://esthercho.pages.dev";
 const socialPreviewImage = "/media/home/esther-house-entry-poster.jpg";
-const faviconUrl = "/favicon-esther-cho.png?v=20260813-1948";
+const faviconUrl = "/favicon-esther-cho.svg";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -68,9 +70,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang={siteConfig.language}>
-      <body className={houseStyles.root}>
+      <body className={`${houseStyles.root} ${accessibilityStyles.root}`}>
         <DocumentLanguage />
-        <a href="#main-content" className="skip-link">
+        <AccessibilityFinish />
+        <a href="#main-content" className="skip-link" lang="en">
           Skip to main content
         </a>
         <SiteHeader />

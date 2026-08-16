@@ -10,7 +10,7 @@ const socialPreviewImage =
   "https://esthercho.pages.dev/media/home/esther-house-entry-poster.jpg?v=20260815-2000";
 
 export const metadata: Metadata = {
-  title: "Esther Cho",
+  title: { absolute: "Esther Cho" },
   description:
     "A house of stories shaped by faith, memory, food, care, and ordinary life.",
   alternates: {

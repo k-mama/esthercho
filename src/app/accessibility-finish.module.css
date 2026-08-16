@@ -1,0 +1,24 @@
+.root :global(.stories-page) {
+  --stories-blue: #4b667e;
+}
+
+.root :global(.stories-feature-number) {
+  color: rgba(21, 51, 77, 0.55);
+}
+
+.root :global(.stories-opening-meta),
+.root :global(.stories-opening-state) {
+  color: #5f6c75;
+}
+
+.root :global(.story-detail-kicker) {
+  color: #4b667e;
+}
+
+.root :global(.story-detail-tags) {
+  color: #6b6965;
+}
+
+.root :global(.story-detail-figure figcaption) {
+  color: #5f6c75;
+}

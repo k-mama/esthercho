@@ -10,7 +10,7 @@ const socialPreviewImage =
   "https://esthercho.pages.dev/media/home/esther-house-entry-poster.jpg?v=20260815-2000";
 
 export const metadata: Metadata = {
-  title: "조성연",
+  title: { absolute: "조성연" },
   description:
     "믿음과 기억, 밥상과 돌봄, 평범한 삶에서 태어난 조성연의 이야기 집.",
   alternates: {

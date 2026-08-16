@@ -60,3 +60,32 @@
     padding-bottom: clamp(0.5rem, 4vw, 4rem);
   }
 }
+
+/* Accessibility bridge: these two declarations use the file's existing
+   !important baseline slack so older finish layers can be corrected without
+   adding another global stylesheet. */
+.childhood-page figure figcaption,
+.esther-page figure figcaption,
+.studio-page figure figcaption,
+.morning-page figure figcaption {
+  color: #5f6c75 !important;
+}
+
+body:has(.home-video-hero) #main-content > main > section:nth-child(2) [class*="eyebrow"],
+body:has(.home-video-hero) #main-content > main > section:nth-child(3) [class*="eyebrow"],
+body:has(.home-video-hero) #main-content > main > section:nth-child(4) [class*="eyebrow"],
+body:has(.home-video-hero) #main-content > main > section:nth-child(5) [class*="eyebrow"],
+body:has(.home-video-hero) #main-content > main > section:nth-child(7) [class*="eyebrow"],
+.esther-hero .esther-eyebrow,
+.esther-education-section .esther-eyebrow,
+.esther-home-section .esther-eyebrow,
+.esther-service-section .esther-eyebrow,
+.esther-closing .esther-eyebrow,
+.esther-year,
+.studio-kicker,
+.morning-foyer .morning-kicker,
+.morning-present .morning-kicker,
+.morning-close .morning-kicker,
+body:has(.story-detail-page) .site-header-nav-desktop .site-header-nav-link:not([aria-current="page"]) {
+  color: #4b667e !important;
+}
