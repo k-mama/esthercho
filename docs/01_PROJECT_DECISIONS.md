@@ -1,6 +1,6 @@
 - Esther Cho is the primary global author name
 - 조성연 is the disclosed Korean real name
-- The official English romanization of 조성연 is `Cho Sungyeon`; do not use `Cho Seongyeon`
+- The official English romanization of 조성연 is `Cho Sungyeon`; use this spelling consistently across public copy and metadata
 - English is the default website language
 - A globe selector will later provide Korean and additional languages
 - The website will contain stories, books, childhood archives, original drawings, AI-reimagined artwork, photographs, audio, and films
