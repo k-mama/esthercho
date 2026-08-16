@@ -1,0 +1,181 @@
+// Sprint-0 Keystatic schema experiment.
+// Stored as .txt so production Next/TypeScript does not resolve Keystatic packages.
+// This is not production configuration.
+
+import { collection, config, fields } from '@keystatic/core';
+
+const publicationOptions = [
+  { label: 'Not started', value: 'not-started' },
+  { label: 'Draft', value: 'draft' },
+  { label: 'Published', value: 'published' },
+  { label: 'Retired', value: 'retired' },
+] as const;
+
+const editorialStateOptions = [
+  { label: 'Recorded memory', value: 'recorded' },
+  { label: 'Developing', value: 'developing' },
+  { label: 'Active', value: 'active' },
+  { label: 'Retired', value: 'retired' },
+] as const;
+
+const datePrecisionOptions = [
+  { label: 'Exact day', value: 'day' },
+  { label: 'Month known', value: 'month' },
+  { label: 'Year known', value: 'year' },
+  { label: 'Approximate year', value: 'approximate-year' },
+  { label: 'Decade only', value: 'decade' },
+  { label: 'Unknown', value: 'unknown' },
+] as const;
+
+const permissionOptions = [
+  { label: "I'm not sure — review first", value: 'review' },
+  { label: 'Cleared for this use', value: 'cleared' },
+  { label: 'Do not publish', value: 'restricted' },
+] as const;
+
+export default config({
+  storage: {
+    kind: 'local',
+  },
+
+  collections: {
+    stories: collection({
+      label: 'Stories',
+      path: 'poc/keystatic/content/stories/*/',
+
+      // Keystatic requires a slug field for the physical entry path.
+      // It must NOT become the semantic Story identity.
+      slugField: 'entryKey',
+
+      schema: {
+        entryKey: fields.slug({
+          name: {
+            label: 'Internal entry key',
+            description:
+              'Physical folder key for this PoC. This is not the immutable Story ID or public URL.',
+          },
+          slug: {
+            label: 'Storage folder',
+            description: 'Technical storage path only.',
+          },
+        }),
+
+        storyId: fields.text({
+          label: 'Story ID',
+          description:
+            'Immutable identity. In production this should be generated automatically outside ordinary author editing.',
+          validation: { isRequired: true },
+        }),
+
+        editorialState: fields.select({
+          label: 'Editorial state',
+          options: editorialStateOptions,
+          defaultValue: 'recorded',
+        }),
+
+        eventYear: fields.integer({
+          label: 'Approximate event year',
+          description: 'Leave blank rather than guessing.',
+        }),
+
+        datePrecision: fields.select({
+          label: 'Date precision',
+          options: datePrecisionOptions,
+          defaultValue: 'unknown',
+        }),
+
+        collections: fields.multiselect({
+          label: 'Collections',
+          options: [
+            { label: 'Morning Table', value: 'morning-table' },
+            { label: 'Childhood', value: 'childhood' },
+            { label: 'Art', value: 'art' },
+            { label: 'Family', value: 'family' },
+            { label: 'Faith', value: 'faith' },
+            { label: 'Service', value: 'service' },
+          ],
+          defaultValue: [],
+        }),
+
+        korean: fields.object(
+          {
+            status: fields.select({
+              label: 'Publication state',
+              options: publicationOptions,
+              defaultValue: 'not-started',
+            }),
+            title: fields.text({ label: 'Korean title' }),
+            publicSlug: fields.text({
+              label: 'Korean public URL slug',
+              description: 'Presentation URL only; not identity.',
+            }),
+            deck: fields.text({ label: 'Korean short introduction', multiline: true }),
+            availabilitySummary: fields.text({
+              label: 'Korean companion summary',
+              description: 'Optional. Not the full Korean original.',
+              multiline: true,
+            }),
+          },
+          { label: 'Korean original' },
+        ),
+
+        english: fields.object(
+          {
+            status: fields.select({
+              label: 'Publication state',
+              options: publicationOptions,
+              defaultValue: 'not-started',
+            }),
+            title: fields.text({ label: 'English title' }),
+            publicSlug: fields.text({
+              label: 'English public URL slug',
+              description: 'Presentation URL only; not identity.',
+            }),
+            deck: fields.text({ label: 'English short introduction', multiline: true }),
+            availabilitySummary: fields.text({
+              label: 'English companion summary',
+              description: 'Optional. Not the full English original.',
+              multiline: true,
+            }),
+          },
+          { label: 'English original' },
+        ),
+
+        photos: fields.array(
+          fields.object({
+            file: fields.image({
+              label: 'Photo',
+              directory: 'poc/keystatic/media',
+              publicPath: '/poc-media/',
+            }),
+            approximateYear: fields.integer({ label: 'Approximate year' }),
+            people: fields.text({ label: 'Who is in this photo?' }),
+            permission: fields.select({
+              label: 'Is publication permission clear?',
+              options: permissionOptions,
+              defaultValue: 'review',
+            }),
+            captionKo: fields.text({ label: 'Korean caption' }),
+            captionEn: fields.text({ label: 'English caption' }),
+          }),
+          {
+            label: 'Story photos',
+            itemLabel: (props) => props.fields.file.value?.filename ?? 'Photo',
+          },
+        ),
+
+        // Two separate long-form fields let one entry own both originals while
+        // Keystatic can store the content separately from index metadata.
+        bodyKo: fields.mdx({
+          label: 'Korean Story',
+          extension: 'md',
+        }),
+
+        bodyEn: fields.mdx({
+          label: 'English Story',
+          extension: 'md',
+        }),
+      },
+    }),
+  },
+});
