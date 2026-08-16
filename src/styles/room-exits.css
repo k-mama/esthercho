@@ -42,11 +42,13 @@
   max-width: 34rem;
 }
 
-/* Stories leaves on a human sentence, not a card. */
+/* Stories leaves on a human sentence, with the same warm/cool light used in the room. */
 .stories-happiness {
   background:
-    radial-gradient(circle at 84% 18%, rgba(190, 214, 231, 0.78), transparent 36%),
-    linear-gradient(135deg, #f8f5ee 0%, #f0f4f6 58%, #e5edf3 100%) !important;
+    radial-gradient(circle at 8% 18%, rgba(247, 214, 197, 0.38), transparent 31%),
+    radial-gradient(circle at 84% 18%, rgba(190, 214, 231, 0.76), transparent 36%),
+    radial-gradient(circle at 76% 90%, rgba(226, 215, 242, 0.32), transparent 30%),
+    linear-gradient(135deg, #faf7ef 0%, #f1f4f5 58%, #e6edf2 100%) !important;
 }
 
 .stories-happiness-grid {
@@ -61,11 +63,13 @@
   color: #5f6971 !important;
 }
 
-/* Morning Table exits in the brightest cool ivory of the house. */
+/* Morning Table exits in warm breakfast light fading into cool morning air. */
 .morning-close {
   background:
-    radial-gradient(circle at 82% 18%, rgba(188, 214, 232, 0.84), transparent 37%),
-    linear-gradient(138deg, #f8f5ee 0%, #eef3f6 60%, #e2ebf2 100%) !important;
+    radial-gradient(circle at 12% 18%, rgba(255, 218, 198, 0.5), transparent 34%),
+    radial-gradient(circle at 84% 22%, rgba(188, 216, 234, 0.72), transparent 36%),
+    radial-gradient(circle at 77% 88%, rgba(229, 216, 246, 0.44), transparent 34%),
+    linear-gradient(138deg, #f8f3eb 0%, #f5f4f1 55%, #e6eef3 100%) !important;
 }
 
 /* Archive and studio keep their existing large shapes but gain more breathing room. */
