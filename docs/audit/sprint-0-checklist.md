@@ -9,25 +9,25 @@ Production visual behavior is frozen during this sprint. Sprint 0 may add docume
 ### Required before refactor
 
 - [x] Architecture Constitution v1.0 ratified and committed.
-- [ ] Route inventory complete, including language, index state, redirect/canonical state, and `stable | will-change` intent.
+- [x] Route inventory complete, including language, redirect/canonical state, `stable | will-change` intent, and explicit `unknown` where external index state cannot be proven from repository/public search evidence.
 - [ ] CSS override/dependency map complete.
 - [x] Structural visual baseline complete at agreed viewports.
 - [x] Performance baseline complete.
 - [x] Accessibility baseline complete.
-- [ ] Design prohibitions and visual invariants extracted into an audit-readable document.
-- [ ] Component-boundary draft complete.
-- [ ] Guardrails prevent new override-debt global CSS and new `!important` debt.
+- [x] Design prohibitions and visual invariants extracted into an audit-readable document.
+- [x] Component-boundary draft complete.
+- [x] Guardrails prevent new unapproved non-module CSS and new/increased `!important` debt.
 
 ### Required before content migration
 
-- [ ] Content census complete: number of stories, books, collections, language variants, and current publication states.
-- [ ] Asset census complete: file path, type, bytes, dimensions where available, duplicate hash, current usage, and whether an archive master is known.
-- [ ] Existing/public/indexed URL inventory complete.
-- [ ] URL and redirect policy draft complete.
-- [ ] Story semantic schema draft complete.
-- [ ] Media semantic schema draft complete.
-- [ ] Consent/review policy draft complete.
-- [ ] Ownership and succession inventory complete or unresolved items explicitly recorded.
+- [x] Content census complete: number of stories, books, collections, language variants, and current publication states.
+- [x] Asset census baseline complete: file path, type, bytes, dimensions, duplicate hash, current source references, and known/unknown archive-master state. Unknown durable masters remain explicitly unresolved rather than guessed.
+- [x] Existing/public/indexed URL inventory complete to the evidence currently available; repository-public URLs are inventoried and external search-index status is explicitly `unknown` without first-party Search Console evidence.
+- [x] URL and redirect policy draft complete.
+- [x] Story semantic schema draft complete.
+- [x] Media semantic schema draft complete.
+- [x] Consent/review policy draft complete.
+- [x] Ownership and succession inventory complete with human-confirmation gaps explicitly recorded and no credentials committed.
 - [ ] Sveltia CMS proof of concept completed.
 - [ ] Keystatic proof of concept completed.
 - [ ] CMS decision recorded by ADR after Esther publishing test.
@@ -49,7 +49,7 @@ Production visual behavior is frozen during this sprint. Sprint 0 may add docume
 2. No new ad-hoc global CSS layer.
 3. No new `!important` declaration.
 4. Do not delete existing CSS merely because it looks obsolete until its actual route impact is known.
-5. Do not change public URLs until URL inventory and redirect policy are complete.
+5. Do not change public URLs until URL inventory and redirect policy are complete and the implementation gate is explicitly opened.
 6. Do not select a CMS before both proof-of-concepts are tested against the same real publishing task.
 7. Do not add archival media without recording its provenance/review state during the audit period.
 8. Findings may be documented immediately; production fixes wait unless they are security, data-loss, broken-navigation, or critical accessibility defects.
@@ -91,16 +91,32 @@ Production visual behavior is frozen during this sprint. Sprint 0 may add docume
 - Missing production static references: 0 after narrow Story path repair.
 - 29 CSS files under `src`.
 - 17 root global CSS layers.
-- 651 existing `!important` declarations; CI currently prevents that baseline from increasing.
+- 651 existing `!important` declarations; CI prevents that baseline from increasing.
+- CI also prevents new unapproved non-module CSS files while allowing future co-located `*.module.css` files.
+
+## Architecture/content documents completed in Sprint 0
+
+- `docs/architecture/constitution-v1.md`
+- `docs/architecture/component-boundaries.md`
+- `docs/architecture/ownership-succession.md`
+- `docs/design-principles/visual-invariants.md`
+- `docs/content-model/url-policy.md`
+- `docs/content-model/story-schema.md`
+- `docs/content-model/media-schema.md`
+- `docs/media-policy/consent-policy.md`
+- `docs/audit/content-census.md`
+- `docs/audit/media-provenance-inventory.md`
 
 ## Current audit observations
 
-- The project already has healthy build gates: dependency audit, lint, and production build.
-- The global CSS import stack contains multiple historical refinement/override layers; this is an audit target, not yet a deletion target.
+- The project has healthy build gates: dependency audit, lint, production build, repository census, CSS `!important` ratchet, and non-module CSS architecture guard.
+- The global CSS import stack contains multiple historical refinement/override layers; a full selector/dependency ownership map is the remaining pre-refactor audit task.
 - The current navigation data separates primary navigation and room links, while the mobile header manually assumes the first primary item is STORIES. This is a known S1 architecture target, not a Sprint 0 visual fix.
-- The sitemap and Cloudflare root redirects currently require reconciliation: the sitemap includes `/` and `/ko/`, while `_redirects` sends those entries to `/home/` and `/ko/home/`. Record first; decide canonical policy before changing either file.
+- The sitemap and Cloudflare root redirects currently require reconciliation: the sitemap includes `/` and `/ko/`, while `_redirects` sends those entries to `/home/` and `/ko/home/`. A URL-policy draft now proposes named HOME routes as canonical candidates, but production implementation remains gated.
 - Exact duplicate delivery assets remain, including duplicated BOOKS cover PNGs, duplicated silver wordmarks, and the favicon/apple-icon binary. They are inventory findings, not automatic deletion instructions.
 - The public delivery tree is not currently dominated by ultra-high-resolution photographs; measured performance debt is more strongly associated with inefficiently heavy shell/brand assets and route-specific delivery behavior.
+- Durable Archive Master locations remain a human-confirmation gap. Repository manifests preserve useful source filenames/collections but do not prove preservation storage.
+- Sveltia and Keystatic remain PoC candidates; neither is selected. Official current documentation shows Sveltia's non-technical GitHub OAuth flow still needs an authenticator service, while Keystatic's deployed Next admin requires server-side/API-route capability that does not fit the current pure static public app without a separate runtime.
 
 ## Review cadence
 
