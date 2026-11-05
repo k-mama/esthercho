@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { BookLaunch } from "@/components/book-launch";
 import { PageCover } from "@/components/page-cover";
 import { featuredBook } from "@/content/books";
 import styles from "./books.module.css";
 
 export const metadata: Metadata = {
   title: "Beyond the Garden",
-  description: "Books and works in progress by Esther Cho.",
+  description:
+    "Discover Big Dreams in Every Color, a picture book by Sung Yeon Cho, alongside other books and works in progress.",
 };
 
 const facts = [
@@ -30,6 +32,8 @@ export default function BooksPage() {
         align="right"
         shade="soft"
       />
+
+      <BookLaunch locale="en" placement="books" />
 
       <section className={styles.projectSection} aria-labelledby="featured-book-title">
         <div className={`container ${styles.projectHeader}`}>

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { BookLaunch } from "@/components/book-launch";
 import { HomeHeroVideo } from "../home-hero-video";
 import styles from "../page.module.css";
 import polish from "../home-polish.module.css";
@@ -96,6 +97,8 @@ export default function KoreanHome() {
           </nav>
         </div>
       </section>
+
+      <BookLaunch locale="ko" placement="home" />
 
       <section className={`${styles.scene} ${styles.tableScene} ${polish.table}`} aria-labelledby="table-title">
         <div className={`container ${styles.sceneGrid}`}>

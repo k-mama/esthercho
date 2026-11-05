@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { BookLaunch } from "@/components/book-launch";
 import { PageCover } from "@/components/page-cover";
 import { featuredBook } from "@/content/books";
 import styles from "../../books/books.module.css";
 
 export const metadata: Metadata = {
   title: "정원 너머",
-  description: "조성연의 책과 출간을 준비 중인 작업.",
+  description: "조성연의 신간 그림책 Big Dreams in Every Color와 집필 중인 작품을 소개합니다.",
 };
 
 const facts = [
@@ -30,6 +31,8 @@ export default function KoreanBooksPage() {
         align="right"
         shade="soft"
       />
+
+      <BookLaunch locale="ko" placement="books" />
 
       <section className={styles.projectSection} aria-labelledby="featured-book-title">
         <div className={`container ${styles.projectHeader}`}>

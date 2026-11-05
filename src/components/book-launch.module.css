@@ -1,0 +1,232 @@
+.launch {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding-block: clamp(4.75rem, 8.5vw, 9rem);
+  color: var(--brand-navy);
+  background: linear-gradient(138deg, #fcf9f2 0%, #f6f4ef 55%, #eaf1f3 100%);
+  border-block: 1px solid rgba(40, 64, 84, 0.07);
+}
+
+.launch::before {
+  position: absolute;
+  z-index: -1;
+  top: -18rem;
+  right: -13rem;
+  width: min(58rem, 90vw);
+  aspect-ratio: 1;
+  content: "";
+  pointer-events: none;
+  background: radial-gradient(circle, rgba(221, 236, 242, 0.65), transparent 68%);
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  align-items: center;
+  gap: clamp(2.5rem, 6vw, 7.5rem);
+}
+
+.copy {
+  max-width: 38rem;
+}
+
+.eyebrow,
+.byline,
+.media figcaption {
+  font-family: var(--font-interface);
+  font-weight: 600;
+  letter-spacing: 0.13em;
+}
+
+.eyebrow {
+  margin: 0 0 1.5rem;
+  color: #627e95;
+  font-size: 0.69rem;
+}
+
+.title {
+  margin: 0;
+  color: var(--brand-navy);
+  font-family: var(--font-editorial);
+  font-size: clamp(3.05rem, 5.5vw, 6rem);
+  font-weight: 400;
+  letter-spacing: -0.055em;
+  line-height: 1.03;
+}
+
+.title span {
+  display: block;
+}
+
+.byline {
+  margin: 1.8rem 0 0;
+  color: #6c7580;
+  font-size: 0.7rem;
+}
+
+.description {
+  max-width: 33rem;
+  margin: 2.2rem 0 0;
+  color: #536473;
+  font-family: var(--font-editorial);
+  font-size: clamp(1.14rem, 1.65vw, 1.37rem);
+  line-height: 1.75;
+  overflow-wrap: break-word;
+  word-break: keep-all;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.3rem 1.8rem;
+  margin-top: 2.6rem;
+}
+
+.buyLink {
+  display: inline-flex;
+  min-height: 3.2rem;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  padding: 0.95rem 1.4rem;
+  color: #fff;
+  background: var(--brand-navy);
+  border: 1px solid var(--brand-navy);
+  border-radius: 2px;
+  font-family: var(--font-interface);
+  font-size: 0.75rem;
+  font-weight: 650;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  transition: background-color 180ms ease, transform 180ms ease;
+}
+
+.buyLink:hover {
+  background: #245070;
+  transform: translateY(-2px);
+}
+
+.moreLink {
+  padding-block: 0.3rem;
+  color: var(--brand-navy);
+  border-bottom: 1px solid rgba(31, 59, 83, 0.45);
+  font-family: var(--font-interface);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.moreLink:hover {
+  border-bottom-color: currentColor;
+}
+
+.buyLink:focus-visible,
+.moreLink:focus-visible {
+  outline: var(--focus-outline-width) solid var(--focus-outline);
+  outline-offset: 5px;
+}
+
+.media {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.88fr);
+  align-items: end;
+  gap: clamp(0.9rem, 2vw, 1.6rem);
+}
+
+.media figure {
+  min-width: 0;
+  margin: 0;
+}
+
+.coverImage,
+.video {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #ede9e2;
+  box-shadow: 0 24px 48px rgba(29, 49, 63, 0.14);
+}
+
+.coverImage {
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  border: 1px solid rgba(41, 60, 77, 0.08);
+}
+
+.video {
+  aspect-ratio: 9 / 16;
+  object-fit: contain;
+  border-radius: 10px;
+  background: #c2dcf0;
+}
+
+.media figcaption {
+  margin-top: 1.05rem;
+  color: #6e8392;
+  font-size: 0.62rem;
+  text-align: center;
+}
+
+@media (max-width: 899px) {
+  .inner {
+    grid-template-columns: 1fr;
+    gap: 3.4rem;
+  }
+
+  .copy {
+    max-width: 42rem;
+  }
+
+  .media {
+    width: min(100%, 40rem);
+    margin-inline: auto;
+  }
+
+  .title {
+    font-size: clamp(3.2rem, 8vw, 5.25rem);
+  }
+}
+
+@media (max-width: 600px) {
+  .launch {
+    padding-block: 4.5rem 5rem;
+  }
+
+  .inner {
+    gap: 2.5rem;
+  }
+
+  .title {
+    font-size: clamp(2.75rem, 11vw, 4.1rem);
+  }
+
+  .description {
+    margin-top: 1.7rem;
+  }
+
+  .actions {
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .media {
+    gap: 0.8rem;
+  }
+
+  .media figcaption {
+    font-size: 0.58rem;
+    letter-spacing: 0.07em;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .buyLink {
+    transition: none;
+  }
+
+  .buyLink:hover {
+    transform: none;
+  }
+}
