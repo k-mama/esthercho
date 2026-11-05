@@ -23,7 +23,7 @@ export default function BooksPage() {
       <PageCover
         eyebrow="BOOKS"
         title="Beyond the Garden"
-        description="Books and works in progress by Esther Cho."
+        description="Picture books and works in progress by Esther Cho."
         image="/media/covers/books-cover-final-20260802.webp"
         mobileImage="/media/covers/books-cover-final-20260802.webp"
         alt="Esther Cho reading an open thick book with a black cover at a softly sunlit table with a blue porcelain mug and purple orchids"
