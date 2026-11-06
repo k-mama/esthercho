@@ -47,6 +47,16 @@ export default function AboutPage() {
               She writes and draws from what she has lived and remembered:
               Christian faith, family, art, meals, and life at home.
             </p>
+
+            <a
+              className="esther-author-link"
+              href="https://www.amazon.com/author/sungyeoncho"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Visit Sung Yeon Cho’s Amazon Author Page
+              <span aria-hidden="true">↗</span>
+            </a>
           </div>
         </header>
 

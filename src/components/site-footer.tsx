@@ -12,11 +12,13 @@ export function SiteFooter() {
         officialSite: "조성연 공식 작가 홈페이지",
         credit: "기획 · 디자인 · 개발 Emma Kwon",
         siteAria: "조성연 작가 홈페이지 정보",
+        amazonAuthor: "아마존 작가 소개 페이지",
       }
     : {
         officialSite: "Official author website",
         credit: "Conceived, designed, and built by Emma Kwon",
         siteAria: "Esther Cho website information",
+        amazonAuthor: "Amazon Author Page",
       };
 
   return (
@@ -28,6 +30,14 @@ export function SiteFooter() {
         >
           <p className="site-footer-name">ESTHER CHO</p>
           <p className="site-footer-description">{copy.officialSite}</p>
+          <a
+            className="site-footer-author-link"
+            href="https://www.amazon.com/author/sungyeoncho"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {copy.amazonAuthor} <span aria-hidden="true">↗</span>
+          </a>
           <p className="site-footer-copyright">© 2026 Esther Cho</p>
         </section>
 

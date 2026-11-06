@@ -46,6 +46,16 @@ export default function KoreanAboutPage() {
               조성연은 살아온 것과 기억나는 것을 쓴다. 기독교 신앙과 가족,
               미술, 식탁과 집에서의 생활이 자주 글과 그림으로 돌아온다.
             </p>
+
+            <a
+              className="esther-author-link"
+              href="https://www.amazon.com/author/sungyeoncho"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              아마존 작가 소개 페이지 보기
+              <span aria-hidden="true">↗</span>
+            </a>
           </div>
         </header>
 

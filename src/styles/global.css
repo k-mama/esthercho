@@ -215,6 +215,29 @@ body {
   line-height: 1.6;
 }
 
+.site-footer-author-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  width: fit-content;
+  margin-top: 0.3rem;
+  color: var(--brand-navy);
+  font-size: 0.78rem;
+  line-height: 1.6;
+  text-decoration: underline;
+  text-decoration-color: rgba(168, 136, 79, 0.6);
+  text-underline-offset: 4px;
+}
+
+.site-footer-author-link:hover {
+  color: var(--brand-gold);
+}
+
+.site-footer-author-link:focus-visible {
+  outline: var(--focus-outline-width) solid var(--focus-outline);
+  outline-offset: 4px;
+}
+
 .site-footer-colophon {
   border-top: 1px solid rgba(168, 136, 79, 0.34);
   padding-top: 1.65rem;
