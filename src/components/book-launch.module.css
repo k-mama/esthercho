@@ -169,6 +169,54 @@
   text-align: center;
 }
 
+.secondTrailer {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(180px, 230px);
+  align-items: center;
+  gap: clamp(2.5rem, 8vw, 7rem);
+  max-width: 920px;
+  margin-top: clamp(4.5rem, 8vw, 7rem);
+  padding-top: clamp(3.5rem, 6vw, 5rem);
+  border-top: 1px solid rgba(40, 64, 84, 0.17);
+}
+
+.secondTrailerCopy {
+  max-width: 29rem;
+}
+
+.secondTrailerCopy h3 {
+  margin: 0;
+  color: var(--brand-navy);
+  font-family: var(--font-editorial);
+  font-size: clamp(2.25rem, 4vw, 3.6rem);
+  font-weight: 400;
+  letter-spacing: -0.045em;
+  line-height: 1.13;
+}
+
+.secondTrailerCopy > p:last-child {
+  margin-top: 1.2rem;
+  color: #536473;
+  font-family: var(--font-editorial);
+  font-size: clamp(1.04rem, 1.5vw, 1.18rem);
+  line-height: 1.75;
+}
+
+.secondTrailerFigure {
+  width: 100%;
+  margin: 0;
+}
+
+.secondTrailerFigure figcaption {
+  margin-top: 1.05rem;
+  color: #6e8392;
+  font-family: var(--font-interface);
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+  text-align: center;
+}
+
 @media (max-width: 899px) {
   .inner {
     grid-template-columns: 1fr;
@@ -218,6 +266,18 @@
   .media figcaption {
     font-size: 0.58rem;
     letter-spacing: 0.07em;
+  }
+
+  .secondTrailer {
+    grid-template-columns: 1fr;
+    gap: 2.4rem;
+    margin-top: 4rem;
+    padding-top: 3.25rem;
+  }
+
+  .secondTrailerFigure {
+    width: min(70%, 230px);
+    margin-inline: auto;
   }
 }
 

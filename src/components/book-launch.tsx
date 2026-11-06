@@ -20,6 +20,12 @@ const copy = {
     coverCaption: "THE BOOK",
     videoLabel: "Watch the 10-second Big Dreams in Every Color book trailer",
     videoCaption: "A 10-SECOND GLIMPSE",
+    secondVideoEyebrow: "ANOTHER 10-SECOND STORY",
+    secondVideoTitle: "Little hearts. Big dreams.",
+    secondVideoDescription:
+      "A little boy imagines becoming a brave black dog. Sometimes the impossible dreams are the ones we remember.",
+    secondVideoLabel: "Watch Little Hearts, Big Dreams, a second 10-second picture book trailer",
+    secondVideoCaption: "LITTLE HEARTS · BIG DREAMS",
     fallback: "Your browser does not support video playback.",
   },
   ko: {
@@ -33,6 +39,12 @@ const copy = {
     coverCaption: "책 표지",
     videoLabel: "Big Dreams in Every Color 그림책 10초 홍보영상",
     videoCaption: "10초 홍보영상",
+    secondVideoEyebrow: "또 하나의 10초 이야기",
+    secondVideoTitle: "작은 마음, 커다란 꿈.",
+    secondVideoDescription:
+      "커다란 검은 강아지가 되고 싶다는 아이의 꿈. 이루어질 수 없어도 오래 기억하고 싶은 상상입니다.",
+    secondVideoLabel: "작은 마음, 커다란 꿈 — Big Dreams in Every Color 두 번째 10초 홍보영상",
+    secondVideoCaption: "작은 마음 · 커다란 꿈",
     fallback: "이 브라우저에서는 영상을 재생할 수 없습니다.",
   },
 } as const;
@@ -105,6 +117,31 @@ export function BookLaunch({ locale, placement }: { locale: Locale; placement: P
             <figcaption>{content.videoCaption}</figcaption>
           </figure>
         </div>
+      </div>
+
+      <div className={`container ${styles.secondTrailer}`}>
+        <div className={styles.secondTrailerCopy}>
+          <p className={styles.eyebrow}>{content.secondVideoEyebrow}</p>
+          <h3>{content.secondVideoTitle}</h3>
+          <p>{content.secondVideoDescription}</p>
+        </div>
+
+        <figure className={styles.secondTrailerFigure}>
+          <video
+            className={styles.video}
+            controls
+            playsInline
+            preload="none"
+            poster={`${assetBase}/birdsong-poster.webp`}
+            aria-label={content.secondVideoLabel}
+            width={720}
+            height={1280}
+          >
+            <source src={`${assetBase}/birdsong.mp4`} type="video/mp4" />
+            {content.fallback}
+          </video>
+          <figcaption>{content.secondVideoCaption}</figcaption>
+        </figure>
       </div>
     </section>
   );
