@@ -17,9 +17,15 @@ const copy = {
     buy: "Buy on Amazon",
     explore: "Discover the book",
     coverAlt: "Front cover of Big Dreams in Every Color by Sung Yeon Cho",
-    coverCaption: "THE BOOK",
+    coverCaption: "FRONT COVER",
+    backCoverAlt: "Back cover artwork showing a black dog in a red cape and the book barcode",
+    backCoverCaption: "BACK COVER",
+    firstVideoEyebrow: "A 10-SECOND GLIMPSE",
+    firstVideoTitle: "A little world of wonder.",
+    firstVideoDescription:
+      "Step into Big Dreams in Every Color, where a child's imagination makes room for the impossible.",
     videoLabel: "Watch the 10-second Big Dreams in Every Color book trailer",
-    videoCaption: "A 10-SECOND GLIMPSE",
+    videoCaption: "BIG DREAMS IN EVERY COLOR",
     secondVideoEyebrow: "ANOTHER 10-SECOND STORY",
     secondVideoTitle: "Little hearts. Big dreams.",
     secondVideoDescription:
@@ -36,9 +42,15 @@ const copy = {
     buy: "아마존에서 구매하기",
     explore: "책 자세히 보기",
     coverAlt: "조성연 작가의 그림책 Big Dreams in Every Color 앞표지",
-    coverCaption: "책 표지",
+    coverCaption: "앞표지",
+    backCoverAlt: "빨간 망토를 두른 검은 강아지와 바코드가 그려진 그림책 뒷표지",
+    backCoverCaption: "뒷표지",
+    firstVideoEyebrow: "첫 번째 10초 이야기",
+    firstVideoTitle: "상상이 피어나는 작은 세상.",
+    firstVideoDescription:
+      "무엇이든 꿈꿀 수 있는 아이들의 세계. Big Dreams in Every Color를 10초 동안 만나보세요.",
     videoLabel: "Big Dreams in Every Color 그림책 10초 홍보영상",
-    videoCaption: "10초 홍보영상",
+    videoCaption: "BIG DREAMS IN EVERY COLOR",
     secondVideoEyebrow: "또 하나의 10초 이야기",
     secondVideoTitle: "작은 마음, 커다란 꿈.",
     secondVideoDescription:
@@ -100,7 +112,30 @@ export function BookLaunch({ locale, placement }: { locale: Locale; placement: P
             />
             <figcaption>{content.coverCaption}</figcaption>
           </figure>
-          <figure className={styles.videoFigure}>
+
+          <figure className={styles.coverFigure}>
+            <Image
+              src={`${assetBase}/back-cover.webp`}
+              alt={content.backCoverAlt}
+              width={1000}
+              height={1501}
+              sizes="(max-width: 600px) 43vw, (max-width: 899px) 38vw, 22vw"
+              className={styles.coverImage}
+            />
+            <figcaption>{content.backCoverCaption}</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div className={`container ${styles.trailers}`}>
+        <div className={styles.trailerRow}>
+          <div className={styles.trailerCopy}>
+            <p className={styles.eyebrow}>{content.firstVideoEyebrow}</p>
+            <h3>{content.firstVideoTitle}</h3>
+            <p>{content.firstVideoDescription}</p>
+          </div>
+
+          <figure className={styles.trailerFigure}>
             <video
               className={styles.video}
               controls
@@ -117,31 +152,31 @@ export function BookLaunch({ locale, placement }: { locale: Locale; placement: P
             <figcaption>{content.videoCaption}</figcaption>
           </figure>
         </div>
-      </div>
 
-      <div className={`container ${styles.secondTrailer}`}>
-        <div className={styles.secondTrailerCopy}>
-          <p className={styles.eyebrow}>{content.secondVideoEyebrow}</p>
-          <h3>{content.secondVideoTitle}</h3>
-          <p>{content.secondVideoDescription}</p>
+        <div className={styles.trailerRow}>
+          <div className={styles.trailerCopy}>
+            <p className={styles.eyebrow}>{content.secondVideoEyebrow}</p>
+            <h3>{content.secondVideoTitle}</h3>
+            <p>{content.secondVideoDescription}</p>
+          </div>
+
+          <figure className={styles.trailerFigure}>
+            <video
+              className={styles.video}
+              controls
+              playsInline
+              preload="none"
+              poster={`${assetBase}/birdsong-poster.webp`}
+              aria-label={content.secondVideoLabel}
+              width={720}
+              height={1280}
+            >
+              <source src={`${assetBase}/birdsong.mp4`} type="video/mp4" />
+              {content.fallback}
+            </video>
+            <figcaption>{content.secondVideoCaption}</figcaption>
+          </figure>
         </div>
-
-        <figure className={styles.secondTrailerFigure}>
-          <video
-            className={styles.video}
-            controls
-            playsInline
-            preload="none"
-            poster={`${assetBase}/birdsong-poster.webp`}
-            aria-label={content.secondVideoLabel}
-            width={720}
-            height={1280}
-          >
-            <source src={`${assetBase}/birdsong.mp4`} type="video/mp4" />
-            {content.fallback}
-          </video>
-          <figcaption>{content.secondVideoCaption}</figcaption>
-        </figure>
       </div>
     </section>
   );
