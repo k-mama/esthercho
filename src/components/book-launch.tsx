@@ -32,6 +32,12 @@ const copy = {
       "A little boy imagines becoming a brave black dog. Sometimes the impossible dreams are the ones we remember.",
     secondVideoLabel: "Watch Little Hearts, Big Dreams, a second 10-second picture book trailer",
     secondVideoCaption: "LITTLE HEARTS · BIG DREAMS",
+    thirdVideoEyebrow: "A 16-SECOND LITTLE ADVENTURE",
+    thirdVideoTitle: "Around the world. Home for dinner.",
+    thirdVideoDescription:
+      "A yellow car, one very big plan, and a child's wonderfully simple idea of adventure.",
+    thirdVideoLabel: "Watch the yellow car adventure from Big Dreams in Every Color",
+    thirdVideoCaption: "THE YELLOW CAR · BIG DREAMS IN EVERY COLOR",
     fallback: "Your browser does not support video playback.",
   },
   ko: {
@@ -57,6 +63,12 @@ const copy = {
       "커다란 검은 강아지가 되고 싶다는 아이의 꿈. 이루어질 수 없어도 오래 기억하고 싶은 상상입니다.",
     secondVideoLabel: "작은 마음, 커다란 꿈 — Big Dreams in Every Color 두 번째 10초 홍보영상",
     secondVideoCaption: "작은 마음 · 커다란 꿈",
+    thirdVideoEyebrow: "16초의 작은 모험",
+    thirdVideoTitle: "세계를 한 바퀴 돌고, 저녁엔 집으로.",
+    thirdVideoDescription:
+      "노란 자동차를 타고 떠나는 아이의 커다란 계획. 상상 속에서는 어디든 갈 수 있으니까요.",
+    thirdVideoLabel: "Big Dreams in Every Color 노란 자동차 모험 영상",
+    thirdVideoCaption: "노란 자동차 · 커다란 꿈",
     fallback: "이 브라우저에서는 영상을 재생할 수 없습니다.",
   },
 } as const;
@@ -175,6 +187,31 @@ export function BookLaunch({ locale, placement }: { locale: Locale; placement: P
               {content.fallback}
             </video>
             <figcaption>{content.secondVideoCaption}</figcaption>
+          </figure>
+        </div>
+
+        <div className={styles.trailerRow}>
+          <div className={styles.trailerCopy}>
+            <p className={styles.eyebrow}>{content.thirdVideoEyebrow}</p>
+            <h3>{content.thirdVideoTitle}</h3>
+            <p>{content.thirdVideoDescription}</p>
+          </div>
+
+          <figure className={styles.trailerFigure}>
+            <video
+              className={styles.video}
+              controls
+              playsInline
+              preload="none"
+              poster={`${assetBase}/yellow-car-poster.webp`}
+              aria-label={content.thirdVideoLabel}
+              width={720}
+              height={1280}
+            >
+              <source src={`${assetBase}/yellow-car.mp4`} type="video/mp4" />
+              {content.fallback}
+            </video>
+            <figcaption>{content.thirdVideoCaption}</figcaption>
           </figure>
         </div>
       </div>
