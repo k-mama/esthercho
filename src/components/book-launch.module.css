@@ -304,3 +304,99 @@
     transform: none;
   }
 }
+
+
+/* German paperback edition — a restrained companion to the English hero. */
+.editionNote {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.45rem 0.85rem;
+  margin-top: 1.6rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid rgba(40, 64, 84, 0.16);
+  font-family: var(--font-interface);
+  font-size: 0.82rem;
+  line-height: 1.65;
+}
+
+.editionNote > span {
+  color: #647b88;
+  font-weight: 500;
+}
+
+.editionNote a {
+  color: var(--brand-navy);
+  font-weight: 650;
+  text-decoration: underline;
+  text-underline-offset: 0.25rem;
+  text-decoration-color: rgba(31, 59, 83, 0.38);
+}
+
+.editionNote a:hover { text-decoration-color: currentColor; }
+.editionNote a:focus-visible { outline: var(--focus-outline-width) solid var(--focus-outline); outline-offset: 4px; }
+
+.editionCard {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(150px, 230px);
+  align-items: center;
+  gap: clamp(2rem, 7vw, 6rem);
+  max-width: 920px;
+  margin-top: clamp(3rem, 6vw, 5rem);
+  padding-top: clamp(3rem, 5vw, 4.2rem);
+  border-top: 1px solid rgba(40, 64, 84, 0.17);
+  scroll-margin-top: 6rem;
+}
+
+.editionText h3 {
+  margin: 0;
+  color: var(--brand-navy);
+  font-family: var(--font-editorial);
+  font-size: clamp(2rem, 3.5vw, 3.25rem);
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 1.12;
+}
+
+.editionDescription {
+  max-width: 35rem;
+  margin: 1.4rem 0 0;
+  color: #536473;
+  font-family: var(--font-editorial);
+  font-size: clamp(1.04rem, 1.5vw, 1.18rem);
+  line-height: 1.7;
+}
+
+.editionMeta {
+  margin: 1.2rem 0 1.6rem;
+  color: #627e95;
+  font-family: var(--font-interface);
+  font-size: 0.73rem;
+  letter-spacing: 0.04em;
+}
+
+.editionFigure { width: 100%; max-width: 230px; margin: 0; }
+.editionCover {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 5 / 8;
+  object-fit: contain;
+  background: #faf8f3;
+  border: 1px solid rgba(41, 60, 77, 0.08);
+  box-shadow: 0 24px 48px rgba(29, 49, 63, 0.14);
+}
+.editionFigure figcaption {
+  margin-top: 1.05rem;
+  color: #6e8392;
+  font-family: var(--font-interface);
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .editionCard { grid-template-columns: 1fr; gap: 2rem; }
+  .editionFigure { width: min(60%, 230px); margin-inline: auto; }
+}

@@ -6,6 +6,9 @@ type Locale = "en" | "ko";
 type Placement = "home" | "books";
 
 const amazonUrl = "https://www.amazon.com/dp/B0HQ9Z7SRD";
+const germanPaperbackUrl = "https://www.amazon.de/dp/B0HRS6F2MH";
+// Main product photograph from the verified Amazon.de paperback listing.
+const germanCoverUrl = "https://m.media-amazon.com/images/I/61IlRaRs5SL._SL1499_.jpg";
 const assetBase = "/media/books/big-dreams";
 
 const copy = {
@@ -38,6 +41,14 @@ const copy = {
       "A yellow car, one very big plan, and a child's wonderfully simple idea of adventure.",
     thirdVideoLabel: "Watch the yellow car adventure from Big Dreams in Every Color",
     thirdVideoCaption: "THE YELLOW CAR · BIG DREAMS IN EVERY COLOR",
+    germanEyebrow: "GERMAN EDITION · PAPERBACK AVAILABLE",
+    germanTitle: "Große Träume in allen Farben",
+    germanDescription: "The same world of little dreams, now in German. A gentle picture book to read aloud, give as a gift, and keep close at bedtime.",
+    germanMeta: "German · 32 pages · Paperback",
+    germanBuy: "Buy the German paperback",
+    germanHomeLabel: "Also available in German",
+    germanCoverAlt: "Front cover of Große Träume in allen Farben, the German paperback by Sung Yeon Cho",
+    germanCoverCaption: "GERMAN EDITION",
     fallback: "Your browser does not support video playback.",
   },
   ko: {
@@ -69,6 +80,14 @@ const copy = {
       "노란 자동차를 타고 떠나는 아이의 커다란 계획. 상상 속에서는 어디든 갈 수 있으니까요.",
     thirdVideoLabel: "Big Dreams in Every Color 노란 자동차 모험 영상",
     thirdVideoCaption: "노란 자동차 · 커다란 꿈",
+    germanEyebrow: "독일어판 · 종이책 출간",
+    germanTitle: "Große Träume in allen Farben",
+    germanDescription: "아이들의 작은 꿈을 담은 같은 이야기를 이제 독일어로도 만날 수 있습니다. 잠자리에서 함께 읽고, 소중한 사람에게 선물할 수 있는 그림책입니다.",
+    germanMeta: "독일어 · 32페이지 · 종이책",
+    germanBuy: "독일어 종이책 아마존에서 구매하기",
+    germanHomeLabel: "독일어판도 출간되었습니다",
+    germanCoverAlt: "조성연 작가의 독일어 종이책 Große Träume in allen Farben 앞표지",
+    germanCoverCaption: "독일어판 앞표지",
     fallback: "이 브라우저에서는 영상을 재생할 수 없습니다.",
   },
 } as const;
@@ -110,6 +129,14 @@ export function BookLaunch({ locale, placement }: { locale: Locale; placement: P
               </Link>
             )}
           </div>
+          {placement === "home" && (
+            <p className={styles.editionNote}>
+              <span>{content.germanHomeLabel}</span>
+              <Link href={locale === "ko" ? "/ko/books/#german-edition" : "/books/#german-edition"}>
+                {content.germanTitle} <span aria-hidden="true">↗</span>
+              </Link>
+            </p>
+          )}
         </div>
 
         <div className={styles.media}>
@@ -138,6 +165,37 @@ export function BookLaunch({ locale, placement }: { locale: Locale; placement: P
           </figure>
         </div>
       </div>
+
+      {placement === "books" && (
+        <div className={`container ${styles.editionCard}`} id="german-edition">
+          <div className={styles.editionText}>
+            <p className={styles.eyebrow}>{content.germanEyebrow}</p>
+            <h3>{content.germanTitle}</h3>
+            <p className={styles.editionDescription}>{content.germanDescription}</p>
+            <p className={styles.editionMeta}>{content.germanMeta}</p>
+            <a
+              className={styles.buyLink}
+              href={germanPaperbackUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {content.germanBuy} <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+          <figure className={styles.editionFigure}>
+            <Image
+              src={germanCoverUrl}
+              alt={content.germanCoverAlt}
+              width={1280}
+              height={2048}
+              sizes="(max-width: 600px) 55vw, 220px"
+              unoptimized
+              className={styles.editionCover}
+            />
+            <figcaption>{content.germanCoverCaption}</figcaption>
+          </figure>
+        </div>
+      )}
 
       <div className={`container ${styles.trailers}`}>
         <div className={styles.trailerRow}>
