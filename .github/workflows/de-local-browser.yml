@@ -12,7 +12,9 @@ on:
       - src/i18n/path.ts
       - src/i18n/translations/types.ts
       - src/app/de/stories/**
-      - .github/workflows/it-local-browser.yml
+      - .github/workflows/de-local-browser.yml
+      - scripts/audit-integrated-release.mjs
+      - scripts/patch-localized-html-lang.mjs
   workflow_dispatch:
 
 permissions:
