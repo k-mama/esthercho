@@ -1,9 +1,14 @@
 import type { Metadata } from "next";
+import { alternatesFor } from "@/i18n/locales";
 import Link from "next/link";
 import { PageCover } from "@/components/page-cover";
 import "./stories.css";
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://esthercho.pages.dev/stories/",
+    languages: { ...alternatesFor("stories"), "x-default": "https://esthercho.pages.dev/stories/" },
+  },
   title: "Stories",
   description:
     "Stories by Esther Cho, drawn from childhood, family, faith, and the details she remembers.",

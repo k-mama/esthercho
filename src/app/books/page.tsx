@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { alternatesFor } from "@/i18n/locales";
 import Link from "next/link";
 import { BookLaunch } from "@/components/book-launch";
 import { MannaMaking } from "@/components/manna-making";
@@ -7,6 +8,10 @@ import { featuredBook } from "@/content/books";
 import styles from "./books.module.css";
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://esthercho.pages.dev/books/",
+    languages: { ...alternatesFor("books"), "x-default": "https://esthercho.pages.dev/books/" },
+  },
   title: "Beyond the Garden",
   description:
     "Discover Big Dreams in Every Color, a picture book by Sung Yeon Cho, alongside other books and works in progress.",

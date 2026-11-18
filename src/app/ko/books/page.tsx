@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { alternatesFor } from "@/i18n/locales";
 import Link from "next/link";
 import { BookLaunch } from "@/components/book-launch";
 import { MannaMaking } from "@/components/manna-making";
@@ -7,6 +8,10 @@ import { featuredBook } from "@/content/books";
 import styles from "../../books/books.module.css";
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://esthercho.pages.dev/ko/books/",
+    languages: { ...alternatesFor("books"), "x-default": "https://esthercho.pages.dev/books/" },
+  },
   title: "정원 너머",
   description: "조성연의 신간 그림책 Big Dreams in Every Color와 집필 중인 작품을 소개합니다.",
 };

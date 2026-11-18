@@ -1,9 +1,14 @@
 import type { Metadata } from "next";
+import { alternatesFor } from "@/i18n/locales";
 import Link from "next/link";
 import { PageCover } from "@/components/page-cover";
 import "../../stories/stories.css";
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://esthercho.pages.dev/ko/stories/",
+    languages: { ...alternatesFor("stories"), "x-default": "https://esthercho.pages.dev/stories/" },
+  },
   title: "이야기",
   description:
     "어린 시절과 가족, 믿음과 지금의 생활에서 돌아온 조성연 작가의 이야기.",
