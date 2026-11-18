@@ -6,7 +6,7 @@ const siteUrl = "https://esthercho.pages.dev";
 const mainRoutes: (RoomKey | undefined)[] = [
   undefined, "about", "archive", "books", "notes", "stories", "studio",
 ];
-const bilingualStoryRoutes = [
+const multilingualStoryRoutes = [
   "/stories/my-father-dreamed-of-a-tiger/",
   "/stories/the-youngest-daughter-in-every-house/",
 ] as const;
@@ -27,13 +27,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
   });
   return [
     ...localizedEntries,
-    ...bilingualStoryRoutes.flatMap((route) => {
+    ...multilingualStoryRoutes.flatMap((route) => {
       const en = `${siteUrl}${route}`;
       const pt = `${siteUrl}/pt-br${route}`;
-      const languages = { en, "pt-BR": pt, "x-default": en };
+      const es = `${siteUrl}/es${route}`;
+      const languages = { en, "pt-BR": pt, es, "x-default": en };
       return [
         { url: en, alternates: { languages } },
         { url: pt, alternates: { languages } },
+        { url: es, alternates: { languages } },
       ];
     }),
   ];

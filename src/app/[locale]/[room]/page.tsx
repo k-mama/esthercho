@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       type: "website",
       url,
-      locale: locale === "pt-br" ? "pt_BR" : undefined,
+      locale: locale === "pt-br" ? "pt_BR" : locale === "es" ? "es_419" : undefined,
       title: room === "about" ? t.title : `${t.title} · Esther Cho`,
       description: t.subtitle,
       images: ["/media/home/esther-house-entry-poster.jpg"],
