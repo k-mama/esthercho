@@ -302,10 +302,12 @@ function Books({ locale }: { locale: NewLocale }) {
         <p>{b.childrenDescription}</p>
         <a className={styles.inlineLink} href="https://www.amazon.com/dp/B0HQ9Z7SRD" target="_blank" rel="noopener noreferrer">{t.ui.englishPaperback} ↗</a>
       </ContentSection>
-      <ContentSection label={b.germanKicker} title="Große Träume in allen Farben" image="https://m.media-amazon.com/images/I/61IlRaRs5SL._SL1499_.jpg" imageWidth={1280} imageHeight={2048} imageAlt={altText(locale, "coverGerman", "Original cover of the German edition Große Träume in allen Farben")}>
-        <p>{b.germanDescription}</p>
-        <a className={styles.inlineLink} href="https://www.amazon.de/dp/B0HRS6F2MH" target="_blank" rel="noopener noreferrer">{t.ui.germanPaperback} ↗</a>
-      </ContentSection>
+      {locale !== "de" ? (
+        <ContentSection label={b.germanKicker} title="Große Träume in allen Farben" image="https://m.media-amazon.com/images/I/61IlRaRs5SL._SL1499_.jpg" imageWidth={1280} imageHeight={2048} imageAlt={altText(locale, "coverGerman", "Original cover of the German edition Große Träume in allen Farben")}>
+          <p>{b.germanDescription}</p>
+          <a className={styles.inlineLink} href="https://www.amazon.de/dp/B0HRS6F2MH" target="_blank" rel="noopener noreferrer">{t.ui.germanPaperback} ↗</a>
+        </ContentSection>
+      ) : null}
       <section className={styles.videos}>
         <div className="container">
           <p className={styles.eyebrow}>{b.filmKicker}</p>
