@@ -41,7 +41,7 @@ export default function ItalianYoungestDaughterPage() {
         <article className="story-detail-copy">
           <p className="story-detail-opening">A casa ero la figlia maggiore.</p>
           <p>
-            Mio padre era il primogenito della sua famiglia e io ero la sua prima figlia,
+            Mio padre era il primogenito della sua famiglia e io ero la sua primogenita,
             la prima nipote. Poi nacquero i miei due fratellini, a un anno di distanza l’uno dall’altro.
           </p>
           <p>
@@ -67,7 +67,7 @@ export default function ItalianYoungestDaughterPage() {
           </p>
           <p>
             Quando mia madre aveva ancora bisogno di una mano, mi fermavo anche
-            da una zia più grande o da una più giovane.
+            da una zia più anziana o da una più giovane.
             Cambiava l’indirizzo. Non il mio posto in casa.
             Anche lì diventavo la più piccola.
           </p>
