@@ -15,6 +15,7 @@ export const metadata: Metadata = {
       es: "https://esthercho.pages.dev/es/stories/the-youngest-daughter-in-every-house/",
       fr: "https://esthercho.pages.dev/fr/stories/the-youngest-daughter-in-every-house/",
       it: "https://esthercho.pages.dev/it/stories/the-youngest-daughter-in-every-house/",
+      ja: "https://esthercho.pages.dev/ja/stories/the-youngest-daughter-in-every-house/",
       "x-default": "https://esthercho.pages.dev/stories/the-youngest-daughter-in-every-house/",
     },
   },

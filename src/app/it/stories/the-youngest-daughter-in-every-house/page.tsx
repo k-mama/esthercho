@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   description: "A casa Esther era la figlia maggiore. Nelle case dei parenti diventava la più piccola.",
   alternates: {
     canonical: url,
-    languages: { en: original, "pt-BR": portuguese, es: spanish, fr: french, it: url, "x-default": original },
+    languages: { en: original, "pt-BR": portuguese, es: spanish, fr: french, it: url, ja: "https://esthercho.pages.dev/ja/stories/the-youngest-daughter-in-every-house/", "x-default": original },
   },
   openGraph: {
     type: "article", url, locale: "it_IT",
