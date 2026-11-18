@@ -4,7 +4,7 @@ import { readFile, writeFile, readdir } from "node:fs/promises";
 import { join } from "node:path";
 
 const locales = {
-  "de": "de", "pt-br": "pt-BR", "es": "es",
+  "ko": "ko", "de": "de", "pt-br": "pt-BR", "es": "es",
   "fr": "fr", "it": "it", "ja": "ja",
 };
 const root = "out";
@@ -26,7 +26,7 @@ for (const [locale, lang] of Object.entries(locales)) {
   }
   await visit(join(root, locale));
 }
-if (rewritten < 42) {
-  throw Error(`Expected at least 42 localized HTML pages, got ${rewritten}`);
+if (rewritten !== 61) {
+  throw Error(`Expected 61 localized HTML pages (7 Korean + 6×9 languages), got ${rewritten}`);
 }
 console.log(`Localized HTML lang attributes verified: ${rewritten} pages`);
