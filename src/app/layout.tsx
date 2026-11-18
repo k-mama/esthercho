@@ -9,6 +9,7 @@ import { AccessibilityFinish } from "@/components/accessibility-finish";
 import houseStyles from "./house-curation.module.css";
 import accessibilityStyles from "./accessibility-finish.module.css";
 import "@/styles/tokens.css";
+import "@/styles/japanese.css";
 import "@/styles/global.css";
 import "@/styles/korean.css";
 import "@/styles/shell-redteam.css";
