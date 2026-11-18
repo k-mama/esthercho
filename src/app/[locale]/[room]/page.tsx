@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const t = localizedWebsiteContent[locale][room];
   const url = `https://esthercho.pages.dev/${locale}/${room}/`;
   return {
-    title: `${t.title} · Esther Cho`,
+    title: room === "about" ? t.title : `${t.title} · Esther Cho`,
     description: t.subtitle,
     alternates: {
       canonical: url,
@@ -25,7 +25,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       type: "website",
       url,
-      title: `${t.title} · Esther Cho`,
+      locale: locale === "pt-br" ? "pt_BR" : undefined,
+      title: room === "about" ? t.title : `${t.title} · Esther Cho`,
       description: t.subtitle,
       images: ["/media/home/esther-house-entry-poster.jpg"],
     },
