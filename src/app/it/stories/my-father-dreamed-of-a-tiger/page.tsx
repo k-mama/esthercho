@@ -38,7 +38,7 @@ export default function ItalianTigerDreamPage() {
       <section className="container story-detail-grid">
         <article className="story-detail-copy">
           <p className="story-detail-opening">Prima che nascessi, mio padre sognò una tigre.</p>
-          <p>La bambina che arrivò era una femmina.</p>
+          <p>Nacque una bambina.</p>
           <blockquote>«Dev’essere stato un gatto.»</blockquote>
           <p>
             Per ora, Esther ha annotato soltanto questo frammento.
