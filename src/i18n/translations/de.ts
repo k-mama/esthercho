@@ -22,7 +22,7 @@ export const de: LocalizedCopy = {
     bookEyebrow: "NEUES BILDERBUCH · JETZT ERHÄLTLICH",
     bookTitle: "Big Dreams in Every Color",
     bookBody: "Ein großer schwarzer Hund, weiches grünes Gras, ein gelbes Auto, das Meer und ein orangefarbener Sonnenuntergang. Fünf Kinder lassen ihrer Fantasie freien Lauf – bis eine Frage vor dem Einschlafen alle Träume nach Hause bringt.",
-    tableEyebrow: "AM MORGEN TISCH",
+    tableEyebrow: "AM FRÜHSTÜCKSTISCH",
     tableTitle: "Ein gedeckter Tisch erzählt von alltäglicher Fürsorge.",
     tableBody: "Frühstück, Bibel, Essen für die Familie und etwas Selbstgekochtes für Menschen, die Esther liebt: Vieles beginnt am selben Tisch.",
     memoryEyebrow: "ERINNERUNGEN",
