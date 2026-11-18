@@ -221,7 +221,7 @@ function Books({ locale }: { locale: NewLocale }) {
         <p>{b.childrenDescription}</p>
         <a className={styles.inlineLink} href="https://www.amazon.com/dp/B0HQ9Z7SRD" target="_blank" rel="noopener noreferrer">{t.ui.englishPaperback} ↗</a>
       </ContentSection>
-      <ContentSection label={b.germanKicker} title="Große Träume in allen Farben" image="/media/books/big-dreams/back-cover.webp">
+      <ContentSection label={b.germanKicker} title="Große Träume in allen Farben">
         <p>{b.germanDescription}</p>
         <a className={styles.inlineLink} href="https://www.amazon.de/dp/B0HRS6F2MH" target="_blank" rel="noopener noreferrer">{t.ui.germanPaperback} ↗</a>
       </ContentSection>
