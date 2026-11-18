@@ -39,6 +39,7 @@ export const ptBr: LocalizedCopy = {
     englishPaperback: "Livro em inglês na Amazon", germanPaperback: "Livro em alemão na Amazon",
     originalPhotos: "Fotografias da própria Esther Cho", workInProgress: "História registrada",
     viewBook: "Conheça o livro", meetAuthor: "Conheça Esther",
+    buyAmazon: "Comprar a edição em inglês",
   },
   home: {
     kicker: "BOAS-VINDAS À CASA DE ESTHER",
@@ -62,6 +63,23 @@ export const ptBr: LocalizedCopy = {
     studioTitle: "O traço da mão continua ali.",
     studioBody: "O desenho a lápis permanece visível. Mesmo quando uma obra ganha uma nova forma, sua origem continua reconhecível.",
     closingTitle: "Algumas histórias continuam. Outras viram livros.",
+    trailers: [
+      {
+        eyebrow: "UM VÍDEO DE 10 SEGUNDOS",
+        title: "Um pequeno mundo de imaginação.",
+        description: "Em dez segundos, um convite ao mundo onde a imaginação das crianças não conhece limites.",
+      },
+      {
+        eyebrow: "MAIS UMA HISTÓRIA DE 10 SEGUNDOS",
+        title: "Corações pequenos. Sonhos enormes.",
+        description: "Um menino imagina se transformar em um cachorro preto e corajoso. Alguns sonhos ficam com a gente.",
+      },
+      {
+        eyebrow: "UMA AVENTURA DE 16 SEGUNDOS",
+        title: "Volta ao mundo. De volta para o jantar.",
+        description: "Um carro amarelo, um plano gigantesco e um jeito bem simples de imaginar uma aventura.",
+      },
+    ],
   },
   stories: {
     title: "Histórias", subtitle: "Infância, família, fé e as pequenas coisas de que Esther se lembra.",
@@ -74,6 +92,16 @@ export const ptBr: LocalizedCopy = {
     availabilityNote: "Até agora, apenas os dois primeiros relatos estão disponíveis na íntegra, em inglês. Os demais estão registrados por título. As traduções serão publicadas depois da revisão editorial.",
     memoryTitle: "Toda vida também tem uma linha do tempo.",
     memoryBody: "A infância, os anos ao lado do pai, a escola, a arte, a família, a fé e o presente fazem parte da mesma história, mesmo quando as lembranças chegam misturadas.",
+    lifeChapters: [
+      "Infância",
+      "Os anos ao lado do pai",
+      "Depois daquele julho",
+      "Escola e arte",
+      "Quando a família foi crescendo",
+      "O caminho até a escrita",
+      "Uma vida com Deus",
+      "A vida de hoje",
+    ],
     closingTitle: "Acho que coleciono momentos felizes.",
     closingBody: "Também houve tempos difíceis. Ainda assim, muitas vezes é do riso que Esther se lembra primeiro.",
   },
@@ -82,7 +110,7 @@ export const ptBr: LocalizedCopy = {
     childrenKicker: "LIVRO ILUSTRADO · DISPONÍVEL",
     childrenDescription: "Cinco crianças imaginam ser um cachorro, a grama, um carro, o mar ou o pôr do sol. Uma história delicada para ler junto, conversar sobre sonhos e terminar o dia pertinho de quem se ama.",
     germanKicker: "EDIÇÃO EM ALEMÃO · LIVRO IMPRESSO DISPONÍVEL",
-    germanDescription: "Große Träume in allen Farben é a edição alemã do livro ilustrado. Uma história para a hora de dormir, para presentear e para imaginar juntos.",
+    germanDescription: "Große Träume in allen Farben é a edição alemã do livro ilustrado. A versão impressa tem 32 páginas: uma história para ler na hora de dormir, dar de presente e imaginar juntos.",
     filmKicker: "PEQUENOS VÍDEOS", filmHeading: "Três momentos do universo do livro",
     mannaKicker: "MANUSCRITO EM ANDAMENTO",
     mannaTitle: "Manna on the Table",

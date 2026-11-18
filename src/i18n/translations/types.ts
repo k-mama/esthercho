@@ -26,6 +26,7 @@ export interface LocalizedCopy {
     workInProgress: string;
     viewBook: string;
     meetAuthor: string;
+    buyAmazon?: string;
   };
   home: {
     kicker: string;
@@ -49,6 +50,7 @@ export interface LocalizedCopy {
     studioTitle: string;
     studioBody: string;
     closingTitle: string;
+    trailers?: { eyebrow: string; title: string; description: string }[];
   };
   stories: {
     title: string; subtitle: string;
@@ -57,6 +59,7 @@ export interface LocalizedCopy {
     otherTitles: [string, string, string, string, string, string];
     availabilityNote: string;
     memoryTitle: string; memoryBody: string;
+    lifeChapters?: string[];
     closingTitle: string; closingBody: string;
   };
   books: {
