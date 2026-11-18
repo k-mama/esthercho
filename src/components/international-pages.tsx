@@ -125,8 +125,33 @@ export function InternationalHome({ locale }: { locale: NewLocale }) {
 
       <ContentSection label={t.home.bookEyebrow} title={t.home.bookTitle} image="/media/books/big-dreams/cover.webp" imageAlt={altText(locale, "coverEnglish", "Original cover of Big Dreams in Every Color")}>
         <p>{t.home.bookBody}</p>
-        <LinkTo locale={locale} room="books">{t.ui.viewBook}</LinkTo>
+        {t.ui.buyAmazon ? (
+          <a className={styles.inlineLink} href="https://www.amazon.com/dp/B0HQ9Z7SRD" target="_blank" rel="noopener noreferrer">
+            {t.ui.buyAmazon} <span aria-hidden="true">↗</span>
+          </a>
+        ) : null}
+        <span className={styles.actionSpacing}><LinkTo locale={locale} room="books">{t.ui.viewBook}</LinkTo></span>
       </ContentSection>
+      {t.home.trailers ? (
+        <section className={styles.homeTrailers}>
+          <div className="container">
+            <div className={styles.homeTrailerGrid}>
+              {t.home.trailers.map((copy, i) => (
+                <article key={copy.title} className={styles.homeTrailerCard}>
+                  <div>
+                    <p className={styles.eyebrow}>{copy.eyebrow}</p>
+                    <h3>{copy.title}</h3>
+                    <p>{copy.description}</p>
+                  </div>
+                  <video controls playsInline preload="none" poster={trailers[i].poster} aria-label={`${altText(locale, "trailerDescription", copy.title)} ${i + 1}`}>
+                    <source src={trailers[i].video} type="video/mp4" />
+                  </video>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+      ) : null}
       <ContentSection reverse label={t.home.tableEyebrow} title={t.home.tableTitle} image="/media/esther/morning-table.jpg" imageAlt={altText(locale, "breakfastTable", t.home.tableTitle)}>
         <p>{t.home.tableBody}</p>
         <LinkTo locale={locale} room="notes">{t.nav.notes}</LinkTo>
@@ -216,6 +241,19 @@ function Stories({ locale }: { locale: NewLocale }) {
           </ol>
         </div>
       </section>
+      {s.lifeChapters ? (
+        <section className={styles.storyTimeline}>
+          <div className="container">
+            <h2>{s.memoryTitle}</h2>
+            <p>{s.memoryBody}</p>
+            <ol className={styles.storyTimelineList}>
+              {s.lifeChapters.map((chapter, i) => (
+                <li key={chapter}><span>{String(i + 1).padStart(2, "0")}</span>{chapter}</li>
+              ))}
+            </ol>
+          </div>
+        </section>
+      ) : null}
       <ContentSection title={s.memoryTitle} image="/media/esther/childhood-garden.jpg" imageAlt={altText(locale, "childhoodGarden", s.memoryTitle)}><p>{s.memoryBody}</p></ContentSection>
       <ContentSection title={s.closingTitle}><p>{s.closingBody}</p></ContentSection>
     </>
