@@ -3,7 +3,17 @@ import Link from "next/link";
 import { PageCover } from "@/components/page-cover";
 import { translatedPath, roomKeys, type NewLocale, type RoomKey } from "@/i18n/locales";
 import { localizedWebsiteContent } from "@/i18n/translations";
+import type { LocalizedCopy } from "@/i18n/translations";
 import styles from "./international-pages.module.css";
+
+type MediaAltKey = Exclude<keyof NonNullable<LocalizedCopy["mediaAlt"]>, "breakfastPhotos" | "coverStudies">;
+function altText(locale: NewLocale, key: MediaAltKey, fallback: string): string {
+  return localizedWebsiteContent[locale].mediaAlt?.[key] ?? fallback;
+}
+const heroAltKeys = {
+  stories: "storiesHero", books: "booksHero", studio: "studioHero",
+  about: "aboutHero", notes: "notesHero", archive: "archiveHero",
+} as const satisfies Record<RoomKey, MediaAltKey>;
 
 const covers: Record<RoomKey, { desktop: string; mobile?: string; position?: string }> = {
   stories: {
@@ -67,12 +77,12 @@ const trailers = [
   { video: "/media/books/big-dreams/yellow-car.mp4", poster: "/media/books/big-dreams/yellow-car-poster.webp" },
 ];
 
-function PhotoSet({ sources, label }: { sources: readonly string[]; label: string }) {
+function PhotoSet({ sources, label, descriptions }: { sources: readonly string[]; label: string; descriptions?: readonly string[] }) {
   return (
     <div className={styles.photos}>
       {sources.map((src, i) => (
         <figure key={src}>
-          <Image src={src} width={720} height={900} alt={`${label} ${i + 1}`} sizes="(max-width: 620px) 31vw, 28vw" className={styles.photo} />
+          <Image src={src} width={720} height={900} alt={descriptions?.[i] ?? `${label} ${i + 1}`} sizes="(max-width: 620px) 31vw, 28vw" className={styles.photo} />
         </figure>
       ))}
     </div>
@@ -113,23 +123,23 @@ export function InternationalHome({ locale }: { locale: NewLocale }) {
         </div>
       </section>
 
-      <ContentSection label={t.home.bookEyebrow} title={t.home.bookTitle} image="/media/books/big-dreams/cover.webp" imageAlt="Big Dreams in Every Color · original book cover">
+      <ContentSection label={t.home.bookEyebrow} title={t.home.bookTitle} image="/media/books/big-dreams/cover.webp" imageAlt={altText(locale, "coverEnglish", "Original cover of Big Dreams in Every Color")}>
         <p>{t.home.bookBody}</p>
         <LinkTo locale={locale} room="books">{t.ui.viewBook}</LinkTo>
       </ContentSection>
-      <ContentSection reverse label={t.home.tableEyebrow} title={t.home.tableTitle} image="/media/esther/morning-table.jpg">
+      <ContentSection reverse label={t.home.tableEyebrow} title={t.home.tableTitle} image="/media/esther/morning-table.jpg" imageAlt={altText(locale, "breakfastTable", t.home.tableTitle)}>
         <p>{t.home.tableBody}</p>
         <LinkTo locale={locale} room="notes">{t.nav.notes}</LinkTo>
       </ContentSection>
-      <ContentSection label={t.home.memoryEyebrow} title={t.home.memoryTitle} image="/media/esther/childhood-house.jpg">
+      <ContentSection label={t.home.memoryEyebrow} title={t.home.memoryTitle} image="/media/esther/childhood-house.jpg" imageAlt={altText(locale, "childhoodHouse", t.home.memoryTitle)}>
         <p>{t.home.memoryBody}</p>
         <LinkTo locale={locale} room="archive">{t.nav.archive}</LinkTo>
       </ContentSection>
-      <ContentSection reverse label={t.home.careEyebrow} title={t.home.careTitle} image="/media/esther/bangladesh-service.jpg">
+      <ContentSection reverse label={t.home.careEyebrow} title={t.home.careTitle} image="/media/esther/bangladesh-service.jpg" imageAlt={altText(locale, "volunteerPhoto", t.home.careTitle)}>
         <p>{t.home.careBody}</p>
         <LinkTo locale={locale} room="stories">{t.nav.stories}</LinkTo>
       </ContentSection>
-      <ContentSection label={t.home.studioEyebrow} title={t.home.studioTitle} image="/media/esther/still-making-father-child-collage-20260802.png">
+      <ContentSection label={t.home.studioEyebrow} title={t.home.studioTitle} image="/media/esther/still-making-father-child-collage-20260802.png" imageAlt={altText(locale, "childhoodCollage", t.home.studioTitle)}>
         <p>{t.home.studioBody}</p>
         <LinkTo locale={locale} room="studio">{t.nav.studio}</LinkTo>
       </ContentSection>
@@ -155,7 +165,7 @@ export function InternationalRoom({ locale, room }: { locale: NewLocale; room: R
       <PageCover
         eyebrow={t.nav[room]} title={title} description={subtitle}
         image={cover.desktop} mobileImage={cover.mobile}
-        alt={`${t.nav[room]} · Esther Cho`}
+        alt={altText(locale, heroAltKeys[room], `${t.nav[room]} · Esther Cho`)}
         objectPosition={cover.position ?? "center center"} align="left" shade="medium"
       />
       {room === "stories" ? <Stories locale={locale} /> : null}
@@ -206,7 +216,7 @@ function Stories({ locale }: { locale: NewLocale }) {
           </ol>
         </div>
       </section>
-      <ContentSection title={s.memoryTitle} image="/media/esther/childhood-garden.jpg"><p>{s.memoryBody}</p></ContentSection>
+      <ContentSection title={s.memoryTitle} image="/media/esther/childhood-garden.jpg" imageAlt={altText(locale, "childhoodGarden", s.memoryTitle)}><p>{s.memoryBody}</p></ContentSection>
       <ContentSection title={s.closingTitle}><p>{s.closingBody}</p></ContentSection>
     </>
   );
@@ -217,11 +227,11 @@ function Books({ locale }: { locale: NewLocale }) {
   const b = t.books;
   return (
     <>
-      <ContentSection label={b.childrenKicker} title="Big Dreams in Every Color" image="/media/books/big-dreams/cover.webp" imageWidth={1232} imageHeight={1850}>
+      <ContentSection label={b.childrenKicker} title="Big Dreams in Every Color" image="/media/books/big-dreams/cover.webp" imageAlt={altText(locale, "coverEnglish", "Original cover of Big Dreams in Every Color")} imageWidth={1232} imageHeight={1850}>
         <p>{b.childrenDescription}</p>
         <a className={styles.inlineLink} href="https://www.amazon.com/dp/B0HQ9Z7SRD" target="_blank" rel="noopener noreferrer">{t.ui.englishPaperback} ↗</a>
       </ContentSection>
-      <ContentSection label={b.germanKicker} title="Große Träume in allen Farben" image="https://m.media-amazon.com/images/I/61IlRaRs5SL._SL1499_.jpg" imageWidth={1280} imageHeight={2048} imageAlt="Original cover of the published German picture book Große Träume in allen Farben">
+      <ContentSection label={b.germanKicker} title="Große Träume in allen Farben" image="https://m.media-amazon.com/images/I/61IlRaRs5SL._SL1499_.jpg" imageWidth={1280} imageHeight={2048} imageAlt={altText(locale, "coverGerman", "Original cover of the German edition Große Träume in allen Farben")}>
         <p>{b.germanDescription}</p>
         <a className={styles.inlineLink} href="https://www.amazon.de/dp/B0HRS6F2MH" target="_blank" rel="noopener noreferrer">{t.ui.germanPaperback} ↗</a>
       </ContentSection>
@@ -230,15 +240,15 @@ function Books({ locale }: { locale: NewLocale }) {
           <p className={styles.eyebrow}>{b.filmKicker}</p>
           <h2>{b.filmHeading}</h2>
           <div className={styles.videoGrid}>
-            {trailers.map((film) => (
-              <video key={film.video} controls playsInline preload="none" poster={film.poster} aria-label={b.filmHeading}>
+            {trailers.map((film, i) => (
+              <video key={film.video} controls playsInline preload="none" poster={film.poster} aria-label={`${altText(locale, "trailerDescription", b.filmHeading)} ${i+1}`}>
                 <source src={film.video} type="video/mp4" />
               </video>
             ))}
           </div>
         </div>
       </section>
-      <ContentSection label={b.mannaKicker} title={b.mannaTitle} image="/media/esther/morning-table.jpg">
+      <ContentSection label={b.mannaKicker} title={b.mannaTitle} image="/media/esther/morning-table.jpg" imageAlt={altText(locale, "breakfastTable", b.mannaTitle)}>
         <p>{b.mannaIntroduction}</p>
         <p className={styles.finePrint}>{b.authorNote}</p>
       </ContentSection>
@@ -249,10 +259,10 @@ function Books({ locale }: { locale: NewLocale }) {
           <p className={styles.lead}>{b.makingIntro}</p>
           <h3>{b.breakfastHeading}</h3>
           <p>{b.breakfastText}</p>
-          <PhotoSet sources={breakfastPhotos} label={t.ui.originalPhotos} />
+          <PhotoSet sources={breakfastPhotos} label={t.ui.originalPhotos} descriptions={t.mediaAlt?.breakfastPhotos} />
           <h3>{b.coverHeading}</h3>
           <p>{b.coverText}</p>
-          <PhotoSet sources={coverStudies} label={b.coverHeading} />
+          <PhotoSet sources={coverStudies} label={b.coverHeading} descriptions={t.mediaAlt?.coverStudies} />
           <h3>{b.houseHeading}</h3>
           <p>{b.houseText}</p>
           <h3>{b.mannaMeaningHeading}</h3>
@@ -268,7 +278,7 @@ function Studio({ locale }: { locale: NewLocale }) {
   return (
     <>
       <ContentSection title={s.originalHeading}><p>{s.originalText}</p></ContentSection>
-      <ContentSection title={s.laterHeading} image="/media/esther/still-making-father-child-collage-20260802.png">
+      <ContentSection title={s.laterHeading} image="/media/esther/still-making-father-child-collage-20260802.png" imageAlt={altText(locale, "childhoodCollage", s.laterHeading)}>
         <p>{s.laterText}</p><p className={styles.finePrint}>{s.sourceCaption}</p>
       </ContentSection>
       <ContentSection title={s.futureHeading}><p>{s.futureText}</p></ContentSection>
@@ -280,13 +290,22 @@ function About({ locale }: { locale: NewLocale }) {
   const a = t.about;
   return (
     <>
-      <ContentSection title={a.title} image="/media/esther/young-artist.jpg">
+      <ContentSection title={a.title} image="/media/esther/young-artist.jpg" imageAlt={altText(locale, "universityPortrait", a.title)}>
         <p>{a.biography}</p>
         <a className={styles.inlineLink} href="https://www.amazon.com/author/sungyeoncho" target="_blank" rel="noopener noreferrer">{t.ui.meetAuthor} ↗</a>
       </ContentSection>
-      <ContentSection title={a.educationHeading}><p>{a.educationText}</p></ContentSection>
-      <ContentSection title={a.tableHeading} image="/media/esther/morning-table.jpg"><p>{a.tableText}</p></ContentSection>
-      <ContentSection title={a.careHeading} image="/media/esther/bangladesh-service.jpg"><p>{a.careText}</p></ContentSection>
+      <ContentSection title={a.educationHeading}>
+        <p>{a.educationText}</p>
+        {a.educationTimeline ? (
+          <ol className={styles.timeline}>
+            {a.educationTimeline.map((item) => (
+              <li key={item.year}><strong>{item.year}</strong><span>{item.detail}</span></li>
+            ))}
+          </ol>
+        ) : null}
+      </ContentSection>
+      <ContentSection title={a.tableHeading} image="/media/esther/morning-table.jpg" imageAlt={altText(locale, "breakfastTable", a.tableHeading)}><p>{a.tableText}</p></ContentSection>
+      <ContentSection title={a.careHeading} image="/media/esther/bangladesh-service.jpg" imageAlt={altText(locale, "volunteerPhoto", a.careHeading)}><p>{a.careText}</p></ContentSection>
       <ContentSection title={a.makingHeading}><p>{a.makingText}</p></ContentSection>
     </>
   );
@@ -296,7 +315,7 @@ function MorningNotes({ locale }: { locale: NewLocale }) {
   const n = t.notes;
   return (
     <>
-      <ContentSection title={n.tableHeading} image="/media/esther/morning-table.jpg"><p>{n.tableText}</p></ContentSection>
+      <ContentSection title={n.tableHeading} image="/media/esther/morning-table.jpg" imageAlt={altText(locale, "breakfastTable", n.tableHeading)}><p>{n.tableText}</p></ContentSection>
       <ContentSection title={n.everydayHeading}><p>{n.everydayText}</p></ContentSection>
       <ContentSection title={n.bookHeading}><p>{n.bookText}</p><LinkTo locale={locale} room="books">{t.ui.viewBook}</LinkTo></ContentSection>
       <ContentSection title={n.closing}><></></ContentSection>
@@ -307,8 +326,8 @@ function Archive({ locale }: { locale: NewLocale }) {
   const a = localizedWebsiteContent[locale].archive;
   return (
     <>
-      <ContentSection title={a.firstHeading} image="/media/esther/childhood-house.jpg"><p>{a.firstText}</p></ContentSection>
-      <ContentSection title={a.houseHeading} image="/media/esther/childhood-garden.jpg"><p>{a.houseText}</p></ContentSection>
+      <ContentSection title={a.firstHeading} image="/media/esther/childhood-house.jpg" imageAlt={altText(locale, "childhoodHouse", a.firstHeading)}><p>{a.firstText}</p></ContentSection>
+      <ContentSection title={a.houseHeading} image="/media/esther/childhood-garden.jpg" imageAlt={altText(locale, "childhoodGarden", a.houseHeading)}><p>{a.houseText}</p></ContentSection>
       <ContentSection title={a.childHeading}><p>{a.childText}</p></ContentSection>
       <ContentSection title={a.unseenHeading}><p>{a.unseenText}</p></ContentSection>
       <ContentSection title={a.authenticityHeading}><p>{a.authenticityText}</p></ContentSection>
