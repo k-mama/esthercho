@@ -1,6 +1,16 @@
 import type { RoomKey } from "../locales";
 
 export interface LocalizedCopy {
+  mediaAlt?: {
+    storiesHero: string; booksHero: string; studioHero: string;
+    aboutHero: string; notesHero: string; archiveHero: string;
+    coverEnglish: string; coverGerman: string;
+    breakfastTable: string; childhoodHouse: string; childhoodGarden: string;
+    volunteerPhoto: string; childhoodCollage: string; universityPortrait: string;
+    breakfastPhotos: [string, string, string];
+    coverStudies: [string, string, string];
+    trailerDescription: string;
+  };
   nav: Record<RoomKey, string>;
   ui: {
     language: string;
@@ -89,6 +99,7 @@ export interface LocalizedCopy {
     title: string; subtitle: string;
     biography: string;
     educationHeading: string; educationText: string;
+    educationTimeline?: {year: string; detail: string}[];
     tableHeading: string; tableText: string;
     careHeading: string; careText: string;
     makingHeading: string; makingText: string;
