@@ -1,10 +1,15 @@
 import type { Metadata } from "next";
+import { alternatesFor } from "@/i18n/locales";
 import Image from "next/image";
 import Link from "next/link";
 import { PageCover } from "@/components/page-cover";
 import "./archive.css";
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://esthercho.pages.dev/archive/",
+    languages: { ...alternatesFor("archive"), "x-default": "https://esthercho.pages.dev/archive/" },
+  },
   title: "The Childhood Album",
   description:
     "Esther Cho's childhood photographs, remembered places, family traces, and the small things that stayed.",

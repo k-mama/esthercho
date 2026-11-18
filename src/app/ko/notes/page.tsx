@@ -1,10 +1,15 @@
 import type { Metadata } from "next";
+import { alternatesFor } from "@/i18n/locales";
 import Image from "next/image";
 import Link from "next/link";
 import { PageCover } from "@/components/page-cover";
 import "../../notes/notes.css";
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://esthercho.pages.dev/ko/notes/",
+    languages: { ...alternatesFor("notes"), "x-default": "https://esthercho.pages.dev/notes/" },
+  },
   title: "아침 식탁",
   description: "조성연 작가의 아침 식탁에서 태어난 묵상과 기록.",
 };

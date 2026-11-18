@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { alternatesFor } from "@/i18n/locales";
 import Image from "next/image";
 import Link from "next/link";
 import { PageCover } from "@/components/page-cover";
@@ -6,6 +7,10 @@ import "../../archive/archive.css";
 import "../../archive/archive-luminous.css";
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://esthercho.pages.dev/ko/archive/",
+    languages: { ...alternatesFor("archive"), "x-default": "https://esthercho.pages.dev/archive/" },
+  },
   title: "어린 시절 앨범",
   description:
     "조성연 작가의 어린 시절 사진과 기억 속의 장소, 가족의 흔적과 오래 남은 것들.",

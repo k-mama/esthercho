@@ -1,10 +1,15 @@
 import type { Metadata } from "next";
+import { alternatesFor } from "@/i18n/locales";
 import Image from "next/image";
 import Link from "next/link";
 import { PageCover } from "@/components/page-cover";
 import "./notes.css";
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://esthercho.pages.dev/notes/",
+    languages: { ...alternatesFor("notes"), "x-default": "https://esthercho.pages.dev/notes/" },
+  },
   title: "The Morning Table",
   description: "Devotional reflections and notes from Esther Cho's morning table.",
 };
