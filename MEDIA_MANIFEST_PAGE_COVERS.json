@@ -43,10 +43,24 @@
       "height": 1536,
       "bytes": 235730,
       "role": "earlier mobile BOOKS cover derivative"
+    },
+    "stories-real-photo-trial-desktop.webp": {
+      "source": "Author-supplied real portrait efde855a-76e3-4218-985e-c03a3eb89176.jpg (2026-11-18)",
+      "width": 2400,
+      "height": 1350,
+      "role": "Reversible Stories desktop trial, original face and body retained; soft out-of-focus background sourced from same photograph",
+      "processing": "background expansion, positional composition, resize, WebP encoding; no face editing"
+    },
+    "stories-real-photo-trial-mobile.webp": {
+      "source": "Author-supplied real portrait efde855a-76e3-4218-985e-c03a3eb89176.jpg (2026-11-18)",
+      "width": 948,
+      "height": 1536,
+      "role": "Reversible Stories mobile trial, same original photograph",
+      "processing": "WebP encoding only; no face editing"
     }
   },
   "routes": {
-    "/stories/": "stories-cover.webp",
+    "/stories/": "stories-real-photo-trial-desktop.webp",
     "/books/": "books-cover-final-20260802.webp",
     "/archive/": "childhood-cover.jpg",
     "/studio/": "studio-cover.jpg",
@@ -54,7 +68,7 @@
     "/about/": "esther-cover.webp"
   },
   "mobile_routes": {
-    "/stories/": "stories-cover-mobile.webp",
+    "/stories/": "stories-real-photo-trial-mobile.webp",
     "/books/": "books-cover-final-20260802.webp",
     "/archive/": "childhood-cover.jpg",
     "/studio/": "studio-cover.jpg",
@@ -73,8 +87,8 @@
       "transform": "encoding only; no crop; dimensions unchanged",
       "verification": {
         "decoded_rgb_rms": 1.609,
-        "approx_psnr_db": 44.0,
-        "minimum_psnr_db": 40.0
+        "approx_psnr_db": 44,
+        "minimum_psnr_db": 40
       }
     }
   },
