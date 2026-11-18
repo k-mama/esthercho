@@ -57,23 +57,51 @@
       "height": 1536,
       "role": "Reversible Stories mobile trial, same original photograph",
       "processing": "WebP encoding only; no face editing"
+    },
+    "stories-seated-original-20261118-desktop.webp": {
+      "source": "Author supplied first image 3b758837-a2e6-4c5d-a267-e52dd78b2fe5.jpg",
+      "width": 2400,
+      "height": 1350,
+      "role": "Stories EN/KO hero",
+      "processing": "Original portrait kept unretouched and complete, side background gently softened from the same photograph for 16:9 layout"
+    },
+    "stories-seated-original-20261118-mobile.webp": {
+      "source": "Author supplied first image 3b758837-a2e6-4c5d-a267-e52dd78b2fe5.jpg",
+      "width": 948,
+      "height": 1536,
+      "role": "Stories EN/KO mobile hero",
+      "processing": "Crop and WebP compression only, no face alteration"
+    },
+    "esther-standing-original-20261118-desktop.webp": {
+      "source": "Author supplied second image d90f74cf-e1a3-4a84-b467-96c2f031aa40.jpg",
+      "width": 2400,
+      "height": 1350,
+      "role": "Esther/About EN/KO hero",
+      "processing": "Existing website trial derivative re-used from the same author photo; side background softly extended, face unchanged"
+    },
+    "esther-standing-original-20261118-mobile.webp": {
+      "source": "Author supplied second image d90f74cf-e1a3-4a84-b467-96c2f031aa40.jpg",
+      "width": 948,
+      "height": 1536,
+      "role": "Esther/About EN/KO mobile hero",
+      "processing": "WebP from same author photo, face unchanged"
     }
   },
   "routes": {
-    "/stories/": "stories-real-photo-trial-desktop.webp",
+    "/stories/": "stories-seated-original-20261118-desktop.webp",
     "/books/": "books-cover-final-20260802.webp",
     "/archive/": "childhood-cover.jpg",
     "/studio/": "studio-cover.jpg",
     "/notes/": "morning-table-cover.webp",
-    "/about/": "esther-cover.webp"
+    "/about/": "esther-standing-original-20261118-desktop.webp"
   },
   "mobile_routes": {
-    "/stories/": "stories-real-photo-trial-mobile.webp",
+    "/stories/": "stories-seated-original-20261118-mobile.webp",
     "/books/": "books-cover-final-20260802.webp",
     "/archive/": "childhood-cover.jpg",
     "/studio/": "studio-cover.jpg",
     "/notes/": "morning-table-cover-mobile.webp",
-    "/about/": "esther-cover-mobile.webp"
+    "/about/": "esther-standing-original-20261118-mobile.webp"
   },
   "route_note": "The same cover assets are used by the corresponding English and Korean route pairs.",
   "delivery_derivatives": {

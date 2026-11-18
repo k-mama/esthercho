@@ -19,9 +19,9 @@ export default function KoreanAboutPage() {
         eyebrow="ESTHER"
         title="조성연"
         description={authorProfile.roles.ko.join(" · ")}
-        image="/media/covers/esther-cover.webp"
-        mobileImage="/media/covers/esther-cover-mobile.webp"
-        alt="남색 셔츠를 입고 두 점의 작품 아래 앉아 있는 조성연"
+        image="/media/covers/esther-standing-original-20261118-desktop.webp"
+        mobileImage="/media/covers/esther-standing-original-20261118-mobile.webp"
+        alt="햇빛이 들어오는 창가에 검은 재킷을 입고 서 있는 조성연 작가의 실제 사진"
         objectPosition="center center"
         mobileObjectPosition="center center"
         align="left"

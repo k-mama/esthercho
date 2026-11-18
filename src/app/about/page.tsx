@@ -19,9 +19,9 @@ export default function AboutPage() {
         eyebrow="ESTHER"
         title="Esther Cho"
         description={authorProfile.roles.en.join(" · ")}
-        image="/media/covers/esther-cover.webp"
-        mobileImage="/media/covers/esther-cover-mobile.webp"
-        alt="Esther Cho in a navy blouse seated beneath two framed artworks"
+        image="/media/covers/esther-standing-original-20261118-desktop.webp"
+        mobileImage="/media/covers/esther-standing-original-20261118-mobile.webp"
+        alt="Esther Cho standing beside a sunlit window in a navy jacket"
         objectPosition="center center"
         mobileObjectPosition="center center"
         align="left"
