@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { siteConfig } from "@/config/site";
 import { SiteHeader } from "@/components/site-header";
+import { SiteSkipLink } from "@/components/site-skip-link";
 import { SiteFooter } from "@/components/site-footer";
 import { RoomThreshold } from "@/components/room-threshold";
 import { DocumentLanguage } from "@/components/document-language";
@@ -73,9 +74,7 @@ export default function RootLayout({
       <body className={`${houseStyles.root} ${accessibilityStyles.root}`}>
         <DocumentLanguage />
         <AccessibilityFinish />
-        <a href="#main-content" className="skip-link" lang="en">
-          Skip to main content
-        </a>
+        <SiteSkipLink />
         <SiteHeader />
         <div id="main-content" tabIndex={-1}>
           {children}

@@ -4,7 +4,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useRef } from "react";
 import { localeFromPath, roomFromPath } from "@/i18n/path";
-import { translatedPath, websiteLocales } from "@/i18n/locales";
+import { isNewLocale, translatedPath, websiteLocales } from "@/i18n/locales";
+import { internationalInterface } from "@/i18n/interface";
 import styles from "./language-picker.module.css";
 
 export function LanguagePicker() {
@@ -12,7 +13,7 @@ export function LanguagePicker() {
   const current = localeFromPath(pathname);
   const room = roomFromPath(pathname);
   const detailsRef = useRef<HTMLDetailsElement>(null);
-  const label = current === "ko" ? "언어 선택" : "Select language";
+  const label = isNewLocale(current) ? internationalInterface[current].chooseLanguage : current === "ko" ? "언어 선택" : "Select language";
   return (
     <details className={styles.menu} ref={detailsRef}>
       <summary className={styles.trigger} aria-label={label} title={label}>

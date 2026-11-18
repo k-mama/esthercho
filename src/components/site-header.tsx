@@ -9,6 +9,7 @@ import { LanguagePicker } from "@/components/language-picker";
 import { localeFromPath } from "@/i18n/path";
 import { isNewLocale, translatedPath } from "@/i18n/locales";
 import { localizedWebsiteContent } from "@/i18n/translations";
+import { internationalInterface } from "@/i18n/interface";
 
 export function SiteHeader() {
   const pathname = usePathname();
@@ -23,6 +24,7 @@ export function SiteHeader() {
     (isNewLocale(locale) && (pathname === `/${locale}` || pathname === `/${locale}/`));
 
   const localCopy = isNewLocale(locale) ? localizedWebsiteContent[locale] : null;
+  const labels = isNewLocale(locale) ? internationalInterface[locale] : null;
   const navItems = localCopy
     ? (["stories", "books", "studio", "about"] as const).map((room) => ({
         title: localCopy.nav[room],
@@ -55,7 +57,7 @@ export function SiteHeader() {
         <Link
           href={homeHref}
           className="site-header-logo"
-          aria-label={isKorean ? "조성연 홈페이지" : "Esther Cho home"}
+          aria-label={labels ? labels.officialSite : isKorean ? "조성연 홈페이지" : "Esther Cho home"}
           onClick={closeMobileMenu}
         >
           <Image
@@ -70,7 +72,7 @@ export function SiteHeader() {
 
         <nav
           className="site-header-nav-desktop"
-          aria-label={isKorean ? "주요 메뉴" : "Main"}
+          aria-label={labels?.primaryNavigation ?? (isKorean ? "주요 메뉴" : "Main")}
         >
           <ul>
             {navItems.map((item) => {
@@ -92,7 +94,7 @@ export function SiteHeader() {
 
         <div className="site-header-nav-mobile">
           <details ref={mobileMenuRef}>
-            <summary>{isKorean ? "메뉴" : "MENU"}</summary>
+            <summary>{labels?.menu ?? (isKorean ? "메뉴" : "MENU")}</summary>
 
             <ul className="site-header-nav-mobile-menu">
               {navItems.map((item, index) => {
@@ -125,7 +127,7 @@ export function SiteHeader() {
                       <ul
                         className="site-header-nav-mobile-submenu"
                         aria-label={
-                          isKorean ? "이야기의 하위 메뉴" : "Stories sub-navigation"
+                          labels?.roomNavigation ?? (isKorean ? "이야기의 하위 메뉴" : "Stories sub-navigation")
                         }
                       >
                         {roomItems.map((room) => {
@@ -159,7 +161,7 @@ export function SiteHeader() {
       {!isHome ? (
         <nav
           className="site-header-subnav-desktop"
-          aria-label={isKorean ? "집 안의 다른 방" : "More rooms"}
+          aria-label={labels?.roomNavigation ?? (isKorean ? "집 안의 다른 방" : "More rooms")}
         >
           <div className="container site-header-subnav-inner">
             <ul>

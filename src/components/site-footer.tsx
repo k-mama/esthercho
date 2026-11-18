@@ -1,13 +1,24 @@
 "use client";
 
 import { usePathname } from "next/navigation";
+import { localeFromPath } from "@/i18n/path";
+import { isNewLocale } from "@/i18n/locales";
+import { internationalInterface } from "@/i18n/interface";
 
 export function SiteFooter() {
   const pathname = usePathname();
-  const isKorean =
-    pathname === "/ko" || pathname.startsWith("/ko/");
+  const locale = localeFromPath(pathname);
+  const isKorean = locale === "ko";
+  const labels = isNewLocale(locale) ? internationalInterface[locale] : null;
 
-  const copy = isKorean
+  const copy = labels
+    ? {
+        officialSite: labels.officialSite,
+        credit: labels.footerCredit,
+        siteAria: labels.officialSite,
+        amazonAuthor: labels.amazonAuthorPage,
+      }
+    : isKorean
     ? {
         officialSite: "조성연 공식 작가 홈페이지",
         credit: "기획 · 디자인 · 개발 Emma Kwon",
