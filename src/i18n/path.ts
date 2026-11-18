@@ -28,8 +28,8 @@ export function switchLanguagePath(pathname: string, targetLocale: WebsiteLocale
   if (
     room === "stories" &&
     publishedStorySlugs.has(slug) &&
-    (current === "en" || current === "pt-br" || current === "es" || current === "fr" || current === "it" || current === "ja") &&
-    (targetLocale === "en" || targetLocale === "pt-br" || targetLocale === "es" || targetLocale === "fr" || targetLocale === "it" || targetLocale === "ja")
+    (current === "en" || current === "pt-br" || current === "es" || current === "fr" || current === "it" || current === "ja" || current === "de") &&
+    (targetLocale === "en" || targetLocale === "pt-br" || targetLocale === "es" || targetLocale === "fr" || targetLocale === "it" || targetLocale === "ja" || targetLocale === "de")
   ) {
     return targetLocale === "en" ? `/stories/${slug}/` : `/${targetLocale}/stories/${slug}/`;
   }

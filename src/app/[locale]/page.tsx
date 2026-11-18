@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       type: "website",
       url,
-      locale: locale === "pt-br" ? "pt_BR" : locale === "es" ? "es_419" : locale === "fr" ? "fr_FR" : locale === "it" ? "it_IT" : locale === "ja" ? "ja_JP" : undefined,
+      locale: locale === "pt-br" ? "pt_BR" : locale === "es" ? "es_419" : locale === "fr" ? "fr_FR" : locale === "it" ? "it_IT" : locale === "ja" ? "ja_JP" : locale === "de" ? "de_DE" : undefined,
       title: `Esther Cho · ${t.home.hero}`,
       description: t.home.intro,
       images: ["/media/home/esther-house-entry-poster.jpg"],

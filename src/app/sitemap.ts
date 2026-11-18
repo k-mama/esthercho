@@ -29,14 +29,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...localizedEntries,
     ...multilingualStoryRoutes.flatMap((route) => {
       const en = `${siteUrl}${route}`;
+      const de = `${siteUrl}/de${route}`;
       const pt = `${siteUrl}/pt-br${route}`;
       const es = `${siteUrl}/es${route}`;
       const fr = `${siteUrl}/fr${route}`;
       const it = `${siteUrl}/it${route}`;
       const ja = `${siteUrl}/ja${route}`;
-      const languages = { en, "pt-BR": pt, es, fr, it, ja, "x-default": en };
+      const languages = { en, de, "pt-BR": pt, es, fr, it, ja, "x-default": en };
       return [
         { url: en, alternates: { languages } },
+        { url: de, alternates: { languages } },
         { url: pt, alternates: { languages } },
         { url: es, alternates: { languages } },
         { url: fr, alternates: { languages } },

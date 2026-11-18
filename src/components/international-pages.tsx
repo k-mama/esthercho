@@ -224,11 +224,11 @@ export function InternationalRoom({ locale, room }: { locale: NewLocale; room: R
 }
 
 function publishedStoryHref(locale: NewLocale, slug: string): string {
-  if (locale === "es" || locale === "pt-br" || locale === "fr" || locale === "it" || locale === "ja") return `/${locale}/stories/${slug}/`;
+  if (locale === "es" || locale === "pt-br" || locale === "fr" || locale === "it" || locale === "ja" || locale === "de") return `/${locale}/stories/${slug}/`;
   return `/stories/${slug}/`;
 }
 function publishedStoryLanguage(locale: NewLocale): string {
-  return locale === "pt-br" ? "pt-BR" : locale === "es" ? "es" : locale === "fr" ? "fr" : locale === "it" ? "it" : locale === "ja" ? "ja" : "en";
+  return locale === "pt-br" ? "pt-BR" : locale === "es" ? "es" : locale === "fr" ? "fr" : locale === "it" ? "it" : locale === "ja" ? "ja" : locale === "de" ? "de" : "en";
 }
 
 function Stories({ locale }: { locale: NewLocale }) {
@@ -241,7 +241,7 @@ function Stories({ locale }: { locale: NewLocale }) {
         <h3>{s.firstTitle}</h3>
         <p>{s.firstBody}</p>
         <p className={styles.finePrint}>{s.availabilityNote}</p>
-        <Link href={publishedStoryHref(locale, "my-father-dreamed-of-a-tiger")} className={styles.inlineLink} lang={publishedStoryLanguage(locale)}>{locale === "pt-br" || locale === "es" || locale === "fr" || locale === "it" || locale === "ja" ? (t.ui.readStory ?? t.ui.readEnglish) : t.ui.readEnglish} ↗</Link>
+        <Link href={publishedStoryHref(locale, "my-father-dreamed-of-a-tiger")} className={styles.inlineLink} lang={publishedStoryLanguage(locale)}>{locale === "pt-br" || locale === "es" || locale === "fr" || locale === "it" || locale === "ja" || locale === "de" ? (t.ui.readStory ?? t.ui.readEnglish) : t.ui.readEnglish} ↗</Link>
       </ContentSection>
       <section className={styles.libraryList}>
         <div className="container">
@@ -250,7 +250,7 @@ function Stories({ locale }: { locale: NewLocale }) {
               <li key={title}>
                 <span>{String(i + 2).padStart(2, "0")}</span>
                 <h3>{title}</h3>
-                {i === 0 ? <Link href={publishedStoryHref(locale, "the-youngest-daughter-in-every-house")} lang={publishedStoryLanguage(locale)}>{locale === "pt-br" || locale === "es" || locale === "fr" || locale === "it" || locale === "ja" ? (t.ui.readStory ?? t.ui.readEnglish) : t.ui.readEnglish} ↗</Link> : <small>{t.ui.workInProgress}</small>}
+                {i === 0 ? <Link href={publishedStoryHref(locale, "the-youngest-daughter-in-every-house")} lang={publishedStoryLanguage(locale)}>{locale === "pt-br" || locale === "es" || locale === "fr" || locale === "it" || locale === "ja" || locale === "de" ? (t.ui.readStory ?? t.ui.readEnglish) : t.ui.readEnglish} ↗</Link> : <small>{t.ui.workInProgress}</small>}
               </li>
             ))}
           </ol>
