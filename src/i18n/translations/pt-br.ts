@@ -89,7 +89,7 @@ export const ptBr: LocalizedCopy = {
     openingKicker: "COMECE POR AQUI", openingTitle: "As primeiras histórias",
     firstTitle: "Meu pai sonhou com um tigre",
     firstBody: "Antes de Esther nascer, o pai dela sonhou com um tigre. Nasceu uma menina. A família brincava: talvez fosse um gato. O relato vai até onde a lembrança chega. O resto não foi inventado.",
-    otherTitles: ["A caçula em toda casa", "De pijama limpinho, de volta ao quintal", "O restaurante da nossa família", "Mãe, estou tão feliz", "Julho, no sétimo ano da escola", "Colecionadora de momentos felizes"],
+    otherTitles: ["A caçula em cada casa", "De pijama limpinho, de volta ao quintal", "O restaurante da nossa família", "Mãe, estou tão feliz", "Julho, no sétimo ano da escola", "Colecionadora de momentos felizes"],
     availabilityNote: "Os dois primeiros relatos já estão disponíveis em português. Os demais estão registrados por título e serão publicados quando o texto estiver pronto.",
     memoryTitle: "Toda vida também tem uma linha do tempo.",
     memoryBody: "A infância, os anos ao lado do pai, a escola, a arte, a família, a fé e o presente fazem parte da mesma história, mesmo quando as lembranças chegam misturadas.",

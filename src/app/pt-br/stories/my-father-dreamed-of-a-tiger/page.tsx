@@ -68,7 +68,7 @@ export default function TigerDreamPtBr() {
       </section>
       <section className="container story-detail-next" aria-labelledby="next-story-title">
         <p className="story-detail-kicker">A PRÓXIMA HISTÓRIA</p>
-        <h2 id="next-story-title">A caçula em toda casa</h2>
+        <h2 id="next-story-title">A caçula em cada casa</h2>
         <p>Em casa, ela era a filha mais velha. Na casa dos outros, acabava sendo a caçula.</p>
         <Link href="/pt-br/stories/the-youngest-daughter-in-every-house/" className="story-detail-link">
           Ler a próxima história

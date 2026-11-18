@@ -6,7 +6,7 @@ import "@/app/stories/my-father-dreamed-of-a-tiger/story-detail.css";
 const url = "https://esthercho.pages.dev/pt-br/stories/the-youngest-daughter-in-every-house/";
 const original = "https://esthercho.pages.dev/stories/the-youngest-daughter-in-every-house/";
 export const metadata: Metadata = {
-  title: "A caçula em toda casa · Esther Cho",
+  title: "A caçula em cada casa · Esther Cho",
   description: "Em sua casa, Esther era a filha mais velha. Nas casas dos familiares, muitas vezes era a caçula.",
   alternates: {
     canonical: url,
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "article", url, locale: "pt_BR",
-    title: "A caçula em toda casa · Esther Cho",
+    title: "A caçula em cada casa · Esther Cho",
     description: "A filha mais velha em casa e a caçula nos outros lares que a acolheram.",
   },
 };
@@ -26,7 +26,7 @@ export default function YoungestDaughterPtBr() {
       <section className="container story-detail-hero" aria-labelledby="story-title">
         <Link href="/pt-br/stories/" className="story-detail-back">Histórias</Link>
         <p className="story-detail-kicker">HISTÓRIA 02 · FAMÍLIA</p>
-        <h1 id="story-title">A caçula em toda casa</h1>
+        <h1 id="story-title">A caçula em cada casa</h1>
         <p className="story-detail-deck">
           Em casa, eu era a filha mais velha. Na casa dos outros, acabava sendo a caçula.
         </p>
@@ -36,7 +36,7 @@ export default function YoungestDaughterPtBr() {
           <p className="story-detail-opening">Em casa, eu era a filha mais velha.</p>
 
           <p>
-            Meu pai era o filho mais velho da família, e eu fui sua primeira filha,
+            Meu pai era o filho mais velho da família, e eu fui seu primeiro bebê —
             a primeira neta. Depois nasceram meus dois irmãos mais novos, com um ano de diferença entre eles.
           </p>
           <p>
@@ -54,7 +54,7 @@ export default function YoungestDaughterPtBr() {
             Eu era mais quieta que meus irmãos. Provavelmente, era a criança mais fácil
             de mandar para a casa de alguém por alguns dias.
             À noite, sentia falta da minha mãe e às vezes chorava por ela, mas conseguia ficar.
-            Meus avós e meus tios me cercavam de carinho.
+            Meus avós e meus tios me queriam bem.
           </p>
           <p>
             Eu observava minha avó diante da penteadeira e imitava a maquiagem dela.
