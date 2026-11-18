@@ -147,7 +147,7 @@
 .libraryList h3 { margin:0; color:var(--local-ink); font:400 clamp(1.25rem,2vw,1.9rem) var(--font-editorial); }
 .libraryList small,.libraryList li>a { color:var(--local-muted); font:600 .78rem var(--font-interface); }
 .libraryList a { color:var(--local-ink); }
-.finePrint { font-size: .87rem !important; color:#6c7880 !important; }
+.finePrint { font-size: .87rem; color:#6c7880; }
 .closing { color:#fdf9f0; background:linear-gradient(135deg,#173650,#335567); }
 .closing h2 { max-width:28ch; color:inherit; }
 .closing .inlineLink { color:inherit; border-color:rgba(255,255,255,.5); }
