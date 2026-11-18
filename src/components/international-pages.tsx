@@ -216,6 +216,14 @@ export function InternationalRoom({ locale, room }: { locale: NewLocale; room: R
   );
 }
 
+function publishedStoryHref(locale: NewLocale, slug: string): string {
+  if (locale === "es" || locale === "pt-br") return `/${locale}/stories/${slug}/`;
+  return `/stories/${slug}/`;
+}
+function publishedStoryLanguage(locale: NewLocale): string {
+  return locale === "pt-br" ? "pt-BR" : locale === "es" ? "es" : "en";
+}
+
 function Stories({ locale }: { locale: NewLocale }) {
   const t = localizedWebsiteContent[locale];
   const s = t.stories;
@@ -226,7 +234,7 @@ function Stories({ locale }: { locale: NewLocale }) {
         <h3>{s.firstTitle}</h3>
         <p>{s.firstBody}</p>
         <p className={styles.finePrint}>{s.availabilityNote}</p>
-        <Link href={locale === "pt-br" ? "/pt-br/stories/my-father-dreamed-of-a-tiger/" : "/stories/my-father-dreamed-of-a-tiger/"} className={styles.inlineLink} lang={locale === "pt-br" ? "pt-BR" : "en"}>{locale === "pt-br" ? (t.ui.readStory ?? t.ui.readEnglish) : t.ui.readEnglish} ↗</Link>
+        <Link href={publishedStoryHref(locale, "my-father-dreamed-of-a-tiger")} className={styles.inlineLink} lang={publishedStoryLanguage(locale)}>{locale === "pt-br" || locale === "es" ? (t.ui.readStory ?? t.ui.readEnglish) : t.ui.readEnglish} ↗</Link>
       </ContentSection>
       <section className={styles.libraryList}>
         <div className="container">
@@ -235,7 +243,7 @@ function Stories({ locale }: { locale: NewLocale }) {
               <li key={title}>
                 <span>{String(i + 2).padStart(2, "0")}</span>
                 <h3>{title}</h3>
-                {i === 0 ? <Link href={locale === "pt-br" ? "/pt-br/stories/the-youngest-daughter-in-every-house/" : "/stories/the-youngest-daughter-in-every-house/"} lang={locale === "pt-br" ? "pt-BR" : "en"}>{locale === "pt-br" ? (t.ui.readStory ?? t.ui.readEnglish) : t.ui.readEnglish} ↗</Link> : <small>{t.ui.workInProgress}</small>}
+                {i === 0 ? <Link href={publishedStoryHref(locale, "the-youngest-daughter-in-every-house")} lang={publishedStoryLanguage(locale)}>{locale === "pt-br" || locale === "es" ? (t.ui.readStory ?? t.ui.readEnglish) : t.ui.readEnglish} ↗</Link> : <small>{t.ui.workInProgress}</small>}
               </li>
             ))}
           </ol>

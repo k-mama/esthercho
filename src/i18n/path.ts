@@ -28,10 +28,10 @@ export function switchLanguagePath(pathname: string, targetLocale: WebsiteLocale
   if (
     room === "stories" &&
     publishedStorySlugs.has(slug) &&
-    (current === "en" || current === "pt-br") &&
-    (targetLocale === "en" || targetLocale === "pt-br")
+    (current === "en" || current === "pt-br" || current === "es") &&
+    (targetLocale === "en" || targetLocale === "pt-br" || targetLocale === "es")
   ) {
-    return targetLocale === "en" ? `/stories/${slug}/` : `/pt-br/stories/${slug}/`;
+    return targetLocale === "en" ? `/stories/${slug}/` : `/${targetLocale}/stories/${slug}/`;
   }
   return translatedPath(targetLocale, room);
 }
