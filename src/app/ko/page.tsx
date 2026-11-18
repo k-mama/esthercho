@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { alternatesFor } from "@/i18n/locales";
 import Image from "next/image";
 import Link from "next/link";
 import { BookLaunch } from "@/components/book-launch";
@@ -16,10 +17,7 @@ export const metadata: Metadata = {
     "믿음과 기억, 밥상과 돌봄, 평범한 삶에서 태어난 조성연의 이야기 집.",
   alternates: {
     canonical: homeUrl,
-    languages: {
-      en: "https://esthercho.pages.dev/",
-      ko: "https://esthercho.pages.dev/ko/",
-    },
+    languages: { ...alternatesFor(), "x-default": "https://esthercho.pages.dev/" },
   },
   openGraph: {
     type: "website",
