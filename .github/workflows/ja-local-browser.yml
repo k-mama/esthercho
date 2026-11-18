@@ -10,6 +10,7 @@ on:
       - src/components/language-picker.module.css
       - src/styles/japanese.css
       - src/app/layout.tsx
+      - scripts/ja-font-browser-proof.py
       - src/i18n/translations/ja.ts
       - src/i18n/path.ts
       - src/i18n/translations/types.ts
@@ -57,6 +58,11 @@ jobs:
           "$CHROME" --headless --no-sandbox --disable-dev-shm-usage --disable-gpu --hide-scrollbars --window-size=390,844 --virtual-time-budget=2300 --screenshot=.reports/ja-browser/daughter-mobile.png "http://127.0.0.1:8777/ja/stories/the-youngest-daughter-in-every-house/"
           test -s .reports/ja-browser/tiger-desktop.png
           test -s .reports/ja-browser/daughter-mobile.png
+      - name: Diagnose actual Japanese navigation fonts with Chrome DevTools
+        run: |
+          python3 -m pip -q install websocket-client
+          CHROME=$(command -v google-chrome || command -v google-chrome-stable || command -v chromium || command -v chromium-browser)
+          CHROME="$CHROME" python3 scripts/ja-font-browser-proof.py "http://127.0.0.1:8777/ja/"
       - name: Emit small visual proof for editorial inspection
         run: |
           python3 -m pip -q install Pillow
