@@ -1,0 +1,82 @@
+name: Eight-language integrated visual regression (staging only)
+
+on:
+  push:
+    branches:
+      - feature/multilingual-foundation-20261118
+    paths:
+      - src/app/**
+      - src/components/**
+      - src/i18n/**
+      - src/styles/**
+      - scripts/audit-integrated-release.mjs
+      - scripts/patch-localized-html-lang.mjs
+      - .github/workflows/international-ui-smoke.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  visual:
+    runs-on: ubuntu-latest
+    timeout-minutes: 17
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version-file: .node-version
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - name: Render all language front doors, plus original English/Korean rooms
+        shell: bash
+        run: |
+          set -euo pipefail
+          CHROME=$(command -v google-chrome || command -v google-chrome-stable || command -v chromium || command -v chromium-browser)
+          python3 -m http.server 8777 --directory out >/tmp/eight-language-local-server.log 2>&1 &
+          sleep 2
+          mkdir -p .reports/integrated
+          for lang in en ko de pt-br es fr it ja; do
+            if [ "$lang" = "en" ]; then page="/"; else page="/$lang/"; fi
+            "$CHROME" --headless --no-sandbox --disable-dev-shm-usage --disable-gpu --hide-scrollbars --window-size=1380,900 --virtual-time-budget=2500 --screenshot=".reports/integrated/home-$lang-desktop.png" "http://127.0.0.1:8777$page"
+            test -s ".reports/integrated/home-$lang-desktop.png"
+          done
+          for lang in en ko de ja; do
+            if [ "$lang" = "en" ]; then prefix=""; else prefix="/$lang"; fi
+            "$CHROME" --headless --no-sandbox --disable-dev-shm-usage --disable-gpu --hide-scrollbars --window-size=390,844 --virtual-time-budget=2500 --screenshot=".reports/integrated/home-$lang-mobile.png" "http://127.0.0.1:8777$prefix/"
+            test -s ".reports/integrated/home-$lang-mobile.png"
+          done
+          for lang in en ko; do
+            if [ "$lang" = "en" ]; then prefix=""; else prefix="/$lang"; fi
+            for room in stories about books; do
+              "$CHROME" --headless --no-sandbox --disable-dev-shm-usage --disable-gpu --hide-scrollbars --window-size=1380,900 --virtual-time-budget=2500 --screenshot=".reports/integrated/$lang-$room-desktop.png" "http://127.0.0.1:8777$prefix/$room/"
+              test -s ".reports/integrated/$lang-$room-desktop.png"
+            done
+          done
+      - name: Emit thumbnails for editorial review
+        run: |
+          python3 -m pip -q install Pillow
+          python3 - <<'PY'
+          import base64, io
+          from PIL import Image
+          from pathlib import Path
+          names=[
+            "home-en-desktop","home-ko-desktop","home-de-desktop",
+            "home-pt-br-desktop","home-es-desktop","home-fr-desktop",
+            "home-it-desktop","home-ja-desktop","home-ko-mobile",
+            "home-ja-mobile","en-stories-desktop","ko-stories-desktop",
+            "en-about-desktop","ko-about-desktop",
+          ]
+          for name in names:
+            picture=Image.open(Path(".reports/integrated")/(name+".png")).convert("RGB")
+            picture.thumbnail((840,680))
+            out=io.BytesIO()
+            picture.save(out,format="JPEG",quality=53,optimize=True)
+            print("INTEGRATED_PREVIEW_BEGIN:"+name+":"+base64.b64encode(out.getvalue()).decode()+":INTEGRATED_PREVIEW_END")
+          PY
+      - uses: actions/upload-artifact@v7
+        with:
+          name: eight-language-unpublished-visual-regression
+          path: .reports/integrated/*.png
+          retention-days: 14
