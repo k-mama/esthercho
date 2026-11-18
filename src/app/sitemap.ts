@@ -1,52 +1,32 @@
 import type { MetadataRoute } from "next";
+import { websiteLocales, translatedPath, type RoomKey } from "@/i18n/locales";
 
 export const dynamic = "force-static";
-
 const siteUrl = "https://esthercho.pages.dev";
-
-const localizedRoutes = [
-  "/",
-  "/about/",
-  "/archive/",
-  "/books/",
-  "/notes/",
-  "/stories/",
-  "/studio/",
-] as const;
-
+const mainRoutes: (RoomKey | undefined)[] = [
+  undefined, "about", "archive", "books", "notes", "stories", "studio",
+];
 const englishOnlyRoutes = [
   "/stories/my-father-dreamed-of-a-tiger/",
   "/stories/the-youngest-daughter-in-every-house/",
 ] as const;
 
-function koreanPath(path: string) {
-  return path === "/" ? "/ko/" : `/ko${path}`;
-}
-
 export default function sitemap(): MetadataRoute.Sitemap {
-  const localizedEntries = localizedRoutes.flatMap((path) => {
-    const enUrl = `${siteUrl}${path}`;
-    const koUrl = `${siteUrl}${koreanPath(path)}`;
-    const languages = {
-      en: enUrl,
-      ko: koUrl,
-    };
-
-    return [
-      {
-        url: enUrl,
-        alternates: { languages },
-      },
-      {
-        url: koUrl,
-        alternates: { languages },
-      },
-    ];
+  const localizedEntries = mainRoutes.flatMap((room) => {
+    const languages = Object.fromEntries(
+      websiteLocales.map((locale) => [
+        locale.hreflang,
+        `${siteUrl}${translatedPath(locale.route, room)}`,
+      ]),
+    ) as Record<string, string>;
+    languages["x-default"] = `${siteUrl}${translatedPath("en", room)}`;
+    return websiteLocales.map((locale) => ({
+      url: `${siteUrl}${translatedPath(locale.route, room)}`,
+      alternates: { languages },
+    }));
   });
-
-  const englishOnlyEntries = englishOnlyRoutes.map((path) => ({
-    url: `${siteUrl}${path}`,
-  }));
-
-  return [...localizedEntries, ...englishOnlyEntries];
+  return [
+    ...localizedEntries,
+    ...englishOnlyRoutes.map((route) => ({ url: `${siteUrl}${route}` })),
+  ];
 }
