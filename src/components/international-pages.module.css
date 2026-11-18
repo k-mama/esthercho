@@ -148,6 +148,10 @@
 .libraryList small,.libraryList li>a { color:var(--local-muted); font:600 .78rem var(--font-interface); }
 .libraryList a { color:var(--local-ink); }
 .finePrint { font-size: .87rem; color:#6c7880; }
+.timeline { list-style: none; padding: 0; margin: 2rem 0 0; border-top: 1px solid rgba(21,51,77,.17); }
+.timeline li { display: grid; grid-template-columns: 4rem minmax(0,1fr); gap: 1rem; padding: .85rem 0; border-bottom: 1px solid rgba(21,51,77,.12); color: var(--local-muted); font: 400 .99rem/1.65 var(--font-interface); }
+.timeline strong { font-weight: 650; color: var(--local-ink); font-variant-numeric: tabular-nums; }
+
 .closing { color:#fdf9f0; background:linear-gradient(135deg,#173650,#335567); }
 .closing h2 { max-width:28ch; color:inherit; }
 .closing .inlineLink { color:inherit; border-color:rgba(255,255,255,.5); }
