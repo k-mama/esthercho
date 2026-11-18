@@ -8,6 +8,8 @@ on:
       - src/components/international-pages.tsx
       - src/components/international-pages.module.css
       - src/components/language-picker.module.css
+      - src/styles/japanese.css
+      - src/app/layout.tsx
       - src/i18n/translations/ja.ts
       - src/i18n/path.ts
       - src/i18n/translations/types.ts
