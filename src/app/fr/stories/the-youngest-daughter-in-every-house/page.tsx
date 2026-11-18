@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   description: "Chez elle, Esther était l’aînée. Dans la famille qui l’accueillait, elle devenait la petite dernière.",
   alternates: {
     canonical: url,
-    languages: { en: original, "pt-BR": portuguese, es: spanish, fr: url, it: "https://esthercho.pages.dev/it/stories/the-youngest-daughter-in-every-house/", ja: "https://esthercho.pages.dev/ja/stories/the-youngest-daughter-in-every-house/", "x-default": original },
+    languages: { en: original, de: "https://esthercho.pages.dev/de/stories/the-youngest-daughter-in-every-house/", "pt-BR": portuguese, es: spanish, fr: url, it: "https://esthercho.pages.dev/it/stories/the-youngest-daughter-in-every-house/", ja: "https://esthercho.pages.dev/ja/stories/the-youngest-daughter-in-every-house/", "x-default": original },
   },
   openGraph: {
     type: "article", url, locale: "fr_FR",

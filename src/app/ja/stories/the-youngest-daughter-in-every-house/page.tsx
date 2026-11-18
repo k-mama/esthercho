@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: url,
     languages: {
-      en: original, "pt-BR": portuguese, es: spanish, fr: french,
+      en: original, de: "https://esthercho.pages.dev/de/stories/the-youngest-daughter-in-every-house/", "pt-BR": portuguese, es: spanish, fr: french,
       it: italian, ja: url, "x-default": original,
     },
   },

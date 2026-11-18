@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   description: "En su propia casa, Esther era la hija mayor. En las casas de sus familiares, terminaba siendo la menor.",
   alternates: {
     canonical: url,
-    languages: { en: original, es: url, "pt-BR": portuguese, fr: "https://esthercho.pages.dev/fr/stories/the-youngest-daughter-in-every-house/", it: "https://esthercho.pages.dev/it/stories/the-youngest-daughter-in-every-house/", ja: "https://esthercho.pages.dev/ja/stories/the-youngest-daughter-in-every-house/", "x-default": original },
+    languages: { en: original, de: "https://esthercho.pages.dev/de/stories/the-youngest-daughter-in-every-house/", es: url, "pt-BR": portuguese, fr: "https://esthercho.pages.dev/fr/stories/the-youngest-daughter-in-every-house/", it: "https://esthercho.pages.dev/it/stories/the-youngest-daughter-in-every-house/", ja: "https://esthercho.pages.dev/ja/stories/the-youngest-daughter-in-every-house/", "x-default": original },
   },
   openGraph: {
     type: "article", url, locale: "es_419",
