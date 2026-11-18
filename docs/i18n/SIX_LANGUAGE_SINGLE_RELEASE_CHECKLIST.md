@@ -23,7 +23,7 @@ Only then: one single production deployment including all six.
 | German | Yes | In progress: German guide and verified German book edition checked | Not yet | Not released |
 | Portuguese (Brazil) | Yes: 7 rooms + 2 full stories | Internal editorial pass complete; independent native review pending | Local desktop/mobile screenshots and 9-page build audits passed; real-device release check pending | Not released |
 | Spanish (Latin America) | Yes: 7 rooms + 2 full stories | Internal editorial pass; independent regional native proof pending | Nine-page build, local screenshots, and original Spanish cover-load proof passed; real-device checks pending | Not released |
-| French | Yes | Pending | Not yet | Not released |
+| French | Yes: 7 rooms + 2 full stories | Internal editorial/localization pass completed; independent French native proof pending | Local desktop/mobile visual screenshots and 9-page build audit passed; real-device release check pending | Not released |
 | Italian | Yes | Pending | Not yet | Not released |
 | Japanese | Yes | Pending | Not yet | Not released |
 
