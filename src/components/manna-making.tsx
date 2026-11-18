@@ -90,7 +90,7 @@ const coverStudies = [
 ];
 
 function PhotoGallery({
-  sources, captions, kind, locale,
+  sources, captions, kind,
 }: {
   sources: string[];
   captions: readonly string[];
