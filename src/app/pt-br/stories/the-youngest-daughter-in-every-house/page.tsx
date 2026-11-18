@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description: "Em sua casa, Esther era a filha mais velha. Nas casas dos familiares, muitas vezes era a caçula.",
   alternates: {
     canonical: url,
-    languages: { en: original, "pt-BR": url, es: "https://esthercho.pages.dev/es/stories/the-youngest-daughter-in-every-house/", "x-default": original },
+    languages: { en: original, "pt-BR": url, es: "https://esthercho.pages.dev/es/stories/the-youngest-daughter-in-every-house/", fr: "https://esthercho.pages.dev/fr/stories/the-youngest-daughter-in-every-house/", "x-default": original },
   },
   openGraph: {
     type: "article", url, locale: "pt_BR",

@@ -13,6 +13,7 @@ export const metadata: Metadata = {
       en: "https://esthercho.pages.dev/stories/my-father-dreamed-of-a-tiger/",
       "pt-BR": "https://esthercho.pages.dev/pt-br/stories/my-father-dreamed-of-a-tiger/",
       es: "https://esthercho.pages.dev/es/stories/my-father-dreamed-of-a-tiger/",
+      fr: "https://esthercho.pages.dev/fr/stories/my-father-dreamed-of-a-tiger/",
       "x-default": "https://esthercho.pages.dev/stories/my-father-dreamed-of-a-tiger/",
     },
   },
