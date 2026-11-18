@@ -1,9 +1,14 @@
 import type { Metadata } from "next";
+import { alternatesFor } from "@/i18n/locales";
 import Image from "next/image";
 import { PageCover } from "@/components/page-cover";
 import "../../studio/studio.css";
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://esthercho.pages.dev/ko/studio/",
+    languages: { ...alternatesFor("studio"), "x-default": "https://esthercho.pages.dev/studio/" },
+  },
   title: "손으로 그린 이야기",
   description:
     "조성연 작가의 손그림에서 출발한 작업과 이후의 재해석, 시각 실험.",

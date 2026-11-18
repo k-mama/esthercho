@@ -1,10 +1,15 @@
 import type { Metadata } from "next";
+import { alternatesFor } from "@/i18n/locales";
 import Image from "next/image";
 import { PageCover } from "@/components/page-cover";
 import { authorProfile } from "@/content/author-profile";
 import "../../about/about.css";
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://esthercho.pages.dev/ko/about/",
+    languages: { ...alternatesFor("about"), "x-default": "https://esthercho.pages.dev/about/" },
+  },
   title: "조성연 · Esther Cho",
   description:
     "한국 작가이자 화가 조성연, 그리고 국제 작가명 Esther Cho를 소개합니다.",

@@ -1,10 +1,15 @@
 import type { Metadata } from "next";
+import { alternatesFor } from "@/i18n/locales";
 import Image from "next/image";
 import { PageCover } from "@/components/page-cover";
 import { authorProfile } from "@/content/author-profile";
 import "./about.css";
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://esthercho.pages.dev/about/",
+    languages: { ...alternatesFor("about"), "x-default": "https://esthercho.pages.dev/about/" },
+  },
   title: "Esther Cho · Cho Sungyeon",
   description:
     "Meet Esther Cho, the international author name of Korean writer and artist Cho Sungyeon (조성연).",

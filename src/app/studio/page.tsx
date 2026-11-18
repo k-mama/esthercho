@@ -1,9 +1,14 @@
 import type { Metadata } from "next";
+import { alternatesFor } from "@/i18n/locales";
 import Image from "next/image";
 import { PageCover } from "@/components/page-cover";
 import "./studio.css";
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://esthercho.pages.dev/studio/",
+    languages: { ...alternatesFor("studio"), "x-default": "https://esthercho.pages.dev/studio/" },
+  },
   title: "Drawn by Hand",
   description:
     "Esther Cho's hand-drawn sources, later reworkings, and visual experiments.",
