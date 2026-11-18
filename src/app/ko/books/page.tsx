@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { BookLaunch } from "@/components/book-launch";
+import { MannaMaking } from "@/components/manna-making";
 import { PageCover } from "@/components/page-cover";
 import { featuredBook } from "@/content/books";
 import styles from "../../books/books.module.css";
@@ -55,6 +56,8 @@ export default function KoreanBooksPage() {
           </div>
         </div>
       </section>
+
+      <MannaMaking locale="ko" />
 
       <section className={styles.detailsSection} aria-labelledby="project-notes-title">
         <div className={`container ${styles.detailsInner}`}>
