@@ -22,7 +22,7 @@ English and Korean legacy sites plus six proposed locales (German, Brazilian Por
 ## Release blockers
 1. Independent native editorial proofreading for all six languages is not complete.
 2. Physical-device, keyboard accessibility, full-scroll, retailer checkout-page and end-to-end navigation tests remain.
-3. External German retail cover load test must be verified at the final candidate head.
+3. German retail cover already loaded in unpublished Chrome (`44365696373`); retest the external image during the physical-device buying journey.
 4. Final comparison of asset integrity and changes to English/Korean and consolidated branch CI required.
 
 **One production merge/deployment may be considered only after every blocker is resolved and the owner authorizes release.**
