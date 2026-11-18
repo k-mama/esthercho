@@ -7,6 +7,14 @@ export const metadata: Metadata = {
   title: "The Youngest Daughter in Every House",
   description:
     "A childhood memory from Esther Cho's living story archive: the oldest child at home, and the youngest daughter in the houses that helped raise her.",
+  alternates: {
+    canonical: "https://esthercho.pages.dev/stories/the-youngest-daughter-in-every-house/",
+    languages: {
+      en: "https://esthercho.pages.dev/stories/the-youngest-daughter-in-every-house/",
+      "pt-BR": "https://esthercho.pages.dev/pt-br/stories/the-youngest-daughter-in-every-house/",
+      "x-default": "https://esthercho.pages.dev/stories/the-youngest-daughter-in-every-house/",
+    },
+  },
 };
 
 const tags = ["Mother", "Grandmother", "Aunts", "Family", "House"];

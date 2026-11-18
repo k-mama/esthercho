@@ -18,6 +18,7 @@ export interface LocalizedCopy {
     explore: string;
     backHome: string;
     readEnglish: string;
+    readStory?: string;
     available: string;
     inProgress: string;
     englishPaperback: string;

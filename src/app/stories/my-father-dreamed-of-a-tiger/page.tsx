@@ -7,6 +7,14 @@ export const metadata: Metadata = {
   title: "My Father Dreamed of a Tiger",
   description:
     "The first memory fragment in Esther Cho's living story archive: a tiger dream, a daughter, and a family joke that became the opening line.",
+  alternates: {
+    canonical: "https://esthercho.pages.dev/stories/my-father-dreamed-of-a-tiger/",
+    languages: {
+      en: "https://esthercho.pages.dev/stories/my-father-dreamed-of-a-tiger/",
+      "pt-BR": "https://esthercho.pages.dev/pt-br/stories/my-father-dreamed-of-a-tiger/",
+      "x-default": "https://esthercho.pages.dev/stories/my-father-dreamed-of-a-tiger/",
+    },
+  },
 };
 
 const tags = ["Father", "Beginning", "Family", "Childhood"];

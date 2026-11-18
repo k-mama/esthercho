@@ -1,16 +1,18 @@
-// Individual PT-BR localization gate: run after the shared 42-page static export audit.
+// Individual PT-BR localization gate: seven main routes plus two fully translated stories.
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 
 const home = "out/pt-br/index.html";
 const checks = [
   { room: "", snippets: ["BOAS-VINDAS À CASA DE ESTHER", "Uma casa de histórias", "Café da manhã"], links: ["/pt-br/books/", "/pt-br/notes/", "/pt-br/archive/"] },
-  { room: "stories", snippets: ["Meu pai sonhou com um tigre", "O resto não foi inventado.", "Ler a versão em inglês", "História registrada"], links: ["/stories/my-father-dreamed-of-a-tiger/","/stories/the-youngest-daughter-in-every-house/"] },
+  { room: "stories", snippets: ["Meu pai sonhou com um tigre", "O resto não foi inventado.", "Ler a história", "História registrada"], links: ["/pt-br/stories/my-father-dreamed-of-a-tiger/","/pt-br/stories/the-youngest-daughter-in-every-house/"] },
   { room: "books", snippets: ["Große Träume in allen Farben", "MANUSCRITO EM ANDAMENTO", "Maná para esta manhã"], links: ["https://www.amazon.com/dp/B0HQ9Z7SRD", "https://www.amazon.de/dp/B0HRS6F2MH"] },
   { room: "studio", snippets: ["Desenhado à mão", "Releitura editorial posterior"], links: ["/pt-br/about/"] },
   { room: "about", snippets: ["Cho Sungyeon", "1985", "1988", "1992", "1999", "disciplinas do mestrado", "Bangladesh"], links: ["https://www.amazon.com/author/sungyeoncho"] },
   { room: "notes", snippets: ["Mesa da manhã", "Dessas manhãs está nascendo um livro."], links: ["/pt-br/books/"] },
   { room: "archive", snippets: ["Álbum de infância", "As fotos antigas continuam"], links: ["/pt-br/stories/"] },
+  { room: "stories/my-father-dreamed-of-a-tiger", snippets: ["Antes de eu nascer", "Deve ter sido um gato.", "A PRÓXIMA HISTÓRIA"], links: ["/pt-br/stories/the-youngest-daughter-in-every-house/"] },
+  { room: "stories/the-youngest-daughter-in-every-house", snippets: ["Em casa, eu era a filha mais velha.", "Pelo visto, a admiração", "NOTA DO ARQUIVO"], links: ["/pt-br/stories/"] },
 ];
 let passed = 0;
 for (const item of checks) {
@@ -39,4 +41,4 @@ for (const item of checks) {
 }
 const base = await readFile(home, "utf8");
 if (!base.includes('href="/pt-br/stories/"') || !base.includes('href="/pt-br/notes/"')) throw Error("Homepage is missing room navigation");
-console.log(`PT-BR editorial & export audit: ${passed} / 7 pages passed`);
+console.log(`PT-BR editorial & export audit: ${passed} / 9 pages passed`);

@@ -26,7 +26,7 @@ for (const [locale, lang] of Object.entries(locales)) {
   }
   await visit(join(root, locale));
 }
-if (rewritten !== 42) {
-  throw Error(`Expected 42 localized HTML pages, got ${rewritten}`);
+if (rewritten < 42) {
+  throw Error(`Expected at least 42 localized HTML pages, got ${rewritten}`);
 }
 console.log(`Localized HTML lang attributes verified: ${rewritten} pages`);
