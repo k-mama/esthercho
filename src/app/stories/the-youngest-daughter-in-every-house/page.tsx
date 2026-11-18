@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     canonical: "https://esthercho.pages.dev/stories/the-youngest-daughter-in-every-house/",
     languages: {
       en: "https://esthercho.pages.dev/stories/the-youngest-daughter-in-every-house/",
+      de: "https://esthercho.pages.dev/de/stories/the-youngest-daughter-in-every-house/",
       "pt-BR": "https://esthercho.pages.dev/pt-br/stories/the-youngest-daughter-in-every-house/",
       es: "https://esthercho.pages.dev/es/stories/the-youngest-daughter-in-every-house/",
       fr: "https://esthercho.pages.dev/fr/stories/the-youngest-daughter-in-every-house/",
