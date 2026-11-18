@@ -7,35 +7,35 @@ type Locale = "en" | "ko";
 const content = {
   en: {
     kicker: "BEHIND THE BOOK · MANNA ON THE TABLE",
-    title: "A book taking shape, one morning at a time.",
+    title: "The mornings behind the cover."
     introduction: [
-      "At first, it seemed to be a matter of choosing a title and a cover. One breakfast photograph, then another. A plate, a cup of coffee, the light across a table. There were several possibilities, and no quick answer.",
-      "The more carefully the covers were considered, the more the work led back to something that was there before the book: the mornings themselves.",
+      "Choosing a title and cover for Manna on the Table took longer than expected. Esther looked through photographs of breakfasts she had made: French toast with berries, a cup of coffee, sunlight falling across the counter. She tried different layouts, moved the title, and adjusted the light.",
+      "Looking through those photographs brought back all the mornings behind them. She had been making breakfast, reading Scripture, and writing down her thoughts long before there was a book cover to choose.",
     ],
-    photoEyebrow: "01 / WHAT WAS ALREADY ON THE TABLE",
-    photoHeading: "Real breakfasts, long before the cover.",
-    photoText: "Esther took these photographs at her own breakfast table: French toast with berries, a bowl of fruit beside coffee, and a plate set on blue cloth. Each photograph holds the small details of a morning she actually lived.",
+    photoEyebrow: "01 / AT THE BREAKFAST TABLE"
+    photoHeading: "Breakfast, just as she made it."
+    photoText: "These photographs come from Esther’s own breakfasts: French toast with berries, a bowl of fruit beside her coffee, and toast on a blue cloth. The dishes, food, and morning light were already part of her everyday life.",
     photoLabels: [
-      "French toast, berries, and a kitchen counter",
-      "Fruit, coffee, and afternoon-shaped light",
-      "A quiet breakfast on blue linen",
+      "French toast and berries in the kitchen"
+      "Fruit and coffee in the sunlight"
+      "Breakfast on a blue cloth"
     ],
-    coverEyebrow: "02 / FINDING THE BOOK'S FACE",
-    coverHeading: "The cover did not come easily.",
-    coverText: "A softer table. A closer plate. A quieter photograph. The title moved; the light changed; another version followed. With every adjustment, Esther looked for the warmth of the mornings where the writing began.",
+    coverEyebrow: "02 / FINDING THE RIGHT COVER"
+    coverHeading: "Finding the right cover took time."
+    coverText: "She compared a blue table setting, a sunlit kitchen, and a cup of coffee beside fruit. The position of the title changed, along with the composition and light. She wanted the cover to feel like an invitation to the same table where she had begun writing.",
     coverLabels: [
       "Cover study · blue table setting",
-      "Cover study · breakfast by the window",
+      "Cover study · breakfast in the sunlight"
       "Cover study · coffee and fruit",
     ],
-    homeEyebrow: "03 / THE HOUSE THAT WAS WAITING",
-    homeHeading: "A photograph taken about ten years earlier.",
-    homeText: "Around a decade ago, Esther happened to photograph the house in Cheongdam-dong where she had lived as a child. She could not have known that this image would one day become the welcoming film on her author website. An old home now offers readers a way in.",
-    mannaHeading: "A portion for this morning.",
+    homeEyebrow: "03 / A HOME REMEMBERED"
+    homeHeading: "A photograph from ten years ago."
+    homeText: "About ten years ago, Esther photographed the house in Cheongdam-dong where she had lived as a child. She kept the picture as a memory of home. Today, it has become part of the welcome film on her website. Readers are greeted by a glimpse of the house she remembers.",
+    mannaHeading: "Manna for this morning."
     mannaText: [
-      "Looking back, Esther recognizes God's providence in the details that came together over the years: a photograph of her childhood home, breakfast tables she had set, and the quiet habit of returning to Scripture.",
-      "Manna was God's provision for the day. At this table, the word holds two kinds of nourishment: real breakfast and the Scripture received that morning. Yesterday's portion cannot take the place of today's. Both the meal and the listening must begin again.",
-      "Tomorrow, there will be another morning. And another place at the table.",
+      "Looking back at the photograph of her childhood home and the breakfasts she had recorded, Esther began to see how these ordinary things had come together. She recognizes God’s providence in the years of preparation she can see only now.",
+      "For Esther, manna means the food she prepares in the morning and the Scripture she receives that day. God provided manna in the wilderness one day at a time. The meal she ate yesterday cannot feed her today, and yesterday’s reading cannot replace today’s time with God.",
+      "Tomorrow morning, she will return to the table."
     ],
     homepageLink: "Visit the welcome film",
     sectionLabel: "The making of Manna on the Table",
