@@ -68,6 +68,11 @@ export interface LocalizedCopy {
   books: {
     title: string; subtitle: string;
     childrenKicker: string; childrenDescription: string;
+    nativeEdition?: {
+      title: string; eyebrow: string; description: string;
+      paperbackLabel: string; kindleLabel: string;
+      paperbackUrl: string; kindleUrl: string; cover: string; coverAlt: string;
+    };
     germanKicker: string; germanDescription: string;
     filmKicker: string; filmHeading: string;
     mannaKicker: string; mannaTitle: string; mannaIntroduction: string;

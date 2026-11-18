@@ -273,6 +273,22 @@ function Books({ locale }: { locale: NewLocale }) {
   const b = t.books;
   return (
     <>
+      {b.nativeEdition ? (
+        <ContentSection
+          label={b.nativeEdition.eyebrow}
+          title={b.nativeEdition.title}
+          image={b.nativeEdition.cover}
+          imageAlt={b.nativeEdition.coverAlt}
+          imageWidth={1000}
+          imageHeight={1500}
+        >
+          <p>{b.nativeEdition.description}</p>
+          <a className={styles.inlineLink} href={b.nativeEdition.paperbackUrl} target="_blank" rel="noopener noreferrer">{b.nativeEdition.paperbackLabel} ↗</a>
+          <span className={styles.actionSpacing}>
+            <a className={styles.inlineLink} href={b.nativeEdition.kindleUrl} target="_blank" rel="noopener noreferrer">{b.nativeEdition.kindleLabel} ↗</a>
+          </span>
+        </ContentSection>
+      ) : null}
       <ContentSection label={b.childrenKicker} title="Big Dreams in Every Color" image="/media/books/big-dreams/cover.webp" imageAlt={altText(locale, "coverEnglish", "Original cover of Big Dreams in Every Color")} imageWidth={1232} imageHeight={1850}>
         <p>{b.childrenDescription}</p>
         <a className={styles.inlineLink} href="https://www.amazon.com/dp/B0HQ9Z7SRD" target="_blank" rel="noopener noreferrer">{t.ui.englishPaperback} ↗</a>

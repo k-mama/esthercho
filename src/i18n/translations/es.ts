@@ -92,6 +92,17 @@ export const es: LocalizedCopy = {
   books: {
     title: "Libros", subtitle: "Libros ilustrados publicados y manuscritos que Esther Cho está preparando.",
     childrenKicker: "LIBRO ILUSTRADO · DISPONIBLE",
+    nativeEdition: {
+      title: "Grandes sueños de todos los colores",
+      eyebrow: "EDICIÓN EN ESPAÑOL · YA DISPONIBLE",
+      description: "La edición en español del libro ilustrado de Sung Yeon Cho. Cinco niños sueñan con convertirse en cosas sorprendentes. Una historia para leer juntos y conversar sobre lo que cada uno sueña.",
+      paperbackLabel: "Comprar el libro en español",
+      kindleLabel: "Leer la edición Kindle en español",
+      paperbackUrl: "https://www.amazon.es/dp/B0HRZ54WMS",
+      kindleUrl: "https://www.amazon.es/dp/B0HRVXGBVR",
+      cover: "https://m.media-amazon.com/images/I/71s1fdCsbwL._SL1499_.jpg",
+      coverAlt: "Portada original de Grandes sueños de todos los colores, la edición en español de Sung Yeon Cho.",
+    },
     childrenDescription: "Cinco niños sueñan con ser un perro, el pasto, un auto, el mar o un atardecer. Una historia cálida para leer en voz alta, hablar de nuestros sueños y despedir el día juntos.",
     germanKicker: "EDICIÓN EN ALEMÁN · LIBRO IMPRESO DISPONIBLE",
     germanDescription: "Große Träume in allen Farben es la edición alemana de este libro ilustrado. Ideal para regalar, leer antes de dormir y dejar volar la imaginación.",
