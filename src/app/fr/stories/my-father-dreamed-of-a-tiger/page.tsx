@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   description: "Un rêve de tigre, la naissance d’une petite fille et une plaisanterie de famille restée dans les mémoires.",
   alternates: {
     canonical: url,
-    languages: { en: original, "pt-BR": portuguese, es: spanish, fr: url, it: "https://esthercho.pages.dev/it/stories/my-father-dreamed-of-a-tiger/", "x-default": original },
+    languages: { en: original, "pt-BR": portuguese, es: spanish, fr: url, it: "https://esthercho.pages.dev/it/stories/my-father-dreamed-of-a-tiger/", ja: "https://esthercho.pages.dev/ja/stories/my-father-dreamed-of-a-tiger/", "x-default": original },
   },
   openGraph: {
     type: "article", url, locale: "fr_FR",
