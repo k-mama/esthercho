@@ -36,6 +36,7 @@ export interface LocalizedCopy {
     introTitle: string;
     intro: string;
     bookEyebrow: string;
+    buyLink?: string;
     bookTitle: string;
     bookBody: string;
     tableEyebrow: string;

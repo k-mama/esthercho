@@ -6,7 +6,7 @@ import { join } from "node:path";
 const routes = [
   { path: "", words: ["BIENVENIDOS A CASA DE ESTHER", "Una casa llena de historias y recuerdos", "La mesa"], links: ["/es/stories/", "/es/books/", "/es/notes/"] },
   { path: "stories", words: ["Mi padre soñó con un tigre", "No se ha inventado el resto", "Leer la historia", "Recuerdo registrado"], links: ["/es/stories/my-father-dreamed-of-a-tiger/", "/es/stories/the-youngest-daughter-in-every-house/"] },
-  { path: "books", words: ["Big Dreams in Every Color", "Große Träume in allen Farben", "MANUSCRITO EN PREPARACIÓN", "Maná para esta mañana"], links: ["https://www.amazon.com/dp/B0HQ9Z7SRD","https://www.amazon.de/dp/B0HRS6F2MH"] },
+  { path: "books", words: ["Grandes sueños de todos los colores", "Big Dreams in Every Color", "Große Träume in allen Farben", "MANUSCRITO EN PREPARACIÓN", "Maná para esta mañana"], links: ["https://www.amazon.es/dp/B0HRZ54WMS","https://www.amazon.es/dp/B0HRVXGBVR","https://www.amazon.com/dp/B0HQ9Z7SRD","https://www.amazon.de/dp/B0HRS6F2MH"] },
   { path: "studio", words: ["Dibujado a mano", "Reinterpretación editorial posterior"], links: ["/es/about/"] },
   { path: "about", words: ["Cho Sungyeon", "1985", "1988", "1992", "1999", "cursos del programa de maestría", "Bangladés"], links: ["https://www.amazon.com/author/sungyeoncho"] },
   { path: "notes", words: ["La mesa de cada mañana", "De esas mañanas está naciendo un libro"], links: ["/es/books/"] },
@@ -33,6 +33,7 @@ for (const route of routes) {
   if (route.path === "books") {
     if ((html.match(/<video[\s>]/g) ?? []).length < 3) throw Error("Three promotional videos missing");
     if (!html.includes("61IlRaRs5SL")) throw Error("Verified German cover missing");
+    if (!html.includes("71s1fdCsbwL")) throw Error("Verified Spanish cover missing");
     if (!html.includes("Tostadas francesas")) throw Error("Breakfast photo descriptions missing");
   }
   if (route.path === "about" && !html.includes("Esther Cho de pie frente a una ventana")) throw Error("About portrait description mismatch");
@@ -40,6 +41,6 @@ for (const route of routes) {
   count++;
 }
 const home = await readFile("out/es/index.html", "utf8");
-if (!home.includes("Comprar la edición en inglés")) throw Error("Direct-buy action missing");
+if (!home.includes("Comprar el libro en español") || !home.includes("https://www.amazon.es/dp/B0HRZ54WMS")) throw Error("Verified Spanish direct-buy action missing");
 if ((home.match(/<video[\s>]/g) ?? []).length < 4) throw Error("Missing original home video plus three trailers");
 console.log(`Spanish Latin American editorial & export audit: ${count}/9 passed`);

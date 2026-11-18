@@ -126,7 +126,7 @@ export function InternationalHome({ locale }: { locale: NewLocale }) {
       <ContentSection label={t.home.bookEyebrow} title={t.home.bookTitle} image="/media/books/big-dreams/cover.webp" imageAlt={altText(locale, "coverEnglish", "Original cover of Big Dreams in Every Color")}>
         <p>{t.home.bookBody}</p>
         {t.ui.buyAmazon ? (
-          <a className={styles.inlineLink} href="https://www.amazon.com/dp/B0HQ9Z7SRD" target="_blank" rel="noopener noreferrer">
+          <a className={styles.inlineLink} href={t.home.buyLink ?? "https://www.amazon.com/dp/B0HQ9Z7SRD"} target="_blank" rel="noopener noreferrer">
             {t.ui.buyAmazon} <span aria-hidden="true">↗</span>
           </a>
         ) : null}

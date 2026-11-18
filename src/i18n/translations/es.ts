@@ -38,7 +38,7 @@ export const es: LocalizedCopy = {
     available: "Ya disponible", inProgress: "Manuscrito en preparación",
     englishPaperback: "Libro en inglés en Amazon", germanPaperback: "Libro en alemán en Amazon",
     originalPhotos: "Fotografías originales de Esther Cho", workInProgress: "Recuerdo registrado",
-    viewBook: "Conoce el libro", meetAuthor: "Conoce a Esther", buyAmazon: "Comprar la edición en inglés",
+    viewBook: "Conoce el libro", meetAuthor: "Conoce a Esther", buyAmazon: "Comprar el libro en español",
   },
   home: {
     kicker: "BIENVENIDOS A CASA DE ESTHER",
@@ -47,6 +47,7 @@ export const es: LocalizedCopy = {
     introTitle: "Aquí conviven comidas, fotografías, dibujos e historias.",
     intro: "Junto al desayuno puede haber un versículo. Una foto antigua puede traer de vuelta un recuerdo de hace décadas. Todo forma parte de una misma vida.",
     bookEyebrow: "NUEVO LIBRO ILUSTRADO · YA DISPONIBLE",
+    buyLink: "https://www.amazon.es/dp/B0HRZ54WMS",
     bookTitle: "Big Dreams in Every Color",
     bookBody: "Un perro negro enorme, césped verde y suave, un auto amarillo, el mar azul y un atardecer naranja. Cinco niños imaginan lo imposible, hasta que una pequeña pregunta antes de dormir los lleva de vuelta a casa.",
     tableEyebrow: "LA MESA DE CADA MAÑANA",
