@@ -26,7 +26,7 @@ for (const [locale, lang] of Object.entries(locales)) {
   }
   await visit(join(root, locale));
 }
-if (rewritten !== 61) {
-  throw Error(`Expected 61 localized HTML pages (7 Korean + 6×9 languages), got ${rewritten}`);
+if (rewritten !== 62) {
+  throw Error(`Expected 62 localized HTML pages (8 Korean incl. /ko/home + 6×9 languages), got ${rewritten}`);
 }
 console.log(`Localized HTML lang attributes verified: ${rewritten} pages`);
