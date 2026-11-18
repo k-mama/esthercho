@@ -71,8 +71,8 @@ export interface LocalizedCopy {
     childrenKicker: string; childrenDescription: string;
     nativeEdition?: {
       title: string; eyebrow: string; description: string;
-      paperbackLabel: string; kindleLabel: string;
-      paperbackUrl: string; kindleUrl: string; cover: string; coverAlt: string;
+      paperbackLabel: string; kindleLabel?: string;
+      paperbackUrl: string; kindleUrl?: string; cover: string; coverAlt: string;
     };
     germanKicker: string; germanDescription: string;
     filmKicker: string; filmHeading: string;

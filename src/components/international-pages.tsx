@@ -123,7 +123,14 @@ export function InternationalHome({ locale }: { locale: NewLocale }) {
         </div>
       </section>
 
-      <ContentSection label={t.home.bookEyebrow} title={t.home.bookTitle} image="/media/books/big-dreams/cover.webp" imageAlt={altText(locale, "coverEnglish", "Original cover of Big Dreams in Every Color")}>
+      <ContentSection
+        label={t.home.bookEyebrow}
+        title={t.home.bookTitle}
+        image={t.books.nativeEdition?.cover ?? "/media/books/big-dreams/cover.webp"}
+        imageAlt={t.books.nativeEdition?.coverAlt ?? altText(locale, "coverEnglish", "Original cover of Big Dreams in Every Color")}
+        imageWidth={t.books.nativeEdition ? 1000 : 1232}
+        imageHeight={t.books.nativeEdition ? 1500 : 1850}
+      >
         <p>{t.home.bookBody}</p>
         {t.ui.buyAmazon ? (
           <a className={styles.inlineLink} href={t.home.buyLink ?? "https://www.amazon.com/dp/B0HQ9Z7SRD"} target="_blank" rel="noopener noreferrer">
@@ -284,9 +291,11 @@ function Books({ locale }: { locale: NewLocale }) {
         >
           <p>{b.nativeEdition.description}</p>
           <a className={styles.inlineLink} href={b.nativeEdition.paperbackUrl} target="_blank" rel="noopener noreferrer">{b.nativeEdition.paperbackLabel} ↗</a>
-          <span className={styles.actionSpacing}>
-            <a className={styles.inlineLink} href={b.nativeEdition.kindleUrl} target="_blank" rel="noopener noreferrer">{b.nativeEdition.kindleLabel} ↗</a>
-          </span>
+          {b.nativeEdition.kindleUrl && b.nativeEdition.kindleLabel ? (
+            <span className={styles.actionSpacing}>
+              <a className={styles.inlineLink} href={b.nativeEdition.kindleUrl} target="_blank" rel="noopener noreferrer">{b.nativeEdition.kindleLabel} ↗</a>
+            </span>
+          ) : null}
         </ContentSection>
       ) : null}
       <ContentSection label={b.childrenKicker} title="Big Dreams in Every Color" image="/media/books/big-dreams/cover.webp" imageAlt={altText(locale, "coverEnglish", "Original cover of Big Dreams in Every Color")} imageWidth={1232} imageHeight={1850}>
