@@ -28,10 +28,10 @@ function LinkTo({ locale, room, children }: { locale: NewLocale; room: RoomKey; 
 }
 
 function ContentSection({
-  label, title, children, image, imageAlt, reverse = false,
+  label, title, children, image, imageAlt, reverse = false, imageWidth = 1000, imageHeight = 1200,
 }: {
   label?: string; title: string; children: React.ReactNode; image?: string;
-  imageAlt?: string; reverse?: boolean;
+  imageAlt?: string; reverse?: boolean; imageWidth?: number; imageHeight?: number;
 }) {
   return (
     <section className={`${styles.section} ${reverse ? styles.reverse : ""}`}>
@@ -43,7 +43,7 @@ function ContentSection({
         </div>
         {image ? (
           <figure className={styles.figure}>
-            <Image src={image} alt={imageAlt ?? title} width={1000} height={1200} sizes="(max-width: 850px) 90vw, 42vw" className={styles.picture} />
+            <Image src={image} alt={imageAlt ?? title} width={imageWidth} height={imageHeight} sizes="(max-width: 850px) 90vw, 42vw" className={styles.picture} />
           </figure>
         ) : null}
       </div>
@@ -217,11 +217,11 @@ function Books({ locale }: { locale: NewLocale }) {
   const b = t.books;
   return (
     <>
-      <ContentSection label={b.childrenKicker} title="Big Dreams in Every Color" image="/media/books/big-dreams/cover.webp">
+      <ContentSection label={b.childrenKicker} title="Big Dreams in Every Color" image="/media/books/big-dreams/cover.webp" imageWidth={1232} imageHeight={1850}>
         <p>{b.childrenDescription}</p>
         <a className={styles.inlineLink} href="https://www.amazon.com/dp/B0HQ9Z7SRD" target="_blank" rel="noopener noreferrer">{t.ui.englishPaperback} ↗</a>
       </ContentSection>
-      <ContentSection label={b.germanKicker} title="Große Träume in allen Farben">
+      <ContentSection label={b.germanKicker} title="Große Träume in allen Farben" image="https://m.media-amazon.com/images/I/61IlRaRs5SL._SL1499_.jpg" imageWidth={1280} imageHeight={2048} imageAlt="Original cover of the published German picture book Große Träume in allen Farben">
         <p>{b.germanDescription}</p>
         <a className={styles.inlineLink} href="https://www.amazon.de/dp/B0HRS6F2MH" target="_blank" rel="noopener noreferrer">{t.ui.germanPaperback} ↗</a>
       </ContentSection>
