@@ -33,13 +33,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
       const es = `${siteUrl}/es${route}`;
       const fr = `${siteUrl}/fr${route}`;
       const it = `${siteUrl}/it${route}`;
-      const languages = { en, "pt-BR": pt, es, fr, it, "x-default": en };
+      const ja = `${siteUrl}/ja${route}`;
+      const languages = { en, "pt-BR": pt, es, fr, it, ja, "x-default": en };
       return [
         { url: en, alternates: { languages } },
         { url: pt, alternates: { languages } },
         { url: es, alternates: { languages } },
         { url: fr, alternates: { languages } },
         { url: it, alternates: { languages } },
+        { url: ja, alternates: { languages } },
       ];
     }),
   ];
