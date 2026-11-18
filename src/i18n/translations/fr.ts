@@ -155,11 +155,11 @@ export const fr: LocalizedCopy = {
       { year: "1992", detail: "Diplôme de peinture orientale à la Seoul National University." },
       { year: "1999", detail: "Validation des cours du cursus de master en pédagogie des arts à l’Ewha Womans University." },
     ],
-    educationText: "Esther a étudié à la Yewon School et à la Seoul Arts High School, puis obtenu son diplôme en peinture orientale à la Seoul National University. Elle a ensuite validé les enseignements du cursus de master en pédagogie des arts à l’Ewha Womans University. Cela ne signifie pas qu’un diplôme de master lui a été décerné.",
+    educationText: "Esther a étudié à la Yewon School et à la Seoul Arts High School, puis obtenu son diplôme en peinture orientale à la Seoul National University. Elle a ensuite suivi et validé les enseignements du cursus de master en pédagogie des arts à l’Ewha Womans University.",
     tableHeading: "La vie se déroule aussi autour de la table.",
     tableText: "L’écriture, le dessin, les repas, la prière et l’attention portée aux autres font partie de la même journée. Un carnet reste parfois ouvert près de l’assiette.",
     careHeading: "Une foi vécue au quotidien.",
-    careText: "Esther a accompagné des personnes ayant fui la Corée du Nord et a participé à des missions et à des activités bénévoles au Bangladesh."
+    careText: "Esther a accompagné des personnes ayant fui la Corée du Nord et a participé à des missions et à des activités bénévoles au Bangladesh.",
     makingHeading: "Esther continue de créer.",
     makingText: "Elle poursuit ses textes en prose, ses méditations et ses dessins. Les réinterprétations numériques sont identifiées séparément.",
   },
