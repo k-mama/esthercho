@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && node scripts/patch-localized-html-lang.mjs && node scripts/audit-localized-html.mjs && node scripts/audit-pt-br.mjs && node scripts/audit-es.mjs",
+    "build": "next build && node scripts/patch-localized-html-lang.mjs && node scripts/audit-localized-html.mjs && node scripts/audit-pt-br.mjs && node scripts/audit-es.mjs && node scripts/audit-fr.mjs",
     "start": "next start",
     "lint": "eslint",
     "audit:census": "node scripts/sprint0-census.mjs && node scripts/asset-integrity.mjs && node scripts/media-dimensions.mjs",
