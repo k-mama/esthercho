@@ -9,6 +9,7 @@ on:
       - src/components/international-pages.module.css
       - src/i18n/translations/pt-br.ts
       - src/i18n/translations/types.ts
+      - src/app/pt-br/stories/**
       - .github/workflows/pt-br-local-browser.yml
   workflow_dispatch:
 
@@ -46,6 +47,10 @@ jobs:
           test -s .reports/ptbr-browser/stories-desktop.png
           test -s .reports/ptbr-browser/books-desktop.png
           test -s .reports/ptbr-browser/about-desktop.png
+          "$CHROME" --headless --no-sandbox --disable-dev-shm-usage --disable-gpu --hide-scrollbars --window-size=1380,900 --virtual-time-budget=2300 --screenshot=.reports/ptbr-browser/tiger-desktop.png "http://127.0.0.1:8777/pt-br/stories/my-father-dreamed-of-a-tiger/"
+          "$CHROME" --headless --no-sandbox --disable-dev-shm-usage --disable-gpu --hide-scrollbars --window-size=390,844 --virtual-time-budget=2300 --screenshot=.reports/ptbr-browser/daughter-mobile.png "http://127.0.0.1:8777/pt-br/stories/the-youngest-daughter-in-every-house/"
+          test -s .reports/ptbr-browser/tiger-desktop.png
+          test -s .reports/ptbr-browser/daughter-mobile.png
       - name: Emit small visual proof for editorial inspection
         run: |
           python3 -m pip -q install Pillow
@@ -53,7 +58,7 @@ jobs:
           import base64,io
           from PIL import Image
           from pathlib import Path
-          for name in ("home-desktop","home-mobile","stories-desktop","books-desktop","about-desktop"):
+          for name in ("home-desktop","home-mobile","stories-desktop","books-desktop","about-desktop","tiger-desktop","daughter-mobile"):
               img=Image.open(Path(".reports/ptbr-browser")/(name+".png")).convert("RGB")
               img.thumbnail((960,760))
               buf=io.BytesIO()
