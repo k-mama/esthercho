@@ -9,6 +9,7 @@ on:
       - src/components/international-pages.module.css
       - src/components/language-picker.module.css
       - src/styles/japanese.css
+      - src/styles/korean.css
       - src/app/layout.tsx
       - scripts/ja-font-browser-proof.py
       - src/i18n/translations/ja.ts
@@ -58,6 +59,10 @@ jobs:
           "$CHROME" --headless --no-sandbox --disable-dev-shm-usage --disable-gpu --hide-scrollbars --window-size=390,844 --virtual-time-budget=2300 --screenshot=.reports/ja-browser/daughter-mobile.png "http://127.0.0.1:8777/ja/stories/the-youngest-daughter-in-every-house/"
           test -s .reports/ja-browser/tiger-desktop.png
           test -s .reports/ja-browser/daughter-mobile.png
+          "$CHROME" --headless --no-sandbox --disable-dev-shm-usage --disable-gpu --hide-scrollbars --window-size=1380,900 --virtual-time-budget=2300 --screenshot=.reports/ja-browser/korean-home.png "http://127.0.0.1:8777/ko/"
+          "$CHROME" --headless --no-sandbox --disable-dev-shm-usage --disable-gpu --hide-scrollbars --window-size=1380,900 --virtual-time-budget=2300 --screenshot=.reports/ja-browser/korean-stories.png "http://127.0.0.1:8777/ko/stories/"
+          test -s .reports/ja-browser/korean-home.png
+          test -s .reports/ja-browser/korean-stories.png
       - name: Diagnose actual Japanese navigation fonts with Chrome DevTools
         run: |
           python3 -m pip -q install websocket-client
@@ -70,7 +75,7 @@ jobs:
           import base64,io
           from PIL import Image
           from pathlib import Path
-          for name in ("home-desktop","home-mobile","stories-desktop","books-desktop","books-first-edition","about-desktop","tiger-desktop","daughter-mobile"):
+          for name in ("home-desktop","home-mobile","stories-desktop","books-desktop","books-first-edition","about-desktop","tiger-desktop","daughter-mobile","korean-home","korean-stories"):
               img=Image.open(Path(".reports/ja-browser")/(name+".png")).convert("RGB")
               img.thumbnail((960,760))
               buf=io.BytesIO()
