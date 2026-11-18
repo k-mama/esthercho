@@ -46,6 +46,8 @@ jobs:
           test -s .reports/es-browser/home-desktop.png
           test -s .reports/es-browser/home-mobile.png
           test -s .reports/es-browser/stories-desktop.png
+          "$CHROME" --headless --no-sandbox --disable-dev-shm-usage --disable-gpu --hide-scrollbars --window-size=1380,1800 --virtual-time-budget=2300 --screenshot=.reports/es-browser/books-first-edition.png "http://127.0.0.1:8777/es/books/"
+          test -s .reports/es-browser/books-first-edition.png
           test -s .reports/es-browser/books-desktop.png
           test -s .reports/es-browser/about-desktop.png
           "$CHROME" --headless --no-sandbox --disable-dev-shm-usage --disable-gpu --hide-scrollbars --window-size=1380,900 --virtual-time-budget=2300 --screenshot=.reports/es-browser/tiger-desktop.png "http://127.0.0.1:8777/es/stories/my-father-dreamed-of-a-tiger/"
@@ -59,7 +61,7 @@ jobs:
           import base64,io
           from PIL import Image
           from pathlib import Path
-          for name in ("home-desktop","home-mobile","stories-desktop","books-desktop","about-desktop","tiger-desktop","daughter-mobile"):
+          for name in ("home-desktop","home-mobile","stories-desktop","books-desktop","books-first-edition","about-desktop","tiger-desktop","daughter-mobile"):
               img=Image.open(Path(".reports/es-browser")/(name+".png")).convert("RGB")
               img.thumbnail((960,760))
               buf=io.BytesIO()
