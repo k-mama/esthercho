@@ -1,0 +1,76 @@
+name: Japanese local browser smoke (not production)
+
+on:
+  push:
+    branches:
+      - feature/multilingual-foundation-20261118
+    paths:
+      - src/components/international-pages.tsx
+      - src/components/international-pages.module.css
+      - src/components/language-picker.module.css
+      - src/i18n/translations/ja.ts
+      - src/i18n/path.ts
+      - src/i18n/translations/types.ts
+      - src/app/ja/stories/**
+      - .github/workflows/ja-local-browser.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  visual:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version-file: .node-version
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - name: Render unpublished Japanese pages in local headless browser
+        shell: bash
+        run: |
+          set -euo pipefail
+          command -v google-chrome || command -v google-chrome-stable || command -v chromium || command -v chromium-browser
+          CHROME=$(command -v google-chrome || command -v google-chrome-stable || command -v chromium || command -v chromium-browser)
+          python3 -m http.server 8777 --directory out >/tmp/ja-local-server.log 2>&1 &
+          sleep 2
+          mkdir -p .reports/ja-browser
+          "$CHROME" --headless --no-sandbox --disable-dev-shm-usage --disable-gpu --hide-scrollbars --window-size=1380,900 --virtual-time-budget=2300 --screenshot=.reports/ja-browser/home-desktop.png "http://127.0.0.1:8777/ja/"
+          "$CHROME" --headless --no-sandbox --disable-dev-shm-usage --disable-gpu --hide-scrollbars --window-size=390,844 --virtual-time-budget=2300 --screenshot=.reports/ja-browser/home-mobile.png "http://127.0.0.1:8777/ja/"
+          "$CHROME" --headless --no-sandbox --disable-dev-shm-usage --disable-gpu --hide-scrollbars --window-size=1380,900 --virtual-time-budget=2300 --screenshot=.reports/ja-browser/stories-desktop.png "http://127.0.0.1:8777/ja/stories/"
+          "$CHROME" --headless --no-sandbox --disable-dev-shm-usage --disable-gpu --hide-scrollbars --window-size=1380,900 --virtual-time-budget=2300 --screenshot=.reports/ja-browser/books-desktop.png "http://127.0.0.1:8777/ja/books/"
+          "$CHROME" --headless --no-sandbox --disable-dev-shm-usage --disable-gpu --hide-scrollbars --window-size=1380,900 --virtual-time-budget=2300 --screenshot=.reports/ja-browser/about-desktop.png "http://127.0.0.1:8777/ja/about/"
+          test -s .reports/ja-browser/home-desktop.png
+          test -s .reports/ja-browser/home-mobile.png
+          test -s .reports/ja-browser/stories-desktop.png
+          "$CHROME" --headless --no-sandbox --disable-dev-shm-usage --disable-gpu --hide-scrollbars --window-size=1380,1800 --virtual-time-budget=2300 --screenshot=.reports/ja-browser/books-first-edition.png "http://127.0.0.1:8777/ja/books/"
+          test -s .reports/ja-browser/books-first-edition.png
+          test -s .reports/ja-browser/books-desktop.png
+          test -s .reports/ja-browser/about-desktop.png
+          "$CHROME" --headless --no-sandbox --disable-dev-shm-usage --disable-gpu --hide-scrollbars --window-size=1380,900 --virtual-time-budget=2300 --screenshot=.reports/ja-browser/tiger-desktop.png "http://127.0.0.1:8777/ja/stories/my-father-dreamed-of-a-tiger/"
+          "$CHROME" --headless --no-sandbox --disable-dev-shm-usage --disable-gpu --hide-scrollbars --window-size=390,844 --virtual-time-budget=2300 --screenshot=.reports/ja-browser/daughter-mobile.png "http://127.0.0.1:8777/ja/stories/the-youngest-daughter-in-every-house/"
+          test -s .reports/ja-browser/tiger-desktop.png
+          test -s .reports/ja-browser/daughter-mobile.png
+      - name: Emit small visual proof for editorial inspection
+        run: |
+          python3 -m pip -q install Pillow
+          python3 - <<'PY'
+          import base64,io
+          from PIL import Image
+          from pathlib import Path
+          for name in ("home-desktop","home-mobile","stories-desktop","books-desktop","books-first-edition","about-desktop","tiger-desktop","daughter-mobile"):
+              img=Image.open(Path(".reports/ja-browser")/(name+".png")).convert("RGB")
+              img.thumbnail((960,760))
+              buf=io.BytesIO()
+              img.save(buf,format="JPEG",quality=55,optimize=True)
+              print("JA_PREVIEW_BEGIN:"+name+":"+base64.b64encode(buf.getvalue()).decode()+":JA_PREVIEW_END")
+          PY
+      - uses: actions/upload-artifact@v7
+        with:
+          name: ja-unpublished-browser-previews
+          path: .reports/ja-browser/*.png
+          retention-days: 14
