@@ -21,7 +21,7 @@ Only then: one single production deployment including all six.
 | Language | Translation draft | Individual editorial acceptance | Browser/mobile acceptance | Production |
 | --- | --- | --- | --- | --- |
 | German | Yes | In progress: German guide and verified German book edition checked | Not yet | Not released |
-| Portuguese (Brazil) | Yes | Pending | Not yet | Not released |
+| Portuguese (Brazil) | Yes: 7 rooms + 2 full stories | Internal editorial pass complete; independent native review pending | Local desktop/mobile screenshots and 9-page build audits passed; real-device release check pending | Not released |
 | Spanish | Yes | Pending | Not yet | Not released |
 | French | Yes | Pending | Not yet | Not released |
 | Italian | Yes | Pending | Not yet | Not released |
