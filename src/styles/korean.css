@@ -1,4 +1,7 @@
 /* Korean pages are typeset as Korean, not as translated English layouts. */
+/* Scope shared-header typography to the chosen document locale. The language
+   picker contains hidden <a lang="ko"> links on *every* page, so testing
+   body:has([lang="ko"]) incorrectly forces Korean fonts on Japanese menus. */
 [lang="ko"] {
   font-family: var(--font-korean);
   word-break: keep-all;
@@ -39,15 +42,15 @@
   line-height: 1.78;
 }
 
-body:has([lang="ko"]) .site-header-nav-link,
-body:has([lang="ko"]) .site-header-nav-mobile summary,
-body:has([lang="ko"]) .site-header-nav-mobile-menu,
-body:has([lang="ko"]) .site-footer {
+html:lang(ko) .site-header-nav-link,
+html:lang(ko) .site-header-nav-mobile summary,
+html:lang(ko) .site-header-nav-mobile-menu,
+html:lang(ko) .site-footer {
   font-family: var(--font-korean);
 }
 
-body:has([lang="ko"]) .site-header-nav-link,
-body:has([lang="ko"]) .site-header-nav-mobile summary {
+html:lang(ko) .site-header-nav-link,
+html:lang(ko) .site-header-nav-mobile summary {
   letter-spacing: -0.01em;
 }
 
