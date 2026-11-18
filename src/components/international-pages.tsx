@@ -254,7 +254,7 @@ function Stories({ locale }: { locale: NewLocale }) {
           </div>
         </section>
       ) : null}
-      <ContentSection title={s.memoryTitle} image="/media/esther/childhood-garden.jpg" imageAlt={altText(locale, "childhoodGarden", s.memoryTitle)}><p>{s.memoryBody}</p></ContentSection>
+      <ContentSection title={s.smallThingsTitle ?? s.memoryTitle} image="/media/esther/childhood-garden.jpg" imageAlt={altText(locale, "childhoodGarden", s.memoryTitle)}><p>{s.smallThingsBody ?? s.memoryBody}</p></ContentSection>
       <ContentSection title={s.closingTitle}><p>{s.closingBody}</p></ContentSection>
     </>
   );

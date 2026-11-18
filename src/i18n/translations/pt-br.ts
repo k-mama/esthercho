@@ -102,6 +102,8 @@ export const ptBr: LocalizedCopy = {
       "Uma vida com Deus",
       "A vida de hoje",
     ],
+    smallThingsTitle: "Uma coisa pequena pode trazer uma cena inteira de volta.",
+    smallThingsBody: "Um cheiro, uma mesa, uma época do ano, um objeto comum. Às vezes, é só disso que uma lembrança precisa para voltar.",
     closingTitle: "Acho que coleciono momentos felizes.",
     closingBody: "Também houve tempos difíceis. Ainda assim, muitas vezes é do riso que Esther se lembra primeiro.",
   },

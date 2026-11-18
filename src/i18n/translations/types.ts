@@ -60,6 +60,8 @@ export interface LocalizedCopy {
     availabilityNote: string;
     memoryTitle: string; memoryBody: string;
     lifeChapters?: string[];
+    smallThingsTitle?: string;
+    smallThingsBody?: string;
     closingTitle: string; closingBody: string;
   };
   books: {

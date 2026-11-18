@@ -148,6 +148,21 @@
 .libraryList small,.libraryList li>a { color:var(--local-muted); font:600 .78rem var(--font-interface); }
 .libraryList a { color:var(--local-ink); }
 .finePrint { font-size: .87rem; color:#6c7880; }
+.actionSpacing { display:inline-block; margin-left:1.2rem; }
+.homeTrailers { background:linear-gradient(145deg,#eff3f3,#f8f5f0); padding-block:clamp(4.5rem,8vw,8rem); }
+.homeTrailerGrid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:clamp(1rem,2vw,2rem); }
+.homeTrailerCard { display:flex; flex-direction:column; gap:2rem; padding:clamp(1.1rem,2.3vw,2.4rem); background:rgba(255,255,255,.55); border:1px solid rgba(21,51,77,.08); border-radius:14px; }
+.homeTrailerCard h3 { margin:0 0 .9rem; color:var(--local-ink); font:400 clamp(1.5rem,2.1vw,2rem)/1.2 var(--font-editorial); }
+.homeTrailerCard p:not(.eyebrow) { color:var(--local-muted); font:400 1.01rem/1.7 var(--font-editorial); }
+.homeTrailerCard video { width:100%; max-width:390px; margin:auto auto 0; aspect-ratio:9/16; object-fit:cover; border-radius:9px; background:#173650; }
+.storyTimeline { background:#f6f5ef; padding-block:clamp(5rem,10vw,9rem); }
+.storyTimeline h2 { max-width:24ch; font:400 clamp(2rem,4vw,3.8rem)/1.18 var(--font-editorial); }
+.storyTimeline > .container > p { color:var(--local-muted); max-width:750px; line-height:1.8; }
+.storyTimelineList { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1rem 2.5rem; list-style:none; padding:0; margin:3rem 0 0; }
+.storyTimelineList li { display:flex; align-items:baseline; gap:1rem; padding:1.2rem 0; border-bottom:1px solid rgba(21,51,77,.15); color:var(--local-ink); font:400 clamp(1.04rem,1.5vw,1.24rem)/1.5 var(--font-editorial); }
+.storyTimelineList li span { color:#8a9ba8; font:600 .68rem var(--font-interface); }
+@media(max-width:850px) { .homeTrailerGrid { grid-template-columns:1fr; } .homeTrailerCard { display:grid; grid-template-columns:1fr 160px; align-items:center; } .homeTrailerCard video { max-width:160px; } }
+@media(max-width:600px) { .homeTrailerCard { grid-template-columns:minmax(0,1fr) 112px; gap:1rem; } .homeTrailerCard video { max-width:112px; } .homeTrailerCard h3 { font-size:1.34rem; } .homeTrailerCard p:not(.eyebrow) { font-size:.88rem; } .storyTimelineList {grid-template-columns:1fr;} .actionSpacing {display:block;margin-left:0;} }
 .timeline { list-style: none; padding: 0; margin: 2rem 0 0; border-top: 1px solid rgba(21,51,77,.17); }
 .timeline li { display: grid; grid-template-columns: 4rem minmax(0,1fr); gap: 1rem; padding: .85rem 0; border-bottom: 1px solid rgba(21,51,77,.12); color: var(--local-muted); font: 400 .99rem/1.65 var(--font-interface); }
 .timeline strong { font-weight: 650; color: var(--local-ink); font-variant-numeric: tabular-nums; }
