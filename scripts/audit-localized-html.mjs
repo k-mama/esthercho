@@ -10,7 +10,7 @@ for(const [locale,lang] of Object.entries(locales)) {
     const html=await readFile(path, "utf8");
     if(!html.includes(`<html lang="${lang}"`)) throw Error(`Wrong lang: ${path}`);
     if(!html.includes(`rel="canonical"`)) throw Error(`Missing canonical: ${path}`);
-    if(!html.includes(`hreflang="pt-BR"`)) throw Error(`Missing pt-BR alternate: ${path}`);
+    if(!html.toLowerCase().includes(`hreflang="pt-br"`)) throw Error(`Missing pt-BR alternate: ${path}`);
     if(html.includes("잠금된 영문")) throw Error(`Leaked editorial jargon: ${path}`);
     if(!html.includes("Esther Cho")) throw Error(`Missing author brand: ${path}`);
     passed++;
