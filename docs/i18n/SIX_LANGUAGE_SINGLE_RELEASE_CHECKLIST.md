@@ -20,12 +20,12 @@ Only then: one single production deployment including all six.
 ## Current status
 | Language | Translation draft | Individual editorial acceptance | Browser/mobile acceptance | Production |
 | --- | --- | --- | --- | --- |
-| German | Yes | In progress: German guide and verified German book edition checked | Not yet | Not released |
+| German | 7 rooms + 2 translated stories | Internal editorial review complete; independent native German proof pending | 9/9 page and 70-page integrated QA passed; desktop/mobile checked; external German cover and real-device sign-off pending | Not released |
 | Portuguese (Brazil) | Yes: 7 rooms + 2 full stories | Internal editorial pass complete; independent native review pending | Local desktop/mobile screenshots and 9-page build audits passed; real-device release check pending | Not released |
 | Spanish (Latin America) | Yes: 7 rooms + 2 full stories | Internal editorial pass; independent regional native proof pending | Nine-page build, local screenshots, and original Spanish cover-load proof passed; real-device checks pending | Not released |
 | French | Yes: 7 rooms + 2 full stories | Internal editorial/localization pass completed; independent French native proof pending | Local desktop/mobile visual screenshots and 9-page build audit passed; real-device release check pending | Not released |
 | Italian | Yes: 7 rooms + 2 complete stories | Internal editorial/localization pass complete; independent native Italian proof pending | 9-page HTML/content test passed and local desktop/mobile previews reviewed; final real-device checks pending | Not released |
-| Japanese | Yes | Pending | Not yet | Not released |
+| Japanese | 7 rooms + 2 translated stories | Internal editorial review complete; independent native Japanese proof pending | 9/9 page and 70-page integrated QA passed; Japanese font and Korean-selector regression corrected; real-device sign-off pending | Not released |
 
 The six drafts exist to make shared routing testable but are **not** equivalent to editorial lock/approval. Review and accept them individually in the requested order.
 
