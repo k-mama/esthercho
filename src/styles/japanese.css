@@ -21,7 +21,10 @@ html:lang(ja) body {
 
 /* Never squeeze Japanese text into the Latin word spacing. */
 html:lang(ja) .site-header-nav-link,
-html:lang(ja) .site-header-subnav-desktop a {
+html:lang(ja) .site-header-subnav-desktop a,
+html:lang(ja) .site-header-nav-mobile summary {
+  font-family: "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho",
+    "Noto Serif CJK JP", serif;
   letter-spacing: 0.025em;
 }
 
