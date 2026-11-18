@@ -7,35 +7,35 @@ type Locale = "en" | "ko";
 const content = {
   en: {
     kicker: "BEHIND THE BOOK · MANNA ON THE TABLE",
-    title: "The mornings behind the cover."
+    title: "The mornings behind the cover.",
     introduction: [
       "Choosing a title and cover for Manna on the Table took longer than expected. Esther looked through photographs of breakfasts she had made: French toast with berries, a cup of coffee, sunlight falling across the counter. She tried different layouts, moved the title, and adjusted the light.",
       "Looking through those photographs brought back all the mornings behind them. She had been making breakfast, reading Scripture, and writing down her thoughts long before there was a book cover to choose.",
     ],
-    photoEyebrow: "01 / AT THE BREAKFAST TABLE"
-    photoHeading: "Breakfast, just as she made it."
+    photoEyebrow: "01 / AT THE BREAKFAST TABLE",
+    photoHeading: "Breakfast, just as she made it.",
     photoText: "These photographs come from Esther’s own breakfasts: French toast with berries, a bowl of fruit beside her coffee, and toast on a blue cloth. The dishes, food, and morning light were already part of her everyday life.",
     photoLabels: [
-      "French toast and berries in the kitchen"
-      "Fruit and coffee in the sunlight"
-      "Breakfast on a blue cloth"
+      "French toast and berries in the kitchen",
+      "Fruit and coffee in the sunlight",
+      "Breakfast on a blue cloth",
     ],
-    coverEyebrow: "02 / FINDING THE RIGHT COVER"
-    coverHeading: "Finding the right cover took time."
+    coverEyebrow: "02 / FINDING THE RIGHT COVER",
+    coverHeading: "Finding the right cover took time.",
     coverText: "She compared a blue table setting, a sunlit kitchen, and a cup of coffee beside fruit. The position of the title changed, along with the composition and light. She wanted the cover to feel like an invitation to the same table where she had begun writing.",
     coverLabels: [
       "Cover study · blue table setting",
-      "Cover study · breakfast in the sunlight"
+      "Cover study · breakfast in the sunlight",
       "Cover study · coffee and fruit",
     ],
-    homeEyebrow: "03 / A HOME REMEMBERED"
-    homeHeading: "A photograph from ten years ago."
+    homeEyebrow: "03 / A HOME REMEMBERED",
+    homeHeading: "A photograph from ten years ago.",
     homeText: "About ten years ago, Esther photographed the house in Cheongdam-dong where she had lived as a child. She kept the picture as a memory of home. Today, it has become part of the welcome film on her website. Readers are greeted by a glimpse of the house she remembers.",
-    mannaHeading: "Manna for this morning."
+    mannaHeading: "Manna for this morning.",
     mannaText: [
       "Looking back at the photograph of her childhood home and the breakfasts she had recorded, Esther began to see how these ordinary things had come together. She recognizes God’s providence in the years of preparation she can see only now.",
       "For Esther, manna means the food she prepares in the morning and the Scripture she receives that day. God provided manna in the wilderness one day at a time. The meal she ate yesterday cannot feed her today, and yesterday’s reading cannot replace today’s time with God.",
-      "Tomorrow morning, she will return to the table."
+      "Tomorrow morning, she will return to the table.",
     ],
     homepageLink: "Visit the welcome film",
     sectionLabel: "The making of Manna on the Table",
