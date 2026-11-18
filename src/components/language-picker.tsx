@@ -3,15 +3,14 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useRef } from "react";
-import { localeFromPath, roomFromPath } from "@/i18n/path";
-import { isNewLocale, translatedPath, websiteLocales } from "@/i18n/locales";
+import { localeFromPath, switchLanguagePath } from "@/i18n/path";
+import { isNewLocale, websiteLocales } from "@/i18n/locales";
 import { internationalInterface } from "@/i18n/interface";
 import styles from "./language-picker.module.css";
 
 export function LanguagePicker() {
   const pathname = usePathname();
   const current = localeFromPath(pathname);
-  const room = roomFromPath(pathname);
   const detailsRef = useRef<HTMLDetailsElement>(null);
   const label = isNewLocale(current) ? internationalInterface[current].chooseLanguage : current === "ko" ? "언어 선택" : "Select language";
   return (
@@ -27,7 +26,7 @@ export function LanguagePicker() {
         {websiteLocales.map((locale) => (
           <Link
             key={locale.route}
-            href={translatedPath(locale.route, room)}
+            href={switchLanguagePath(pathname, locale.route)}
             hrefLang={locale.htmlLang}
             lang={locale.htmlLang}
             aria-current={current === locale.route ? "page" : undefined}

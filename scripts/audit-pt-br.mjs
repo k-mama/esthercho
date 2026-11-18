@@ -36,6 +36,10 @@ for (const item of checks) {
     if (!html.includes("Torradas francesas")) throw Error("Breakfast photo description not localized");
   }
   if (item.room === "about" && !html.includes("Esther Cho em pé diante de uma janela")) throw Error("Author photo alt mismatch");
+  if (item.room.startsWith("stories/")) {
+    const englishPath = "/" + item.room.replace(/^stories\//, "stories/") + "/";
+    if (!html.includes(`href="${englishPath}"`)) throw Error(`[pt-BR] Story language toggle must preserve article: ${path}`);
+  }
   if (item.room === "stories" && !html.includes("Esther Cho sentada em uma poltrona")) throw Error("Stories photo alt mismatch");
   passed++;
 }
