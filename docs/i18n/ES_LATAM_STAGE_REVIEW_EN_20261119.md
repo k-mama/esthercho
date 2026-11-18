@@ -31,7 +31,7 @@ Book marketplace URLs and cover should be retested during final release QA; no b
 - Nine-route static HTML content/metadata/link tests added to `scripts/audit-es.mjs` and made mandatory in `npm run build`.
 - Existing PT-BR audit, CSS guards, lint, TypeScript and Next.js static export remained intact.
 - Local-only GitHub Actions browser screenshots captured for desktop and mobile home, Stories, Books, About and the two story detail pages. Layout was visually reviewed: warm original house opening, correct real Stories and About portraits, readable Spanish headings at desktop/mobile widths.
-- Added a below-hero book-cover loading check; record its final result before public release.
+- The below-hero Spanish edition cover was verified in headless Chrome: external original Amazon image loaded successfully (naturalWidth=1000, naturalHeight=1499). Local-only browser run `44337130415` passed; no production deployment.
 - A native Latin American Spanish editor has **not** independently proofread this work. Automated and internal editorial checks do not substitute for that acceptance gate.
 
 ## Outstanding publication gates
