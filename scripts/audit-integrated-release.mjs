@@ -25,7 +25,7 @@ function checkMeta(html,url,lang,requiredLangs){
   check(html.includes(`<html lang="${lang}"`),"HTML lang must be "+lang+" at "+url);
   check(html.includes(`rel="canonical" href="${url}"`) ||
     html.includes(`href="${url}" rel="canonical"`),"Canonical incorrect or missing "+url);
-  for(const [langCode,langTag] of requiredLangs){
+  for(const [,langTag] of requiredLangs){
     check(normalized(html).includes(`hreflang="${normalized(langTag)}"`),
       "No hreflang "+langTag+" at "+url);
   }
