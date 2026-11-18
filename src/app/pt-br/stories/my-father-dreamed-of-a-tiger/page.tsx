@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description: "Um sonho com um tigre, o nascimento de uma menina e uma brincadeira que ficou na história da família.",
   alternates: {
     canonical: url,
-    languages: { en: original, "pt-BR": url, "x-default": original },
+    languages: { en: original, "pt-BR": url, es: "https://esthercho.pages.dev/es/stories/my-father-dreamed-of-a-tiger/", "x-default": original },
   },
   openGraph: {
     type: "article", url, locale: "pt_BR",
