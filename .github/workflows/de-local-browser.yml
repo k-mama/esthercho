@@ -15,6 +15,7 @@ on:
       - .github/workflows/de-local-browser.yml
       - scripts/audit-integrated-release.mjs
       - scripts/patch-localized-html-lang.mjs
+      - scripts/de-book-cover-browser-proof.py
   workflow_dispatch:
 
 permissions:
@@ -57,6 +58,12 @@ jobs:
           "$CHROME" --headless --no-sandbox --disable-dev-shm-usage --disable-gpu --hide-scrollbars --window-size=390,844 --virtual-time-budget=2300 --screenshot=.reports/de-browser/daughter-mobile.png "http://127.0.0.1:8777/de/stories/the-youngest-daughter-in-every-house/"
           test -s .reports/de-browser/tiger-desktop.png
           test -s .reports/de-browser/daughter-mobile.png
+      - name: Verify German edition cover loads below Books hero
+        run: |
+          python3 -m pip -q install websocket-client Pillow
+          CHROME=$(command -v google-chrome || command -v google-chrome-stable || command -v chromium || command -v chromium-browser)
+          CHROME="$CHROME" python3 scripts/de-book-cover-browser-proof.py "http://127.0.0.1:8777/de/books/" ".reports/de-browser/books-german-cover.png" 1120
+          test -s .reports/de-browser/books-german-cover.png
       - name: Emit small visual proof for editorial inspection
         run: |
           python3 -m pip -q install Pillow
@@ -64,7 +71,7 @@ jobs:
           import base64,io
           from PIL import Image
           from pathlib import Path
-          for name in ("home-desktop","home-mobile","stories-desktop","books-desktop","books-first-edition","about-desktop","tiger-desktop","daughter-mobile"):
+          for name in ("home-desktop","home-mobile","stories-desktop","books-desktop","books-first-edition","books-german-cover","about-desktop","tiger-desktop","daughter-mobile"):
               img=Image.open(Path(".reports/de-browser")/(name+".png")).convert("RGB")
               img.thumbnail((960,760))
               buf=io.BytesIO()
