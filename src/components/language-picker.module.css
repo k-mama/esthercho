@@ -1,4 +1,5 @@
-.menu { position:relative; z-index:80; color:#f7f4eb; }
+.menu { position:relative; z-index:80; color:#193b55; }
+:global(body:has(.home-video-hero, .page-cover-shell)) .menu { color:#f7f4eb; }
 .trigger { display:flex; justify-content:center; align-items:center; gap:.4rem; min-height:40px; min-width:54px; cursor:pointer; list-style:none; border-radius:7px; font:650 .65rem var(--font-interface); letter-spacing:.07em; }
 .trigger::-webkit-details-marker { display:none; }
 .trigger:hover,.trigger:focus-visible { background:rgba(255,255,255,.1); }
