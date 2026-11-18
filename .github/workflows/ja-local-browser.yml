@@ -70,6 +70,13 @@ jobs:
               buf=io.BytesIO()
               img.save(buf,format="JPEG",quality=55,optimize=True)
               print("JA_PREVIEW_BEGIN:"+name+":"+base64.b64encode(buf.getvalue()).decode()+":JA_PREVIEW_END")
+          for name in ("home-desktop","stories-desktop","tiger-desktop"):
+              full=Image.open(Path(".reports/ja-browser")/(name+".png")).convert("RGB")
+              cropped=full.crop((max(0,full.width//2-250),0,min(full.width,full.width//2+330),120))
+              cropped=cropped.resize((1160,240))
+              buff=io.BytesIO()
+              cropped.save(buff,format="JPEG",quality=82,optimize=True)
+              print("JA_PREVIEW_BEGIN:"+name+"-nav-zoom:"+base64.b64encode(buff.getvalue()).decode()+":JA_PREVIEW_END")
           PY
       - uses: actions/upload-artifact@v7
         with:
