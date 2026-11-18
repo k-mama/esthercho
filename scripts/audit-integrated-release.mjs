@@ -26,8 +26,6 @@ function checkMeta(html,url,lang,requiredLangs){
   check(html.includes(`rel="canonical" href="${url}"`) ||
     html.includes(`href="${url}" rel="canonical"`),"Canonical incorrect or missing "+url);
   for(const [langCode,langTag] of requiredLangs){
-    const expected=langCode==="ko"?url.replace(/^https:\/\/[^/]+\/[^/]+\//,origin+"/ko/"):null;
-    void expected;
     check(normalized(html).includes(`hreflang="${normalized(langTag)}"`),
       "No hreflang "+langTag+" at "+url);
   }
@@ -49,7 +47,7 @@ for(const [locale,htmlLang] of langs){
     if(!html)continue;
     const url=urlFor(locale,room);
     checkMeta(html,url,htmlLang,langs);
-    checkMedia(html,url);
+    await checkMedia(html,url);
     mediaChecks++;
     if(["de","pt-br","es","fr","it","ja"].includes(locale)){
       check(html.includes('Esther Cho'),"Brand missing "+url);
@@ -87,7 +85,7 @@ for(const [locale,htmlLang] of storyLocales){
       check(html.includes(`href="${path}"`),
         "Language picker does not preserve article "+locale+" -> "+target+" for "+slug);
     }
-    checkMedia(html,url);
+    await checkMedia(html,url);
     storyCount++;
   }
 }
