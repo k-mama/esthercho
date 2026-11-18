@@ -94,7 +94,7 @@ export function InternationalHome({ locale }: { locale: NewLocale }) {
   const rooms: RoomKey[] = ["notes", "stories", "archive", "studio", "books", "about"];
   return (
     <main className={styles.root} lang={locale === "pt-br" ? "pt-BR" : locale}>
-      <section className={styles.hero}>
+      <section className={`${styles.hero} home-video-hero`}>
         <video className={styles.heroVideo} autoPlay muted loop playsInline controls preload="metadata" poster="/media/home/esther-house-entry-poster.jpg">
           <source src="/media/home/esther-house-entry.mp4" type="video/mp4" />
         </video>
@@ -188,7 +188,7 @@ export function InternationalRoom({ locale, room }: { locale: NewLocale; room: R
   return (
     <main className={styles.root} lang={lang}>
       <PageCover
-        eyebrow={t.nav[room]} title={title} description={subtitle}
+        eyebrow={t.nav[room]} title={room === "about" ? "Esther Cho" : title} description={subtitle}
         image={cover.desktop} mobileImage={cover.mobile}
         alt={altText(locale, heroAltKeys[room], `${t.nav[room]} · Esther Cho`)}
         objectPosition={cover.position ?? "center center"} align="left" shade="medium"
