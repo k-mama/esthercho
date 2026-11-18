@@ -108,7 +108,7 @@ export const de: LocalizedCopy = {
     title: "Esther Cho · 조성연", subtitle: "Die koreanische Autorin und Künstlerin hinter diesen Geschichten.",
     biography: "Esther Cho ist der internationale Autorenname von Cho Sungyeon (조성연). Sie schreibt und zeichnet über das, was sie erlebt und in Erinnerung behalten hat: Glauben, Familie, Kunst, Mahlzeiten und ihr Zuhause.",
     educationHeading: "Ein Leben mit der Kunst.",
-    educationText: "Esther besuchte die Yewon School und die Seoul Arts High School, studierte traditionelle ostasiatische Malerei an der Seoul National University und schloss später ein Aufbaustudium in Kunsterziehung an der Ewha Womans University ab.",
+    educationText: "Esther besuchte die Yewon School und die Seoul Arts High School, studierte traditionelle ostasiatische Malerei an der Seoul National University und absolvierte später die Lehrveranstaltungen eines Masterstudiengangs in Kunstpädagogik an der Ewha Womans University.",
     tableHeading: "Das Leben spielt sich oft am Tisch ab.",
     tableText: "Zeichnen, Schreiben, Kochen, Gebet und Familienalltag gehören für Esther zusammen. Neben dem Frühstück liegt nicht selten ein Notizbuch mit einem Bibelvers.",
     careHeading: "Glaube im Alltag.",
