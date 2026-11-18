@@ -37,7 +37,7 @@ export default function TigerDreamSpanish() {
         <article className="story-detail-copy">
           <p className="story-detail-opening">Antes de que yo naciera, mi padre soñó con un tigre.</p>
           <p>Pero la bebé que llegó fue una niña.</p>
-          <blockquote>«Debió de haber sido un gato».</blockquote>
+          <blockquote>“Debió ser un gato”.</blockquote>
           <p>
             Por ahora, esto es todo lo que Esther ha dejado registrado de ese recuerdo.
             Es breve, tiene sus detalles, y basta para abrir el archivo sin fingir que recuerda algo más.

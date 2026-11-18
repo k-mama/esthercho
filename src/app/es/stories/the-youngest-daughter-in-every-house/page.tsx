@@ -50,9 +50,9 @@ export default function YoungestDaughterSpanish() {
           </p>
           <p>
             Uno de los lugares donde me quedaba a menudo era la casa de un tío que vivía cerca.
-            Era un hanok grande, una casa tradicional coreana, con un patio cuadrado y un cantero de flores.
+            Era un hanok grande, una casa tradicional coreana, con un patio cuadrado y un espacio sembrado de flores.
             Allí estaban mi abuela, mi bisabuela y mis tíos.
-            Uno de ellos todavía iba a la preparatoria.
+            Uno de ellos todavía estaba en la escuela secundaria.
             Recuerdo dos construcciones separadas y un reloj en el dormitorio que sonaba:
             tic, tic, tic.
           </p>

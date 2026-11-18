@@ -11,7 +11,7 @@ const routes = [
   { path: "about", words: ["Cho Sungyeon", "1985", "1988", "1992", "1999", "cursos del programa de maestría", "Bangladés"], links: ["https://www.amazon.com/author/sungyeoncho"] },
   { path: "notes", words: ["La mesa de cada mañana", "De esas mañanas está naciendo un libro"], links: ["/es/books/"] },
   { path: "archive", words: ["Álbum de infancia", "Las fotos antiguas conservan su historia"], links: ["/es/stories/"] },
-  { path: "stories/my-father-dreamed-of-a-tiger", words: ["Antes de que yo naciera", "Debió de haber sido un gato", "NOTA DEL ARCHIVO"], links: ["/es/stories/the-youngest-daughter-in-every-house/", "/stories/my-father-dreamed-of-a-tiger/"] },
+  { path: "stories/my-father-dreamed-of-a-tiger", words: ["Antes de que yo naciera", "Debió ser un gato", "NOTA DEL ARCHIVO"], links: ["/es/stories/the-youngest-daughter-in-every-house/", "/stories/my-father-dreamed-of-a-tiger/"] },
   { path: "stories/the-youngest-daughter-in-every-house", words: ["En mi casa, yo era la hija mayor", "tic, tic, tic", "la admiración puede convertirse", "NOTA DEL ARCHIVO"], links: ["/es/stories/", "/stories/the-youngest-daughter-in-every-house/"] },
 ];
 
