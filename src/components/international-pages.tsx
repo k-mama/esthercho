@@ -5,6 +5,7 @@ import { HomeHeroVideo } from "@/app/home-hero-video";
 import type { TranslationLocale } from "@/config/languages";
 import { localizedHref, localeInterface } from "@/config/languages";
 import { translations } from "@/content/international";
+import { editorial } from "@/content/editorial-locales";
 
 type Section = "home" | "stories" | "books" | "studio" | "about" | "notes" | "archive";
 type InternationalProps = { locale: TranslationLocale; section: Section };
@@ -108,6 +109,7 @@ function EditionGallery({locale,compact=false}:{locale:TranslationLocale;compact
 }
 function IntlHome({locale}: {locale:TranslationLocale}) {
   const t=translations[locale];
+  const e=editorial[locale];
   const sceneImage = ["/media/esther/morning-table.jpg","/media/esther/childhood-garden.jpg","/media/esther/bangladesh-service.jpg","/media/esther/still-making-father-child-collage-20260802.png"];
   const scenePaths = ["/notes","/archive","/stories","/studio"];
   return <main className="intl-home">
@@ -156,6 +158,7 @@ function IntlHome({locale}: {locale:TranslationLocale}) {
 }
 function IntlBooks({locale}:{locale:TranslationLocale}) {
   const t=translations[locale];
+  const e=editorial[locale];
   return <main className="intl-page intl-books">
     <Cover section="books" locale={locale}/>
     <section className="intl-section"><div className="container">
@@ -184,6 +187,7 @@ function IntlBooks({locale}:{locale:TranslationLocale}) {
 }
 function IntlStories({locale}:{locale:TranslationLocale}) {
   const t=translations[locale];
+  const e=editorial[locale];
   const slug=["my-father-dreamed-of-a-tiger","the-youngest-daughter-in-every-house"];
   return <main className="intl-page">
     <Cover section="stories" locale={locale}/>
@@ -217,6 +221,7 @@ function IntlStories({locale}:{locale:TranslationLocale}) {
 }
 function IntlStoryDetail({locale,which}:{locale:TranslationLocale;which:0|1}) {
   const t=translations[locale];
+  const e=editorial[locale];
   const title=t.storyTitles[which];
   const paragraphs=which===0?t.father:t.daughter;
   return <main className="intl-page">
@@ -239,6 +244,7 @@ function IntlStoryDetail({locale,which}:{locale:TranslationLocale;which:0|1}) {
 }
 function IntlNotes({locale}:{locale:TranslationLocale}) {
   const t=translations[locale];
+  const e=editorial[locale];
   return <main className="intl-page"><Cover section="notes" locale={locale}/>
     <section className="intl-section"><div className="container">
       <h2>{t.notesHeading}</h2><p className="intl-wide-copy">{t.notesText}</p>
@@ -254,6 +260,7 @@ function IntlNotes({locale}:{locale:TranslationLocale}) {
 }
 function IntlArchive({locale}:{locale:TranslationLocale}) {
   const t=translations[locale];
+  const e=editorial[locale];
   const chapters=[
     [t.archiveHeading,t.archiveText,"/media/esther/childhood-house.jpg"],
     [t.archiveHouse,t.archiveHouseText,"/media/esther/childhood-house.jpg"],
@@ -272,6 +279,7 @@ function IntlArchive({locale}:{locale:TranslationLocale}) {
 }
 function IntlStudio({locale}:{locale:TranslationLocale}) {
   const t=translations[locale];
+  const e=editorial[locale];
   return <main className="intl-page"><Cover section="studio" locale={locale}/>
     <section className="intl-section"><div className="container"><h2>{t.studioHeading}</h2>
       <p className="intl-wide-copy">{t.studioText}</p>
@@ -285,6 +293,7 @@ function IntlStudio({locale}:{locale:TranslationLocale}) {
 }
 function IntlAbout({locale}:{locale:TranslationLocale}) {
   const t=translations[locale];
+  const e=editorial[locale];
   const chapters=[
     [t.aboutEducation,t.aboutEducationText,"/media/esther/young-artist.jpg"],
     [t.aboutHome,t.aboutHomeText,"/media/esther/morning-table.jpg"],
