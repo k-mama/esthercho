@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { PageCover } from "@/components/page-cover";
+import { ChildhoodHomeStory } from "@/components/childhood-home-story";
 import "./archive.css";
 
 export const metadata: Metadata = {
@@ -68,6 +69,8 @@ export default function ArchivePage() {
           </div>
         </div>
       </section>
+
+      <ChildhoodHomeStory locale="en" />
 
       <section className="childhood-garden" aria-labelledby="childhood-garden-title">
         <div className="container childhood-garden-inner">
