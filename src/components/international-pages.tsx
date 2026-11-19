@@ -108,7 +108,7 @@ function EditionGallery({locale,compact=false}:{locale:TranslationLocale;compact
       <div className="intl-edition-copy">
         <p className="intl-overline">{t[edition.key]}</p>
         <h3>{edition.name}</h3>
-        <p>{e.books.editionInfo}</p>
+        <p>{i===0?e.books.originalInfo:e.books.editionInfo}</p>
         <div className="intl-edition-links">
           <a href={edition.amazonPaperback} aria-label={`${t.paperback}: ${edition.name}`}
             target="_blank" rel="noopener noreferrer">{t.paperback} ↗</a>
