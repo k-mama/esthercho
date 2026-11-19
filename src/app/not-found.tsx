@@ -12,6 +12,7 @@ const messages: Record<SiteLocale,string> = {
   fr: "Retour à l’accueil d’Esther Cho…",
   it: "Ritorno alla pagina iniziale di Esther Cho…",
   ja: "エスター・チョーのホームへ戻ります…",
+  "pt-br": "Voltando à página inicial de Esther Cho…",
 };
 
 export default function NotFound() {
