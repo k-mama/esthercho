@@ -161,27 +161,59 @@ function IntlBooks({locale}:{locale:TranslationLocale}) {
   const e=editorial[locale];
   return <main className="intl-page intl-books">
     <Cover section="books" locale={locale}/>
-    <section className="intl-section"><div className="container">
-      <p className="intl-overline">BIG DREAMS IN EVERY COLOR · SUNG YEON CHO</p>
-      <h2>{t.bookIntro}</h2><p className="intl-wide-copy">{t.bookText}</p>
+    <section className="intl-section" id="new-release"><div className="container">
+      <p className="intl-overline">{e.books.newBookLabel}</p>
+      <h2>Big Dreams in Every Color</h2>
+      <p className="intl-overline">{e.books.byline}</p>
+      <h3>{t.bookIntro}</h3>
+      <p className="intl-wide-copy">{t.bookText}</p>
       <EditionGallery locale={locale}/>
     </div></section>
     <section className="intl-section intl-soft">
       <div className="container">
-        <p className="intl-overline">BIG DREAMS IN EVERY COLOR</p><h2>{t.booksTitle}</h2>
-        <div className="intl-video-grid">{bookVideos.map((video,i)=><video key={video} controls playsInline preload="none" poster={videoPosters[i]} aria-label={`Big Dreams in Every Color · ${i+1}`}><source src={video} type="video/mp4"/></video>)}</div>
+        <p className="intl-overline">{t.booksTitle}</p>
+        <h2>Big Dreams in Every Color</h2>
+        <div className="intl-video-grid">
+          {bookVideos.map((video,i)=><figure key={video} className="intl-video-item">
+            <video controls playsInline preload="none" poster={videoPosters[i]}
+              aria-label={e.books.videos[i].aria}>
+              <source src={video} type="video/mp4"/>
+            </video>
+            <figcaption>
+              <span className="intl-overline">{e.books.videos[i].label}</span>
+              <strong>{e.books.videos[i].title}</strong>
+              <span>{e.books.videos[i].description}</span>
+            </figcaption>
+          </figure>)}
+        </div>
       </div>
     </section>
-    <section className="intl-section"><div className="container">
-      <p className="intl-overline">{t.mannaTitle}</p><h2>Manna on the Table</h2>
-      <p className="intl-wide-copy">{t.mannaText}</p>
-      <h3>{t.mannaPhotos}</h3><p>{t.mannaPhotosText}</p>
+    <section className="intl-section" id="manna-on-the-table"><div className="container">
+      <p className="intl-overline">{e.books.manuscriptKicker}</p>
+      <h2>Manna on the Table</h2>
+      <p className="intl-overline">{e.books.manuscriptStatus}</p>
+      <p className="intl-wide-copy">{e.books.manuscriptDeck}</p>
+      <p>{e.books.manuscriptBody}</p>
+      <Link className="intl-more" href={localizedHref(locale,"/notes")}>{e.books.manuscriptLink} ↗</Link>
+      <h3>{e.books.manuscriptFactsHeading}</h3>
+      <dl className="intl-manuscript-facts">
+        {e.books.manuscriptFacts.map(([label,value])=><div key={label}><dt>{label}</dt><dd>{value}</dd></div>)}
+      </dl>
+    </div></section>
+    <section className="intl-section intl-soft" id="making-of-manna"><div className="container">
+      <p className="intl-overline">{t.mannaTitle}</p>
+      <h2>{e.books.makingHeading}</h2>
+      {e.books.makingIntro.map(p=><p className="intl-wide-copy" key={p}>{p}</p>)}
+      <h3>{t.mannaPhotos}</h3>
+      <p>{e.books.makingPhotoBody}</p>
       <Album sources={breakfast} captions={t.breakfastCaptions}/>
+      <h3>{t.mannaStoryTitle}</h3>
+      <p>{e.books.makingCoverBody}</p>
       <Album sources={coverStudies} captions={t.coverCaptions}/>
-      <h3>{t.mannaStoryTitle}</h3><p>{t.mannaStoryText}</p>
-      <h3>{t.mannaHouseTitle}</h3><p>{t.mannaHouseText}</p>
-      <h3>{t.mannaDailyTitle}</h3><p>{t.mannaDailyText}</p>
-      <Link className="intl-more" href={localizedHref(locale,"/notes")}>{t.notesTitle} ↗</Link>
+      <h3>{t.mannaHouseTitle}</h3><p>{e.books.makingHomeBody}</p>
+      <Link className="intl-more" href={localizedHref(locale)}>{t.mannaHouseTitle} ↗</Link>
+      <h3>{t.mannaDailyTitle}</h3>
+      {e.books.makingManna.map(p=><p key={p}>{p}</p>)}
     </div></section>
   </main>;
 }
