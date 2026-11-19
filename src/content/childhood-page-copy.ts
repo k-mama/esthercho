@@ -99,7 +99,8 @@ export const childhoodPageCopy: Record<SiteLocale, {
     "photosTitle": "As fotos foram tiradas em épocas diferentes.",
     "photosText": "As fotos da casa foram feitas muitos anos depois; a foto da família é da nossa infância. Imagens recriadas mais tarde são identificadas como trabalhos posteriores, nunca como fotos antigas.",
     "endingTitle": "Ainda não contei tudo sobre aquela casa."
-  }  "zh-cn": {
+  },
+  "zh-cn": {
   "introTitle": "问起最幸福的日子",
   "introText": "母亲、弟妹和我想起的，都是同一栋房子：首尔清潭洞曾经共同生活的家。",
   "gardenTitle": "照片里，有小时候的我。",
