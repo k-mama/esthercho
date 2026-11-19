@@ -147,10 +147,18 @@ function IntlHome({locale}: {locale:TranslationLocale}) {
         <h2>Big Dreams in Every Color</h2>
         <p className="intl-wide-copy">{t.bookIntro}</p><p>{t.bookText}</p>
         <EditionGallery locale={locale} compact/>
-        <div className="intl-video-grid">{bookVideos.map((video,i) =>
-          <video key={video} controls playsInline preload="none" poster={videoPosters[i]} aria-label={`Big Dreams in Every Color · ${i+1}`}>
-            <source src={video} type="video/mp4"/>
-          </video>)}
+        <div className="intl-video-grid">
+          {bookVideos.map((video,i)=><figure key={video} className="intl-video-item">
+            <video controls playsInline preload="none" poster={videoPosters[i]}
+              aria-label={e.books.videos[i].aria}>
+              <source src={video} type="video/mp4"/>
+            </video>
+            <figcaption>
+              <span className="intl-overline">{e.books.videos[i].label}</span>
+              <strong>{e.books.videos[i].title}</strong>
+              <span>{e.books.videos[i].description}</span>
+            </figcaption>
+          </figure>)}
         </div>
         <Link className="intl-more" href={localizedHref(locale,"/books")}>{t.booksTitle} ↗</Link>
       </div>
