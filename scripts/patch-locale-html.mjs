@@ -2,7 +2,7 @@ import { readFile, readdir, writeFile } from "node:fs/promises";
 import path from "node:path";
 
 const outputDir = path.join(process.cwd(), "out");
-const locales = new Set(["ko", "de", "es", "fr", "it", "ja", "pt-br"]);
+const locales = new Set(["ko", "de", "es", "fr", "it", "ja", "pt-br", "zh-cn", "zh-tw"]);
 const counts = Object.fromEntries([...locales].map((locale) => [locale, 0]));
 
 async function walk(dir) {
@@ -19,11 +19,11 @@ async function walk(dir) {
     const original = await readFile(full, "utf8");
     const rootTag = /<html\b[^>]*>/i.exec(original)?.[0];
     if (!rootTag) throw new Error(`Missing HTML root tag: ${full}`);
-    const htmlLang = locale === "pt-br" ? "pt-BR" : locale;
+    const htmlLang = locale === "pt-br" ? "pt-BR" : locale === "zh-cn" ? "zh-Hans" : locale === "zh-tw" ? "zh-Hant" : locale;
     if (!/\blang="en"/.test(rootTag) && !new RegExp(`\\blang="${htmlLang}"`).test(rootTag)) {
       throw new Error(`Unexpected root language in ${full}: ${rootTag.slice(0, 120)}`);
     }
-    const fixed = original.replace(rootTag, rootTag.replace(/\blang="(?:en|ko|de|es|fr|it|ja|pt-BR|pt-br)"/, `lang="${htmlLang}"`));
+    const fixed = original.replace(rootTag, rootTag.replace(/\blang="(?:en|ko|de|es|fr|it|ja|pt-BR|pt-br|zh-cn|zh-tw|zh-Hans|zh-Hant)"/, `lang="${htmlLang}"`));
     if (fixed !== original) await writeFile(full, fixed);
     counts[locale] += 1;
   }
