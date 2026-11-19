@@ -55,9 +55,7 @@ export function SiteHeader() {
   const languageLabel = localeCopy.selector;
   const contentPath = normalizeContentPath(pathname);
   const languageHref = (language: typeof supportedLocales[number]) =>
-    language === "ko" && contentPath.startsWith("/stories/")
-      ? localizedHref(language, "/stories")
-      : localizedHref(language, contentPath);
+    localizedHref(language, contentPath);
   const menuLabel: Record<typeof supportedLocales[number], string> = {
     en: "MENU", ko: "메뉴", de: "MENÜ", es: "MENÚ", fr: "MENU", it: "MENU", ja: "メニュー",
   };
