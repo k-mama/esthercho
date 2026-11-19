@@ -57,7 +57,7 @@ export function SiteHeader() {
   const languageHref = (language: typeof supportedLocales[number]) =>
     localizedHref(language, contentPath);
   const menuLabel: Record<typeof supportedLocales[number], string> = {
-    en: "MENU", ko: "메뉴", de: "MENÜ", es: "MENÚ", fr: "MENU", it: "MENU", ja: "メニュー", "pt-br": "MENU",
+    en: "MENU", ko: "메뉴", de: "MENÜ", es: "MENÚ", fr: "MENU", it: "MENU", ja: "メニュー", "pt-br": "MENU", "zh-cn": "菜单", "zh-tw": "選單",
   };
 
   const closeMobileMenu = () => {
