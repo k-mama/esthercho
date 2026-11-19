@@ -23,3 +23,5 @@
   Content-Language: it
 /ja/*
   Content-Language: ja
+/pt-br/*
+  Content-Language: pt-BR
