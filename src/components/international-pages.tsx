@@ -193,8 +193,21 @@ function IntlStories({locale}:{locale:TranslationLocale}) {
     <Cover section="stories" locale={locale}/>
     <section className="intl-section"><div className="container">
       <p className="intl-overline">{t.storiesTitle}</p>
-      <h2>{t.storiesIntro}</h2><p className="intl-wide-copy">{t.storiesText}</p>
-      <h3>{t.storiesCollection}</h3>
+      <h2>{t.storiesIntro}</h2>
+      <p className="intl-wide-copy">{t.storiesText}</p>
+      <p>{e.stories.introMore}</p>
+    </div></section>
+    <section className="intl-section intl-soft"><div className="container">
+      <p className="intl-overline">{e.stories.featuredLabel}</p>
+      <h2>{t.storyTitles[0]}</h2>
+      <p className="intl-wide-copy">{e.stories.featuredLead}</p>
+      <p>{e.stories.featuredNote}</p>
+      <Link className="intl-more" href={localizedHref(locale,`/stories/${slug[0]}`)}>{e.stories.featuredAction} ↗</Link>
+    </div></section>
+    <section className="intl-section"><div className="container">
+      <p className="intl-overline">{t.storiesCollection}</p>
+      <h2>{t.storiesCollection}</h2>
+      <p>{e.stories.collectionLead}</p>
       <ol className="intl-story-list">
         {t.storyTitles.map((title,i)=><li key={title}>
           <span>{String(i+1).padStart(2,"0")}</span>
@@ -202,16 +215,21 @@ function IntlStories({locale}:{locale:TranslationLocale}) {
           <small>{i<2?t.storyCta:t.recorded}</small>
         </li>)}
       </ol>
-      <p className="intl-wide-copy">{t.storiesClosing}</p>
     </div></section>
     <section className="intl-section intl-soft"><div className="container">
       <p className="intl-overline">{t.storiesTitle}</p>
-      <h2>{t.storiesIntro}</h2>
+      <h2>{e.stories.timelineTitle}</h2><p className="intl-wide-copy">{e.stories.timelineBody}</p>
       <ol className="intl-story-list">
         {t.life.map((chapter,i) => <li key={chapter}>
           <span>{String(i+1).padStart(2,"0")}</span><span>{chapter}</span>
         </li>)}
       </ol>
+    </div></section>
+    <section className="intl-section"><div className="container">
+      <p className="intl-overline">{t.storiesClosing}</p>
+      <h2>{e.stories.returningTitle}</h2>
+      <p className="intl-wide-copy">{e.stories.returningBody}</p>
+      <Link className="intl-more" href={localizedHref(locale,"/archive")}>{e.stories.returningLink} ↗</Link>
     </div></section>
     <section className="intl-ending"><div className="container">
       <h2>{t.quote}</h2><p className="intl-wide-copy">{t.quoteText}</p>
