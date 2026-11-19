@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { navigationConfig } from "@/config/navigation";
+import { supportedLocales, languageNames, localeInterface, localeFromPath, normalizeContentPath, localizedHref } from "@/config/languages";
 
 function GlobeIcon() {
   return (
@@ -93,6 +94,9 @@ function getLanguageHref(pathname: string, isKorean: boolean) {
 export function SiteHeader() {
   const pathname = usePathname();
   const mobileMenuRef = useRef<HTMLDetailsElement>(null);
+  const languageMenuRef = useRef<HTMLDetailsElement>(null);
+  const locale = localeFromPath(pathname);
+  const localeCopy = localeInterface[locale];
 
   const isKorean = pathname === "/ko" || pathname.startsWith("/ko/");
   const isHome =
@@ -104,17 +108,15 @@ export function SiteHeader() {
     pathname === "/ko/home" ||
     pathname === "/ko/home/";
 
-  const navItems = isKorean ? navigationConfig.ko : navigationConfig.en;
-  const roomItems = isKorean
-    ? navigationConfig.roomsKo
-    : navigationConfig.roomsEn;
+  const navItems = localeCopy.primary.map((title, index) => ({
+    title, href: localizedHref(locale, ["/stories", "/books", "/studio", "/about"][index])
+  }));
+  const roomItems = localeCopy.rooms.map((title, index) => ({
+    title, href: localizedHref(locale, ["/notes", "/archive"][index])
+  }));
 
-  const homeHref = isKorean ? "/ko/" : "/";
-  const languageHref = getLanguageHref(pathname, isKorean);
-
-  const languageLabel = isKorean
-    ? "영문 홈페이지로 이동"
-    : "한글 홈페이지로 이동";
+  const homeHref = localizedHref(locale);
+  const languageLabel = localeCopy.selector;
 
   const closeMobileMenu = () => {
     mobileMenuRef.current?.removeAttribute("open");
@@ -127,7 +129,28 @@ export function SiteHeader() {
 
   useEffect(() => {
     closeMobileMenu();
+    languageMenuRef.current?.removeAttribute("open");
   }, [pathname]);
+
+  useEffect(() => {
+    const onPointerDown = (event: PointerEvent) => {
+      if (languageMenuRef.current && !languageMenuRef.current.contains(event.target as Node)) {
+        languageMenuRef.current.removeAttribute("open");
+      }
+    };
+    const onEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape" && languageMenuRef.current?.open) {
+        languageMenuRef.current.removeAttribute("open");
+        languageMenuRef.current.querySelector("summary")?.focus();
+      }
+    };
+    document.addEventListener("pointerdown", onPointerDown);
+    document.addEventListener("keydown", onEscape);
+    return () => {
+      document.removeEventListener("pointerdown", onPointerDown);
+      document.removeEventListener("keydown", onEscape);
+    };
+  }, []);
 
   return (
     <header className={`site-header${isHome ? "" : " site-header--with-subnav"}`}>
@@ -232,30 +255,40 @@ export function SiteHeader() {
           </details>
         </div>
 
-        <Link
-          href={languageHref}
-          hrefLang={isKorean ? "en" : "ko"}
-          className="site-header-lang"
-          aria-label={languageLabel}
-          title={languageLabel}
-          onClick={closeMobileMenu}
-          style={{
-            display: "inline-flex",
-            alignItems: "center",
-            justifyContent: "center",
-            width: 30,
-            height: 30,
-            flex: "0 0 30px",
-            background: "transparent",
-            border: 0,
-            boxShadow: "none",
-            textDecoration: "none",
-            position: "relative",
-            zIndex: 999,
-          }}
-        >
-          <GlobeIcon />
-        </Link>
+        <details ref={languageMenuRef} className="site-language-selector">
+          <summary
+            className="site-header-lang"
+            aria-label={languageLabel}
+            title={languageLabel}
+          >
+            <GlobeIcon />
+            <span className="site-language-code">{locale.toUpperCase()}</span>
+            <span className="site-language-chevron" aria-hidden="true">▾</span>
+          </summary>
+          <nav className="site-language-panel" aria-label={languageLabel}>
+            <p className="site-language-heading">{languageLabel}</p>
+            <ul>
+              {supportedLocales.map((language) => (
+                <li key={language}>
+                  <Link
+                    href={localizedHref(language, normalizeContentPath(pathname))}
+                    hrefLang={language}
+                    lang={language}
+                    aria-current={language === locale ? "page" : undefined}
+                    onClick={() => {
+                      languageMenuRef.current?.removeAttribute("open");
+                      closeMobileMenu();
+                    }}
+                  >
+                    <span>{languageNames[language]}</span>
+                    <small>{language.toUpperCase()}</small>
+                    {language === locale ? <span aria-hidden="true">✓</span> : null}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </details>
       </div>
 
       {!isHome ? (
