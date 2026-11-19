@@ -242,21 +242,35 @@ function IntlStoryDetail({locale,which}:{locale:TranslationLocale;which:0|1}) {
   const e=editorial[locale];
   const title=t.storyTitles[which];
   const paragraphs=which===0?t.father:t.daughter;
+  const nextHref=which===0?"/stories/the-youngest-daughter-in-every-house":"/stories";
   return <main className="intl-page">
     <section className="intl-section intl-story-head"><div className="container">
       <Link className="intl-more" href={localizedHref(locale,"/stories")}>← {t.storiesTitle}</Link>
-      <p className="intl-overline">STORY {which===0?"01":"02"}</p>
+      <p className="intl-overline">{t.storiesTitle} {which===0?"01":"02"}</p>
       <h1>{title}</h1>
+      <p className="intl-wide-copy">{which===0?e.detail.firstDeck:e.detail.secondDeck}</p>
     </div></section>
     <section className="intl-section"><div className="container intl-story-detail">
       <article>{paragraphs.map((paragraph,i) => i===2&&which===0
         ? <blockquote key={i}>{paragraph}</blockquote> : <p key={i}>{paragraph}</p>)}
       </article>
-      <figure><Image src="/media/esther/childhood-garden.jpg" alt={t.archiveChild} width={900} height={720} sizes="(max-width: 750px) 90vw, 40vw"/>
-        <figcaption>{t.archiveChild}</figcaption></figure>
+      <figure><Image src="/media/esther/childhood-garden.jpg"
+        alt={t.coverAlts.archive} width={900} height={720}
+        sizes="(max-width: 750px) 90vw, 40vw"/>
+        <figcaption>{which===0?e.detail.imageNoteTiger:e.detail.imageNoteDaughter}</figcaption>
+      </figure>
+    </div></section>
+    <section className="intl-section intl-soft"><div className="container">
+      <p className="intl-overline">{e.detail.archiveHeading}</p>
+      <p className="intl-wide-copy">{which===0?e.detail.archiveNoteTiger:e.detail.archiveNoteDaughter}</p>
     </div></section>
     <section className="intl-ending"><div className="container">
-      <Link className="intl-more" href={localizedHref(locale,which===0?"/stories/the-youngest-daughter-in-every-house":"/stories")}>{which===0?t.storyTitles[1]:t.storiesTitle} ↗</Link>
+      <p className="intl-overline">{t.storiesTitle}</p>
+      <h2>{which===0?t.storyTitles[1]:t.storyTitles[2]}</h2>
+      <p>{which===0?e.detail.nextTiger:e.detail.nextDaughter}</p>
+      <Link className="intl-more" href={localizedHref(locale,nextHref)}>
+        {which===0?e.detail.nextActionTiger:e.detail.nextActionDaughter} ↗
+      </Link>
     </div></section>
   </main>;
 }
