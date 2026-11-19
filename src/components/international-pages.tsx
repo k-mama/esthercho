@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { PageCover } from "@/components/page-cover";
 import { HomeHeroVideo } from "@/app/home-hero-video";
+import { ChildhoodHomeStory, ChildhoodHeroCaption } from "@/components/childhood-home-story";
 import type { TranslationLocale } from "@/config/languages";
 import { localizedHref, localeInterface } from "@/config/languages";
 import { translations } from "@/content/international";
@@ -128,6 +129,7 @@ function IntlHome({locale}: {locale:TranslationLocale}) {
   return <main className="intl-home">
     <section className="intl-home-hero home-video-hero">
       <HomeHeroVideo/>
+      <ChildhoodHeroCaption locale={locale}/>
       <div className="intl-home-hero-copy"><p>{t.welcome}</p><h1>{t.hero}</h1><a href="#inside">{t.enter} ↓</a></div>
     </section>
     <section className="intl-foyer" id="inside">
@@ -387,6 +389,7 @@ function IntlArchive({locale}:{locale:TranslationLocale}) {
         <figcaption>{e.archive.oldPhotoCaption}</figcaption>
       </figure>
     </div></section>
+    <ChildhoodHomeStory locale={locale}/>
     <section className="intl-section"><div className="container intl-scene-grid">
       <div>
         <p className="intl-overline">{t.archiveTitle}</p>
