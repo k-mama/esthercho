@@ -15,7 +15,9 @@ const labels: Record<SiteLocale, {
   fr: {intro:"OUVRIR L’ALBUM",child:"L’ENFANT",childPhoto:"Esther Cho enfant",memory:"HORS DU CADRE",source:"LES ORIGINAUX",ending:"ENCORE UNE PAGE",storiesLink:"Lire les récits"},
   it: {intro:"APRIRE L’ALBUM",child:"LA BAMBINA",childPhoto:"Esther Cho da bambina",memory:"OLTRE LE FOTO",source:"LE FOTO ORIGINALI",ending:"UN’ALTRA PAGINA",storiesLink:"Leggi le storie"},
   ja: {intro:"アルバムを開くと",child:"あの頃の子ども",childPhoto:"幼い頃のエスター・チョー",memory:"写真の外の時間",source:"写真の記録",ending:"次の一枚",storiesLink:"物語を読む"},
-  "pt-br": {intro:"ABRINDO O ÁLBUM",child:"A CRIANÇA",childPhoto:"Esther Cho quando era menina",memory:"FORA DA FOTO",source:"AS IMAGENS ORIGINAIS",ending:"MAIS UMA PÁGINA",storiesLink:"Ler as histórias"}
+  "pt-br": {intro:"ABRINDO O ÁLBUM",child:"A CRIANÇA",childPhoto:"Esther Cho quando era menina",memory:"FORA DA FOTO",source:"AS IMAGENS ORIGINAIS",ending:"MAIS UMA PÁGINA",storiesLink:"Ler as histórias"},
+  "zh-cn": {intro:"翻开相册",child:"照片里的孩子",childPhoto:"童年的 Esther Cho",memory:"照片之外",source:"原始照片",ending:"还有下一页",storiesLink:"阅读故事"},
+  "zh-tw": {intro:"翻開相簿",child:"照片裡的孩子",childPhoto:"童年的 Esther Cho",memory:"照片之外",source:"原始照片",ending:"還有下一頁",storiesLink:"閱讀故事"}
 };
 
 /** Single narrative sequence for the original site and all six other translations.
