@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
-import { localeFromPath, localizedHref, type SiteLocale } from "@/config/languages";
+import { localeFromPath, localizedHref, htmlLanguage, type SiteLocale } from "@/config/languages";
 
 const messages: Record<SiteLocale,string> = {
   en: "Returning to Esther Cho's home…",
@@ -13,6 +13,8 @@ const messages: Record<SiteLocale,string> = {
   it: "Ritorno alla pagina iniziale di Esther Cho…",
   ja: "エスター・チョーのホームへ戻ります…",
   "pt-br": "Voltando à página inicial de Esther Cho…",
+  "zh-cn": "正在返回 Esther Cho 的首页…",
+  "zh-tw": "正在返回 Esther Cho 的首頁…",
 };
 
 export default function NotFound() {
@@ -24,7 +26,7 @@ export default function NotFound() {
   }, [locale,pathname]);
 
   return (
-    <main lang={locale} style={{
+    <main lang={htmlLanguage(locale)} style={{
       minHeight:"100svh",display:"grid",placeItems:"center",
       padding:"2rem",background:"#f7f6f2",color:"#173451",textAlign:"center",
     }}>
