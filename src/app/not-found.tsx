@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 import { localeFromPath, localizedHref, type SiteLocale } from "@/config/languages";
 
 const messages: Record<SiteLocale,string> = {
@@ -14,15 +15,12 @@ const messages: Record<SiteLocale,string> = {
 };
 
 export default function NotFound() {
-  const [locale,setLocale] = useState<SiteLocale>("en");
+  const pathname=usePathname();
+  const locale=localeFromPath(pathname);
   useEffect(() => {
-    const current = localeFromPath(window.location.pathname);
-    setLocale(current);
-    const destination = localizedHref(current);
-    if (window.location.pathname !== destination) {
-      window.location.replace(destination);
-    }
-  }, []);
+    const destination=localizedHref(locale);
+    if (pathname !== destination) window.location.replace(destination);
+  }, [locale,pathname]);
 
   return (
     <main lang={locale} style={{
