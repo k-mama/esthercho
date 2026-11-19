@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { InternationalPage } from "@/components/international-pages";
-import { translationLocales, localizedHref, type TranslationLocale } from "@/config/languages";
+import { translationLocales, localizedHref, supportedLocales, htmlLanguage, type TranslationLocale } from "@/config/languages";
 import { translations } from "@/content/international";
 import { editorial } from "@/content/editorial-locales";
 const sections=["stories","books","studio","about","notes","archive"] as const;
@@ -17,9 +17,7 @@ export async function generateMetadata({params}:{params:Promise<{lang:Translatio
     openGraph:{type:"website",title:titles[section],description:desc[section],url:localizedHref(lang,`/${section}`),siteName:"Esther Cho"},
     twitter:{card:"summary_large_image",title:titles[section],description:desc[section]},
     alternates:{canonical:localizedHref(lang,`/${section}`),
-      languages:{en:localizedHref("en",`/${section}`),ko:localizedHref("ko",`/${section}`),
-        de:localizedHref("de",`/${section}`),es:localizedHref("es",`/${section}`),
-        fr:localizedHref("fr",`/${section}`),it:localizedHref("it",`/${section}`),ja:localizedHref("ja",`/${section}`)}}};
+      languages:Object.fromEntries(supportedLocales.map(locale=>[htmlLanguage(locale),localizedHref(locale,`/${section}`)]))}};
 }
 export default async function InternationalSection({params}:{params:Promise<{lang:TranslationLocale;section:Section}>}){
   const {lang,section}=await params;
