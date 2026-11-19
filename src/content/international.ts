@@ -486,7 +486,7 @@ export const translations = {
       "notes": "Toast à l’avocat, œuf, raisins et café glacé sur la table d’Esther",
       "archive": "Esther Cho enfant, souriante dans un jardin"
     },
-    "aboutSectionLabel": "FAIRE CONNAISSANCE AVEC ESTHER"
+    "aboutSectionLabel": "DÉCOUVRIR ESTHER"
   },
   "it": {
     "welcome": "BENVENUTI A CASA DI ESTHER",
