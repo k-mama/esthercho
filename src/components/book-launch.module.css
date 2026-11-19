@@ -375,6 +375,14 @@
   letter-spacing: 0.04em;
 }
 
+.editionActions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 1.5rem;
+  margin-top: 0.5rem;
+}
+
 .editionFigure { width: 100%; max-width: 230px; margin: 0; }
 .editionCover {
   display: block;
