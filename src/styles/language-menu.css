@@ -20,7 +20,7 @@
 /* Preserve the established compact mobile header geometry. */
 @media (max-width: 750px) {
  .site-language-selector { justify-self:end; min-width:0; }
- .site-language-selector > summary.site-header-lang { width: 28px !important; min-width:28px !important; height: 44px !important; padding:0 !important; flex-basis:auto !important; }
+ .site-language-selector > summary.site-header-lang { width: 28px ; min-width:28px ; height: 44px ; padding:0 ; flex-basis:auto ; }
  .site-language-code,.site-language-chevron { display:none; }
  .site-language-panel {right:0;}
 }
