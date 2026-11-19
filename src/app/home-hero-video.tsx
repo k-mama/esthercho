@@ -66,6 +66,7 @@ export function HomeHeroVideo({
     fr: {pause:"Mettre la vidéo en pause",play:"Reprendre la vidéo",pauseShort:"PAUSE",playShort:"LECTURE"},
     it: {pause:"Metti in pausa il video",play:"Riprendi il video",pauseShort:"PAUSA",playShort:"RIPRENDI"},
     ja: {pause:"背景動画を一時停止",play:"背景動画を再生",pauseShort:"一時停止",playShort:"再生"},
+    "pt-br": {pause:"Pausar o vídeo de fundo",play:"Reproduzir o vídeo de fundo",pauseShort:"PAUSAR",playShort:"REPRODUZIR"},
   };
   const copy = controls[activeLocale];
 
