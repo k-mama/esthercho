@@ -6,16 +6,16 @@ import { localizedHref, type SiteLocale } from "@/config/languages";
 
 const labels: Record<SiteLocale, {
   intro: string; child: string; childPhoto: string;
-  memory: string; source: string; ending: string;
+  memory: string; source: string; ending: string; storiesLink: string;
 }> = {
-  en: {intro:"THE ALBUM OPENS",child:"THE CHILD",childPhoto:"Esther Cho as a child",memory:"BEYOND THE PHOTOGRAPH",source:"WHAT IS ORIGINAL",ending:"ONE MORE PAGE"},
-  ko: {intro:"앨범을 펼치면",child:"그때의 아이",childPhoto:"어린 시절의 조성연",memory:"사진 밖의 시간",source:"사진은 사진대로",ending:"아직 남은 이야기"},
-  de: {intro:"DAS ALBUM ÖFFNEN",child:"DAS KIND",childPhoto:"Esther Cho als Kind",memory:"JENSEITS DER FOTOS",source:"ZU DEN ORIGINALEN",ending:"NOCH EINE SEITE"},
-  es: {intro:"ABRIR EL ÁLBUM",child:"LA NIÑA",childPhoto:"Esther Cho de niña",memory:"FUERA DE LA FOTO",source:"LOS ORIGINALES",ending:"UNA PÁGINA MÁS"},
-  fr: {intro:"OUVRIR L’ALBUM",child:"L’ENFANT",childPhoto:"Esther Cho enfant",memory:"HORS DU CADRE",source:"LES ORIGINAUX",ending:"ENCORE UNE PAGE"},
-  it: {intro:"APRIRE L’ALBUM",child:"LA BAMBINA",childPhoto:"Esther Cho da bambina",memory:"OLTRE LE FOTO",source:"LE FOTO ORIGINALI",ending:"UN’ALTRA PAGINA"},
-  ja: {intro:"アルバムを開くと",child:"あの頃の子ども",childPhoto:"幼い頃のエスター・チョー",memory:"写真の外の時間",source:"写真の記録",ending:"次の一枚"},
-  "pt-br": {intro:"ABRINDO O ÁLBUM",child:"A CRIANÇA",childPhoto:"Esther Cho quando era menina",memory:"FORA DA FOTO",source:"AS IMAGENS ORIGINAIS",ending:"MAIS UMA PÁGINA"}
+  en: {intro:"THE ALBUM OPENS",child:"THE CHILD",childPhoto:"Esther Cho as a child",memory:"BEYOND THE PHOTOGRAPH",source:"WHAT IS ORIGINAL",ending:"ONE MORE PAGE",storiesLink:"Read the stories"},
+  ko: {intro:"앨범을 펼치면",child:"그때의 아이",childPhoto:"어린 시절의 조성연",memory:"사진 밖의 시간",source:"사진은 사진대로",ending:"아직 남은 이야기",storiesLink:"이야기 읽기"},
+  de: {intro:"DAS ALBUM ÖFFNEN",child:"DAS KIND",childPhoto:"Esther Cho als Kind",memory:"JENSEITS DER FOTOS",source:"ZU DEN ORIGINALEN",ending:"NOCH EINE SEITE",storiesLink:"Die Geschichten lesen"},
+  es: {intro:"ABRIR EL ÁLBUM",child:"LA NIÑA",childPhoto:"Esther Cho de niña",memory:"FUERA DE LA FOTO",source:"LOS ORIGINALES",ending:"UNA PÁGINA MÁS",storiesLink:"Leer las historias"},
+  fr: {intro:"OUVRIR L’ALBUM",child:"L’ENFANT",childPhoto:"Esther Cho enfant",memory:"HORS DU CADRE",source:"LES ORIGINAUX",ending:"ENCORE UNE PAGE",storiesLink:"Lire les récits"},
+  it: {intro:"APRIRE L’ALBUM",child:"LA BAMBINA",childPhoto:"Esther Cho da bambina",memory:"OLTRE LE FOTO",source:"LE FOTO ORIGINALI",ending:"UN’ALTRA PAGINA",storiesLink:"Leggi le storie"},
+  ja: {intro:"アルバムを開くと",child:"あの頃の子ども",childPhoto:"幼い頃のエスター・チョー",memory:"写真の外の時間",source:"写真の記録",ending:"次の一枚",storiesLink:"物語を読む"},
+  "pt-br": {intro:"ABRINDO O ÁLBUM",child:"A CRIANÇA",childPhoto:"Esther Cho quando era menina",memory:"FORA DA FOTO",source:"AS IMAGENS ORIGINAIS",ending:"MAIS UMA PÁGINA",storiesLink:"Ler as histórias"}
 };
 
 /** Single narrative sequence for the original site and all six other translations.
@@ -77,7 +77,7 @@ export function ChildhoodArchiveSections({locale}:{locale:SiteLocale}) {
         <div className="childhood-principle-copy">
           <p>{t.photosText}</p>
           <Link href={localizedHref(locale,"/stories")} className="childhood-link">
-            {locale==="ko"?"이야기 읽기":locale==="en"?"Read the stories":label.ending} ↗
+            {label.storiesLink} ↗
           </Link>
         </div>
       </div>
