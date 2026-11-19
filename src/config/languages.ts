@@ -27,6 +27,7 @@ export const localeInterface: Record<SiteLocale, {
   ja: { primary: ["物語", "本", "アトリエ", "エスター"], rooms: ["朝の食卓", "子ども時代"], selector: "サイトの言語を選択", home: "ホーム", copyright: "作家エスター・チョー公式サイト", authorPage: "Amazon著者ページ", siteDescription: "エスター・チョー公式サイト案内", credit: "企画・デザイン・開発 Emma Kwon" },
   "pt-br": { primary: ["HISTÓRIAS", "LIVROS", "ATELIÊ", "ESTHER"], rooms: ["CAFÉ DA MANHÃ", "INFÂNCIA"], selector: "Escolher o idioma do site", home: "Início", copyright: "Site oficial da autora", authorPage: "Página da autora na Amazon", siteDescription: "Sobre o site de Esther Cho", credit: "Concepção, design e desenvolvimento: Emma Kwon" },
 };
+export function htmlLanguage(locale: SiteLocale): string { return locale === "pt-br" ? "pt-BR" : locale; }
 export function localeFromPath(pathname: string): SiteLocale {
   const segment = pathname.split("/").filter(Boolean)[0];
   return supportedLocales.find((locale) => locale !== "en" && locale === segment) ?? "en";
