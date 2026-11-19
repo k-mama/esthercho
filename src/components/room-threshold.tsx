@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import styles from "./room-threshold.module.css";
+import { localeFromPath, localizedHref, normalizeContentPath, localeInterface } from "@/config/languages";
 
 type ThresholdRoom = {
   href: string;
@@ -36,16 +37,30 @@ function normalizePath(pathname: string) {
 
 export function RoomThreshold() {
   const pathname = usePathname();
-  const normalized = normalizePath(pathname);
-  const isKorean = normalized === "/ko" || normalized.startsWith("/ko/");
-  const room = isKorean ? koreanThresholds[normalized] : englishThresholds[normalized];
-
+  const locale = localeFromPath(pathname);
+  const contentPath = normalizeContentPath(pathname);
+  const isKorean = locale === "ko";
+  const existing = isKorean ? koreanThresholds[normalizePath(pathname)] : locale === "en" ? englishThresholds[normalizePath(pathname)] : undefined;
+  const rooms = ["/notes", "/stories", "/archive", "/studio", "/books", "/about"];
+  const idx = rooms.indexOf(contentPath);
+  const titles = localeInterface[locale];
+  const nextTitles = [titles.primary[0], titles.rooms[1], titles.primary[2], titles.primary[1], titles.primary[3], titles.home];
+  const eyebrow: Record<string,string> = {
+    de:"NÄCHSTER RAUM", es:"SIGUIENTE ESPACIO", fr:"PIÈCE SUIVANTE", it:"PROSSIMA STANZA", ja:"次の部屋",
+  };
+  const generic = idx < 0 ? undefined : {
+    href: localizedHref(locale, idx < 5 ? rooms[idx+1] : ""),
+    eyebrow: eyebrow[locale] ?? "NEXT ROOM",
+    title: nextTitles[idx],
+    hint: nextTitles[idx],
+  };
+  const room = existing ?? generic;
   if (!room) return null;
 
   return (
     <aside
       className={`${styles.threshold}${isKorean ? ` ${styles.korean}` : ""}`}
-      aria-label={isKorean ? "다음 방으로 이동" : "Continue to the next room"}
+      aria-label={room.eyebrow}
     >
       <div className={`container ${styles.inner}`}>
         <Link href={room.href} className={styles.link}>
