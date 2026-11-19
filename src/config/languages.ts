@@ -36,6 +36,7 @@ export function normalizeContentPath(pathname: string) {
   return contentPath === "/" || contentPath === "" || contentPath === "/home/" || contentPath === "/home" ? "" : contentPath.replace(/\/$/, "");
 }
 export function localizedHref(locale: SiteLocale, contentPath = "") {
-  const path = contentPath && contentPath !== "/" ? `${contentPath.replace(/\/$/, "")}/` : "";
+  const cleanPath = contentPath.replace(/^\\/+|\\/+$/g, "");
+  const path = cleanPath ? `${cleanPath}/` : "";
   return locale === "en" ? `/${path}` : `/${locale}/${path}`;
 }
