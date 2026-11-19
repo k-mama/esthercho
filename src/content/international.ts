@@ -134,7 +134,32 @@ export const translations = {
       "Abschluss an der Seoul Arts High School",
       "Studienabschluss in Ostasiatischer Malerei an der Seoul National University",
       "Abschluss der Studienleistungen im Masterstudiengang Kunstpädagogik an der Ewha Womans University"
-    ]
+    ],
+    "breakfastCaptions": [
+      "French Toast mit Beeren in Esthers Küche",
+      "Obst und Kaffee im Morgenlicht",
+      "Frühstück auf einem blauen Tuch"
+    ],
+    "coverCaptions": [
+      "Coverentwurf mit blau gedecktem Tisch",
+      "Coverentwurf mit sonnigem Frühstück",
+      "Coverentwurf mit Kaffee und Obst"
+    ],
+    "sceneAlts": [
+      "Frühstück an Esthers Tisch",
+      "Ein Garten aus Esthers Kindheit",
+      "Esther Cho bei einem Freiwilligeneinsatz in Bangladesch",
+      "Eine spätere Collage nach Esthers ursprünglicher Handzeichnung"
+    ],
+    "coverAlts": {
+      "home": "Esther Cho beim Lesen am Tisch",
+      "stories": "Esther Cho sitzt mit einer Tasse Kaffee vor einem steinernen Kamin",
+      "books": "Esther Cho liest ein aufgeschlagenes Buch an einem hellen Tisch",
+      "studio": "Redaktionelle Collage auf Grundlage von Esthers handgezeichneten Vorstudien",
+      "about": "Esther Cho steht in einer dunkelblauen Jacke am sonnigen Fenster",
+      "notes": "Avocadotoast, Ei, Trauben und Eiskaffee auf Esthers Frühstückstisch",
+      "archive": "Esther Cho als Kind lächelnd in einem Garten"
+    }
   },
   "es": {
     "welcome": "BIENVENIDOS A LA CASA DE ESTHER",
@@ -271,7 +296,32 @@ export const translations = {
       "Se graduó en la Escuela Superior de Artes de Seúl",
       "Se graduó en Pintura Oriental por la Universidad Nacional de Seúl",
       "Completó los cursos del programa de maestría en Educación Artística en la Universidad Femenina Ewha"
-    ]
+    ],
+    "breakfastCaptions": [
+      "Tostadas francesas con frutos rojos en la cocina de Esther",
+      "Fruta y café a la luz de la mañana",
+      "Desayuno sobre un mantel azul"
+    ],
+    "coverCaptions": [
+      "Prueba de portada con una mesa vestida de azul",
+      "Prueba de portada con un desayuno iluminado por el sol",
+      "Prueba de portada con café y fruta"
+    ],
+    "sceneAlts": [
+      "El desayuno en la mesa de Esther",
+      "Un jardín de la infancia de Esther",
+      "Esther Cho durante una actividad de voluntariado en Bangladesh",
+      "Collage posterior realizado a partir de un dibujo original de Esther"
+    ],
+    "coverAlts": {
+      "home": "Esther Cho leyendo en una mesa",
+      "stories": "Esther Cho sentada junto a una chimenea de piedra con una taza de café",
+      "books": "Esther Cho leyendo un libro abierto en una mesa iluminada",
+      "studio": "Collage editorial a partir de bocetos originales hechos a mano por Esther",
+      "about": "Esther Cho junto a una ventana iluminada, con una chaqueta azul marino",
+      "notes": "Tostada con aguacate, huevo, uvas y café frío sobre la mesa de Esther",
+      "archive": "Esther Cho sonríe en un jardín cuando era niña"
+    }
   },
   "fr": {
     "welcome": "BIENVENUE CHEZ ESTHER",
@@ -408,7 +458,32 @@ export const translations = {
       "Diplômée de la Seoul Arts High School",
       "Diplômée en peinture orientale de l’Université nationale de Séoul",
       "A validé les enseignements du master en pédagogie artistique à l’Université féminine Ewha"
-    ]
+    ],
+    "breakfastCaptions": [
+      "Pain perdu aux fruits rouges dans la cuisine d’Esther",
+      "Fruits et café dans la lumière du matin",
+      "Petit déjeuner sur un linge bleu"
+    ],
+    "coverCaptions": [
+      "Essai de couverture autour d’une table bleue",
+      "Essai de couverture avec un petit déjeuner ensoleillé",
+      "Essai de couverture autour du café et des fruits"
+    ],
+    "sceneAlts": [
+      "Petit déjeuner sur la table d’Esther",
+      "Un jardin de l’enfance d’Esther",
+      "Esther Cho lors d’une mission bénévole au Bangladesh",
+      "Collage réalisé plus tard à partir d’un dessin original d’Esther"
+    ],
+    "coverAlts": {
+      "home": "Esther Cho lisant à table",
+      "stories": "Esther Cho assise près d’une cheminée en pierre, une tasse de café à la main",
+      "books": "Esther Cho lisant un livre ouvert à une table ensoleillée",
+      "studio": "Collage éditorial tiré d’études dessinées à la main par Esther",
+      "about": "Esther Cho en veste bleu marine près d’une fenêtre ensoleillée",
+      "notes": "Toast à l’avocat, œuf, raisins et café glacé sur la table d’Esther",
+      "archive": "Esther Cho enfant, souriante dans un jardin"
+    }
   },
   "it": {
     "welcome": "BENVENUTI A CASA DI ESTHER",
@@ -545,7 +620,32 @@ export const translations = {
       "Diploma presso la Seoul Arts High School",
       "Laurea in Pittura Orientale alla Seoul National University",
       "Completamento dei corsi del master in Educazione Artistica alla Ewha Womans University"
-    ]
+    ],
+    "breakfastCaptions": [
+      "French toast con frutti di bosco nella cucina di Esther",
+      "Frutta e caffè nella luce del mattino",
+      "Colazione su un telo blu"
+    ],
+    "coverCaptions": [
+      "Prova di copertina con una tavola apparecchiata in blu",
+      "Prova di copertina con una colazione al sole",
+      "Prova di copertina con caffè e frutta"
+    ],
+    "sceneAlts": [
+      "La colazione sulla tavola di Esther",
+      "Un giardino dell’infanzia di Esther",
+      "Esther Cho durante un’attività di volontariato in Bangladesh",
+      "Collage successivo tratto da un disegno originale di Esther"
+    ],
+    "coverAlts": {
+      "home": "Esther Cho mentre legge a tavola",
+      "stories": "Esther Cho seduta accanto a un camino in pietra con una tazza di caffè",
+      "books": "Esther Cho legge un libro aperto a un tavolo illuminato",
+      "studio": "Collage editoriale ricavato da disegni originali di Esther",
+      "about": "Esther Cho in giacca blu scuro accanto a una finestra soleggiata",
+      "notes": "Toast con avocado, uovo, uva e caffè freddo sulla tavola di Esther",
+      "archive": "Esther Cho da bambina, sorridente in giardino"
+    }
   },
   "ja": {
     "welcome": "エスターの家へようこそ",
@@ -682,7 +782,32 @@ export const translations = {
       "ソウル芸術高校卒業",
       "ソウル大学美術大学東洋画科卒業",
       "梨花女子大学大学院美術教育修士課程の単位を修了"
-    ]
+    ],
+    "breakfastCaptions": [
+      "エスターの台所で用意したベリー入りフレンチトースト",
+      "朝の光の中に並ぶ果物とコーヒー",
+      "青い布の上に用意した朝ごはん"
+    ],
+    "coverCaptions": [
+      "青いテーブルセッティングを使った表紙案",
+      "朝日が差す朝食の表紙案",
+      "コーヒーと果物を配置した表紙案"
+    ],
+    "sceneAlts": [
+      "エスターの食卓に並ぶ朝ごはん",
+      "エスターの幼い頃の庭",
+      "バングラデシュでボランティア活動をするエスター・チョー",
+      "エスターの手描き原画をもとに後から作られたコラージュ"
+    ],
+    "coverAlts": {
+      "home": "食卓で本を読むエスター・チョー",
+      "stories": "石造りの暖炉のそばでコーヒーカップを持つエスター・チョー",
+      "books": "明るい食卓で開いた本を読むエスター・チョー",
+      "studio": "エスターの手描きスケッチをもとにした編集用コラージュ",
+      "about": "日差しの入る窓辺に立つ紺色の上着のエスター・チョー",
+      "notes": "エスターの食卓に並ぶアボカドトースト、卵、ブドウ、アイスコーヒー",
+      "archive": "庭で微笑む幼い頃のエスター・チョー"
+    }
   }
 } as const;
 export type IntlTranslation = typeof translations[keyof typeof translations];
