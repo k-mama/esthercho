@@ -128,7 +128,13 @@ export const translations = {
     "mannaHouseTitle": "Ein Foto des alten Zuhauses",
     "mannaHouseText": "Vor etwa zehn Jahren fotografierte Esther das Haus in Cheongdam-dong, in dem sie als Kind gelebt hatte. Heute gehört dieses Bild zum Begrüßungsfilm der Website.",
     "mannaDailyTitle": "Manna für diesen Morgen",
-    "mannaDailyText": "Manna bedeutet für Esther sowohl das Essen auf ihrem Tisch als auch das Wort Gottes, das sie an diesem Tag empfängt. Ein Frühstück von gestern ernährt sie heute nicht. Auch das Lesen von gestern ersetzt nicht die Zeit mit Gott heute."
+    "mannaDailyText": "Manna bedeutet für Esther sowohl das Essen auf ihrem Tisch als auch das Wort Gottes, das sie an diesem Tag empfängt. Ein Frühstück von gestern ernährt sie heute nicht. Auch das Lesen von gestern ersetzt nicht die Zeit mit Gott heute.",
+    "education": [
+      "Abschluss an der Yewon School",
+      "Abschluss an der Seoul Arts High School",
+      "Studienabschluss in Ostasiatischer Malerei an der Seoul National University",
+      "Abschluss der Studienleistungen im Masterstudiengang Kunstpädagogik an der Ewha Womans University"
+    ]
   },
   "es": {
     "welcome": "BIENVENIDOS A LA CASA DE ESTHER",
@@ -259,7 +265,13 @@ export const translations = {
     "mannaHouseTitle": "Una fotografía de la casa de su infancia",
     "mannaHouseText": "Hace unos diez años, Esther fotografió la casa de Cheongdam-dong donde vivió de niña. Ahora esa imagen forma parte del vídeo de bienvenida del sitio.",
     "mannaDailyTitle": "El maná de esta mañana",
-    "mannaDailyText": "Para Esther, el maná es la comida que prepara y la palabra de Dios que recibe cada día. El desayuno de ayer no alimenta el cuerpo hoy. La lectura de ayer tampoco sustituye el tiempo de hoy con Dios."
+    "mannaDailyText": "Para Esther, el maná es la comida que prepara y la palabra de Dios que recibe cada día. El desayuno de ayer no alimenta el cuerpo hoy. La lectura de ayer tampoco sustituye el tiempo de hoy con Dios.",
+    "education": [
+      "Se graduó en la Escuela Yewon",
+      "Se graduó en la Escuela Superior de Artes de Seúl",
+      "Se graduó en Pintura Oriental por la Universidad Nacional de Seúl",
+      "Completó los cursos del programa de maestría en Educación Artística en la Universidad Femenina Ewha"
+    ]
   },
   "fr": {
     "welcome": "BIENVENUE CHEZ ESTHER",
@@ -390,7 +402,13 @@ export const translations = {
     "mannaHouseTitle": "Une photographie de la maison d’enfance",
     "mannaHouseText": "Il y a une dizaine d’années, Esther a photographié la maison de Cheongdam-dong où elle avait vécu enfant. Cette image fait désormais partie du film d’accueil du site.",
     "mannaDailyTitle": "La manne de ce matin",
-    "mannaDailyText": "Pour Esther, la manne désigne à la fois ce qu’elle prépare à manger le matin et la parole de Dieu reçue ce jour-là. Le repas d’hier ne la nourrit pas aujourd’hui. La lecture d’hier ne remplace pas non plus le temps passé avec Dieu aujourd’hui."
+    "mannaDailyText": "Pour Esther, la manne désigne à la fois ce qu’elle prépare à manger le matin et la parole de Dieu reçue ce jour-là. Le repas d’hier ne la nourrit pas aujourd’hui. La lecture d’hier ne remplace pas non plus le temps passé avec Dieu aujourd’hui.",
+    "education": [
+      "Diplômée de la Yewon School",
+      "Diplômée de la Seoul Arts High School",
+      "Diplômée en peinture orientale de l’Université nationale de Séoul",
+      "A validé les enseignements du master en pédagogie artistique à l’Université féminine Ewha"
+    ]
   },
   "it": {
     "welcome": "BENVENUTI A CASA DI ESTHER",
@@ -521,7 +539,13 @@ export const translations = {
     "mannaHouseTitle": "Una fotografia della casa d’infanzia",
     "mannaHouseText": "Circa dieci anni fa, Esther fotografò la casa di Cheongdam-dong dove aveva vissuto da bambina. Oggi quella foto fa parte del video di benvenuto del sito.",
     "mannaDailyTitle": "La manna di questa mattina",
-    "mannaDailyText": "Per Esther, la manna è sia il cibo che prepara al mattino sia la parola di Dio che riceve quel giorno. La colazione di ieri non la nutre oggi; neppure la lettura di ieri sostituisce il tempo di oggi con Dio."
+    "mannaDailyText": "Per Esther, la manna è sia il cibo che prepara al mattino sia la parola di Dio che riceve quel giorno. La colazione di ieri non la nutre oggi; neppure la lettura di ieri sostituisce il tempo di oggi con Dio.",
+    "education": [
+      "Diploma presso la Yewon School",
+      "Diploma presso la Seoul Arts High School",
+      "Laurea in Pittura Orientale alla Seoul National University",
+      "Completamento dei corsi del master in Educazione Artistica alla Ewha Womans University"
+    ]
   },
   "ja": {
     "welcome": "エスターの家へようこそ",
@@ -652,7 +676,13 @@ export const translations = {
     "mannaHouseTitle": "子ども時代の家の写真",
     "mannaHouseText": "十年ほど前、エスターは幼い頃に暮らした清潭洞の家を撮影しました。その写真は今、ホームページの歓迎動画に使われています。",
     "mannaDailyTitle": "今朝のマナ",
-    "mannaDailyText": "エスターにとってマナとは、朝に用意する食事と、その日に受け取る神さまの言葉のこと。昨日の朝食では今日のお腹は満たされません。昨日読んだ聖書も、今日神さまの前に座る時間の代わりにはならないのです。"
+    "mannaDailyText": "エスターにとってマナとは、朝に用意する食事と、その日に受け取る神さまの言葉のこと。昨日の朝食では今日のお腹は満たされません。昨日読んだ聖書も、今日神さまの前に座る時間の代わりにはならないのです。",
+    "education": [
+      "芸苑学校卒業",
+      "ソウル芸術高校卒業",
+      "ソウル大学美術大学東洋画科卒業",
+      "梨花女子大学大学院美術教育修士課程の単位を修了"
+    ]
   }
 } as const;
 export type IntlTranslation = typeof translations[keyof typeof translations];
