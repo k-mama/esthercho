@@ -8,3 +8,18 @@
 # Next.js fingerprinted assets are content-addressed and safe to cache long-term.
 /_next/static/*
   Cache-Control: public, max-age=31536000, immutable
+
+# Language-specific responses for international editions.
+# URLs are generated statically with hreflang and translated page content.
+/ko/*
+  Content-Language: ko
+/de/*
+  Content-Language: de
+/es/*
+  Content-Language: es
+/fr/*
+  Content-Language: fr
+/it/*
+  Content-Language: it
+/ja/*
+  Content-Language: ja
