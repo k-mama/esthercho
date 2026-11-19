@@ -110,7 +110,25 @@ export const translations = {
       "Ich sah meiner Großmutter am Schminktisch zu und ahmte sie nach. Bewunderung kann offenbar ziemlich schnell zu einer Schönheitsroutine werden.",
       "Wenn meine Mutter weitere Hilfe brauchte, blieb ich auch bei einer meiner Tanten. Die Adresse wechselte, meine Stellung im Haus nicht: Ich wurde wieder zur jüngsten Tochter.",
       "Heute erinnere ich mich daran, wie sehr ich meine Mutter vermisste. Aber auch daran, wie viele Menschen Platz für mich geschaffen haben."
-    ]
+    ],
+    "life": [
+      "Kindheit",
+      "Die Jahre mit meinem Vater",
+      "Nach jenem Juli",
+      "Schule und Kunst",
+      "Eine Familie gründen",
+      "Schriftstellerin werden",
+      "Ein Leben mit Gott",
+      "Das Leben heute"
+    ],
+    "quote": "„Vielleicht bin ich jemand, der das Glück sammelt.“",
+    "quoteText": "Auch schwere Dinge sind geschehen. Und doch fällt ihr oft zuerst das Lachen wieder ein. Beides ist wahr.",
+    "mannaStoryTitle": "Die Morgenstunden vor dem Buchcover",
+    "mannaStoryText": "Esther blätterte durch ihre eigenen Frühstücksfotos: French Toast mit Beeren, Kaffee und Sonnenlicht auf dem Küchentresen. Lange bevor sie eine Buchgestaltung suchte, hatte sie an diesem Tisch gefrühstückt, in der Bibel gelesen und ihre Gedanken notiert.",
+    "mannaHouseTitle": "Ein Foto des alten Zuhauses",
+    "mannaHouseText": "Vor etwa zehn Jahren fotografierte Esther das Haus in Cheongdam-dong, in dem sie als Kind gelebt hatte. Heute gehört dieses Bild zum Begrüßungsfilm der Website.",
+    "mannaDailyTitle": "Manna für diesen Morgen",
+    "mannaDailyText": "Manna bedeutet für Esther sowohl das Essen auf ihrem Tisch als auch das Wort Gottes, das sie an diesem Tag empfängt. Ein Frühstück von gestern ernährt sie heute nicht. Auch das Lesen von gestern ersetzt nicht die Zeit mit Gott heute."
   },
   "es": {
     "welcome": "BIENVENIDOS A LA CASA DE ESTHER",
@@ -223,7 +241,25 @@ export const translations = {
       "Veía a mi abuela arreglarse frente al espejo e imitaba su maquillaje. Al parecer, la admiración puede convertirse enseguida en una rutina de belleza.",
       "Cuando mi madre necesitaba más ayuda, me quedaba con una tía mayor o una tía menor. Cambiaba la dirección, pero no mi lugar: allí también era la hija pequeña.",
       "Hoy recuerdo cuánto echaba de menos a mi madre. También recuerdo cuántas personas me hicieron un lugar."
-    ]
+    ],
+    "life": [
+      "Infancia",
+      "Los años con mi padre",
+      "Después de aquel julio",
+      "Escuela y arte",
+      "Formar una familia",
+      "Convertirse en escritora",
+      "Una vida con Dios",
+      "La vida de hoy"
+    ],
+    "quote": "«Creo que quizá soy alguien que colecciona felicidad».",
+    "quoteText": "También ocurrieron cosas difíciles. Sin embargo, a menudo vuelve primero la risa. Ambas cosas son ciertas.",
+    "mannaStoryTitle": "Las mañanas anteriores a la portada",
+    "mannaStoryText": "Esther revisó las fotografías de los desayunos que había preparado: tostadas francesas con frutos rojos, café y luz sobre la encimera. Mucho antes de pensar en una portada, ya desayunaba, leía la Biblia y escribía sus pensamientos en aquella mesa.",
+    "mannaHouseTitle": "Una fotografía de la casa de su infancia",
+    "mannaHouseText": "Hace unos diez años, Esther fotografió la casa de Cheongdam-dong donde vivió de niña. Ahora esa imagen forma parte del vídeo de bienvenida del sitio.",
+    "mannaDailyTitle": "El maná de esta mañana",
+    "mannaDailyText": "Para Esther, el maná es la comida que prepara y la palabra de Dios que recibe cada día. El desayuno de ayer no alimenta el cuerpo hoy. La lectura de ayer tampoco sustituye el tiempo de hoy con Dios."
   },
   "fr": {
     "welcome": "BIENVENUE CHEZ ESTHER",
@@ -336,7 +372,25 @@ export const translations = {
       "Je regardais ma grand-mère se maquiller à sa coiffeuse et je l’imitais. L’admiration prend parfois très vite la forme d’un rituel de beauté.",
       "Lorsque ma mère avait encore besoin d’aide, j’allais chez une tante. L’adresse changeait, pas ma place : là aussi, je devenais la petite dernière.",
       "Je me souviens aujourd’hui de l’absence de ma mère. Je me souviens aussi de tous ceux qui m’ont fait une place."
-    ]
+    ],
+    "life": [
+      "Enfance",
+      "Les années avec mon père",
+      "Après ce mois de juillet",
+      "École et art",
+      "Fonder une famille",
+      "Devenir écrivaine",
+      "Une vie avec Dieu",
+      "La vie aujourd’hui"
+    ],
+    "quote": "« Je crois que je collectionne peut-être les petits bonheurs. »",
+    "quoteText": "Il y a eu aussi des moments difficiles. Pourtant, c’est souvent le rire qui lui revient d’abord. Les deux sont vrais.",
+    "mannaStoryTitle": "Les matins d’avant la couverture",
+    "mannaStoryText": "Esther a regardé ses propres photographies de petits déjeuners : du pain perdu aux fruits rouges, une tasse de café, la lumière sur le plan de travail. Bien avant de chercher une couverture, elle préparait déjà son repas, lisait la Bible et notait ses pensées à cette table.",
+    "mannaHouseTitle": "Une photographie de la maison d’enfance",
+    "mannaHouseText": "Il y a une dizaine d’années, Esther a photographié la maison de Cheongdam-dong où elle avait vécu enfant. Cette image fait désormais partie du film d’accueil du site.",
+    "mannaDailyTitle": "La manne de ce matin",
+    "mannaDailyText": "Pour Esther, la manne désigne à la fois ce qu’elle prépare à manger le matin et la parole de Dieu reçue ce jour-là. Le repas d’hier ne la nourrit pas aujourd’hui. La lecture d’hier ne remplace pas non plus le temps passé avec Dieu aujourd’hui."
   },
   "it": {
     "welcome": "BENVENUTI A CASA DI ESTHER",
@@ -449,7 +503,25 @@ export const translations = {
       "Guardavo mia nonna al tavolo da trucco e cercavo di imitarla. A quanto pare l’ammirazione può diventare presto una routine di bellezza.",
       "Quando mamma aveva bisogno di altro aiuto, restavo da una zia. Cambiava l’indirizzo, non il mio posto: anche lì diventavo la figlia più piccola.",
       "Oggi ricordo quanto mi mancasse mia madre. Ricordo anche quante persone mi fecero spazio."
-    ]
+    ],
+    "life": [
+      "Infanzia",
+      "Gli anni con mio padre",
+      "Dopo quel luglio",
+      "Scuola e arte",
+      "Formare una famiglia",
+      "Diventare scrittrice",
+      "Una vita con Dio",
+      "La vita di oggi"
+    ],
+    "quote": "«Forse sono una persona che colleziona felicità».",
+    "quoteText": "Ci sono stati anche momenti difficili. Eppure spesso le torna in mente per prima una risata. Sono vere entrambe le cose.",
+    "mannaStoryTitle": "Le mattine prima della copertina",
+    "mannaStoryText": "Esther ha sfogliato le foto delle colazioni preparate da lei: french toast con frutti di bosco, caffè, luce sul piano della cucina. Molto prima di scegliere una copertina, a quella tavola preparava da mangiare, leggeva la Bibbia e annotava pensieri.",
+    "mannaHouseTitle": "Una fotografia della casa d’infanzia",
+    "mannaHouseText": "Circa dieci anni fa, Esther fotografò la casa di Cheongdam-dong dove aveva vissuto da bambina. Oggi quella foto fa parte del video di benvenuto del sito.",
+    "mannaDailyTitle": "La manna di questa mattina",
+    "mannaDailyText": "Per Esther, la manna è sia il cibo che prepara al mattino sia la parola di Dio che riceve quel giorno. La colazione di ieri non la nutre oggi; neppure la lettura di ieri sostituisce il tempo di oggi con Dio."
   },
   "ja": {
     "welcome": "エスターの家へようこそ",
@@ -562,7 +634,25 @@ export const translations = {
       "祖母が鏡台でお化粧をするのを見て、私もまねをしました。憧れは、驚くほど早く美容の習慣になるものです。",
       "母がさらに助けを必要とすると、伯母や叔母の家にも行きました。家が変わっても、私の立場は同じ。どこでも末娘になりました。",
       "今思い返すと、母に会いたかった気持ちを覚えています。同時に、私のために居場所を作ってくれた人が何人もいたことも覚えています。"
-    ]
+    ],
+    "life": [
+      "幼い頃",
+      "父と過ごした年月",
+      "あの七月のあと",
+      "学校と美術",
+      "家族を築く",
+      "書く人になる",
+      "神さまと歩む日々",
+      "今の暮らし"
+    ],
+    "quote": "「私は、幸せを集める人なのかもしれません。」",
+    "quoteText": "つらい出来事もありました。それでも先に思い出すのは、笑い声であることが少なくありません。どちらも本当の記憶です。",
+    "mannaStoryTitle": "表紙より先にあった朝",
+    "mannaStoryText": "エスターは、自分で作った朝ごはんの写真を見返しました。ベリーを添えたフレンチトースト、コーヒー、台所に差し込む光。本の表紙を考えるずっと前から、この食卓で朝食をとり、聖書を読み、思いを書き留めていました。",
+    "mannaHouseTitle": "子ども時代の家の写真",
+    "mannaHouseText": "十年ほど前、エスターは幼い頃に暮らした清潭洞の家を撮影しました。その写真は今、ホームページの歓迎動画に使われています。",
+    "mannaDailyTitle": "今朝のマナ",
+    "mannaDailyText": "エスターにとってマナとは、朝に用意する食事と、その日に受け取る神さまの言葉のこと。昨日の朝食では今日のお腹は満たされません。昨日読んだ聖書も、今日神さまの前に座る時間の代わりにはならないのです。"
   }
 } as const;
 export type IntlTranslation = typeof translations[keyof typeof translations];
