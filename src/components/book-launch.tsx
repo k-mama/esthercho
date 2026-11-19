@@ -7,6 +7,7 @@ type Placement = "home" | "books";
 
 const amazonUrl = "https://www.amazon.com/dp/B0HQ9Z7SRD";
 const germanPaperbackUrl = "https://www.amazon.de/dp/B0HRS6F2MH";
+const germanKindleUrl = "https://www.amazon.de/dp/B0HR9GZ77J";
 // Main product photograph from the verified Amazon.de paperback listing.
 const germanCoverUrl = "https://m.media-amazon.com/images/I/61IlRaRs5SL._SL1499_.jpg";
 const assetBase = "/media/books/big-dreams";
@@ -41,11 +42,12 @@ const copy = {
       "A yellow car, one very big plan, and a child's wonderfully simple idea of adventure.",
     thirdVideoLabel: "Watch the yellow car adventure from Big Dreams in Every Color",
     thirdVideoCaption: "THE YELLOW CAR · BIG DREAMS IN EVERY COLOR",
-    germanEyebrow: "GERMAN EDITION · PAPERBACK AVAILABLE",
+    germanEyebrow: "GERMAN EDITION · PAPERBACK & KINDLE AVAILABLE",
     germanTitle: "Große Träume in allen Farben",
     germanDescription: "The same world of little dreams, now in German. A gentle picture book to read aloud, give as a gift, and keep close at bedtime.",
-    germanMeta: "German · 32 pages · Paperback",
+    germanMeta: "German · 32 pages · Paperback & Kindle eBook",
     germanBuy: "Buy the German paperback",
+    germanKindleBuy: "Read the German Kindle edition",
     germanHomeLabel: "Also available in German",
     germanCoverAlt: "Front cover of Große Träume in allen Farben, the German paperback by Sung Yeon Cho",
     germanCoverCaption: "GERMAN EDITION",
@@ -80,11 +82,12 @@ const copy = {
       "노란 자동차를 타고 떠나는 아이의 커다란 계획. 상상 속에서는 어디든 갈 수 있으니까요.",
     thirdVideoLabel: "Big Dreams in Every Color 노란 자동차 모험 영상",
     thirdVideoCaption: "노란 자동차 · 커다란 꿈",
-    germanEyebrow: "독일어판 · 종이책 출간",
+    germanEyebrow: "독일어판 · 종이책·전자책 출간",
     germanTitle: "Große Träume in allen Farben",
     germanDescription: "아이들의 작은 꿈을 담은 같은 이야기를 이제 독일어로도 만날 수 있습니다. 잠자리에서 함께 읽고, 소중한 사람에게 선물할 수 있는 그림책입니다.",
-    germanMeta: "독일어 · 32페이지 · 종이책",
-    germanBuy: "독일어 종이책 아마존에서 구매하기",
+    germanMeta: "독일어 · 32페이지 · 종이책·Kindle 전자책",
+    germanBuy: "독일어 종이책 구매하기",
+    germanKindleBuy: "독일어 Kindle 전자책 구매하기",
     germanHomeLabel: "독일어판도 출간되었습니다",
     germanCoverAlt: "조성연 작가의 독일어 종이책 Große Träume in allen Farben 앞표지",
     germanCoverCaption: "독일어판 앞표지",
@@ -173,14 +176,24 @@ export function BookLaunch({ locale, placement }: { locale: Locale; placement: P
             <h3>{content.germanTitle}</h3>
             <p className={styles.editionDescription}>{content.germanDescription}</p>
             <p className={styles.editionMeta}>{content.germanMeta}</p>
-            <a
-              className={styles.buyLink}
-              href={germanPaperbackUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {content.germanBuy} <span aria-hidden="true">↗</span>
-            </a>
+            <div className={styles.editionActions}>
+              <a
+                className={styles.buyLink}
+                href={germanPaperbackUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {content.germanBuy} <span aria-hidden="true">↗</span>
+              </a>
+              <a
+                className={styles.moreLink}
+                href={germanKindleUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {content.germanKindleBuy} <span aria-hidden="true">↗</span>
+              </a>
+            </div>
           </div>
           <figure className={styles.editionFigure}>
             <Image
