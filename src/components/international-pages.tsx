@@ -269,7 +269,13 @@ function IntlAbout({locale}:{locale:TranslationLocale}) {
     </div></section>
     {chapters.map(([title,body,src],i)=><section className={`intl-section ${i%2?"intl-soft":""}`} key={title}>
       <div className="container intl-scene-grid">
-        <div><h2>{title}</h2><p>{body}</p></div>
+        <div><h2>{title}</h2><p>{body}</p>
+          {i === 0 ? <ol className="intl-education">
+            {t.education.map((description,idx)=>
+              <li key={description}><time>{[1985,1988,1992,1999][idx]}</time><span>{description}</span></li>
+            )}
+          </ol> : null}
+        </div>
         <Image src={src} alt={title} width={960} height={780} sizes="(max-width: 750px) 100vw, 44vw"/>
       </div></section>)}
   </main>;
