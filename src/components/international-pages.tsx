@@ -394,15 +394,31 @@ function IntlArchive({locale}:{locale:TranslationLocale}) {
 function IntlStudio({locale}:{locale:TranslationLocale}) {
   const t=translations[locale];
   const e=editorial[locale];
-  return <main className="intl-page"><Cover section="studio" locale={locale}/>
-    <section className="intl-section"><div className="container"><h2>{t.studioHeading}</h2>
+  return <main className="intl-page">
+    <Cover section="studio" locale={locale}/>
+    <section className="intl-section"><div className="container">
+      <p className="intl-overline">{e.studio.sourceLabel}</p>
+      <h2>{t.studioHeading}</h2>
       <p className="intl-wide-copy">{t.studioText}</p>
-      <div className="intl-scene-grid">
-        <div><h3>{t.studioSecond}</h3><p>{t.studioSecondText}</p></div>
-        <Image src="/media/esther/still-making-father-child-collage-20260802.png" alt={t.studioLead} width={960} height={960} sizes="(max-width: 750px) 100vw, 44vw"/>
-      </div>
     </div></section>
-    <section className="intl-ending"><div className="container"><h2>{t.studioEnding}</h2></div></section>
+    <section className="intl-section intl-soft"><div className="container intl-scene-grid">
+      <div>
+        <p className="intl-overline">{e.studio.laterLabel}</p>
+        <h2>{t.studioSecond}</h2>
+        <p>{t.studioSecondText}</p>
+      </div>
+      <figure>
+        <Image src="/media/esther/still-making-father-child-collage-20260802.png"
+          alt={t.coverAlts.studio} width={960} height={960}
+          sizes="(max-width: 750px) 100vw, 44vw"/>
+        <figcaption>{e.studio.figureCaption}</figcaption>
+      </figure>
+    </div></section>
+    <section className="intl-ending"><div className="container">
+      <p className="intl-overline">{e.studio.futureLabel}</p>
+      <h2>{t.studioEnding}</h2>
+      <p className="intl-wide-copy">{e.studio.futureBody}</p>
+    </div></section>
   </main>;
 }
 function IntlAbout({locale}:{locale:TranslationLocale}) {
