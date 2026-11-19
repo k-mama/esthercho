@@ -293,7 +293,7 @@ function IntlAbout({locale}:{locale:TranslationLocale}) {
   ];
   return <main className="intl-page"><Cover section="about" locale={locale}/>
     <section className="intl-section"><div className="container">
-      <p className="intl-overline">ESTHER CHO · 조성연</p>
+      <p className="intl-overline">{t.aboutSectionLabel}</p>
       <h2>{t.aboutTitle}</h2><p className="intl-wide-copy">{t.aboutIntro}</p>
       <a className="intl-more" href="https://www.amazon.com/author/sungyeoncho" target="_blank" rel="noopener noreferrer">{localeInterface[locale].authorPage} ↗</a>
     </div></section>
