@@ -11,8 +11,11 @@ export function generateStaticParams(){
 export async function generateMetadata({params}:{params:Promise<{lang:TranslationLocale;story:Story}>}):Promise<Metadata>{
   const {lang,story}=await params; const idx=stories.indexOf(story);const t=translations[lang];
   return {title:t.storyTitles[idx],description:t.storiesLead,
+    openGraph:{type:"website",title:t.storyTitles[idx],description:t.storiesLead,url:localizedHref(lang,`/stories/${story}`),siteName:"Esther Cho"},
+    twitter:{card:"summary_large_image",title:t.storyTitles[idx],description:t.storiesLead},
     alternates:{canonical:localizedHref(lang,`/stories/${story}`),
       languages:{en:localizedHref("en",`/stories/${story}`),
+        ko:localizedHref("ko",`/stories/${story}`),
         de:localizedHref("de",`/stories/${story}`),
         es:localizedHref("es",`/stories/${story}`),
         fr:localizedHref("fr",`/stories/${story}`),
