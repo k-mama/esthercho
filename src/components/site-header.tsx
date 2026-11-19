@@ -201,6 +201,7 @@ export function SiteHeader() {
             className="site-header-lang"
             aria-label={languageLabel}
             title={languageLabel}
+            onClick={closeMobileMenu}
           >
             <GlobeIcon />
             <span className="site-language-code">{locale.toUpperCase()}</span>
