@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -38,6 +38,7 @@ export function SiteHeader() {
   const pathname = usePathname();
   const mobileMenuRef = useRef<HTMLDetailsElement>(null);
   const languageMenuRef = useRef<HTMLDetailsElement>(null);
+  const [scrolled, setScrolled] = useState(false);
   const locale = localeFromPath(pathname);
   const localeCopy = localeInterface[locale];
 
@@ -74,6 +75,16 @@ export function SiteHeader() {
   }, [pathname]);
 
   useEffect(() => {
+    // Read scroll position on navigation and keep the change lightweight.
+    // The fixed header must remain legible all the way down to the footer.
+    const handleScroll = () => setScrolled(window.scrollY > 48);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    // Keep the initial state in sync without hiding the hero during hydration.
+    window.requestAnimationFrame(handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [pathname]);
+
+  useEffect(() => {
     const onPointerDown = (event: PointerEvent) => {
       if (languageMenuRef.current && !languageMenuRef.current.contains(event.target as Node)) {
         languageMenuRef.current.removeAttribute("open");
@@ -94,7 +105,7 @@ export function SiteHeader() {
   }, []);
 
   return (
-    <header className={`site-header${isHome ? "" : " site-header--with-subnav"}`}>
+    <header className={`site-header site-header--persistent${scrolled ? " site-header--scrolled" : ""}${isHome ? "" : " site-header--with-subnav"}`}>
       <div className="container site-header-main-row">
         <Link
           href={homeHref}
