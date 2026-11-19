@@ -84,8 +84,8 @@ export const translations = {
     "studioSecondText": "Aus einer Skizze kann eine Collage oder ein digitales Bild werden. Die Quelle bleibt benannt.",
     "studioEnding": "Weitere Originale, wenn Esther sie zeigen möchte.",
     "aboutTitle": "Esther Cho",
-    "aboutLead": "Koreanische Schriftstellerin und Künstlerin Cho Sungyeon (조성연).",
-    "aboutIntro": "Esther Cho ist der internationale Autorinnenname der koreanischen Schriftstellerin und Künstlerin Cho Sungyeon. Sie schreibt und zeichnet über christlichen Glauben, Familie, Kunst, Mahlzeiten und das Leben zu Hause.",
+    "aboutLead": "Autorin und Künstlerin aus Südkorea. Sie erzählt von Familie, Glauben und den kleinen Momenten des Alltags.",
+    "aboutIntro": "Esther Cho ist der Name, unter dem die koreanische Autorin und Künstlerin Cho Sungyeon (조성연) ihre Werke international veröffentlicht. Ihre Geschichten und Bilder schöpfen aus dem eigenen Leben: aus ihrem christlichen Glauben, der Familie, der Kunst und dem Alltag zu Hause.",
     "aboutEducation": "Jahre des Kunststudiums",
     "aboutEducationText": "Sie besuchte die Yewon School und die Seoul Arts High School, studierte Ostasiatische Malerei an der Seoul National University und absolvierte später ein Aufbaustudium in Kunstdidaktik an der Ewha Womans University.",
     "aboutHome": "Das Leben spielt sich am Tisch ab.",
@@ -159,7 +159,8 @@ export const translations = {
       "about": "Esther Cho steht in einer dunkelblauen Jacke am sonnigen Fenster",
       "notes": "Avocadotoast, Ei, Trauben und Eiskaffee auf Esthers Frühstückstisch",
       "archive": "Esther Cho als Kind lächelnd in einem Garten"
-    }
+    },
+    "aboutSectionLabel": "ÜBER ESTHER"
   },
   "es": {
     "welcome": "BIENVENIDOS A LA CASA DE ESTHER",
@@ -246,8 +247,8 @@ export const translations = {
     "studioSecondText": "Un boceto puede convertirse en collage o imagen digital. Su origen sigue claramente identificado.",
     "studioEnding": "Más originales, cuando Esther quiera mostrarlos.",
     "aboutTitle": "Esther Cho",
-    "aboutLead": "Escritora y artista coreana Cho Sungyeon (조성연).",
-    "aboutIntro": "Esther Cho es el nombre internacional de la escritora y artista coreana Cho Sungyeon. Escribe y dibuja desde su vida: la fe cristiana, la familia, el arte, las comidas y el hogar.",
+    "aboutLead": "Escritora y artista coreana. Con palabras y dibujos, cuenta historias de familia, fe y los pequeños momentos de cada día.",
+    "aboutIntro": "Esther Cho es el nombre con el que la escritora y artista coreana Cho Sungyeon (조성연) presenta su obra a lectores de otros países. Sus historias y dibujos nacen de lo que ha vivido: la fe cristiana, la familia, el arte y la vida en casa.",
     "aboutEducation": "Años dedicados al estudio del arte",
     "aboutEducationText": "Estudió en Yewon School y Seoul Arts High School, luego Pintura Oriental en la Universidad Nacional de Seúl. Más tarde cursó estudios de posgrado en Educación Artística en la Universidad Femenina Ewha.",
     "aboutHome": "La vida sucede alrededor de la mesa.",
@@ -321,7 +322,8 @@ export const translations = {
       "about": "Esther Cho junto a una ventana iluminada, con una chaqueta azul marino",
       "notes": "Tostada con aguacate, huevo, uvas y café frío sobre la mesa de Esther",
       "archive": "Esther Cho sonríe en un jardín cuando era niña"
-    }
+    },
+    "aboutSectionLabel": "CONOCE A ESTHER"
   },
   "fr": {
     "welcome": "BIENVENUE CHEZ ESTHER",
@@ -408,8 +410,8 @@ export const translations = {
     "studioSecondText": "Un croquis peut devenir un collage ou une image numérique. Sa source reste clairement nommée.",
     "studioEnding": "D’autres originaux, quand Esther souhaitera les montrer.",
     "aboutTitle": "Esther Cho",
-    "aboutLead": "Écrivaine et artiste coréenne Cho Sungyeon (조성연).",
-    "aboutIntro": "Esther Cho est le nom d’autrice international de Cho Sungyeon, écrivaine et artiste coréenne. Son écriture et ses dessins puisent dans la foi chrétienne, la famille, l’art, les repas et la vie domestique.",
+    "aboutLead": "Autrice et artiste coréenne. Elle puise ses histoires dans la famille, la foi et les petits détails du quotidien.",
+    "aboutIntro": "Esther Cho est le nom sous lequel Cho Sungyeon (조성연), autrice et artiste coréenne, présente ses œuvres au-delà de la Corée. Ses textes et ses dessins prennent racine dans sa propre vie : la foi chrétienne, la famille, l’art et la vie à la maison.",
     "aboutEducation": "Des années d’études artistiques",
     "aboutEducationText": "Elle a étudié à Yewon School et Seoul Arts High School, puis la peinture orientale à l’Université nationale de Séoul. Elle a ensuite suivi des études supérieures en pédagogie artistique à l’Université féminine Ewha.",
     "aboutHome": "La vie se déroule à table.",
@@ -483,7 +485,8 @@ export const translations = {
       "about": "Esther Cho en veste bleu marine près d’une fenêtre ensoleillée",
       "notes": "Toast à l’avocat, œuf, raisins et café glacé sur la table d’Esther",
       "archive": "Esther Cho enfant, souriante dans un jardin"
-    }
+    },
+    "aboutSectionLabel": "FAIRE CONNAISSANCE AVEC ESTHER"
   },
   "it": {
     "welcome": "BENVENUTI A CASA DI ESTHER",
@@ -570,8 +573,8 @@ export const translations = {
     "studioSecondText": "Uno schizzo può diventare collage o immagine digitale. La fonte resta dichiarata.",
     "studioEnding": "Altri originali, quando Esther vorrà mostrarli.",
     "aboutTitle": "Esther Cho",
-    "aboutLead": "Scrittrice e artista coreana Cho Sungyeon (조성연).",
-    "aboutIntro": "Esther Cho è il nome internazionale della scrittrice e artista coreana Cho Sungyeon. Scrive e disegna a partire dalla propria vita: fede cristiana, famiglia, arte, pasti e vita domestica.",
+    "aboutLead": "Scrittrice e artista coreana. Con parole e disegni racconta storie di famiglia, fede e vita quotidiana.",
+    "aboutIntro": "Esther Cho è il nome con cui la scrittrice e artista coreana Cho Sungyeon (조성연) presenta le sue opere ai lettori di tutto il mondo. Le sue storie nascono da ciò che conosce da vicino: la fede cristiana, la famiglia, l’arte e la vita di ogni giorno.",
     "aboutEducation": "Anni di formazione artistica",
     "aboutEducationText": "Ha studiato alla Yewon School e alla Seoul Arts High School, poi Pittura Orientale alla Seoul National University. Ha successivamente seguito studi post-laurea in Educazione Artistica alla Ewha Womans University.",
     "aboutHome": "La vita si svolge a tavola.",
@@ -645,7 +648,8 @@ export const translations = {
       "about": "Esther Cho in giacca blu scuro accanto a una finestra soleggiata",
       "notes": "Toast con avocado, uovo, uva e caffè freddo sulla tavola di Esther",
       "archive": "Esther Cho da bambina, sorridente in giardino"
-    }
+    },
+    "aboutSectionLabel": "CONOSCI ESTHER"
   },
   "ja": {
     "welcome": "エスターの家へようこそ",
@@ -731,9 +735,9 @@ export const translations = {
     "studioSecond": "絵は、別の形へと育つこともあります。",
     "studioSecondText": "スケッチがコラージュやデジタル画像になることも。元の作品は、名前とともに残します。",
     "studioEnding": "エスターが見せたいと思ったときに、ほかの原画も。",
-    "aboutTitle": "エスター・チョー",
-    "aboutLead": "韓国の作家・画家、チョ・ソンヨン（조성연）。",
-    "aboutIntro": "エスター・チョーは、韓国の作家・画家チョ・ソンヨンの国際的な著者名です。キリスト教信仰、家族、美術、食事、家庭での暮らしを題材に文章と絵を制作しています。",
+    "aboutTitle": "Esther Cho",
+    "aboutLead": "韓国の作家・画家。家族や信仰、暮らしの小さな出来事を、言葉と絵で描いています。",
+    "aboutIntro": "エスター・チョー（Esther Cho）は、韓国の作家・画家、チョ・ソンヨン（조성연）が海外で使う作家名です。家族と過ごす時間、キリスト教の信仰、絵を描くこと、毎日の食卓。身近な暮らしの中から、文章と絵を生み出しています。",
     "aboutEducation": "美術を学んだ年月",
     "aboutEducationText": "芸苑学校とソウル芸術高校を経て、ソウル大学で東洋画を学びました。その後、梨花女子大学大学院で美術教育を学びました。",
     "aboutHome": "日々の暮らしは食卓にあります。",
@@ -807,7 +811,8 @@ export const translations = {
       "about": "日差しの入る窓辺に立つ紺色の上着のエスター・チョー",
       "notes": "エスターの食卓に並ぶアボカドトースト、卵、ブドウ、アイスコーヒー",
       "archive": "庭で微笑む幼い頃のエスター・チョー"
-    }
+    },
+    "aboutSectionLabel": "エスターについて"
   }
 } as const;
 export type IntlTranslation = typeof translations[keyof typeof translations];
