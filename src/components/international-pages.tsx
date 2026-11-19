@@ -50,8 +50,11 @@ function Cover({ section, locale }: InternationalProps) {
     archive:[t.archiveTitle,t.archiveLead,"/media/covers/childhood-cover.jpg"],
     home:[t.aboutTitle,t.aboutLead,"/media/covers/books-cover-final-20260802.webp"],
   })[section];
+  const eyebrow = section === "notes" ? localeInterface[locale].rooms[0] : section === "archive"
+    ? localeInterface[locale].rooms[1] : localeInterface[locale].primary[
+      section === "stories" ? 0 : section === "books" ? 1 : section === "studio" ? 2 : 3];
   return <PageCover
-    eyebrow={localeInterface[locale].primary[section === "stories" ? 0 : section === "books" ? 1 : section === "studio" ? 2 : 3]}
+    eyebrow={eyebrow}
     title={info[0]} description={info[1]} image={info[2]}
     alt={info[1]} align="right" shade="soft" objectPosition="center center"
   />;
@@ -78,7 +81,7 @@ function IntlHome({locale}: {locale:TranslationLocale}) {
   const sceneImage = ["/media/esther/morning-table.jpg","/media/esther/childhood-garden.jpg","/media/esther/bangladesh-service.jpg","/media/esther/still-making-father-child-collage-20260802.png"];
   const scenePaths = ["/notes","/archive","/stories","/studio"];
   return <main className="intl-home">
-    <section className="intl-home-hero">
+    <section className="intl-home-hero home-video-hero">
       <HomeHeroVideo/>
       <div className="intl-home-hero-copy"><p>{t.welcome}</p><h1>{t.hero}</h1><a href="#inside">{t.enter} ↓</a></div>
     </section>
