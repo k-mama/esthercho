@@ -2,7 +2,7 @@ export const editorialFr = {
   stories: {
     introMore: "C’est ainsi que ces pages prennent forme. Une personne, une photo, une saison ou un objet tout simple peut réveiller un souvenir longtemps resté silencieux.",
     featuredLabel: "POUR COMMENCER",
-    featuredLead: "Avant la naissance d’Esther, son père avait rêvé d’un tigre. L’enfant qui naquit étant une fille, la famille plaisantait : ce devait être un chat.",
+    featuredLead: "Avant la naissance d’Esther, son père avait rêvé d’un tigre. Mais c’est une petite fille qui est née. Alors, dans la famille, on plaisantait : ce devait être un chat.",
     featuredNote: "Le récit s’arrête là où s’arrête le souvenir. Rien n’a été ajouté pour lui donner une fin plus parfaite.",
     featuredAction: "Lire le premier récit",
     collectionLead: "Les premiers souvenirs qu’Esther a choisi de raconter.",
