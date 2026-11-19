@@ -8,6 +8,10 @@ type Placement = "home" | "books";
 const amazonUrl = "https://www.amazon.com/dp/B0HQ9Z7SRD";
 const germanPaperbackUrl = "https://www.amazon.de/dp/B0HRS6F2MH";
 const germanKindleUrl = "https://www.amazon.de/dp/B0HR9GZ77J";
+const spanishPaperbackUrl = "https://www.amazon.es/dp/B0HRZ54WMS";
+const spanishKindleUrl = "https://www.amazon.es/dp/B0HRVXGBVR";
+// Official cover from the verified Amazon.es Spanish paperback listing.
+const spanishCoverUrl = "https://m.media-amazon.com/images/I/71s1fdCsbwL._SL1499_.jpg";
 // Main product photograph from the verified Amazon.de paperback listing.
 const germanCoverUrl = "https://m.media-amazon.com/images/I/61IlRaRs5SL._SL1499_.jpg";
 const assetBase = "/media/books/big-dreams";
@@ -48,7 +52,15 @@ const copy = {
     germanMeta: "German · 32 pages · Paperback & Kindle eBook",
     germanBuy: "Buy the German paperback",
     germanKindleBuy: "Read the German Kindle edition",
-    germanHomeLabel: "Also available in German",
+    editionHomeLabel: "MORE LANGUAGES",
+    spanishTitle: "Grandes sueños de todos los colores",
+    spanishEyebrow: "SPANISH EDITION · PAPERBACK & KINDLE AVAILABLE",
+    spanishDescription: "Five children, their impossible dreams, and a little question before bedtime. Now available in Spanish for sharing, reading aloud, and giving as a gift.",
+    spanishMeta: "Spanish · 32 pages · Paperback & Kindle eBook",
+    spanishBuy: "Buy the Spanish paperback",
+    spanishKindleBuy: "Read the Spanish Kindle edition",
+    spanishCoverAlt: "Front cover of Grandes sueños de todos los colores, the Spanish picture book by Sung Yeon Cho",
+    spanishCoverCaption: "SPANISH EDITION",
     germanCoverAlt: "Front cover of Große Träume in allen Farben, the German paperback by Sung Yeon Cho",
     germanCoverCaption: "GERMAN EDITION",
     fallback: "Your browser does not support video playback.",
@@ -88,7 +100,15 @@ const copy = {
     germanMeta: "독일어 · 32페이지 · 종이책·Kindle 전자책",
     germanBuy: "독일어 종이책 구매하기",
     germanKindleBuy: "독일어 Kindle 전자책 구매하기",
-    germanHomeLabel: "독일어판도 출간되었습니다",
+    editionHomeLabel: "다른 언어판",
+    spanishTitle: "Grandes sueños de todos los colores",
+    spanishEyebrow: "스페인어판 · 종이책·전자책 출간",
+    spanishDescription: "다섯 아이의 커다란 꿈과 잠자리의 작은 질문을 담은 그림책을 이제 스페인어로도 만날 수 있습니다. 함께 읽고 선물하기 좋은 이야기입니다.",
+    spanishMeta: "스페인어 · 32페이지 · 종이책·Kindle 전자책",
+    spanishBuy: "스페인어 종이책 구매하기",
+    spanishKindleBuy: "스페인어 Kindle 전자책 구매하기",
+    spanishCoverAlt: "조성연 작가의 스페인어 그림책 Grandes sueños de todos los colores 앞표지",
+    spanishCoverCaption: "스페인어판 앞표지",
     germanCoverAlt: "조성연 작가의 독일어 종이책 Große Träume in allen Farben 앞표지",
     germanCoverCaption: "독일어판 앞표지",
     fallback: "이 브라우저에서는 영상을 재생할 수 없습니다.",
@@ -134,9 +154,12 @@ export function BookLaunch({ locale, placement }: { locale: Locale; placement: P
           </div>
           {placement === "home" && (
             <p className={styles.editionNote}>
-              <span>{content.germanHomeLabel}</span>
+              <span>{content.editionHomeLabel}</span>
               <Link href={locale === "ko" ? "/ko/books/#german-edition" : "/books/#german-edition"}>
                 {content.germanTitle} <span aria-hidden="true">↗</span>
+              </Link>
+              <Link href={locale === "ko" ? "/ko/books/#spanish-edition" : "/books/#spanish-edition"}>
+                {content.spanishTitle} <span aria-hidden="true">↗</span>
               </Link>
             </p>
           )}
@@ -206,6 +229,47 @@ export function BookLaunch({ locale, placement }: { locale: Locale; placement: P
               className={styles.editionCover}
             />
             <figcaption>{content.germanCoverCaption}</figcaption>
+          </figure>
+        </div>
+      )}
+
+      {placement === "books" && (
+        <div className={`container ${styles.editionCard}`} id="spanish-edition">
+          <div className={styles.editionText}>
+            <p className={styles.eyebrow}>{content.spanishEyebrow}</p>
+            <h3>{content.spanishTitle}</h3>
+            <p className={styles.editionDescription}>{content.spanishDescription}</p>
+            <p className={styles.editionMeta}>{content.spanishMeta}</p>
+            <div className={styles.editionActions}>
+              <a
+                className={styles.buyLink}
+                href={spanishPaperbackUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {content.spanishBuy} <span aria-hidden="true">↗</span>
+              </a>
+              <a
+                className={styles.moreLink}
+                href={spanishKindleUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {content.spanishKindleBuy} <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </div>
+          <figure className={styles.editionFigure}>
+            <Image
+              src={spanishCoverUrl}
+              alt={content.spanishCoverAlt}
+              width={1280}
+              height={2048}
+              sizes="(max-width: 600px) 55vw, 220px"
+              unoptimized
+              className={styles.editionCover}
+            />
+            <figcaption>{content.spanishCoverCaption}</figcaption>
           </figure>
         </div>
       )}
