@@ -67,11 +67,12 @@ export const childhoodHomeMemory: Record<SiteLocale, HomeMemory> = {
     heroPlace: "CHEONGDAM-DONG · SEOUL",
     heroLine: "Das Haus, in dem wir als Familie am glücklichsten waren.",
     eyebrow: "UNSER ECHTES FAMILIENHAUS · CHEONGDAM-DONG, GANGNAM, SEOUL",
-    heading: "Das Haus unserer glücklichsten Jahre.",
+    heading: "Vier Fotos führen zurück zu diesem Haus.",
     paragraphs: [
-      "Dieses Haus steht in Cheongdam-dong, einem Viertel im Seouler Bezirk Gangnam. Hier habe ich meine Kindheit und einen Teil meiner Jugend verbracht.",
-      "Meine Mutter, meine jüngeren Geschwister und ich sind uns in einem Punkt einig: Die Jahre in diesem Haus waren unsere glücklichsten. Seitdem haben wir unterschiedliche Wege genommen. Aber wenn es um dieses Haus geht, geben wir alle dieselbe Antwort.",
-      "Die Fotos zeigen das Haus von der Straße aus, das offene Tor, den Garten und einen Augenblick aus unserer Kindheit. Auch der Begrüßungsfilm dieser Website beginnt hier. Bevor all die späteren Geschichten kamen, war da dieses Zuhause."
+      "Cheongdam-dong, im Seouler Bezirk Gangnam. In diesem Haus habe ich meine Kindheit und meine Jugend verbracht.",
+      "Fragt man meine Mutter, meine jüngeren Geschwister oder mich nach unserer glücklichsten Zeit, fällt immer derselbe Ort: dieses Haus. Seitdem hat jeder von uns sein eigenes Leben geführt. Doch in diesem Punkt sind wir uns noch immer einig.",
+      "Das Tor mit den roten Dachziegeln. Der gepflasterte Weg. Die Bäume im Garten. Auf den später entstandenen Aufnahmen führt der Weg zurück zum Haus. Das letzte Bild stammt aus unserer Kindheit: zwei Kinder, ein Dreirad und ein kleines rotes Spielzeugauto.",
+      "Deshalb habe ich dieses Haus für den Eröffnungsfilm meiner Website gewählt. Ich wollte zuerst den Ort zeigen, an den unsere Familie ihre glücklichsten Jahre knüpft."
     ],
     captions: [
       "01 · Das Haus von der Straße aus",
@@ -90,11 +91,12 @@ export const childhoodHomeMemory: Record<SiteLocale, HomeMemory> = {
     heroPlace: "CHEONGDAM-DONG · SEÚL",
     heroLine: "La casa donde más felices fuimos en familia.",
     eyebrow: "UNA CASA REAL · CHEONGDAM-DONG, GANGNAM, SEÚL",
-    heading: "La casa de nuestros años más felices.",
+    heading: "Cuatro fotos para volver a aquella casa.",
     paragraphs: [
-      "Esta casa está en Cheongdam-dong, en el distrito de Gangnam de Seúl. Viví aquí desde pequeña hasta la adolescencia.",
-      "Mi madre, mis hermanos menores y yo coincidimos en algo: los años que pasamos en esta casa fueron los más felices. Después cada uno siguió su camino, pero cuando hablamos de esta casa, la respuesta es la misma.",
-      "Las fotos muestran la casa desde la calle, la entrada, el jardín y un instante de nuestra infancia. El video que da la bienvenida a esta página también comienza aquí. Antes de todas las historias que vinieron después, estuvo este hogar."
+      "Cheongdam-dong, en el distrito de Gangnam de Seúl. Viví en esta casa desde niña hasta la adolescencia.",
+      "Si le preguntan a mi madre, a mis hermanos menores o a mí cuándo fuimos más felices, todos pensamos en la misma casa. Después cada uno siguió su camino, pero en eso seguimos estando de acuerdo.",
+      "El portón con su tejado de tejas rojas. El camino de ladrillo. Los árboles del jardín. Las fotos tomadas años después nos llevan hacia el interior. La última es de nuestra infancia: dos niños, un triciclo y un pequeño auto rojo de juguete.",
+      "Por eso elegí esta casa para el video de bienvenida de mi página. Quería que quienes llegan por primera vez vieran el lugar donde toda mi familia recuerda haber sido más feliz."
     ],
     captions: [
       "01 · La casa vista desde la calle",
@@ -113,11 +115,12 @@ export const childhoodHomeMemory: Record<SiteLocale, HomeMemory> = {
     heroPlace: "CHEONGDAM-DONG · SÉOUL",
     heroLine: "La maison de nos années les plus heureuses.",
     eyebrow: "LA VRAIE MAISON FAMILIALE · CHEONGDAM-DONG, GANGNAM, SÉOUL",
-    heading: "La maison de nos années les plus heureuses.",
+    heading: "Quatre photos pour retrouver cette maison.",
     paragraphs: [
-      "Cette maison se trouve à Cheongdam-dong, dans l'arrondissement de Gangnam, à Séoul. J'y ai vécu de l'enfance jusqu'à l'adolescence.",
-      "Ma mère, mes frères et sœurs cadets et moi disons tous la même chose : c'est dans cette maison que nous avons été le plus heureux. Depuis, nos vies ont suivi des chemins différents. Pourtant, lorsqu'on évoque cette maison, nous sommes toujours d'accord.",
-      "Les photos montrent la maison depuis la rue, le portail ouvert, le jardin et un moment de notre enfance. Le film d'accueil de ce site commence lui aussi ici. Avant toutes les histoires qui ont suivi, il y avait cette maison."
+      "Cheongdam-dong, dans l’arrondissement de Gangnam, à Séoul. J’ai vécu dans cette maison de l’enfance à l’adolescence.",
+      "Si l’on demande à ma mère, à mes frères et sœurs cadets ou à moi quand nous avons été le plus heureux, nous pensons tous à cette maison. Nos vies ont suivi des chemins différents depuis, mais sur ce point, notre réponse n’a pas changé.",
+      "Le portail coiffé de tuiles rouges. L’allée de briques. Les arbres du jardin. Les photos prises bien des années plus tard nous ramènent vers la maison. La dernière remonte à notre enfance : deux enfants, un tricycle et une petite voiture rouge.",
+      "C’est pour cela que j’ai choisi cette maison pour le film d’accueil de mon site. Je voulais montrer d’abord le lieu où chacun de nous situe ses années les plus heureuses."
     ],
     captions: [
       "01 · La maison vue depuis la rue",
@@ -136,11 +139,12 @@ export const childhoodHomeMemory: Record<SiteLocale, HomeMemory> = {
     heroPlace: "CHEONGDAM-DONG · SEUL",
     heroLine: "La casa in cui siamo stati più felici, tutti insieme.",
     eyebrow: "LA NOSTRA VERA CASA · CHEONGDAM-DONG, GANGNAM, SEUL",
-    heading: "La casa dei nostri anni più felici.",
+    heading: "Quattro fotografie per tornare a quella casa.",
     paragraphs: [
-      "Questa casa si trova a Cheongdam-dong, nel quartiere di Gangnam, a Seul. Ci ho vissuto dall'infanzia fino agli anni dell'adolescenza.",
-      "Mia madre, i miei fratelli più piccoli e io diciamo tutti la stessa cosa: gli anni trascorsi qui sono stati i più felici. Poi ognuno ha preso la propria strada. Ma quando parliamo di questa casa, il ricordo ci trova ancora d'accordo.",
-      "Nelle fotografie si vedono la casa dalla strada, il cancello aperto, il giardino e un momento della nostra infanzia. Anche il video di benvenuto di questo sito comincia da qui. Prima di tutte le storie venute dopo, c'era questa casa."
+      "Cheongdam-dong, nel quartiere di Gangnam, a Seul. In questa casa ho vissuto dall’infanzia fino all’adolescenza.",
+      "Se chiedete a mia madre, ai miei fratelli più piccoli o a me quando siamo stati più felici, tutti pensiamo alla stessa casa. Da allora ognuno ha seguito la propria strada, ma su questo siamo ancora d’accordo.",
+      "Il cancello con le tegole rosse. Il vialetto di mattoni. Gli alberi del giardino. Le foto scattate molti anni dopo ci accompagnano fin dentro il cortile. L’ultima viene dalla nostra infanzia: due bambini, un triciclo e una macchinina rossa.",
+      "Ecco perché ho scelto questa casa per il video d’apertura del sito. Volevo che chi arriva qui vedesse per prima cosa il luogo che tutti noi ricordiamo come quello degli anni più felici."
     ],
     captions: [
       "01 · La casa vista dalla strada",
@@ -159,11 +163,12 @@ export const childhoodHomeMemory: Record<SiteLocale, HomeMemory> = {
     heroPlace: "ソウル・清潭洞",
     heroLine: "家族みんなが、いちばん幸せだった家。",
     eyebrow: "実際に暮らした家 · ソウル・江南区 清潭洞",
-    heading: "家族みんなが、いちばん幸せだった家。",
+    heading: "四枚の写真をたどると、あの家に着きます。",
     paragraphs: [
-      "ソウルの江南区、清潭洞（チョンダムドン）。ここは、私が子どもの頃から十代まで暮らした家です。",
-      "母も、私も、きょうだいたちも、この家で過ごした頃がいちばん幸せだったと言います。その後はそれぞれ違う年月を重ねてきたのに、この家のことになると、不思議なくらい答えが同じです。",
-      "道から見た家、開いた門、庭と建物、そして幼い頃の写真。このホームページの最初の映像も、この家から始まります。どこから自分の話を始めようかと考えると、やっぱりこの門の前に戻ってくるのです。"
+      "ソウル・江南区の清潭洞（チョンダムドン）。子どもの頃から十代まで、私はこの家で暮らしました。",
+      "母も、私も、きょうだいたちも、いちばん幸せだったのはこの家で過ごした頃だと言います。それからそれぞれ違う人生を歩んできたのに、この家のことでは今も答えが同じです。",
+      "赤い瓦屋根の門、奥へ続くレンガの道、庭の木々。大人になってから撮った家の写真を順にたどると、最後は幼い頃の一枚に着きます。三輪車と小さな赤いおもちゃの車のそばに、二人の子どもがいます。",
+      "だから、このホームページの最初の映像にこの家を選びました。私たち家族みんながいちばん幸せだったと話す場所を、最初に見てもらいたかったのです。"
     ],
     captions: [
       "01 · 道から見た家と門",
@@ -182,11 +187,12 @@ export const childhoodHomeMemory: Record<SiteLocale, HomeMemory> = {
     heroPlace: "CHEONGDAM-DONG · SEUL",
     heroLine: "A casa onde nossa família foi mais feliz.",
     eyebrow: "A CASA DE VERDADE · CHEONGDAM-DONG, GANGNAM, SEUL",
-    heading: "A casa dos nossos anos mais felizes.",
+    heading: "Quatro fotos para voltar àquela casa.",
     paragraphs: [
-      "Essa casa fica em Cheongdam-dong, no bairro de Gangnam, em Seul. Morei aqui desde pequena até a adolescência.",
-      "Minha mãe, meus irmãos mais novos e eu sempre dizemos a mesma coisa: os anos que passamos nessa casa foram os mais felizes. Depois, cada um seguiu seu caminho. Mas, quando o assunto é essa casa, a resposta continua sendo igual.",
-      "As fotos mostram a casa vista da rua, o portão aberto, o jardim e um pedacinho da nossa infância. O vídeo de abertura deste site também começa aqui. Antes de todas as histórias que vieram depois, havia esse lar."
+      "Cheongdam-dong, no distrito de Gangnam, em Seul. Morei nessa casa desde pequena até a adolescência.",
+      "Se perguntarem à minha mãe, aos meus irmãos mais novos ou a mim quando fomos mais felizes, todos vamos lembrar da mesma casa. De lá para cá, cada um seguiu sua vida, mas, quando falamos desse lugar, a resposta não muda.",
+      "O portão de telhas vermelhas. O caminho de tijolos. As árvores do jardim. As fotos tiradas anos depois nos levam para dentro da casa. A última é da nossa infância: duas crianças, um triciclo e um carrinho vermelho.",
+      "Foi por isso que escolhi essa casa para o vídeo de abertura do site. Queria mostrar primeiro o lugar que toda a nossa família guarda como o cenário dos anos mais felizes."
     ],
     captions: [
       "01 · A casa vista da rua",
