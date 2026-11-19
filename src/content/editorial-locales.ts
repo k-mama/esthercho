@@ -3,6 +3,7 @@ import { editorialEs } from "./editorial-es";
 import { editorialFr } from "./editorial-fr";
 import { editorialIt } from "./editorial-it";
 import { editorialJa } from "./editorial-ja";
+import { editorialPtBr } from "./editorial-pt-br";
 
 /** Human-readable, source-faithful website editorial copy.
  * English and Korean source pages remain canonical.
@@ -14,4 +15,5 @@ export const editorial = {
   fr: editorialFr,
   it: editorialIt,
   ja: editorialJa,
+  "pt-br": editorialPtBr,
 } as const;
