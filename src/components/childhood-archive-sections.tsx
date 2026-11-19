@@ -27,16 +27,6 @@ export function ChildhoodArchiveSections({locale}:{locale:SiteLocale}) {
   const label=labels[locale];
 
   return <>
-    <section className="childhood-intro" aria-labelledby="childhood-intro-title">
-      <div className="container">
-        <p className="childhood-kicker">{label.intro}</p>
-        <div className="childhood-intro-grid">
-          <h2 id="childhood-intro-title">{t.introTitle}</h2>
-          <div className="childhood-intro-copy"><p>{t.introText}</p></div>
-        </div>
-      </div>
-    </section>
-
     <ChildhoodHomeStory locale={locale}/>
 
     <section className="childhood-garden" aria-labelledby="childhood-garden-title">
