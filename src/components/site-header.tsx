@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { supportedLocales, languageNames, localeInterface, localeFromPath, normalizeContentPath, localizedHref } from "@/config/languages";
+import { supportedLocales, languageNames, localeInterface, localeFromPath, normalizeContentPath, localizedHref, htmlLanguage } from "@/config/languages";
 
 function GlobeIcon() {
   return (
@@ -57,7 +57,7 @@ export function SiteHeader() {
   const languageHref = (language: typeof supportedLocales[number]) =>
     localizedHref(language, contentPath);
   const menuLabel: Record<typeof supportedLocales[number], string> = {
-    en: "MENU", ko: "메뉴", de: "MENÜ", es: "MENÚ", fr: "MENU", it: "MENU", ja: "メニュー",
+    en: "MENU", ko: "메뉴", de: "MENÜ", es: "MENÚ", fr: "MENU", it: "MENU", ja: "メニュー", "pt-br": "MENU",
   };
 
   const closeMobileMenu = () => {
@@ -223,8 +223,8 @@ export function SiteHeader() {
                 <li key={language}>
                   <Link
                     href={languageHref(language)}
-                    hrefLang={language}
-                    lang={language}
+                    hrefLang={htmlLanguage(language)}
+                    lang={htmlLanguage(language)}
                     aria-current={language === locale ? "page" : undefined}
                     onClick={() => {
                       languageMenuRef.current?.removeAttribute("open");
