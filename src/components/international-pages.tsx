@@ -309,16 +309,37 @@ function IntlStoryDetail({locale,which}:{locale:TranslationLocale;which:0|1}) {
 function IntlNotes({locale}:{locale:TranslationLocale}) {
   const t=translations[locale];
   const e=editorial[locale];
-  return <main className="intl-page"><Cover section="notes" locale={locale}/>
+  return <main className="intl-page">
+    <Cover section="notes" locale={locale}/>
     <section className="intl-section"><div className="container">
-      <h2>{t.notesHeading}</h2><p className="intl-wide-copy">{t.notesText}</p>
+      <p className="intl-overline">{e.notes.headerKicker}</p>
+      <h2>{t.notesHeading}</h2>
+      <p className="intl-wide-copy">{t.notesText}</p>
+    </div></section>
+    <section className="intl-section intl-soft"><div className="container">
       <div className="intl-scene-grid intl-morning">
-        <figure><Image src="/media/esther/morning-table.jpg" alt={t.notesTitle} width={950} height={1200}/></figure>
-        <div><h3>{t.notesSecond}</h3><p>{t.notesSecondText}</p></div>
+        <figure>
+          <Image src="/media/esther/morning-table.jpg" alt={t.sceneAlts[0]} width={950} height={1200}/>
+          <figcaption>{e.notes.photoCaption}</figcaption>
+        </figure>
+        <div>
+          <p className="intl-overline">{e.notes.ordinaryKicker}</p>
+          <h2>{t.notesSecond}</h2>
+          <p>{t.notesSecondText}</p>
+        </div>
       </div>
     </div></section>
-    <section className="intl-ending"><div className="container"><h2>{t.notesThird}</h2>
-      <Link className="intl-more" href={localizedHref(locale,"/books")}>Manna on the Table ↗</Link><p>{t.notesEnding}</p>
+    <section className="intl-section"><div className="container">
+      <p className="intl-overline">{t.mannaTitle}</p>
+      <h2>{t.notesThird}</h2>
+      <p className="intl-wide-copy">{e.notes.manuscriptBody}</p>
+      <Link className="intl-more" href={localizedHref(locale,"/books")}>
+        {e.notes.manuscriptAction} ↗
+      </Link>
+    </div></section>
+    <section className="intl-ending"><div className="container">
+      <p className="intl-overline">{e.notes.closingLabel}</p>
+      <h2>{t.notesEnding}</h2>
     </div></section>
   </main>;
 }
