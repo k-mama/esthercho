@@ -1,25 +1,18 @@
 "use client";
 
 import { usePathname } from "next/navigation";
+import { localeFromPath, localeInterface } from "@/config/languages";
 
 export function SiteFooter() {
   const pathname = usePathname();
-  const isKorean =
-    pathname === "/ko" || pathname.startsWith("/ko/");
-
-  const copy = isKorean
-    ? {
-        officialSite: "조성연 공식 작가 홈페이지",
-        credit: "기획 · 디자인 · 개발 Emma Kwon",
-        siteAria: "조성연 작가 홈페이지 정보",
-        amazonAuthor: "아마존 작가 소개 페이지",
-      }
-    : {
-        officialSite: "Official author website",
-        credit: "Conceived, designed, and built by Emma Kwon",
-        siteAria: "Esther Cho website information",
-        amazonAuthor: "Amazon Author Page",
-      };
+  const locale = localeFromPath(pathname);
+  const labels = localeInterface[locale];
+  const copy = {
+    officialSite: labels.copyright,
+    credit: labels.credit,
+    siteAria: labels.siteDescription,
+    amazonAuthor: labels.authorPage,
+  };
 
   return (
     <footer className="site-footer">
