@@ -54,10 +54,34 @@ function Cover({ section, locale }: InternationalProps) {
   const eyebrow = section === "notes" ? localeInterface[locale].rooms[0] : section === "archive"
     ? localeInterface[locale].rooms[1] : localeInterface[locale].primary[
       section === "stories" ? 0 : section === "books" ? 1 : section === "studio" ? 2 : 3];
+  // Share the original English/Korean cover crops and composition across locales.
+  // In particular, the author's face must remain visible on narrow screens.
+  const coverPreset = {
+    about: {
+      mobileImage: "/media/covers/esther-standing-original-20261118-mobile.webp",
+      align: "left" as const,
+      shade: "medium" as const,
+    },
+    stories: {
+      mobileImage: "/media/covers/stories-seated-original-20261118-mobile.webp",
+      align: "left" as const,
+      shade: "medium" as const,
+    },
+    notes: {
+      mobileImage: "/media/covers/morning-table-cover-mobile.webp",
+      align: "right" as const,
+      shade: "strong" as const,
+    },
+  }[section];
   return <PageCover
     eyebrow={eyebrow}
     title={info[0]} description={info[1]} image={info[2]}
-    alt={t.coverAlts[section]} align="right" shade="soft" objectPosition="center center"
+    mobileImage={coverPreset?.mobileImage}
+    alt={t.coverAlts[section]}
+    align={coverPreset?.align ?? "right"}
+    shade={coverPreset?.shade ?? "soft"}
+    objectPosition="center center"
+    mobileObjectPosition="center center"
   />;
 }
 function EditionGallery({locale,compact=false}:{locale:TranslationLocale;compact?:boolean}){
