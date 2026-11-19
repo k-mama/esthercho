@@ -5,7 +5,7 @@ type HomeMemory = {
   heroLine: string;
   eyebrow: string;
   heading: string;
-  paragraphs: readonly [string, string, string];
+  paragraphs: readonly [string, string, string, string];
   captions: readonly [string, string, string, string];
   alts: readonly [string, string, string, string];
 };
@@ -19,11 +19,12 @@ export const childhoodHomeMemory: Record<SiteLocale, HomeMemory> = {
     heroPlace: "CHEONGDAM-DONG · SEOUL",
     heroLine: "The house where our family was happiest.",
     eyebrow: "A REAL HOME · CHEONGDAM-DONG, GANGNAM, SEOUL",
-    heading: "The house where we were happiest.",
+    heading: "Four photographs, one place to return to.",
     paragraphs: [
-      "This house stands in Cheongdam-dong, in Seoul's Gangnam district. I lived here from childhood into my teenage years.",
-      "My mother, my younger siblings, and I all say the same thing: the years we spent in this house were our happiest. We have lived different lives since then, yet somehow we share that answer.",
-      "These photographs show the house from the street, the gate, the garden, and a moment from our childhood. The opening film of this website begins here, too. Before all the stories that came afterward, there was this home."
+      "Cheongdam-dong, in Seoul’s Gangnam district. I lived in this house from childhood through my teenage years.",
+      "Ask my mother, my younger siblings, or me when we were happiest, and we give the same answer: when we lived here. Years have passed, and we’ve each lived a different life. Still, our answer about this house hasn’t changed.",
+      "The gate beneath its red tiles. The brick path leading inside. The trees in the yard. The later photographs take us through the house; the last one takes us back to two children with a tricycle and a little red toy car.",
+      "That’s why I chose this house for the opening film of my website. I wanted visitors to see first the place our whole family remembers as home at its happiest."
     ],
     captions: [
       "01 · The house seen from the street",
@@ -42,11 +43,12 @@ export const childhoodHomeMemory: Record<SiteLocale, HomeMemory> = {
     heroPlace: "서울 · 청담동",
     heroLine: "우리 가족이 가장 행복했던 집.",
     eyebrow: "실제로 살았던 집 · 서울 강남구 청담동",
-    heading: "우리가 가장 행복했던 집.",
+    heading: "그 집으로 돌아가는 사진 네 장.",
     paragraphs: [
-      "서울 강남구 청담동. 내가 어린 시절부터 청소년 시절까지 살았던 집이다.",
-      "엄마도, 나도, 동생들도 이 집에서 살던 때가 가장 행복했다고 말한다. 그 후로 저마다 다른 시간을 살아왔는데, 이 집에 관해서만큼은 신기하게도 대답이 같다.",
-      "길에서 바라본 집, 열린 대문, 마당과 집, 그리고 어린 시절 사진 한 장. 이 홈페이지의 첫 영상도 그 집에서 시작한다. 내 이야기를 어디서부터 꺼내야 할까 생각하면, 결국 이 집의 문 앞에 서게 된다."
+      "서울 강남구 청담동. 내가 어린 시절부터 청소년기까지 살았던 집이다.",
+      "엄마도, 나도, 동생들도 이 집에서 살던 때가 가장 행복했다고 말한다. 그 후로 우리는 저마다 다른 시간을 살아왔는데, 참 신기하게도 이 집에 대해서는 같은 말을 한다.",
+      "붉은 기와를 얹은 대문, 안으로 이어지는 벽돌길, 마당의 나무들. 세월이 흘러 다시 찍은 집 사진을 따라가다 보면 마지막에는 세발자전거와 작은 빨간 장난감 자동차 곁에 있는 두 아이의 오래된 사진이 나온다.",
+      "그래서 홈페이지 첫 화면의 영상에 이 집을 골랐다. 처음 찾아오는 사람에게, 우리 가족 모두가 가장 행복했다고 기억하는 곳을 먼저 보여주고 싶었다."
     ],
     captions: [
       "01 · 길에서 바라본 집과 대문",
