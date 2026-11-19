@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { supportedLocales, localizedHref } from "@/config/languages";
 
 type RouteMetadataOptions = {
   title: string;
@@ -84,10 +85,12 @@ export function createRouteMetadata({
       canonical,
       ...(localized
         ? {
-            languages: {
-              en: englishPath,
-              ko: koPath,
-            },
+            languages: Object.fromEntries(
+              supportedLocales.map((language) => [
+                language,
+                localizedHref(language, englishPath),
+              ]),
+            ),
           }
         : {}),
     },
