@@ -2,13 +2,13 @@
 
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
-import { localeFromPath } from "@/config/languages";
+import { localeFromPath, htmlLanguage } from "@/config/languages";
 
 export function DocumentLanguage() {
   const pathname = usePathname();
 
   useEffect(() => {
-    document.documentElement.lang = localeFromPath(pathname);
+    document.documentElement.lang = htmlLanguage(localeFromPath(pathname));
   }, [pathname]);
 
   return null;
