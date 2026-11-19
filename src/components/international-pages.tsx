@@ -56,7 +56,11 @@ function Cover({ section, locale }: InternationalProps) {
       section === "stories" ? 0 : section === "books" ? 1 : section === "studio" ? 2 : 3];
   // Share the original English/Korean cover crops and composition across locales.
   // In particular, the author's face must remain visible on narrow screens.
-  const coverPreset = {
+  const coverPresets: Partial<Record<Section, {
+    mobileImage: string;
+    align: "left" | "right";
+    shade: "medium" | "strong";
+  }>> = {
     about: {
       mobileImage: "/media/covers/esther-standing-original-20261118-mobile.webp",
       align: "left" as const,
@@ -72,7 +76,8 @@ function Cover({ section, locale }: InternationalProps) {
       align: "right" as const,
       shade: "strong" as const,
     },
-  }[section];
+  };
+  const coverPreset = coverPresets[section];
   return <PageCover
     eyebrow={eyebrow}
     title={info[0]} description={info[1]} image={info[2]}
