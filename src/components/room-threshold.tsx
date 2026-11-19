@@ -46,7 +46,7 @@ export function RoomThreshold() {
   const titles = localeInterface[locale];
   const nextTitles = [titles.primary[0], titles.rooms[1], titles.primary[2], titles.primary[1], titles.primary[3], titles.home];
   const eyebrow: Record<string,string> = {
-    de:"NÄCHSTER RAUM", es:"SIGUIENTE ESPACIO", fr:"PIÈCE SUIVANTE", it:"PROSSIMA STANZA", ja:"次の部屋",
+    de:"NÄCHSTER RAUM", es:"SIGUIENTE ESPACIO", fr:"PIÈCE SUIVANTE", it:"PROSSIMA STANZA", ja:"次の部屋", "pt-br":"PRÓXIMA PARADA",
   };
   const generic = idx < 0 ? undefined : {
     href: localizedHref(locale, idx < 5 ? rooms[idx+1] : ""),
