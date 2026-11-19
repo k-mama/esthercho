@@ -387,3 +387,77 @@ body:has(.home-video-hero) [class*="roomLinks"] a::before {
     transition: none !important;
   }
 }
+
+
+/* PERSISTENT SITE HEADER — navigation remains available above every footer. */
+.site-header.site-header--persistent,
+body:has(.home-video-hero, .page-cover-shell) .site-header.site-header--persistent {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 200;
+  margin: 0;
+  overflow: visible;
+}
+
+.site-header.site-header--persistent {
+  transition: background-color 180ms ease, box-shadow 180ms ease, padding 180ms ease;
+}
+
+/* A solid, restrained navy surface keeps the wordmark and menu legible
+   over white content, photographs, and the dark footer alike.
+   Do not blur this ancestor: blur would trap the full-screen mobile menu. */
+.site-header.site-header--scrolled,
+body:has(.home-video-hero, .page-cover-shell) .site-header.site-header--scrolled {
+  background: #102a43;
+  border: 0;
+  border-bottom: 1px solid rgba(231, 239, 245, 0.17);
+  border-radius: 0;
+  box-shadow: 0 8px 26px rgba(6, 18, 34, 0.16);
+  padding-top: max(0.65rem, env(safe-area-inset-top));
+  padding-bottom: 0.65rem;
+}
+
+.site-header.site-header--scrolled .site-header-nav-link,
+.site-header.site-header--scrolled .site-header-lang,
+.site-header.site-header--scrolled .site-header-nav-mobile summary,
+body:has(.home-video-hero, .page-cover-shell) .site-header.site-header--scrolled .site-header-nav-link,
+body:has(.home-video-hero, .page-cover-shell) .site-header.site-header--scrolled .site-header-lang {
+  color: #f5f8fa;
+  text-shadow: 0 1px 7px rgba(5, 14, 27, 0.2);
+}
+
+.site-header.site-header--scrolled .site-header-nav-link:hover,
+.site-header.site-header--scrolled .site-header-nav-link:focus-visible {
+  color: #e4c996;
+}
+
+/* The hamburger lines also change to light on non-cinematic story pages. */
+body .site-header.site-header--scrolled .site-header-nav-mobile summary {
+  --menu-line: #f5f8fa;
+}
+
+/* Non-hero pages previously used an in-flow header.
+   Preserve their top spacing when the header becomes fixed.
+   Hero/cover pages retain their intentional overlaid first frame. */
+body:not(:has(.home-video-hero, .page-cover-shell)) #main-content {
+  padding-top: clamp(4.9rem, 7vw, 5.8rem);
+}
+
+/* Make in-page navigation land below the persistent header. */
+html {
+  scroll-padding-top: 6rem;
+}
+
+@media (max-width: 959px) {
+  body:not(:has(.home-video-hero, .page-cover-shell)) #main-content {
+    padding-top: max(4.85rem, env(safe-area-inset-top));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-header.site-header--persistent {
+    transition: none;
+  }
+}
