@@ -562,3 +562,9 @@ body:has(.home-video-hero, .page-cover-shell) .site-header-nav-mobile-menu {
 .intl-story-list li{flex-wrap:wrap;}.intl-story-list small{margin-left:auto;}
 }
 
+
+/* International author education timeline */
+.intl-education { list-style: none; max-width: 42rem; padding: 0; margin: 2rem 0 0; border-top: 1px solid rgba(50,78,96,.25); }
+.intl-education li { display: grid; grid-template-columns: 4.5rem minmax(0,1fr); gap: 1.25rem; border-bottom: 1px solid rgba(50,78,96,.18); padding: 1rem 0; }
+.intl-education time { color: #607e94; font: 700 .9rem/1.5 var(--font-interface,system-ui); }
+.intl-education span { color: #3b5062; font: 400 1rem/1.7 var(--font-editorial,Georgia,serif); }
