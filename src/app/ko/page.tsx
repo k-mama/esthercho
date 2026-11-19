@@ -26,6 +26,8 @@ export const metadata: Metadata = {
       it: "https://esthercho.pages.dev/it/",
       ja: "https://esthercho.pages.dev/ja/",
       "pt-BR": "https://esthercho.pages.dev/pt-br/",
+      "zh-Hans": "https://esthercho.pages.dev/zh-cn/",
+      "zh-Hant": "https://esthercho.pages.dev/zh-tw/",
     },
   },
   openGraph: {
