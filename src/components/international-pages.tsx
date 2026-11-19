@@ -430,23 +430,39 @@ function IntlAbout({locale}:{locale:TranslationLocale}) {
     [t.aboutService,t.aboutServiceText,"/media/esther/bangladesh-service.jpg"],
     [t.aboutMaking,t.aboutMakingText,"/media/esther/still-making-father-child-collage-20260802.png"],
   ];
-  return <main className="intl-page"><Cover section="about" locale={locale}/>
+  return <main className="intl-page">
+    <Cover section="about" locale={locale}/>
     <section className="intl-section"><div className="container">
       <p className="intl-overline">{t.aboutSectionLabel}</p>
-      <h2>{t.aboutTitle}</h2><p className="intl-wide-copy">{t.aboutIntro}</p>
-      <a className="intl-more" href="https://www.amazon.com/author/sungyeoncho" target="_blank" rel="noopener noreferrer">{localeInterface[locale].authorPage} ↗</a>
+      <h2>{t.aboutTitle}</h2>
+      <p className="intl-wide-copy">{t.aboutIntro}</p>
+      <a className="intl-more" href="https://www.amazon.com/author/sungyeoncho"
+        target="_blank" rel="noopener noreferrer">{localeInterface[locale].authorPage} ↗</a>
     </div></section>
     {chapters.map(([title,body,src],i)=><section className={`intl-section ${i%2?"intl-soft":""}`} key={title}>
       <div className="container intl-scene-grid">
-        <div><h2>{title}</h2><p>{body}</p>
-          {i === 0 ? <ol className="intl-education">
-            {t.education.map((description,idx)=>
-              <li key={description}><time>{[1985,1988,1992,1999][idx]}</time><span>{description}</span></li>
-            )}
+        <div>
+          <p className="intl-overline">{t.aboutSectionLabel}</p>
+          <h2>{title}</h2><p>{body}</p>
+          {i===1 ? <p>{e.about.homeMore}</p> : null}
+          {i===3 ? <p>{e.about.makingMore}</p> : null}
+          {i===0 ? <ol className="intl-education">
+            {t.education.map((description,idx)=><li key={description}>
+              <time>{[1985,1988,1992,1999][idx]}</time><span>{description}</span>
+            </li>)}
           </ol> : null}
         </div>
-        <Image src={src} alt={title} width={960} height={780} sizes="(max-width: 750px) 100vw, 44vw"/>
+        <figure>
+          <Image src={src}
+            alt={i===0?t.aboutEducation:i===1?t.sceneAlts[0]:i===2?t.sceneAlts[2]:t.coverAlts.studio}
+            width={960} height={780} sizes="(max-width: 750px) 100vw, 44vw"/>
+          {i===0 ? <figcaption>{e.about.universityCaption}</figcaption> : null}
+          {i===2 ? <figcaption>{e.about.serviceCaption}</figcaption> : null}
+        </figure>
       </div></section>)}
+    <section className="intl-ending"><div className="container">
+      <h2>{e.about.closing}</h2>
+    </div></section>
   </main>;
 }
 export function InternationalPage({locale,section}:InternationalProps) {
