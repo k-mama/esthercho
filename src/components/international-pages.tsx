@@ -32,10 +32,11 @@ const sections: Array<{path:string; field:0|1|2|3|4|5}> = [
   {path:"/books",field:4}, {path:"/about",field:5},
 ];
 
-function Album({sources, caption}: {sources:string[];caption:string}) {
+function Album({sources, captions}: {sources:string[];captions:readonly string[]}) {
   return <div className="intl-photo-gallery">
     {sources.map((src,i) => <figure key={src}>
-      <Image src={src} alt={caption} width={600} height={800} unoptimized={src.startsWith("https:")} sizes="(max-width: 660px) 45vw, 25vw"/>
+      <Image src={src} alt={captions[i] ?? ""} width={600} height={800} unoptimized={src.startsWith("https:")} sizes="(max-width: 660px) 45vw, 25vw"/>
+      <figcaption>{captions[i]}</figcaption>
     </figure>)}
   </div>;
 }
@@ -56,7 +57,7 @@ function Cover({ section, locale }: InternationalProps) {
   return <PageCover
     eyebrow={eyebrow}
     title={info[0]} description={info[1]} image={info[2]}
-    alt={info[1]} align="right" shade="soft" objectPosition="center center"
+    alt={t.coverAlts[section]} align="right" shade="soft" objectPosition="center center"
   />;
 }
 function EditionGallery({locale,compact=false}:{locale:TranslationLocale;compact?:boolean}){
@@ -116,7 +117,7 @@ function IntlHome({locale}: {locale:TranslationLocale}) {
           <h2>{t.sceneTitles[i]}</h2><p>{t.sceneTexts[i]}</p>
           <Link className="intl-more" href={localizedHref(locale,scenePaths[i])}>{t.rooms[[0,2,1,3][i] as 0|1|2|3]} ↗</Link>
         </div>
-        <Image src={src} alt={t.sceneTitles[i]} width={950} height={750} sizes="(max-width: 750px) 100vw, 44vw"/>
+        <Image src={src} alt={t.sceneAlts[i]} width={950} height={750} sizes="(max-width: 750px) 100vw, 44vw"/>
       </div>
     </section>)}
     <section className="intl-ending"><div className="container"><h2>{t.closing}</h2>
@@ -143,8 +144,8 @@ function IntlBooks({locale}:{locale:TranslationLocale}) {
       <p className="intl-overline">{t.mannaTitle}</p><h2>Manna on the Table</h2>
       <p className="intl-wide-copy">{t.mannaText}</p>
       <h3>{t.mannaPhotos}</h3><p>{t.mannaPhotosText}</p>
-      <Album sources={breakfast} caption={t.mannaPhotos}/>
-      <Album sources={coverStudies} caption={t.mannaPhotosText}/>
+      <Album sources={breakfast} captions={t.breakfastCaptions}/>
+      <Album sources={coverStudies} captions={t.coverCaptions}/>
       <h3>{t.mannaStoryTitle}</h3><p>{t.mannaStoryText}</p>
       <h3>{t.mannaHouseTitle}</h3><p>{t.mannaHouseText}</p>
       <h3>{t.mannaDailyTitle}</h3><p>{t.mannaDailyText}</p>
