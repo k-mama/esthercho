@@ -42,52 +42,46 @@ function Album({sources, captions}: {sources:string[];captions:readonly string[]
   </div>;
 }
 function Cover({ section, locale }: InternationalProps) {
-  const t = translations[locale];
-  const info = ({
+  const t=translations[locale];
+  const e=editorial[locale];
+  const info=({
     stories:[t.storiesTitle,t.storiesLead,"/media/covers/stories-seated-original-20261118-desktop.webp"],
-    books:[t.booksTitle,t.booksLead,"/media/covers/books-cover-final-20260802.webp"],
+    books:[e.books.heroTitle,t.booksLead,"/media/covers/books-cover-final-20260802.webp"],
     studio:[t.studioTitle,t.studioLead,"/media/covers/studio-cover.jpg"],
     about:[t.aboutTitle,t.aboutLead,"/media/covers/esther-standing-original-20261118-desktop.webp"],
     notes:[t.notesTitle,t.notesLead,"/media/covers/morning-table-cover.webp"],
     archive:[t.archiveTitle,t.archiveLead,"/media/covers/childhood-cover.jpg"],
     home:[t.aboutTitle,t.aboutLead,"/media/covers/books-cover-final-20260802.webp"],
   })[section];
-  const eyebrow = section === "notes" ? localeInterface[locale].rooms[0] : section === "archive"
-    ? localeInterface[locale].rooms[1] : localeInterface[locale].primary[
-      section === "stories" ? 0 : section === "books" ? 1 : section === "studio" ? 2 : 3];
-  // Share the original English/Korean cover crops and composition across locales.
-  // In particular, the author's face must remain visible on narrow screens.
-  const coverPresets: Partial<Record<Section, {
-    mobileImage: string;
-    align: "left" | "right";
-    shade: "medium" | "strong";
-  }>> = {
-    about: {
-      mobileImage: "/media/covers/esther-standing-original-20261118-mobile.webp",
-      align: "left" as const,
-      shade: "medium" as const,
-    },
-    stories: {
-      mobileImage: "/media/covers/stories-seated-original-20261118-mobile.webp",
-      align: "left" as const,
-      shade: "medium" as const,
-    },
-    notes: {
-      mobileImage: "/media/covers/morning-table-cover-mobile.webp",
-      align: "right" as const,
-      shade: "strong" as const,
-    },
+  const eyebrow=section==="notes"?localeInterface[locale].rooms[0]:
+    section==="archive"?localeInterface[locale].rooms[1]:
+    localeInterface[locale].primary[section==="stories"?0:section==="books"?1:section==="studio"?2:3];
+  // Match approved English/Korean photography, crops, contrast and text position.
+  const coverPresets: Partial<Record<Section,{
+    mobileImage?:string;
+    align:"left"|"right";
+    shade:"soft"|"medium"|"strong";
+    position?:string;
+    mobilePosition?:string;
+  }>>={
+    about:{mobileImage:"/media/covers/esther-standing-original-20261118-mobile.webp",
+      align:"left",shade:"medium"},
+    stories:{mobileImage:"/media/covers/stories-seated-original-20261118-mobile.webp",
+      align:"left",shade:"medium"},
+    books:{mobileImage:"/media/covers/books-cover-final-20260802.webp",
+      align:"right",shade:"soft"},
+    notes:{mobileImage:"/media/covers/morning-table-cover-mobile.webp",
+      align:"right",shade:"strong"},
+    studio:{align:"right",shade:"soft",mobilePosition:"43% center"},
+    archive:{align:"right",shade:"medium",position:"42% center",mobilePosition:"38% center"},
   };
-  const coverPreset = coverPresets[section];
+  const preset=coverPresets[section];
   return <PageCover
-    eyebrow={eyebrow}
-    title={info[0]} description={info[1]} image={info[2]}
-    mobileImage={coverPreset?.mobileImage}
-    alt={t.coverAlts[section]}
-    align={coverPreset?.align ?? "right"}
-    shade={coverPreset?.shade ?? "soft"}
-    objectPosition="center center"
-    mobileObjectPosition="center center"
+    eyebrow={eyebrow} title={info[0]} description={info[1]} image={info[2]}
+    mobileImage={preset?.mobileImage} alt={t.coverAlts[section]}
+    align={preset?.align??"right"} shade={preset?.shade??"soft"}
+    objectPosition={preset?.position??"center center"}
+    mobileObjectPosition={preset?.mobilePosition??"center center"}
   />;
 }
 function EditionGallery({locale,compact=false}:{locale:TranslationLocale;compact?:boolean}){
