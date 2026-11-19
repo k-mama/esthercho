@@ -538,6 +538,7 @@ body:has(.home-video-hero, .page-cover-shell) .site-header-nav-mobile-menu {
 .intl-video-grid,.intl-photo-gallery {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(.6rem,2vw,1.5rem);margin:2rem 0 3rem;align-items:start;}
 .intl-video-grid video {display:block;width:min(100%,220px);height:auto;aspect-ratio:9/16;object-fit:contain;background:#dbe8ee;border-radius:7px;box-shadow:0 12px 33px rgba(35,56,75,.12);}
 .intl-photo-gallery figure {margin:0;}.intl-photo-gallery img {display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;}
+.intl-photo-gallery figcaption {margin-top:.7rem;color:#657c90;font:500 .78rem/1.5 var(--font-interface,system-ui);}
 .intl-story-list {list-style:none;padding:0;margin:2.8rem 0;max-width:1000px;}
 .intl-story-list li {display:flex;align-items:baseline;gap:clamp(.8rem,2vw,1.8rem);border-top:1px solid #c6d0d5;padding:1.35rem 0;}
 .intl-story-list li>span:first-child {font:.71rem/1.5 var(--font-interface,system-ui);color:#648298;}
