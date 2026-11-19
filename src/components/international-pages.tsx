@@ -102,6 +102,11 @@ function IntlHome({locale}: {locale:TranslationLocale}) {
         <h2>Big Dreams in Every Color</h2>
         <p className="intl-wide-copy">{t.bookIntro}</p><p>{t.bookText}</p>
         <EditionGallery locale={locale} compact/>
+        <div className="intl-video-grid">{bookVideos.map((video,i) =>
+          <video key={video} controls playsInline preload="none" poster={videoPosters[i]} aria-label={`Big Dreams in Every Color · ${i+1}`}>
+            <source src={video} type="video/mp4"/>
+          </video>)}
+        </div>
         <Link className="intl-more" href={localizedHref(locale,"/books")}>{t.booksTitle} ↗</Link>
       </div>
     </section>
@@ -140,6 +145,9 @@ function IntlBooks({locale}:{locale:TranslationLocale}) {
       <h3>{t.mannaPhotos}</h3><p>{t.mannaPhotosText}</p>
       <Album sources={breakfast} caption={t.mannaPhotos}/>
       <Album sources={coverStudies} caption={t.mannaPhotosText}/>
+      <h3>{t.mannaStoryTitle}</h3><p>{t.mannaStoryText}</p>
+      <h3>{t.mannaHouseTitle}</h3><p>{t.mannaHouseText}</p>
+      <h3>{t.mannaDailyTitle}</h3><p>{t.mannaDailyText}</p>
       <Link className="intl-more" href={localizedHref(locale,"/notes")}>{t.notesTitle} ↗</Link>
     </div></section>
   </main>;
@@ -161,6 +169,19 @@ function IntlStories({locale}:{locale:TranslationLocale}) {
         </li>)}
       </ol>
       <p className="intl-wide-copy">{t.storiesClosing}</p>
+    </div></section>
+    <section className="intl-section intl-soft"><div className="container">
+      <p className="intl-overline">{t.storiesTitle}</p>
+      <h2>{t.storiesIntro}</h2>
+      <ol className="intl-story-list">
+        {t.life.map((chapter,i) => <li key={chapter}>
+          <span>{String(i+1).padStart(2,"0")}</span><span>{chapter}</span>
+        </li>)}
+      </ol>
+    </div></section>
+    <section className="intl-ending"><div className="container">
+      <h2>{t.quote}</h2><p className="intl-wide-copy">{t.quoteText}</p>
+      <Link className="intl-more" href={localizedHref(locale,"/archive")}>{t.archiveTitle} ↗</Link>
     </div></section>
   </main>;
 }
