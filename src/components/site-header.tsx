@@ -41,7 +41,6 @@ export function SiteHeader() {
   const locale = localeFromPath(pathname);
   const localeCopy = localeInterface[locale];
 
-  const isKorean = locale === "ko";
   const isHome = normalizeContentPath(pathname) === "";
 
   const navItems = localeCopy.primary.map((title, index) => ({
