@@ -1,11 +1,11 @@
-export const supportedLocales = ["en", "ko", "de", "es", "fr", "it", "ja"] as const;
+export const supportedLocales = ["en", "ko", "de", "es", "fr", "it", "ja", "pt-br"] as const;
 export type SiteLocale = (typeof supportedLocales)[number];
-export const translationLocales = ["de", "es", "fr", "it", "ja"] as const;
+export const translationLocales = ["de", "es", "fr", "it", "ja", "pt-br"] as const;
 export type TranslationLocale = (typeof translationLocales)[number];
 
 export const languageNames: Record<SiteLocale, string> = {
   en: "English", ko: "한국어", de: "Deutsch", es: "Español",
-  fr: "Français", it: "Italiano", ja: "日本語",
+  fr: "Français", it: "Italiano", ja: "日本語", "pt-br": "Português (Brasil)",
 };
 
 export const localeInterface: Record<SiteLocale, {
@@ -25,6 +25,7 @@ export const localeInterface: Record<SiteLocale, {
   fr: { primary: ["RÉCITS", "LIVRES", "ATELIER", "ESTHER"], rooms: ["PETIT-DÉJEUNER", "ENFANCE"], selector: "Choisir la langue du site", home: "Accueil", copyright: "Site officiel de l’autrice", authorPage: "Page de l’autrice sur Amazon", siteDescription: "Informations sur Esther Cho", credit: "Conception, design et développement : Emma Kwon" },
   it: { primary: ["STORIE", "LIBRI", "STUDIO", "ESTHER"], rooms: ["A COLAZIONE", "INFANZIA"], selector: "Scegli la lingua del sito", home: "Home", copyright: "Sito ufficiale dell’autrice", authorPage: "Pagina dell’autrice su Amazon", siteDescription: "Informazioni su Esther Cho", credit: "Ideazione, design e sviluppo: Emma Kwon" },
   ja: { primary: ["物語", "本", "アトリエ", "エスター"], rooms: ["朝の食卓", "子ども時代"], selector: "サイトの言語を選択", home: "ホーム", copyright: "作家エスター・チョー公式サイト", authorPage: "Amazon著者ページ", siteDescription: "エスター・チョー公式サイト案内", credit: "企画・デザイン・開発 Emma Kwon" },
+  "pt-br": { primary: ["HISTÓRIAS", "LIVROS", "ATELIÊ", "ESTHER"], rooms: ["CAFÉ DA MANHÃ", "INFÂNCIA"], selector: "Escolher o idioma do site", home: "Início", copyright: "Site oficial da autora", authorPage: "Página da autora na Amazon", siteDescription: "Sobre o site de Esther Cho", credit: "Concepção, design e desenvolvimento: Emma Kwon" },
 };
 export function localeFromPath(pathname: string): SiteLocale {
   const segment = pathname.split("/").filter(Boolean)[0];
