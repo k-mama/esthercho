@@ -206,7 +206,8 @@ export const childhoodHomeMemory: Record<SiteLocale, HomeMemory> = {
       "Jardim arborizado e fachada da casa de infância de Esther Cho",
       "Antiga fotografia de família com duas crianças, um triciclo e um pequeno carro vermelho de brinquedo em frente à casa"
     ]
-  }  "zh-cn": {
+  },
+  "zh-cn": {
   "heroPlace": "真实的家 · 首尔清潭洞",
   "heroLine": "我们全家最幸福的岁月，就在这栋房子里。",
   "eyebrow": "曾经生活过的家 · 首尔江南区清潭洞",
