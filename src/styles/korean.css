@@ -1,3 +1,12 @@
+/* Load Korean glyphs for browsers without a local Korean font.
+   The font is used only on the active Korean pages via --font-korean. */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap");
+
+html:lang(ko) {
+  --font-korean: "Noto Sans KR", "Apple SD Gothic Neo",
+    "Noto Sans CJK KR", "Malgun Gothic", "맑은 고딕", sans-serif;
+}
+
 /* Korean pages are typeset as Korean, not as translated English layouts. */
 /* Scope shared-header typography to the chosen document locale. The language
    picker contains hidden <a lang="ko"> links on *every* page, so testing
