@@ -3,13 +3,18 @@
 import { useEffect, useRef, useState } from "react";
 import styles from "./page.module.css";
 
+import { localeFromPath, type SiteLocale } from "@/config/languages";
+import { usePathname } from "next/navigation";
+
 interface HomeHeroVideoProps {
-  locale?: "en" | "ko";
+  locale?: SiteLocale;
 }
 
 export function HomeHeroVideo({
-  locale = "en",
+  locale,
 }: HomeHeroVideoProps) {
+  const pathname = usePathname();
+  const activeLocale = locale ?? localeFromPath(pathname);
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
 
@@ -53,10 +58,16 @@ export function HomeHeroVideo({
     video.pause();
   }
 
-  const pauseLabel =
-    locale === "ko" ? "배경 영상 정지" : "Pause background film";
-  const playLabel =
-    locale === "ko" ? "배경 영상 재생" : "Play background film";
+  const controls: Record<SiteLocale, {pause:string; play:string; pauseShort:string; playShort:string}> = {
+    en: {pause:"Pause background film",play:"Play background film",pauseShort:"PAUSE",playShort:"PLAY"},
+    ko: {pause:"배경 영상 정지",play:"배경 영상 재생",pauseShort:"정지",playShort:"재생"},
+    de: {pause:"Hintergrundfilm anhalten",play:"Hintergrundfilm abspielen",pauseShort:"PAUSE",playShort:"ABSPIELEN"},
+    es: {pause:"Pausar el vídeo de fondo",play:"Reproducir el vídeo de fondo",pauseShort:"PAUSA",playShort:"REPRODUCIR"},
+    fr: {pause:"Mettre la vidéo en pause",play:"Reprendre la vidéo",pauseShort:"PAUSE",playShort:"LECTURE"},
+    it: {pause:"Metti in pausa il video",play:"Riprendi il video",pauseShort:"PAUSA",playShort:"RIPRENDI"},
+    ja: {pause:"背景動画を一時停止",play:"背景動画を再生",pauseShort:"一時停止",playShort:"再生"},
+  };
+  const copy = controls[activeLocale];
 
   return (
     <>
@@ -83,15 +94,9 @@ export function HomeHeroVideo({
         type="button"
         className={styles.videoControl}
         onClick={togglePlayback}
-        aria-label={isPlaying ? pauseLabel : playLabel}
+        aria-label={isPlaying ? copy.pause : copy.play}
       >
-        {locale === "ko"
-          ? isPlaying
-            ? "정지"
-            : "재생"
-          : isPlaying
-            ? "PAUSE"
-            : "PLAY"}
+        {isPlaying ? copy.pauseShort : copy.playShort}
       </button>
     </>
   );
