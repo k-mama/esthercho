@@ -86,16 +86,35 @@ function Cover({ section, locale }: InternationalProps) {
 }
 function EditionGallery({locale,compact=false}:{locale:TranslationLocale;compact?:boolean}){
   const t=translations[locale];
+  const e=editorial[locale];
   return <div className={`intl-editions ${compact?"intl-editions-compact":""}`}>
-    {editions.map((edition,i) => <article className="intl-edition" key={edition.name}>
-      <Image src={edition.src} alt={edition.name} width={600} height={900}
-        unoptimized={edition.src.startsWith("https:")} sizes="(max-width: 660px) 70vw, 270px" />
+    {editions.map((edition,i)=><article className="intl-edition"
+      id={i===1?"german-edition":i===2?"spanish-edition":"english-edition"}
+      key={edition.name}>
+      <div className="intl-edition-art">
+        <figure>
+          <Image src={edition.src} alt={edition.name} width={600} height={900}
+            unoptimized={edition.src.startsWith("https:")}
+            sizes="(max-width: 660px) 40vw, 270px"/>
+          <figcaption>{e.books.coverFront}</figcaption>
+        </figure>
+        {i===0 ? <figure className="intl-back-cover">
+          <Image src="/media/books/big-dreams/back-cover.webp"
+            alt={e.books.backCoverAlt} width={600} height={900}
+            sizes="(max-width: 660px) 40vw, 170px"/>
+          <figcaption>{e.books.coverBack}</figcaption>
+        </figure> : null}
+      </div>
       <div className="intl-edition-copy">
         <p className="intl-overline">{t[edition.key]}</p>
         <h3>{edition.name}</h3>
+        <p>{e.books.editionInfo}</p>
         <div className="intl-edition-links">
-          <a href={edition.amazonPaperback} target="_blank" rel="noopener noreferrer">{t.paperback} ↗</a>
-          {edition.amazonKindle ? <a href={edition.amazonKindle} target="_blank" rel="noopener noreferrer">{t.kindle} ↗</a> : null}
+          <a href={edition.amazonPaperback} aria-label={`${t.paperback}: ${edition.name}`}
+            target="_blank" rel="noopener noreferrer">{t.paperback} ↗</a>
+          {edition.amazonKindle?<a href={edition.amazonKindle}
+            aria-label={`${t.kindle}: ${edition.name}`}
+            target="_blank" rel="noopener noreferrer">{t.kindle} ↗</a>:null}
         </div>
       </div>
     </article>)}
