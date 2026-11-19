@@ -99,5 +99,27 @@ export const childhoodPageCopy: Record<SiteLocale, {
     "photosTitle": "As fotos foram tiradas em épocas diferentes.",
     "photosText": "As fotos da casa foram feitas muitos anos depois; a foto da família é da nossa infância. Imagens recriadas mais tarde são identificadas como trabalhos posteriores, nunca como fotos antigas.",
     "endingTitle": "Ainda não contei tudo sobre aquela casa."
-  }
+  }  "zh-cn": {
+  "introTitle": "问起最幸福的日子",
+  "introText": "母亲、弟妹和我想起的，都是同一栋房子：首尔清潭洞曾经共同生活的家。",
+  "gardenTitle": "照片里，有小时候的我。",
+  "gardenText": "老照片中的我笑着。可一张照片讲不完那天发生的事。我只能从记得的地方，慢慢说起。",
+  "fragmentsTitle": "不是每一天，都留下了照片。",
+  "fragmentsText": "大门和花园还留在相片里，可一家人在这里度过的日子，远比照片多得多。想起多少，我就写下多少；忘记的，不必编造。",
+  "photosTitle": "这些照片，拍摄于不同的年代。",
+  "photosText": "房子、院子和大门的照片，是多年以后拍下的；孩子们的合影，才是童年的真实记录。后来创作的新影像，也不会冒充当年的老照片。",
+  "endingTitle": "关于这栋房子的故事，我还没讲完。"
+},
+  "zh-tw": {
+  "introTitle": "問起最幸福的日子",
+  "introText": "母親、弟妹和我想起的，都是同一棟房子：首爾清潭洞曾經一起生活的家。",
+  "gardenTitle": "照片裡，有小時候的我。",
+  "gardenText": "舊照片裡的我笑著。可是一張照片，說不完那天發生的事。我只能從記得的地方，慢慢說起。",
+  "fragmentsTitle": "不是每一天，都留下了照片。",
+  "fragmentsText": "大門和花園還留在照片裡，但一家人在這裡度過的日子，遠遠不只這些。想起多少，我就寫下多少；忘記的，不必編造。",
+  "photosTitle": "這些照片，拍攝於不同的年代。",
+  "photosText": "房子、院子與大門的照片，是多年以後拍下的；孩子們的合影，才是童年的真實紀錄。後來創作的新影像，也不會被當作當年的舊照片。",
+  "endingTitle": "關於這棟房子的故事，我還沒說完。"
+},
+
 };
