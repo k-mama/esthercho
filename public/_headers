@@ -25,3 +25,7 @@
   Content-Language: ja
 /pt-br/*
   Content-Language: pt-BR
+/zh-cn/*
+  Content-Language: zh-Hans
+/zh-tw/*
+  Content-Language: zh-Hant
