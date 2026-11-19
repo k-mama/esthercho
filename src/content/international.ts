@@ -852,7 +852,7 @@ export const translations = {
       "De pijama limpo, de volta ao quintal",
       "O restaurante da nossa família",
       "Mãe, estou tão feliz!",
-      "Aquele julho do meu primeiro ano no ginásio",
+      "Julho, no meu primeiro ano do fundamental II",
       "Quem coleciona pequenas alegrias"
     ],
     "storyCta": "Ler a história",
@@ -937,13 +937,13 @@ export const translations = {
       "A vida de hoje"
     ],
     "quote": "“Talvez eu seja alguém que coleciona pequenas alegrias.”",
-    "quoteText": "Também houve momentos difíceis. Mas, muitas vezes, a primeira coisa que volta à memória é uma risada. As duas coisas são verdade.",
+    "quoteText": "Também houve momentos difíceis. Mas, muitas vezes, a primeira coisa que volta à memória é uma risada. As duas coisas são verdadeiras.",
     "mannaStoryTitle": "As manhãs que vieram antes da capa",
     "mannaStoryText": "Esther voltou às fotos dos próprios cafés da manhã: rabanada com frutas vermelhas, café e sol entrando pela cozinha. Muito antes de pensar numa capa, ela já comia, lia a Bíblia e escrevia àquela mesa.",
     "mannaHouseTitle": "Uma foto da casa da infância",
     "mannaHouseText": "Há cerca de dez anos, Esther fotografou a casa de Cheongdam-dong onde viveu quando criança. Hoje essa imagem faz parte do vídeo de boas-vindas do site.",
     "mannaDailyTitle": "O maná de cada manhã",
-    "mannaDailyText": "Para Esther, o maná é tanto a comida preparada de manhã quanto a Palavra de Deus recebida naquele dia. O café de ontem não a alimenta hoje. E a leitura de ontem não substitui o tempo com Deus nesta manhã.",
+    "mannaDailyText": "Para Esther, o maná é tanto a comida preparada de manhã quanto a Palavra de Deus recebida naquele dia. O café da manhã de ontem não a alimenta hoje. E a leitura de ontem não substitui o tempo com Deus nesta manhã.",
     "education": [
       "Conclusão dos estudos na Yewon School",
       "Conclusão dos estudos na Seoul Arts High School",
