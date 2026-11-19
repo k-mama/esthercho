@@ -2,7 +2,7 @@ export const editorialEs = {
   stories: {
     introMore: "Así van creciendo estas páginas. Una persona, una fotografía, una estación o un objeto cualquiera despiertan algo que llevaba mucho tiempo en silencio.",
     featuredLabel: "EMPIEZA AQUÍ",
-    featuredLead: "Antes de que naciera Esther, su padre soñó con un tigre. Cuando llegó una niña, en la familia bromearon con que quizá había sido un gato.",
+    featuredLead: "Antes de que naciera Esther, su padre soñó con un tigre. Pero nació una niña y en la familia bromearon: tal vez había sido un gato.",
     featuredNote: "La historia termina donde termina el recuerdo. No se añade nada solo para que parezca completa.",
     featuredAction: "Leer la primera historia",
     collectionLead: "Los primeros recuerdos que Esther quiso contar.",
@@ -29,7 +29,7 @@ export const editorialEs = {
     manuscriptKicker: "MANUSCRITO EN PREPARACIÓN",
     manuscriptStatus: "En proceso",
     manuscriptDeck: "Reflexiones de fe nacidas de mañanas corrientes, con la Biblia junto a los platos del desayuno.",
-    manuscriptBody: "Algunas mañanas empiezan con una oración. Otras llegan con una impaciencia, algo que hace reír a Esther o una pregunta que todavía la acompaña. Con la Biblia cerca, escribe sobre todo eso. Primero se está terminando la versión inglesa del manuscrito; después vendrán las traducciones.",
+    manuscriptBody: "Algunas mañanas empiezan con una oración. Otras traen impaciencia, alguna ocurrencia que hace reír a Esther o una pregunta que todavía no sabe responder. Con la Biblia cerca, escribe sobre todo eso. Primero se está terminando la versión inglesa del manuscrito; después vendrán las traducciones.",
     manuscriptLink: "Seguir leyendo desde la mesa del desayuno",
     manuscriptFactsHeading: "Sobre el manuscrito",
     manuscriptFacts: [
