@@ -1,11 +1,11 @@
-export const supportedLocales = ["en", "ko", "de", "es", "fr", "it", "ja", "pt-br"] as const;
+export const supportedLocales = ["en", "ko", "de", "es", "fr", "it", "ja", "pt-br", "zh-cn", "zh-tw"] as const;
 export type SiteLocale = (typeof supportedLocales)[number];
-export const translationLocales = ["de", "es", "fr", "it", "ja", "pt-br"] as const;
+export const translationLocales = ["de", "es", "fr", "it", "ja", "pt-br", "zh-cn", "zh-tw"] as const;
 export type TranslationLocale = (typeof translationLocales)[number];
 
 export const languageNames: Record<SiteLocale, string> = {
   en: "English", ko: "한국어", de: "Deutsch", es: "Español",
-  fr: "Français", it: "Italiano", ja: "日本語", "pt-br": "Português (Brasil)",
+  fr: "Français", it: "Italiano", ja: "日本語", "pt-br": "Português (Brasil)", "zh-cn": "简体中文", "zh-tw": "繁體中文",
 };
 
 export const localeInterface: Record<SiteLocale, {
@@ -26,8 +26,15 @@ export const localeInterface: Record<SiteLocale, {
   it: { primary: ["STORIE", "LIBRI", "STUDIO", "ESTHER"], rooms: ["A COLAZIONE", "INFANZIA"], selector: "Scegli la lingua del sito", home: "Home", copyright: "Sito ufficiale dell’autrice", authorPage: "Pagina dell’autrice su Amazon", siteDescription: "Informazioni su Esther Cho", credit: "Ideazione, design e sviluppo: Emma Kwon" },
   ja: { primary: ["物語", "本", "アトリエ", "エスター"], rooms: ["朝の食卓", "子ども時代"], selector: "サイトの言語を選択", home: "ホーム", copyright: "作家エスター・チョー公式サイト", authorPage: "Amazon著者ページ", siteDescription: "エスター・チョー公式サイト案内", credit: "企画・デザイン・開発 Emma Kwon" },
   "pt-br": { primary: ["HISTÓRIAS", "LIVROS", "ATELIÊ", "ESTHER"], rooms: ["CAFÉ DA MANHÃ", "INFÂNCIA"], selector: "Escolher o idioma do site", home: "Início", copyright: "Site oficial da autora", authorPage: "Página da autora na Amazon", siteDescription: "Sobre o site de Esther Cho", credit: "Concepção, design e desenvolvimento: Emma Kwon" },
+  "zh-cn": { primary: ["故事", "书籍", "创作室", "关于 Esther"], rooms: ["早餐桌", "童年"], selector: "选择网站语言", home: "首页", copyright: "Esther Cho 作家官方网站", authorPage: "亚马逊作者主页", siteDescription: "关于 Esther Cho 的网站", credit: "策划、设计与开发：Emma Kwon" },
+  "zh-tw": { primary: ["故事", "書籍", "創作室", "認識 Esther"], rooms: ["早餐桌", "童年"], selector: "選擇網站語言", home: "首頁", copyright: "Esther Cho 作家官方網站", authorPage: "Amazon 作者專頁", siteDescription: "關於 Esther Cho 的網站", credit: "企劃、設計與開發：Emma Kwon" },
 };
-export function htmlLanguage(locale: SiteLocale): string { return locale === "pt-br" ? "pt-BR" : locale; }
+export function htmlLanguage(locale: SiteLocale): string {
+  if (locale === "pt-br") return "pt-BR";
+  if (locale === "zh-cn") return "zh-Hans";
+  if (locale === "zh-tw") return "zh-Hant";
+  return locale;
+}
 export function localeFromPath(pathname: string): SiteLocale {
   const segment = pathname.split("/").filter(Boolean)[0];
   return supportedLocales.find((locale) => locale !== "en" && locale === segment) ?? "en";
