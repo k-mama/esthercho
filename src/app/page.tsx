@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { BookLaunch } from "@/components/book-launch";
 import { HomeHeroVideo } from "./home-hero-video";
+import { ChildhoodHeroCaption } from "@/components/childhood-home-story";
 import styles from "./page.module.css";
 import polish from "./home-polish.module.css";
 
@@ -65,6 +66,7 @@ export default function Home() {
     <main className={`${styles.home} ${polish.home}`}>
       <section className={`${styles.videoHero} home-video-hero`}>
         <HomeHeroVideo />
+        <ChildhoodHeroCaption locale="en"/>
 
         <div className={styles.videoHeroContent}>
           <p className={styles.videoEyebrow}>WELCOME TO ESTHER&apos;S HOUSE</p>
