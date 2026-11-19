@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { supportedLocales, localizedHref } from "@/config/languages";
+import { supportedLocales, localizedHref, htmlLanguage } from "@/config/languages";
 export const dynamic = "force-static";
 const siteUrl = "https://esthercho.pages.dev";
 const translatedPaths = ["", "/about", "/archive", "/books", "/notes", "/stories", "/studio"];
@@ -8,7 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const pages = [...translatedPaths, ...storyPaths];
   return pages.flatMap(path => {
     const languages = Object.fromEntries(supportedLocales.map(locale => [
-      locale, `${siteUrl}${localizedHref(locale,path)}`
+      htmlLanguage(locale), `${siteUrl}${localizedHref(locale,path)}`
     ]));
     return supportedLocales.map(locale => ({
       url: `${siteUrl}${localizedHref(locale,path)}`,
