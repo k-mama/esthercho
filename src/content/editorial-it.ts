@@ -34,7 +34,7 @@ export const editorialIt = {
     manuscriptFactsHeading: "Il manoscritto",
     manuscriptFacts: [
       ["Lingua di riferimento dell’edizione", "Inglese"],
-      ["Genere", "Meditazioni ed essay personali sulla fede cristiana"],
+      ["Genere", "Meditazioni e saggi personali sulla fede cristiana"],
       ["Pubblicazione", "Data da definire"]
     ],
     makingHeading: "Le mattine dietro la copertina.",
