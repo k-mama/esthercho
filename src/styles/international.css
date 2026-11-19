@@ -13,7 +13,7 @@
 .intl-section h3,.intl-scene h3,.intl-edition h3 { font:400 clamp(1.35rem,2.4vw,2.3rem)/1.3 var(--font-editorial,Georgia,serif); margin:1.5rem 0 1rem;color:#233c55; }
 .intl-foyer p,.intl-section p,.intl-scene p,.intl-book-showcase p,.intl-ending p { max-width:65ch; font:400 clamp(1rem,1.5vw,1.22rem)/1.8 var(--font-editorial,Georgia,serif); color:#526270; }
 .intl-overline,.intl-foyer p.intl-overline,.intl-section p.intl-overline {font-family:var(--font-interface,system-ui);font-size:.72rem;font-weight:700;letter-spacing:.12em;color:#597a91;margin:0 0 1rem;}
-.intl-wide-copy {max-width:57ch!important;font-size:clamp(1.15rem,2vw,1.5rem)!important;color:#334f64!important;}
+.intl-wide-copy {max-width:57ch;font-size:clamp(1.15rem,2vw,1.5rem);color:#334f64;}
 .intl-room-links {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 3rem;margin-top:4rem;}
 .intl-room-links a {padding:1.35rem 0;display:flex;align-items:center;gap:1.4rem;border-top:1px solid #b8c4cb;color:#223d53;text-decoration:none;font-family:var(--font-interface,system-ui);}
 .intl-room-links a span {font-size:.72rem;color:#6a8aa0}.intl-room-links a span:last-child {margin-left:auto}.intl-room-links a:hover strong {text-decoration:underline;}
