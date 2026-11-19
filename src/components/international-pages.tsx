@@ -346,19 +346,48 @@ function IntlNotes({locale}:{locale:TranslationLocale}) {
 function IntlArchive({locale}:{locale:TranslationLocale}) {
   const t=translations[locale];
   const e=editorial[locale];
-  const chapters=[
-    [t.archiveHeading,t.archiveText,"/media/esther/childhood-house.jpg"],
-    [t.archiveHouse,t.archiveHouseText,"/media/esther/childhood-house.jpg"],
-    [t.archiveChild,t.archiveChildText,"/media/esther/childhood-garden.jpg"],
-  ];
-  return <main className="intl-page"><Cover section="archive" locale={locale}/>
-    {chapters.map(([title,body,image],i)=><section className={`intl-section ${i%2?"intl-soft":""}`} key={title}>
-      <div className="container intl-scene-grid">
-        <div><p className="intl-overline">{t.archiveTitle}</p><h2>{title}</h2><p>{body}</p></div>
-        <Image src={image} alt={title} width={950} height={730} sizes="(max-width: 750px) 100vw, 44vw"/>
-      </div></section>)}
-    <section className="intl-section"><div className="container"><h2>{t.archiveMemory}</h2><p>{t.archiveMemoryText}</p><h3>{t.archiveEthics}</h3><p>{t.archiveEthicsText}</p>
+  return <main className="intl-page">
+    <Cover section="archive" locale={locale}/>
+    <section className="intl-section"><div className="container">
+      <p className="intl-overline">{e.archive.imageHeading}</p>
+      <h2>{t.archiveHeading}</h2>
+      <p className="intl-wide-copy">{e.archive.introFirst}</p>
+      <p>{e.archive.introSecond}</p>
+    </div></section>
+    <section className="intl-section intl-soft"><div className="container intl-scene-grid">
+      <div>
+        <p className="intl-overline">{t.archiveTitle}</p>
+        <h2>{t.archiveHouse}</h2><p>{t.archiveHouseText}</p>
+        <p>{e.archive.houseMore}</p>
+      </div>
+      <figure><Image src="/media/esther/childhood-house.jpg" alt={t.archiveHouse}
+        width={950} height={730} sizes="(max-width: 750px) 100vw, 44vw"/>
+        <figcaption>{e.archive.oldPhotoCaption}</figcaption>
+      </figure>
+    </div></section>
+    <section className="intl-section"><div className="container intl-scene-grid">
+      <div>
+        <p className="intl-overline">{t.archiveTitle}</p>
+        <h2>{t.archiveChild}</h2><p>{t.archiveChildText}</p>
+      </div>
+      <figure><Image src="/media/esther/childhood-garden.jpg" alt={t.coverAlts.archive}
+        width={950} height={730} sizes="(max-width: 750px) 100vw, 44vw"/>
+        <figcaption>{e.archive.childPhotoCaption}</figcaption>
+      </figure>
+    </div></section>
+    <section className="intl-section intl-soft"><div className="container">
+      <p className="intl-overline">{t.archiveTitle}</p>
+      <h2>{t.archiveMemory}</h2>
+      <p className="intl-wide-copy">{e.archive.memoryMore}</p>
+      <p>{e.archive.memoryClosing}</p>
+    </div></section>
+    <section className="intl-section"><div className="container">
+      <p className="intl-overline">{t.archiveTitle}</p>
+      <h2>{t.archiveEthics}</h2><p className="intl-wide-copy">{t.archiveEthicsText}</p>
       <Link className="intl-more" href={localizedHref(locale,"/stories")}>{t.storiesTitle} ↗</Link>
+    </div></section>
+    <section className="intl-ending"><div className="container">
+      <h2>{e.archive.closing}</h2>
     </div></section>
   </main>;
 }
