@@ -71,6 +71,9 @@
   width: min(100%, 560px);
   justify-self: center;
 }
+.portrait img {
+  border-radius: 16px;
+}
 .heroCaption {
   position: absolute;
   bottom: clamp(1.15rem, 2.5vw, 2.3rem);

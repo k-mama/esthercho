@@ -8,12 +8,13 @@ const photographs = [
   { src: "/media/esther/cheongdam-home-01-street.jpg", width: 1079, height: 608 },
   { src: "/media/esther/cheongdam-home-02-gate.jpg", width: 1079, height: 622 },
   { src: "/media/esther/cheongdam-home-03-garden.png", width: 1079, height: 635 },
-  { src: "/media/esther/cheongdam-home-04-family.png", width: 1500, height: 2000 },
+  { src: "/media/esther/cheongdam-home-04-family-square.png", width: 1500, height: 1500 },
 ] as const;
 
-/** Four unaltered author-supplied archival photos, always in their given order.
- * Do not crop or recreate their pixels. Wide gate/house views and the vertical
- * family portrait use their original aspect ratios at every breakpoint.
+/** The four archival photographs stay in the author's requested order.
+ * Photos 1–3 retain their original pixels. Photo 4 is a square derivative
+ * cropped 500px from the top of the 1500x2000 original (which is preserved).
+ * Never use object-fit:cover on these archival gallery images.
  */
 export function ChildhoodHomeStory({locale}:{locale:SiteLocale}) {
   const copy = childhoodHomeMemory[locale];
