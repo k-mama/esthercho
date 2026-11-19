@@ -4,7 +4,6 @@ import { useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { navigationConfig } from "@/config/navigation";
 import { supportedLocales, languageNames, localeInterface, localeFromPath, normalizeContentPath, localizedHref } from "@/config/languages";
 
 function GlobeIcon() {
@@ -35,62 +34,6 @@ function GlobeIcon() {
   );
 }
 
-const mirroredRooms = new Set([
-  "/home",
-  "/stories",
-  "/books",
-  "/studio",
-  "/about",
-  "/archive",
-  "/notes",
-]);
-
-function normalizePath(pathname: string) {
-  if (pathname === "/") return "/home";
-  return pathname.length > 1 && pathname.endsWith("/")
-    ? pathname.slice(0, -1)
-    : pathname;
-}
-
-function getParentRoom(pathname: string) {
-  const segments = pathname.split("/").filter(Boolean);
-  return segments.length > 0 ? `/${segments[0]}` : "/home";
-}
-
-function englishCanonicalPath(path: string) {
-  return path === "/home" ? "/" : `${path}/`;
-}
-
-function koreanCanonicalPath(path: string) {
-  return path === "/home" ? "/ko/" : `/ko${path}/`;
-}
-
-function getLanguageHref(pathname: string, isKorean: boolean) {
-  const normalized = normalizePath(pathname);
-
-  if (isKorean) {
-    const englishPath = normalized.replace(/^\/ko/, "") || "/home";
-
-    if (mirroredRooms.has(englishPath)) {
-      return englishCanonicalPath(englishPath);
-    }
-
-    const parentRoom = getParentRoom(englishPath);
-    return mirroredRooms.has(parentRoom)
-      ? englishCanonicalPath(parentRoom)
-      : "/";
-  }
-
-  if (mirroredRooms.has(normalized)) {
-    return koreanCanonicalPath(normalized);
-  }
-
-  const parentRoom = getParentRoom(normalized);
-  return mirroredRooms.has(parentRoom)
-    ? koreanCanonicalPath(parentRoom)
-    : "/ko/";
-}
-
 export function SiteHeader() {
   const pathname = usePathname();
   const mobileMenuRef = useRef<HTMLDetailsElement>(null);
@@ -98,15 +41,8 @@ export function SiteHeader() {
   const locale = localeFromPath(pathname);
   const localeCopy = localeInterface[locale];
 
-  const isKorean = pathname === "/ko" || pathname.startsWith("/ko/");
-  const isHome =
-    pathname === "/" ||
-    pathname === "/home" ||
-    pathname === "/home/" ||
-    pathname === "/ko" ||
-    pathname === "/ko/" ||
-    pathname === "/ko/home" ||
-    pathname === "/ko/home/";
+  const isKorean = locale === "ko";
+  const isHome = normalizeContentPath(pathname) === "";
 
   const navItems = localeCopy.primary.map((title, index) => ({
     title, href: localizedHref(locale, ["/stories", "/books", "/studio", "/about"][index])
@@ -117,6 +53,14 @@ export function SiteHeader() {
 
   const homeHref = localizedHref(locale);
   const languageLabel = localeCopy.selector;
+  const contentPath = normalizeContentPath(pathname);
+  const languageHref = (language: typeof supportedLocales[number]) =>
+    language === "ko" && contentPath.startsWith("/stories/")
+      ? localizedHref(language, "/stories")
+      : localizedHref(language, contentPath);
+  const menuLabel: Record<typeof supportedLocales[number], string> = {
+    en: "MENU", ko: "메뉴", de: "MENÜ", es: "MENÚ", fr: "MENU", it: "MENU", ja: "メニュー",
+  };
 
   const closeMobileMenu = () => {
     mobileMenuRef.current?.removeAttribute("open");
@@ -158,7 +102,7 @@ export function SiteHeader() {
         <Link
           href={homeHref}
           className="site-header-logo"
-          aria-label={isKorean ? "조성연 홈페이지" : "Esther Cho home"}
+          aria-label={localeCopy.home}
           onClick={closeMobileMenu}
         >
           <Image
@@ -173,7 +117,7 @@ export function SiteHeader() {
 
         <nav
           className="site-header-nav-desktop"
-          aria-label={isKorean ? "주요 메뉴" : "Main"}
+          aria-label={localeCopy.primary.join(", ")}
         >
           <ul>
             {navItems.map((item) => {
@@ -195,7 +139,7 @@ export function SiteHeader() {
 
         <div className="site-header-nav-mobile">
           <details ref={mobileMenuRef}>
-            <summary>{isKorean ? "메뉴" : "MENU"}</summary>
+            <summary>{menuLabel[locale]}</summary>
 
             <ul className="site-header-nav-mobile-menu">
               {navItems.map((item, index) => {
@@ -228,7 +172,7 @@ export function SiteHeader() {
                       <ul
                         className="site-header-nav-mobile-submenu"
                         aria-label={
-                          isKorean ? "이야기의 하위 메뉴" : "Stories sub-navigation"
+                          localeCopy.rooms.join(", ")
                         }
                       >
                         {roomItems.map((room) => {
@@ -271,7 +215,7 @@ export function SiteHeader() {
               {supportedLocales.map((language) => (
                 <li key={language}>
                   <Link
-                    href={localizedHref(language, normalizeContentPath(pathname))}
+                    href={languageHref(language)}
                     hrefLang={language}
                     lang={language}
                     aria-current={language === locale ? "page" : undefined}
@@ -294,7 +238,7 @@ export function SiteHeader() {
       {!isHome ? (
         <nav
           className="site-header-subnav-desktop"
-          aria-label={isKorean ? "집 안의 다른 방" : "More rooms"}
+          aria-label={localeCopy.rooms.join(", ")}
         >
           <div className="container site-header-subnav-inner">
             <ul>
