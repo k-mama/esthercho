@@ -279,9 +279,10 @@ function IntlStories({locale}:{locale:TranslationLocale}) {
       </ol>
     </div></section>
     <section className="intl-section"><div className="container">
-      <p className="intl-overline">{t.storiesClosing}</p>
+      <p className="intl-overline">{t.storiesTitle}</p>
       <h2>{e.stories.returningTitle}</h2>
       <p className="intl-wide-copy">{e.stories.returningBody}</p>
+      <p>{t.storiesClosing}</p>
       <Link className="intl-more" href={localizedHref(locale,"/archive")}>{e.stories.returningLink} ↗</Link>
     </div></section>
     <section className="intl-ending"><div className="container">
@@ -381,7 +382,7 @@ function IntlArchive({locale}:{locale:TranslationLocale}) {
         <h2>{t.archiveHouse}</h2><p>{t.archiveHouseText}</p>
         <p>{e.archive.houseMore}</p>
       </div>
-      <figure><Image src="/media/esther/childhood-house.jpg" alt={t.archiveHouse}
+      <figure><Image src="/media/esther/childhood-house.jpg" alt={e.archive.oldPhotoCaption}
         width={950} height={730} sizes="(max-width: 750px) 100vw, 44vw"/>
         <figcaption>{e.archive.oldPhotoCaption}</figcaption>
       </figure>
@@ -464,7 +465,8 @@ function IntlAbout({locale}:{locale:TranslationLocale}) {
       <div className="container intl-scene-grid">
         <div>
           <p className="intl-overline">{t.aboutSectionLabel}</p>
-          <h2>{title}</h2><p>{body}</p>
+          <h2>{title}</h2>
+          {i===3 ? null : <p>{body}</p>}
           {i===1 ? <p>{e.about.homeMore}</p> : null}
           {i===3 ? <p>{e.about.makingMore}</p> : null}
           {i===0 ? <ol className="intl-education">
