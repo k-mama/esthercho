@@ -36,18 +36,6 @@ export default function TigerDreamStoryPage() {
 
           <blockquote>“It must have been a cat.”</blockquote>
 
-          <p>
-            That is the whole fragment Esther has recorded so far. It is small,
-            specific, and complete enough to open the archive without pretending
-            that more has already been remembered.
-          </p>
-
-          <p>
-            This website keeps stories in that form when necessary. A memory may
-            begin as three lines, then grow later when another detail returns. The
-            earlier fragment remains part of the record.
-          </p>
-
           <div className="story-detail-tags" role="group" aria-label="Related memory tags">
             {tags.map((tag) => (
               <span key={tag}>{tag}</span>
@@ -75,10 +63,9 @@ export default function TigerDreamStoryPage() {
         <div className="container story-detail-note-inner">
           <p className="story-detail-kicker">ARCHIVE NOTE</p>
           <p>
-            The Stories section is a living author archive. New details can be
-            added as Esther remembers them; archival photographs and later
-            reinterpretations remain clearly identified as different kinds of
-            material.
+            Only these three lines of the story have been recorded so far.
+            If Esther remembers more, the archive can grow. Old photographs
+            and images made much later remain clearly identified.
           </p>
         </div>
       </section>
