@@ -20,12 +20,12 @@ export const featuredBook = {
   details: {
     language: {
       label: {
-        en: "Source language",
-        ko: "기준 언어",
+        en: "Original manuscript language",
+        ko: "원문 언어",
       },
       value: {
-        en: "English",
-        ko: "영어",
+        en: "Korean",
+        ko: "한국어",
       },
     },
     format: {
