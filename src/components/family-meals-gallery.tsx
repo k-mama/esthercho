@@ -1,6 +1,5 @@
 "use client";
 import { useRef, useState } from "react";
-import "./family-meals-gallery.css";
 type Locale = "ko" | "en";
 const featured = [15,25,38,50,2,30,27,6,57];
 const photos = [...featured,...Array.from({length:57},(_,i)=>i+1).filter(i=>!featured.includes(i))];
