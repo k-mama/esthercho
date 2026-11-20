@@ -299,7 +299,9 @@ function IntlStoryDetail({locale,which}:{locale:TranslationLocale;which:0|1}) {
   const t=translations[locale];
   const e=editorial[locale];
   const title=t.storyTitles[which];
-  const paragraphs=which===0?t.father:t.daughter;
+  // The first three lines belong to the author's recollection. The remaining
+  // archive commentary must not be presented as her first-person story.
+  const paragraphs=which===0?t.father.slice(0,3):t.daughter;
   const nextHref=which===0?"/stories/the-youngest-daughter-in-every-house":"/stories";
   return <main className="intl-page">
     <section className="intl-section intl-story-head"><div className="container">
