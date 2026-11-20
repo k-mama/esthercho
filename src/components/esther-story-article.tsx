@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { type RecordedStory, type StoryLocale, storyHref } from "@/content/esther-story-archive";
+import { type RecordedStory, type StoryLocale, storyHref, recordedStories } from "@/content/esther-story-archive";
 import styles from "./esther-story-article.module.css";
 
 type Props = { story: RecordedStory; locale: StoryLocale };
@@ -10,6 +10,7 @@ export function EstherStoryArticle({ story, locale }: Props) {
   const ko = locale === "ko";
   const next = String(Number(story.number) + 1).padStart(2, "0");
   const hasNext = Number(next) <= 18;
+  const nextStory = recordedStories.find((candidate) => candidate.number === next);
 
   return (
     <main className={`${styles.page} ${ko ? styles.korean : ""}`} lang={locale}>
@@ -43,10 +44,6 @@ export function EstherStoryArticle({ story, locale }: Props) {
             </figure>
           ) : null}
         </article>
-        <aside className={styles.marginNote} aria-label={ko ? "기록 안내" : "Archive note"}>
-          <span className={styles.marginLine} aria-hidden="true" />
-          <p>{ko ? "조성연의 실제 회고를 바탕으로 편집한 이야기입니다. 확인되지 않은 장면은 덧붙이지 않았습니다." : "Edited from Esther Cho's own recollections. No undocumented scenes have been added."}</p>
-        </aside>
       </section>
 
       <nav className={styles.navigation} aria-label={ko ? "다음 이야기" : "Continue reading"}>
@@ -55,9 +52,9 @@ export function EstherStoryArticle({ story, locale }: Props) {
           {hasNext ? (
             <>
               <p className={styles.nextNumber}>{next}</p>
-              <h2>{ko ? "다음 이야기로" : "The next story"}</h2>
+              <h2>{nextStory ? nextStory[locale].title : (ko ? "삼시세끼, 미슐랭 3스타 셰프처럼" : "Three Meals a Day")}</h2>
               <Link className={styles.nextLink} href={storyHref(locale, next)}>
-                {ko ? `${next}번 이야기 읽기` : `Read story ${next}`} <span aria-hidden="true">→</span>
+                {ko ? `${next}번으로 이어 읽기` : `Continue to story ${next}`} <span aria-hidden="true">→</span>
               </Link>
             </>
           ) : (

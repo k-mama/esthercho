@@ -14,14 +14,11 @@
 .eyebrow { margin: 0 0 1.7rem; font: 700 .7rem/1.5 var(--font-interface, sans-serif); color: #547590; letter-spacing: .13em; }
 .hero h1 { max-width: 15ch; margin: 0; font: 400 clamp(3rem, 6.4vw, 6.7rem)/1.03 var(--font-editorial, Georgia, serif); letter-spacing: -.042em; text-wrap: balance; }
 .deck { margin: clamp(1.8rem, 3vw, 2.7rem) 0 0; max-width: 670px; color: #697984; font: 400 clamp(1.2rem, 2vw, 1.7rem)/1.6 var(--font-editorial, Georgia, serif); }
-.reading { display: grid; grid-template-columns: minmax(0, 1fr) minmax(180px, .38fr); gap: clamp(3rem, 8vw, 9rem); padding-block: clamp(2rem, 4vw, 4rem) clamp(7rem, 12vw, 12rem); }
-.prose { max-width: 750px; margin: 0 0 0 clamp(0px, 6vw, 70px); }
+.reading { display: block; padding-block: clamp(2rem, 4vw, 4rem) clamp(7rem, 12vw, 12rem); }
+.prose { max-width: 780px; margin: 0 auto; }
 .prose p { margin: 0 0 1.65em; color: #4e5d66; font: 400 clamp(1.06rem, 1.37vw, 1.23rem)/1.88 var(--font-editorial, Georgia, serif); }
 .prose p:last-child { margin-bottom: 0; }
 .prose .opening { font-size: clamp(1.35rem, 2vw, 1.78rem); line-height: 1.65; color: #253c4d; }
-.marginNote { align-self: start; margin-top: clamp(2rem, 10vw, 9rem); }
-.marginLine { display: block; width: 56px; height: 1px; background: #9db0bd; margin-bottom: 1.4rem; }
-.marginNote p { max-width: 220px; margin: 0; font: 400 .77rem/1.8 var(--font-interface, sans-serif); color: #77858b; }
 .navigation { padding: clamp(5rem, 9vw, 9rem) 0; background: radial-gradient(circle at 84% 20%,rgba(185,214,231,.55),transparent 37%),linear-gradient(135deg,#eef3f5,#f6f4ed); }
 .navigationInner { padding-left: max(0px, 4vw); }
 .nextNumber { margin: 0; color: #9baeb9; font: 300 clamp(3rem, 5vw, 5rem)/1 var(--font-editorial, Georgia, serif); }
@@ -35,13 +32,12 @@
 .korean .prose p { line-height: 1.95; font-size: clamp(1.04rem, 1.32vw, 1.15rem); }
 .korean .prose .opening { font-size: clamp(1.26rem, 1.9vw, 1.68rem); line-height: 1.72; }
 .korean .navigation h2 { font-size: clamp(2.3rem, 4.5vw, 4.4rem); }
-.korean .eyebrow,.korean .nextLink,.korean .back,.korean .marginNote p { font-family: var(--font-korean, sans-serif); }
+.korean .eyebrow,.korean .nextLink,.korean .back { font-family: var(--font-korean, sans-serif); }
 @media(max-width:900px) {
   .heroGrid { grid-template-columns: 1fr; }
   .bigNumber { font-size: clamp(5rem, 13vw, 7.8rem); margin-bottom: 1.6rem; }
   .reading { grid-template-columns: 1fr; gap: 3rem; }
   .prose { margin-left: 0; }
-  .marginNote { margin-top: 0; }
   .hero h1 { max-width: 18ch; }
 }
 @media(max-width:600px) {

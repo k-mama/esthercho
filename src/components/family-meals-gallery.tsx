@@ -19,10 +19,10 @@ const copy = {
  },
  en: {
   eyebrow:"STORY 02 · THE FAMILY TABLE",
-  title:"Three Meals a Day, as If I Were a Michelin Chef",
-  sub:"Meals for my parents-in-law",
+  title:"Three Meals a Day", 
+  sub:"Apparently, I ran a three-Michelin-star restaurant.",
   line1:"For about six or seven years, my parents-in-law lived with us.",
-  line2:"I prepared breakfast, lunch, and dinner every day, as though I were the chef at a three-Michelin-star restaurant.",
+  line2:"Breakfast, lunch, and dinner. I prepared all three every day.",
   line3:"I still have the photographs of those meals.",
   label:"Photographs from those years",
   button:"View 12 more photographs",

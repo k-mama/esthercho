@@ -30,7 +30,7 @@ export const recordedStories: RecordedStory[] = [
         "그런데 태어나고 보니 딸이었다.",
         "아버지는 우스갯소리로 말씀하셨다. “내가 잘못 봤나 보다. 호랑이가 아니라 고양이였나 봐.”",
         "아버지는 농담을 잘하는 분이었다. 나는 아버지의 첫 아이였고 집안의 첫 손녀였다. 그 뒤로 남동생 둘이 연년생으로 태어났다.",
-        "아주 어린 시절의 기억은 모두 선명하지 않다. 그래도 그 시절 내가 여러 사람에게 많은 사랑을 받았다는 것은 분명하다. 아버지의 호랑이와 고양이 이야기도 그중 하나로 남아 있다."
+        "나는 그 집의 첫 손녀로 많은 사랑을 받았다. 아버지의 호랑이 꿈은 그렇게 고양이 농담으로 끝났다."
       ],
       quote: "“내가 잘못 봤나 보다. 호랑이가 아니라 고양이였나 봐.”"
     },
@@ -42,7 +42,7 @@ export const recordedStories: RecordedStory[] = [
         "Then I arrived. A daughter.",
         "He laughed about it. “I must have seen it wrong. Maybe it was a cat, not a tiger.”",
         "My father was good at making jokes. I was his first child and the first granddaughter in the family. Two younger brothers followed, one year apart.",
-        "I cannot remember every part of those early years. What I do know is that I was loved by many people. The story of my father's tiger, which turned into a cat, has stayed with me."
+        "I was loved by many people in those early years. And my father's tiger became a cat."
       ],
       quote: "“Maybe it was a cat, not a tiger.”"
     }
@@ -61,7 +61,7 @@ export const recordedStories: RecordedStory[] = [
         "한밤중 모두 잠든 방에서 시계 소리가 들렸다. 찰칵, 찰칵, 찰칵. 작은할머니의 화장대에 놓인 화장품을 구경하고, 할머니가 화장하시면 옆에서 따라 발랐던 기억도 난다.",
         "밤에 엄마가 보고 싶어 울 때도 있었다. 그래도 며칠씩 거뜬히 지냈다.",
         "엄마가 더 바쁘실 때면 큰이모 집이나 작은이모 집에서도 지냈다. 언니들과 오빠들이 학교에서 돌아오기를 골목에 나가 기다렸고, 구멍가게에서 맛있는 것도 사 먹었다.",
-        "내가 있는 집마다 사람들이 나를 예뻐했다. 그 집에서도 나는 막내딸이 되었다."
+        "나는 가는 집마다 막내딸처럼 사랑받았다."
       ],
       quote: "가는 집마다 또 하나의 가족이 생겼다."
     },
@@ -71,11 +71,11 @@ export const recordedStories: RecordedStory[] = [
       paragraphs: [
         "At home, I was the oldest child. Two brothers came along, one year apart. My mother had three little children, and her own parents had died early.",
         "There were young women helping with the housework, but I imagine my mother still had more than enough to do. I was quieter than my brothers and probably an easy child to send to relatives for a few days.",
-        "I often stayed with my mother's uncle and aunt. Their house was a large traditional Korean home. Through the gate was a square courtyard with a flower bed, and there were two separate buildings in the yard. They loved me as if I were their own youngest daughter.",
-        "At night, after everyone had gone to sleep, I could hear a clock. Click. Click. Click. I also remember the dressing table. I watched my older relative put on makeup and tried a little myself.",
+        "I often stayed with my mother's uncle and aunt. Their house was a large traditional Korean home. Through the gate was a square courtyard with a flower bed, and there were two separate buildings in the yard. They treated me like a daughter of their own.",
+        "At night, after everyone had gone to sleep, I could hear a clock. Click. Click. Click. I also remember the dressing table. I watched my great-aunt put on makeup and tried some myself.",
         "There were nights when I cried because I missed my mother. Still, I could stay for several days.",
         "When my mother needed more help, I stayed with my aunts. I waited in the lane for the older cousins to come home from school and went to the little shop at the end of the street for something good to eat.",
-        "Everywhere I went, someone made room for me. In each house, I became the youngest daughter."
+        "In every house, I was loved like the youngest daughter."
       ],
       quote: "In each house, I became the youngest daughter."
     }
@@ -93,7 +93,7 @@ export const recordedStories: RecordedStory[] = [
         "그런데 나와 남동생들은 다시 마당으로 뛰어나갔다. 힘들게 씻겨놓은 언니들은 질색했을 것이다.",
         "아직 한여름처럼 끈적이지 않는 공기였다. 잔디와 흙에서 올라오는 냄새, 해가 넘어가기 전의 조용함. 방금 목욕한 우리 몸에서도 좋은 냄새가 났다.",
         "우리는 깨끗한 잠옷 차림으로 잔디밭에서 조금 더 놀았다. 어른들이 밥 먹으라고 부르면 그제야 들어왔다.",
-        "저녁을 먹고 만화를 잠깐 보다가 일찍 잠들었다. 이상하게도 그 초여름 공기와 잔디 냄새만큼은 지금도 또렷하다."
+        "저녁을 먹고 만화를 조금 보다가 일찍 잠들었다. 그런데 그때 맡은 초여름의 잔디 냄새는 지금도 잊히지 않는다."
       ]
     },
     en: {
@@ -105,7 +105,7 @@ export const recordedStories: RecordedStory[] = [
         "My brothers and I promptly ran back out into the yard. I can only imagine what the women who had just bathed us thought of that.",
         "The air was not yet sticky with summer heat. I remember the smell of grass and earth, the quiet just before sunset, and the clean smell of our own freshly washed skin.",
         "We played a little longer in our pajamas. When the adults called us in for dinner, we finally went inside.",
-        "After dinner there were a few cartoons, then bed. Of all the things I could remember about that house, the scent of an early-summer evening has stayed remarkably clear."
+        "After dinner, a few cartoons, then bed. I still remember the smell of the grass in the early evening."
       ]
     }
   },
@@ -121,7 +121,7 @@ export const recordedStories: RecordedStory[] = [
         "그다음에는 가족이 좋아하던 식당으로 갔다. 조선호텔에 있던 ‘예스터데이’였다.",
         "나는 그곳에서 먹었던 독일식 소시지와 독일식 김치를 기억한다. 밀크셰이크도 먹었다. 그리고 식사가 끝날 무렵이면 엄마와 아빠가 꼭 스트로베리 쇼트케이크를 주문하셨다.",
         "그 케이크가 아직도 생각난다.",
-        "그 식당이 이제 없다는 것이 참 아쉽다. 음식도 그립지만, 그곳에 함께 앉아 있던 엄마와 아빠, 남동생 둘이 더 선명하게 떠오른다."
+        "그 식당이 없어진 것이 지금도 아쉽다. 그 소시지와 케이크를 생각하면 함께 앉아 있던 엄마와 아빠, 동생들도 떠오른다."
       ]
     },
     en: {
@@ -132,7 +132,7 @@ export const recordedStories: RecordedStory[] = [
         "Then we went to our favorite restaurant, Yesterday, at the Chosun Hotel in Seoul.",
         "I remember the German sausage and what I knew as German-style kimchi. I had milkshakes there, too. Toward the end of the meal, my parents always ordered strawberry shortcake.",
         "I can still remember that cake.",
-        "The restaurant is gone now, which makes me sad. I miss the food, of course. But when I think of that table, I also see my mother, my father, and my two little brothers sitting there with me."
+        "That restaurant is gone now. I still miss it. I remember the food, and I remember my parents and brothers around the table."
       ]
     }
   },
@@ -148,8 +148,7 @@ export const recordedStories: RecordedStory[] = [
         "기사 아저씨가 운전하고 아빠는 앞자리에 앉으셨다. 뒤에는 엄마와 나, 두 남동생이 함께 탔다.",
         "그때 내가 엄마에게 말했다고 한다.",
         "“엄마, 참 행복해.”",
-        "나는 그 말을 직접 기억하기보다 엄마가 오랫동안 간직해오신 이야기로 안다. 엄마는 그날을 참 오래 기억하셨다.",
-        "어린아이였던 내가 그런 말을 했다는 것이 엄마에게도 기쁜 일이었을 것이다. 내게는 어릴 때부터 행복이라는 감정이 낯설지 않았던 모양이다."
+        "그 말은 내가 직접 기억하는 게 아니다. 엄마에게서 들었다."
       ],
       quote: "“엄마, 참 행복해.”"
     },
@@ -160,8 +159,7 @@ export const recordedStories: RecordedStory[] = [
         "We were on our way home after a Christmas party.",
         "Our driver was at the wheel, and my father sat in front. In the back were my mother, my two brothers, and me.",
         "My mother told me that I turned to her and said, “Mom, I'm so happy.”",
-        "I know that moment mostly because she remembered it for so long. She held on to those few words.",
-        "I wonder what it was like for her to hear a child say that aloud. I was young, but apparently I already knew what happiness felt like."
+        "I know about that moment because my mother remembered it."
       ],
       quote: "“Mom, I'm so happy.”"
     }
@@ -176,7 +174,7 @@ export const recordedStories: RecordedStory[] = [
       paragraphs: [
         "예원학교 중학교 1학년이던 7월, 아버지가 갑자기 암으로 돌아가셨다. 담도암이었다.",
         "아마 내 어린 시절은 그때 끝난 것 같다.",
-        "물론 아름다운 엄마가 계셨고 사이좋은 두 남동생도 있었다. 우리는 여전히 서로를 사랑했다. 그런데 내 마음 한편에는 그때부터 슬픔이 자리 잡았다.",
+        "물론 아름다운 엄마가 계셨고 사이좋은 두 남동생도 있었다. 우리는 여전히 서로를 사랑했다. 그런데 그 뒤로는 내 마음 한편에 슬픔과 우울함이 오래 남았다.",
         "가장 이상했던 것은 아버지가 돌아가셨는데도 내가 멀쩡히 살아간다는 사실이었다. 밥을 먹고, 학교에 가고, 친구들과 이야기했다. 그런 일을 계속하고 있는 나 자신이 때로는 슬펐다.",
         "그 뒤로 나는 엄마를 힘들게 해서는 안 된다고 생각했다. 엄마를 걱정시키지 말아야 하고, 오히려 엄마를 돌봐야 한다고 여겼다.",
         "사춘기 아이처럼 마음껏 흔들릴 수가 없었다. 나도 모르게 조금 일찍 어른이 되었다."
@@ -188,10 +186,10 @@ export const recordedStories: RecordedStory[] = [
       paragraphs: [
         "In July of my first year at Yewon School, my father died of cancer. It was bile duct cancer.",
         "I think my childhood ended that month.",
-        "My beautiful mother was still there, and so were my two brothers. We loved one another just as before. But a sadness had taken up residence in me.",
+        "My beautiful mother was still there, and so were my two brothers. We loved one another just as before. But I carried sadness with me after that.",
         "What troubled me most was the fact that I kept living. I ate. I went to school. I talked with friends. My father had died, and I was doing all those ordinary things. At times, even that made me sad.",
         "I decided I must not make life harder for my mother. I should not worry her. In fact, I thought I needed to look after her.",
-        "There was not much room to be a difficult teenager. I grew up early, without quite choosing to."
+        "I was still a child, but I was already thinking about how to take care of my mother."
       ]
     }
   },
@@ -219,7 +217,7 @@ export const recordedStories: RecordedStory[] = [
         "I think I may be someone who collects happiness.",
         "There have been hard times. Plenty of them. Yet whenever I think about a particular year or a particular person, the happy things seem to come back first.",
         "I remember laughing with someone. I remember something funny we did. I remember how peaceful and happy I felt. I am less likely to remember the heat, the exhaustion, or how much I struggled through those days.",
-        "People have betrayed me. People have disappointed me. Even then, as time passes, I find that I remember the joy they once gave me.",
+        "I have been betrayed and disappointed by people. Even then, with time, I find myself remembering the happiness we once shared.",
         "It is not that nothing bad happened. It did. But my memory keeps bringing me the good hours we had together.",
         "Perhaps that is simply the kind of person I am."
       ],
@@ -248,7 +246,7 @@ export const recordedStories: RecordedStory[] = [
       paragraphs: [
         "My father traveled abroad for work. When he came home, he opened enormous suitcases full of presents. There seemed to be enough for everyone.",
         "There were gifts for my mother and for the three of us, of course, but he remembered my aunts as well.",
-        "I was probably more excited about what he would bring home than I was sad about his being away. Japan was especially promising. He found beautiful notebooks, erasers, and all sorts of things we did not often see in Korea then.",
+        "I was more excited about what he might bring home than I was sad about his being away. I especially liked it when he went to Japan. He found pretty, unusual school supplies we rarely saw in Korea then.",
         "At school, I handed out pencil boards and erasers to friends.",
         "I remember some of the clothes: a pale-blue wool coat, a pale-blue trench coat, and burgundy suede boots.",
         "Thinking back, I suspect my father loved pale blue. Maybe that is where I got it."
@@ -263,7 +261,7 @@ export const recordedStories: RecordedStory[] = [
       title: "나는 10월부터 크리스마스를 시작한다",
       deck: "엄마는 선물을 잘 숨겼고, 우리는 늘 찾으러 다녔다.",
       paragraphs: [
-        "어린 시절 우리 집의 크리스마스는 무척 특별했다. 가족이 모두 모이면 아이들만 열 명이 넘었다. 집에서는 커다란 칠면조를 구웠고, 막내삼촌은 산타클로스 옷을 입고 선물을 나눠주셨다.",
+        "어린 시절 우리 집의 크리스마스는 무척 특별했다. 가족이 모두 모이면 아이들만 열 명이 넘었다. 집에서는 커다란 칠면조를 구웠다. 전기톱 같은 도구로 잘라 나눠 먹었던 기억도 난다. 막내삼촌은 산타클로스 옷을 입고 선물을 나눠주셨다.",
         "그러나 내 크리스마스는 파티보다 훨씬 일찍 시작되었다. 엄마가 미리 선물을 사서 포장하고 어딘가에 숨겨놓는다는 사실을 알고 있었기 때문이다.",
         "엄마 아빠가 잠든 것 같으면 남동생 둘을 깨웠다. 셋이 집 안을 돌아다니며 선물을 찾았다.",
         "엄마는 선물을 정말 잘 숨기셨다. 찾아내지 못한 해도 많았다. 가끔 찾더라도 이미 포장이 완벽해서 뜯어볼 수가 없었다. 뜯으면 들킬 게 뻔했다.",
@@ -275,7 +273,7 @@ export const recordedStories: RecordedStory[] = [
       title: "Christmas Starts in October",
       deck: "My mother hid the presents. We tried to find them.",
       paragraphs: [
-        "Christmas in our family was quite a production. When everyone gathered, there were more than ten children. We roasted a huge turkey, and my youngest uncle dressed as Santa Claus to hand out presents.",
+        "Christmas in our family was quite a production. When everyone gathered, there were more than ten children. We roasted a huge turkey. I remember something like an electric saw being used to carve it. My youngest uncle dressed as Santa Claus to hand out presents.",
         "But Christmas began long before the party for me. I knew my mother bought the gifts early, wrapped them, and hid them somewhere in the house.",
         "Once our parents seemed to be asleep, I woke my two brothers. The three of us went searching.",
         "My mother was very good at hiding things. Many years we found nothing. Sometimes we found a present, but it was wrapped so carefully that we could not open it without being caught.",
@@ -302,13 +300,13 @@ export const recordedStories: RecordedStory[] = [
     },
     en: {
       title: "The School I Didn't Choose",
-      deck: "I was good at doing what was expected. It did not mean I had chosen it.",
+      deck: "I went to art school because my mother wanted me to.",
       paragraphs: [
         "Around fourth grade, my mother decided I should study art. I began preparing for the entrance exam to Yewon School.",
         "I did not hate drawing. I simply liked books and studying more. Still, I worked hard. I attended Yewon, then Seoul Arts High School, and eventually the College of Fine Arts at Seoul National University.",
         "Yewon was on Jeongdong-gil, near the stone wall of Deoksugung Palace. Our driver took me to school and picked me up afterward. I would have preferred to walk with my friends and ride the bus.",
         "Sometimes I asked him not to come all the way to the school gate. I walked to the bus stop with my friends, rode to Apgujeong-dong, and met him there instead.",
-        "Seoul National University's art program had been my mother's dream. I had fulfilled it. But university was not a particularly happy time for me.",
+        "Seoul National University's art program was my mother's dream. I went. But I wasn't particularly happy during those college years.",
         "After graduation I studied education at Ewha Womans University. That was different. I loved those classes. I realized once again that I had always liked studying."
       ]
     }
@@ -325,7 +323,7 @@ export const recordedStories: RecordedStory[] = [
         "어릴 때는 셋이 마당에서 놀고, 크리스마스 선물을 찾으러 온 집을 돌아다녔다. 아버지가 돌아가신 뒤에도 우리에게는 서로가 있었다.",
         "지금은 매일 아침 동생들과 함께 큐티를 한다. 직접 만나는 건 아니고, 카카오톡으로 말씀을 나누고 하나님 이야기를 한다.",
         "동생들과는 그런 이야기가 정말 잘 통한다. 각자 읽은 말씀을 이야기하고, 마음에 남은 것을 나누는 시간이 좋다.",
-        "내가 가장 사랑하는 사람들이 누구냐고 묻는다면, 두 동생이 먼저 떠오를 때도 있다."
+        "가끔은 내가 가장 사랑하는 사람들이 이 두 동생인 것 같기도 하다."
       ]
     },
     en: {
@@ -336,7 +334,7 @@ export const recordedStories: RecordedStory[] = [
         "When we were little, the three of us played in the yard and searched the house for Christmas presents. After our father died, we still had each other.",
         "These days, we meet every morning on KakaoTalk, a Korean messaging app. We read Scripture, share our devotions, and talk about God. We do not have to be physically together to do it.",
         "Those conversations come easily with my brothers. We understand what the others are talking about, and I look forward to hearing what has stayed with them from their reading.",
-        "When I think of the people I love most, those two are often the first to come to mind."
+        "Sometimes I think those two may be the people I love most."
       ]
     }
   },
@@ -363,7 +361,7 @@ export const recordedStories: RecordedStory[] = [
         "I like to open the window at home and read while the rain falls. Sometimes I listen to music. I am perfectly happy just watching the rain, too.",
         "What I love most is the air right before it starts. Then the first drops touch the ground—tap, tap, tap—and there is that smell of damp earth and trees.",
         "When it rains in spring, I watch the petals fall from the flowers.",
-        "With the window open a little, the sound and scent come into the room. Give me a book, some music, and a day like that, and I am content to stay there."
+        "With the window open, I can hear the rain and smell the damp earth. I could sit there with a book and some music for a long while."
       ]
     }
   },
@@ -376,7 +374,7 @@ export const recordedStories: RecordedStory[] = [
       deck: "나는 하루가 본격적으로 시작되기 전의 시간을 좋아한다.",
       paragraphs: [
         "나는 아침 시간을 좋아한다. 그래서 보통 새벽에 조금 일찍 일어난다.",
-        "제일 먼저 성경을 펼쳐 말씀을 읽고 묵상한다. 하나님께 내 생각을 말씀드리고, 내 마음을 드리는 시간이다. 그러다 보면 응답을 받는다고 느끼는 순간도 있다.",
+        "제일 먼저 성경을 펼쳐 말씀을 읽고 묵상한다. 하나님께 내 생각을 말씀드리고, 내 마음을 드리는 시간이다. 그러다 보면 하나님께 응답을 받을 때도 있다.",
         "그 시간이 참 좋다.",
         "창밖으로 해가 올라오는 모습도 좋아한다. 아침 햇살이 집 안으로 깊숙이 들어오면 바닥과 벽에 긴 그림자가 생긴다.",
         "새벽에 말씀을 읽다가 고개를 들어 그 빛과 그림자를 바라보는 시간. 나는 그런 아침을 좋아한다."
@@ -386,8 +384,8 @@ export const recordedStories: RecordedStory[] = [
       title: "Morning Light and Long Shadows",
       deck: "I like to be awake before the day has properly begun.",
       paragraphs: [
-        "I like mornings. I often get up early, before the rest of the day begins making demands.",
-        "The first thing I do is open my Bible. I read, reflect, and tell God what I am thinking. I offer Him the things on my mind. Sometimes, in that quiet, I sense an answer.",
+        "I like mornings, so I often get up early.",
+        "The first thing I do is open my Bible. I read, reflect, and tell God what I am thinking. Sometimes I receive an answer from Him.",
         "I love that time.",
         "I also love watching the sun rise outside the window. When the light comes into the house, it makes long, deep shadows across the rooms.",
         "I look up from what I have been reading and watch the light and the shadows for a while. That is one of my favorite ways to begin a day."
@@ -413,9 +411,9 @@ export const recordedStories: RecordedStory[] = [
       title: "Beautiful Plates and a Place to Talk",
       deck: "I like pretty dishes. I like even more having someone to use them with.",
       paragraphs: [
-        "I like beautiful plates and bowls. I enjoy buying them, looking at them, and putting food on them so that it looks inviting.",
+        "I like pretty plates and bowls. I enjoy buying them and arranging food on them so that the meal looks beautiful.",
         "I like food that tastes good and is healthy, too.",
-        "But a beautiful plate is not nearly as much fun if I have no one to share the meal with. I like to sit with people I love and talk.",
+        "I especially enjoy sharing those meals with people I love. We sit down, eat, and talk.",
         "I really do love conversation. We might talk about what we are thinking, a book one of us has read, or something we have been learning about God.",
         "A lovely table with people I love around it. That is the part I look forward to most."
       ]
@@ -427,22 +425,20 @@ export const recordedStories: RecordedStory[] = [
     source: ["PART I, II, III · PART II (직접 구술)", "내가 좋아하는 것들과 내가 사랑하는 삶 §12"],
     ko: {
       title: "아들을 위해 만들기 시작한 동화",
-      deck: "처음부터 작가가 되려고 한 일은 아니었다.",
+      deck: "아들을 위해 만든 동화가 작가의 길로 이어졌다.",
       paragraphs: [
         "나는 우리 아들을 사랑한다.",
         "아들을 위해 동화를 만들기 시작했다. 처음에는 그저 아들을 위한 이야기였다.",
-        "그 일이 출발점이 되었다. 계속 이야기를 만들다 보니 결국 나는 동화 작가의 길을 걷게 되었다.",
-        "작가가 되기까지의 모든 일을 처음부터 계획한 건 아니다. 다만 그 시작에 우리 아들이 있었다는 것은 분명하다."
+        "그 일이 출발점이 되었다. 계속 이야기를 만들다 보니 결국 나는 동화 작가의 길을 걷게 되었다."
       ]
     },
     en: {
-      title: "The Picture Book I Made for My Son",
-      deck: "I did not begin with a plan to become a children's author.",
+      title: "The Stories I Made for My Son",
+      deck: "I began making stories for my son. That is how I became a children's author.",
       paragraphs: [
         "I love my son.",
         "I started making stories for him. At first, that was all it was: a story I wanted to make for my child.",
-        "One story became the beginning of another kind of work. Eventually, I found myself becoming a children's book author.",
-        "I cannot say I planned the whole thing from the start. I do know it began with my son."
+        "One story became the beginning of another kind of work. Eventually, I found myself becoming a children's book author."
       ]
     }
   },
@@ -465,9 +461,9 @@ export const recordedStories: RecordedStory[] = [
       title: "The Café with Wide Windows",
       deck: "Good coffee, a little dessert, and someone who wants to talk.",
       paragraphs: [
-        "I like quiet, clean cafés with big windows. Natural light matters. Good coffee matters, too. A little dessert is enough, provided it is good.",
+        "I like quiet, clean cafés with wide windows and plenty of natural light. The coffee should be good. A small selection of good desserts is plenty.",
         "What I really like is sitting there for a long conversation with someone I care about.",
-        "I would rather hear how someone has come to know God than trade gossip about other people. I like talking about the God I have known, and hearing about the God they have known.",
+        "I would rather talk about how we have each experienced God than exchange gossip about other people. I like hearing about another person’s life with Him, and sharing my own.",
         "Books are another favorite subject. So are feelings, ideas, and the different ways people see the world. We learn things about each other, and I often learn something about myself.",
         "Give me a window full of light and a conversation that does not need to end quickly. I am very happy there."
       ]
@@ -483,7 +479,7 @@ export const recordedStories: RecordedStory[] = [
       paragraphs: [
         "집으로 돌아가는 길에 하늘 전체로 넓게 펼쳐진 노을을 보는 것을 좋아한다.",
         "노을에는 설명하기 어려운 아련함이 있다. 나는 그 아련함을 좋아한다.",
-        "하늘이 붉어지는 시간에는 누군가를 그리워하는 마음도 함께 떠오른다. 먼저 떠난 사람들과 그들을 그리워하는 사람들이 그 빛 안에서 잠깐 만나는 것 같은 느낌이 든다.",
+        "노을이 지는 하늘 아래에는 누군가가 그리워하는 사람들이 잠들어 있는 것처럼 느껴진다.",
         "아버지를 일찍 떠나보낸 내게 노을의 아련함이 오래된 그리움과 닿아 있는지도 모르겠다.",
         "그래서 노을을 보면 아름답다는 생각만 하지는 않는다. 잠깐 하늘을 더 오래 바라보게 된다."
       ]
@@ -494,7 +490,7 @@ export const recordedStories: RecordedStory[] = [
       paragraphs: [
         "I love it when the sunset spreads all the way across the sky as I am going home.",
         "There is something wistful about that light. I have always liked it.",
-        "At sunset I find myself thinking of people who are missed, and of those who have gone ahead of us. It feels, for a moment, as though both kinds of longing belong to the same sky.",
+        "When the sky turns red, I think of the people who have died and those who miss them. I imagine the departed resting somewhere beneath that evening sky.",
         "Perhaps that feeling is connected to losing my father so young. I cannot say for certain.",
         "I know only that a sunset makes me look a little longer."
       ]
@@ -514,7 +510,7 @@ export const storyIndex = (locale: StoryLocale) => {
   }));
   list.push({
     number: "02",
-    title: locale === "ko" ? "삼시세끼, 미슐랭 3스타 셰프처럼" : "Three Meals a Day, as If I Were a Michelin Chef",
+    title: locale === "ko" ? "삼시세끼, 미슐랭 3스타 셰프처럼" : "Three Meals a Day",
     meta: locale === "ko" ? "가족 · 식탁" : "Family · Table",
     href: "#story-two",
   });
