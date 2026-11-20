@@ -491,6 +491,7 @@ body:has(.home-video-hero, .page-cover-shell) .site-header-nav-mobile-menu {
 .site-language-panel a:hover, .site-language-panel a:focus-visible, .site-language-panel a[aria-current="page"] { background: rgba(219,234,240,.7); }
 .site-language-panel a:focus-visible { outline: 2px solid #365f85; }
 .site-language-panel a[aria-current="page"] { font-weight: 750; }
+.site-language-active-dot { width: 7px; height: 7px; min-width: 7px; margin-left: auto; border-radius: 50%; background: #b18b58; box-shadow: 0 0 0 3px rgba(177,139,88,.08); }
 @media (max-width: 600px) { .site-language-panel { right: -.4rem; } }
 
 /* Preserve the established compact mobile header geometry. */
