@@ -53,7 +53,7 @@ export const editorialPtBr = {
     manuscriptLink: "Continuar à mesa do café da manhã",
     manuscriptFactsHeading: "Sobre o manuscrito",
     manuscriptFacts: [
-      ["Idioma de referência da edição", "Inglês"],
+      ["Idioma do manuscrito original", "Coreano"],
       ["Gênero", "Reflexões e ensaios pessoais sobre a fé cristã"],
       ["Lançamento", "Data ainda não definida"]
     ],
