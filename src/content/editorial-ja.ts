@@ -14,7 +14,7 @@ export const editorialJa = {
   },
   books: {
     heroTitle: "庭の、その向こうへ",
-    newBookLabel: "新しい絵本 · 好評発売中",
+    newBookLabel: "新しい絵本 · 発売中",
     byline: "Sung Yeon Cho · AMAZING TIGER",
     backCoverAlt: "赤いマントをつけた黒い犬とバーコードが描かれた絵本の裏表紙",
     coverFront: "表紙",
