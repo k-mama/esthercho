@@ -33,7 +33,7 @@ export const editorialJa = {
     manuscriptLink: "朝の食卓の記録を読む",
     manuscriptFactsHeading: "原稿について",
     manuscriptFacts: [
-      ["基準となる言語", "英語"],
+      ["原稿の原語", "韓国語"],
       ["形式", "キリスト教信仰をめぐるエッセイ・黙想録"],
       ["刊行予定", "未定"]
     ],
