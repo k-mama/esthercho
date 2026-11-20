@@ -4,7 +4,6 @@ import { PageCover } from "@/components/page-cover";
 import { HomeHeroVideo } from "@/app/home-hero-video";
 import { ChildhoodHeroCaption } from "@/components/childhood-home-story";
 import { ChildhoodArchiveSections } from "@/components/childhood-archive-sections";
-import { IllustratedAuthorGallery } from "@/components/illustrated-author-gallery";
 import { MannaAuthorVoice } from "@/components/manna-author-voice";
 import "@/app/archive/archive.css";
 import type { TranslationLocale } from "@/config/languages";
@@ -197,7 +196,6 @@ function IntlBooks({locale}:{locale:TranslationLocale}) {
       <p className="intl-wide-copy">{t.bookText}</p>
       <EditionGallery locale={locale}/>
     </div></section>
-    <IllustratedAuthorGallery locale={locale}/>
     <section className="intl-section intl-soft">
       <div className="container">
         <p className="intl-overline">{t.booksTitle}</p>

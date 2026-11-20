@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./book-launch.module.css";
-import { IllustratedAuthorGallery } from "@/components/illustrated-author-gallery";
 
 type Locale = "en" | "ko";
 type Placement = "home" | "books";
@@ -192,8 +191,6 @@ export function BookLaunch({ locale, placement }: { locale: Locale; placement: P
           </figure>
         </div>
       </div>
-
-      {placement === "books" && <IllustratedAuthorGallery locale={locale} />}
 
       {placement === "books" && (
         <div className={`container ${styles.editionCard}`} id="german-edition">
