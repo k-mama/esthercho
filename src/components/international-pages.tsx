@@ -171,6 +171,7 @@ function IntlHome({locale}: {locale:TranslationLocale}) {
       <div className="container intl-scene-grid">
         <div><p className="intl-overline">{t.rooms[[0,2,1,3][i] as 0|1|2|3]}</p>
           <h2>{t.sceneTitles[i]}</h2><p>{t.sceneTexts[i]}</p>
+          {i===3 ? <p className="intl-overline">{e.studio.figureCaption}</p> : null}
           <Link className="intl-more" href={localizedHref(locale,scenePaths[i])}>{t.rooms[[0,2,1,3][i] as 0|1|2|3]} ↗</Link>
         </div>
         <Image src={src} alt={t.sceneAlts[i]} width={950} height={750} sizes="(max-width: 750px) 100vw, 44vw"/>
@@ -445,6 +446,7 @@ function IntlAbout({locale}:{locale:TranslationLocale}) {
             width={960} height={780} sizes="(max-width: 750px) 100vw, 44vw"/>
           {i===0 ? <figcaption>{e.about.universityCaption}</figcaption> : null}
           {i===2 ? <figcaption>{e.about.serviceCaption}</figcaption> : null}
+          {i===3 ? <figcaption>{e.studio.figureCaption}</figcaption> : null}
         </figure>
       </div></section>)}
     <section className="intl-ending"><div className="container">
