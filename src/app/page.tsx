@@ -108,7 +108,7 @@ export default function Home() {
         <div className={`container ${styles.sceneGrid}`}>
           <div className={styles.sceneCopy}>
             <p className={styles.eyebrow}>MORNING TABLE</p>
-            <h2 id="table-title">The table is where ordinary care becomes visible.</h2>
+            <h2 id="table-title">Breakfast and Scripture share the morning.</h2>
             <p>
               Breakfast, Scripture, family meals, and food made for people she loves all
               happen at the same table.
@@ -176,7 +176,7 @@ export default function Home() {
         <div className={`container ${styles.careLayout}`}>
           <div className={styles.sceneCopy}>
             <p className={styles.eyebrow}>STORIES OF CARE</p>
-            <h2 id="care-title">Care became part of the week.</h2>
+            <h2 id="care-title">She made room for other people, too.</h2>
             <p>
               Family, church, service trips, friends, errands, laughter. Making room for
               someone simply became part of ordinary life.
@@ -203,7 +203,7 @@ export default function Home() {
         <div className={`container ${styles.sceneGrid}`}>
           <div className={styles.sceneCopy}>
             <p className={styles.eyebrow}>THE STUDIO</p>
-            <h2 id="studio-title">Her hand stays visible.</h2>
+            <h2 id="studio-title">The first pencil lines are still there.</h2>
             <p>
               A pencil line stays a pencil line. Later work may grow from it, but the
               starting point remains visible.
