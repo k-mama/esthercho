@@ -344,7 +344,7 @@ export const translations = {
       "Esther"
     ],
     "sceneTitles": [
-      "Le petit déjeuner, puis la Bible. Parfois dans l’autre ordre.",
+      "Le petit déjeuner, la Bible ouverte sur la table.",
       "Il suffit parfois d’une photo.",
       "Une place aussi pour les autres.",
       "Le premier trait ne disparaît pas."
