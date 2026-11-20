@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
+import { MannaAuthorVoice } from "@/components/manna-author-voice";
 import { PageCover } from "@/components/page-cover";
 import "./notes.css";
 
@@ -24,21 +24,6 @@ export default function NotesPage() {
         align="right"
         shade="strong"
       />
-
-      <section className="morning-foyer" aria-labelledby="morning-foyer-title">
-        <div className="container morning-foyer-inner">
-          <p className="morning-kicker">AT THE TABLE</p>
-          <div className="morning-foyer-grid">
-            <h2 id="morning-foyer-title">
-              Breakfast, Scripture, and whatever else the morning brings.
-            </h2>
-            <p>
-              Some notes begin with a verse. Others begin with breakfast, a family meal,
-              or something small that happened before the dishes were cleared.
-            </p>
-          </div>
-        </div>
-      </section>
 
       <section className="morning-present" aria-labelledby="morning-present-title">
         <div className="container morning-present-grid">
@@ -65,31 +50,7 @@ export default function NotesPage() {
         </div>
       </section>
 
-      <section className="morning-manuscript" aria-labelledby="morning-manuscript-title">
-        <div className="container morning-manuscript-grid">
-          <div>
-            <p className="morning-kicker">FROM TABLE TO MANUSCRIPT</p>
-            <h2 id="morning-manuscript-title">Some of these mornings are becoming Manna on the Table.</h2>
-          </div>
-
-          <div className="morning-manuscript-copy">
-            <p>
-              The manuscript is growing from the same mornings, verses, meals,
-              questions, and small observations gathered here.
-            </p>
-            <Link href="/books/" className="morning-link">
-              Visit the book project
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      <section className="morning-close" aria-labelledby="morning-close-title">
-        <div className="container morning-close-inner">
-          <p className="morning-kicker">MORE MORNINGS</p>
-          <h2 id="morning-close-title">There will be another breakfast.</h2>
-        </div>
-      </section>
+      <MannaAuthorVoice locale="en" placement="notes" />
     </main>
   );
 }
