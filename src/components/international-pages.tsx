@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { PageCover } from "@/components/page-cover";
@@ -411,8 +412,9 @@ function IntlAbout({locale}:{locale:TranslationLocale}) {
       <a className="intl-more" href="https://www.amazon.com/author/sungyeoncho"
         target="_blank" rel="noopener noreferrer">{localeInterface[locale].authorPage} ↗</a>
     </div></section>
-    <MalaysiaYears locale={locale}/>
-    {chapters.map(([title,body,src],i)=><section className={`intl-section ${i%2?"intl-soft":""}`} key={title}>
+    {chapters.map(([title,body,src],i)=><Fragment key={title}>
+      {i===2 ? <MalaysiaYears locale={locale}/> : null}
+      <section className={`intl-section ${i===2?"intl-about-service-continuation":i%2?"intl-soft":""}`}>
       <div className="container intl-scene-grid">
         <div>
           <h2>{title}</h2>
@@ -433,7 +435,8 @@ function IntlAbout({locale}:{locale:TranslationLocale}) {
           {i===2 ? <figcaption>{e.about.serviceCaption}</figcaption> : null}
           {i===3 ? <figcaption>{e.studio.figureCaption}</figcaption> : null}
         </figure>
-      </div></section>)}
+      </div></section>
+    </Fragment>)}
     <section className="intl-ending"><div className="container">
       <h2>{t.aboutQuestion}</h2>
       <p>{e.about.closing}</p>

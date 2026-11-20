@@ -521,6 +521,12 @@ body:has(.home-video-hero, .page-cover-shell) .site-header-nav-mobile-menu {
 .intl-room-links {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 3rem;margin-top:4rem;}
 .intl-room-links a {padding:1.35rem 0;display:flex;align-items:center;gap:1.4rem;border-top:1px solid #b8c4cb;color:#223d53;text-decoration:none;font-family:var(--font-interface,system-ui);}
 .intl-room-links a span {font-size:.72rem;color:#6a8aa0}.intl-room-links a span:last-child {margin-left:auto}.intl-room-links a:hover strong {text-decoration:underline;}
+/* Keep the two countries distinct in fact but adjacent in the author journey. */
+.intl-section.intl-about-service-continuation {
+  background: #f7f5f0;
+  padding-top: clamp(2rem,4vw,3.75rem);
+}
+.intl-about-service-continuation h2 {font-size:clamp(1.9rem,3.4vw,3.5rem);}
 .intl-scene-grid {display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(2rem,6vw,6rem);align-items:center;}
 .intl-scene-grid>img,.intl-scene-grid figure>img {display:block;width:100%;height:auto;max-height:650px;object-fit:cover;box-shadow:0 25px 65px rgba(24,53,72,.13);}
 .intl-scene-grid figure {margin:0;}

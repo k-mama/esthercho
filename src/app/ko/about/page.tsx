@@ -64,8 +64,6 @@ export default function KoreanAboutPage() {
           </div>
         </header>
 
-        <MalaysiaYears locale="ko" />
-
         <section className="container esther-section esther-education-section">
           <div className="esther-split esther-split-reverse">
             <div className="esther-copy">
@@ -124,7 +122,9 @@ export default function KoreanAboutPage() {
           </div>
         </section>
 
-        <section className="container esther-section esther-service-section">
+        <MalaysiaYears locale="ko" />
+
+        <section className="container esther-section esther-service-section esther-service-continuation">
           <div className="esther-service-grid">
             <figure className="esther-figure esther-service-figure">
               <Image
@@ -139,13 +139,13 @@ export default function KoreanAboutPage() {
             </figure>
 
             <div className="esther-copy">
-              <p className="esther-eyebrow">삶으로 이어지는 믿음</p>
+              <p className="esther-eyebrow">방글라데시</p>
 
-              <h2>믿음은 생활 밖에 있지 않다.</h2>
+              <h2>방글라데시에서 이어진 봉사</h2>
 
               <p>
-                조성연은 북한 이탈 주민을 멘토링으로 돕고, 방글라데시에서
-                선교와 봉사 활동에 참여해 왔다.
+                조성연은 방글라데시에서 선교와 봉사활동에 참여했습니다.
+                북한 이탈 주민을 위한 멘토링에도 참여해 왔습니다.
               </p>
             </div>
           </div>

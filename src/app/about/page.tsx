@@ -66,8 +66,6 @@ export default function AboutPage() {
           </div>
         </header>
 
-        <MalaysiaYears locale="en" />
-
         <section className="container esther-section esther-education-section">
           <div className="esther-split esther-split-reverse">
             <div className="esther-copy">
@@ -130,7 +128,9 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <section className="container esther-section esther-service-section">
+        <MalaysiaYears locale="en" />
+
+        <section className="container esther-section esther-service-section esther-service-continuation">
           <div className="esther-service-grid">
             <figure className="esther-figure esther-service-figure">
               <Image
@@ -145,14 +145,13 @@ export default function AboutPage() {
             </figure>
 
             <div className="esther-copy">
-              <p className="esther-eyebrow">FAITH IN PRACTICE</p>
+              <p className="esther-eyebrow">BANGLADESH</p>
 
-              <h2>Faith in ordinary practice.</h2>
+              <h2>Service in Bangladesh.</h2>
 
               <p>
-                Her faith has also taken practical form through mentoring North
-                Korean refugees and participating in mission and volunteer work
-                in Bangladesh.
+                She participated in mission and volunteer work in Bangladesh.
+                She has also mentored North Korean refugees.
               </p>
             </div>
           </div>

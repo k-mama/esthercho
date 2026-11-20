@@ -225,6 +225,18 @@
   background: var(--esther-ivory);
 }
 
+/* The Bangladesh account belongs beside the Malaysia archive, not as a
+   distant standalone essay with oversized inter-section whitespace. */
+.esther-service-continuation {
+  background: #f7f5f0;
+  padding-top: clamp(2rem, 4vw, 3.75rem);
+  padding-bottom: clamp(4rem, 8vw, 7rem);
+}
+.esther-service-continuation .esther-copy h2 {
+  font-size: clamp(2rem, 3.7vw, 3.75rem);
+  line-height: 1.16;
+}
+
 .esther-timeline {
   display: grid;
   gap: 0;
