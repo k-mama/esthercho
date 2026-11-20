@@ -232,8 +232,7 @@ export function SiteHeader() {
                     }}
                   >
                     <span>{languageNames[language]}</span>
-                    <small>{language.toUpperCase()}</small>
-                    {language === locale ? <span aria-hidden="true">✓</span> : null}
+                    {language === locale ? <span className="site-language-active-dot" aria-hidden="true" /> : null}
                   </Link>
                 </li>
               ))}
