@@ -5,6 +5,7 @@ import { HomeHeroVideo } from "@/app/home-hero-video";
 import { ChildhoodHeroCaption } from "@/components/childhood-home-story";
 import { ChildhoodArchiveSections } from "@/components/childhood-archive-sections";
 import { MannaAuthorVoice } from "@/components/manna-author-voice";
+import { MalaysiaYears } from "@/components/malaysia-years";
 import "@/app/archive/archive.css";
 import type { TranslationLocale } from "@/config/languages";
 import { localizedHref, localeInterface } from "@/config/languages";
@@ -410,6 +411,7 @@ function IntlAbout({locale}:{locale:TranslationLocale}) {
       <a className="intl-more" href="https://www.amazon.com/author/sungyeoncho"
         target="_blank" rel="noopener noreferrer">{localeInterface[locale].authorPage} ↗</a>
     </div></section>
+    <MalaysiaYears locale={locale}/>
     {chapters.map(([title,body,src],i)=><section className={`intl-section ${i%2?"intl-soft":""}`} key={title}>
       <div className="container intl-scene-grid">
         <div>

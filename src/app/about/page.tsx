@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { PageCover } from "@/components/page-cover";
 import { authorProfile } from "@/content/author-profile";
+import { MalaysiaYears } from "@/components/malaysia-years";
 import "./about.css";
 
 export const metadata: Metadata = {
@@ -64,6 +65,8 @@ export default function AboutPage() {
             </a>
           </div>
         </header>
+
+        <MalaysiaYears locale="en" />
 
         <section className="container esther-section esther-education-section">
           <div className="esther-split esther-split-reverse">
