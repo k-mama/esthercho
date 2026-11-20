@@ -48,7 +48,7 @@ export function KoreanStoryDetail({which}:{which:0|1}) {
     </section>
     <section className="container story-detail-grid">
       <article className="story-detail-copy">
-        {t.paragraphs.map((paragraph,i)=>which===0&&i===2?<blockquote key={i}>{paragraph}</blockquote>:<p key={i} className={i===0?"story-detail-opening":undefined}>{paragraph}</p>)}
+        {(which===0?t.paragraphs.slice(0,3):t.paragraphs).map((paragraph,i)=>which===0&&i===2?<blockquote key={i}>{paragraph}</blockquote>:<p key={i} className={i===0?"story-detail-opening":undefined}>{paragraph}</p>)}
       </article>
       <figure className="story-detail-figure">
         <Image src="/media/esther/childhood-garden.jpg" alt="어린 시절 정원에서 찍은 조성연의 기록 사진" width={1800} height={1350} sizes="(max-width: 899px) 100vw, 42vw"/>
