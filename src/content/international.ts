@@ -105,10 +105,10 @@ export const translations = {
       "Zu Hause war ich das älteste Kind.",
       "Mein Vater war der älteste Sohn seiner Familie, und ich war seine erste Tochter, die erste Enkelin. Danach kamen im Abstand von einem Jahr meine beiden jüngeren Brüder.",
       "Meine Mutter hatte drei sehr kleine Kinder. Ihre eigenen Eltern waren früh gestorben, deshalb konnte sie sie nicht um Hilfe bitten.",
-      "Oft blieb ich bei einem Onkel, der in der Nähe wohnte. Sein großes Hanok, ein traditionelles koreanisches Wohnhaus, hatte einen quadratischen Innenhof und ein Blumenbeet. Dort lebten meine Großmutter, meine Urgroßmutter und meine Onkel. Einer von ihnen ging noch zur Schule. Ich erinnere mich an zwei Nebengebäude und an die Uhr im Schlafzimmer: tick, tack, tick, tack.",
+      "Oft blieb ich bei einem Onkel, der in der Nähe wohnte. Sein großes Hanok, ein traditionelles koreanisches Wohnhaus, hatte einen quadratischen Innenhof und ein Blumenbeet. Dort lebten meine Großmutter, meine Urgroßmutter und meine Onkel. Einer von ihnen war damals noch in der Oberstufe. Ich erinnere mich an zwei Nebengebäude und an die Uhr im Schlafzimmer: tick, tack, tick, tack.",
       "Ich war stiller als meine Brüder und ließ mich deshalb wohl leichter für ein paar Tage unterbringen. Nachts vermisste ich meine Mutter und weinte manchmal. Doch dort wurde ich geliebt.",
       "Ich sah meiner Großmutter am Schminktisch zu und ahmte sie nach. Bewunderung kann offenbar ziemlich schnell zu einer Schönheitsroutine werden.",
-      "Wenn meine Mutter weitere Hilfe brauchte, blieb ich auch bei einer meiner Tanten. Die Adresse wechselte, meine Stellung im Haus nicht: Ich wurde wieder zur jüngsten Tochter.",
+      "Wenn meine Mutter noch mehr Hilfe brauchte, wohnte ich auch bei den Schwestern meines Vaters. Die Adresse wechselte, meine Rolle nicht: Auch dort war ich wieder die Jüngste.",
       "Heute erinnere ich mich daran, wie sehr ich meine Mutter vermisste. Aber auch daran, wie viele Menschen Platz für mich geschaffen haben."
     ],
     "life": [
@@ -273,8 +273,8 @@ export const translations = {
       "A menudo me quedaba en casa de un tío que vivía cerca. Era un hanok, una casa tradicional coreana con patio cuadrado y un pequeño jardín de flores. Allí vivían mi abuela, mi bisabuela y mis tíos; uno de ellos todavía iba a la secundaria. Recuerdo dos edificios independientes y el tic, tac, tic, tac de un reloj en el dormitorio.",
       "Era más tranquila que mis hermanos, así que probablemente resultaba más fácil enviarme unos días. Por las noches extrañaba a mi madre y a veces lloraba, pero allí también me querían.",
       "Veía a mi abuela arreglarse frente al espejo e imitaba su maquillaje. Al parecer, la admiración puede convertirse enseguida en una rutina de belleza.",
-      "Cuando mi madre necesitaba más ayuda, me quedaba con una de mis tías, mayor o más joven. Cambiaba la dirección, pero no mi lugar: allí también era la hija pequeña.",
-      "Hoy recuerdo cuánto echaba de menos a mi madre. También recuerdo cuántas personas me hicieron un lugar."
+      "Cuando mi madre necesitaba más ayuda, también me quedaba en casa de las hermanas de mi padre. Cambiaba la dirección, pero no mi lugar: allí también era la más pequeña.",
+      "Hoy recuerdo cuánto extrañaba a mi madre. También recuerdo cuántas personas me hicieron un lugar."
     ],
     "life": [
       "Infancia",
@@ -438,7 +438,7 @@ export const translations = {
       "Je restais souvent chez un oncle qui habitait près de chez nous. Sa grande maison traditionnelle coréenne, un hanok, possédait une cour carrée et un parterre de fleurs. Ma grand-mère, mon arrière-grand-mère et mes oncles y vivaient ; l’un d’eux était encore lycéen. Je me souviens de deux dépendances et d’une horloge dans une chambre : tic-tac, tic-tac.",
       "J’étais plus calme que mes frères ; il était sans doute plus facile de me confier quelques jours. La nuit, ma mère me manquait et il m’arrivait de pleurer. Mais j’étais aimée dans cette maison.",
       "Je regardais ma grand-mère se maquiller à sa coiffeuse et je l’imitais. L’admiration prend parfois très vite la forme d’un rituel de beauté.",
-      "Lorsque ma mère avait encore besoin d’aide, j’allais chez une tante. L’adresse changeait, pas ma place : là aussi, je devenais la petite dernière.",
+      "Quand ma mère avait encore besoin d’aide, j’allais aussi chez les sœurs de mon père. L’adresse changeait, pas ma place : là aussi, j’étais la petite dernière.",
       "Je me souviens aujourd’hui de l’absence de ma mère. Je me souviens aussi de tous ceux qui m’ont fait une place."
     ],
     "life": [
@@ -603,7 +603,7 @@ export const translations = {
       "Spesso stavo da uno zio che abitava vicino a noi. La sua grande casa tradizionale coreana, un hanok, aveva un cortile quadrato e un’aiuola fiorita. C’erano mia nonna, la bisnonna e gli zii; uno di loro frequentava ancora le superiori. Ricordo due costruzioni separate e un orologio in camera: tic tac, tic tac.",
       "Ero più tranquilla dei miei fratelli, quindi forse ero la più facile da mandare via per qualche giorno. Di notte sentivo la mancanza di mia madre e qualche volta piangevo. Ma lì ero amata.",
       "Guardavo mia nonna al tavolo da trucco e cercavo di imitarla. A quanto pare l’ammirazione può diventare presto una routine di bellezza.",
-      "Quando mamma aveva bisogno di altro aiuto, restavo da una zia. Cambiava l’indirizzo, non il mio posto: anche lì diventavo la figlia più piccola.",
+      "Quando mamma aveva bisogno di una mano, andavo anche dalle sorelle di mio padre. Cambiava la casa, non il mio posto: anche lì ero la più piccola.",
       "Oggi ricordo quanto mi mancasse mia madre. Ricordo anche quante persone mi fecero spazio."
     ],
     "life": [
@@ -768,7 +768,7 @@ export const translations = {
       "私はよく、近くに住む叔父の家に預けられました。四角い中庭と花壇のある、大きな韓国の伝統家屋、韓屋（ハノク）でした。そこには祖母と曾祖母、叔父たちが暮らしていて、そのうち一人はまだ高校生でした。離れが二棟あったことと、寝室の時計がカチ、カチと鳴っていたことを覚えています。",
       "弟たちより静かだった私は、数日間預けやすい子だったのでしょう。夜には母が恋しくて泣くこともありました。でも、その家でも大切にしてもらいました。",
       "祖母が鏡台でお化粧をするのを見て、私もまねをしました。憧れは、驚くほど早く美容の習慣になるものです。",
-      "母がさらに助けを必要とすると、伯母や叔母の家にも行きました。家が変わっても、私の立場は同じ。どこでも末娘になりました。",
+      "母がさらに助けを必要とすると、父方の伯母や叔母の家にも行きました。家が変わっても、私の立場は同じ。どこでも末っ子になりました。",
       "今思い返すと、母に会いたかった気持ちを覚えています。同時に、私のために居場所を作ってくれた人が何人もいたことも覚えています。"
     ],
     "life": [
@@ -933,7 +933,7 @@ export const translations = {
       "Muitas vezes eu ficava na casa de um tio que morava perto. Era um hanok, uma casa tradicional coreana, grande, com um pátio quadrado e um canteiro de flores. Minha avó, minha bisavó e meus tios moravam lá. Um deles ainda estava no ensino médio. Lembro de dois anexos e do relógio no quarto fazendo tique-taque, tique-taque.",
       "Eu era mais quietinha que meus irmãos. Imagino que fosse mais fácil me deixar uns dias na casa de alguém. À noite, sentia falta da minha mãe e às vezes chorava. Mas ali também me sentia querida.",
       "Eu gostava de observar minha avó se arrumando diante da penteadeira e tentava imitar a maquiagem dela. Pelo jeito, admiração pode virar rotina de beleza num instante.",
-      "Quando minha mãe precisava de mais ajuda, eu também ficava na casa de uma das minhas tias. O endereço mudava, mas meu lugar não: eu virava a caçula daquela casa.",
+      "Quando minha mãe precisava de mais ajuda, eu também ficava na casa das irmãs do meu pai. Mudava de endereço, mas não de lugar na família: naquela casa, eu também era a caçula.",
       "Hoje me lembro da saudade que sentia da minha mãe. E também de quantas pessoas abriram um lugar para mim."
     ],
     "life": [
@@ -1098,7 +1098,7 @@ export const translations = {
       "我常被送到附近一位叔叔家。那是一栋很大的韩屋——韩国传统住宅，院子方方正正，还有花坛。祖母、曾祖母和叔叔们都住在那里，其中一位叔叔当时还在读高中。我还记得两座独立的小屋，以及卧室里时钟滴答、滴答的声音。",
       "我比两个弟弟安静，也许更适合暂时住到亲戚家。晚上我会想妈妈，有时也会哭。不过，在那里我同样受到疼爱。",
       "我喜欢看祖母坐在梳妆台前打扮，还会学她化妆。看来，小孩子的崇拜很容易变成自己的美容练习。",
-      "母亲忙不过来时，我也会去姨妈家住。虽然换了地方，我的身份却没变：到了哪家，我都是那个最小的孩子。",
+      "母亲忙不过来时，我也会去姑姑们家住。换了地方，我的身份却没变：到了哪家，我都是最小的孩子。",
       "如今想起那些日子，我仍记得想妈妈的心情，也记得有那么多人愿意给我留一个位置。"
     ],
     "life": [
@@ -1263,7 +1263,7 @@ export const translations = {
       "我常被送去附近一位叔叔家。那是一棟很大的韓屋，也就是韓國的傳統住宅，方方的庭院裡還有花圃。祖母、曾祖母和叔叔們都住在那裡，其中一位叔叔當時還在念高中。我記得兩棟獨立的小屋，還有臥室裡時鐘滴答、滴答的聲音。",
       "我比弟弟們安靜，也許比較適合暫住在親戚家。夜裡我會想媽媽，有時也會哭。但在那裡，我同樣被疼愛著。",
       "我喜歡看祖母坐在梳妝台前打扮，還會學她化妝。看來，小孩子的崇拜很快就能變成自己的美容練習。",
-      "母親忙不過來時，我也會到阿姨家住。地方換了，我的位置卻沒變：到了哪一家，我都是最小的孩子。",
+      "母親忙不過來時，我也會到姑姑們家住。換了地方，我的位置卻沒變：到了哪一家，我都是最小的孩子。",
       "現在回想起來，我記得想媽媽的心情，也記得有那麼多人願意為我留一個位置。"
     ],
     "life": [
