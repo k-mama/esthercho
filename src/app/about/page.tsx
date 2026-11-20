@@ -47,6 +47,11 @@ export default function AboutPage() {
               She writes and draws from what she has lived and remembered:
               Christian faith, family, art, meals, and life at home.
             </p>
+            <p className="esther-intro">
+              One morning, the book of Titus brought Cinderella to mind.
+              She began to see the gospel in the fairy tales she had loved as a child.
+              Before long, she wanted to read them all over again.
+            </p>
 
             <a
               className="esther-author-link"
@@ -178,6 +183,7 @@ export default function AboutPage() {
           </p>
 
           <p>She keeps writing and drawing.</p>
+          <p>What will I discover about God today?</p>
         </footer>
       </article>
     </main>
