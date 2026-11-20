@@ -50,8 +50,8 @@ export const editorialZhTw = {
     "manuscriptFactsHeading": "關於這部手稿",
     "manuscriptFacts": [
       [
-        "本版參考語言",
-        "英語"
+        "原稿原文語言",
+        "韓語"
       ],
       [
         "類型",
