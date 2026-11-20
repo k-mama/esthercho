@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
+import { MannaAuthorVoice } from "@/components/manna-author-voice";
 import { PageCover } from "@/components/page-cover";
 import "../../notes/notes.css";
 
@@ -24,22 +24,6 @@ export default function KoreanNotesPage() {
         align="right"
         shade="strong"
       />
-
-      <section className="morning-foyer" aria-labelledby="morning-foyer-title">
-        <div className="container morning-foyer-inner">
-          <p className="morning-kicker">식탁에 앉으면</p>
-          <div className="morning-foyer-grid">
-            <h2 id="morning-foyer-title">
-              <span>아침밥과 말씀,</span>
-              <span>그리고 그날 아침에 생긴 일들.</span>
-            </h2>
-            <p>
-              어떤 기록은 말씀 한 구절에서 시작하고, 어떤 날은 아침밥이나 가족 식사,
-              설거지하기 전에 있었던 작은 일에서 시작합니다.
-            </p>
-          </div>
-        </div>
-      </section>
 
       <section className="morning-present" aria-labelledby="morning-present-title">
         <div className="container morning-present-grid">
@@ -69,37 +53,7 @@ export default function KoreanNotesPage() {
         </div>
       </section>
 
-      <section className="morning-manuscript" aria-labelledby="morning-manuscript-title">
-        <div className="container morning-manuscript-grid">
-          <div>
-            <p className="morning-kicker">식탁에서 원고로</p>
-            <h2 id="morning-manuscript-title">
-              <span>이 아침들 가운데 일부가</span>
-              <span>Manna on the Table이 되어가고 있습니다.</span>
-            </h2>
-          </div>
-
-          <div className="morning-manuscript-copy">
-            <p>
-              이곳에 쌓인 아침과 말씀, 식사와 질문, 작은 생각들이 같은 결로
-              원고 안에 이어지고 있습니다.
-            </p>
-            <Link href="/ko/books/" className="morning-link">
-              책 프로젝트 보기
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      <section className="morning-close" aria-labelledby="morning-close-title">
-        <div className="container morning-close-inner">
-          <p className="morning-kicker">다음 아침</p>
-          <h2 id="morning-close-title">
-            <span>내일도</span>
-            <span>아침밥은 차려집니다.</span>
-          </h2>
-        </div>
-      </section>
+      <MannaAuthorVoice locale="ko" placement="notes" />
     </main>
   );
 }
