@@ -115,8 +115,8 @@ export default function KoreanHome() {
           <div className={styles.sceneCopy}>
             <p className={styles.eyebrow}>아침 식탁</p>
             <h2 id="table-title" className={styles.koDisplay}>
-              <span>평범한 돌봄이</span>
-              <span>가장 잘 보이는 자리.</span>
+              <span>아침밥을 차리고</span>
+              <span>성경을 펼칩니다.</span>
             </h2>
             <p>
               아침밥과 말씀, 가족에게 차린 식사와 사랑하는 사람에게 내어준 한 끼가
@@ -189,8 +189,8 @@ export default function KoreanHome() {
           <div className={styles.sceneCopy}>
             <p className={styles.eyebrow}>돌봄의 이야기</p>
             <h2 id="care-title" className={styles.koDisplay}>
-              <span>돌봄은 그냥</span>
-              <span>한 주의 일부였습니다.</span>
+              <span>사람들을 만나고,</span>
+              <span>함께 웃고 도우며 살았습니다.</span>
             </h2>
             <p>
               가족과 교회, 봉사여행과 친구들, 볼일과 웃음. 누군가에게 자리를
@@ -219,8 +219,8 @@ export default function KoreanHome() {
           <div className={styles.sceneCopy}>
             <p className={styles.eyebrow}>작업실</p>
             <h2 id="studio-title" className={styles.koDisplay}>
-              <span>손으로 그은 선이</span>
-              <span>그대로 남는 방.</span>
+              <span>처음 그린 선은</span>
+              <span>그대로 남겨둡니다.</span>
             </h2>
             <p>
               연필선은 연필선으로 남습니다. 그 그림에서 새로운 작업이 시작되더라도
