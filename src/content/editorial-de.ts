@@ -33,7 +33,7 @@ export const editorialDe = {
     manuscriptLink: "Am Frühstückstisch weiterlesen",
     manuscriptFactsHeading: "Zum Manuskript",
     manuscriptFacts: [
-      ["Ausgangssprache der Ausgabe", "Englisch"],
+      ["Sprache des Originalmanuskripts", "Koreanisch"],
       ["Form", "Persönliche christliche Meditationen und Essays"],
       ["Erscheinungstermin", "Steht noch nicht fest"]
     ],
