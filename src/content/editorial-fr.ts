@@ -33,7 +33,7 @@ export const editorialFr = {
     manuscriptLink: "Lire du côté de la table du matin",
     manuscriptFactsHeading: "À propos du manuscrit",
     manuscriptFacts: [
-      ["Langue de référence de l’édition", "Anglais"],
+      ["Langue du manuscrit original", "Coréen"],
       ["Genre", "Méditations et essais personnels sur la foi chrétienne"],
       ["Publication", "Date encore à confirmer"]
     ],
