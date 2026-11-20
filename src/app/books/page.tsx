@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { BookLaunch } from "@/components/book-launch";
 import { MannaMaking } from "@/components/manna-making";
+import { MannaAuthorVoice } from "@/components/manna-author-voice";
 import { PageCover } from "@/components/page-cover";
 import { featuredBook } from "@/content/books";
 import styles from "./books.module.css";
@@ -36,7 +37,7 @@ export default function BooksPage() {
 
       <BookLaunch locale="en" placement="books" />
 
-      <section className={styles.projectSection} aria-labelledby="featured-book-title">
+      <section id="manna-on-the-table" className={styles.projectSection} aria-labelledby="featured-book-title">
         <div className={`container ${styles.projectHeader}`}>
           <p className={styles.eyebrow}>{featuredBook.eyebrow.en}</p>
           <div className={styles.projectTitleBlock}>
@@ -58,6 +59,7 @@ export default function BooksPage() {
         </div>
       </section>
 
+      <MannaAuthorVoice locale="en" placement="books" />
       <MannaMaking locale="en" />
 
       <section className={styles.detailsSection} aria-labelledby="project-notes-title">
