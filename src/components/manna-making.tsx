@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import styles from "./manna-making.module.css";
 
 type Locale = "en" | "ko";
@@ -148,20 +147,6 @@ export function MannaMaking({ locale }: { locale: Locale }) {
           <PhotoGallery sources={coverStudies} captions={t.coverLabels} kind="cover" locale={locale} />
         </div>
 
-        <div className={styles.closing}>
-          <div className={styles.memory}>
-            <p className={styles.eyebrow}>{t.homeEyebrow}</p>
-            <h3>{t.homeHeading}</h3>
-            <p>{t.homeText}</p>
-            <Link className={styles.link} href={locale === "ko" ? "/ko/" : "/"}>
-              {t.homepageLink} <span aria-hidden="true">↗</span>
-            </Link>
-          </div>
-          <div className={styles.manna}>
-            <h3>{t.mannaHeading}</h3>
-            {t.mannaText.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
-          </div>
-        </div>
       </div>
     </section>
   );
