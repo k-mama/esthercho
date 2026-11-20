@@ -14,10 +14,10 @@ export const translations = {
       "Esther"
     ],
     "sceneTitles": [
-      "Am Tisch wird Fürsorge im Alltag sichtbar.",
-      "Manchmal kommt zuerst das Foto zurück.",
-      "Fürsorge wurde Teil des Alltags.",
-      "Ihre eigene Handschrift bleibt sichtbar."
+      "Am Morgen stehen Frühstück und Bibel auf dem Tisch.",
+      "Manchmal erinnert zuerst ein Foto an damals.",
+      "Auch für andere war Platz.",
+      "Die Bleistiftstriche bleiben erkennbar."
     ],
     "sceneTexts": [
       "Frühstück, Bibellektüre, Familienessen und Mahlzeiten für Menschen, die sie liebt, gehören zu diesem Tisch.",
@@ -60,7 +60,7 @@ export const translations = {
     "notesLead": "Gedanken zur Bibel und kleine Beobachtungen von Esthers Frühstückstisch.",
     "notesHeading": "Frühstück, Schrift und alles, was der Morgen mitbringt.",
     "notesText": "Manche Notizen beginnen mit einem Bibelvers. Andere mit dem Frühstück, einem Familienessen oder einer Kleinigkeit, die vor dem Abräumen geschah.",
-    "notesSecond": "Der Tag hat längst begonnen, wenn die Gedanken ihren Weg aufs Papier finden.",
+    "notesSecond": "Wenn Esther zum Schreiben kommt, ist der Morgen längst im Gange.",
     "notesSecondText": "Essen zubereiten, jemanden anrufen, einen Vers im Kopf behalten, über sich selbst schmunzeln: Genau dort beginnen die Aufzeichnungen.",
     "notesThird": "Aus diesen Morgenstunden wächst Manna on the Table.",
     "notesEnding": "Morgen gibt es wieder Frühstück.",
@@ -179,10 +179,10 @@ export const translations = {
       "Esther"
     ],
     "sceneTitles": [
-      "En la mesa se hacen visibles los cuidados cotidianos.",
-      "A veces, primero regresa la fotografía.",
-      "Cuidar de los demás pasó a ser parte de la semana.",
-      "La huella de su mano permanece."
+      "Todo empieza con el desayuno y la Biblia abierta.",
+      "A veces, lo primero que vuelve es una foto.",
+      "Entre familia y amigos, también había tiempo para ayudar.",
+      "El primer dibujo sigue ahí."
     ],
     "sceneTexts": [
       "Los desayunos, la Biblia, las comidas familiares y los platos preparados para quienes ama comparten la misma mesa.",
@@ -225,7 +225,7 @@ export const translations = {
     "notesLead": "Reflexiones y apuntes desde la mesa del desayuno de Esther.",
     "notesHeading": "El desayuno, la Escritura y todo lo que trae la mañana.",
     "notesText": "Algunas notas empiezan con un versículo. Otras nacen de un desayuno, una comida familiar o algo pequeño que sucedió antes de retirar los platos.",
-    "notesSecond": "El día ya está en marcha cuando las palabras llegan al papel.",
+    "notesSecond": "Cuando por fin se sienta a escribir, el día ya está en marcha.",
     "notesSecondText": "Hay comida que preparar, alguien a quien llamar, un versículo que permanece y, alguna vez, un pensamiento que merece una sonrisa.",
     "notesThird": "De estas mañanas nace Manna on the Table.",
     "notesEnding": "Mañana habrá otro desayuno.",
@@ -344,10 +344,10 @@ export const translations = {
       "Esther"
     ],
     "sceneTitles": [
-      "À table, l’attention aux autres devient visible.",
-      "Parfois, la photographie revient d’abord.",
-      "Prendre soin des autres est entré dans le quotidien.",
-      "La main de l’artiste reste présente."
+      "Le petit déjeuner, puis la Bible. Parfois dans l’autre ordre.",
+      "Il suffit parfois d’une photo.",
+      "Une place aussi pour les autres.",
+      "Le premier trait ne disparaît pas."
     ],
     "sceneTexts": [
       "Le petit déjeuner, les Écritures, les repas en famille et les plats préparés pour ceux qu’elle aime se retrouvent à la même table.",
@@ -390,7 +390,7 @@ export const translations = {
     "notesLead": "Méditations et notes partagées autour du petit-déjeuner chez Esther.",
     "notesHeading": "Le petit déjeuner, les Écritures et ce que le matin apporte.",
     "notesText": "Certaines notes commencent par un verset, d’autres par un repas en famille ou par un détail aperçu avant de débarrasser la table.",
-    "notesSecond": "La journée est déjà en marche quand l’écriture la rattrape.",
+    "notesSecond": "Quand elle se met à écrire, la matinée a déjà commencé.",
     "notesSecondText": "Un repas à préparer, un appel à passer, un verset en tête, une pensée dont elle peut sourire : les notes commencent là.",
     "notesThird": "Ces matins deviennent peu à peu Manna on the Table.",
     "notesEnding": "Demain, il y aura un autre petit déjeuner.",
@@ -509,10 +509,10 @@ export const translations = {
       "Esther"
     ],
     "sceneTitles": [
-      "A tavola, la cura quotidiana diventa visibile.",
-      "A volte torna prima la fotografia.",
-      "Prendersi cura degli altri è diventato parte della settimana.",
-      "La sua mano resta riconoscibile."
+      "La mattina comincia dalla tavola.",
+      "A volte basta una fotografia.",
+      "C’è stato spazio anche per gli altri.",
+      "I segni della matita restano."
     ],
     "sceneTexts": [
       "Colazioni, Scrittura, pasti in famiglia e cibo preparato per le persone amate condividono la stessa tavola.",
@@ -555,7 +555,7 @@ export const translations = {
     "notesLead": "Riflessioni e appunti nati intorno alla tavola della colazione.",
     "notesHeading": "Colazione, Scrittura e tutto ciò che porta il mattino.",
     "notesText": "Alcuni appunti iniziano con un versetto. Altri con la colazione, un pasto in famiglia o una piccola cosa accaduta prima di sparecchiare.",
-    "notesSecond": "La giornata è già cominciata quando le parole riescono a raggiungerla.",
+    "notesSecond": "Quando finalmente si mette a scrivere, la giornata è già cominciata.",
     "notesSecondText": "C’è cibo da preparare, qualcuno da chiamare, un versetto rimasto in mente e magari un pensiero abbastanza buffo da annotare.",
     "notesThird": "Da queste mattine nasce Manna on the Table.",
     "notesEnding": "Domani ci sarà un’altra colazione.",
@@ -674,10 +674,10 @@ export const translations = {
       "エスター"
     ],
     "sceneTitles": [
-      "食卓には、日々の思いやりが見えてきます。",
-      "写真が先に戻ってくることがあります。",
-      "人を思いやることが、暮らしの一部になりました。",
-      "手で描いた線が、今も残っています。"
+      "朝ごはんを作ることも、聖書を開くことも。",
+      "一枚の写真が、忘れていた話を連れてきます。",
+      "家族も友人も、助けが必要な人も。",
+      "鉛筆で描いた線は、今も残っています。"
     ],
     "sceneTexts": [
       "朝食、聖書、家族との食事、大切な人のために作る料理。そのすべてが同じ食卓にあります。",
@@ -720,7 +720,7 @@ export const translations = {
     "notesLead": "エスターの朝の食卓から生まれた、聖書の言葉と日々の記録。",
     "notesHeading": "朝ごはん、聖書、そして朝が運んでくるさまざまなこと。",
     "notesText": "聖書の一節から始まる日もあれば、朝食や家族の食事、片づける前の小さな出来事から始まる日もあります。",
-    "notesSecond": "言葉にするより先に、一日はもう動き始めています。",
+    "notesSecond": "書き留める頃には、朝はもう始まっています。",
     "notesSecondText": "食事の支度、電話、心に残った聖句、思わず笑ってしまうような考え。そこから記録が始まります。",
     "notesThird": "こうした朝が『Manna on the Table』へとつながっています。",
     "notesEnding": "明日も、また朝ごはんがあります。",
@@ -839,10 +839,10 @@ export const translations = {
       "Esther"
     ],
     "sceneTitles": [
-      "À mesa, o cuidado aparece nas coisas mais simples.",
+      "Café da manhã na mesa. A Bíblia logo ali.",
       "Às vezes, a foto vem antes da lembrança.",
       "Cuidar dos outros foi entrando na rotina.",
-      "O traço feito à mão continua ali."
+      "O primeiro traço continua lá."
     ],
     "sceneTexts": [
       "O café da manhã, a leitura da Bíblia, as refeições em família e a comida preparada para quem ela ama dividem espaço na mesma mesa.",
@@ -885,7 +885,7 @@ export const translations = {
     "notesLead": "Reflexões sobre a Bíblia e pequenas anotações feitas à mesa do café da manhã.",
     "notesHeading": "O café da manhã, a Bíblia e tudo o que a manhã traz.",
     "notesText": "Há anotações que começam com um versículo. Outras nascem de uma refeição em família ou de algo pequeno que aconteceu antes de tirar os pratos da mesa.",
-    "notesSecond": "Quando as palavras chegam ao papel, o dia já está acontecendo.",
+    "notesSecond": "Quando Esther se senta para escrever, a manhã já começou faz tempo.",
     "notesSecondText": "Tem comida para preparar, alguém para telefonar, um versículo que não sai da cabeça e, de vez em quando, uma ideia que faz Esther rir de si mesma. É aí que as anotações começam.",
     "notesThird": "É dessas manhãs que nasce Manna on the Table.",
     "notesEnding": "Amanhã tem café da manhã de novo.",
@@ -1004,10 +1004,10 @@ export const translations = {
       "Esther"
     ],
     "sceneTitles": [
-      "一顿早餐里，也藏着细细的关怀。",
-      "有时照片先出现，回忆才慢慢跟上。",
-      "关心别人，渐渐成了生活的一部分。",
-      "手绘留下的痕迹，还在这里。"
+      "早餐端上桌，圣经也在手边。",
+      "一张照片，把往事带了回来。",
+      "给别人留一个位置，也是她的日常。",
+      "最初的铅笔线条，还留在画里。"
     ],
     "sceneTexts": [
       "早餐、读经、与家人一起吃饭，为所爱的人做一顿饭，都是这张餐桌上的日常。",
@@ -1050,7 +1050,7 @@ export const translations = {
     "notesLead": "从 Esther 的早餐桌边写下的读经感想和生活小记。",
     "notesHeading": "早餐、圣经，还有早晨发生的那些事。",
     "notesText": "有些笔记从一节经文开始，有些来自家人的一顿饭，或收拾餐桌前发生的一件小事。",
-    "notesSecond": "等坐下来写字，一天早就开始了。",
+    "notesSecond": "等她坐下来动笔，这一天其实早就开始了。",
     "notesSecondText": "早餐要做，电话要打，有一节经文总在心里打转；有时想起自己的反应，Esther 还会忍不住笑。故事就是这样写下来的。",
     "notesThird": "《Manna on the Table》就在这样的早晨里一点点成形。",
     "notesEnding": "明天早晨，还是会回到这张桌子。",
@@ -1169,10 +1169,10 @@ export const translations = {
       "Esther"
     ],
     "sceneTitles": [
-      "一頓早餐裡，也藏著細細的關心。",
-      "有時照片先出現，回憶才慢慢跟上。",
-      "照顧他人，漸漸成了生活的一部分。",
-      "手繪留下的線條，一直都在。"
+      "早餐端上桌，聖經也在手邊。",
+      "一張照片，把往事帶了回來。",
+      "為別人留一個位置，也是她的日常。",
+      "最初的鉛筆線條，還留在畫裡。"
     ],
     "sceneTexts": [
       "早餐、讀經、與家人一起吃飯，為心愛的人準備一頓飯，都在這張餐桌上發生。",
@@ -1215,7 +1215,7 @@ export const translations = {
     "notesLead": "在 Esther 的早餐桌邊寫下的讀經感想與生活札記。",
     "notesHeading": "早餐、聖經，還有早晨裡發生的那些事。",
     "notesText": "有些筆記從一節經文開始，有些來自家人的一頓飯，或是收拾餐桌前發生的一件小事。",
-    "notesSecond": "等坐下來寫字，一天早就開始了。",
+    "notesSecond": "等她坐下來動筆，這一天其實早就開始了。",
     "notesSecondText": "早餐要準備，電話要打，還有一節經文總在心裡打轉；有時想起自己的反應，Esther 也忍不住笑出來。於是就這樣寫下來了。",
     "notesThird": "《Manna on the Table》就在這樣的早晨裡，一點一滴成形。",
     "notesEnding": "明天早上，還是會回到這張桌子。",
