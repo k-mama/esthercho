@@ -160,7 +160,9 @@ export const translations = {
       "notes": "Avocadotoast, Ei, Trauben und Eiskaffee auf Esthers Frühstückstisch",
       "archive": "Esther Cho als Kind lächelnd in einem Garten"
     },
-    "aboutSectionLabel": "ÜBER ESTHER"
+    "aboutSectionLabel": "ÜBER ESTHER",
+    "aboutVoice": "Als Esther einmal den Titusbrief las, musste sie plötzlich an Aschenputtel denken. In den Märchen ihrer Kindheit entdeckte sie etwas vom Evangelium. Jetzt möchte sie die Geschichten noch einmal lesen.",
+    "aboutQuestion": "Wie werde ich Gott heute begegnen?"
   },
   "es": {
     "welcome": "BIENVENIDOS A LA CASA DE ESTHER",
@@ -323,7 +325,9 @@ export const translations = {
       "notes": "Tostada con aguacate, huevo, uvas y café frío sobre la mesa de Esther",
       "archive": "Esther Cho sonríe en un jardín cuando era niña"
     },
-    "aboutSectionLabel": "CONOCE A ESTHER"
+    "aboutSectionLabel": "CONOCE A ESTHER",
+    "aboutVoice": "Un día, mientras leía la carta a Tito, Esther se acordó de Cenicienta. Empezó a reconocer el evangelio en los cuentos de su infancia. Y le dieron ganas de volver a leerlos.",
+    "aboutQuestion": "¿Qué descubriré hoy de Dios?"
   },
   "fr": {
     "welcome": "BIENVENUE CHEZ ESTHER",
@@ -486,7 +490,9 @@ export const translations = {
       "notes": "Toast à l’avocat, œuf, raisins et café glacé sur la table d’Esther",
       "archive": "Esther Cho enfant, souriante dans un jardin"
     },
-    "aboutSectionLabel": "DÉCOUVRIR ESTHER"
+    "aboutSectionLabel": "DÉCOUVRIR ESTHER",
+    "aboutVoice": "Un jour, en lisant l’épître à Tite, Esther s’est soudain souvenue de Cendrillon. Elle a reconnu quelque chose de l’Évangile dans ces contes de son enfance. Depuis, elle a envie de les rouvrir.",
+    "aboutQuestion": "Que vais-je découvrir de Dieu aujourd’hui ?"
   },
   "it": {
     "welcome": "BENVENUTI A CASA DI ESTHER",
@@ -649,7 +655,9 @@ export const translations = {
       "notes": "Toast con avocado, uovo, uva e caffè freddo sulla tavola di Esther",
       "archive": "Esther Cho da bambina, sorridente in giardino"
     },
-    "aboutSectionLabel": "CONOSCI ESTHER"
+    "aboutSectionLabel": "CONOSCI ESTHER",
+    "aboutVoice": "Leggendo la lettera a Tito, a Esther è venuta in mente Cenerentola. Nelle fiabe che amava da bambina ha ritrovato un’eco del Vangelo. Adesso le viene voglia di rileggerle.",
+    "aboutQuestion": "Che cosa scoprirò oggi di Dio?"
   },
   "ja": {
     "welcome": "エスターの家へようこそ",
@@ -812,7 +820,9 @@ export const translations = {
       "notes": "エスターの食卓に並ぶアボカドトースト、卵、ブドウ、アイスコーヒー",
       "archive": "庭で微笑む幼い頃のエスター・チョー"
     },
-    "aboutSectionLabel": "エスターについて"
+    "aboutSectionLabel": "エスターについて",
+    "aboutVoice": "テトスへの手紙を読んでいて、ふとシンデレラが浮かびました。子どもの頃に親しんだ物語の中にも、福音の姿がある。そう気づいたら、あの童話をもう一度読みたくなったのです。",
+    "aboutQuestion": "今日は、神様のどんなお姿に出会えるだろう。"
   },
   "pt-br": {
     "welcome": "ENTRE, A CASA É DA ESTHER",
@@ -975,7 +985,9 @@ export const translations = {
       "notes": "Torrada com abacate, ovo, uvas e café gelado sobre a mesa de Esther",
       "archive": "Esther Cho sorrindo no jardim quando era criança"
     },
-    "aboutSectionLabel": "CONHEÇA ESTHER"
+    "aboutSectionLabel": "CONHEÇA ESTHER",
+    "aboutVoice": "Certo dia, ao ler a carta a Tito, Esther se pegou pensando na Cinderela. Reconheceu algo do evangelho nos contos da infância. E ficou com vontade de relê-los.",
+    "aboutQuestion": "O que será que vou descobrir sobre Deus hoje?"
   },
   "zh-cn": {
     "welcome": "欢迎来到 Esther 的家",
@@ -1138,7 +1150,9 @@ export const translations = {
       "notes": "Esther 餐桌上的牛油果吐司、鸡蛋、葡萄与冰咖啡",
       "archive": "童年时在花园里微笑的 Esther Cho"
     },
-    "aboutSectionLabel": "认识 Esther"
+    "aboutSectionLabel": "认识 Esther",
+    "aboutVoice": "读《提多书》的时候，Esther 忽然想起了灰姑娘。小时候读过的童话，原来也能让她看见福音的影子。这么一想，她又想把那些故事找出来读一遍。",
+    "aboutQuestion": "今天，又会怎样遇见上帝呢？"
   },
   "zh-tw": {
     "welcome": "歡迎來到 Esther 的家",
@@ -1301,7 +1315,9 @@ export const translations = {
       "notes": "Esther 餐桌上的酪梨吐司、雞蛋、葡萄與冰咖啡",
       "archive": "童年時在花園裡微笑的 Esther Cho"
     },
-    "aboutSectionLabel": "認識 Esther"
+    "aboutSectionLabel": "認識 Esther",
+    "aboutVoice": "讀《提多書》的時候，Esther 忽然想起了灰姑娘。小時候讀過的童話，原來也能讓她看見福音的影子。這麼一想，她又想把那些故事找出來讀一遍。",
+    "aboutQuestion": "今天，又會怎樣遇見上帝呢？"
   }
 } as const;
 export type IntlTranslation = typeof translations[keyof typeof translations];
