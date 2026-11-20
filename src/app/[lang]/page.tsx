@@ -14,5 +14,5 @@ export async function generateMetadata({params}:{params:Promise<{lang:Translatio
 }
 export default async function InternationalHome({params}:{params:Promise<{lang:TranslationLocale}>}){
   const {lang}=await params;
-  return <div lang={lang}><InternationalPage locale={lang} section="home"/></div>;
+  return <div lang={htmlLanguage(lang)}><InternationalPage locale={lang} section="home"/></div>;
 }
