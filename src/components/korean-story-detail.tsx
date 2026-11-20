@@ -14,8 +14,8 @@ const koreanStories = [
       "이곳의 이야기는 그렇게 남겨 두기도 한다. 기억은 세 줄로 시작해, 언젠가 다른 장면이 떠오르면 조금씩 길어질 수 있다. 처음의 기록은 그대로 남는다.",
     ],
     note:"이야기 방은 작가의 기억을 차곡차곡 담아 가는 기록 공간이다. 옛 사진과 나중에 재구성한 이미지는 서로 다른 자료라는 사실을 명확히 구분한다.",
-    nextTitle:"집집마다 막내딸",
-    nextHref:"/ko/stories/the-youngest-daughter-in-every-house/",
+    nextTitle:"삼시세끼, 미슐랭 3스타 셰프처럼",
+    nextHref:"/ko/stories/#story-two",
     nextLink:"다음 이야기 읽기",
   },
   {
@@ -43,7 +43,7 @@ export function KoreanStoryDetail({which}:{which:0|1}) {
   return <main className="story-detail-page" lang="ko">
     <section className="container story-detail-hero" aria-labelledby="story-title">
       <Link href="/ko/stories/" className="story-detail-back">이야기</Link>
-      <p className="story-detail-kicker">이야기 {which+1}</p>
+      <p className="story-detail-kicker">이야기 {which===1?3:1}</p>
       <h1 id="story-title">{t.title}</h1><p className="story-detail-deck">{t.lead}</p>
     </section>
     <section className="container story-detail-grid">

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PageCover } from "@/components/page-cover";
+import { FamilyMealsGallery } from "@/components/family-meals-gallery";
 import "../../stories/stories.css";
 
 export const metadata: Metadata = {
@@ -11,12 +12,13 @@ export const metadata: Metadata = {
 
 const openingCollection = [
   { number: "01", title: "아버지는 호랑이 꿈을 꾸었다", meta: "아버지 · 시작" },
-  { number: "02", title: "가는 집마다 막내딸", meta: "가족 · 어린 시절" },
-  { number: "03", title: "깨끗한 잠옷을 입고 다시 마당으로", meta: "집 · 어린 시절" },
-  { number: "04", title: "우리 가족의 식당", meta: "가족 · 식탁" },
-  { number: "05", title: "엄마, 나 너무 행복해", meta: "엄마 · 행복" },
-  { number: "06", title: "중학교 1학년, 그해 7월", meta: "7월 · 전환점" },
-  { number: "07", title: "행복을 모으는 사람", meta: "기억 · 지금" },
+  { number: "02", title: "삼시세끼, 미슐랭 3스타 셰프처럼", meta: "가족 · 식탁", href: "#story-two" },
+  { number: "03", title: "가는 집마다 막내딸", meta: "가족 · 어린 시절" },
+  { number: "04", title: "깨끗한 잠옷을 입고 다시 마당으로", meta: "집 · 어린 시절" },
+  { number: "05", title: "우리 가족의 식당", meta: "가족 · 식탁" },
+  { number: "06", title: "엄마, 나 너무 행복해", meta: "엄마 · 행복" },
+  { number: "07", title: "중학교 1학년, 그해 7월", meta: "7월 · 전환점" },
+  { number: "08", title: "행복을 모으는 사람", meta: "기억 · 지금" },
 ];
 
 const lifeChapters = [
@@ -80,11 +82,26 @@ export default function KoreanStoriesPage() {
         </div>
       </section>
 
+
+      <FamilyMealsGallery locale="ko" />
+
+      <section className="stories-feature" aria-labelledby="story-three-title">
+        <div className="container stories-feature-inner stories-feature-text-only">
+          <div className="stories-feature-copy">
+            <p className="stories-kicker">다음 이야기</p>
+            <p className="stories-feature-number">03</p>
+            <h2 id="story-three-title">가는 집마다 막내딸</h2>
+            <p>우리 집에서는 맏이였지만, 다른 집에 가면 막내딸이 되곤 했다.</p>
+            <Link href="/ko/stories/the-youngest-daughter-in-every-house/" className="stories-text-link">03번 이야기 읽기</Link>
+          </div>
+        </div>
+      </section>
+
       <section className="stories-opening" aria-labelledby="opening-collection-title">
         <div className="container">
           <header className="stories-section-heading">
             <p className="stories-kicker">먼저 꺼낸 이야기들</p>
-            <h2 id="opening-collection-title">먼저 꺼낸 일곱 이야기.</h2>
+            <h2 id="opening-collection-title">먼저 꺼낸 여덟 이야기.</h2>
             <p>처음 기록해 두기로 한 기억들이다.</p>
           </header>
 
@@ -94,7 +111,7 @@ export default function KoreanStoriesPage() {
                 <span className="stories-opening-number">{story.number}</span>
                 <div className="stories-opening-title-group">
                   <p className="stories-opening-meta">{story.meta}</p>
-                  <h3>{story.title}</h3>
+                  <h3>{("href" in story && story.href) ? <Link href={story.href}>{story.title}</Link> : story.title}</h3>
                 </div>
                 <span className="stories-opening-state">기록됨</span>
               </li>

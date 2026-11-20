@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PageCover } from "@/components/page-cover";
+import { FamilyMealsGallery } from "@/components/family-meals-gallery";
 import "./stories.css";
 
 export const metadata: Metadata = {
@@ -18,32 +19,38 @@ const openingCollection = [
   },
   {
     number: "02",
+    title: "Three Meals a Day, as If I Were a Michelin Chef",
+    meta: "Family · Table",
+    href: "#story-two",
+  },
+  {
+    number: "03",
     title: "The Youngest Daughter in Every House",
     meta: "Family · Childhood",
     href: "/stories/the-youngest-daughter-in-every-house/",
   },
   {
-    number: "03",
+    number: "04",
     title: "Back to the Yard in Clean Pajamas",
     meta: "House · Childhood",
   },
   {
-    number: "04",
+    number: "05",
     title: "Our Family Restaurant",
     meta: "Family · Table",
   },
   {
-    number: "05",
+    number: "06",
     title: "Mom, I'm So Happy",
     meta: "Mother · Happiness",
   },
   {
-    number: "06",
+    number: "07",
     title: "July, My First Year of Middle School",
     meta: "July · Turning Point",
   },
   {
-    number: "07",
+    number: "08",
     title: "The Happiness Collector",
     meta: "Memory · Now",
   },
@@ -119,11 +126,26 @@ export default function StoriesPage() {
         </div>
       </section>
 
+
+      <FamilyMealsGallery locale="en" />
+
+      <section className="stories-feature" aria-labelledby="story-three-title">
+        <div className="container stories-feature-inner stories-feature-text-only">
+          <div className="stories-feature-copy">
+            <p className="stories-kicker">THE NEXT MEMORY</p>
+            <p className="stories-feature-number">03</p>
+            <h2 id="story-three-title">The Youngest Daughter in Every House</h2>
+            <p>At home she was the oldest child. In other houses, she kept becoming the youngest daughter.</p>
+            <Link href="/stories/the-youngest-daughter-in-every-house/" className="stories-text-link">Read story 03</Link>
+          </div>
+        </div>
+      </section>
+
       <section className="stories-opening" aria-labelledby="opening-collection-title">
         <div className="container">
           <header className="stories-section-heading">
-            <p className="stories-kicker">FIRST SEVEN</p>
-            <h2 id="opening-collection-title">The first seven stories.</h2>
+            <p className="stories-kicker">FIRST EIGHT</p>
+            <h2 id="opening-collection-title">The first eight stories.</h2>
             <p>The first memories Esther chose to begin with.</p>
           </header>
 

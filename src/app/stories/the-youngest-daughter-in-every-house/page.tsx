@@ -19,7 +19,7 @@ export default function YoungestDaughterStoryPage() {
           Stories
         </Link>
 
-        <p className="story-detail-kicker">STORY 02 · FAMILY</p>
+        <p className="story-detail-kicker">STORY 03 · FAMILY</p>
         <h1 id="story-title">The Youngest Daughter in Every House</h1>
         <p className="story-detail-deck">
           At home, I was the oldest child. In other houses, I kept becoming the youngest daughter.
