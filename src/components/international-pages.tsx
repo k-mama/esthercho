@@ -136,7 +136,7 @@ function IntlHome({locale}: {locale:TranslationLocale}) {
     </section>
     <section className="intl-foyer" id="inside">
       <div className="container">
-        <p className="intl-overline">{t.welcome}</p>
+        <p className="intl-overline">{t.houseEyebrow}</p>
         <h2>{t.houseTitle}</h2><p className="intl-wide-copy">{t.houseText}</p>
         <nav className="intl-room-links" aria-label={t.houseTitle}>
           {sections.map((item,i)=><Link key={item.path} href={localizedHref(locale,item.path)}>
@@ -262,7 +262,7 @@ function IntlStories({locale}:{locale:TranslationLocale}) {
       <Link className="intl-more" href={localizedHref(locale,`/stories/${slug[0]}`)}>{e.stories.featuredAction} ↗</Link>
     </div></section>
     <section className="intl-section"><div className="container">
-      <p className="intl-overline">{t.storiesCollection}</p>
+      <p className="intl-overline">{t.storiesTitle}</p>
       <h2>{t.storiesCollection}</h2>
       <p>{e.stories.collectionLead}</p>
       <ol className="intl-story-list">
@@ -429,7 +429,6 @@ function IntlAbout({locale}:{locale:TranslationLocale}) {
     {chapters.map(([title,body,src],i)=><section className={`intl-section ${i%2?"intl-soft":""}`} key={title}>
       <div className="container intl-scene-grid">
         <div>
-          <p className="intl-overline">{t.aboutSectionLabel}</p>
           <h2>{title}</h2>
           {i===3 ? null : <p>{body}</p>}
           {i===1 ? <p>{e.about.homeMore}</p> : null}
