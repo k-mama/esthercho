@@ -1,86 +1,16 @@
 import type { Metadata } from "next";
-import Image from "next/image";
-import Link from "next/link";
-import "./story-detail.css";
-
+import { EstherStoryArticle } from "@/components/esther-story-article";
+import { getRecordedStory } from "@/content/esther-story-archive";
+const story = getRecordedStory("my-father-dreamed-of-a-tiger")!;
 export const metadata: Metadata = {
-  title: "My Father Dreamed of a Tiger",
-  description:
-    "The first memory fragment in Esther Cho's living story archive: a tiger dream, a daughter, and a family joke that became the opening line.",
+ title: story.en.title,
+ description: story.en.deck,
+ alternates: {
+  canonical: "https://esthercho.pages.dev/stories/my-father-dreamed-of-a-tiger/",
+  languages: {
+   en: "https://esthercho.pages.dev/stories/my-father-dreamed-of-a-tiger/",
+   ko: "https://esthercho.pages.dev/ko/stories/my-father-dreamed-of-a-tiger/"
+  }
+ }
 };
-
-const tags = ["Father", "Beginning", "Family", "Childhood"];
-
-export default function TigerDreamStoryPage() {
-  return (
-    <main className="story-detail-page">
-      <section className="container story-detail-hero" aria-labelledby="story-title">
-        <Link href="/stories/" className="story-detail-back">
-          Stories
-        </Link>
-
-        <p className="story-detail-kicker">STORY 01 · BEGINNING</p>
-        <h1 id="story-title">My Father Dreamed of a Tiger</h1>
-        <p className="story-detail-deck">
-          Before Esther was born, her father dreamed of a tiger.
-        </p>
-      </section>
-
-      <section className="container story-detail-grid">
-        <article className="story-detail-copy">
-          <p className="story-detail-opening">
-            Before I was born, my father dreamed of a tiger.
-          </p>
-
-          <p>The baby who arrived was a girl.</p>
-
-          <blockquote>“It must have been a cat.”</blockquote>
-
-          <div className="story-detail-tags" role="group" aria-label="Related memory tags">
-            {tags.map((tag) => (
-              <span key={tag}>{tag}</span>
-            ))}
-          </div>
-        </article>
-
-        <figure className="story-detail-figure">
-          <Image
-            src="/media/esther/childhood-garden.jpg"
-            alt="Esther Cho smiling in a garden as a child"
-            width={1800}
-            height={1350}
-            sizes="(max-width: 899px) 100vw, 42vw"
-            priority
-          />
-          <figcaption>
-            Archive photograph · Esther Cho as a child. The photograph is not a
-            reconstruction of the dream.
-          </figcaption>
-        </figure>
-      </section>
-
-      <section className="story-detail-note">
-        <div className="container story-detail-note-inner">
-          <p className="story-detail-kicker">ARCHIVE NOTE</p>
-          <p>
-            Only these three lines of the story have been recorded so far.
-            If Esther remembers more, the archive can grow. Old photographs
-            and images made much later remain clearly identified.
-          </p>
-        </div>
-      </section>
-
-      <section className="container story-detail-next" aria-labelledby="next-story-title">
-        <p className="story-detail-kicker">NEXT IN THE OPENING COLLECTION</p>
-        <h2 id="next-story-title">Three Meals a Day</h2>
-        <p>For about six or seven years, Esther prepared three meals a day for her parents-in-law.</p>
-        <Link
-          href="/stories/#story-two"
-          className="story-detail-link"
-        >
-          Read the next story
-        </Link>
-      </section>
-    </main>
-  );
-}
+export default function Page() { return <EstherStoryArticle story={story} locale="en"/>; }

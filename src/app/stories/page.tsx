@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { PageCover } from "@/components/page-cover";
 import { FamilyMealsGallery } from "@/components/family-meals-gallery";
+import { storyIndex } from "@/content/esther-story-archive";
 import "./stories.css";
 
 export const metadata: Metadata = {
@@ -10,51 +11,7 @@ export const metadata: Metadata = {
     "Stories by Esther Cho, drawn from childhood, family, faith, and the details she remembers.",
 };
 
-const openingCollection = [
-  {
-    number: "01",
-    title: "My Father Dreamed of a Tiger",
-    meta: "Father · Beginning",
-    href: "/stories/my-father-dreamed-of-a-tiger/",
-  },
-  {
-    number: "02",
-    title: "Three Meals a Day, as If I Were a Michelin Chef",
-    meta: "Family · Table",
-    href: "#story-two",
-  },
-  {
-    number: "03",
-    title: "The Youngest Daughter in Every House",
-    meta: "Family · Childhood",
-    href: "/stories/the-youngest-daughter-in-every-house/",
-  },
-  {
-    number: "04",
-    title: "Back to the Yard in Clean Pajamas",
-    meta: "House · Childhood",
-  },
-  {
-    number: "05",
-    title: "Our Family Restaurant",
-    meta: "Family · Table",
-  },
-  {
-    number: "06",
-    title: "Mom, I'm So Happy",
-    meta: "Mother · Happiness",
-  },
-  {
-    number: "07",
-    title: "July, My First Year of Middle School",
-    meta: "July · Turning Point",
-  },
-  {
-    number: "08",
-    title: "The Happiness Collector",
-    meta: "Memory · Now",
-  },
-];
+const openingCollection = storyIndex("en");
 
 const lifeChapters = [
   "Childhood",
@@ -113,8 +70,7 @@ export default function StoriesPage() {
               a girl. The family joke was that perhaps it had been a cat.
             </p>
             <p>
-              This story stops where the memory stops. Nothing has been added to
-              make it complete.
+              His joke is one of the first stories Esther tells about her childhood.
             </p>
             <Link
               href="/stories/my-father-dreamed-of-a-tiger/"
@@ -144,9 +100,9 @@ export default function StoriesPage() {
       <section className="stories-opening" aria-labelledby="opening-collection-title">
         <div className="container">
           <header className="stories-section-heading">
-            <p className="stories-kicker">FIRST EIGHT</p>
-            <h2 id="opening-collection-title">The first eight stories.</h2>
-            <p>The first memories Esther chose to begin with.</p>
+            <p className="stories-kicker">LIFE STORIES</p>
+            <h2 id="opening-collection-title">The stories so far.</h2>
+            <p>Eighteen stories drawn from memories Esther has shared.</p>
           </header>
 
           <ol className="stories-opening-list">

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { PageCover } from "@/components/page-cover";
 import { FamilyMealsGallery } from "@/components/family-meals-gallery";
+import { storyIndex } from "@/content/esther-story-archive";
 import "../../stories/stories.css";
 
 export const metadata: Metadata = {
@@ -10,16 +11,7 @@ export const metadata: Metadata = {
     "어린 시절과 가족, 믿음과 지금의 생활에서 돌아온 조성연 작가의 이야기.",
 };
 
-const openingCollection = [
-  { number: "01", title: "아버지는 호랑이 꿈을 꾸었다", meta: "아버지 · 시작" },
-  { number: "02", title: "삼시세끼, 미슐랭 3스타 셰프처럼", meta: "가족 · 식탁", href: "#story-two" },
-  { number: "03", title: "가는 집마다 막내딸", meta: "가족 · 어린 시절" },
-  { number: "04", title: "깨끗한 잠옷을 입고 다시 마당으로", meta: "집 · 어린 시절" },
-  { number: "05", title: "우리 가족의 식당", meta: "가족 · 식탁" },
-  { number: "06", title: "엄마, 나 너무 행복해", meta: "엄마 · 행복" },
-  { number: "07", title: "중학교 1학년, 그해 7월", meta: "7월 · 전환점" },
-  { number: "08", title: "행복을 모으는 사람", meta: "기억 · 지금" },
-];
+const openingCollection = storyIndex("ko");
 
 const lifeChapters = [
   "어린 시절",
@@ -77,7 +69,8 @@ export default function KoreanStoriesPage() {
               조성연이 태어나기 전, 아버지는 꿈에서 호랑이를 보았다. 태어난
               아이는 딸이었다. 가족의 농담은 “고양이였나 보다”였다.
             </p>
-            <p>지금 기억나는 데까지 썼다. 모르는 부분은 채우지 않았다.</p>
+            <p>아버지는 유쾌하고 농담을 잘하는 분이었다.</p>
+            <Link href="/ko/stories/my-father-dreamed-of-a-tiger/" className="stories-text-link">01번 이야기 읽기</Link>
           </div>
         </div>
       </section>
@@ -101,8 +94,8 @@ export default function KoreanStoriesPage() {
         <div className="container">
           <header className="stories-section-heading">
             <p className="stories-kicker">먼저 꺼낸 이야기들</p>
-            <h2 id="opening-collection-title">먼저 꺼낸 여덟 이야기.</h2>
-            <p>처음 기록해 두기로 한 기억들이다.</p>
+            <h2 id="opening-collection-title">살아온 이야기, 열여덟 편.</h2>
+            <p>작가가 기억하고 직접 이야기한 장면들을 모았다.</p>
           </header>
 
           <ol className="stories-opening-list">
@@ -113,7 +106,7 @@ export default function KoreanStoriesPage() {
                   <p className="stories-opening-meta">{story.meta}</p>
                   <h3>{("href" in story && story.href) ? <Link href={story.href}>{story.title}</Link> : story.title}</h3>
                 </div>
-                <span className="stories-opening-state">기록됨</span>
+                <Link href={story.href} className="stories-opening-action">이야기 읽기 <span aria-hidden="true">→</span></Link>
               </li>
             ))}
           </ol>

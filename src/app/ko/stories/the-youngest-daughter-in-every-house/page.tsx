@@ -1,3 +1,16 @@
-import { KoreanStoryDetail } from "@/components/korean-story-detail";
-export const metadata={title:"집집마다 막내딸",description:"맏이로 태어나 다른 집에서는 막내딸이 된 어린 시절의 기억."};
-export default function Page(){return <KoreanStoryDetail which={1}/>;}
+import type { Metadata } from "next";
+import { EstherStoryArticle } from "@/components/esther-story-article";
+import { getRecordedStory } from "@/content/esther-story-archive";
+const story = getRecordedStory("the-youngest-daughter-in-every-house")!;
+export const metadata: Metadata = {
+ title: story.ko.title,
+ description: story.ko.deck,
+ alternates: {
+  canonical: "https://esthercho.pages.dev/ko/stories/the-youngest-daughter-in-every-house/",
+  languages: {
+   en: "https://esthercho.pages.dev/stories/the-youngest-daughter-in-every-house/",
+   ko: "https://esthercho.pages.dev/ko/stories/the-youngest-daughter-in-every-house/"
+  }
+ }
+};
+export default function Page() { return <EstherStoryArticle story={story} locale="ko"/>; }
