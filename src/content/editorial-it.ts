@@ -33,7 +33,7 @@ export const editorialIt = {
     manuscriptLink: "Leggi dalla tavola della colazione",
     manuscriptFactsHeading: "Il manoscritto",
     manuscriptFacts: [
-      ["Lingua di riferimento dell’edizione", "Inglese"],
+      ["Lingua del manoscritto originale", "Coreano"],
       ["Genere", "Meditazioni e saggi personali sulla fede cristiana"],
       ["Pubblicazione", "Data da definire"]
     ],
