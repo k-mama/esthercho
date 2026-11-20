@@ -33,7 +33,7 @@ export const editorialEs = {
     manuscriptLink: "Seguir leyendo desde la mesa del desayuno",
     manuscriptFactsHeading: "Sobre el manuscrito",
     manuscriptFacts: [
-      ["Idioma de referencia de esta edición", "Inglés"],
+      ["Idioma del manuscrito original", "Coreano"],
       ["Formato", "Ensayos y meditaciones personales de fe cristiana"],
       ["Publicación", "Fecha por confirmar"]
     ],
