@@ -46,6 +46,10 @@ export default function KoreanAboutPage() {
               조성연은 살아온 것과 기억나는 것을 쓴다. 기독교 신앙과 가족,
               미술, 식탁과 집에서의 생활이 자주 글과 그림으로 돌아온다.
             </p>
+            <p className="esther-intro">
+              디도서를 읽다가 신데렐라를 떠올린다. 어린 시절 좋아하던 동화에서도
+              복음을 발견하고는, 그 동화들을 다시 읽어볼 생각을 한다.
+            </p>
 
             <a
               className="esther-author-link"
@@ -168,6 +172,7 @@ export default function KoreanAboutPage() {
           </p>
 
           <p>계속 쓰고, 계속 그린다.</p>
+          <p>오늘은 또 어떤 하나님을 만나게 될까요?</p>
         </footer>
       </article>
     </main>
