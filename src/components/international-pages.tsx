@@ -240,10 +240,6 @@ function IntlBooks({locale}:{locale:TranslationLocale}) {
       <h3>{t.mannaStoryTitle}</h3>
       <p>{e.books.makingCoverBody}</p>
       <Album sources={coverStudies} captions={t.coverCaptions}/>
-      <h3>{t.mannaHouseTitle}</h3><p>{e.books.makingHomeBody}</p>
-      <Link className="intl-more" href={localizedHref(locale)}>{t.mannaHouseTitle} ↗</Link>
-      <h3>{t.mannaDailyTitle}</h3>
-      {e.books.makingManna.map(p=><p key={p}>{p}</p>)}
     </div></section>
   </main>;
 }
@@ -344,11 +340,6 @@ function IntlNotes({locale}:{locale:TranslationLocale}) {
   const e=editorial[locale];
   return <main className="intl-page">
     <Cover section="notes" locale={locale}/>
-    <section className="intl-section"><div className="container">
-      <p className="intl-overline">{e.notes.headerKicker}</p>
-      <h2>{t.notesHeading}</h2>
-      <p className="intl-wide-copy">{t.notesText}</p>
-    </div></section>
     <section className="intl-section intl-soft"><div className="container">
       <div className="intl-scene-grid intl-morning">
         <figure>
@@ -362,20 +353,10 @@ function IntlNotes({locale}:{locale:TranslationLocale}) {
         </div>
       </div>
     </div></section>
-    <section className="intl-section"><div className="container">
-      <p className="intl-overline">{t.mannaTitle}</p>
-      <h2>{t.notesThird}</h2>
-      <p className="intl-wide-copy">{e.notes.manuscriptBody}</p>
-      <Link className="intl-more" href={localizedHref(locale,"/books")}>
-        {e.notes.manuscriptAction} ↗
-      </Link>
-    </div></section>
-    <section className="intl-ending"><div className="container">
-      <p className="intl-overline">{e.notes.closingLabel}</p>
-      <h2>{t.notesEnding}</h2>
-    </div></section>
+    <MannaAuthorVoice locale={locale} placement="notes"/>
   </main>;
 }
+
 function IntlArchive({locale}:{locale:TranslationLocale}) {
   return <main className="intl-page childhood-page">
     <Cover section="archive" locale={locale}/>
