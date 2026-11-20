@@ -46,7 +46,7 @@ export function EstherStoryArticle({ story, locale }: Props) {
               >
                 <Image
                   src="/media/books/big-dreams/cover.webp"
-                  alt={ko ? "아들의 Big Doggie 한마디에서 시작된 그림책의 영어판 Big Dreams in Every Color 표지" : "Cover of Big Dreams in Every Color, the revised picture book inspired by Esther's son"}
+                  alt={ko ? "아들의 Big Doggy 한마디에서 시작된 그림책의 영어판 Big Dreams in Every Color 표지" : "Cover of Big Dreams in Every Color, the revised picture book inspired by Esther's son"}
                   width={1232}
                   height={1850}
                   sizes="(max-width: 600px) 43vw, 210px"
