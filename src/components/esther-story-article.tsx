@@ -37,6 +37,31 @@ export function EstherStoryArticle({ story, locale }: Props) {
               {paragraph}
             </p>
           ))}
+          {story.number === "16" ? (
+            <div className={styles.bookConnection}>
+              <Link
+                className={styles.bookCoverLink}
+                href={ko ? "/ko/books/#new-release" : "/books/#new-release"}
+                aria-label={ko ? "『내 꿈은 말이지?』 영어판 표지와 책 정보 보기" : "See Big Dreams in Every Color and its editions"}
+              >
+                <Image
+                  src="/media/books/big-dreams/cover.webp"
+                  alt={ko ? "아들의 Big Doggie 한마디에서 시작된 그림책의 영어판 Big Dreams in Every Color 표지" : "Cover of Big Dreams in Every Color, the revised picture book inspired by Esther's son"}
+                  width={1232}
+                  height={1850}
+                  sizes="(max-width: 600px) 43vw, 210px"
+                />
+              </Link>
+              <div>
+                <p className={styles.bookLabel}>{ko ? "이 이야기에서 태어난 그림책" : "THE BOOK THAT GREW FROM HIS WORDS"}</p>
+                <p className={styles.bookTitle}>Big Dreams in Every Color</p>
+                <Link className={styles.bookLink} href={ko ? "/ko/books/#new-release" : "/books/#new-release"}>
+                  {ko ? "그림책과 다국어판 보기" : "Explore the picture book and its editions"}
+                  <span aria-hidden="true"> →</span>
+                </Link>
+              </div>
+            </div>
+          ) : null}
           {story.number === "01" ? (
             <figure className={styles.archivePhoto}>
               <Image src="/media/esther/childhood-garden.jpg" alt={ko ? "어린 시절 정원에서 찍은 조성연의 실제 사진" : "A real archival photograph of Esther Cho as a child in a garden"} width={1800} height={1350} sizes="(max-width: 900px) 90vw, 620px" />

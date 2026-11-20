@@ -52,3 +52,14 @@
 .archivePhoto { margin: clamp(3.5rem,6vw,5rem) 0 0; }
 .archivePhoto img { display:block; width:100%; height:auto; border-radius:14px; box-shadow:0 20px 54px rgba(17,43,59,.10); }
 .archivePhoto figcaption { margin-top:.9rem; color:#768792; font:400 .75rem/1.65 var(--font-interface,sans-serif); }
+
+/* Story 16: link the author's original family memory to the published book. */
+.bookConnection { margin: 3.8rem 0 1rem; padding-top: 2.2rem; border-top: 1px solid rgba(67,99,121,.22); display: grid; grid-template-columns: minmax(100px, 210px) minmax(0,1fr); align-items: center; gap: clamp(1.25rem, 4vw, 3rem); }
+.bookCoverLink { display: block; width: 100%; }
+.bookCoverLink img { display: block; width: 100%; height: auto; border-radius: 3px; box-shadow: 0 14px 32px rgba(17,43,59,.14); }
+.bookLabel { margin: 0 0 .8rem !important; font: 700 .72rem/1.5 var(--font-interface,sans-serif) !important; letter-spacing: .07em; color: #587691 !important; }
+.bookTitle { margin: 0 0 1.2rem !important; font: 400 clamp(1.3rem,2.7vw,2rem)/1.25 var(--font-editorial,Georgia,serif) !important; color: #15334d !important; }
+.bookLink { display: inline-block; font: 600 .86rem/1.5 var(--font-interface,sans-serif); color: #29526c; border-bottom: 1px solid #64829a; padding-bottom: .25rem; text-decoration: none; }
+.bookLink:hover,.bookLink:focus-visible { color: #142f44; border-color: currentColor; }
+.korean .bookLabel,.korean .bookLink { font-family: var(--font-korean,sans-serif) !important; }
+@media(max-width:600px){ .bookConnection { grid-template-columns: minmax(0,120px) minmax(0,1fr); gap: 1.25rem; } .bookTitle { font-size: 1.3rem !important; } }

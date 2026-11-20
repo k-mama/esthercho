@@ -41,3 +41,6 @@
 - Translate into readable North American English while preserving the writer's modest, dry humor and particular memories.
 - Revisit ambiguous proper names and chronology before any subsequent expansion.
 - Source texts are private working materials; do not place verbatim complete source files in the public website repository.
+
+## Story 16 factual correction — November 21, 2026
+The publisher clarified that this picture book began with the author's young son saying he wanted to become a big “Big Doggie.” Esther created a story for him. After her son became an adult, she revised the book titled 『내 꿈은 말이지?』 and published editions in multiple languages, including the English *Big Dreams in Every Color*. This direct correction supersedes the previous generic narrative that the author simply began making unspecified stories for her son. Preserve the son's statement as the central memory. The revised story links to the real book page and its original cover.

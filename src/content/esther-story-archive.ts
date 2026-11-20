@@ -421,24 +421,28 @@ export const recordedStories: RecordedStory[] = [
   },
   {
     number: "16", slug: "the-picture-book-i-made-for-my-son",
-    theme: { ko: "아들 · 책", en: "Son · Writing" },
-    source: ["PART I, II, III · PART II (직접 구술)", "내가 좋아하는 것들과 내가 사랑하는 삶 §12"],
+    theme: { ko: "아들 · 그림책", en: "Son · Picture Book" },
+    source: ["PART I, II, III · PART II (직접 구술)", "내가 좋아하는 것들과 내가 사랑하는 삶 §12", "2026-11-21 출판자 직접 정정: 아들의 ‘Big Doggie’ 발언이 동화의 시작, 아들 성인 후 『내 꿈은 말이지?』 다국어 개정판 출간"],
     ko: {
-      title: "아들을 위해 만들기 시작한 동화",
-      deck: "아들을 위해 만든 동화가 작가의 길로 이어졌다.",
+      title: "“난 커다란 Big Doggie가 될 거야”",
+      deck: "어린 아들의 한마디에서 시작한 동화책이, 아들이 성인이 된 뒤 다국어 개정판으로 다시 나왔다.",
       paragraphs: [
-        "나는 우리 아들을 사랑한다.",
-        "아들을 위해 동화를 만들기 시작했다. 처음에는 그저 아들을 위한 이야기였다.",
-        "그 일이 출발점이 되었다. 계속 이야기를 만들다 보니 결국 나는 동화 작가의 길을 걷게 되었다."
+        "아들이 어렸을 때 이런 말을 했다.",
+        "“난 커다란 Big Doggie가 될 거야.”",
+        "나는 그 한마디에서 출발해 아들을 위한 동화책을 만들었다.",
+        "세월이 흘러 아들은 성인이 되었다. 나는 그때 만들었던 동화를 다시 꺼내 고쳤다.",
+        "그렇게 『내 꿈은 말이지?』의 개정판을 여러 언어로 펴냈다. 영어판 제목은 『Big Dreams in Every Color』다."
       ]
     },
     en: {
-      title: "The Stories I Made for My Son",
-      deck: "I began making stories for my son. That is how I became a children's author.",
+      title: "“I’m Going to Be a Big Doggie!”",
+      deck: "One sentence from my little boy became a picture book. Years later, I returned to it.",
       paragraphs: [
-        "I love my son.",
-        "I started making stories for him. At first, that was all it was: a story I wanted to make for my child.",
-        "One story became the beginning of another kind of work. Eventually, I found myself becoming a children's book author."
+        "When my son was little, he said something I never forgot.",
+        "“I’m going to be a big doggie!”",
+        "That was where the story began. I made a picture book for him, starting with his words.",
+        "Years passed, and my son grew up. I went back to that book, revised it, and published new editions in several languages.",
+        "The Korean title is 『내 꿈은 말이지?』. The English edition is called Big Dreams in Every Color."
       ]
     }
   },
