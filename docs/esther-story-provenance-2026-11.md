@@ -44,3 +44,6 @@
 
 ## Story 16 factual correction — November 21, 2026
 The publisher clarified that this picture book began with the author's young son saying he wanted to become a big “Big Doggy.” Esther created a story for him. After her son became an adult, she revised the book titled 『내 꿈은 말이지?』 and published editions in multiple languages, including the English *Big Dreams in Every Color*. This direct correction supersedes the previous generic narrative that the author simply began making unspecified stories for her son. Preserve the son's statement as the central memory. The revised story links to the real book page and its original cover.
+
+## Story 16 correction — exact quote (2026-11-21)
+Publisher Emma corrected the son's original words to **“I dream of becoming a Big Black doggy.”** This supersedes both earlier versions, “I’m going to be a big doggy!” and the mixed-language Korean quotation. The English sentence, spelling and capitalization are preserved verbatim in the story. The Korean story title summarizes its meaning without pretending to be the original Korean wording. The creative origin and adult-son multilingual revision remain as previously confirmed.
