@@ -422,6 +422,7 @@ function IntlAbout({locale}:{locale:TranslationLocale}) {
       <p className="intl-overline">{t.aboutSectionLabel}</p>
       <h2>{t.aboutTitle}</h2>
       <p className="intl-wide-copy">{t.aboutIntro}</p>
+      <p className="intl-wide-copy">{t.aboutVoice}</p>
       <a className="intl-more" href="https://www.amazon.com/author/sungyeoncho"
         target="_blank" rel="noopener noreferrer">{localeInterface[locale].authorPage} ↗</a>
     </div></section>
@@ -448,7 +449,8 @@ function IntlAbout({locale}:{locale:TranslationLocale}) {
         </figure>
       </div></section>)}
     <section className="intl-ending"><div className="container">
-      <h2>{e.about.closing}</h2>
+      <h2>{t.aboutQuestion}</h2>
+      <p>{e.about.closing}</p>
     </div></section>
   </main>;
 }
