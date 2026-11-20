@@ -18,5 +18,5 @@ export async function generateMetadata({params}:{params:Promise<{lang:Translatio
 }
 export default async function InternationalStory({params}:{params:Promise<{lang:TranslationLocale;story:Story}>}){
   const {lang,story}=await params;
-  return <div lang={lang}><IntlStoryDetail locale={lang} which={story===stories[0]?0:1}/></div>;
+  return <div lang={htmlLanguage(lang)}><IntlStoryDetail locale={lang} which={story===stories[0]?0:1}/></div>;
 }
