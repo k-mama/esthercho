@@ -162,7 +162,8 @@ export const translations = {
     },
     "aboutSectionLabel": "ÜBER ESTHER",
     "aboutVoice": "Als Esther einmal den Titusbrief las, musste sie plötzlich an Aschenputtel denken. In den Märchen ihrer Kindheit entdeckte sie etwas vom Evangelium. Jetzt möchte sie die Geschichten noch einmal lesen.",
-    "aboutQuestion": "Wie werde ich Gott heute begegnen?"
+    "aboutQuestion": "Wie werde ich Gott heute begegnen?",
+    "houseEyebrow": "IM HAUS"
   },
   "es": {
     "welcome": "BIENVENIDOS A LA CASA DE ESTHER",
@@ -187,7 +188,7 @@ export const translations = {
     "sceneTexts": [
       "Los desayunos, la Biblia, las comidas familiares y los platos preparados para quienes ama comparten la misma mesa.",
       "Una casa, un jardín, un nombre en una fotografía familiar. Primero vuelve la imagen; más tarde llega la historia.",
-      "Familia, iglesia, viajes de servicio, amistades, recados y risas. Hacer lugar a otros se volvió parte de la vida.",
+      "Familia, iglesia, voluntariado, amistades, cosas por hacer y risas. Siempre había alguien más en sus días.",
       "El trazo de lápiz sigue siendo un trazo de lápiz. Una obra nueva puede nacer de él, pero su origen permanece visible."
     ],
     "closing": "Algunas historias siguen su camino. Otras se convierten en libros.",
@@ -327,7 +328,8 @@ export const translations = {
     },
     "aboutSectionLabel": "CONOCE A ESTHER",
     "aboutVoice": "Un día, mientras leía la carta a Tito, Esther se acordó de Cenicienta. Empezó a reconocer el evangelio en los cuentos de su infancia. Y le dieron ganas de volver a leerlos.",
-    "aboutQuestion": "¿Qué descubriré hoy de Dios?"
+    "aboutQuestion": "¿Qué descubriré hoy de Dios?",
+    "houseEyebrow": "PUERTAS ADENTRO"
   },
   "fr": {
     "welcome": "BIENVENUE CHEZ ESTHER",
@@ -492,7 +494,8 @@ export const translations = {
     },
     "aboutSectionLabel": "DÉCOUVRIR ESTHER",
     "aboutVoice": "Un jour, en lisant l’épître à Tite, Esther s’est soudain souvenue de Cendrillon. Elle a reconnu quelque chose de l’Évangile dans ces contes de son enfance. Depuis, elle a envie de les rouvrir.",
-    "aboutQuestion": "Que vais-je découvrir de Dieu aujourd’hui ?"
+    "aboutQuestion": "Que vais-je découvrir de Dieu aujourd’hui ?",
+    "houseEyebrow": "À L’INTÉRIEUR"
   },
   "it": {
     "welcome": "BENVENUTI A CASA DI ESTHER",
@@ -657,7 +660,8 @@ export const translations = {
     },
     "aboutSectionLabel": "CONOSCI ESTHER",
     "aboutVoice": "Leggendo la lettera a Tito, a Esther è venuta in mente Cenerentola. Nelle fiabe che amava da bambina ha ritrovato un’eco del Vangelo. Adesso le viene voglia di rileggerle.",
-    "aboutQuestion": "Che cosa scoprirò oggi di Dio?"
+    "aboutQuestion": "Che cosa scoprirò oggi di Dio?",
+    "houseEyebrow": "DENTRO CASA"
   },
   "ja": {
     "welcome": "エスターの家へようこそ",
@@ -822,7 +826,8 @@ export const translations = {
     },
     "aboutSectionLabel": "エスターについて",
     "aboutVoice": "テトスへの手紙を読んでいて、ふとシンデレラが浮かびました。子どもの頃に親しんだ物語の中にも、福音の姿がある。そう気づいたら、あの童話をもう一度読みたくなったのです。",
-    "aboutQuestion": "今日は、神様のどんなお姿に出会えるだろう。"
+    "aboutQuestion": "今日は、神様のどんなお姿に出会えるだろう。",
+    "houseEyebrow": "家の中へ"
   },
   "pt-br": {
     "welcome": "ENTRE, A CASA É DA ESTHER",
@@ -987,7 +992,8 @@ export const translations = {
     },
     "aboutSectionLabel": "CONHEÇA ESTHER",
     "aboutVoice": "Certo dia, ao ler a carta a Tito, Esther se pegou pensando na Cinderela. Reconheceu algo do evangelho nos contos da infância. E ficou com vontade de relê-los.",
-    "aboutQuestion": "O que será que vou descobrir sobre Deus hoje?"
+    "aboutQuestion": "O que será que vou descobrir sobre Deus hoje?",
+    "houseEyebrow": "AQUI DENTRO"
   },
   "zh-cn": {
     "welcome": "欢迎来到 Esther 的家",
@@ -1152,7 +1158,8 @@ export const translations = {
     },
     "aboutSectionLabel": "认识 Esther",
     "aboutVoice": "读《提多书》的时候，Esther 忽然想起了灰姑娘。小时候读过的童话，原来也能让她看见福音的影子。这么一想，她又想把那些故事找出来读一遍。",
-    "aboutQuestion": "今天，又会怎样遇见上帝呢？"
+    "aboutQuestion": "今天，又会怎样遇见上帝呢？",
+    "houseEyebrow": "走进这座家"
   },
   "zh-tw": {
     "welcome": "歡迎來到 Esther 的家",
@@ -1317,7 +1324,8 @@ export const translations = {
     },
     "aboutSectionLabel": "認識 Esther",
     "aboutVoice": "讀《提多書》的時候，Esther 忽然想起了灰姑娘。小時候讀過的童話，原來也能讓她看見福音的影子。這麼一想，她又想把那些故事找出來讀一遍。",
-    "aboutQuestion": "今天，又會怎樣遇見上帝呢？"
+    "aboutQuestion": "今天，又會怎樣遇見上帝呢？",
+    "houseEyebrow": "走進這個家"
   }
 } as const;
 export type IntlTranslation = typeof translations[keyof typeof translations];
