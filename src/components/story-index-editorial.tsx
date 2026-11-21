@@ -11,7 +11,7 @@ const selected = [
       en: "We Found the Christmas Presents. We Couldn't Open Them.",
     },
     glimpse: {
-      ko: "남동생 둘과 밤마다 집 안을 뒤지던 그 시절.",
+      ko: "부모님이 잠든 것 같으면 남동생들과 선물을 찾으러 다녔다.",
       en: "Two little brothers, a sleeping house, and presents hidden somewhere inside.",
     },
   },
@@ -19,8 +19,8 @@ const selected = [
     number: "07",
     label: { ko: "중학교 1학년, 그해 7월", en: "JULY, FIRST YEAR OF MIDDLE SCHOOL" },
     hook: {
-      ko: "아버지가 돌아가셨는데도, 나는 밥을 먹고 있었다.",
-      en: "My Father Had Died. I Was Still Eating Breakfast.",
+      ko: "아버지가 돌아가셨는데도, 나는 밥을 먹고 학교에 갔다.",
+      en: "My Father Had Died. I Still Ate and Went to School.",
     },
     glimpse: {
       ko: "하루가 계속된다는 사실조차 낯설었던 시간.",

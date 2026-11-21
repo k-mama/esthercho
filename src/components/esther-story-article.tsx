@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { type RecordedStory, type StoryLocale, storyHref, storyIndex, recommendedReadingOrder } from "@/content/esther-story-archive";
+import { type RecordedStory, type StoryLocale, recordedStories, storyHref, storyIndex, recommendedReadingOrder } from "@/content/esther-story-archive";
 import { bigDreamsAuthorWish } from "@/content/big-dreams-author-wish";
 import styles from "./esther-story-article.module.css";
 
@@ -12,6 +12,12 @@ export function EstherStoryArticle({ story, locale }: Props) {
   const next = recommendedReadingOrder[recommendedReadingOrder.indexOf(story.number as typeof recommendedReadingOrder[number]) + 1];
   const hasNext = Boolean(next);
   const nextStory = storyIndex(locale).find((candidate) => candidate.number === next);
+  const nextSource = recordedStories.find((candidate) => candidate.number === next);
+  const nextPreview = next === "02"
+    ? (ko
+      ? "약 6~7년 동안 매일 세 끼를 차렸던 식탁의 실제 사진 57장."
+      : "Fifty-seven photographs from the years she prepared three meals a day.")
+    : nextSource?.[locale].deck;
 
   return (
     <main className={`${styles.page} ${ko ? styles.korean : ""}`} lang={locale}>
@@ -109,11 +115,16 @@ export function EstherStoryArticle({ story, locale }: Props) {
 
       <nav className={styles.navigation} aria-label={ko ? "다음 이야기" : "Continue reading"}>
         <div className={`container ${styles.navigationInner}`}>
-          <p className={styles.eyebrow}>{ko ? "추천 이어 읽기" : "CONTINUE THE STORY"}</p>
+          <p className={styles.eyebrow}>
+            {story.number === "07"
+              ? (ko ? "같은 시절, 학교에 관한 또 다른 이야기" : "ANOTHER MEMORY FROM HER SCHOOL YEARS")
+              : (ko ? "추천 이어 읽기" : "CONTINUE THE STORY")}
+          </p>
           {hasNext ? (
             <>
               <p className={styles.nextNumber}>{next}</p>
               <h2>{nextStory?.title}</h2>
+              {nextPreview ? <p className={styles.nextPreview}>{nextPreview}</p> : null}
               <Link className={styles.nextLink} href={storyHref(locale, next)}>
                 {ko ? `${next}번으로 이어 읽기` : `Continue to story ${next}`} <span aria-hidden="true">→</span>
               </Link>

@@ -95,3 +95,7 @@
 .sonMemoryMore img { display:block; width:100%; height:auto; border-radius:3px; }
 .korean .sonMemory figcaption { font-family: var(--font-korean,sans-serif); }
 @media(max-width:560px){ .sonMemoryMore { grid-template-columns: 1fr; } }
+
+/* A source-derived glimpse, not an invented cliffhanger. */
+.nextPreview { max-width: 640px; margin: -.35rem 0 1.85rem; color: #587082; font: 400 clamp(1.02rem,1.6vw,1.2rem)/1.75 var(--font-editorial,Georgia,serif); }
+.korean .nextPreview { font-family: var(--font-korean,sans-serif); word-break: keep-all; }

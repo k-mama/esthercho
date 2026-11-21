@@ -18,3 +18,9 @@ Scope: Korean and English Stories landing pages. The original 18 story manuscrip
 
 ## Release safety
 The new teaser headlines are editorial, not new first-person testimony. No personal history or timing was invented. The existing edited Cheongdam family portrait remains separately labeled. Unfinished translations in the other eight locales were not generated.
+
+## 2026-11-22 — Final copy and navigation QA
+- Removed the unsourced breakfast-time specificity from the Story 07 teaser. The memoir only says she continued eating and going to school after her father's death.
+- Replaced 'night after night' implication in Story 10 Korean teaser with the memoir's condition that she went searching when the parents seemed to be asleep.
+- Next-story navigation now shows the next memoir's source-grounded deck; Story 02 uses the already documented meal archive.
+- The Story 07 to 11 link is labeled as another school-years memory, never implying that art lessons began after her father's death. Original memoirs and numbering stay untouched.
