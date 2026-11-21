@@ -13,11 +13,15 @@ export function EstherStoryArticle({ story, locale }: Props) {
   const hasNext = Boolean(next);
   const nextStory = storyIndex(locale).find((candidate) => candidate.number === next);
   const nextSource = recordedStories.find((candidate) => candidate.number === next);
-  const nextPreview = next === "02"
+  const nextPreview = story.number === "07"
     ? (ko
-      ? "약 6~7년 동안 매일 세 끼를 차렸던 식탁의 실제 사진 57장."
-      : "Fifty-seven photographs from the years she prepared three meals a day.")
-    : nextSource?.[locale].deck;
+      ? "미술 공부는 아버지가 돌아가시기 전, 초등학교 4학년 무렵에 시작됐다."
+      : "Her art lessons began around fourth grade, before her father's death.")
+    : next === "02"
+      ? (ko
+        ? "약 6~7년 동안 매일 세 끼를 차렸던 식탁의 실제 사진 57장."
+        : "Fifty-seven photographs from the years she prepared three meals a day.")
+      : nextSource?.[locale].deck;
 
   return (
     <main className={`${styles.page} ${ko ? styles.korean : ""}`} lang={locale}>
@@ -117,8 +121,10 @@ export function EstherStoryArticle({ story, locale }: Props) {
         <div className={`container ${styles.navigationInner}`}>
           <p className={styles.eyebrow}>
             {story.number === "07"
-              ? (ko ? "같은 시절, 학교에 관한 또 다른 이야기" : "ANOTHER MEMORY FROM HER SCHOOL YEARS")
-              : (ko ? "추천 이어 읽기" : "CONTINUE THE STORY")}
+              ? (ko ? "그해 7월 이전, 미술 공부가 시작된 때" : "BEFORE THAT JULY: HOW ART LESSONS BEGAN")
+              : story.number === "11"
+                ? (ko ? "성인이 된 뒤의 식탁" : "LATER, AT THE FAMILY TABLE")
+                : (ko ? "추천 이어 읽기" : "CONTINUE THE STORY")}
           </p>
           {hasNext ? (
             <>

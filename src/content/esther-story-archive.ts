@@ -177,19 +177,21 @@ export const recordedStories: RecordedStory[] = [
         "물론 아름다운 엄마가 계셨고 사이좋은 두 남동생도 있었다. 우리는 여전히 서로를 사랑했다. 그런데 그 뒤로는 내 마음 한편에 슬픔과 우울함이 오래 남았다.",
         "가장 이상했던 것은 아버지가 돌아가셨는데도 내가 멀쩡히 살아간다는 사실이었다. 밥을 먹고, 학교에 가고, 친구들과 이야기했다. 그런 일을 계속하고 있는 나 자신이 때로는 슬펐다.",
         "그 뒤로 나는 엄마를 힘들게 해서는 안 된다고 생각했다. 엄마를 걱정시키지 말아야 하고, 오히려 엄마를 돌봐야 한다고 여겼다.",
-        "사춘기 아이처럼 마음껏 흔들릴 수가 없었다. 나도 모르게 조금 일찍 어른이 되었다."
+        "사춘기 아이처럼 마음껏 흔들릴 수가 없었다. 나도 모르게 조금 일찍 어른이 되었다.",
+        "그 생각은 어린 시절에만 머무르지 않았다. 나는 지금까지도 엄마를 돌봐야 한다는 마음을 품고 살아왔다."
       ]
     },
     en: {
       title: "July, My First Year of Middle School",
-      deck: "My father died. I went on eating breakfast and going to school.",
+      deck: "My father died. I kept eating and going to school.",
       paragraphs: [
         "In July of my first year at Yewon School, my father died of cancer. It was bile duct cancer.",
         "I think my childhood ended that month.",
         "My beautiful mother was still there, and so were my two brothers. We loved one another just as before. But I carried sadness with me after that.",
         "What troubled me most was the fact that I kept living. I ate. I went to school. I talked with friends. My father had died, and I was doing all those ordinary things. At times, even that made me sad.",
         "I decided I must not make life harder for my mother. I should not worry her. In fact, I thought I needed to look after her.",
-        "I was still a child, but I was already thinking about how to take care of my mother."
+        "I was still a child, but I was already thinking about how to take care of my mother.",
+        "That feeling did not end with childhood. Even now, I still feel I should look after her."
       ]
     }
   },

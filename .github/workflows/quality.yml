@@ -55,6 +55,9 @@ jobs:
       - name: Production dependency audit
         run: npm audit --omit=dev --audit-level=high
 
+      - name: Story source-and-route guard
+        run: node scripts/story-source-route-guard.mjs
+
       - name: Lint
         run: npm run lint
 
