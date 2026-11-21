@@ -416,3 +416,5 @@
 .authorWishTranslation { margin: 1rem 0 1.6rem; color: #73828c; font: 400 clamp(1.04rem,1.7vw,1.26rem)/1.7 var(--font-editorial,Georgia,serif); }
 .authorWishLink { display: inline-block; padding: .2rem 0; color: #2b526d; border-bottom: 1px solid rgba(40,64,84,.45); font: 600 .82rem/1.65 var(--font-interface,sans-serif); text-decoration: none; }
 .authorWishLink:hover,.authorWishLink:focus-visible { color: #142f44; border-color: currentColor; }
+
+.authorWishProvenance { margin: 0 0 1.6rem; color: #79858b; font: 400 .8rem/1.65 var(--font-interface,sans-serif); }

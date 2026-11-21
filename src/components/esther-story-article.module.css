@@ -71,3 +71,6 @@
 .prose .storyWishTranslation { margin: 1.1rem 0 0; color: #70818c; font: 400 clamp(.97rem,1.35vw,1.16rem)/1.8 var(--font-editorial,Georgia,serif); }
 .korean .storyWish blockquote,.korean .storyWishLabel { font-family: var(--font-korean,sans-serif); word-break: keep-all; }
 .korean .storyWish blockquote { font-weight: 450; }
+
+.prose .storyWishProvenance { margin: 1.2rem 0 0; color: #79858b; font: 400 .8rem/1.6 var(--font-interface,sans-serif); }
+.korean .prose .storyWishProvenance { font-family: var(--font-korean,sans-serif); }

@@ -40,9 +40,10 @@ export function EstherStoryArticle({ story, locale }: Props) {
           ))}
           {story.number === "16" ? (
             <figure className={styles.storyWish} aria-label={ko ? "작가가 이 그림책에 담고 싶은 마음" : "The wish Esther wants at the heart of the picture book"}>
-              <figcaption className={styles.storyWishLabel}>{ko ? "이 동화의 중심에 두고 싶은 마음" : "A WISH FOR THE STORY"}</figcaption>
+              <figcaption className={styles.storyWishLabel}>{ko ? "작가가 이 동화의 핵심으로 삼고 싶다고 밝힌 말" : "ESTHER’S WISH FOR THIS STORY"}</figcaption>
               <blockquote lang={locale}>{bigDreamsAuthorWish[locale]}</blockquote>
               <p className={styles.storyWishTranslation} lang={ko ? "en" : "ko"}>{ko ? bigDreamsAuthorWish.en : bigDreamsAuthorWish.ko}</p>
+              <p className={styles.storyWishProvenance}>{ko ? "조성연 작가가 직접 전한 말이며, 출간된 책에 인쇄된 문장은 아닙니다." : "Esther Cho shared these words about the story; they are not printed in the published book."}</p>
             </figure>
           ) : null}
           {story.number === "16" ? (

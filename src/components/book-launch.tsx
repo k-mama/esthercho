@@ -195,9 +195,10 @@ export function BookLaunch({ locale, placement }: { locale: Locale; placement: P
 
       {placement === "books" && (
         <aside className={`container ${styles.authorWish}`} aria-label={locale === "ko" ? "작가의 그림책 메시지" : "Author's wish for the picture book"}>
-          <p className={styles.authorWishLabel}>{locale === "ko" ? "작가가 이 동화의 중심에 두고 싶은 말" : "A WISH FOR THE STORY"}</p>
+          <p className={styles.authorWishLabel}>{locale === "ko" ? "작가가 이 동화의 핵심으로 삼고 싶다고 밝힌 말" : "ESTHER’S WISH FOR THIS STORY"}</p>
           <blockquote lang={locale}>{bigDreamsAuthorWish[locale]}</blockquote>
           <p className={styles.authorWishTranslation} lang={locale === "ko" ? "en" : "ko"}>{locale === "ko" ? bigDreamsAuthorWish.en : bigDreamsAuthorWish.ko}</p>
+          <p className={styles.authorWishProvenance}>{locale === "ko" ? "조성연 작가가 직접 전한 말이며, 출간된 책에 인쇄된 문장은 아닙니다." : "Esther Cho shared these words about the story; they are not printed in the published book."}</p>
           <Link className={styles.authorWishLink} href={locale === "ko" ? "/ko/stories/the-picture-book-i-made-for-my-son/" : "/stories/the-picture-book-i-made-for-my-son/"}>
             {locale === "ko" ? "이 그림책이 시작된 이야기 읽기" : "Read how this picture book began"}
             <span aria-hidden="true"> →</span>
