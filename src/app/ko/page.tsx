@@ -91,8 +91,7 @@ export default function KoreanHome() {
               <span>한 집 안에서 천천히 이어집니다.</span>
             </h2>
             <p>
-              아침밥 옆에 말씀이 있고, 오래된 사진 한 장이 수십 년 뒤 이야기를
-              데려오기도 합니다. 모두 한 사람의 삶 안에 있었습니다.
+              아버지는 호랑이 태몽을 꾸었고, 훗날 아들은 커다란 검은 강아지가 되는 꿈을 꾸었어요. 그 사이에 한 가족의 밥상과 그림, 이야기가 있습니다.
             </p>
           </div>
 
@@ -170,12 +169,11 @@ export default function KoreanHome() {
           <div className={styles.sceneCopy}>
             <p className={styles.eyebrow}>기억</p>
             <h2 id="memory-title" className={styles.koDisplay}>
-              <span>가끔은 사진이</span>
-              <span>먼저 돌아옵니다.</span>
+              <span>우리 가족이 가장</span>
+              <span>행복했던 그 집.</span>
             </h2>
             <p>
-              집 한 채, 정원, 가족사진 속 이름 하나. 가끔은 사진이 먼저 돌아오고
-              이야기는 나중에 따라옵니다.
+              붉은 기와 대문과 벽돌길, 나무가 있던 청담동 집. 어린 시절을 보냈던 그 집이 사진 속에 남아 있습니다.
             </p>
             <Link href="/ko/archive/" className={styles.textLink}>
               어린 시절로 가기
@@ -193,8 +191,7 @@ export default function KoreanHome() {
               <span>함께 웃고 도우며 살았습니다.</span>
             </h2>
             <p>
-              가족과 교회, 봉사여행과 친구들, 볼일과 웃음. 누군가에게 자리를
-              내어주는 일은 그냥 평범한 생활의 일부가 되었습니다.
+              말레이시아에서 보낸 9년 동안 교회 유치부 교사로 아이들을 만났고, 여성회 활동과 식당 봉사도 했습니다. 함께한 사람들이 사진에 남아 있습니다.
             </p>
             <Link href="/ko/stories/" className={styles.textLink}>
               이야기 보러 가기
@@ -219,12 +216,11 @@ export default function KoreanHome() {
           <div className={styles.sceneCopy}>
             <p className={styles.eyebrow}>작업실</p>
             <h2 id="studio-title" className={styles.koDisplay}>
-              <span>처음 그린 선은</span>
-              <span>그대로 남겨둡니다.</span>
+              <span>어린 시절 그림이</span>
+              <span>다시 태어났습니다.</span>
             </h2>
             <p>
-              연필선은 연필선으로 남습니다. 그 그림에서 새로운 작업이 시작되더라도
-              처음의 손길은 숨기지 않습니다.
+              조성연의 어린 시절 그림에서 출발한 디지털 콜라주입니다. 원화 자체가 아니라, 뒤에 만든 재해석 작품입니다.
             </p>
             <Link href="/ko/studio/" className={styles.textLink}>
               작업실 들어가기

@@ -24,29 +24,13 @@ export default function KoreanStudioPage() {
         shade="soft"
       />
 
-      <section className="studio-intro" aria-labelledby="studio-intro-title">
-        <div className="container">
-          <p className="studio-kicker">출발점</p>
-          <div className="studio-intro-grid">
-            <h2 id="studio-intro-title">손으로 그린 출발점은 그대로 밝힙니다.</h2>
-            <div className="studio-intro-copy">
-              <p>
-                한 장의 스케치가 다른 모습으로 이어져도 이후의 작업은 이후의 작업으로
-                보여줍니다. 같은 순간에서 나온 것처럼 꾸밀 필요는 없습니다.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section className="studio-reimagined" aria-labelledby="studio-reimagined-title">
         <div className="container studio-work-grid studio-work-grid-reverse">
           <div className="studio-work-copy">
             <p className="studio-kicker">이후의 작업</p>
-            <h2 id="studio-reimagined-title">그림은 다른 모습으로 이어질 수 있습니다.</h2>
+            <h2 id="studio-reimagined-title">어린 시절 그림에서 시작된 콜라주</h2>
             <p>
-              한 장의 스케치가 콜라주나 다른 디지털 이미지가 되기도 합니다.
-              출발점은 그대로 밝히고, 새 작업은 새 작업으로 남겨둡니다.
+              조성연의 어린 시절 그림을 바탕으로 후에 만든 디지털 재해석 작품입니다. 원화와 동일한 자료는 아닙니다.
             </p>
           </div>
 
@@ -60,19 +44,12 @@ export default function KoreanStudioPage() {
               priority
             />
             <figcaption>
-              조성연의 어린 시절 원본 스케치에서 출발한 AI-assisted editorial reinterpretation
+              어린 시절 스케치에서 출발한 AI 보조 디지털 재해석 이미지
             </figcaption>
           </figure>
         </div>
       </section>
 
-      <section className="studio-future" aria-labelledby="studio-future-title">
-        <div className="container studio-future-inner">
-          <p className="studio-kicker">선택한 원본들</p>
-          <h2 id="studio-future-title">더 보여주고 싶은 그림이 생기면, 그때 더합니다.</h2>
-          <p>벽을 미리 채울 필요는 없습니다. 이 방은 천천히 기다려도 됩니다.</p>
-        </div>
-      </section>
     </main>
   );
 }

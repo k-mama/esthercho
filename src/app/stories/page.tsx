@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { PageCover } from "@/components/page-cover";
 import { storyIndex } from "@/content/esther-story-archive";
 import "./stories.css";
@@ -54,7 +55,7 @@ export default function StoriesPage() {
           <h2 id="story-two-link">Three Meals a Day</h2>
           <p>For about six or seven years, Esther prepared breakfast, lunch, and dinner for her parents-in-law. She still has 57 photographs of those meals.</p>
           <Link href="/stories/three-meals-a-day/" className="stories-text-link">Read story 02 and view 57 real meal photographs →</Link></div>
-          <img src="/media/esther/family-meals/meal-15.webp" alt="A real meal prepared by Esther Cho" loading="lazy" width="600" height="820"/>
+          <Image src="/media/esther/family-meals/meal-15.webp" alt="A real meal prepared by Esther Cho" loading="lazy" sizes="(max-width: 700px) 90vw, 28vw" width={600} height={820}/>
         </div>
       </section>
 
@@ -69,7 +70,7 @@ export default function StoriesPage() {
           <header className="stories-act-heading">
             <p className="stories-kicker">ACT 01</p>
             <h3>The House Where We Were Happiest</h3>
-            <p>A father's joke, the garden in Cheongdam-dong, and the days the family shared.</p>
+            <p>A father&apos;s joke, the garden in Cheongdam-dong, and the days the family shared.</p>
           </header>
           <ol className="stories-opening-list">
             {["01","03","04","05","09","10","06"].map((n) => {
@@ -87,7 +88,7 @@ export default function StoriesPage() {
           <header className="stories-act-heading">
             <p className="stories-kicker">ACT 02</p>
             <h3>July, My First Year of Middle School</h3>
-            <p>The ordinary days that continued after her father's death, and her years studying art.</p>
+            <p>The ordinary days that continued after her father&apos;s death, and her years studying art.</p>
           </header>
           <ol className="stories-opening-list">
             {["07","11"].map((n) => {
@@ -149,7 +150,8 @@ export default function StoriesPage() {
             <p>
               Hard things happened too. Yet laughter is often what comes back
               first. Both are true.
-            </p>            <Link className="stories-text-link" href="/stories/the-happiness-collector/">Read The Happiness Collector →</Link>
+            </p>
+            <Link className="stories-text-link" href="/stories/the-happiness-collector/">Read The Happiness Collector →</Link>
           </div>
         </div>
       </section>

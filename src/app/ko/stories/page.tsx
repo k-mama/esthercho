@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { PageCover } from "@/components/page-cover";
 import { storyIndex } from "@/content/esther-story-archive";
 import "../../stories/stories.css";
@@ -49,7 +50,7 @@ export default function KoreanStoriesPage() {
           <h2 id="story-two-link">삼시세끼, 미슐랭 3스타 셰프처럼</h2>
           <p>약 6~7년 동안 시부모님과 함께 살며 매일 아침, 점심, 저녁을 차렸다. 밥상 사진 57장이 남아 있다.</p>
           <Link href="/ko/stories/three-meals-a-day/" className="stories-text-link">02번 이야기와 밥상 사진 57장 보기 →</Link></div>
-          <img src="/media/esther/family-meals/meal-15.webp" alt="조성연 작가가 차린 실제 식사 사진" loading="lazy" width="600" height="820"/>
+          <Image src="/media/esther/family-meals/meal-15.webp" alt="조성연 작가가 차린 실제 식사 사진" loading="lazy" sizes="(max-width: 700px) 90vw, 28vw" width={600} height={820}/>
         </div>
       </section>
 
@@ -142,7 +143,8 @@ export default function KoreanStoriesPage() {
             <p>
               힘든 일도 있었다. 그런데 이상하게 웃었던 장면이 먼저 떠오를
               때가 있다. 둘 다 사실이다.
-            </p>            <Link className="stories-text-link" href="/ko/stories/the-happiness-collector/">08번 이야기 읽기 →</Link>
+            </p>
+            <Link className="stories-text-link" href="/ko/stories/the-happiness-collector/">08번 이야기 읽기 →</Link>
           </div>
         </div>
       </section>

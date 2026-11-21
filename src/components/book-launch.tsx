@@ -314,7 +314,7 @@ export function BookLaunch({ locale, placement }: { locale: Locale; placement: P
           </figure>
         </div>
 
-        <div className={styles.trailerRow}>
+        {placement === "books" && <div className={styles.trailerRow}>
           <div className={styles.trailerCopy}>
             <p className={styles.eyebrow}>{content.secondVideoEyebrow}</p>
             <h3>{content.secondVideoTitle}</h3>
@@ -337,9 +337,9 @@ export function BookLaunch({ locale, placement }: { locale: Locale; placement: P
             </video>
             <figcaption>{content.secondVideoCaption}</figcaption>
           </figure>
-        </div>
+        </div>}
 
-        <div className={styles.trailerRow}>
+        {placement === "books" && <div className={styles.trailerRow}>
           <div className={styles.trailerCopy}>
             <p className={styles.eyebrow}>{content.thirdVideoEyebrow}</p>
             <h3>{content.thirdVideoTitle}</h3>
@@ -362,7 +362,7 @@ export function BookLaunch({ locale, placement }: { locale: Locale; placement: P
             </video>
             <figcaption>{content.thirdVideoCaption}</figcaption>
           </figure>
-        </div>
+        </div>}
       </div>
     </section>
   );

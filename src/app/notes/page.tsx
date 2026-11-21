@@ -25,32 +25,23 @@ export default function NotesPage() {
         shade="strong"
       />
 
+      <MannaAuthorVoice locale="en" placement="notes" />
+
       <section className="morning-present" aria-labelledby="morning-present-title">
         <div className="container morning-present-grid">
           <figure className="morning-present-figure">
-            <Image
-              src="/media/esther/morning-table.jpg"
-              alt="A breakfast prepared at Esther Cho's morning table"
-              width={1200}
-              height={1600}
-              sizes="(max-width: 899px) 88vw, 40vw"
-              priority
-            />
-            <figcaption>Morning table · Today</figcaption>
+            <Image src="/media/esther/morning-table.jpg"
+              alt="A real breakfast prepared by Esther Cho"
+              width={1200} height={1600} sizes="(max-width: 899px) 88vw, 40vw"/>
+            <figcaption>One of Esther’s real breakfast tables</figcaption>
           </figure>
-
           <div className="morning-present-copy">
-            <p className="morning-kicker">AN ORDINARY MORNING</p>
-            <h2 id="morning-present-title">The day is already moving by the time the writing catches up.</h2>
-            <p>
-              There is food to make, someone to call, a verse still hanging around,
-              and sometimes a thought funny enough to write down. The notes begin there.
-            </p>
+            <p className="morning-kicker">AT THE TABLE</p>
+            <h2 id="morning-present-title">Breakfast, a Bible, and a notebook.</h2>
+            <p>Esther writes down what stays with her after reading Scripture. The reflection above comes from her original Korean writing.</p>
           </div>
         </div>
       </section>
-
-      <MannaAuthorVoice locale="en" placement="notes" />
     </main>
   );
 }

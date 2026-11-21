@@ -78,7 +78,7 @@ export function ChildhoodArchiveSections({locale}:{locale:SiteLocale}) {
         <div className="childhood-garden-copy">
           <p className="childhood-kicker">{label.child}</p>
           <h2 id="childhood-garden-title">{t.gardenTitle}</h2>
-          <p>{t.gardenText}</p>
+
         </div>
       </div>
     </section>

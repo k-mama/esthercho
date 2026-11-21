@@ -85,8 +85,7 @@ export default function Home() {
             <p className={styles.eyebrow}>INSIDE ESTHER&apos;S HOUSE</p>
             <h2 id="house-title">Meals, photographs, drawings, and stories live here together.</h2>
             <p>
-              A breakfast can sit beside a verse. An old photograph can bring back a story
-              decades later. It all belongs to one life.
+              Her father dreamed of a tiger before she was born. Years later, her son dreamed of becoming a big black dog. In between are family meals, paintings, and memories.
             </p>
           </div>
 
@@ -160,10 +159,9 @@ export default function Home() {
 
           <div className={styles.sceneCopy}>
             <p className={styles.eyebrow}>MEMORY</p>
-            <h2 id="memory-title">Sometimes the photograph comes back first.</h2>
+            <h2 id="memory-title">The home our family remembers most.</h2>
             <p>
-              A house, a garden, a name in a family photograph. Sometimes the picture
-              returns first. The story arrives later.
+              The red-tiled gate, the brick path, and the yard in Cheongdam-dong are still in the photographs. This is the house Esther remembers from childhood.
             </p>
             <Link href="/archive/" className={styles.textLink}>
               See childhood
@@ -178,8 +176,7 @@ export default function Home() {
             <p className={styles.eyebrow}>STORIES OF CARE</p>
             <h2 id="care-title">She made room for other people, too.</h2>
             <p>
-              Family, church, service trips, friends, errands, laughter. Making room for
-              someone simply became part of ordinary life.
+              During nine years in Malaysia, Esther helped teach young children at church and took part in women's association and meal-service activities. Her photographs show the people she worked alongside.
             </p>
             <Link href="/stories/" className={styles.textLink}>
               Read the stories
@@ -203,10 +200,9 @@ export default function Home() {
         <div className={`container ${styles.sceneGrid}`}>
           <div className={styles.sceneCopy}>
             <p className={styles.eyebrow}>THE STUDIO</p>
-            <h2 id="studio-title">The first pencil lines are still there.</h2>
+            <h2 id="studio-title">A childhood sketch, reimagined.</h2>
             <p>
-              A pencil line stays a pencil line. Later work may grow from it, but the
-              starting point remains visible.
+              This collage began with a drawing from Esther's childhood. The image shown here is a later digital reinterpretation, not the original sketch.
             </p>
             <Link href="/studio/" className={styles.textLink}>
               Enter the studio

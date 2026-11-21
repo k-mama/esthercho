@@ -25,35 +25,23 @@ export default function KoreanNotesPage() {
         shade="strong"
       />
 
+      <MannaAuthorVoice locale="ko" placement="notes" />
+
       <section className="morning-present" aria-labelledby="morning-present-title">
         <div className="container morning-present-grid">
           <figure className="morning-present-figure">
-            <Image
-              src="/media/esther/morning-table.jpg"
-              alt="조성연 작가의 아침 식탁에 놓인 아침 식사"
-              width={1200}
-              height={1600}
-              sizes="(max-width: 899px) 88vw, 40vw"
-              priority
-            />
-            <figcaption>아침 식탁 · 오늘</figcaption>
+            <Image src="/media/esther/morning-table.jpg"
+              alt="조성연 작가가 실제 차린 아침 식사"
+              width={1200} height={1600} sizes="(max-width: 899px) 88vw, 40vw"/>
+            <figcaption>작가가 직접 차린 아침 식탁 중 하루</figcaption>
           </figure>
-
           <div className="morning-present-copy">
-            <p className="morning-kicker">평범한 아침</p>
-            <h2 id="morning-present-title">
-              <span>글이 따라잡을 즈음엔</span>
-              <span>하루가 이미 움직이고 있습니다.</span>
-            </h2>
-            <p>
-              밥을 하고, 전화할 사람이 있고, 한 구절이 자꾸 생각나고,
-              가끔은 웃겨서 적어 두고 싶은 생각도 생깁니다. 기록은 거기서 시작합니다.
-            </p>
+            <p className="morning-kicker">아침의 기록</p>
+            <h2 id="morning-present-title">아침밥을 차리고 성경을 읽는다.</h2>
+            <p>그 자리에서 읽은 말씀과 떠오른 생각을 적는다. 아래의 글은 조성연 작가가 직접 쓴 묵상에서 가져왔다.</p>
           </div>
         </div>
       </section>
-
-      <MannaAuthorVoice locale="ko" placement="notes" />
     </main>
   );
 }
