@@ -516,7 +516,7 @@ export const storyIndex = (locale: StoryLocale) => {
   }));
   list.push({
     number: "02",
-    title: locale === "ko" ? "삼시세끼, 미슐랭 3스타 셰프처럼" : "Three Meals a Day",
+    title: locale === "ko" ? "삼시세끼, 미술랭 셰프처럼" : "Three Meals a Day",
     meta: locale === "ko" ? "가족 · 식탁" : "Family · Table",
     href: `${locale === "ko" ? "/ko" : ""}/stories/three-meals-a-day/`,
   });

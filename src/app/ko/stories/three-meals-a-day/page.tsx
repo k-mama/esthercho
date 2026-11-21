@@ -3,7 +3,7 @@ import Link from "next/link";
 import { FamilyMealsGallery } from "@/components/family-meals-gallery";
 import "../../../stories/stories.css";
 export const metadata: Metadata = {
-  title: "삼시세끼, 미슐랭 3스타 셰프처럼",
+  title: "삼시세끼, 미술랭 셰프처럼",
   description: "약 6~7년 동안 시부모님을 위해 매일 차렸던 삼시세끼의 실제 사진 57장.",
   alternates: { canonical: "/ko/stories/three-meals-a-day/",
     languages: { en: "/stories/three-meals-a-day/", ko: "/ko/stories/three-meals-a-day/" } },

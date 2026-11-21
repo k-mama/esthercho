@@ -6,7 +6,7 @@ const photos = [...featured,...Array.from({length:57},(_,i)=>i+1).filter(i=>!fea
 const copy = {
  ko: {
   eyebrow:"두 번째 이야기 · 가족의 식탁",
-  title:"삼시세끼, 미슐랭 3스타 셰프처럼",
+  title:"삼시세끼, 미술랭 셰프처럼",
   sub:"시부모님을 모시던 시절의 식사 기록",
   line1:"약 6~7년 동안 시부모님을 모시고 살았다.",
   line2:"그동안 마치 내 직업이 미슐랭 3스타 레스토랑 셰프라도 되는 것처럼 매일 아침, 점심, 저녁을 차렸다.",
