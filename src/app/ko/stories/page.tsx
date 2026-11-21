@@ -47,7 +47,7 @@ export default function KoreanStoriesPage() {
       <div className="container">
         <header className="stories-section-heading">
           <p className="stories-kicker">살아온 이야기</p>
-          <h2 id="opening-collection-title">열여덟 편의 이야기, 네 개의 흐름.</h2>
+          <h2 id="opening-collection-title">열여덟 편의 이야기,<br />네 개의 흐름.</h2>
           <p>이야기 번호는 그대로 두고, 읽는 길만 새롭게 엮었습니다.</p>
         </header>
         <div className="stories-act">
