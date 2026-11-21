@@ -72,7 +72,7 @@ export function StoryIndexEditorial({ locale }: { locale: StoryLocale }) {
           <h2 id="story-editorial-opening-title" className="story-editorial-opening-title">
             {ko ? (
               <>
-                <span>아빠는 호랑이꿈을 꿨다.</span>
+                <span>아버지는 호랑이꿈을 꿨다.</span>
                 <span>그런데 태어난 건 딸이었다.</span>
               </>
             ) : (
