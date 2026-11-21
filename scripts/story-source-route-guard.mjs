@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 
 const read = (path) => fs.readFileSync(path, "utf8");
 const archive = read("src/content/esther-story-archive.ts");
-const listing = read("src/components/story-index-editorial.ts");
+const listing = read("src/components/story-index-editorial.tsx");
 const article = read("src/components/esther-story-article.tsx");
 const ko = read("src/app/ko/stories/page.tsx");
 const en = read("src/app/stories/page.tsx");
