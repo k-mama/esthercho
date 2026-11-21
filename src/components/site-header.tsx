@@ -54,8 +54,18 @@ export function SiteHeader() {
   const homeHref = localizedHref(locale);
   const languageLabel = localeCopy.selector;
   const contentPath = normalizeContentPath(pathname);
-  const languageHref = (language: typeof supportedLocales[number]) =>
-    localizedHref(language, contentPath);
+  // Only Story 01 and Story 03 have native excerpts in the other eight languages.
+  // For the other 16 stories, point the locale switcher to the translated story index,
+  // not to an unbuilt and misleading 404 route.
+  const languageHref = (language: typeof supportedLocales[number]) => {
+    if (language !== "en" && language !== "ko" && contentPath.startsWith("/stories/")) {
+      const slug = contentPath.split("/").filter(Boolean)[1];
+      if (slug !== "my-father-dreamed-of-a-tiger" && slug !== "the-youngest-daughter-in-every-house") {
+        return localizedHref(language, "/stories");
+      }
+    }
+    return localizedHref(language, contentPath);
+  };
   const menuLabel: Record<typeof supportedLocales[number], string> = {
     en: "MENU", ko: "메뉴", de: "MENÜ", es: "MENÚ", fr: "MENU", it: "MENU", ja: "メニュー", "pt-br": "MENU", "zh-cn": "菜单", "zh-tw": "選單",
   };

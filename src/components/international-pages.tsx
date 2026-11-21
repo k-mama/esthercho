@@ -155,7 +155,7 @@ function IntlHome({locale}: {locale:TranslationLocale}) {
         <p className="intl-wide-copy">{t.bookIntro}</p><p>{t.bookText}</p>
         <EditionGallery locale={locale} compact/>
         <div className="intl-video-grid">
-          {bookVideos.map((video,i)=><figure key={video} className="intl-video-item">
+          {bookVideos.slice(0,1).map((video,i)=><figure key={video} className="intl-video-item">
             <video controls playsInline preload="none" poster={videoPosters[i]}
               aria-label={e.books.videos[i].aria}>
               <source src={video} type="video/mp4"/>
@@ -323,6 +323,7 @@ function IntlNotes({locale}:{locale:TranslationLocale}) {
   const e=editorial[locale];
   return <main className="intl-page">
     <Cover section="notes" locale={locale}/>
+    <MannaAuthorVoice locale={locale} placement="notes"/>
     <section className="intl-section intl-soft"><div className="container">
       <div className="intl-scene-grid intl-morning">
         <figure>
@@ -336,7 +337,6 @@ function IntlNotes({locale}:{locale:TranslationLocale}) {
         </div>
       </div>
     </div></section>
-    <MannaAuthorVoice locale={locale} placement="notes"/>
   </main>;
 }
 
@@ -368,11 +368,6 @@ function IntlStudio({locale}:{locale:TranslationLocale}) {
           sizes="(max-width: 750px) 100vw, 44vw"/>
         <figcaption>{e.studio.figureCaption}</figcaption>
       </figure>
-    </div></section>
-    <section className="intl-ending"><div className="container">
-      <p className="intl-overline">{e.studio.futureLabel}</p>
-      <h2>{t.studioEnding}</h2>
-      <p className="intl-wide-copy">{e.studio.futureBody}</p>
     </div></section>
   </main>;
 }

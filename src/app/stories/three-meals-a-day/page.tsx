@@ -5,6 +5,8 @@ import "../stories.css";
 export const metadata: Metadata = {
   title: "Three Meals a Day",
   description: "Fifty-seven real meals prepared for Esther Cho’s parents-in-law over about six or seven years.",
+  alternates: { canonical: "/stories/three-meals-a-day/",
+    languages: { en: "/stories/three-meals-a-day/", ko: "/ko/stories/three-meals-a-day/" } },
 };
 export default function FamilyMealsStoryPage() {
  return <main className="stories-page">
