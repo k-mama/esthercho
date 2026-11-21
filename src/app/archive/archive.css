@@ -353,3 +353,63 @@
     min-height: 76vw;
   }
 }
+
+
+/* Authenticated childhood setting. This is an explicitly labeled digital recreation. */
+.childhood-family-portrait {
+  padding-block: clamp(5rem, 9vw, 9rem);
+  background: linear-gradient(135deg, #f8f4ed, #f0ece6 70%, #e8edf0);
+}
+.childhood-family-portrait-inner { max-width: 1130px; }
+.childhood-family-portrait-heading { max-width: 850px; margin: 0 auto clamp(2.5rem,5vw,4rem); text-align: center; }
+.childhood-family-portrait-heading h2 {
+  margin: 1.1rem auto 0;
+  font-family: var(--font-editorial);
+  font-size: clamp(2.55rem,4.8vw,5rem);
+  font-weight: 400;
+  line-height: 1.1;
+  color: #19384f;
+  letter-spacing: -.04em;
+}
+.childhood-family-portrait-heading > p:last-child {
+  max-width: 730px;
+  margin: 1.5rem auto 0;
+  color: #64717a;
+  font-family: var(--font-editorial);
+  font-size: clamp(1.04rem,1.5vw,1.23rem);
+  line-height: 1.84;
+}
+.childhood-family-portrait-figure { margin: 0; }
+.childhood-family-portrait-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid rgba(65,71,75,.1);
+  box-shadow: 0 15px 45px rgba(26,42,54,.10);
+}
+.childhood-family-portrait-figure figcaption {
+  margin: .85rem 0 0;
+  font: 400 .75rem/1.7 var(--font-interface,sans-serif);
+  color: #78838a;
+  text-align: center;
+}
+.childhood-family-portrait-story-link {
+  display: table;
+  width: fit-content;
+  margin: 2rem auto 0;
+  padding-bottom: .3rem;
+  font: 650 .82rem/1.55 var(--font-interface,sans-serif);
+  color: #244f6a;
+  border-bottom: 1px solid rgba(37,77,103,.5);
+  text-decoration: none;
+}
+.childhood-family-portrait-story-link:hover,.childhood-family-portrait-story-link:focus-visible { color: #143247; border-color: currentColor; }
+.childhood-page-ko .childhood-family-portrait-heading h2,
+.childhood-page-ko .childhood-family-portrait-heading > p:last-child,
+.childhood-page-ko .childhood-family-portrait-story-link { font-family: var(--font-korean,sans-serif); word-break: keep-all; }
+@media(max-width:600px) {
+  .childhood-family-portrait-heading { text-align: left; }
+  .childhood-family-portrait-figure figcaption { text-align: left; }
+  .childhood-family-portrait-heading h2 { font-size: clamp(2.2rem,9vw,3.3rem); }
+  .childhood-family-portrait-story-link { margin-left: 0; }
+}

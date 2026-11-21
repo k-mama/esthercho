@@ -6,7 +6,7 @@ import "../../archive/archive-luminous.css";
 
 export const metadata: Metadata = {
   title: "어린 시절 앨범",
-  description: "서울 청담동의 실제 옛집. 조성연 작가와 어머니, 동생들이 가장 행복했다고 기억하는 시절의 가족사진과 이야기.",
+  description: "서울 청담동의 실제 옛집과 가족의 기억. 옛 사진과, 편집 사실을 표시한 가족사진 재구성 이미지.",
 };
 
 export default function KoreanArchivePage() {

@@ -5,7 +5,7 @@ import "./archive.css";
 
 export const metadata: Metadata = {
   title: "The Childhood Album",
-  description: "The real Cheongdam-dong home where Esther Cho and her family remember their happiest years. Four family photographs and the stories behind them.",
+  description: "The real Cheongdam-dong home where Esther Cho and her family remember their happiest years. Four archival photographs and a clearly labeled digital reconstruction of a childhood family portrait.",
 };
 
 export default function ArchivePage() {

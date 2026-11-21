@@ -38,6 +38,14 @@ export function EstherStoryArticle({ story, locale }: Props) {
               {paragraph}
             </p>
           ))}
+          {story.number === "04" ? (
+            <p className={styles.familyPortraitCrosslink}>
+              <Link href={ko ? "/ko/archive/#cheongdam-family-portrait" : "/archive/#cheongdam-family-portrait"}>
+                {ko ? "그 시절 청담동 집 앞 가족사진 보기" : "See the family portrait in front of our Cheongdam-dong home"}
+                <span aria-hidden="true"> →</span>
+              </Link>
+            </p>
+          ) : null}
           {story.number === "16" ? (
             <figure className={styles.storyWish} aria-label={ko ? "작가가 이 그림책에 담고 싶은 마음" : "The wish Esther wants at the heart of the picture book"}>
               <figcaption className={styles.storyWishLabel}>{ko ? "작가가 이 동화의 핵심으로 삼고 싶다고 밝힌 말" : "ESTHER’S WISH FOR THIS STORY"}</figcaption>

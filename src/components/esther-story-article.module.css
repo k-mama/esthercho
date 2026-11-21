@@ -74,3 +74,15 @@
 
 .prose .storyWishProvenance { margin: 1.2rem 0 0; color: #79858b; font: 400 .8rem/1.6 var(--font-interface,sans-serif); }
 .korean .prose .storyWishProvenance { font-family: var(--font-korean,sans-serif); }
+
+.familyPortraitCrosslink { margin-top: 2.3rem; }
+.familyPortraitCrosslink a {
+  display: inline-block;
+  text-decoration: none;
+  color: #2a536c;
+  border-bottom: 1px solid #8198aa;
+  padding-bottom: .3rem;
+  font: 650 .86rem/1.6 var(--font-interface,sans-serif);
+}
+.familyPortraitCrosslink a:hover,.familyPortraitCrosslink a:focus-visible { color: #17384f; border-color: currentColor; }
+.korean .familyPortraitCrosslink a { font-family: var(--font-korean,sans-serif); }
