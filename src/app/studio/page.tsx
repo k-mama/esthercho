@@ -30,7 +30,7 @@ export default function StudioPage() {
             <p className="studio-kicker">LATER WORK</p>
             <h2 id="studio-reimagined-title">A Childhood Drawing, Revisited</h2>
             <p>
-              This digital collage was made later, using a drawing from Esther's childhood as its starting point. It is not the original drawing.
+              This digital collage was made later, using a drawing from Esther&apos;s childhood as its starting point. It is not the original drawing.
             </p>
           </div>
 

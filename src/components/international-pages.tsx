@@ -243,56 +243,39 @@ function IntlBooks({locale}:{locale:TranslationLocale}) {
     </div></section>
   </main>;
 }
+// A full literary translation of the 18 pieces has not been published in these locales.
+const storyAvailability: Record<TranslationLocale, {heading:string;intro:string;en:string;ko:string;read:string}> = {
+  de:{heading:"Zwei Geschichten in deutscher Übersetzung",intro:"Zwei Auszüge sind auf Deutsch zu lesen. Die vollständige Sammlung mit 18 Geschichten ist derzeit auf Englisch und Koreanisch verfügbar.",en:"Alle 18 Geschichten auf Englisch",ko:"Alle 18 Geschichten auf Koreanisch",read:"Auszug lesen"},
+  es:{heading:"Dos historias traducidas",intro:"Hay dos fragmentos en español. La colección completa de 18 historias está disponible por ahora en inglés y coreano.",en:"Leer las 18 historias en inglés",ko:"Leer las 18 historias en coreano",read:"Leer el fragmento"},
+  fr:{heading:"Deux récits traduits",intro:"Deux extraits sont proposés en français. La collection complète de 18 récits est pour l’instant disponible en anglais et en coréen.",en:"Lire les 18 récits en anglais",ko:"Lire les 18 récits en coréen",read:"Lire l’extrait"},
+  it:{heading:"Due racconti tradotti",intro:"Sono disponibili due estratti in italiano. La raccolta completa di 18 storie è attualmente disponibile in inglese e coreano.",en:"Leggi le 18 storie in inglese",ko:"Leggi le 18 storie in coreano",read:"Leggi l’estratto"},
+  ja:{heading:"翻訳された二つの物語",intro:"日本語では二つの抜粋を公開しています。全18編の物語は現在、英語版と韓国語版でお読みいただけます。",en:"英語で全18編を読む",ko:"韓国語で全18編を読む",read:"抜粋を読む"},
+  "pt-br":{heading:"Dois relatos traduzidos",intro:"Dois trechos estão disponíveis em português. A coleção completa de 18 histórias está disponível por enquanto em inglês e coreano.",en:"Ler as 18 histórias em inglês",ko:"Ler as 18 histórias em coreano",read:"Ler o trecho"},
+  "zh-cn":{heading:"两篇已翻译的故事",intro:"这里提供两篇中文节选。完整的18篇故事目前以英文和韩文发布。",en:"阅读英文版18篇故事",ko:"阅读韩文版18篇故事",read:"阅读节选"},
+  "zh-tw":{heading:"兩篇已翻譯的故事",intro:"這裡提供兩篇中文節選。完整的18篇故事目前以英文和韓文發布。",en:"閱讀英文版18篇故事",ko:"閱讀韓文版18篇故事",read:"閱讀節選"}
+};
 function IntlStories({locale}:{locale:TranslationLocale}) {
   const t=translations[locale];
-  const e=editorial[locale];
-  const slug=["my-father-dreamed-of-a-tiger","the-youngest-daughter-in-every-house"];
+  const c=storyAvailability[locale];
+  const slugs=["my-father-dreamed-of-a-tiger","the-youngest-daughter-in-every-house"];
+  const numbers=["01","03"];
   return <main className="intl-page">
     <Cover section="stories" locale={locale}/>
     <section className="intl-section"><div className="container">
       <p className="intl-overline">{t.storiesTitle}</p>
-      <h2>{t.storiesIntro}</h2>
-      <p className="intl-wide-copy">{t.storiesText}</p>
-      <p>{e.stories.introMore}</p>
-    </div></section>
-    <section className="intl-section intl-soft"><div className="container">
-      <p className="intl-overline">{e.stories.featuredLabel}</p>
-      <h2>{t.storyTitles[0]}</h2>
-      <p className="intl-wide-copy">{e.stories.featuredLead}</p>
-      <p>{e.stories.featuredNote}</p>
-      <Link className="intl-more" href={localizedHref(locale,`/stories/${slug[0]}`)}>{e.stories.featuredAction} ↗</Link>
-    </div></section>
-    <section className="intl-section"><div className="container">
-      <p className="intl-overline">{t.storiesTitle}</p>
-      <h2>{t.storiesCollection}</h2>
-      <p>{e.stories.collectionLead}</p>
+      <h2>{c.heading}</h2>
+      <p className="intl-wide-copy">{c.intro}</p>
       <ol className="intl-story-list">
-        {t.storyTitles.map((title,i)=><li key={title}>
-          <span>{String(i+1).padStart(2,"0")}</span>
-          {i<2 ? <Link href={localizedHref(locale,`/stories/${slug[i]}`)}>{title}</Link> : <span>{title}</span>}
-          <small>{i<2?t.storyCta:t.recorded}</small>
+        {slugs.map((slug,i)=><li key={slug}>
+          <span>{numbers[i]}</span>
+          <Link href={localizedHref(locale,`/stories/${slug}`)}>{t.storyTitles[i]}</Link>
+          <small>{c.read}</small>
         </li>)}
       </ol>
-    </div></section>
-    <section className="intl-section intl-soft"><div className="container">
-      <p className="intl-overline">{t.storiesTitle}</p>
-      <h2>{e.stories.timelineTitle}</h2><p className="intl-wide-copy">{e.stories.timelineBody}</p>
-      <ol className="intl-story-list">
-        {t.life.map((chapter,i) => <li key={chapter}>
-          <span>{String(i+1).padStart(2,"0")}</span><span>{chapter}</span>
-        </li>)}
-      </ol>
-    </div></section>
-    <section className="intl-section"><div className="container">
-      <p className="intl-overline">{t.storiesTitle}</p>
-      <h2>{e.stories.returningTitle}</h2>
-      <p className="intl-wide-copy">{e.stories.returningBody}</p>
-      <p>{t.storiesClosing}</p>
-      <Link className="intl-more" href={localizedHref(locale,"/archive")}>{e.stories.returningLink} ↗</Link>
-    </div></section>
-    <section className="intl-ending"><div className="container">
-      <h2>{t.quote}</h2><p className="intl-wide-copy">{t.quoteText}</p>
-      <Link className="intl-more" href={localizedHref(locale,"/archive")}>{t.archiveTitle} ↗</Link>
+      <div className="intl-translation-links">
+        <Link className="intl-more" href="/stories/">{c.en} ↗</Link>
+        <Link className="intl-more" href="/ko/stories/">{c.ko} ↗</Link>
+      </div>
     </div></section>
   </main>;
 }
@@ -307,7 +290,7 @@ function IntlStoryDetail({locale,which}:{locale:TranslationLocale;which:0|1}) {
   return <main className="intl-page">
     <section className="intl-section intl-story-head"><div className="container">
       <Link className="intl-more" href={localizedHref(locale,"/stories")}>← {t.storiesTitle}</Link>
-      <p className="intl-overline">{t.storiesTitle} {which===0?"01":"02"}</p>
+      <p className="intl-overline">{t.storiesTitle} {which===0?"01":"03"}</p>
       <h1>{title}</h1>
       <p className="intl-wide-copy">{which===0?e.detail.firstDeck:e.detail.secondDeck}</p>
     </div></section>
@@ -327,10 +310,10 @@ function IntlStoryDetail({locale,which}:{locale:TranslationLocale;which:0|1}) {
     </div></section>
     <section className="intl-ending"><div className="container">
       <p className="intl-overline">{t.storiesTitle}</p>
-      <h2>{which===0?t.storyTitles[1]:t.storyTitles[2]}</h2>
-      <p>{which===0?e.detail.nextTiger:e.detail.nextDaughter}</p>
-      <Link className="intl-more" href={localizedHref(locale,nextHref)}>
-        {which===0?e.detail.nextActionTiger:e.detail.nextActionDaughter} ↗
+      <h2>{which===0?t.storyTitles[1]:storyAvailability[locale].en}</h2>
+      <p>{which===0?e.detail.nextTiger:storyAvailability[locale].intro}</p>
+      <Link className="intl-more" href={which===0?localizedHref(locale,nextHref):"/stories/"}>
+        {which===0?e.detail.nextActionTiger:storyAvailability[locale].en} ↗
       </Link>
     </div></section>
   </main>;

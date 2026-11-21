@@ -176,7 +176,7 @@ export default function Home() {
             <p className={styles.eyebrow}>STORIES OF CARE</p>
             <h2 id="care-title">She made room for other people, too.</h2>
             <p>
-              During nine years in Malaysia, Esther helped teach young children at church and took part in women's association and meal-service activities. Her photographs show the people she worked alongside.
+              During nine years in Malaysia, Esther helped teach young children at church and took part in women&apos;s association and meal-service activities. Her photographs show the people she worked alongside.
             </p>
             <Link href="/stories/" className={styles.textLink}>
               Read the stories
@@ -202,7 +202,7 @@ export default function Home() {
             <p className={styles.eyebrow}>THE STUDIO</p>
             <h2 id="studio-title">A childhood sketch, reimagined.</h2>
             <p>
-              This collage began with a drawing from Esther's childhood. The image shown here is a later digital reinterpretation, not the original sketch.
+              This collage began with a drawing from Esther&apos;s childhood. The image shown here is a later digital reinterpretation, not the original sketch.
             </p>
             <Link href="/studio/" className={styles.textLink}>
               Enter the studio
