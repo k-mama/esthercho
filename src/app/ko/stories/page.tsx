@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import { PageCover } from "@/components/page-cover";
 import { storyIndex } from "@/content/esther-story-archive";
 import "../../stories/stories.css";
@@ -44,16 +43,6 @@ export default function KoreanStoriesPage() {
           </div>
         </div>
       </section>
-      <section id="story-two" className="stories-meals-teaser" aria-labelledby="story-two-link">
-        <div className="container stories-meals-teaser-inner">
-          <div><p className="stories-kicker">식탁의 기록 · 02</p>
-          <h2 id="story-two-link">삼시세끼, 미슐랭 3스타 셰프처럼</h2>
-          <p>약 6~7년 동안 시부모님과 함께 살며 매일 아침, 점심, 저녁을 차렸다. 밥상 사진 57장이 남아 있다.</p>
-          <Link href="/ko/stories/three-meals-a-day/" className="stories-text-link">02번 이야기와 밥상 사진 57장 보기 →</Link></div>
-          <Image src="/media/esther/family-meals/meal-15.webp" alt="조성연 작가가 차린 실제 식사 사진" loading="lazy" sizes="(max-width: 700px) 90vw, 28vw" width={600} height={820}/>
-        </div>
-      </section>
-
 <section className="stories-opening" aria-labelledby="opening-collection-title">
       <div className="container">
         <header className="stories-section-heading">
@@ -97,7 +86,7 @@ export default function KoreanStoriesPage() {
             })}
           </ol>
         </div>
-        <div className="stories-act">
+        <div className="stories-act" id="story-two">
           <header className="stories-act-heading">
             <p className="stories-kicker">제03장</p>
             <h3>이제 내가 차리는 식탁</h3>

@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import { PageCover } from "@/components/page-cover";
 import { storyIndex } from "@/content/esther-story-archive";
 import "./stories.css";
@@ -49,16 +48,6 @@ export default function StoriesPage() {
           </div>
         </div>
       </section>
-      <section id="story-two" className="stories-meals-teaser" aria-labelledby="story-two-link">
-        <div className="container stories-meals-teaser-inner">
-          <div><p className="stories-kicker">FAMILY TABLE · 02</p>
-          <h2 id="story-two-link">Three Meals a Day</h2>
-          <p>For about six or seven years, Esther prepared breakfast, lunch, and dinner for her parents-in-law. She still has 57 photographs of those meals.</p>
-          <Link href="/stories/three-meals-a-day/" className="stories-text-link">Read story 02 and view 57 real meal photographs →</Link></div>
-          <Image src="/media/esther/family-meals/meal-15.webp" alt="A real meal prepared by Esther Cho" loading="lazy" sizes="(max-width: 700px) 90vw, 28vw" width={600} height={820}/>
-        </div>
-      </section>
-
 <section className="stories-opening" aria-labelledby="opening-collection-title">
       <div className="container">
         <header className="stories-section-heading">
@@ -102,7 +91,7 @@ export default function StoriesPage() {
             })}
           </ol>
         </div>
-        <div className="stories-act">
+        <div className="stories-act" id="story-two">
           <header className="stories-act-heading">
             <p className="stories-kicker">ACT 03</p>
             <h3>The Table I Set</h3>
