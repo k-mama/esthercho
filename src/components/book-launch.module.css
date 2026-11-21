@@ -408,3 +408,11 @@
   .editionCard { grid-template-columns: 1fr; gap: 2rem; }
   .editionFigure { width: min(60%, 230px); margin-inline: auto; }
 }
+
+/* The author's own chosen words. Restrict to the Books page; avoid duplicating on homepage hero. */
+.authorWish { margin-top: clamp(3rem,6vw,5rem); padding-top: clamp(2.2rem,5vw,4.5rem); padding-bottom: clamp(2.1rem,4vw,3.5rem); border-top: 1px solid rgba(40,64,84,.18); border-bottom: 1px solid rgba(40,64,84,.18); }
+.authorWishLabel { margin: 0 0 1.4rem; color: #627e95; font: 650 .73rem/1.6 var(--font-interface,sans-serif); letter-spacing: .06em; }
+.authorWish blockquote { margin: 0; max-width: 970px; font: 400 clamp(1.9rem,4vw,3.5rem)/1.4 var(--font-editorial,Georgia,serif); color: #17334b; letter-spacing: -.028em; text-wrap: balance; }
+.authorWishTranslation { margin: 1rem 0 1.6rem; color: #73828c; font: 400 clamp(1.04rem,1.7vw,1.26rem)/1.7 var(--font-editorial,Georgia,serif); }
+.authorWishLink { display: inline-block; padding: .2rem 0; color: #2b526d; border-bottom: 1px solid rgba(40,64,84,.45); font: 600 .82rem/1.65 var(--font-interface,sans-serif); text-decoration: none; }
+.authorWishLink:hover,.authorWishLink:focus-visible { color: #142f44; border-color: currentColor; }

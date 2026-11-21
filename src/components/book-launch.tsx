@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { bigDreamsAuthorWish } from "@/content/big-dreams-author-wish";
 import styles from "./book-launch.module.css";
 
 type Locale = "en" | "ko";
@@ -191,6 +192,18 @@ export function BookLaunch({ locale, placement }: { locale: Locale; placement: P
           </figure>
         </div>
       </div>
+
+      {placement === "books" && (
+        <aside className={`container ${styles.authorWish}`} aria-label={locale === "ko" ? "작가의 그림책 메시지" : "Author's wish for the picture book"}>
+          <p className={styles.authorWishLabel}>{locale === "ko" ? "작가가 이 동화의 중심에 두고 싶은 말" : "A WISH FOR THE STORY"}</p>
+          <blockquote lang={locale}>{bigDreamsAuthorWish[locale]}</blockquote>
+          <p className={styles.authorWishTranslation} lang={locale === "ko" ? "en" : "ko"}>{locale === "ko" ? bigDreamsAuthorWish.en : bigDreamsAuthorWish.ko}</p>
+          <Link className={styles.authorWishLink} href={locale === "ko" ? "/ko/stories/the-picture-book-i-made-for-my-son/" : "/stories/the-picture-book-i-made-for-my-son/"}>
+            {locale === "ko" ? "이 그림책이 시작된 이야기 읽기" : "Read how this picture book began"}
+            <span aria-hidden="true"> →</span>
+          </Link>
+        </aside>
+      )}
 
       {placement === "books" && (
         <div className={`container ${styles.editionCard}`} id="german-edition">

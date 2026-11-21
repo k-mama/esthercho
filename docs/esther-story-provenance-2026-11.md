@@ -47,3 +47,6 @@ The publisher clarified that this picture book began with the author's young son
 
 ## Story 16 correction — exact quote (2026-11-21)
 Publisher Emma corrected the son's original words to **“I dream of becoming a Big Black doggy.”** This supersedes both earlier versions, “I’m going to be a big doggy!” and the mixed-language Korean quotation. The English sentence, spelling and capitalization are preserved verbatim in the story. The Korean story title summarizes its meaning without pretending to be the original Korean wording. The creative origin and adult-son multilingual revision remain as previously confirmed.
+
+## Book theme from author's message — November 21, 2026
+The publisher supplied a screenshot of a direct message from Esther Cho. Esther wrote: “무엇이든 가능하다고 믿는, 그 경이로운 마음을 부디 잃지 않기를.” / “May you never lose the wonder of believing anything is possible.” Esther added that she wanted to make this sentence a **core keyword** of the picture book. Preserve the wording exactly. This statement is an *authorial intention*, not evidence that the quotation appears in the printed book. The private message screenshot must not be made publicly accessible. The quote is shown on Story 16 and the Books page with explicit “wish for the story” framing.

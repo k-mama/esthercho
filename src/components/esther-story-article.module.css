@@ -63,3 +63,11 @@
 .bookLink:hover,.bookLink:focus-visible { color: #142f44; border-color: currentColor; }
 .korean .prose .bookLabel,.korean .bookLink { font-family: var(--font-korean,sans-serif); }
 @media(max-width:600px){ .bookConnection { grid-template-columns: minmax(0,120px) minmax(0,1fr); gap: 1.25rem; } .prose .bookTitle { font-size: 1.3rem; } }
+
+/* Author's exact wish, clearly separated from the son's original remark and the published book. */
+.storyWish { margin: clamp(3rem, 6vw, 5rem) 0 0; padding: clamp(1.8rem,4vw,3rem) 0; border-top: 1px solid rgba(55,91,119,.23); border-bottom: 1px solid rgba(55,91,119,.23); }
+.storyWishLabel { margin: 0 0 1.5rem; font: 650 .73rem/1.6 var(--font-interface,sans-serif); color: #648096; letter-spacing: .08em; }
+.storyWish blockquote { margin: 0; font: 400 clamp(1.7rem,3.2vw,2.65rem)/1.45 var(--font-editorial,Georgia,serif); color: #17334b; letter-spacing: -.022em; text-wrap: pretty; }
+.prose .storyWishTranslation { margin: 1.1rem 0 0; color: #70818c; font: 400 clamp(.97rem,1.35vw,1.16rem)/1.8 var(--font-editorial,Georgia,serif); }
+.korean .storyWish blockquote,.korean .storyWishLabel { font-family: var(--font-korean,sans-serif); word-break: keep-all; }
+.korean .storyWish blockquote { font-weight: 450; }

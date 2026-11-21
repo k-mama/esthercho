@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { type RecordedStory, type StoryLocale, storyHref, recordedStories } from "@/content/esther-story-archive";
+import { bigDreamsAuthorWish } from "@/content/big-dreams-author-wish";
 import styles from "./esther-story-article.module.css";
 
 type Props = { story: RecordedStory; locale: StoryLocale };
@@ -37,6 +38,13 @@ export function EstherStoryArticle({ story, locale }: Props) {
               {paragraph}
             </p>
           ))}
+          {story.number === "16" ? (
+            <figure className={styles.storyWish} aria-label={ko ? "작가가 이 그림책에 담고 싶은 마음" : "The wish Esther wants at the heart of the picture book"}>
+              <figcaption className={styles.storyWishLabel}>{ko ? "이 동화의 중심에 두고 싶은 마음" : "A WISH FOR THE STORY"}</figcaption>
+              <blockquote lang={locale}>{bigDreamsAuthorWish[locale]}</blockquote>
+              <p className={styles.storyWishTranslation} lang={ko ? "en" : "ko"}>{ko ? bigDreamsAuthorWish.en : bigDreamsAuthorWish.ko}</p>
+            </figure>
+          ) : null}
           {story.number === "16" ? (
             <div className={styles.bookConnection}>
               <Link
