@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { type RecordedStory, type StoryLocale, storyHref, recordedStories } from "@/content/esther-story-archive";
+import { type RecordedStory, type StoryLocale, storyHref, storyIndex, recommendedReadingOrder } from "@/content/esther-story-archive";
 import { bigDreamsAuthorWish } from "@/content/big-dreams-author-wish";
 import styles from "./esther-story-article.module.css";
 
@@ -9,9 +9,9 @@ type Props = { story: RecordedStory; locale: StoryLocale };
 export function EstherStoryArticle({ story, locale }: Props) {
   const t = story[locale];
   const ko = locale === "ko";
-  const next = String(Number(story.number) + 1).padStart(2, "0");
-  const hasNext = Number(next) <= 18;
-  const nextStory = recordedStories.find((candidate) => candidate.number === next);
+  const next = recommendedReadingOrder[recommendedReadingOrder.indexOf(story.number as typeof recommendedReadingOrder[number]) + 1];
+  const hasNext = Boolean(next);
+  const nextStory = storyIndex(locale).find((candidate) => candidate.number === next);
 
   return (
     <main className={`${styles.page} ${ko ? styles.korean : ""}`} lang={locale}>
@@ -45,6 +45,25 @@ export function EstherStoryArticle({ story, locale }: Props) {
                 <span aria-hidden="true"> →</span>
               </Link>
             </p>
+          ) : null}
+          {story.number === "16" ? (
+            <figure className={styles.sonMemory} aria-label={ko ? "작가와 아들의 실제 어린 시절 사진" : "Authentic photographs from her son's childhood"}>
+              <Image
+                src="/media/esther/son-story/son-with-mother-hammock.webp"
+                alt={ko ? "해먹에서 함께 쉬고 있는 조성연 작가와 어린 아들" : "Esther Cho and her young son resting together in a hammock"}
+                width={1003} height={644}
+                sizes="(max-width: 900px) 92vw, 720px"
+              />
+              <figcaption>{ko ? "어린 아들과 함께한 날. 그 말을 했던 순간을 촬영한 사진은 아닙니다." : "A day with her young son. This photograph does not depict the moment he spoke those words."}</figcaption>
+              <div className={styles.sonMemoryMore}>
+                <Image src="/media/esther/son-story/son-laughing-armchair.webp"
+                  alt={ko ? "안락의자에 누워 웃는 어린 아들" : "Her young son smiling from an armchair"}
+                  width={1183} height={775} sizes="(max-width: 700px) 90vw, 330px" />
+                <Image src="/media/esther/son-story/son-blowing-bubbles.webp"
+                  alt={ko ? "털모자를 쓰고 비눗방울을 부는 어린 아들" : "Her young son blowing bubbles in a winter hat"}
+                  width={981} height={1316} sizes="(max-width: 700px) 90vw, 330px"/>
+              </div>
+            </figure>
           ) : null}
           {story.number === "16" ? (
             <figure className={styles.storyWish} aria-label={ko ? "작가가 이 그림책에 담고 싶은 마음" : "The wish Esther wants at the heart of the picture book"}>
@@ -90,11 +109,11 @@ export function EstherStoryArticle({ story, locale }: Props) {
 
       <nav className={styles.navigation} aria-label={ko ? "다음 이야기" : "Continue reading"}>
         <div className={`container ${styles.navigationInner}`}>
-          <p className={styles.eyebrow}>{ko ? "기억의 다음 페이지" : "KEEP READING"}</p>
+          <p className={styles.eyebrow}>{ko ? "추천 이어 읽기" : "CONTINUE THE STORY"}</p>
           {hasNext ? (
             <>
               <p className={styles.nextNumber}>{next}</p>
-              <h2>{nextStory ? nextStory[locale].title : (ko ? "삼시세끼, 미슐랭 3스타 셰프처럼" : "Three Meals a Day")}</h2>
+              <h2>{nextStory?.title}</h2>
               <Link className={styles.nextLink} href={storyHref(locale, next)}>
                 {ko ? `${next}번으로 이어 읽기` : `Continue to story ${next}`} <span aria-hidden="true">→</span>
               </Link>

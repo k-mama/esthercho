@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PageCover } from "@/components/page-cover";
-import { FamilyMealsGallery } from "@/components/family-meals-gallery";
 import { storyIndex } from "@/content/esther-story-archive";
 import "../../stories/stories.css";
 
@@ -12,17 +11,6 @@ export const metadata: Metadata = {
 };
 
 const openingCollection = storyIndex("ko");
-
-const lifeChapters = [
-  "어린 시절",
-  "아버지와 함께한 시간",
-  "7월 이후",
-  "학교와 미술",
-  "가족이 되어 가는 시간",
-  "작가가 되어 가는 시간",
-  "하나님과 함께한 삶",
-  "지금의 삶",
-];
 
 export default function KoreanStoriesPage() {
   return (
@@ -40,25 +28,6 @@ export default function KoreanStoriesPage() {
         shade="medium"
       />
 
-      <section className="stories-intro" aria-labelledby="stories-intro-title">
-        <div className="container stories-intro-inner">
-          <p className="stories-kicker">기억이 돌아오는 방식</p>
-          <div className="stories-intro-grid">
-            <h2 id="stories-intro-title">기억은 순서대로 오지 않는다.</h2>
-            <div className="stories-intro-copy">
-              <p>
-                어떤 이야기는 집에서 시작하고, 어떤 이야기는 7월의 오후나
-                깨끗한 잠옷, 수십 년 전에 들은 한 문장에서 시작한다.
-              </p>
-              <p>
-                사람 하나, 사진 한 장, 계절 하나가 오래 잠잠하던 기억을
-                다시 데려오기도 한다. 이야기는 그렇게 하나씩 늘어난다.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section className="stories-feature" aria-labelledby="start-here-title">
         <div className="container stories-feature-inner stories-feature-text-only">
           <div className="stories-feature-copy">
@@ -69,88 +38,102 @@ export default function KoreanStoriesPage() {
               조성연이 태어나기 전, 아버지는 꿈에서 호랑이를 보았다. 태어난
               아이는 딸이었다. 가족의 농담은 “고양이였나 보다”였다.
             </p>
-            <p>아버지는 유쾌하고 농담을 잘하는 분이었다.</p>
+
             <Link href="/ko/stories/my-father-dreamed-of-a-tiger/" className="stories-text-link">01번 이야기 읽기</Link>
           </div>
         </div>
       </section>
-
-
-      <FamilyMealsGallery locale="ko" />
-
-      <section className="stories-feature" aria-labelledby="story-three-title">
-        <div className="container stories-feature-inner stories-feature-text-only">
-          <div className="stories-feature-copy">
-            <p className="stories-kicker">다음 이야기</p>
-            <p className="stories-feature-number">03</p>
-            <h2 id="story-three-title">가는 집마다 막내딸</h2>
-            <p>우리 집에서는 맏이였지만, 다른 집에 가면 막내딸이 되곤 했다.</p>
-            <Link href="/ko/stories/the-youngest-daughter-in-every-house/" className="stories-text-link">03번 이야기 읽기</Link>
-          </div>
+      <section id="story-two" className="stories-meals-teaser" aria-labelledby="story-two-link">
+        <div className="container stories-meals-teaser-inner">
+          <div><p className="stories-kicker">식탁의 기록 · 02</p>
+          <h2 id="story-two-link">삼시세끼, 미슐랭 3스타 셰프처럼</h2>
+          <p>약 6~7년 동안 시부모님과 함께 살며 매일 아침, 점심, 저녁을 차렸다. 밥상 사진 57장이 남아 있다.</p>
+          <Link href="/ko/stories/three-meals-a-day/" className="stories-text-link">02번 이야기와 밥상 사진 57장 보기 →</Link></div>
+          <img src="/media/esther/family-meals/meal-15.webp" alt="조성연 작가가 차린 실제 식사 사진" loading="lazy" width="600" height="820"/>
         </div>
       </section>
 
-      <section className="stories-opening" aria-labelledby="opening-collection-title">
-        <div className="container">
-          <header className="stories-section-heading">
-            <p className="stories-kicker">먼저 꺼낸 이야기들</p>
-            <h2 id="opening-collection-title">살아온 이야기, 열여덟 편.</h2>
-            <p>작가가 기억하고 직접 이야기한 장면들을 모았다.</p>
+<section className="stories-opening" aria-labelledby="opening-collection-title">
+      <div className="container">
+        <header className="stories-section-heading">
+          <p className="stories-kicker">살아온 이야기</p>
+          <h2 id="opening-collection-title">열여덟 편의 이야기, 네 개의 흐름.</h2>
+          <p>이야기 번호는 그대로 두고, 읽는 길만 새롭게 엮었습니다.</p>
+        </header>
+        <div className="stories-act">
+          <header className="stories-act-heading">
+            <p className="stories-kicker">제01장</p>
+            <h3>가장 행복했던 집</h3>
+            <p>아버지의 농담과 청담동의 마당, 가족이 함께한 날들.</p>
           </header>
-
           <ol className="stories-opening-list">
-            {openingCollection.map((story) => (
-              <li className="stories-opening-item" key={story.number}>
+            {["01","03","04","05","09","10","06"].map((n) => {
+              const story = openingCollection.find((item) => item.number === n);
+              return story ? <li className="stories-opening-item" key={story.number}>
                 <span className="stories-opening-number">{story.number}</span>
-                <div className="stories-opening-title-group">
-                  <p className="stories-opening-meta">{story.meta}</p>
-                  <h3>{("href" in story && story.href) ? <Link href={story.href}>{story.title}</Link> : story.title}</h3>
-                </div>
+                <div className="stories-opening-title-group"><p className="stories-opening-meta">{story.meta}</p>
+                  <h4><Link href={story.href}>{story.title}</Link></h4></div>
                 <Link href={story.href} className="stories-opening-action">이야기 읽기 <span aria-hidden="true">→</span></Link>
-              </li>
-            ))}
+              </li> : null;
+            })}
           </ol>
         </div>
-      </section>
-
-      <section className="stories-house" aria-labelledby="life-chapters-title">
-        <div className="container stories-house-editorial stories-house-editorial-text-only">
-          <div className="stories-house-copy">
-            <p className="stories-kicker">시간을 따라</p>
-            <h2 id="life-chapters-title">그래도 삶에는 시간이 있다.</h2>
-            <p>
-              어린 시절, 아버지와 함께한 시간, 7월, 학교와 미술, 가족과
-              믿음, 지금의 삶. 기억은 뒤섞여 와도 살아온 시간은 남아 있다.
-            </p>
-          </div>
-
-          <ol className="stories-chapter-list">
-            {lifeChapters.map((chapter, index) => (
-              <li key={chapter}>
-                <span>{String(index + 1).padStart(2, "0")}</span>
-                {chapter}
-              </li>
-            ))}
+        <div className="stories-act">
+          <header className="stories-act-heading">
+            <p className="stories-kicker">제02장</p>
+            <h3>중학교 1학년, 그해 7월</h3>
+            <p>아버지를 잃은 뒤에도 계속되던 하루. 그리고 미술의 길.</p>
+          </header>
+          <ol className="stories-opening-list">
+            {["07","11"].map((n) => {
+              const story = openingCollection.find((item) => item.number === n);
+              return story ? <li className="stories-opening-item" key={story.number}>
+                <span className="stories-opening-number">{story.number}</span>
+                <div className="stories-opening-title-group"><p className="stories-opening-meta">{story.meta}</p>
+                  <h4><Link href={story.href}>{story.title}</Link></h4></div>
+                <Link href={story.href} className="stories-opening-action">이야기 읽기 <span aria-hidden="true">→</span></Link>
+              </li> : null;
+            })}
           </ol>
         </div>
-      </section>
-
-      <section className="stories-newly" aria-labelledby="newly-remembered-title">
-        <div className="container stories-newly-inner stories-newly-text-only">
-          <div className="stories-newly-copy">
-            <p className="stories-kicker">기억이 돌아올 때</p>
-            <h2 id="newly-remembered-title">별것 아닌 것이 기억을 데려온다.</h2>
-            <p>
-              냄새나 식탁, 계절, 평범한 물건 하나면 충분할 때가 있다. 다시
-              떠오른 장면은 그때 적어 둔다.
-            </p>
-            <Link href="/ko/archive/" className="stories-text-link">
-              사진을 따라가기
-            </Link>
-          </div>
+        <div className="stories-act">
+          <header className="stories-act-heading">
+            <p className="stories-kicker">제03장</p>
+            <h3>이제 내가 차리는 식탁</h3>
+            <p>어른이 된 뒤의 가족, 식사, 그리고 아들에게 만든 동화.</p>
+          </header>
+          <ol className="stories-opening-list">
+            {["02","12","15","16"].map((n) => {
+              const story = openingCollection.find((item) => item.number === n);
+              return story ? <li className="stories-opening-item" key={story.number}>
+                <span className="stories-opening-number">{story.number}</span>
+                <div className="stories-opening-title-group"><p className="stories-opening-meta">{story.meta}</p>
+                  <h4><Link href={story.href}>{story.title}</Link></h4></div>
+                <Link href={story.href} className="stories-opening-action">이야기 읽기 <span aria-hidden="true">→</span></Link>
+              </li> : null;
+            })}
+          </ol>
         </div>
-      </section>
-
+        <div className="stories-act">
+          <header className="stories-act-heading">
+            <p className="stories-kicker">제04장</p>
+            <h3>행복을 모으는 사람</h3>
+            <p>비 오는 날과 아침 말씀, 노을. 시간이 지난 뒤 남은 기억들.</p>
+          </header>
+          <ol className="stories-opening-list">
+            {["13","14","17","18","08"].map((n) => {
+              const story = openingCollection.find((item) => item.number === n);
+              return story ? <li className="stories-opening-item" key={story.number}>
+                <span className="stories-opening-number">{story.number}</span>
+                <div className="stories-opening-title-group"><p className="stories-opening-meta">{story.meta}</p>
+                  <h4><Link href={story.href}>{story.title}</Link></h4></div>
+                <Link href={story.href} className="stories-opening-action">이야기 읽기 <span aria-hidden="true">→</span></Link>
+              </li> : null;
+            })}
+          </ol>
+        </div>
+      </div>
+    </section>
       <section className="stories-happiness" aria-labelledby="happiness-title">
         <div className="container stories-happiness-inner">
           <p className="stories-kicker">행복을 모으는 사람</p>
@@ -159,7 +142,7 @@ export default function KoreanStoriesPage() {
             <p>
               힘든 일도 있었다. 그런데 이상하게 웃었던 장면이 먼저 떠오를
               때가 있다. 둘 다 사실이다.
-            </p>
+            </p>            <Link className="stories-text-link" href="/ko/stories/the-happiness-collector/">08번 이야기 읽기 →</Link>
           </div>
         </div>
       </section>

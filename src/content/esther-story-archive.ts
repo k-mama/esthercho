@@ -516,13 +516,16 @@ export const storyIndex = (locale: StoryLocale) => {
     number: "02",
     title: locale === "ko" ? "삼시세끼, 미슐랭 3스타 셰프처럼" : "Three Meals a Day",
     meta: locale === "ko" ? "가족 · 식탁" : "Family · Table",
-    href: "#story-two",
+    href: `${locale === "ko" ? "/ko" : ""}/stories/three-meals-a-day/`,
   });
   return list.sort((a, b) => Number(a.number) - Number(b.number));
 };
 
 export const storyHref = (locale: StoryLocale, number: string) => {
-  if (number === "02") return locale === "ko" ? "/ko/stories/#story-two" : "/stories/#story-two";
+  if (number === "02") return locale === "ko" ? "/ko/stories/three-meals-a-day/" : "/stories/three-meals-a-day/";
   const found = storyIndex(locale).find((s) => s.number === number);
   return found?.href || (locale === "ko" ? "/ko/stories/" : "/stories/");
 };
+
+/** Curated reader route. Original story numbers and chronology are not changed. */
+export const recommendedReadingOrder = ["01","03","04","05","09","10","06","07","11","02","12","15","16","13","14","17","18","08"] as const;

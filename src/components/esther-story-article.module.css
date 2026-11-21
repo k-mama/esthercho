@@ -86,3 +86,12 @@
 }
 .familyPortraitCrosslink a:hover,.familyPortraitCrosslink a:focus-visible { color: #17384f; border-color: currentColor; }
 .korean .familyPortraitCrosslink a { font-family: var(--font-korean,sans-serif); }
+
+/* Authenticated photographs from Story 16, at their original aspect ratios. */
+.sonMemory { margin: 3.2rem 0 3.5rem; }
+.sonMemory > img { display: block; width: 100%; height: auto; border-radius: 3px; }
+.sonMemory figcaption { color: #697d88; font: 400 .8rem/1.7 var(--font-interface,sans-serif); padding: .8rem 0 1.5rem; }
+.sonMemoryMore { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: clamp(.8rem,2vw,1.5rem); align-items: start; }
+.sonMemoryMore img { display:block; width:100%; height:auto; border-radius:3px; }
+.korean .sonMemory figcaption { font-family: var(--font-korean,sans-serif); }
+@media(max-width:560px){ .sonMemoryMore { grid-template-columns: 1fr; } }

@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PageCover } from "@/components/page-cover";
-import { FamilyMealsGallery } from "@/components/family-meals-gallery";
 import { storyIndex } from "@/content/esther-story-archive";
 import "./stories.css";
 
@@ -12,17 +11,6 @@ export const metadata: Metadata = {
 };
 
 const openingCollection = storyIndex("en");
-
-const lifeChapters = [
-  "Childhood",
-  "The Years with Father",
-  "After July",
-  "School and Art",
-  "Becoming a Family",
-  "Becoming a Writer",
-  "A Life with God",
-  "The Life Now",
-];
 
 export default function StoriesPage() {
   return (
@@ -40,25 +28,6 @@ export default function StoriesPage() {
         shade="medium"
       />
 
-      <section className="stories-intro" aria-labelledby="stories-intro-title">
-        <div className="container stories-intro-inner">
-          <p className="stories-kicker">HOW MEMORY RETURNS</p>
-          <div className="stories-intro-grid">
-            <h2 id="stories-intro-title">Memory does not arrive in order.</h2>
-            <div className="stories-intro-copy">
-              <p>
-                A story may begin with a house, a July afternoon, a clean pair of
-                pajamas, or a sentence someone said decades ago.
-              </p>
-              <p>
-                That is how these pages grow. A person, photograph, season, or
-                ordinary object can bring back something that had gone quiet.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section className="stories-feature" aria-labelledby="start-here-title">
         <div className="container stories-feature-inner stories-feature-text-only">
           <div className="stories-feature-copy">
@@ -69,9 +38,7 @@ export default function StoriesPage() {
               Before Esther was born, her father dreamed of a tiger. The baby was
               a girl. The family joke was that perhaps it had been a cat.
             </p>
-            <p>
-              His joke is one of the first stories Esther tells about her childhood.
-            </p>
+
             <Link
               href="/stories/my-father-dreamed-of-a-tiger/"
               className="stories-text-link"
@@ -81,96 +48,97 @@ export default function StoriesPage() {
           </div>
         </div>
       </section>
-
-
-      <FamilyMealsGallery locale="en" />
-
-      <section className="stories-feature" aria-labelledby="story-three-title">
-        <div className="container stories-feature-inner stories-feature-text-only">
-          <div className="stories-feature-copy">
-            <p className="stories-kicker">THE NEXT MEMORY</p>
-            <p className="stories-feature-number">03</p>
-            <h2 id="story-three-title">The Youngest Daughter in Every House</h2>
-            <p>At home she was the oldest child. In other houses, she kept becoming the youngest daughter.</p>
-            <Link href="/stories/the-youngest-daughter-in-every-house/" className="stories-text-link">Read story 03</Link>
-          </div>
+      <section id="story-two" className="stories-meals-teaser" aria-labelledby="story-two-link">
+        <div className="container stories-meals-teaser-inner">
+          <div><p className="stories-kicker">FAMILY TABLE · 02</p>
+          <h2 id="story-two-link">Three Meals a Day</h2>
+          <p>For about six or seven years, Esther prepared breakfast, lunch, and dinner for her parents-in-law. She still has 57 photographs of those meals.</p>
+          <Link href="/stories/three-meals-a-day/" className="stories-text-link">Read story 02 and view 57 real meal photographs →</Link></div>
+          <img src="/media/esther/family-meals/meal-15.webp" alt="A real meal prepared by Esther Cho" loading="lazy" width="600" height="820"/>
         </div>
       </section>
 
-      <section className="stories-opening" aria-labelledby="opening-collection-title">
-        <div className="container">
-          <header className="stories-section-heading">
-            <p className="stories-kicker">LIFE STORIES</p>
-            <h2 id="opening-collection-title">The stories so far.</h2>
-            <p>Eighteen stories drawn from memories Esther has shared.</p>
+<section className="stories-opening" aria-labelledby="opening-collection-title">
+      <div className="container">
+        <header className="stories-section-heading">
+          <p className="stories-kicker">LIFE STORIES</p>
+          <h2 id="opening-collection-title">Eighteen stories. Four ways through a life.</h2>
+          <p>Original story numbers remain unchanged. This is a suggested reading route.</p>
+        </header>
+        <div className="stories-act">
+          <header className="stories-act-heading">
+            <p className="stories-kicker">ACT 01</p>
+            <h3>The House Where We Were Happiest</h3>
+            <p>A father's joke, the garden in Cheongdam-dong, and the days the family shared.</p>
           </header>
-
           <ol className="stories-opening-list">
-            {openingCollection.map((story) => (
-              <li className="stories-opening-item" key={story.number}>
+            {["01","03","04","05","09","10","06"].map((n) => {
+              const story = openingCollection.find((item) => item.number === n);
+              return story ? <li className="stories-opening-item" key={story.number}>
                 <span className="stories-opening-number">{story.number}</span>
-                <div className="stories-opening-title-group">
-                  <p className="stories-opening-meta">{story.meta}</p>
-                  <h3>
-                    {story.href ? (
-                      <Link href={story.href}>{story.title}</Link>
-                    ) : (
-                      story.title
-                    )}
-                  </h3>
-                </div>
-                {story.href ? (
-                  <Link href={story.href} className="stories-opening-action">
-                    Read story <span aria-hidden="true">→</span>
-                  </Link>
-                ) : (
-                  <span className="stories-opening-state">Recorded</span>
-                )}
-              </li>
-            ))}
+                <div className="stories-opening-title-group"><p className="stories-opening-meta">{story.meta}</p>
+                  <h4><Link href={story.href}>{story.title}</Link></h4></div>
+                <Link href={story.href} className="stories-opening-action">Read <span aria-hidden="true">→</span></Link>
+              </li> : null;
+            })}
           </ol>
         </div>
-      </section>
-
-      <section className="stories-house" aria-labelledby="life-chapters-title">
-        <div className="container stories-house-editorial stories-house-editorial-text-only">
-          <div className="stories-house-copy">
-            <p className="stories-kicker">THROUGH THE YEARS</p>
-            <h2 id="life-chapters-title">A life still has a timeline.</h2>
-            <p>
-              Childhood, the years with her father, July, school, art, family,
-              faith, and the present sit in their own order even when memory does
-              not.
-            </p>
-          </div>
-
-          <ol className="stories-chapter-list">
-            {lifeChapters.map((chapter, index) => (
-              <li key={chapter}>
-                <span>{String(index + 1).padStart(2, "0")}</span>
-                {chapter}
-              </li>
-            ))}
+        <div className="stories-act">
+          <header className="stories-act-heading">
+            <p className="stories-kicker">ACT 02</p>
+            <h3>July, My First Year of Middle School</h3>
+            <p>The ordinary days that continued after her father's death, and her years studying art.</p>
+          </header>
+          <ol className="stories-opening-list">
+            {["07","11"].map((n) => {
+              const story = openingCollection.find((item) => item.number === n);
+              return story ? <li className="stories-opening-item" key={story.number}>
+                <span className="stories-opening-number">{story.number}</span>
+                <div className="stories-opening-title-group"><p className="stories-opening-meta">{story.meta}</p>
+                  <h4><Link href={story.href}>{story.title}</Link></h4></div>
+                <Link href={story.href} className="stories-opening-action">Read <span aria-hidden="true">→</span></Link>
+              </li> : null;
+            })}
           </ol>
         </div>
-      </section>
-
-      <section className="stories-newly" aria-labelledby="newly-remembered-title">
-        <div className="container stories-newly-inner stories-newly-text-only">
-          <div className="stories-newly-copy">
-            <p className="stories-kicker">WHEN MEMORY RETURNS</p>
-            <h2 id="newly-remembered-title">Something small can bring a whole scene back.</h2>
-            <p>
-              A smell, a table, a season, an ordinary object. Sometimes that is
-              enough. When another memory returns, it will be written down.
-            </p>
-            <Link href="/archive/" className="stories-text-link">
-              Follow the photographs
-            </Link>
-          </div>
+        <div className="stories-act">
+          <header className="stories-act-heading">
+            <p className="stories-kicker">ACT 03</p>
+            <h3>The Table I Set</h3>
+            <p>Family life, meals, and the picture book she made for her son.</p>
+          </header>
+          <ol className="stories-opening-list">
+            {["02","12","15","16"].map((n) => {
+              const story = openingCollection.find((item) => item.number === n);
+              return story ? <li className="stories-opening-item" key={story.number}>
+                <span className="stories-opening-number">{story.number}</span>
+                <div className="stories-opening-title-group"><p className="stories-opening-meta">{story.meta}</p>
+                  <h4><Link href={story.href}>{story.title}</Link></h4></div>
+                <Link href={story.href} className="stories-opening-action">Read <span aria-hidden="true">→</span></Link>
+              </li> : null;
+            })}
+          </ol>
         </div>
-      </section>
-
+        <div className="stories-act">
+          <header className="stories-act-heading">
+            <p className="stories-kicker">ACT 04</p>
+            <h3>The Happiness Collector</h3>
+            <p>Rain, Scripture in the morning, sunsets, and the memories that remain.</p>
+          </header>
+          <ol className="stories-opening-list">
+            {["13","14","17","18","08"].map((n) => {
+              const story = openingCollection.find((item) => item.number === n);
+              return story ? <li className="stories-opening-item" key={story.number}>
+                <span className="stories-opening-number">{story.number}</span>
+                <div className="stories-opening-title-group"><p className="stories-opening-meta">{story.meta}</p>
+                  <h4><Link href={story.href}>{story.title}</Link></h4></div>
+                <Link href={story.href} className="stories-opening-action">Read <span aria-hidden="true">→</span></Link>
+              </li> : null;
+            })}
+          </ol>
+        </div>
+      </div>
+    </section>
       <section className="stories-happiness" aria-labelledby="happiness-title">
         <div className="container stories-happiness-inner">
           <p className="stories-kicker">THE HAPPINESS COLLECTOR</p>
@@ -181,7 +149,7 @@ export default function StoriesPage() {
             <p>
               Hard things happened too. Yet laughter is often what comes back
               first. Both are true.
-            </p>
+            </p>            <Link className="stories-text-link" href="/stories/the-happiness-collector/">Read The Happiness Collector →</Link>
           </div>
         </div>
       </section>
